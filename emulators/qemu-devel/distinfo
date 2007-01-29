@@ -1,6 +1,0 @@
-MD5 (qemu/qemu-snapshot-2007-01-11_05.tar.bz2) = 6b183198ea932853664edbff595579c7
-SHA256 (qemu/qemu-snapshot-2007-01-11_05.tar.bz2) = 4020ae33a58fba1a205c77a70fce21ba8e1843adcb8bedcabfbc7f84c53b35a1
-SIZE (qemu/qemu-snapshot-2007-01-11_05.tar.bz2) = 1576375
-MD5 (qemu/patch3_cirrus) = ebe7ed9fce804c49e024bc93bfdfc810
-SHA256 (qemu/patch3_cirrus) = e862371834b7d895a896fbdb84fd9f70d17b5729a6f6789a48a61504fc941e11
-SIZE (qemu/patch3_cirrus) = 8817

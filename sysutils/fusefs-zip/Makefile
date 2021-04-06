@@ -13,6 +13,8 @@ LICENSE=	LGPL3
 LIB_DEPENDS=	libzip.so:archivers/libzip
 BUILD_DEPENDS=	libzip>=0.11.1:archivers/libzip
 
+USE_HARDENING=	pie:off
+
 USES=		gmake fuse pkgconfig
 
 PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz

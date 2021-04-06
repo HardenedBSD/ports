@@ -16,6 +16,8 @@ CONFLICTS=	waon-[0-9]*
 USES=	tar:bzip2 gmake
 GNU_CONFIGURE=	yes
 
+USE_HARDENING=	safestack
+
 PLIST_FILES=	bin/pv man/man1/pv.1.gz
 
 PORTDOCS=	README INSTALL NEWS PACKAGE TODO VERSION release-checklist

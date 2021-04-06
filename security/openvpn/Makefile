@@ -19,6 +19,8 @@ USES=			cpe libtool localbase:ldflags pkgconfig shebangfix tar:xz
 IGNORE_SSL=		libressl libressl-devel
 USE_RC_SUBR=		openvpn
 
+USE_HARDENING=		cfi safestack
+
 SHEBANG_FILES=		sample/sample-scripts/verify-cn \
 			sample/sample-scripts/auth-pam.pl \
 			sample/sample-scripts/ucn.pl

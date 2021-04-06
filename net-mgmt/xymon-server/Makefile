@@ -43,6 +43,8 @@ USE_RC_SUBR=	xymon-server
 SUB_LIST+=	XYMONUSER="${XYMONUSER}"
 PLIST_SUB+=	XYMONUSER="${XYMONUSER}"
 
+USE_HARDENING=	pie:off
+
 CONFIG_FILES=	cgioptions.cfg client-local.cfg \
 		columndoc.csv graphs.cfg protocols.cfg \
 		tasks.cfg xymonserver.cfg xymon-apache.conf

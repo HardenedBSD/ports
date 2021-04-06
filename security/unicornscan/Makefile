@@ -17,6 +17,8 @@ LIB_DEPENDS=	libnet.so:net/libnet
 USES=		gmake
 CFLAGS+=	-DWITH_LONGOPTS
 
+USE_HARDENING=	safestack
+
 SUB_FILES=	pkg-message
 
 MAKE_JOBS_UNSAFE=	yes

@@ -19,6 +19,8 @@ USE_CXXSTD=	c++11
 USE_GNOME=	gtkmm24
 USE_XORG=	x11
 
+USE_HARDENING=	pie:off
+
 DESKTOP_ENTRIES="gcompmgr" \
 		"Configure window effects" \
 		"" \

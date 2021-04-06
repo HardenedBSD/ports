@@ -38,4 +38,6 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
+USE_HARDENING=	pie:off relro:off
+
 .include <bsd.port.mk>

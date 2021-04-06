@@ -16,6 +16,8 @@ LICENSE=	LGPL20
 
 LIB_DEPENDS=	liblwp.so:devel/lwp
 
+USE_HARDENING=	pie:off
+
 USES=		gmake libtool pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

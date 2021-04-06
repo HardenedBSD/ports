@@ -28,6 +28,9 @@ USE_LDCONFIG=	yes
 USE_RC_SUBR=	${PORTNAME}
 
 GNU_CONFIGURE=	yes
+
+USE_HARDENING=	pie:configure
+
 CONFIGURE_ARGS+=--enable-gccprotect \
 		--enable-bundled-htp \
 	        --disable-gccmarch-native

@@ -15,6 +15,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	rake:devel/rubygem-rake
 
+USE_HARDENING=	pie:off relro:off
+
 CPE_VENDOR=	phusion
 CPE_PRODUCT=	passenger
 

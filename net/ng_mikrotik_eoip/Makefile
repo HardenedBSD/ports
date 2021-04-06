@@ -11,6 +11,8 @@ COMMENT=	Netgraph node for Mikrotik EoIP tunneling
 
 LICENSE=	BSD2CLAUSE
 
+USE_HARDENING=	pie:off relro:off
+
 SSP_UNSAFE=	kernel module does not support ssp
 
 OPTIONS_DEFINE=	PTABLE

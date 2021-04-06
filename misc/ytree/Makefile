@@ -12,6 +12,8 @@ COMMENT=	DOS-XTREE(tm) look-a-like file manager
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_HARDENING=	pie:off
+
 USES=		ncurses readline
 ALL_TARGET=	ytree
 CFLAGS+=	-I${LOCALBASE}/include

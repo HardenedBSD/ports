@@ -14,6 +14,8 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libevent.so:devel/libevent
 
+USE_HARDENING=	pie:off
+
 OPTIONS_DEFINE=	CLAMAV
 CLAMAV_DESC=	Enable CLAMAV support
 

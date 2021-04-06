@@ -13,6 +13,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		autoreconf gmake iconv xorg
 
+USE_HARDENING=	cfi safestack
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	astrand
 

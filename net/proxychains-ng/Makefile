@@ -11,6 +11,8 @@ COMMENT=	Redirect connection through proxy servers
 
 LICENSE=	GPLv2
 
+USE_HARDENING=	safestack
+
 USES=		gmake tar:bzip2
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes

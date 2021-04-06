@@ -25,6 +25,8 @@ USES=		autoreconf gettext-runtime gnome localbase makeinfo pkgconfig \
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 
+USE_HARDENING=	safestack
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	GNUFreetalk
 

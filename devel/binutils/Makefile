@@ -28,7 +28,7 @@ CONFLICTS=	libbfd-[0-9]*
 #TEST_DEPENDS+=	runtest:misc/dejagnu
 TEST_TARGET=	check
 
-OPTIONS_DEFINE=	NLS RELRO STATIC
+OPTIONS_DEFINE=	NLS STATIC
 STATIC_PREVENTS=	NLS
 
 RELRO_DESC=	Enable relocation memory corruption mitigation (-z relro) by default

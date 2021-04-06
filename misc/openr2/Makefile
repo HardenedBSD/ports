@@ -13,6 +13,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
 
 BUILD_DEPENDS=	${LOCALBASE}/include/dahdi/user.h:misc/dahdi
 
+USE_HARDENING=	pie:off relro:off
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	moises-silva
 GH_TAGNAME=	d6a5716

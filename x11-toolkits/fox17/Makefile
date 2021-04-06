@@ -34,6 +34,8 @@ CONFIGURE_ARGS=	--with-freetype-include="`freetype-config --cflags | sed -e 's|^
 		--bindir=${PREFIX}/bin/${PORTNAME}-${MAJORVER}
 INSTALL_TARGET=	install-strip
 
+USE_HARDENING=	pie:off
+
 MAJORVER=	${PORTVERSION:R}
 PLIST_SUB+=	MAJORVER=${MAJORVER}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${MAJORVER}

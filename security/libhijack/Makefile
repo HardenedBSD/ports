@@ -13,6 +13,8 @@ COMMENT=	Runtime process infection made easy
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+USE_HARDENING=	pie relro
+
 ONLY_FOR_ARCHS=	aarch64 amd64
 
 USE_GITHUB=	yes

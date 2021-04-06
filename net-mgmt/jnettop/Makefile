@@ -11,6 +11,8 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.13 \
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Traffic visualizer, similar to nettop
 
+USE_HARDENING=	pie:off
+
 GNU_CONFIGURE=	yes
 USES=		gmake gnome pkgconfig
 USE_GNOME=	glib20

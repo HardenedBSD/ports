@@ -13,6 +13,8 @@ BUILD_DEPENDS=	xxd:editors/vim-console
 LIB_DEPENDS+=	libgcrypt.so:security/libgcrypt \
 		libcurl.so:ftp/curl
 
+USE_HARDENING=	pie:off
+
 USES=		perl5 shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	schnoddelbotz

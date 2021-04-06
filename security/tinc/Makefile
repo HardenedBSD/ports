@@ -26,4 +26,6 @@ INFO=		tinc
 PLIST_FILES=	sbin/tincd \
 		man/man5/tinc.conf.5.gz man/man8/tincd.8.gz
 
+USE_HARDENING=	safestack
+
 .include <bsd.port.mk>

@@ -20,6 +20,8 @@ BROKEN_armv6=		fails to build: fails to compile i386_disasm.c
 BROKEN_armv7=		fails to build: fails to compile i386_disasm.c
 BROKEN_sparc64=		sparc patch does not apply cleanly to 0.172
 
+USE_HARDENING=	pie:off
+
 LIB_DEPENDS=	libargp.so:devel/argp-standalone
 BUILD_DEPENDS=	gnulib>=0:devel/gnulib
 

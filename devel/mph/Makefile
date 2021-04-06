@@ -9,6 +9,8 @@ MASTER_SITES=	SUNSITE/devel/lang/c
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Minimal perfect hashing code generator
 
+USE_HARDENING=	pie:off
+
 BIN_FILES=	emitc mph mphm
 PLIST_FILES=	bin/emitc bin/mph bin/mphm
 

@@ -19,6 +19,8 @@ ONLY_FOR_ARCHS_REASON=	requires SSE instructions, which are x86-specific
 
 LIB_DEPENDS=	libfftw3.so:math/fftw3
 
+USE_HARDENING=	pie:off
+
 USES=		uidfix zip
 USE_GCC=	yes
 USE_LDCONFIG=	yes

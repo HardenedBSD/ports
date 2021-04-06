@@ -17,6 +17,8 @@ COMMENT=	Terminal emulator for the X Window System
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_HARDENING=	safestack
+
 LIB_DEPENDS+=	libfontconfig.so:x11-fonts/fontconfig
 
 USES=			cpe localbase ncurses tar:tgz xorg

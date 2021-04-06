@@ -10,6 +10,8 @@ COMMENT=	Show scancodes of keys pressed and released
 
 LICENSE=	ISCL
 
+USE_HARDENING=	pie:off
+
 USES=		tar:bzip2
 
 PLIST_FILES=	bin/${PORTNAME}

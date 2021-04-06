@@ -15,6 +15,8 @@ COMMENT=	Small, easy to set up, fast, and secure FTP server
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_HARDENING=	safestack
+
 USES=		cpe perl5 tar:bzip2
 USE_PERL5=	run
 

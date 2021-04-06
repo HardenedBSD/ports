@@ -14,6 +14,8 @@ COMMENT=	Makefile framework
 LICENSE=	BSD3CLAUSE GPLv3+
 LICENSE_COMB=	multi
 
+USE_HARDENING=	stackautoinit:off
+
 USES=		autoreconf:build gmake makeinfo tar:xz
 
 CONFLICTS_INSTALL=	kBuild-devel-[0-9]*

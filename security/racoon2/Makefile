@@ -19,6 +19,8 @@ USE_GITHUB=     yes
 GH_ACCOUNT=     zoulasc
 GH_TAGNAME=     ${HASH}
 
+USE_HARDENING=	pie:off
+
 USES=		autoreconf libtool:build perl5 tar:tgz ssl
 CONFIGURE_ARGS+=	--enable-natt \
 			--prefix=${STAGEDIR}/${PREFIX}

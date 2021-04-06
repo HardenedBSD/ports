@@ -13,6 +13,8 @@ COMMENT=	Unix incarnation of the plan9 shell
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_HARDENING=	pie:off relro:off
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-history
 

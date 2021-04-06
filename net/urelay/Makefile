@@ -9,6 +9,8 @@ MASTER_SITES=	http://devel.ringlet.net/net/urelay/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	UCSPI-based TCP forwarder
 
+USE_HARDENING=	pie:off
+
 USES=		uidfix
 PLIST_FILES=	bin/urelay \
 		man/man1/urelay.1.gz

@@ -12,6 +12,8 @@ COMMENT=	Commodore Amiga emulator
 
 LICENSE=	GPLv2
 
+USE_HARDENING=	pie:off relro:off
+
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: socketbases
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: socketbases
 

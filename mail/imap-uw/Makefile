@@ -26,6 +26,8 @@ CONFLICTS_INSTALL=	panda-imap-20*
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 SUB_FILES=	pkg-message
 
+USE_HARDENING=	pie:off
+
 MAKE_JOBS_UNSAFE=	yes
 
 ALL_TARGET=	bsf

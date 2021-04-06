@@ -33,6 +33,8 @@ BUILD_DEPENDS=	cmake:devel/cmake \
 		ninja:devel/ninja
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
+USE_HARDENING=	stackautoinit:off
+
 USES=		pkgconfig python:3.6+,build ssl tar:xz
 
 MAKE_ENV=	DESTDIR=${STAGEDIR} \

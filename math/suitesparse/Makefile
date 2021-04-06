@@ -34,6 +34,8 @@ CMAKE_ARGS=	-DCMAKE_INSTALL_INCLUDEDIR:PATH="include/${PORTNAME}"	\
 		-DBUILD_GRB_STATIC_LIBRARY:BOOL=ON
 LDFLAGS+=	-L${WRKSRC}/lib # prevent linking with shared libs from the preinstalled older versions
 
+USE_HARDENING=	retpoline:off
+
 CONFLICTS_INSTALL=	mongoose plinkseq # bin/mongoose
 
 OPTIONS_DEFINE=		DEMOS DOCS OPENMP # TBB

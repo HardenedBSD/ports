@@ -25,6 +25,8 @@ CONFIGURE_ARGS=	--disable-gtk-doc --disable-rebuilds \
 		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 INSTALL_TARGET=	install-strip
 
+USE_HARDENING=	safestack
+
 OPTIONS_DEFINE=	DOCS
 OPTIONS_DEFAULT=GNUTLS
 OPTIONS_RADIO=	SSL

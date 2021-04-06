@@ -12,6 +12,8 @@ COMMENT=	Emulator for Commodore C64, C128, VIC20, PET, and CBM-II
 
 LICENSE=	GPLv2
 
+USE_HARDENING=	pie:off relro:off
+
 BUILD_DEPENDS=	xa65:devel/xa65 \
 		xdg-open:devel/xdg-utils
 LIB_DEPENDS=	libpng.so:graphics/png \

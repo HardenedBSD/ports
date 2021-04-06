@@ -18,6 +18,8 @@ CONFLICTS=	nano-devel-2*
 
 GNU_CONFIGURE=	yes
 
+USE_HARDENING=	safestack
+
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} --enable-utf8
 
 MAKE_ARGS+=	install_htmlmanDATA=install-htmlmanDATA

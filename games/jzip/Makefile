@@ -12,6 +12,8 @@ COMMENT=	Text-mode Infocom game interpreter
 
 NO_WRKSUBDIR=	yes
 
+USE_HARDENING=	pie:off
+
 USES=		ncurses zip
 
 CPPFLAGS+=	-DPOSIX -DHAVE_GETOPT

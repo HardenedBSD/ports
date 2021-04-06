@@ -20,6 +20,8 @@ BROKEN_armv7=	fails to compile: use of overloaded operator << is ambiguous
 BROKEN_i386=	crashes on startup (SIGSEGV)
 BROKEN_FreeBSD_12_powerpc64=	fails to compile: Assembler messages: unaligned opcodes detected in executable segment
 
+USE_HARDENING=	pie:off
+
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:devel/boost-libs
 LIB_DEPENDS=	libboost_context.so:devel/boost-libs \
 		libprotobuf.so:devel/protobuf

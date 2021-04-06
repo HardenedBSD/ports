@@ -18,6 +18,8 @@ BROKEN_powerpc64=	fails to build: error: nested functions are disabled, use -fne
 
 RUN_DEPENDS=	${LOCALBASE}/bin/tcprules:sysutils/ucspi-tcp
 
+USE_HARDENING=	pie:off relro:off
+
 USES=		cpe qmail tar:tgz
 WRKSRC=		${WRKDIR}/${DISTNAME}/spamdyke
 GNU_CONFIGURE=	yes

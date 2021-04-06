@@ -1210,6 +1210,52 @@ _OSVERSION_MAJOR=	${OSVERSION:C/([0-9]?[0-9])([0-9][0-9])[0-9]{3}/\1/}
 # Only define tools here (for transition period with between pkg tools)
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
+.if ${OSVERSION} < 1200020
+LLD_IS_LD=	no
+.endif
+
+.if !defined(LLD_IS_LD)
+_TEST_LD=/usr/bin/ld
+.if ${_TEST_LD:tA} == "/usr/bin/ld.lld"
+LLD_IS_LD=	yes
+.else
+LLD_IS_LD=	no
+.endif
+.endif
+_EXPORTED_VARS+=	LLD_IS_LD
+
+_TEST_AR=/usr/bin/ar
+.if ${_TEST_AR:tA} == "/usr/bin/llvm-ar"
+LLVM_AR_IS_AR=	yes
+.else
+LLVM_AR_IS_AR=	no
+.endif
+_EXPORTED_VARS+=	LLVM_AR_IS_AR
+
+_TEST_NM=/usr/bin/nm
+.if ${_TEST_NM:tA} == "/usr/bin/llvm-nm"
+LLVM_NM_IS_NM=	yes
+.else
+LLVM_NM_IS_NM=	no
+.endif
+_EXPORTED_VARS+=	LLVM_NM_IS_NM
+
+_TEST_RANLIB=/usr/bin/ranlib
+.if ${_TEST_RANLIB:tA} == "/usr/bin/llvm-ar"
+LLVM_RANLIB_IS_RANLIB=	yes
+.else
+LLVM_RANLIB_IS_RANLIB=	no
+.endif
+_EXPORTED_VARS+=	LLVM_RANLIB_IS_RANLIB
+
+_TEST_OBJDUMP=/usr/bin/objdump
+.if ${_TEST_OBJDUMP:tA} == "/usr/bin/llvm-objdump"
+LLVM_OBJDUMP_IS_OBJDUMP=	yes
+.else
+LLVM_OBJDUMP_IS_OBJDUMP=	no
+.endif
+_EXPORTED_VARS+=	LLVM_OBJDUMP_IS_OBJDUMP
+
 .if !defined(_PKG_CHECKED) && !defined(PACKAGE_BUILDING) && exists(${PKG_BIN})
 .if !defined(_PKG_VERSION)
 _PKG_VERSION!=	${PKG_BIN} -v
@@ -1303,6 +1349,7 @@ WITH_DEBUG=	yes
 .endif
 
 .include "${PORTSDIR}/Mk/bsd.default-versions.mk"
+.include "${PORTSDIR}/Mk/bsd.hardening.mk"
 .include "${PORTSDIR}/Mk/bsd.options.mk"
 
 .endif
@@ -1674,7 +1721,10 @@ CO_ENV+=		STAGEDIR=${STAGEDIR} \
 				SCRIPTSDIR=${SCRIPTSDIR} \
 				PLIST_SUB_SED="${PLIST_SUB_SED}" \
 				PORT_OPTIONS="${PORT_OPTIONS}" \
-				PORTSDIR="${PORTSDIR}"
+				PORTSDIR="${PORTSDIR}" \
+				USES="${USES}" \
+				PORTNAME="${PORTNAME}" \
+				CATEGORY="${CATEGORIES}"
 
 .if defined(CROSS_SYSROOT)
 PKG_ENV+=		ABI_FILE=${CROSS_SYSROOT}/bin/sh
@@ -1871,6 +1921,27 @@ MAKE_ENV+=	LD=${LD}
 USE_BINUTILS=	yes
 .    endif
 .  endif
+.endif
+
+_TEST_AR=/usr/bin/ar
+.if defined(LLVM_AR_UNSAFE) && ${_TEST_AR:tA} == "/usr/bin/llvm-ar"
+AR=	elftc-ar
+RANLIB=	elftc-ranlib
+BINARY_ALIAS+=	ar=elftc-ar
+BINARY_ALIAS+=	ranlib=elftc-ranlib
+CONFIGURE_ENV+=	AR=${AR} RANLIB=${RANLIB}
+MAKE_ENV+=	AR=${AR} RANLIB=${RANLIB}
+CMAKE_ARGS+=	-DCMAKE_AR:STRING=${AR} -DCMAKE_RANLIB:STRING=${RANLIB}
+.endif
+
+_TEST_OBJDUMP=/usr.bin/gnu-objdump
+.if defined(LLVM_OBJDUMP_UNSAFE) && ${LLVM_OBJDUMP_IS_OBJDUMP} == "yes" && \
+		${_TEST_OBJDUMP:tA} == "/usr/bin/gnu-objdump"
+OBJDUMP=	gnu-objdump
+BINARY_ALIAS+=	objdump=gnu-objdump
+CONFIGURE_ENV+=	OBJDUMP=${OBJDUMP}
+MAKE_ENV+=	OBJDUMP=${OBJDUMP}
+CMAKE_ARGS+=	-DCMAKE_OBJDUMP:STRING=${OBJDUMP}
 .endif
 
 .if defined(USE_BINUTILS) && !defined(DISABLE_BINUTILS)
@@ -2621,6 +2692,9 @@ VALID_CATEGORIES+= accessibility afterstep arabic archivers astro audio \
 	ukrainian vietnamese wayland windowmaker www \
 	x11 x11-clocks x11-drivers x11-fm x11-fonts x11-servers x11-themes \
 	x11-toolkits x11-wm xfce zope base
+
+# HardenedBSD-related categories
+VALID_CATEGORIES+=	hardenedbsd
 
 check-categories:
 .for cat in ${CATEGORIES}
@@ -5322,7 +5396,7 @@ _STAGE_SEQ=		050:stage-message 100:stage-dir 150:run-depends \
 				200:apply-slist 300:pre-install \
 				400:generate-plist 450:pre-su-install 475:create-users-groups \
 				500:do-install 550:kmod-post-install 600:fixup-lib-pkgconfig 700:post-install \
-				750:post-install-script 800:post-stage 850:compress-man \
+				750:post-install-script 800:post-stage 825:fixup-mitigations 850:compress-man \
 				860:install-rc-script 870:install-ldconfig-file \
 				880:install-license 890:install-desktop-entries \
 				900:add-plist-info 910:add-plist-docs 920:add-plist-examples \
@@ -5348,6 +5422,26 @@ _PACKAGE_DEP=	stage
 _PACKAGE_SEQ=	100:package-message 300:pre-package 450:pre-package-script \
 				500:do-package 850:post-package-script \
 				${_OPTIONS_package} ${_USES_package}
+
+fixup-mitigations:
+.for _file in ${PAGEEXEC_DISABLE}
+		-/usr/sbin/hbsdcontrol pax disable pageexec ${STAGEDIR}/${PREFIX}/${_file}
+.endfor
+.for _file in ${MPROTECT_DISABLE}
+		-/usr/sbin/hbsdcontrol pax disable mprotect ${STAGEDIR}/${PREFIX}/${_file}
+.endfor
+.for _file in ${SEGVGUARD_DISABLE}
+		-/usr/sbin/hbsdcontrol pax disable segvguard ${STAGEDIR}/${PREFIX}/${_file}
+.endfor
+.for _file in ${ASLR_DISABLE}
+		-/usr/sbin/hbsdcontrol pax disable aslr ${STAGEDIR}/${PREFIX}/${_file}
+.endfor
+.for _file in ${DISALLOW_MAP32BIT_DISABLE}
+		-/usr/sbin/hbsdcontrol pax disable disallow_map32bit ${STAGEDIR}/${PREFIX}/${_file}
+.endfor
+.for _file in ${SHLIBRANDOM_DISABLE}
+		-/usr/sbin/hbsdcontrol pax disable shlibrandom ${STAGEDIR}/${PREFIX}/${_file}
+.endfor
 
 # Enforce order for -jN builds
 .for _t in ${_TARGETS_STAGES}

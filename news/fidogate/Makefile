@@ -12,6 +12,7 @@ COMMENT=	Fido-Internet Gateway and Tosser
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_HARDENING=	pie:off
 USES=	autoreconf perl5 iconv
 
 USE_GITHUB=	yes

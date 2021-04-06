@@ -20,6 +20,8 @@ LIB_DEPENDS=	libgc.so:devel/boehm-gc
 USES=		iconv pkgconfig perl5 ssl
 USE_GITHUB=	yes
 
+USE_HARDENING=	safestack
+
 GH_ACCOUNT=	tats
 GH_PROJECT=	w3m
 GH_TAGNAME=	06f0cec

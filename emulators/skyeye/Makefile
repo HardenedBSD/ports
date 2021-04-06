@@ -13,6 +13,8 @@ COMMENT=	Environment simulates typical ARM-base embedded computer systems
 
 LICENSE=	GPLv2
 
+USE_HARDENING=	pie:off relro:off
+
 USE_CSTD=	gnu89
 USE_BINUTILS=	yes
 USE_GCC=	any

@@ -29,6 +29,8 @@ LIB_DEPENDS=	libantlr3c.so:devel/libantlr3c \
 		libunistring.so:devel/libunistring \
 		libwebsockets.so:net/libwebsockets
 
+USE_HARDENING=	pie:off
+
 USES=		gnome gmake gperf iconv:wchar_t libtool localbase pathfix \
 		pkgconfig sqlite tar:xz
 USE_GNOME=	libxml2

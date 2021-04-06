@@ -12,6 +12,8 @@ COMMENT=	Multicast forwarding IGMP proxy
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_HARDENING=	safestack
+
 USES=		autoreconf
 USE_GITHUB=	yes
 GH_ACCOUNT=	pali

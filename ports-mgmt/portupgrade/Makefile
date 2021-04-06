@@ -26,6 +26,8 @@ DIST_SUBDIR=	${PORTNAME}
 USES=		uidfix
 USE_RUBY=	yes
 
+USE_HARDENING=	safestack
+
 USE_LDCONFIG=	${PREFIX}/lib/compat/pkg
 
 MAKE_ARGS=	PREFIX="${PREFIX}" RUBY="${RUBY}" \

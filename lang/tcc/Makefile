@@ -20,6 +20,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	TinyCC
 GH_PROJECT=	tinycc
 
+USE_HARDENING=	pie:off relro:off
+
 USES=		gmake makeinfo perl5
 USE_PERL5=	build
 HAS_CONFIGURE=	yes

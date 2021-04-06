@@ -24,4 +24,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=0:www/py-beautifulsoup@${PY_F
 USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
+USE_HARDENING=	safestack
+
 .include <bsd.port.mk>

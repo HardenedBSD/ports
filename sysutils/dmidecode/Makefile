@@ -16,6 +16,8 @@ ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 riscv64 riscv64sf
 
 USES=		tar:xz
 
+USE_HARDENING=	safestack
+
 SUB_FILES=	dmidecode
 
 OPTIONS_DEFINE=	DOCS

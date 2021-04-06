@@ -19,6 +19,8 @@ PLIST_FILES=	bin/tree \
 
 PORTDOCS=	CHANGES README
 
+USE_HARDENING=	safestack
+
 OPTIONS_DEFINE=	DOCS
 
 do-install:

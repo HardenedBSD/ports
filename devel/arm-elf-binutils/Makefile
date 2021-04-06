@@ -10,6 +10,8 @@ PKGNAMEPREFIX=	arm-elf-
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	GNU binutils for vanilla ARM cross-development
 
+USE_HARDENING=	pie:off relro:off
+
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
 

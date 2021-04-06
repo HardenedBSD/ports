@@ -20,6 +20,8 @@ CONFIGURE_ARGS=	--enable-threads --disable-tdomalloc
 EXTRACT_AFTER_ARGS=--exclude 'expat*/*.c' --exclude 'expat*/[a-mo-z]*.h' \
 		--exclude 'domalloc*'
 
+USE_HARDENING=	pie:off
+
 TEST_TARGET=	test
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}

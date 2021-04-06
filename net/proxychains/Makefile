@@ -15,6 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${LOCALBASE}/bin/dig:dns/bind-tools
 
+USE_HARDENING=	safestack
+
 GNU_CONFIGURE=	yes
 USES=		gmake libtool
 USE_LDCONFIG=	yes

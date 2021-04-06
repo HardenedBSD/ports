@@ -12,6 +12,8 @@ COMMENT=	High-ratio LZMA compressor
 
 CONFLICTS=	lzmautils-[0-9]* xz-[0-9]*
 
+USE_HARDENING=	safestack
+
 USES=		7z gmake dos2unix
 NO_WRKSUBDIR=	yes
 BUILD_WRKSRC=	${WRKSRC}/CPP/7zip/Bundles/LzmaCon

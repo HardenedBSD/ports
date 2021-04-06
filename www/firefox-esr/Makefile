@@ -43,6 +43,8 @@ FIREFOX_DESKTOP=	${MOZSRC}/taskcluster/docker/${MOZILLA}-snap/${MOZILLA}.desktop
 MOZ_OPTIONS=	--enable-application=browser \
 		--enable-official-branding
 
+MOZ_OPTIONS+=	--enable-pie
+
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 
 post-patch:

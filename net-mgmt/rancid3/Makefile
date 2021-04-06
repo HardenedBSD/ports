@@ -23,6 +23,8 @@ SHEBANG_FILES=	bin/*
 USERS=		rancid
 GROUPS=		rancid
 
+USE_HARDENING=	pie:off
+
 SUB_FILES=	pkg-message 200.rancid
 GNU_CONFIGURE=	yes
 

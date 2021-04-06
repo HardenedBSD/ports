@@ -25,6 +25,9 @@ INSTALLS_ICONS=	yes
 
 LDFLAGS_i386=	-Wl,-znotext
 
+USE_HARDENING=	cfi safestack
+CFI_OVERRIDE=	-fno-sanitize=cfi-icall
+
 PORTDATA=	*
 
 post-build:

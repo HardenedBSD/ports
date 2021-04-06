@@ -14,6 +14,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libnet.so:net/libnet
 
+USE_HARDENING=	safestack
+
 OPTIONS_DEFINE=	DOCS
 
 PORTSCOUT=	ignore:1

@@ -17,6 +17,8 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 LIB_DEPENDS=	libcanna.so:japanese/canna-lib
 
+USE_HARDENING=	pie:off relro:off
+
 USES=		imake tar:bzip2
 USE_RC_SUBR=	canna
 INSTALL_TARGET=	instserver instclient

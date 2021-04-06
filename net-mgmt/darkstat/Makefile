@@ -12,6 +12,8 @@ COMMENT=	Network statistics gatherer and reporter
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.GPL
 
+USE_HARDENING=	safestack
+
 USES=		tar:bzip2
 GNU_CONFIGURE=	yes
 

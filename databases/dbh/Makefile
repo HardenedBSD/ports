@@ -15,6 +15,8 @@ LICENSE=	GPLv3
 
 CONFLICTS=	dbh-[0-4]*
 
+USE_HARDENING=	pie:off
+
 USES=		libtool pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-pkglibdata

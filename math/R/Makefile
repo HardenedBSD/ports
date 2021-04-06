@@ -18,6 +18,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libpcre2-8.so:devel/pcre2
 RUN_DEPENDS=	gmake:devel/gmake # R packages may require GNU make
 
+USE_HARDENING=	pie:off relro:off
+
 # possible TODO
 # - Use --with-recommended-packages=no by default
 # - Add an option for recommended packages

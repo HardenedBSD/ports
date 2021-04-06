@@ -7,6 +7,8 @@ CATEGORIES=	x11
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Display message or query in a X window
 
+USE_HARDENING=	safestack
+
 USES=		xorg xorg-cat:app
 USE_XORG=	x11 xt xaw
 

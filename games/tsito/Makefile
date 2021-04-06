@@ -12,6 +12,8 @@ COMMENT=	Chinese chess (Xiangqi) program
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_HARDENING=	pie:off
+
 GNU_CONFIGURE=	yes
 LIBS+=		-lcompat
 

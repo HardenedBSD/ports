@@ -32,6 +32,8 @@ USE_PERL5=	build
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	stunnel
 
+USE_HARDENING=	safestack
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var/tmp --enable-static --disable-systemd \
 		--with-ssl="${OPENSSLBASE}"

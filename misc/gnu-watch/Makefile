@@ -12,6 +12,8 @@ COMMENT=	GNU watch command
 
 LICENSE=	GPLv2
 
+USE_HARDENING=	safestack
+
 USES=		autoreconf gettext-tools gmake libtool localbase:ldflags \
 		ncurses pkgconfig tar:xz
 USE_CSTD=	gnu99

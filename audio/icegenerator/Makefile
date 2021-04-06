@@ -12,6 +12,8 @@ COMMENT=		Direct streaming generator for Icecast/Shoutcast
 
 LIB_DEPENDS=		libshout.so:audio/libshout
 
+USE_HARDENING=		pie:off relro:off
+
 GNU_CONFIGURE=		yes
 USES=			gmake pkgconfig
 CONFIGURE_ARGS=		--exec-prefix=${PREFIX}

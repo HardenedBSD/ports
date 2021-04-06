@@ -11,6 +11,8 @@ MASTER_SITES=	http://www.stack.nl/~marcolz/empire/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Empire text client
 
+USE_HARDENING=	pie:off
+
 GNU_CONFIGURE=	yes
 USES=		ncurses readline shebangfix
 SHEBANG_FILES=	contrib/*.pl

@@ -17,6 +17,8 @@ COMMENT=	KAME racoon IKE daemon, ipsec-tools version
 
 LICENSE=	BSD3CLAUSE
 
+USE_HARDENING=	pie:off relro:off
+
 USES=		libtool tar:bzip2 ssl
 
 CONFLICTS=	racoon-[0-9]*

@@ -10,6 +10,8 @@ COMMENT=	X server resource database utility
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_HARDENING=	safestack
+
 USES=		xorg xorg-cat:app
 USE_XORG=	xmuu x11
 

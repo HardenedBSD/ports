@@ -12,6 +12,8 @@ COMMENT=	3D collision detection and rigid body dynamics library
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
+USE_HARDENING=	pie:off
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	bulletphysics
 GH_PROJECT=	bullet3

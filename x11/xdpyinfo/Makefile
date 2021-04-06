@@ -8,6 +8,8 @@ CATEGORIES=	x11
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Display information utility for X
 
+USE_HARDENING=	safestack
+
 LICENSE=	MIT
 
 USES=		xorg xorg-cat:app

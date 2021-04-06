@@ -17,6 +17,8 @@ LIB_DEPENDS=	libcapstone.so:devel/capstone3 \
 		libnettle.so:security/nettle
 RUN_DEPENDS=	qemu-system-i386:emulators/qemu
 
+USE_HARDENING=	pie:off relro:off
+
 LICENSE=	GPLv2
 
 USE_GITHUB=	yes

@@ -176,6 +176,7 @@
     SUBDIR += fwlogwatch
     SUBDIR += gcr
     SUBDIR += gef
+    SUBDIR += gibson
     SUBDIR += git-crypt
     SUBDIR += git-remote-gcrypt
     SUBDIR += git-secret
@@ -1258,6 +1259,7 @@
     SUBDIR += tls-check
     SUBDIR += tlswrap
     SUBDIR += tor
+    SUBDIR += tor-capsicum
     SUBDIR += tor-devel
     SUBDIR += totp-cli
     SUBDIR += tpm-tools

@@ -11,6 +11,8 @@ COMMENT=	GTK+ Remote Desktop Client
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+USE_HARDENING=	safestack
+
 LIB_DEPENDS=	libjson-glib-1.0.so:devel/json-glib \
 		libpcre2-8.so:devel/pcre2 \
 		libsodium.so:security/libsodium \

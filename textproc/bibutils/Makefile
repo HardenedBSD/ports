@@ -13,6 +13,8 @@ COMMENT=	Program set interconverts between various bibliography formats
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/Copying
 
+USE_HARDENING=	pie:off
+
 USES=		gmake
 
 HAS_CONFIGURE=	yes

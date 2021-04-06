@@ -32,6 +32,8 @@ USE_PERL5=	build
 
 CPE_VENDOR=	gnu
 
+USE_HARDENING=	pie:off relro:off retpoline:off stackautoinit:off
+
 GCC_VERSION=	${PORTVERSION}
 SUFFIX=		${PORTVERSION:C/([0-9]+).([0-9]+).*/\1\2/}
 SSP_UNSAFE=	yes

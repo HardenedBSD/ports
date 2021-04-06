@@ -13,6 +13,8 @@ COMMENT?=		Advanced fork of nss_ldap
 LICENSE=		LGPL21 LGPL3
 LICENSE_COMB=		dual
 
+USE_HARDENING=		pie:off relro:off
+
 USES=			cpe
 CPE_VENDOR=		arthurdejong
 GNU_CONFIGURE=		yes

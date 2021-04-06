@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 
     COMMENT = Ports related to the World Wide Web
 
@@ -1383,6 +1381,7 @@
     SUBDIR += phprecipebook
     SUBDIR += phpsysinfo
     SUBDIR += phpvirtualbox
+    SUBDIR += phpvirtualbox-legacy
     SUBDIR += piwigo
     SUBDIR += plasma5-plasma-browser-integration
     SUBDIR += plugger

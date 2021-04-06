@@ -1,10 +1,6 @@
-#
 # bsd.ruby.mk - Utility definitions for Ruby related ports.
 #
 # Created by: Akinori MUSHA <knu@FreeBSD.org>
-#
-# $FreeBSD$
-#
 
 .if !defined(Ruby_Include)
 
@@ -148,8 +144,8 @@ RUBY?=			${LOCALBASE}/bin/${RUBY_NAME}
 #
 # Ruby 2.5
 #
-RUBY_VERSION=		2.5.8
-RUBY_PORTREVISION=	2
+RUBY_VERSION=		2.5.9
+RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY25=			""	# PLIST_SUB helpers
 
@@ -157,8 +153,8 @@ RUBY25=			""	# PLIST_SUB helpers
 #
 # Ruby 2.6
 #
-RUBY_VERSION=		2.6.6
-RUBY_PORTREVISION=	2
+RUBY_VERSION=		2.6.7
+RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY26=			""	# PLIST_SUB helpers
 
@@ -166,8 +162,8 @@ RUBY26=			""	# PLIST_SUB helpers
 #
 # Ruby 2.7
 #
-RUBY_VERSION=		2.7.2
-RUBY_PORTREVISION=	1
+RUBY_VERSION=		2.7.3
+RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY27=			""	# PLIST_SUB helpers
 

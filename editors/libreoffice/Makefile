@@ -116,16 +116,12 @@ USE_OPENLDAP=	yes
 USE_PERL5=	build
 USE_XORG=	ice sm x11 xaw xcb xext xinerama xrandr xrender
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
 PAGEEXEC_DISABLE=	lib/libreoffice/program/soffice.bin
 MPROTECT_DISABLE=	lib/libreoffice/program/soffice.bin
 
-OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 JAVA KF5 LTO MMEDIA PGSQL QT5 SDK TEST WEBDAV
-=======
 OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 JAVA KF5 LTO MMEDIA PGSQL MARIADB QT5 SDK TEST WEBDAV
->>>>>>> origin/freebsd/main
 OPTIONS_DEFAULT=	CUPS MMEDIA QT5
 
 .if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mssl=*}

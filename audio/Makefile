@@ -287,6 +287,7 @@
     SUBDIR += guidoar
     SUBDIR += guidolib
     SUBDIR += guitarix-lv2
+    SUBDIR += gula-plugins-lv2
     SUBDIR += guspat
     SUBDIR += gvolwheel
     SUBDIR += gxmms2
@@ -453,6 +454,7 @@
     SUBDIR += mac
     SUBDIR += madfufw
     SUBDIR += madplay
+    SUBDIR += madronalib
     SUBDIR += malint
     SUBDIR += mate-media
     SUBDIR += mclk-lv2

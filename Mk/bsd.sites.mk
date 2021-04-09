@@ -546,15 +546,8 @@ GL_COMMIT+=	${GL_TUPLE:C@^(([^:]*://[^:/]*(:[0-9]{1,5})?(/[^:]*[^/])?:)?)([^:]*)
 GL_SUBDIR+=	${GL_TUPLE:C@^(([^:]*://[^:/]*(:[0-9]{1,5})?(/[^:]*[^/])?:)?)([^:]*):([^:]*):([^:]*)(:[^:/]*)((/.*)?)@\9\8@:M/*:S/^\///}
 .  endif
 
-<<<<<<< HEAD
-.  if !empty(USE_GITLAB:Mgitea)
-MASTER_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/archive/${GL_COMMIT}.tar.gz?dummy=/
-.  elif empty(USE_GITLAB:Mnodefault)
-MASTER_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/repository/${GL_COMMIT}/archive.tar.gz?dummy=/
-=======
 .  if empty(USE_GITLAB:Mnodefault)
 MASTER_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/archive/${GL_COMMIT}.tar.gz?dummy=/
->>>>>>> origin/freebsd/main
 .  endif
 GL_SITE_DEFAULT=	https://gitlab.com
 GL_SITE?=	${GL_SITE_DEFAULT}

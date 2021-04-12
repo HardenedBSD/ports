@@ -1,7 +1,7 @@
 # Created by: gahr
 
 PORTNAME=	fox
-PORTVERSION=	1.7.75
+PORTVERSION=	1.7.76
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://fox-toolkit.org/ftp/ \
 		ftp://ftp.fox-toolkit.org/pub/
@@ -33,7 +33,11 @@ CONFIGURE_ARGS=	--with-freetype-include="`freetype-config --cflags | sed -e 's|^
 		--bindir=${PREFIX}/bin/${PORTNAME}-${MAJORVER}
 INSTALL_TARGET=	install-strip
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
+=======
+CPPFLAGS+=	-D__BSD_VISIBLE -D__EXT1_VISIBLE -D_XOPEN_SOURCE=700
+>>>>>>> origin/freebsd/main
 
 MAJORVER=	${PORTVERSION:R}
 PLIST_SUB+=	MAJORVER=${MAJORVER}

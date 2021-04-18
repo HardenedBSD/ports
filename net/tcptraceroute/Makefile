@@ -13,15 +13,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libnet.so:net/libnet
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-OPTIONS_DEFINE=	DOCS
-
-PORTSCOUT=	ignore:1
-=======
 USES=		gmake localbase
->>>>>>> origin/freebsd/main
 
 GNU_CONFIGURE=	yes
 

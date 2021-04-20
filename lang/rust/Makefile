@@ -31,13 +31,9 @@ ONLY_FOR_ARCHS_REASON?=	requires prebuilt bootstrap compiler
 BUILD_DEPENDS=	cmake:devel/cmake
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		pkgconfig python:3.6+,build ssl tar:xz
-=======
 USES=		ninja:build pkgconfig python:3.6+,build ssl tar:xz
->>>>>>> origin/freebsd/main
 
 MAKE_ENV=	DESTDIR=${STAGEDIR} \
 		OPENSSL_DIR="${OPENSSLBASE}" \

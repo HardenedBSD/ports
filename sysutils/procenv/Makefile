@@ -13,15 +13,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	xmlwf:textproc/expat2
 LIB_DEPENDS=	libsysinfo.so:devel/libsysinfo
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-#USES=		autoreconf gmake perl5
-USES=		autoreconf perl5
-USE_PERL5=	build
-=======
 USES=		autoreconf localbase perl5
->>>>>>> origin/freebsd/main
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	jamesodhunt

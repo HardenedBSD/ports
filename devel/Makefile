@@ -4380,7 +4380,6 @@
     SUBDIR += py-enlighten
     SUBDIR += py-entrypoints
     SUBDIR += py-enum-compat
-    SUBDIR += py-enum34
     SUBDIR += py-envisage
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
@@ -6530,6 +6529,7 @@
     SUBDIR += rubygem-ruby-fogbugz021
     SUBDIR += rubygem-ruby-libvirt
     SUBDIR += rubygem-ruby-macho
+    SUBDIR += rubygem-ruby-magic
     SUBDIR += rubygem-ruby-magic-static
     SUBDIR += rubygem-ruby-ole
     SUBDIR += rubygem-ruby-prof

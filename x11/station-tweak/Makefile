@@ -8,7 +8,7 @@ PORTREVISION=	0
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
-MAINTAINER=	ericturgeon@ghostbsd.org
+MAINTAINER=	hackurx@gmail.com
 COMMENT=	Mate configuration system.
 
 LICENSE=	BSD

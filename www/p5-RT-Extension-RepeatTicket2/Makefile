@@ -1,11 +1,11 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
 
 PORTNAME=	RT-Extension-RepeatTicket
-PORTVERSION=	1.11
-PORTREVISION=	1
+PORTVERSION=	2.00
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+PKGNAMESUFFIX=	2
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RT Extension to repeat tickets base on a schedule
@@ -22,7 +22,7 @@ USE_PERL5=	configure
 
 NO_ARCH=	yes
 
-RT_VER=		44
+RT_VER=		50
 PLIST_SUB=	RTHOME=share/rt${RT_VER}
 
 # Note: You can install using an arbitrary $PREFIX but only if it

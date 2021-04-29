@@ -517,8 +517,8 @@
     SUBDIR += p5-Crypt-HSXKPasswd
     SUBDIR += p5-Crypt-IDEA
     SUBDIR += p5-Crypt-Imail
-    SUBDIR += p5-Crypt-Juniper
     SUBDIR += p5-Crypt-JWT
+    SUBDIR += p5-Crypt-Juniper
     SUBDIR += p5-Crypt-Khazad
     SUBDIR += p5-Crypt-LE
     SUBDIR += p5-Crypt-LibSCEP

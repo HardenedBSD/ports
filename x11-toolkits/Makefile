@@ -19,7 +19,6 @@
     SUBDIR += girara
     SUBDIR += gnocl
     SUBDIR += gnome-pty-helper
-    SUBDIR += gnome-sharp20
     SUBDIR += gnustep-back
     SUBDIR += gnustep-gui
     SUBDIR += granite
@@ -67,10 +66,8 @@
     SUBDIR += libXaw
     SUBDIR += libXmu
     SUBDIR += libXt
-    SUBDIR += libbonoboui
     SUBDIR += libdazzle
     SUBDIR += libgdiplus
-    SUBDIR += libgnomeui
     SUBDIR += libhandy
     SUBDIR += libhandy0
     SUBDIR += libsexy
@@ -102,10 +99,6 @@
     SUBDIR += otk
     SUBDIR += p5-Alien-wxWidgets
     SUBDIR += p5-Glade2
-    SUBDIR += p5-Gnome2
-    SUBDIR += p5-Gnome2-Canvas
-    SUBDIR += p5-Gnome2-VFS
-    SUBDIR += p5-Gnome2-Wnck
     SUBDIR += p5-Gtk2
     SUBDIR += p5-Gtk2-Chmod
     SUBDIR += p5-Gtk2-Ex-Dialogs

@@ -842,7 +842,6 @@
     SUBDIR += gnatpython
     SUBDIR += gnome-builder
     SUBDIR += gnome-common
-    SUBDIR += gnome-vfs
     SUBDIR += gnu-efi
     SUBDIR += gnucflow
     SUBDIR += gnulib
@@ -2487,7 +2486,6 @@
     SUBDIR += p5-Git-Wrapper
     SUBDIR += p5-Glib
     SUBDIR += p5-Glib-Object-Introspection
-    SUBDIR += p5-Gnome2-GConf
     SUBDIR += p5-Goo-Canvas
     SUBDIR += p5-Goo-Canvas2
     SUBDIR += p5-Google-Checkout

@@ -9,13 +9,9 @@ COMMENT=	Netgraph node for Mikrotik EoIP tunneling
 
 LICENSE=	BSD2CLAUSE
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-SSP_UNSAFE=	kernel module does not support ssp
-=======
 USES=		kmod uidfix
->>>>>>> origin/freebsd/main
 
 OPTIONS_DEFINE=	PTABLE
 PTABLE_DESC=	Use O(1) lookup for tunnel hooks

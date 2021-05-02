@@ -15,13 +15,9 @@ BUILD_DEPENDS=	bash-completion>=0:shells/bash-completion \
 LIB_DEPENDS=	libodbcinst.so:databases/unixODBC
 RUN_DEPENDS=	bash-completion>=0:shells/bash-completion
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		autoreconf bison gnome iconv libtool pathfix \
-=======
 USES=		autoreconf bison gettext gnome iconv libtool pathfix \
->>>>>>> origin/freebsd/main
 		pkgconfig readline
 USE_GITHUB=	yes
 GH_ACCOUNT=	mdbtools

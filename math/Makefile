@@ -150,6 +150,7 @@
     SUBDIR += arpack++
     SUBDIR += arpack-ng
     SUBDIR += ascent
+    SUBDIR += asl
     SUBDIR += aspcud
     SUBDIR += asymptote
     SUBDIR += atlas
@@ -185,6 +186,7 @@
     SUBDIR += cglm
     SUBDIR += chaco
     SUBDIR += chryzodus
+    SUBDIR += chuffed
     SUBDIR += clasp
     SUBDIR += clblas
     SUBDIR += clblast

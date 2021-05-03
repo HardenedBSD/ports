@@ -1,7 +1,7 @@
 PORTNAME=	couenne
 DISTVERSIONPREFIX=	releases/
 DISTVERSION=	0.5.8
-PORTREVISION=	3
+PORTREVISION=	6
 CATEGORIES=	math
 PKGNAMEPREFIX=	coin-or-
 
@@ -16,7 +16,10 @@ LIB_DEPENDS=	libbonmin.so:math/bonmin \
 		libCbc.so:math/cbc \
 		libCgl.so:math/cgl \
 		libClp.so:math/clp \
-		libipopt.so:math/ipopt
+		libcoinasl.so:math/asl \
+		libCoinUtils.so:math/coinutils \
+		libipopt.so:math/ipopt \
+		libopenblas.so:math/openblas
 
 USES=		blaslapack:netlib fortran gmake libtool pkgconfig
 USE_LDCONFIG=	yes
@@ -29,5 +32,13 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-nauty-incdir=${LOCALBASE}/include/nauty --with-nauty-lib=${LOCALBASE}/lib/libnauty.a
 
 INSTALL_TARGET=	install-strip
+
+SUB_FILES=	${PORTNAME}.msc
+SUB_LIST=	PORTVERSION=${PORTVERSION}
+
+post-install:
+	# install MiniZinc configuration file
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/minizinc/solvers
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.msc ${STAGEDIR}${PREFIX}/share/minizinc/solvers
 
 .include <bsd.port.mk>

@@ -366,7 +366,6 @@
     SUBDIR += mussh
     SUBDIR += n2n
     SUBDIR += nacl
-    SUBDIR += ncrack
     SUBDIR += ncrypt
     SUBDIR += nettle
     SUBDIR += nextcloud-end_to_end_encryption

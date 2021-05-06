@@ -9,12 +9,10 @@ DISTNAME=	${PORTNAME}-autoconf-${PORTVERSION}
 MAINTAINER=	cperciva@tarsnap.com
 COMMENT=	Online encrypted backup service (client)
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
-=======
+
 LICENSE=	tarsnap
 LICENSE_NAME=	tarsnap
->>>>>>> origin/freebsd/main
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CFLAGS="-I${OPENSSLINC} ${CFLAGS}" \

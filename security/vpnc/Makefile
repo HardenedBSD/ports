@@ -26,13 +26,8 @@ USES=		gmake perl5 shebangfix
 USE_PERL5=	build
 USE_RC_SUBR=	vpnc
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-LEGAL_TEXT=	Redistribution is not allowed if linked against OpenSSL
-
-=======
->>>>>>> origin/freebsd/main
 ALL_TARGET=	all
 SHEBANG_FILES=	makeman.pl
 

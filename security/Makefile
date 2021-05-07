@@ -131,6 +131,7 @@
     SUBDIR += dsniff
     SUBDIR += dsvpn
     SUBDIR += duo
+    SUBDIR += duo_openvpn
     SUBDIR += easy-rsa
     SUBDIR += elixir-comeonin
     SUBDIR += elixir-comeonin_i18n
@@ -173,6 +174,7 @@
     SUBDIR += git-crypt
     SUBDIR += git-remote-gcrypt
     SUBDIR += git-secret
+    SUBDIR += gitjacker
     SUBDIR += gnome-keyring
     SUBDIR += gnome-keyring-sharp
     SUBDIR += gnome-ssh-askpass

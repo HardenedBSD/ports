@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	libpushover
 DISTVERSION=	g2020061601

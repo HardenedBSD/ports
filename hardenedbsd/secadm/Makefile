@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	secadm
 PORTVERSION=	0.5.1

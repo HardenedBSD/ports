@@ -9,13 +9,9 @@ COMMENT=	OpenBSD http server
 
 LICENSE=	BSD3CLAUSE
 
-<<<<<<< HEAD
-WRKSRC_SUBDIR=	src
 
 USE_HARDENING=	pie:off
 
-=======
->>>>>>> origin/freebsd/main
 USES=		uidfix
 
 USE_GITHUB=	yes

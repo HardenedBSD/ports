@@ -26,20 +26,9 @@ RUN_DEPENDS=	cl-asdf>=0:devel/cl-asdf
 
 USES=		gmake makeinfo tar:bzip2
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-BOOTVERSION=	1.2.7
-SBCL_BOOT_LIST=	${BOOTVERSION}-x86-64-freebsd ${BOOTVERSION}-x86-freebsd \
-		${BOOTVERSION}-x86-64-dragonfly
-
-CONMODULES=	asdf sb-aclrepl sb-bsd-sockets sb-cltl2 sb-concurrency sb-cover \
-		sb-executable sb-gmp sb-grovel sb-introspect sb-md5 sb-mpfr \
-		sb-posix sb-queue sb-rotate-byte sb-rt sb-simple-streams \
-		sb-sprof
-=======
 SUB_FILES=	pkg-message sbclrc
->>>>>>> origin/freebsd/main
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 

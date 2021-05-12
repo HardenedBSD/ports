@@ -183,6 +183,7 @@
     SUBDIR += ceres-solver
     SUBDIR += cgal
     SUBDIR += cgl
+    SUBDIR += cgl-conic
     SUBDIR += cglm
     SUBDIR += chaco
     SUBDIR += chryzodus
@@ -226,6 +227,7 @@
     SUBDIR += dbcsr
     SUBDIR += deal.ii
     SUBDIR += dieharder
+    SUBDIR += disco
     SUBDIR += djbfft
     SUBDIR += drgeo
     SUBDIR += dsdp
@@ -561,6 +563,8 @@
     SUBDIR += or-tools
     SUBDIR += orpie
     SUBDIR += osi
+    SUBDIR += osi-conic
+    SUBDIR += osiipopt
     SUBDIR += osqp
     SUBDIR += p5-AI-DecisionTree
     SUBDIR += p5-AI-Genetic

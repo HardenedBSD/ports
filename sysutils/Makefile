@@ -45,6 +45,7 @@
     SUBDIR += ansible-kld
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
+    SUBDIR += ansible2
     SUBDIR += ansible27
     SUBDIR += ansible28
     SUBDIR += anvil
@@ -208,6 +209,7 @@
     SUBDIR += consul-replicate
     SUBDIR += consul_exporter
     SUBDIR += container-diff
+    SUBDIR += containerd
     SUBDIR += contractor
     SUBDIR += copytape
     SUBDIR += coreos-ct
@@ -992,6 +994,8 @@
     SUBDIR += pwol
     SUBDIR += pwsafe
     SUBDIR += pxattr
+    SUBDIR += py-ansible-base
+    SUBDIR += py-ansible-core
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
     SUBDIR += py-azure-cli

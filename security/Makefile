@@ -51,7 +51,6 @@
     SUBDIR += belier
     SUBDIR += bfbtester
     SUBDIR += binwalk
-    SUBDIR += bitwarden_rs
     SUBDIR += boringssl
     SUBDIR += botan110
     SUBDIR += botan2
@@ -1280,6 +1279,7 @@
     SUBDIR += unicornscan
     SUBDIR += vanguards-tor
     SUBDIR += vault
+    SUBDIR += vaultwarden
     SUBDIR += veracrypt
     SUBDIR += vigenere
     SUBDIR += vinetto

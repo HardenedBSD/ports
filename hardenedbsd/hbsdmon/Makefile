@@ -1,6 +1,6 @@
 PORTNAME=	hbsdmon
 PORTVERSION=	1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	hardenedbsd
 
 MAINTAINER=	shawn.webb@hardenedbsd.org
@@ -15,7 +15,7 @@ USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=	hardenedbsd
 GL_PROJECT=	hbsdmon
-GL_COMMIT=	39499feab5a2a154975b4b1ce5e73a483dfb847e
+GL_COMMIT=	693fc41fba88aa165ab8ed22fb77798e036037a0
 
 LIB_DEPENDS=	libpushover.so:net/libpushover
 LIB_DEPENDS+=	libucl.so:textproc/libucl

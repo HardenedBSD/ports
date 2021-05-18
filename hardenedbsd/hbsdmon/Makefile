@@ -17,6 +17,9 @@ GL_PROJECT=	hbsdmon
 GL_COMMIT=	de020ca598e3bb3545fb95c6520bf1657ef05b51
 
 LIB_DEPENDS=	libpushover.so:net/libpushover
+LIB_DEPENDS+=	libucl.so:textproc/libucl
+LIB_DEPENDS+=	libcurl.so:ftp/curl
+LIB_DEPENDS+=	libzmq.so:net/libzmq4
 
 MAKE_JOBS_UNSAFE=	yes
 

@@ -1,0 +1,225 @@
+diff --git a/randamap.c b/randamap.c
+index cb2fe4c..988eece 100644
+--- randamap.c
++++ randamap.c
+@@ -4,9 +4,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Anonymous mapping randomization test     ";
+-const char testprog[] = RUNDIR"/getamap";
++const char testprog[] = "/usr/local/lib/paxtest/getamap";
+diff --git a/randarg1.c b/randarg1.c
+index 5017cdc..4586a5f 100644
+--- randarg1.c
++++ randarg1.c
+@@ -2,9 +2,5 @@
+  * 
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Arg/env randomization test (SEGMEXEC)    ";
+-const char testprog[] = RUNDIR"/getarg1";
++const char testprog[] = "/usr/local/lib/paxtest/getarg1";
+diff --git a/randarg2.c b/randarg2.c
+index ca65181..b0d2379 100644
+--- randarg2.c
++++ randarg2.c
+@@ -2,9 +2,5 @@
+  * 
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Arg/env randomization test (PAGEEXEC)    ";
+-const char testprog[] = RUNDIR"/getarg2";
++const char testprog[] = "/usr/local/lib/paxtest/getarg2";
+diff --git a/randexhaust1.c b/randexhaust1.c
+index 0eb8c5f..afcf758 100644
+--- randexhaust1.c
++++ randexhaust1.c
+@@ -2,9 +2,5 @@
+  * when trying to get a fixed address at the upper end of the address space
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Randomization under memory exhaustion @~0";
+-const char testprog[] = RUNDIR"/getexhaust1";
++const char testprog[] = "/usr/local/lib/paxtest/getexhaust1";
+diff --git a/randexhaust2.c b/randexhaust2.c
+index b38d30c..fcc9ce8 100644
+--- randexhaust2.c
++++ randexhaust2.c
+@@ -2,9 +2,5 @@
+  * when trying to get a fixed address at the bottom of the address space
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Randomization under memory exhaustion @0 ";
+-const char testprog[] = RUNDIR"/getexhaust2";
++const char testprog[] = "/usr/local/lib/paxtest/getexhaust2";
+diff --git a/randheap1.c b/randheap1.c
+index 5017e8d..d7771c5 100644
+--- randheap1.c
++++ randheap1.c
+@@ -4,9 +4,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Heap randomization test (ET_EXEC)        ";
+-const char testprog[] = RUNDIR"/getheap1";
++const char testprog[] = "/usr/local/lib/paxtest/getheap1";
+diff --git a/randheap2.c b/randheap2.c
+index 72b8e95..8425d8a 100644
+--- randheap2.c
++++ randheap2.c
+@@ -4,9 +4,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Heap randomization test (PIE)            ";
+-const char testprog[] = RUNDIR"/getheap2";
++const char testprog[] = "/usr/local/lib/paxtest/getheap2";
+diff --git a/randmain1.c b/randmain1.c
+index b66307b..7378741 100644
+--- randmain1.c
++++ randmain1.c
+@@ -4,9 +4,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Main executable randomization (ET_EXEC)  ";
+-const char testprog[] = RUNDIR"/getmain1";
++const char testprog[] = "/usr/local/lib/paxtest/getmain1";
+diff --git a/randmain2.c b/randmain2.c
+index c36ddbe..bcd85c8 100644
+--- randmain2.c
++++ randmain2.c
+@@ -4,9 +4,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Main executable randomization (PIE)      ";
+-const char testprog[] = RUNDIR"/getmain2";
++const char testprog[] = "/usr/local/lib/paxtest/getmain2";
+diff --git a/randshlib.c b/randshlib.c
+index a8b5dd7..8701553 100644
+--- randshlib.c
++++ randshlib.c
+@@ -4,9 +4,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Shared library randomization test        ";
+-const char testprog[] = RUNDIR"/getshlib";
++const char testprog[] = "/usr/local/lib/paxtest/getshlib";
+diff --git a/randshlibdelta1.c b/randshlibdelta1.c
+index 34afb6a..7a48e55 100644
+--- randshlibdelta1.c
++++ randshlibdelta1.c
+@@ -5,9 +5,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Offset to library randomisation (ET_EXEC)";
+-const char testprog[] = RUNDIR"/getshlibdelta1";
++const char testprog[] = "/usr/local/lib/paxtest/getshlibdelta1";
+diff --git a/randshlibdelta2.c b/randshlibdelta2.c
+index 849fb57..12a8377 100644
+--- randshlibdelta2.c
++++ randshlibdelta2.c
+@@ -5,9 +5,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Offset to library randomisation (ET_DYN) ";
+-const char testprog[] = RUNDIR"/getshlibdelta2";
++const char testprog[] = "/usr/local/lib/paxtest/getshlibdelta2";
+diff --git a/randstack1.c b/randstack1.c
+index b2aaac0..2efeab6 100644
+--- randstack1.c
++++ randstack1.c
+@@ -4,9 +4,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Stack randomization test (SEGMEXEC)      ";
+-const char testprog[] = RUNDIR"/getstack1";
++const char testprog[] = "/usr/local/lib/paxtest/getstack1";
+diff --git a/randstack2.c b/randstack2.c
+index 20a5c33..0ae0e5e 100644
+--- randstack2.c
++++ randstack2.c
+@@ -4,9 +4,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "Stack randomization test (PAGEEXEC)      ";
+-const char testprog[] = RUNDIR"/getstack2";
++const char testprog[] = "/usr/local/lib/paxtest/getstack2";
+diff --git a/randvdso.c b/randvdso.c
+index 0f39499..70ed57e 100644
+--- randvdso.c
++++ randvdso.c
+@@ -4,9 +4,5 @@
+  * This file has been released under the GNU Public Licence version 2 or later
+  */
+ 
+-#ifndef RUNDIR
+-#error RUNDIR not defined
+-#endif
+-
+ const char testname[] = "VDSO randomization test                  ";
+-const char testprog[] = RUNDIR"/getvdso";
++const char testprog[] = "/usr/local/lib/paxtest/getvdso";

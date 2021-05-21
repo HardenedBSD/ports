@@ -1,34 +1,29 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
 
 PORTNAME=	goocanvas
-PORTVERSION=	1.0.0
-PORTREVISION=	4
+PORTVERSION=	3.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
+DIST_SUBDIR=	gnome
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Cairo-based canvas widget for GTK+
 
 LICENSE=	LGPL20
 
-PORTSCOUT=	ignore:1
-
-LIB_DEPENDS=	libfreetype.so:print/freetype2 \
-		libfontconfig.so:x11-fonts/fontconfig
-
-USES=		gnome libtool pathfix pkgconfig tar:bzip2
-USE_GNOME=	cairo gdkpixbuf2 gtk20
-GNU_CONFIGURE=	yes
+USES=		gmake gnome libtool pkgconfig tar:xz
+USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection:build
 USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--enable-python=no
 INSTALL_TARGET=	install-strip
-LIBS=		-lm
 
+DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS NLS
 OPTIONS_SUB=	yes
-
-NLS_USES=	gettext localbase
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc/html|${DOCSDIR:H}|' \

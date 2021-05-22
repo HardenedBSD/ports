@@ -81,6 +81,7 @@
     SUBDIR += py-astropy-helpers
     SUBDIR += py-ephem
     SUBDIR += py-horoscopegenerator
+    SUBDIR += py-indiweb
     SUBDIR += py-jplephem
     SUBDIR += py-metar
     SUBDIR += py-metpy
@@ -110,6 +111,7 @@
     SUBDIR += starplot
     SUBDIR += stars
     SUBDIR += stellarium
+    SUBDIR += stellarsolver
     SUBDIR += sunclock
     SUBDIR += sunwait
     SUBDIR += swe

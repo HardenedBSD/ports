@@ -20,8 +20,6 @@ PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 SUB_FILES+=	snappy.pc
 SUB_LIST+=	PORTVERSION=${PORTVERSION}
 
-CFLAGS+=	-Qunused-arguments
-
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${LOCALBASE}/lib/libsnappy.so.${PORTVERSION}
 	${INSTALL_DATA} ${WRKDIR}/snappy.pc ${STAGEDIR}${LOCALBASE}/libdata/pkgconfig

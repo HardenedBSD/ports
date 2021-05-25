@@ -8,53 +8,6 @@ CATEGORIES=	math
 MAINTAINER=	fortran@FreeBSD.org
 COMMENT=	Set of packages for sparse matrix calculation
 
-<<<<<<< HEAD
-LICENSE=	GPLv2 LGPL21
-LICENSE_COMB=	dual
-
-LIB_DEPENDS=	libgmp.so:math/gmp	\
-		libmpfr.so:math/mpfr	\
-		libmetis.so:math/metis
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	DrTimothyAldenDavis
-GH_PROJECT=	SuiteSparse
-
-USES=		cmake:insource fortran gmake localbase:ldflags
-USE_LDCONFIG=	yes
-INSTALL_TARGET=	install # skip USES=cmake
-MAKE_ENV=	BLAS="${BLASLIB}" LAPACK="${LAPACKLIB}" \
-		MY_METIS_LIB="-lmetis" \
-		JOBS="${MAKE_JOBS_NUMBER}" \
-		CMAKE_OPTIONS='${CMAKE_ARGS}' \
-		INSTALL="${STAGEDIR}${PREFIX}" \
-		INSTALL_DOC="${STAGEDIR}${DOCSDIR}" \
-		INSTALL_INCLUDE="${STAGEDIR}${PREFIX}/include/${PORTNAME}"
-CMAKE_ARGS=	-DCMAKE_INSTALL_INCLUDEDIR:PATH="include/${PORTNAME}"	\
-		-DBUILD_GRB_STATIC_LIBRARY:BOOL=ON
-LDFLAGS+=	-L${WRKSRC}/lib # prevent linking with shared libs from the preinstalled older versions
-
-USE_HARDENING=	retpoline:off
-
-CONFLICTS_INSTALL=	mongoose plinkseq # bin/mongoose
-
-OPTIONS_DEFINE=		DEMOS DOCS OPENMP # TBB
-OPTIONS_EXCLUDE_aarch64=	OPENMP
-OPTIONS_RADIO=		BLAS
-OPTIONS_RADIO_BLAS=	ATLAS GOTOBLAS NETLIB OPENBLAS
-OPTIONS_DEFAULT=	OPENBLAS OPENMP # TBB
-
-ATLAS_USES=		blaslapack:atlas
-GOTOBLAS_DESC=		Goto blas implementation
-GOTOBLAS_USES=		blaslapack:gotoblas
-NETLIB_USES=		blaslapack:netlib
-OPENBLAS_USES=		blaslapack:openblas
-
-OPENMP_MAKE_ENV_OFF=	CFOPENMP=
-.if !exists(/usr/include/omp.h)
-# XXX ports/199603: LLVM openmp in base doesn't support armv6, armv7 yet
-OPENMP_VARS=		OPENMP=gcc-
-=======
 LICENSE=	GPLv2+
 
 RUN_DEPENDS=	suitesparse-AMD>0:math/suitesparse-amd			\
@@ -74,7 +27,6 @@ RUN_DEPENDS=	suitesparse-AMD>0:math/suitesparse-amd			\
 		suitesparse-UMFPACK>0:math/suitesparse-umfpack
 .if !defined(PACKAGE_BUILDING)
 RUN_DEPENDS+=	suitesparse-CSparse>0:math/suitesparse-csparse
->>>>>>> origin/freebsd/main
 .endif
 
 USES=		metaport

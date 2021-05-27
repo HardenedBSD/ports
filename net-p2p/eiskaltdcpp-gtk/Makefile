@@ -10,11 +10,9 @@ COMMENT=	EiskaltDC++ client GTK graphic interface
 
 LICENSE=	GPLv3
 
-<<<<<<< HEAD
 USE_HARDENING=  safestack
-=======
+
 BROKEN=		Doesn't compile with Pango 1.46.2 or newer - PR 249879
->>>>>>> origin/freebsd/main
 
 RUN_DEPENDS=	eiskaltdcpp-data>=0:net-p2p/eiskaltdcpp-data
 LIB_DEPENDS=	libeiskaltdcpp.so:net-p2p/eiskaltdcpp-lib

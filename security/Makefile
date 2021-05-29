@@ -1052,6 +1052,7 @@
     SUBDIR += rubygem-bcrypt_pbkdf
     SUBDIR += rubygem-bcrypt_pbkdf10
     SUBDIR += rubygem-cose
+    SUBDIR += rubygem-declarative_policy
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor-rails60

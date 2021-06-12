@@ -47,15 +47,13 @@ USE_GL=		gl
 USE_XORG=	ice sm x11 xcb xcomposite xext xfixes xinerama xrandr
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/obs
 PAGEEXEC_DISABLE=	bin/obs
-=======
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	obsproject
 GH_TUPLE=	obsproject:obs-browser:f1a61c5:obs_browser/plugins/obs-browser \
 		obsproject:obs-vst:aaa7b7f:obs_vst/plugins/obs-vst
->>>>>>> origin/freebsd/main
 
 CMAKE_ON=	UNIX_STRUCTURE
 CMAKE_ARGS=	-DOBS_VERSION_OVERRIDE:STRING="${PORTVERSION}"

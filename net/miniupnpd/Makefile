@@ -16,12 +16,10 @@ USES=		cpe ssl
 CPE_VENDOR=	miniupnp_project
 USE_RC_SUBR=	miniupnpd
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
-=======
+
 HAS_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
->>>>>>> origin/freebsd/main
 
 CFLAGS+=	-I${OPENSSLINC}
 LDFLAGS+=	-L${OPENSSLLIB}

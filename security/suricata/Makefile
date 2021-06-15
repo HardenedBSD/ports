@@ -1,6 +1,6 @@
 PORTNAME=	suricata
 DISTVERSION=	6.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://www.openinfosecfoundation.org/download/
 
@@ -50,6 +50,8 @@ OPTIONS_RADIO=		SCRIPTS
 OPTIONS_RADIO_SCRIPTS=	LUA LUAJIT
 
 OPTIONS_SUB=		yes
+
+PRELUDE_BROKEN=		Compilation broken, see https://redmine.openinfosecfoundation.org/issues/4065
 
 GEOIP_DESC=		GeoIP support
 HYPERSCAN_DESC=		Hyperscan support

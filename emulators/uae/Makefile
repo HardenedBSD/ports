@@ -11,13 +11,15 @@ COMMENT=	Commodore Amiga emulator
 
 LICENSE=	GPLv2
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: socketbases
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: socketbases
 
+=======
+>>>>>>> origin/freebsd/main
 CONFLICTS=	e-uae-[0-9]*
-MAKE_JOBS_UNSAFE=yes
 
 USES=		gmake gnome pkgconfig tar:bzip2
 GNU_CONFIGURE=	yes
@@ -28,6 +30,8 @@ OPTIONS_DEFINE=	DOCS
 post-patch:
 	@${REINPLACE_CMD} -e 's|build68kc|build68k|' \
 		${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e 's|struct socketbase {|extern &|' \
+		${WRKSRC}/src/include/bsdsocket.h
 	@${LN} -sf ../md-ppc/support.c ${WRKSRC}/src/md-ppc-gcc/support.c
 
 do-install:

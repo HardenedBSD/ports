@@ -1,6 +1,6 @@
-PORTNAME=	openhab2
-PORTVERSION=	2.5.12
-#PORTREVISION=	0
+PORTNAME=	openhab
+PORTVERSION=	3.0.2
+PORTREVISION=	0
 CATEGORIES=	misc java
 MASTER_SITES=	https://openhab.jfrog.io/artifactory/libs-release-local/org/openhab/distro/openhab/${PORTVERSION}/
 DISTNAME=	openhab-${PORTVERSION}
@@ -13,10 +13,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
 USES=		zip
 USE_JAVA=	yes
-JAVA_VERSION=	1.8
+JAVA_VERSION=	11
 JAVA_RUN=	yes
-USE_RC_SUBR=	openhab2
-SUB_FILES=	pkg-message update.freebsd
+USE_RC_SUBR=	openhab
+SUB_FILES=	pkg-message
 NO_WRKSUBDIR=	yes
 NO_ARCH=	yes
 
@@ -61,17 +61,16 @@ do-install:
 .for script in start.sh start_debug.sh
 	${INSTALL_SCRIPT} ${WRKSRC}/${script} ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}/
 .endfor
-	${INSTALL_SCRIPT} ${WRKDIR}/update.freebsd ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}/runtime/bin/
 	(cd ${WRKSRC}/userdata && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share/${PORTNAME})
 
 gen-plist:
-	${FIND} ${STAGEDIR} -type f | ${SED} -e "s:${STAGEDIR}${PREFIX}/::g ; s:${PORTVERSION}:%%PORTVERSION%%:g" | ${SORT} -u | ${GREP} libexec/ >pkg-plist.new
+	${FIND} ${STAGEDIR} -type f | sed -e "s:${STAGEDIR}${PREFIX}/::g ; s:${PORTVERSION}:%%PORTVERSION%%:g" | sort -u | grep libexec/ >pkg-plist.new
 	echo '@owner openhab' >>pkg-plist.new
 	echo '@group openhab' >>pkg-plist.new
-	${FIND} ${STAGEDIR}${DATADIR} -type f | ${SED} -E -e "s:${STAGEDIR}${DATADIR}/(.*):@sample %%DATADIR%%/\\1 /var/db/openhab2/userdata/\\1:g ; s:${PORTVERSION}:%%PORTVERSION%%:g" | ${SORT} -u >>pkg-plist.new
-	${FIND} ${STAGEDIR}${ETCDIR} -type d | ${SORT} -u | ${SED} -e "s:${STAGEDIR}${ETCDIR}:@dir %%ETCDIR%%:g ; s:${PORTVERSION}:%%PORTVERSION%%:g"  >>pkg-plist.new
-	${FIND} ${STAGEDIR}${ETCDIR} -type f | ${SORT} -u | ${SED} -E -e "s:${STAGEDIR}${ETCDIR}/:%%ETCDIR%%/:g ; s:${PORTVERSION}:%%PORTVERSION%%:g ; s:(.*.sample)$:@sample(openhab,openhab,640) \\1:" >>pkg-plist.new
-	${FIND} ${STAGEDIR}/var/db/${PORTNAME} -type d | ${SORT} -ru | ${SED} -e "s:${STAGEDIR}:@dir :g" >>pkg-plist.new
+	${FIND} ${STAGEDIR}${DATADIR} -type f | sed -E -e "s:${STAGEDIR}${DATADIR}/(.*):@sample %%DATADIR%%/\\1 /var/db/openhab/userdata/\\1:g ; s:${PORTVERSION}:%%PORTVERSION%%:g" | sort -u >>pkg-plist.new
+	${FIND} ${STAGEDIR}${ETCDIR} -type d | sort -u | sed -e "s:${STAGEDIR}${ETCDIR}:@dir %%ETCDIR%%:g ; s:${PORTVERSION}:%%PORTVERSION%%:g"  >>pkg-plist.new
+	${FIND} ${STAGEDIR}${ETCDIR} -type f | sort -u | sed -E -e "s:${STAGEDIR}${ETCDIR}/:%%ETCDIR%%/:g ; s:${PORTVERSION}:%%PORTVERSION%%:g ; s:(.*.sample)$:@sample(openhab,openhab,640) \\1:" >>pkg-plist.new
+	${FIND} ${STAGEDIR}/var/db/${PORTNAME} -type d | sort -ru | sed -e "s:${STAGEDIR}:@dir :g" >>pkg-plist.new
 	echo "@dir /var/log/${PORTNAME}" >>pkg-plist.new
 	echo "@dir /var/run/${PORTNAME}" >>pkg-plist.new
 

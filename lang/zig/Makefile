@@ -15,13 +15,9 @@ ONLY_FOR_ARCHS_REASON=	not yet supported
 
 BUILD_DEPENDS=	llvm${_LLVM_VER}>=0:devel/llvm${_LLVM_VER}
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		cmake compiler:c++11-lang tar:xz
-=======
 USES=		cmake compiler:c++11-lang localbase:ldflags tar:xz
->>>>>>> origin/freebsd/main
 
 OPTIONS_DEFINE=		STATIC
 

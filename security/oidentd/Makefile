@@ -11,13 +11,9 @@ COMMENT=	Ident server that supports user-defined ident strings
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		bison
-=======
 USES=		bison tar:xz
->>>>>>> origin/freebsd/main
 USE_RC_SUBR=	oidentd
 GNU_CONFIGURE=	yes
 

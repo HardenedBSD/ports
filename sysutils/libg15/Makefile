@@ -9,13 +9,9 @@ COMMENT=	API for control of LCD and the extra keys on Logitech keyboards
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		compiler:gcc-c++11-lib gmake libtool tar:bzip2
-=======
 USES=		gmake libtool tar:bzip2
->>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes

@@ -35,15 +35,11 @@ MESON_ARGS=	-Dpam_include=system \
 
 INSTALL_TARGET=	install-strip
 
-<<<<<<< HEAD
 PAGEEXEC_DISABLE=	lib/polkit-1/polkitd
 MPROTECT_DISABLE=	lib/polkit-1/polkitd
 
-OPTIONS_DEFINE=	MANPAGES
-=======
 OPTIONS_DEFINE=		MANPAGES
 
->>>>>>> origin/freebsd/main
 MANPAGES_BUILD_DEPENDS=	docbook-sgml>=4.5:textproc/docbook-sgml \
 			docbook-xsl>=1.76:textproc/docbook-xsl
 MANPAGES_USE=		gnome=libxslt:build

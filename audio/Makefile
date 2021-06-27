@@ -48,6 +48,7 @@
     SUBDIR += aylet
     SUBDIR += bambootracker
     SUBDIR += bamp-lv2
+    SUBDIR += bangr-lv2
     SUBDIR += baresip
     SUBDIR += baudline
     SUBDIR += bcg729
@@ -736,6 +737,7 @@
     SUBDIR += sox
     SUBDIR += spc2it
     SUBDIR += spectacle-lv2
+    SUBDIR += spectmorph
     SUBDIR += spectrogram
     SUBDIR += speech-denoiser-lv2
     SUBDIR += speex

@@ -63,7 +63,6 @@
     SUBDIR += elixir-ecto
     SUBDIR += elixir-geo
     SUBDIR += elixir-mariaex
-    SUBDIR += elixir-mongo
     SUBDIR += elixir-postgrex
     SUBDIR += elixir-timex_ecto
     SUBDIR += emacsql
@@ -834,8 +833,6 @@
     SUBDIR += py-xapian
     SUBDIR += py-zodbpickle
     SUBDIR += pymongo
-    SUBDIR += pypy-gdbm
-    SUBDIR += pypy-sqlite3
     SUBDIR += qdbm
     SUBDIR += qdbm-plus
     SUBDIR += qof

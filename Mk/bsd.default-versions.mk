@@ -86,7 +86,7 @@ MONO_DEFAULT=		5.10
 MYSQL_DEFAULT?=		5.7
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible values: 5.28, 5.30, 5.32, 5.34, devel
+# Possible values: 5.30, 5.32, 5.34, devel
 .if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
 PERL5_DEFAULT?=		5.32
@@ -101,7 +101,7 @@ _PERL5_FROM_BIN!=	${LOCALBASE}/bin/perl -e 'printf "%vd\n", $$^V;'
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .endif
-# Possible values: 9.5, 9.6, 10, 11, 12, 13
+# Possible values: 9.6, 10, 11, 12, 13
 PGSQL_DEFAULT?=		12
 # Possible values: 7.3, 7.4, 8.0
 PHP_DEFAULT?=		7.4

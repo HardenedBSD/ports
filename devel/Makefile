@@ -4446,6 +4446,7 @@
     SUBDIR += py-freebsd-sysctl
     SUBDIR += py-freenas.utils
     SUBDIR += py-freezegun
+    SUBDIR += py-frictionless
     SUBDIR += py-frozendict
     SUBDIR += py-fs
     SUBDIR += py-fs2
@@ -5200,6 +5201,7 @@
     SUBDIR += py-txaio
     SUBDIR += py-typechecks
     SUBDIR += py-typed-ast
+    SUBDIR += py-typer
     SUBDIR += py-types-PyYAML
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-requests
@@ -6045,11 +6047,13 @@
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-create-meta
     SUBDIR += rubygem-cucumber-create-meta2
+    SUBDIR += rubygem-cucumber-create-meta4
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-cucumber-expressions10
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-messages13
+    SUBDIR += rubygem-cucumber-messages15
     SUBDIR += rubygem-cucumber-messages4
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions

@@ -11,13 +11,9 @@ COMMENT=	DragonFly Mail Agent, a small MTA for local/outbound mail
 
 LICENSE=	BSD3CLAUSE
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		uidfix ssl
-=======
 USES=		ssl uidfix
->>>>>>> origin/freebsd/main
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	corecode

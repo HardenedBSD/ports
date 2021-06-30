@@ -39,11 +39,8 @@ USE_LDCONFIG=	yes
 PLIST_SUB=	SHLIB_MAJOR=${PORTVERSION:R} \
 		SHLIB_MINOR=${PORTVERSION:E}
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-.include <bsd.port.mk>
-=======
 .include <bsd.port.pre.mk>
 
 # Remove openssl from grpc.pc because we do not ship openssl.pc in base system
@@ -52,4 +49,3 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-CMakeLists.txt
 .endif
 
 .include <bsd.port.post.mk>
->>>>>>> origin/freebsd/main

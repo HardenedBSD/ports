@@ -31,13 +31,9 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 RUN_DEPENDS=	p5-List-MoreUtils>=0:lang/p5-List-MoreUtils \
 		p5-JSON>=0:converters/p5-JSON
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		compiler:c++14-lang gmake localbase:ldflags shebangfix perl5 python
-=======
 USES=		compiler:c++14-lang gmake localbase:ldflags shebangfix perl5 python:3.6+
->>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
 
 SHEBANG_FILES=	src/app/blast/legacy_blast.pl \

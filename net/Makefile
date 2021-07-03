@@ -1288,6 +1288,7 @@
     SUBDIR += rubygem-httpauth
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
+    SUBDIR += rubygem-kas-grpc
     SUBDIR += rubygem-lita-gems
     SUBDIR += rubygem-macaddr
     SUBDIR += rubygem-maxmind-db

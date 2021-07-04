@@ -16,14 +16,22 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
 USES=		desktop-file-utils gnome pkgconfig tar:bzip2 xorg
-USE_GNOME=	cairo gtk30
+USE_GNOME=	cairo
 INSTALLS_ICONS=	yes
 USE_XORG=	x11
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 OPTIONS_DEFINE=	NLS
+=======
+OPTIONS_DEFINE=	GTK2 NLS
+>>>>>>> origin/freebsd/main
 OPTIONS_SUB=	yes
+
+GTK2_USE=	GNOME=gtk20
+GTK2_MAKE_ENV=	GTK_VERSION=2
+GTK2_USE_OFF=	GNOME=gtk30
 
 NLS_USES=	gettext-runtime gettext-tools
 NLS_MAKE_ENV_OFF=	WITHOUT_NLS=yes

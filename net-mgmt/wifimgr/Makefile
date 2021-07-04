@@ -20,13 +20,9 @@ USE_GNOME=	cairo
 INSTALLS_ICONS=	yes
 USE_XORG=	x11
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-OPTIONS_DEFINE=	NLS
-=======
 OPTIONS_DEFINE=	GTK2 NLS
->>>>>>> origin/freebsd/main
 OPTIONS_SUB=	yes
 
 GTK2_USE=	GNOME=gtk20

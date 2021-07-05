@@ -576,6 +576,7 @@
     SUBDIR += pg_repack
     SUBDIR += pg_similarity
     SUBDIR += pg_stat_kcache
+    SUBDIR += pg_tileserv
     SUBDIR += pgaccess
     SUBDIR += pgadmin3
     SUBDIR += pgbackrest
@@ -727,10 +728,8 @@
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += prometheus-postgresql-adapter
     SUBDIR += pspg
-    SUBDIR += puppetdb-terminus5
     SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb-terminus7
-    SUBDIR += puppetdb5
     SUBDIR += puppetdb6
     SUBDIR += puppetdb7
     SUBDIR += puredb

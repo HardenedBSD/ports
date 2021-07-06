@@ -6162,8 +6162,8 @@
     SUBDIR += rubygem-flexmock
     SUBDIR += rubygem-flipper
     SUBDIR += rubygem-flipper-active_support_cache_store
-    SUBDIR += rubygem-flipper-active_support_cache_store017
     SUBDIR += rubygem-flipper-active_support_cache_store-rails61
+    SUBDIR += rubygem-flipper-active_support_cache_store017
     SUBDIR += rubygem-flipper-ui
     SUBDIR += rubygem-flipper-ui017
     SUBDIR += rubygem-flipper017
@@ -6194,6 +6194,7 @@
     SUBDIR += rubygem-gemdiff
     SUBDIR += rubygem-gemnasium-parser
     SUBDIR += rubygem-gems
+    SUBDIR += rubygem-generator
     SUBDIR += rubygem-generator_spec-rails4
     SUBDIR += rubygem-generator_spec-rails5
     SUBDIR += rubygem-georuby
@@ -6629,6 +6630,7 @@
     SUBDIR += rubygem-simple_form-rails5
     SUBDIR += rubygem-simple_form-rails50
     SUBDIR += rubygem-simplecov
+    SUBDIR += rubygem-simplecov_json_formatter
     SUBDIR += rubygem-singleton
     SUBDIR += rubygem-skiptrace
     SUBDIR += rubygem-slack-messenger

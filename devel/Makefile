@@ -2935,6 +2935,7 @@
     SUBDIR += p5-Object-Import
     SUBDIR += p5-Object-InsideOut
     SUBDIR += p5-Object-MultiType
+    SUBDIR += p5-Object-Pad
     SUBDIR += p5-Object-Pluggable
     SUBDIR += p5-Object-Realize-Later
     SUBDIR += p5-Object-Role
@@ -3639,6 +3640,7 @@
     SUBDIR += p5-XML-Pastor
     SUBDIR += p5-XS-Object-Magic
     SUBDIR += p5-XS-Parse-Keyword
+    SUBDIR += p5-XS-Parse-Sublike
     SUBDIR += p5-XSLoader
     SUBDIR += p5-XXX
     SUBDIR += p5-Xporter

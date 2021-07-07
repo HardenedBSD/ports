@@ -215,6 +215,7 @@
     SUBDIR += ly
     SUBDIR += mako
     SUBDIR += mate
+    SUBDIR += mate-applet-appmenu
     SUBDIR += mate-applets
     SUBDIR += mate-base
     SUBDIR += mate-desktop
@@ -393,6 +394,7 @@
     SUBDIR += workrave
     SUBDIR += wshowkeys
     SUBDIR += wtype
+    SUBDIR += x-on-resize
     SUBDIR += x11perf
     SUBDIR += x3270
     SUBDIR += xantfarm

@@ -159,4 +159,4 @@ post-install-RBLAS-off:
 	@${REINPLACE_CMD} -e "s| -lR| -lR ${BLASLIB}|" \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig/libR.pc
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

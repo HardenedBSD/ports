@@ -1,31 +1,27 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
 
 PORTNAME=	mediawiki
-PORTVERSION=	1.31.15
+PORTVERSION=	1.36.1
 CATEGORIES=	www
 MASTER_SITES=	http://releases.wikimedia.org/mediawiki/${PORTVERSION:R}/
-PKGNAMESUFFIX=	131${PHP_PKGNAMESUFFIX}
+PKGNAMESUFFIX=	136${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Wiki engine used by Wikipedia
 
 LICENSE=	GPLv2
 
-CONFLICTS=	mediawiki13[5-6]-[0-9]*
+CONFLICTS=	mediawiki13[1-5]-[0-9]*
 
 USES=		php:flavors shebangfix
 SHEBANG_FILES=	maintenance/dev/*.sh \
-		maintenance/postgres/*.pl \
-		maintenance/storage/make-blobs \
-		includes/shell/limit.sh
+		maintenance/storage/make-blobs
 SHEBANG_LANG=	hhvm
 hhvm_OLD_CMD=	/usr/bin/hhvm
 hhvm_CMD=	${LOCALBASE}/bin/hhvm # not installed by anything yet
-USE_PHP=	ctype dom fileinfo hash iconv intl json mbstring openssl pcre \
-		readline session xml xmlreader zlib
+USE_PHP=	ctype dom fileinfo filter hash iconv intl json mbstring openssl \
+		pcre readline session xml xmlreader zlib
 MEDIAWIKIDIR?=	www/mediawiki
-
-IGNORE_WITH_PHP=	80
 
 NO_BUILD=	yes
 PLIST=		${WRKDIR}/plist
@@ -55,9 +51,13 @@ IMAGICK_RUN_DEPENDS=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/imagick.so:graphics/pec
 pre-install:
 	@${FIND} -s -d ${WRKSRC} -not -type d | ${SED} "s?${WRKSRC}?${MEDIAWIKIDIR}?g" >>${PLIST}
 	@${ECHO} "@dir %%WWWDIR%%/cache" >> ${PLIST}
-	@${ECHO} "@mode 0777" >> ${PLIST}
+	@${ECHO_CMD} "@owner ${WWWOWN}" >> ${PLIST}
+	@${ECHO_CMD} "@group ${WWWGRP}" >> ${PLIST}
+	@${ECHO} "@mode 0755" >> ${PLIST}
 	@${ECHO} "@dir %%WWWDIR%%/images" >> ${PLIST}
 	@${ECHO} "@mode" >> ${PLIST}
+	@${ECHO_CMD} "@owner" >> ${PLIST}
+	@${ECHO_CMD} "@group" >> ${PLIST}
 	@${ECHO} @dir ${MEDIAWIKIDIR} >> ${PLIST}
 
 do-install:

@@ -4547,6 +4547,7 @@
     SUBDIR += py-intervaltree
     SUBDIR += py-invoke
     SUBDIR += py-ioflo
+    SUBDIR += py-iopath
     SUBDIR += py-ipaddr
     SUBDIR += py-ipdb
     SUBDIR += py-ipykernel5
@@ -5310,6 +5311,7 @@
     SUBDIR += py-xstatic-term.js
     SUBDIR += py-xstatic-tv4
     SUBDIR += py-xxhash
+    SUBDIR += py-yacs
     SUBDIR += py-yaml
     SUBDIR += py-yamllint
     SUBDIR += py-yamlordereddictloader

@@ -82,7 +82,6 @@ Ruby_Include_MAINTAINER=	ruby@FreeBSD.org
 # RUBY_BASE_PORT	- Port path of base ruby without PORTSDIR, without
 #			  suffix except version.
 # RUBY_PORT		- Port path of ruby without PORTSDIR.
-# RUBY_RDOC_PORT	- Port path of rdoc without PORTSDIR.
 #
 # DEPEND_RUBY		- BUILD_DEPENDS/RUN_DEPENDS entry for ruby.
 # DEPEND_RUBY_RDOC	- BUILD_DEPENDS entry for rdoc.
@@ -144,8 +143,8 @@ RUBY?=			${LOCALBASE}/bin/${RUBY_NAME}
 #
 # Ruby 2.6
 #
-RUBY_VERSION=		2.6.7
-RUBY_PORTREVISION=	2
+RUBY_VERSION=		2.6.8
+RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY26=			""	# PLIST_SUB helpers
 
@@ -153,8 +152,8 @@ RUBY26=			""	# PLIST_SUB helpers
 #
 # Ruby 2.7
 #
-RUBY_VERSION=		2.7.3
-RUBY_PORTREVISION=	2
+RUBY_VERSION=		2.7.4
+RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY27=			""	# PLIST_SUB helpers
 
@@ -162,8 +161,8 @@ RUBY27=			""	# PLIST_SUB helpers
 #
 # Ruby 3.0
 #
-RUBY_VERSION=		3.0.1
-RUBY_PORTREVISION=	1
+RUBY_VERSION=		3.0.2
+RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY30=			""	# PLIST_SUB helpers
 

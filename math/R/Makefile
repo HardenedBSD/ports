@@ -18,8 +18,6 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 # R packages may require GNU make
 RUN_DEPENDS=	gmake:devel/gmake
 
-USE_HARDENING=	pie:off relro:off
-
 # possible TODO
 # - Use --with-recommended-packages=no by default
 # - Add an option for recommended packages
@@ -30,6 +28,8 @@ USES=		compiler:c++11-lang gmake iconv libtool localbase pathfix perl5 \
 		readline
 USE_LDCONFIG=	${PREFIX}/lib/R/lib
 USE_PERL5=	build
+
+USE_HARDENING=	pie:off relro:off
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-java \
@@ -47,12 +47,7 @@ OPTIONS_DEFINE_powerpc64=	OPENMP
 OPTIONS_DEFINE_powerpc64le=	OPENMP
 OPTIONS_DEFAULT=	CAIROPANGO GHOSTSCRIPT ICU INFO JPEG LDOUBLE PNG RBLAS \
 			RPROF TCLTK TIFF X11
-.include <bsd.port.pre.mk>
-.if ${OSVERSION} >= 1400001
-OPTIONS_DEFAULT_amd64=	OPENMP FLANG
-.else
 OPTIONS_DEFAULT_amd64=	OPENMP
-.endif
 OPTIONS_DEFAULT_i386=	OPENMP
 OPTIONS_DEFAULT_powerpc64=	OPENMP
 OPTIONS_DEFAULT_powerpc64le=	OPENMP
@@ -159,4 +154,4 @@ post-install-RBLAS-off:
 	@${REINPLACE_CMD} -e "s| -lR| -lR ${BLASLIB}|" \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig/libR.pc
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

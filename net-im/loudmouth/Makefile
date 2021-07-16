@@ -25,16 +25,10 @@ CONFIGURE_ARGS=	--disable-rebuilds \
 		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 INSTALL_TARGET=	install-strip
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=GNUTLS
-OPTIONS_RADIO=	SSL
-=======
 OPTIONS_DEFINE=		DOCS
 OPTIONS_RADIO=		SSL
->>>>>>> origin/freebsd/main
 OPTIONS_RADIO_SSL=	GNUTLS OPENSSL
 
 OPTIONS_DEFAULT=	GNUTLS

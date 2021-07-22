@@ -105,6 +105,7 @@
     SUBDIR += R-cran-tidyr
     SUBDIR += R-cran-tidyselect
     SUBDIR += R-cran-tinytest
+    SUBDIR += R-cran-tzdb
     SUBDIR += R-cran-uuid
     SUBDIR += R-cran-vcd
     SUBDIR += R-cran-vctrs
@@ -5191,6 +5192,7 @@
     SUBDIR += py-threema-msgapi
     SUBDIR += py-thrift
     SUBDIR += py-thriftpy
+    SUBDIR += py-thriftpy2
     SUBDIR += py-tiamat
     SUBDIR += py-timelib
     SUBDIR += py-tinyarray

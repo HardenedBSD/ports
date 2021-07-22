@@ -1258,7 +1258,7 @@ _EXPORTED_VARS+=	LLVM_OBJDUMP_IS_OBJDUMP
 _PKG_VERSION!=	${PKG_BIN} -v
 .endif
 # XXX hack for smooth transition towards pkg 1.17
-_PKG_BEFORE_PKGEXT!= ${PKG_BIN} version -t ${_PKG_VERSION:C/-.*//g} 1.17.0
+_PKG_BEFORE_PKGEXT!= ${PKG_BIN} version -t ${_PKG_VERSION:C/-.*//g} 1.16.3
 .if ${_PKG_BEFORE_PKGEXT} == "<"
 _PKG_TRANSITIONING_TO_NEW_EXT=	yes
 _EXPORTED_VARS+=	_PKG_TRANSITIONING_TO_NEW_EXT

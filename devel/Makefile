@@ -4315,6 +4315,7 @@
     SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-contextlib2
+    SUBDIR += py-contextvars
     SUBDIR += py-convertdate
     SUBDIR += py-cookiecutter
     SUBDIR += py-copier
@@ -5396,6 +5397,7 @@
     SUBDIR += pystring
     SUBDIR += pysvn
     SUBDIR += pythontidy
+    SUBDIR += pytype
     SUBDIR += qbs
     SUBDIR += qca
     SUBDIR += qca-legacy

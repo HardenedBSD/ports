@@ -8,7 +8,7 @@ COMMENT=	HardenedBSD infrastructure monitoring daemon
 
 LICENSE=	BSD2CLAUSE
 
-USES+=		uidfix
+USES+=		uidfix kmod
 USE_HARDENING?=	safestack
 
 USE_GITLAB=	yes

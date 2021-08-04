@@ -297,7 +297,11 @@ OPTIONS_GROUP_HARDENING+=CFI
 retpoline_ARGS?=	auto
 
 .if ${retpoline_ARGS:Mauto}
+.if ${_USE_HARDENING:Mfortran}
+retpoline_ARGS+=	off
+.else
 USE_HARDENING:=		retpoline ${USE_HARDENING:Nretpoline}
+.endif
 .endif
 
 RETPOLINE_DESC=		Build with Retpoline
@@ -363,7 +367,11 @@ OPTIONS_GROUP_HARDENING+=SLH
 stackautoinit_ARGS?=	auto
 
 .if ${stackautoinit_ARGS:Mauto}
+.if ${_USE_HARDENING:Mfortran}
+stackautoinit_ARGS+=    off
+.else
 USE_HARDENING:=		stackautoinit ${USE_HARDENING:Nstackautoinit}
+.endif
 .endif
 
 STACKAUTOINIT_DESC=		Stack Auto-Zero-Initialization

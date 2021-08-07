@@ -177,6 +177,8 @@
     SUBDIR += opensph
     SUBDIR += opsin
     SUBDIR += orthanc
+    SUBDIR += orthanc-mysql
+    SUBDIR += orthanc-postgresql
     SUBDIR += orthanc-webviewer
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder

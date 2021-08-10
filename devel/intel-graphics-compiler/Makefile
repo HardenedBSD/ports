@@ -18,6 +18,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	Only Intel GPUs on x86 are supported
 
+BUILD_DEPENDS=	vc-intrinsics-llvm11>=s20210730:devel/vc-intrinsics@llvm11
 LIB_DEPENDS=	libopencl-clang.so.11:devel/opencl-clang@llvm11
 
 USE_HARDENING=	pie:off
@@ -26,7 +27,6 @@ USES=		bison cmake compiler:c++17-lang python:build
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	intel
-GH_TUPLE=	intel:vc-intrinsics:05d3f3d:vcintrin/../vc-intrinsics
 CMAKE_OFF=	INSTALL_SPIRVDLL
 CMAKE_ARGS=	-DCMAKE_PREFIX_PATH:PATH="${LOCALBASE}/${LIB_DEPENDS:M*@llvm*:C/.*@//}" \
 		-DIGC_OPTION__LLVM_PREFERRED_VERSION:STRING="${LIB_DEPENDS:M*@llvm*:C/.*so\.//:C/:.*//}"

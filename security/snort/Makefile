@@ -15,13 +15,9 @@ COMMENT=	Lightweight network intrusion detection system
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-BUILD_DEPENDS=	daq>=2.0.0:net/daq
-=======
 BUILD_DEPENDS=	daq>=2.2.2_3:net/daq
->>>>>>> origin/freebsd/main
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libdnet.so:net/libdnet \
 		libpcap.so:net/libpcap

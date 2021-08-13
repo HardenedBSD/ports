@@ -1,16 +1,19 @@
-PORTNAME=	ponscripter-sekai
-PORTVERSION=	0.0.6
+PORTNAME=	ponscripter
 DISTVERSIONPREFIX=	v
-PORTREVISION=	7
+DISTVERSION=	2.2.0_test-3
+DISTVERSIONSUFFIX=	-gfd57193
 CATEGORIES=	games
+PKGNAMESUFFIX=	-${GH_ACCOUNT}
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	101c68e22921.patch:-p1 4fb1180d2b54.patch:-p1 25e752f272d0.patch:-p1
+PATCHFILES+=	69068bf83653.patch:-p1 # https://github.com/sekaiproject/ponscripter-fork/pull/98
+PATCHFILES+=	6a8795f0dc4e.patch:-p1 # https://github.com/07th-mod/ponscripter-fork/pull/7
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	NScripter-like novel-game interpreter with Unicode support
 
 LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libsmpeg2.so:multimedia/smpeg2 \
 		libfreetype.so:print/freetype2
@@ -18,25 +21,23 @@ LIB_DEPENDS=	libsmpeg2.so:multimedia/smpeg2 \
 CONFLICTS=	ponscripter-[0-9]* # doesn't exist yet
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	sekaiproject
-GH_PROJECT=	${PORTNAME:S/sekai/fork/}
+GH_ACCOUNT=	07th-mod
+GH_PROJECT=	${PORTNAME}-fork
 
 USES=		compiler:c++11-lang gmake pkgconfig sdl shebangfix
 USE_SDL=	image2 mixer2
 EXTRACT_AFTER_ARGS=--exclude src/extlib
 SHEBANG_FILES=	util/xml-template
 HAS_CONFIGURE=	yes
-# XXX Pretend clang is like lang/gcc and can USE_CPU_GFX
-CONFIGURE_ENV=	CC_VER="4.8" CC="${CC} ${CFLAGS}" CXX="${CXX} ${CXXFLAGS}" \
-		CPATH="${LOCALBASE}/include" LIBRARY_PATH="${LOCALBASE}/lib"
+CONFIGURE_ENV=	CC="${CC} ${CFLAGS}" CXX="${CXX} ${CXXFLAGS}"
 CONFIGURE_ARGS=	--prefix="${STAGEDIR}${PREFIX}" --unsupported-compiler
 LDFLAGS+=	-Wl,--as-needed
-PORTDOCS=	BUGS CHANGES MANUAL README TODO
+PORTDOCS=	BUGS CHANGES MANUAL README.md TODO
 PLIST_FILES=	bin/ponscr \
 		share/emacs/site-lisp/ponscripter-mode.el
 
-OPTIONS_DEFINE=	DOCS MANPAGES TREMOR
-OPTIONS_DEFAULT=MANPAGES ${MACHINE_CPU:Msoftfp:C/.+/TREMOR/}
+OPTIONS_DEFINE=	DOCS MANPAGES NOTIFY TREMOR
+OPTIONS_DEFAULT=MANPAGES NOTIFY ${MACHINE_CPU:Msoftfp:C/.+/TREMOR/}
 
 MANPAGES_BUILD_DEPENDS=	xmlto:textproc/xmlto
 MANPAGES_PLIST_FILES=\
@@ -44,6 +45,9 @@ MANPAGES_PLIST_FILES=\
 	man/man7/ponscr-ext.7.gz \
 	man/man7/ponscr-syntax.7.gz \
 	man/man7/ponscripter.7.gz
+
+NOTIFY_LIB_DEPENDS=	libnotify.so:devel/libnotify
+NOTIFY_CONFIGURE_WITH=	libnotify
 
 TREMOR_LIB_DEPENDS=	libvorbisidec.so:audio/libtremor
 TREMOR_CFLAGS=		-DINTEGER_OGG_VORBIS

@@ -12,20 +12,15 @@ COMMENT=	Softether VPN 4 (stable beta version)
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
-USE_HARDENING=	safestack
-
-ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 powerpc64le
-ONLY_FOR_ARCHS_REASON=	Upstream only supports amd64 and i386: https://www.softether.org/3-spec
-=======
 ONLY_FOR_ARCHS=	amd64 armv7 i386 powerpc powerpc64 powerpc64le
->>>>>>> origin/freebsd/main
 #IGNORE=		no beta version available right now, use security/softether instead
 
 USES=		dos2unix gmake iconv:wchar_t localbase:ldflags ncurses \
 		readline ssl
 USE_RC_SUBR=	softether_bridge softether_client \
 		softether_server softether_trafficserver
+
+USE_HARDENING=	safestack
 
 DOS2UNIX_FILES=	ChangeLog LICENSE README *.TXT \
 		src/Cedar/*.* src/Mayaqua/*.*

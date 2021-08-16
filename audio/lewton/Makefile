@@ -3,7 +3,7 @@ DISTVERSION=	0.10.2
 CATEGORIES=	audio
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	dbcecbde0145.patch:-p1 # https://github.com/RustAudio/lewton/pull/97
+PATCHFILES+=	05f96f6e6976.patch:-p1 # https://github.com/RustAudio/lewton/pull/97
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Rust vorbis decoder
@@ -82,10 +82,14 @@ CARGO_CRATES=	al-sys-0.6.1 \
 
 do-build:
 	@${CARGO_CARGO_RUN} cbuild \
+		--verbose \
+		--verbose \
 		${CARGO_BUILD_ARGS}
 
 do-install:
 	@${CARGO_CARGO_RUN} cinstall \
+		--verbose \
+		--verbose \
 		--destdir "${STAGEDIR}" \
 		--prefix "${PREFIX}" \
 		${CARGO_INSTALL_ARGS}

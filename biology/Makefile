@@ -130,6 +130,7 @@
     SUBDIR += protomol
     SUBDIR += psi88
     SUBDIR += py-Genesis-PyAPI
+    SUBDIR += py-PySCeS
     SUBDIR += py-bigwig
     SUBDIR += py-biom-format
     SUBDIR += py-biopython
@@ -151,6 +152,7 @@
     SUBDIR += py-pandas-charm
     SUBDIR += py-pyfaidx
     SUBDIR += py-pysam
+    SUBDIR += py-python-libsbml
     SUBDIR += py-resdk
     SUBDIR += py-scikit-bio
     SUBDIR += py-xenaPython

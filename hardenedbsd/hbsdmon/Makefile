@@ -1,6 +1,6 @@
 PORTNAME=	hbsdmon
 PORTVERSION=	1.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	hardenedbsd
 
 MAINTAINER=	shawn.webb@hardenedbsd.org
@@ -9,7 +9,7 @@ COMMENT=	HardenedBSD infrastructure monitoring daemon
 LICENSE=	BSD2CLAUSE
 
 USES+=		uidfix kmod
-USE_HARDENING?=	safestack
+USE_HARDENING?=	pie relro safestack
 
 USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org

@@ -2,6 +2,7 @@
 
 PORTNAME=	mpd
 DISTVERSION=	5.9
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Mpd5/Mpd-${PORTVERSION}
 PKGNAMESUFFIX=	5
@@ -12,16 +13,21 @@ COMMENT=	Multi-link PPP daemon based on netgraph(4)
 
 LICENSE=	BSD3CLAUSE
 
+USES=		ssl
+
 OPTIONS_DEFINE=	DOCS NG_IPACCT
 NG_IPACCT_DESC=	Use ng_ipacct kernel module from port
 
 HAS_CONFIGURE=	YES
 CONFIGURE_WRKSRC=	"${WRKSRC}/src"
 
+<<<<<<< HEAD
 USES=		ssl
 
 USE_HARDENING=	safestack
 
+=======
+>>>>>>> origin/freebsd/main
 .include <bsd.port.options.mk>
 
 MAKE_ARGS+=	OSVERSION=${OSVERSION}

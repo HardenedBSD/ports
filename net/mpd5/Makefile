@@ -21,13 +21,9 @@ NG_IPACCT_DESC=	Use ng_ipacct kernel module from port
 HAS_CONFIGURE=	YES
 CONFIGURE_WRKSRC=	"${WRKSRC}/src"
 
-<<<<<<< HEAD
-USES=		ssl
 
 USE_HARDENING=	safestack
 
-=======
->>>>>>> origin/freebsd/main
 .include <bsd.port.options.mk>
 
 MAKE_ARGS+=	OSVERSION=${OSVERSION}

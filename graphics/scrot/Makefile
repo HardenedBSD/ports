@@ -1,12 +1,8 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
 
 PORTNAME=	scrot
-<<<<<<< HEAD
 DISTVERSION=	1.5
 PORTREVISION=	1
-=======
-DISTVERSION=	1.6
->>>>>>> origin/freebsd/main
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -21,16 +17,12 @@ LIB_DEPENDS=	libImlib2.so:graphics/imlib2
 USE_GITHUB=	yes
 GH_ACCOUNT=	resurrecting-open-source-projects
 
-<<<<<<< HEAD
 USE_HARDENING=	cfi safestack
 
 CFLAGS+=	-fuse-ld=lld
 
-USES=		autoreconf xorg
-USE_CSTD=	c99
-=======
 USES=		autoreconf pkgconfig xorg
->>>>>>> origin/freebsd/main
+USE_CSTD=	c99
 GNU_CONFIGURE=	yes
 USE_XORG=	x11 xext xfixes xcomposite
 

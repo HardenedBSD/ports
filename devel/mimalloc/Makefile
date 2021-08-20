@@ -12,18 +12,12 @@ COMMENT=	General-purpose allocator with excellent performance characteristics
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
-BUILD_DEPENDS_i386=	libatomic_ops>0:devel/libatomic_ops
-
-USE_HARDENING=	stackautoinit:off
-
-USES=		cmake compiler:gcc-c++11-lib
-=======
 USES=		cmake compiler:c++17-lang
->>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	stackautoinit:off
 
 CMAKE_ON=	MI_INSTALL_TOPLEVEL
 TEST_TARGET=	test

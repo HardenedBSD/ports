@@ -1,4 +1,4 @@
-PORTREVISION=	0
+PORTREVISION=	1
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -123,7 +123,7 @@ PAGEEXEC_DISABLE=	lib/libreoffice/program/soffice.bin
 MPROTECT_DISABLE=	lib/libreoffice/program/soffice.bin
 
 OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 JAVA KF5 LTO MMEDIA PGSQL MARIADB QT5 SDK TEST WEBDAV
-OPTIONS_DEFAULT=	CUPS MMEDIA QT5
+OPTIONS_DEFAULT=	CUPS JAVA MMEDIA QT5
 
 .if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mssl=*}
 # Blocked by net/qt5-network: cannot use QT5 with default OpenSSL

@@ -1,6 +1,6 @@
 PORTNAME=		pooler
 DISTVERSIONPREFIX=	v
-DISTVERSION=		1.76
+DISTVERSION=		1.77
 CATEGORIES=		biology
 
 MAINTAINER=	ssb22@cam.ac.uk
@@ -9,8 +9,13 @@ COMMENT=	Optimise DNA sequencing primer-set combinations
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKDIR}/${GH_PROJECT}-${PORTVERSION}/LICENSE
 
+<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
+=======
+# Not needed on x86, aarch64, or ppc64-13.x
+# Might need gcc on 32-bit ARM/PPC
+>>>>>>> origin/freebsd/main
 USES=		compiler:openmp
 USE_GITHUB=	yes
 

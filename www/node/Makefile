@@ -14,8 +14,12 @@ BROKEN_SSL=		libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js 15.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
+<<<<<<< HEAD
 LLVM_OBJDUMP_UNSAFE=	yes
 USES=		compiler:c++11-lib gmake python:build pkgconfig \
+=======
+USES=		compiler:c++11-lib gmake python:3.6-3.9,build pkgconfig \
+>>>>>>> origin/freebsd/main
 		localbase shebangfix
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE

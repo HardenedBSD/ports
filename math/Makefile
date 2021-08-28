@@ -987,6 +987,8 @@
     SUBDIR += spooles-mpich
     SUBDIR += spot
     SUBDIR += sprng
+    SUBDIR += stan
+    SUBDIR += stanmath
     SUBDIR += stp
     SUBDIR += suitesparse
     SUBDIR += suitesparse-amd

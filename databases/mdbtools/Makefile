@@ -21,7 +21,6 @@ USE_HARDENING=	stackautoinit:off
 USES=		autoreconf bison gettext gnome iconv libtool pathfix \
 		pkgconfig readline
 USE_GITHUB=	yes
-GH_ACCOUNT=	mdbtools
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

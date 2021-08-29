@@ -44,6 +44,9 @@ INSTALL_TARGET+=	install-doc
 # For PKG_DBDRIVER={bdb_btree,bdb_hash}
 RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/bdb.so:databases/ruby-bdb
 
+# For fix https://git.hardenedbsd.org/hardenedbsd/ports/-/issues/13
+RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/dbm.so:databases/ruby-dbm
+
 regression-test: patch
 	cd ${WRKSRC} && ${MAKE} test
 

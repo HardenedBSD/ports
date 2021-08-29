@@ -22,15 +22,8 @@ MAKE_ARGS=	SOVERSION=${PORTVERSION:R:R}
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
-<<<<<<< HEAD
-GH_ACCOUNT=	intel
-GH_PROJECT=	tinycbor
-USE_GITHUB=	yes
-
 USE_HARDENING=	pie:off
 
-=======
->>>>>>> origin/freebsd/main
 do-configure:
 	@cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} configure
 

@@ -16,9 +16,13 @@ COMMENT=	KAME racoon IKE daemon, ipsec-tools version
 
 LICENSE=	BSD3CLAUSE
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 USES=		libtool tar:bzip2 ssl
+=======
+USES=		cpe libtool tar:bzip2 ssl
+>>>>>>> origin/freebsd/main
 
 CONFLICTS=	racoon-[0-9]*
 INSTALL_TARGET=	install-strip

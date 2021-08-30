@@ -11,13 +11,9 @@ COMMENT=	Better top(1) - interactive process viewer
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		autoreconf compiler:c11 libtool localbase ncurses pkgconfig \
-=======
 USES=		autoreconf compiler:c11 cpe libtool localbase ncurses pkgconfig \
->>>>>>> origin/freebsd/main
 		python:build shebangfix
 
 USE_GITHUB=	yes

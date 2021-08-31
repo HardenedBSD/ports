@@ -11,14 +11,10 @@ COMMENT=	Free FPS game featuring two opposing teams: humans and aliens
 
 LICENSE=	GPLv2
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off
-
-USES=		gmake zip
-=======
 USES=		cpe gmake zip
->>>>>>> origin/freebsd/main
 MAKE_ENV=	DEFAULT_BASEDIR="${DATADIR}" PTHREAD_LIBS="-lpthread"
+
+USE_HARDENING=	pie:off
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 BUILD_WRKSRC=	${WRKSRC}/${DISTNAME}-src

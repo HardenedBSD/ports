@@ -11,16 +11,21 @@ LICENSE_COMB=	multi
 
 LIB_DEPENDS=	libpt.so:devel/ptlib
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	willamowius
 GH_PROJECT=	h323plus
 
+=======
+>>>>>>> origin/freebsd/main
 USES=		gmake ssl
-USE_LDCONFIG=	yes
-
 GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+USE_GITHUB=	yes
+GH_ACCOUNT=	willamowius
+
 # ptlib-config --libs returns bogus dependencies on expat and SDL-1.2
 CFLAGS+=	-DH323_H46017 -DH323_TLS
 LDFLAGS+=	-Wl,--as-needed

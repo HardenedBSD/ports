@@ -11,7 +11,11 @@ COMMENT=	Tool to locally check for signs of a rootkit
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
+=======
+USES=		cpe
+>>>>>>> origin/freebsd/main
 
 OPTIONS_DEFINE=	DOCS
 

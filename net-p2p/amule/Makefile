@@ -17,9 +17,13 @@ LIB_DEPENDS=	libcryptopp.so:security/cryptopp
 
 CONFLICTS=	amule-devel-[0-9]*
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 USES=		bison compiler:c++11-lang desktop-file-utils gmake \
+=======
+USES=		bison compiler:c++11-lang cpe desktop-file-utils gmake \
+>>>>>>> origin/freebsd/main
 		localbase:ldflags perl5 pkgconfig shebangfix tar:xz
 USE_PERL5=	build
 USE_WX=		2.8

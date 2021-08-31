@@ -22,13 +22,9 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libyaml.so:textproc/libyaml \
 		libzstd.so:archivers/zstd
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		cmake:noninja compiler:c++11-lang gettext-runtime gmake iconv perl5 readline ssl
-=======
 USES=		cmake:noninja compiler:c++11-lang cpe gettext-runtime gmake iconv perl5 readline ssl
->>>>>>> origin/freebsd/main
 USE_PERL5=	build
 
 BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed

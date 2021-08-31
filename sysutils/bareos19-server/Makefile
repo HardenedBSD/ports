@@ -17,16 +17,12 @@ CONFLICTS?=	bacula18*-server bacula17*-server-*
 LIB_DEPENDS+=	liblzo2.so:archivers/lzo2 \
 		libjansson.so:devel/jansson
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES+=		cmake compiler:c++11-lang localbase perl5 pkgconfig readline \
-=======
 USES+=		cmake compiler:c++11-lang cpe localbase perl5 pkgconfig readline \
->>>>>>> origin/freebsd/main
 		shebangfix
 USE_GITHUB=	yes
 USE_PERL5=	run
+
+USE_HARDENING=	stackautoinit:off
 
 USERS=		bareos
 GROUPS=		${USERS}

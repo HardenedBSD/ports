@@ -1,6 +1,6 @@
 PORTNAME=	liblattutil
 PORTVERSION=	1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	hardenedbsd
 
 MAINTAINER=	shawn.webb@hardenedbsd.org
@@ -14,7 +14,7 @@ USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=	shawn.webb
 GL_PROJECT=	liblattutil
-GL_COMMIT=	e148832c3bcbe08e8759345de4e6db14011dfcde
+GL_COMMIT=	c116f92d09bfa6e8291ba88c594b49754ae56ceb
 
 LIB_DEPENDS+=	libucl.so:textproc/libucl
 LIB_DEPENDS+=	libsqlite3.so:databases/sqlite3

@@ -15,14 +15,18 @@ ONLY_FOR_ARCHS=	amd64
 BROKEN_FreeBSD_11=	Uses newer API than in 11.x
 
 USES=		gmake
+<<<<<<< HEAD
 
 USE_HARDENING=	pie:off
 
 PLIST_FILES=	sbin/nvme
 
+=======
+>>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	bsdimp
-GH_PROJECT=	nvme-cli
 GH_TAGNAME=	c92d871
+
+PLIST_FILES=	sbin/nvme
 
 .include <bsd.port.mk>

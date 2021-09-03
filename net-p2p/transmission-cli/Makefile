@@ -30,13 +30,9 @@ LIB_DEPENDS+=	libcurl.so:ftp/curl \
 		libutp.so:net/libutp \
 		libminiupnpc.so:net/miniupnpc
 
-<<<<<<< HEAD
-USE_HARDENING=	safestack
-
-USES+=		cmake cpe iconv libtool localbase pkgconfig ssl
-=======
 USES+=		cmake iconv libtool localbase pkgconfig ssl
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	safestack
 
 # Workaround: PR 248326
 # https://github.com/transmission/transmission/issues/1359

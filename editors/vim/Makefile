@@ -3,6 +3,7 @@
 PORTNAME=	vim
 PORTVERSION=	8.2.3394
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	editors
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -40,6 +41,7 @@ VIM_VER=	${PORTNAME}${PORTVERSION:R:S|.||g}
 # FLAVORS are used to build various Vim GUIs. The default flavor (`vim') is
 # console-only.
 FLAVORS=	console athena gtk2 gtk3 motif x11 tiny
+FLAVOR?=	${FLAVORS:[1]}
 # Register conflicts with all other flavors
 CONFLICTS_INSTALL=	${FLAVORS:N${FLAVOR}:S/^/vim-/}
 
@@ -149,7 +151,8 @@ PERL_USES=		perl5
 
 PYTHON_USES=		python:3.6+
 PYTHON_USES_OFF=	python:env
-PYTHON_CONFIGURE_ARGS=	--enable-python3interp --with-python3-command=${PYTHON_CMD}
+PYTHON_CONFIGURE_ENABLE=	python3interp
+PYTHON_CONFIGURE_WITH=	python3-command=${PYTHON_CMD}
 
 RUBY_CONFIGURE_ENABLE=	rubyinterp
 RUBY_USE=		RUBY=yes

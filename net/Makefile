@@ -548,6 +548,8 @@
     SUBDIR += openbgpd6
     SUBDIR += openldap24-client
     SUBDIR += openldap24-server
+    SUBDIR += openldap25-client
+    SUBDIR += openldap25-server
     SUBDIR += openmdns
     SUBDIR += openmpi
     SUBDIR += openmpi3
@@ -556,6 +558,7 @@
     SUBDIR += openpgm
     SUBDIR += openradius
     SUBDIR += openrsync
+    SUBDIR += opensips31
     SUBDIR += openslp
     SUBDIR += opentracker
     SUBDIR += openvswitch

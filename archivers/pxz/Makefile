@@ -15,14 +15,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		compiler:openmp tar:xz
-=======
 USES=		cpe compiler:openmp tar:xz
->>>>>>> origin/freebsd/main
 PLIST_FILES=	bin/pxz share/man/man1/pxz.1.gz
+
+USE_HARDENING=	stackautoinit:off
 
 CPE_VENDOR=	pxz_project
 

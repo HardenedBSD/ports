@@ -14,13 +14,11 @@ COMMENT=	Create/update ZIP files compatible with PKZIP
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
-USE_HARDENING=	cfi
-=======
 USES=		cpe
 
+USE_HARDENING=	cfi
+
 CPE_VENDOR=	info-zip_project
->>>>>>> origin/freebsd/main
 
 OPTIONS_DEFINE=	DOCS
 

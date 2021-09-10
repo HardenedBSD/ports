@@ -19,11 +19,9 @@ LIB_DEPENDS=	libgc.so:devel/boehm-gc
 USES=		cpe iconv pkgconfig perl5 ssl
 USE_GITHUB=	yes
 
-<<<<<<< HEAD
-USE_HARDENING=	safestack
-=======
 CPE_VENDOR=	w3m_project
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	safestack
 
 GH_ACCOUNT=	tats
 GH_PROJECT=	w3m

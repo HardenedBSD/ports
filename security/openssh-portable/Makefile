@@ -18,19 +18,15 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.* openssh-portable-devel-*
 
-<<<<<<< HEAD
-USE_HARDENING=		safestack
-
-USES=			alias autoreconf compiler:c11 localbase ncurses \
-=======
 USES=			alias autoreconf compiler:c11 cpe localbase ncurses \
->>>>>>> origin/freebsd/main
 			pkgconfig ssl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--prefix=${PREFIX} \
 			--with-ssl-engine \
 			--with-mantype=man \
 			--with-Werror
+
+USE_HARDENING=		safestack
 
 ETCOLD=			${PREFIX}/etc
 

@@ -34,6 +34,9 @@ CFLAGS_powerpc64le=	-DSQLITE_BYTEORDER=1234
 
 USES=		tar:xz
 
+MPROTECT_DISABLE=	lib/thunderbird/thunderbird
+MPROTECT_DISABLE+=	lib/thunderbird/plugin-container
+
 MOZ_OPTIONS=	--enable-application=comm/mail --enable-official-branding
 MOZ_OPTIONS+=	--with-system-bz2 --with-system-jsonc --with-system-botan
 MOZ_MK_OPTIONS=	MOZ_THUNDERBIRD=1 MAIL_PKG_SHARED=1

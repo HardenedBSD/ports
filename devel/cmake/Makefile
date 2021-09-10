@@ -19,10 +19,15 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libuv.so:devel/libuv \
 		librhash.so:security/rhash
 
+<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
 USES=		compiler:c++11-lang ncurses
+=======
+USES=		compiler:c++11-lang cpe ncurses
+>>>>>>> origin/freebsd/main
 
+CPE_VENDOR=	cmake_project
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKE=make
 CONFIGURE_ARGS=	--prefix=${PREFIX} \

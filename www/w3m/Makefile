@@ -16,10 +16,14 @@ BROKEN_mips64=		fails to build: qemu: uncaught target signal 11 (Segmentation fa
 
 LIB_DEPENDS=	libgc.so:devel/boehm-gc
 
-USES=		iconv pkgconfig perl5 ssl
+USES=		cpe iconv pkgconfig perl5 ssl
 USE_GITHUB=	yes
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
+=======
+CPE_VENDOR=	w3m_project
+>>>>>>> origin/freebsd/main
 
 GH_ACCOUNT=	tats
 GH_PROJECT=	w3m

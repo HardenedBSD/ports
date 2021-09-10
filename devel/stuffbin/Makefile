@@ -1,27 +1,26 @@
-PORTNAME=	annie
+PORTNAME=	stuffbin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.11.0
-CATEGORIES=	www
+DISTVERSION=	1.1.0
+CATEGORIES=	devel
 
 MAINTAINER=	lcook@FreeBSD.org
-COMMENT=	Fast, simple and clean video downloader
+COMMENT=	Compress and embed static files and assets into Go binaries
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg
-
 USES=		go:modules
-GO_MODULE=	github.com/iawia002/${PORTNAME}
+GO_MODULE=	github.com/knadh/${PORTNAME}
+GO_TARGET=	./${PORTNAME}:${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
-PORTDOCS=	CONTRIBUTING.md README.md
+PORTDOCS=	README.md
 
 OPTIONS_DEFINE=	DOCS
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} \
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} \
 		${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

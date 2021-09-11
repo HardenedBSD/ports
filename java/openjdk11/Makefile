@@ -31,7 +31,6 @@ RUN_DEPENDS=	javavm:java/javavmwrapper \
 USES=		compiler:features cpe gmake iconv jpeg pkgconfig xorg
 USE_XORG=	x11 xext xi xrandr xrender xt xtst
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:java
 
 MPROTECT_DISABLE=	openjdk11/bin/jcmd
@@ -101,9 +100,8 @@ PAGEEXEC_DISABLE+=	openjdk11/bin/pack200
 PAGEEXEC_DISABLE+=	openjdk11/bin/jdeprscan
 PAGEEXEC_DISABLE+=	openjdk11/bin/jstat
 PAGEEXEC_DISABLE+=	openjdk11/bin/jlink
-=======
+
 CPE_VENDOR=	oracle
->>>>>>> origin/freebsd/main
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	battleblow

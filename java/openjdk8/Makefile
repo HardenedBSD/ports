@@ -24,7 +24,9 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 RUN_DEPENDS=	javavm:java/javavmwrapper \
 		dejavu>0:x11-fonts/dejavu
 
-USES=		compiler:features gmake iconv pkgconfig
+USES=		compiler:features cpe gmake iconv pkgconfig
+
+CPE_VENDOR=	oracle
 
 MPROTECT_DISABLE=	openjdk8/bin/jinfo
 MPROTECT_DISABLE+=	openjdk8/bin/jdb

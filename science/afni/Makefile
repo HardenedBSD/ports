@@ -30,18 +30,14 @@ RUN_DEPENDS=	endian:sysutils/endian \
 		R:math/R \
 		${CRAN_DEPENDS}
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		compiler:openmp gettext gl gmake gnome iconv jpeg:run motif
-=======
 USES=		gettext gl gmake gnome iconv jpeg:run motif
->>>>>>> origin/freebsd/main
 USES+=		perl5 python shebangfix tar:xz xorg
 USE_GITHUB=	yes
 USE_GL=		gl glu
 USE_GNOME=	glib20
 USE_XORG=	x11 xext xi xmu xt
+
+USE_HARDENING=	stackautoinit:off
 
 SHEBANG_FILES=	scripts_install/* \
 		python_scripts/afnipy/*.py \

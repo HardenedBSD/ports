@@ -23,8 +23,6 @@ CFI_OVERRIDE=	-fno-sanitize=cfi-icall
 USES=		alias cmake compiler:c++11-lib cpe gettext gnome localbase pathfix pkgconfig ssl
 USE_LDCONFIG=	yes
 
-CPE_VENDOR=	freerdp_project
-
 PATCHVERSION=	${PORTVERSION}
 MAJORVERSION=	${PORTVERSION:R:R}
 

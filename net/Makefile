@@ -1382,6 +1382,7 @@
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += ryu
+    SUBDIR += s5cmd
     SUBDIR += sacc
     SUBDIR += samba412
     SUBDIR += samba413

@@ -16,14 +16,10 @@ LICENSE_FILE_GPLv3=		${WRKSRC}/LICENSE-GPL-3.0
 
 LIB_DEPENDS=	libhts.so:biology/htslib
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		autoreconf compiler:c++11-lib gmake libtool pathfix pkgconfig
-=======
 USES=		compiler:c++11-lib libtool
->>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	stackautoinit:off
 
 GNU_CONFIGURE=	yes
 

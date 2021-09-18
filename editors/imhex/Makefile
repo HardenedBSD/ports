@@ -30,18 +30,14 @@ LIB_DEPENDS=	libcapstone.so:devel/capstone4 \
 		libtre.so:textproc/libtre \
 		libyara.so:security/yara
 
-<<<<<<< HEAD
-USE_HARDENING=	retpoline:off stackautoinit:off
-
-USES=		cmake gnome pkgconfig python:3.8+ xorg
-=======
 USES=		cmake gl gnome pkgconfig python:3.8+ xorg
 USE_GL=		gl
->>>>>>> origin/freebsd/main
 USE_GNOME=	cairo gdkpixbuf2 gtk30
 USE_XORG=	x11 xcb xau xdmcp
-USE_GITHUB=	yes
 
+USE_HARDENING=	retpoline:off stackautoinit:off
+
+USE_GITHUB=	yes
 GH_ACCOUNT=	WerWolv
 GH_PROJECT=	ImHex
 GH_TUPLE=	btzy:nativefiledialog-extended:${GH_TAG_NATIVEFILEDIALOG}:nativefiledialog \

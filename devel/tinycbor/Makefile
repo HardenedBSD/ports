@@ -15,17 +15,15 @@ LIB_DEPENDS=	libcjson.so:devel/libcjson
 
 USES=		gmake localbase pathfix
 
+USE_HARDENING=	pie:off
+
 INSTALL_TARGET=	install-strip
 MAKE_ARGS=	SOVERSION=${PORTVERSION:R:R}
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off
-=======
 GH_ACCOUNT=	intel
 USE_GITHUB=	yes
->>>>>>> origin/freebsd/main
 
 do-configure:
 	@cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} configure

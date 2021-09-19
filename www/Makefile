@@ -311,6 +311,7 @@
     SUBDIR += linux-opera
     SUBDIR += litmus
     SUBDIR += ljdeps
+    SUBDIR += llhttp
     SUBDIR += logswan
     SUBDIR += logtools
     SUBDIR += ls-qpack
@@ -1459,12 +1460,14 @@
     SUBDIR += py-dj32-django-debug-toolbar
     SUBDIR += py-dj32-django-filter
     SUBDIR += py-dj32-django-js-asset
+    SUBDIR += py-dj32-django-modelcluster
     SUBDIR += py-dj32-django-mptt
     SUBDIR += py-dj32-django-prometheus
     SUBDIR += py-dj32-django-redis
     SUBDIR += py-dj32-django-tables2
     SUBDIR += py-dj32-django-taggit
     SUBDIR += py-dj32-django-timezone-field
+    SUBDIR += py-dj32-django-treebeard
     SUBDIR += py-dj32-djangorestframework
     SUBDIR += py-dj32-drf-yasg
     SUBDIR += py-django

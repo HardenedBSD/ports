@@ -1,10 +1,6 @@
 PORTNAME=	pkg
-<<<<<<< HEAD
 DISTVERSION=	1.17.1
 PORTREVISION=	1
-=======
-DISTVERSION=	1.17.2
->>>>>>> origin/freebsd/main
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 #MASTER_SITES=	\

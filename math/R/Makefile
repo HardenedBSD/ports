@@ -30,11 +30,7 @@ USES=		compiler:c++11-lang cpe gmake iconv libtool localbase pathfix perl5 \
 USE_LDCONFIG=	${PREFIX}/lib/R/lib
 USE_PERL5=	build
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
-=======
-CPE_VENDOR=	r-project
->>>>>>> origin/freebsd/main
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-java \

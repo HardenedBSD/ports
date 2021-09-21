@@ -2461,6 +2461,7 @@
     SUBDIR += p5-File-Temp
     SUBDIR += p5-File-Tempdir
     SUBDIR += p5-File-Touch
+    SUBDIR += p5-File-TreeCreate
     SUBDIR += p5-File-Type
     SUBDIR += p5-File-Util
     SUBDIR += p5-File-Write-Rotate
@@ -3293,6 +3294,7 @@
     SUBDIR += p5-Symbol-Get
     SUBDIR += p5-Symbol-Global-Name
     SUBDIR += p5-Symbol-Util
+    SUBDIR += p5-Syntax-Keyword-Dynamically
     SUBDIR += p5-Syntax-Keyword-Gather
     SUBDIR += p5-Syntax-Keyword-Junction
     SUBDIR += p5-Syntax-Keyword-Try
@@ -3588,6 +3590,7 @@
     SUBDIR += p5-Time-Crontab
     SUBDIR += p5-Time-Duration
     SUBDIR += p5-Time-Duration-Parse
+    SUBDIR += p5-Time-Elapsed
     SUBDIR += p5-Time-Format
     SUBDIR += p5-Time-HiRes
     SUBDIR += p5-Time-Interval
@@ -4141,6 +4144,7 @@
     SUBDIR += py-autoprop
     SUBDIR += py-avro
     SUBDIR += py-awesomeversion
+    SUBDIR += py-aws-requests-auth
     SUBDIR += py-aws-sam-translator
     SUBDIR += py-aws-xray-sdk
     SUBDIR += py-azure-appconfiguration
@@ -4437,6 +4441,7 @@
     SUBDIR += py-eventlib
     SUBDIR += py-ewmh
     SUBDIR += py-exam
+    SUBDIR += py-executing
     SUBDIR += py-expiringdict
     SUBDIR += py-extras
     SUBDIR += py-extremes
@@ -4794,6 +4799,7 @@
     SUBDIR += py-oslo.limit
     SUBDIR += py-oslo.log
     SUBDIR += py-oslo.messaging
+    SUBDIR += py-oslo.metrics
     SUBDIR += py-oslo.middleware
     SUBDIR += py-oslo.policy
     SUBDIR += py-oslo.privsep
@@ -5785,6 +5791,7 @@
     SUBDIR += rubygem-aws-sdk-mediastore
     SUBDIR += rubygem-aws-sdk-mediastoredata
     SUBDIR += rubygem-aws-sdk-mediatailor
+    SUBDIR += rubygem-aws-sdk-memorydb
     SUBDIR += rubygem-aws-sdk-mgn
     SUBDIR += rubygem-aws-sdk-migrationhub
     SUBDIR += rubygem-aws-sdk-migrationhubconfig
@@ -5796,6 +5803,7 @@
     SUBDIR += rubygem-aws-sdk-networkfirewall
     SUBDIR += rubygem-aws-sdk-networkmanager
     SUBDIR += rubygem-aws-sdk-nimblestudio
+    SUBDIR += rubygem-aws-sdk-opensearchservice
     SUBDIR += rubygem-aws-sdk-opsworks
     SUBDIR += rubygem-aws-sdk-opsworkscm
     SUBDIR += rubygem-aws-sdk-organizations
@@ -5853,6 +5861,7 @@
     SUBDIR += rubygem-aws-sdk-simpledb
     SUBDIR += rubygem-aws-sdk-sms
     SUBDIR += rubygem-aws-sdk-snowball
+    SUBDIR += rubygem-aws-sdk-snowdevicemanagement
     SUBDIR += rubygem-aws-sdk-sns
     SUBDIR += rubygem-aws-sdk-sqs
     SUBDIR += rubygem-aws-sdk-ssm
@@ -6305,6 +6314,7 @@
     SUBDIR += rubygem-google-protobuf
     SUBDIR += rubygem-google-protobuf314
     SUBDIR += rubygem-google-protobuf315
+    SUBDIR += rubygem-google-protobuf317
     SUBDIR += rubygem-google-protobuf38
     SUBDIR += rubygem-googleapis-common-protos
     SUBDIR += rubygem-googleapis-common-protos-types

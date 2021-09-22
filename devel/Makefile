@@ -1720,6 +1720,7 @@
     SUBDIR += p5-AnyEvent-DBI-Abstract
     SUBDIR += p5-AnyEvent-DBus
     SUBDIR += p5-AnyEvent-Filesys-Notify
+    SUBDIR += p5-AnyEvent-Fork
     SUBDIR += p5-AnyEvent-Gearman
     SUBDIR += p5-AnyEvent-Graphite
     SUBDIR += p5-AnyEvent-I3
@@ -2016,6 +2017,7 @@
     SUBDIR += p5-Const-Fast
     SUBDIR += p5-Context-Preserve
     SUBDIR += p5-Contextual-Return
+    SUBDIR += p5-Convert-Scalar
     SUBDIR += p5-Coro
     SUBDIR += p5-Curses
     SUBDIR += p5-Curses-Application
@@ -3117,6 +3119,7 @@
     SUBDIR += p5-Proc-BackOff
     SUBDIR += p5-Proc-Background
     SUBDIR += p5-Proc-Daemon
+    SUBDIR += p5-Proc-FastSpawn
     SUBDIR += p5-Proc-Find-Parents
     SUBDIR += p5-Proc-Fork
     SUBDIR += p5-Proc-Guard
@@ -4413,6 +4416,7 @@
     SUBDIR += py-distributed
     SUBDIR += py-dj31-django-rq
     SUBDIR += py-dj32-django-rq
+    SUBDIR += py-dj32-graphene-django
     SUBDIR += py-django-rq
     SUBDIR += py-docker-py
     SUBDIR += py-dockerpty
@@ -5753,6 +5757,7 @@
     SUBDIR += rubygem-aws-sdk-iotwireless
     SUBDIR += rubygem-aws-sdk-ivs
     SUBDIR += rubygem-aws-sdk-kafka
+    SUBDIR += rubygem-aws-sdk-kafkaconnect
     SUBDIR += rubygem-aws-sdk-kendra
     SUBDIR += rubygem-aws-sdk-kinesis
     SUBDIR += rubygem-aws-sdk-kinesisanalytics

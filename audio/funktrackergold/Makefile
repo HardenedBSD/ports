@@ -20,7 +20,7 @@ USE_HARDENING=	stackautoinit:off
 USES=		compiler:nestedfct ncurses tar:tgz
 
 WRKSRC=		${WRKDIR}/funkgold
-MAKE_ARGS=	EXTRA_LDFLAGS="-lpthread"
+MAKE_ARGS=	EXTRA_LDFLAGS="-lpthread ${NCURSESLIBS}"
 
 PORTDOCS=	INSTALL
 PLIST_FILES=	bin/funkgold

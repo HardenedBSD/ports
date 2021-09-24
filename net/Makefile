@@ -1495,6 +1495,7 @@
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities
     SUBDIR += tinyfugue
+    SUBDIR += tinyfugue-devel
     SUBDIR += tinyldap
     SUBDIR += tn5250
     SUBDIR += toonel

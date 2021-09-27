@@ -9,15 +9,11 @@ COMMENT=	Fork of OpenSSL
 LICENSE=	OpenSSL
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off stackautoinit:off
-
-USES=		cmake:insource go:no_targets localbase perl5
-=======
 USES=		cmake:insource cpe go:no_targets localbase perl5
 
+USE_HARDENING=	pie:off stackautoinit:off
+
 CPE_VENDOR=	google
->>>>>>> origin/freebsd/main
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google

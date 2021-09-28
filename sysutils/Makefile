@@ -145,6 +145,7 @@
     SUBDIR += busybox
     SUBDIR += bvm
     SUBDIR += byobu
+    SUBDIR += calamares
     SUBDIR += catfish
     SUBDIR += cbsd
     SUBDIR += cbsd-mq-api
@@ -927,6 +928,7 @@
     SUBDIR += pciutils
     SUBDIR += pcpustat
     SUBDIR += pdixtract
+    SUBDIR += pdsh
     SUBDIR += pdumpfs
     SUBDIR += pear-Cache
     SUBDIR += pear-Cache_Lite

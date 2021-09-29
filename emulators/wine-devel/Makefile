@@ -1,8 +1,7 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
 
 PORTNAME=	wine
-DISTVERSION=	6.17
-PORTREVISION=	1
+DISTVERSION=	6.18
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -10,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/Source \
 PKGNAMESUFFIX?=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER?=	gerald@FreeBSD.org
+MAINTAINER?=	emulation@FreeBSD.org
 COMMENT?=	Microsoft Windows compatibility environment
 
 LICENSE=	LGPL21 LGPL3

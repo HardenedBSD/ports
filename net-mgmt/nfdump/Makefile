@@ -12,13 +12,18 @@ COMMENT=	Command-line tools to collect and process NetFlow data
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/BSD-license.txt
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 USES=		autoreconf compiler:c11 libtool pkgconfig
+=======
+USES=		autoreconf compiler:c11 cpe libtool pkgconfig
+>>>>>>> origin/freebsd/main
 USE_CSTD=	gnu89
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	phaag
+CPE_VENDOR=	nfdump_project
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes

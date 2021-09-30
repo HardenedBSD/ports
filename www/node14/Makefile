@@ -19,7 +19,11 @@ USES=		compiler:c++11-lib gmake python:2.7-3.9,build pkgconfig \
 		localbase shebangfix
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
+<<<<<<< HEAD
 OPTIONS_DEFAULT_FreeBSD_11=	BUNDLED_SSL
+=======
+OPTIONS_DEFAULT=	DTRACE
+>>>>>>> origin/freebsd/main
 OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 OPTIONS_SUB=		yes
 
@@ -86,10 +90,6 @@ EXTRA_PATCHES=		${PATCHDIR}/extra-patch-common.gypi
 
 .if ${ARCH} == armv6 || ${ARCH} == armv7
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-tools_v8__gypfiles_v8.gyp
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085
-BROKEN_SSL+=	base
 .endif
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != amd64

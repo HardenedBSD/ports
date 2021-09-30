@@ -614,7 +614,6 @@
     SUBDIR += erlang-cuttlefish
     SUBDIR += erlang-erlware_commons
     SUBDIR += erlang-esdl
-    SUBDIR += erlang-exmpp
     SUBDIR += erlang-folsom
     SUBDIR += erlang-gen_leader
     SUBDIR += erlang-gen_smtp
@@ -5460,7 +5459,6 @@
     SUBDIR += pytype
     SUBDIR += qbs
     SUBDIR += qca
-    SUBDIR += qca-legacy
     SUBDIR += qconf
     SUBDIR += qgit
     SUBDIR += qjson

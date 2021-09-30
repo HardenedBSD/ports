@@ -22,7 +22,11 @@ USES=		compiler:c++11-lib gmake python:2.7,build pkgconfig \
 		localbase shebangfix
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
+<<<<<<< HEAD
 OPTIONS_DEFAULT_FreeBSD_11=	BUNDLED_SSL
+=======
+OPTIONS_DEFAULT=	DTRACE
+>>>>>>> origin/freebsd/main
 OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 OPTIONS_SUB=		yes
 
@@ -76,10 +80,6 @@ LIB_DEPENDS+=	libcares.so:dns/c-ares\
 		libnghttp2.so:www/libnghttp2
 
 .include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085
-BROKEN_SSL+=	base
-.endif
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != amd64 && ${ARCH} != i386
 CONFIGURE_ARGS+=--openssl-no-asm

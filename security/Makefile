@@ -409,7 +409,6 @@
     SUBDIR += onionscan
     SUBDIR += op
     SUBDIR += openbsm
-    SUBDIR += openca-tools-forked
     SUBDIR += openconnect
     SUBDIR += openconnect-freebsd-daemon
     SUBDIR += openconnect-gui
@@ -942,7 +941,6 @@
     SUBDIR += py-ospd
     SUBDIR += py-ospd-openvas
     SUBDIR += py-paramiko
-    SUBDIR += py-paramiko1
     SUBDIR += py-pass-audit
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2

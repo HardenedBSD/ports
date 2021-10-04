@@ -1122,7 +1122,6 @@
     SUBDIR += retail
     SUBDIR += rex
     SUBDIR += rhc
-    SUBDIR += riak-cs
     SUBDIR += rinse
     SUBDIR += rmlint
     SUBDIR += rocr
@@ -1309,7 +1308,6 @@
     SUBDIR += sshsudo
     SUBDIR += ssync
     SUBDIR += stalepid
-    SUBDIR += stanchion
     SUBDIR += stepsync
     SUBDIR += storcli
     SUBDIR += stow

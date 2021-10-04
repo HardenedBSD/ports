@@ -2,7 +2,7 @@
 
 PORTNAME=	ccx
 PORTVERSION=	2.17
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	http://www.dhondt.de/
 PKGNAMEPREFIX=	CalculiX-
@@ -18,9 +18,13 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libarpack.so:math/arpack-ng	\
 		libspooles.so:math/spooles
 
+<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
 USES=		blaslapack compiler:openmp fortran gmake perl5 tar:bzip2
+=======
+USES=		blaslapack fortran gmake perl5 tar:bzip2
+>>>>>>> origin/freebsd/main
 USE_PERL5=	build
 
 DIST_SOURCES=	ccx_${PORTVERSION}.src${EXTRACT_SUFX}

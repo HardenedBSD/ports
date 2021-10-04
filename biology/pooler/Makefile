@@ -10,10 +10,6 @@ COMMENT=	Optimise DNA sequencing primer-set combinations
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKDIR}/${GH_PROJECT}-${PORTVERSION}/LICENSE
 
-<<<<<<< HEAD
-USES=		compiler:openmp
-=======
->>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 
 USE_HARDENING=	stackautoinit:off

@@ -10,13 +10,9 @@ COMMENT=	Fast, intuitive linear algebra library for C++
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/TMV_LICENSE
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		compiler:openmp gmake blaslapack:netlib localbase
-=======
 USES=		gmake blaslapack:netlib localbase
->>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	rmjarvis
 USE_LDCONFIG=	yes

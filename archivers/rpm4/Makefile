@@ -21,15 +21,11 @@ LIB_DEPENDS=	libpopt.so:devel/popt \
 RUN_DEPENDS=	bash:shells/bash \
 		gxargs:misc/findutils
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		alias bdb sqlite compiler:openmp cpe gmake iconv libarchive libtool \
-=======
 USES=		alias bdb sqlite cpe gmake iconv libarchive libtool \
->>>>>>> origin/freebsd/main
 		lua:52+ pathfix pkgconfig shebangfix tar:bzip2
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	stackautoinit:off
 
 GNU_CONFIGURE=	yes
 BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed

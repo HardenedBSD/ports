@@ -11,14 +11,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 LIB_DEPENDS=	libopenblas.so:math/openblas
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		cmake compiler:openmp
-=======
 USES=		cmake
->>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	stackautoinit:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	jeromerobert

@@ -17,12 +17,8 @@ BUILD_DEPENDS=	${LOCALBASE}/include/CL/opencl.h:devel/opencl
 LIB_DEPENDS=	libOpenCL.so:devel/ocl-icd
 RUN_DEPENDS=	${LOCALBASE}/include/CL/opencl.h:devel/opencl
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		cmake compiler:openmp localbase
-=======
 USES=		cmake localbase
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	stackautoinit:off
 
 .include <bsd.port.mk>

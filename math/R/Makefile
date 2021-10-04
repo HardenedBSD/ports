@@ -35,11 +35,8 @@ CPE_VENDOR=	r-project
 USE_LDCONFIG=	${PREFIX}/lib/R/lib
 USE_PERL5=	build
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-=======
->>>>>>> origin/freebsd/main
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-java \
 		--enable-R-shlib \

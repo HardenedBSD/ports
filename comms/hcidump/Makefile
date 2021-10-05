@@ -16,13 +16,9 @@ USES=		uidfix
 WRKSRC=		${WRKDIR}/${PORTNAME}
 INSTALL_WRKSRC=	${WRKSRC}/${PORTNAME}
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-CFLAGS+=	-DL2CAP_SOCKET_CHECKED=yes
-=======
 CFLAGS+=	-DL2CAP_SOCKET_CHECKED=yes -fPIE
->>>>>>> origin/freebsd/main
 
 PLIST_FILES=	bin/hcidump man/man1/hcidump.1.gz
 

@@ -17,9 +17,13 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate \
 		libsndfile.so:audio/libsndfile
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 USES=		alias bison cmake compiler:c++11-lib eigen:3 localbase ncurses python:build # is python needed: https://github.com/csound/csound/issues/1437 ?
+=======
+USES=		alias bison cmake compiler:c++11-lib cpe eigen:3 localbase ncurses python:build # is python needed: https://github.com/csound/csound/issues/1437 ?
+>>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 

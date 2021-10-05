@@ -22,9 +22,9 @@ NO_ARCH=	yes
 SHEBANG_GLOB=	*.sh *.php
 PORTSCOUT=	limit:^${PORT_V_MAJOR}\.${PORT_V_MINOR}\.
 
-PORT_V_MAJOR=	10
+PORT_V_MAJOR=	11
 PORT_V_MINOR=	4
-PORT_V_PATCH=	21
+PORT_V_PATCH=	0
 
 TYPO3WWW=	www
 TYPO3SRC=	${PORTNAME}_src-${PORTVERSION}
@@ -64,9 +64,9 @@ ZLIB_USE=	PHP=zlib
 
 .if ${PORT_OPTIONS:MIMAGICK}
 .if ${PORT_OPTIONS:MX11}
-RUN_DEPENDS+=	convert:graphics/ImageMagick6
+RUN_DEPENDS+=	convert:graphics/ImageMagick7
 .else
-RUN_DEPENDS+=	convert:graphics/ImageMagick6-nox11
+RUN_DEPENDS+=	convert:graphics/ImageMagick7-nox11
 .endif
 .endif
 

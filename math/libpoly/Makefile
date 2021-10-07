@@ -11,16 +11,12 @@ LICENSE_FILE=	${WRKSRC}/LICENCE
 
 LIB_DEPENDS=	libgmp.so:math/gmp
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		cmake
-=======
 USES=		cmake:testing
->>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	SRI-CSL
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	stackautoinit:off
 
 CMAKE_OFF=	LIBPOLY_BUILD_PYTHON_API LIBPOLY_BUILD_STATIC LIBPOLY_BUILD_STATIC_PIC
 

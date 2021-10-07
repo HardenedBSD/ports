@@ -88,6 +88,7 @@
     SUBDIR += cl-md5-sbcl
     SUBDIR += clamassassin
     SUBDIR += clamav
+    SUBDIR += clamav-lts
     SUBDIR += clamav-unofficial-sigs
     SUBDIR += clamd-stream-client
     SUBDIR += clamfs
@@ -222,6 +223,7 @@
     SUBDIR += heaan
     SUBDIR += heimdal
     SUBDIR += helib
+    SUBDIR += hexl
     SUBDIR += highwayhash
     SUBDIR += hitch
     SUBDIR += hlfl

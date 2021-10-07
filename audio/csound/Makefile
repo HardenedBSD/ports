@@ -20,12 +20,9 @@ LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate \
 USES=		alias bison cmake compiler:c++11-lib cpe eigen:3 localbase ncurses python:build # is python needed: https://github.com/csound/csound/issues/1437 ?
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
-
-<<<<<<< HEAD
-USE_HARDENING=	pie:off relro:off
-=======
 CPE_VENDOR=	csounds
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	pie:off relro:off
 
 CFLAGS_powerpc=	-maltivec
 CFLAGS_powerpcspe=	-DPFFFT_SIMD_DISABLE

@@ -11,10 +11,14 @@ COMMENT=	Trace a chain of DNS servers to the source
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		perl5 tar:bz2
+USES=		cpe perl5 tar:bz2
 USE_PERL5=	build
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
+=======
+CPE_VENDOR=	dnstracer_project
+>>>>>>> origin/freebsd/main
 
 MAKE_ARGS=	VERSION="${PORTVERSION}"
 WRKSRC=		${WRKDIR}/${PORTNAME}

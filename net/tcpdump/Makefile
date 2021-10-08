@@ -13,13 +13,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libpcap.so.1:net/libpcap
 
-<<<<<<< HEAD
-USE_HARDENING=	safestack
-
-USES=		gmake
-=======
 USES=		cpe gmake
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	safestack
 
 GNU_CONFIGURE=	yes
 UNPRIV_USER?=	tcpdump

@@ -12,15 +12,11 @@ COMMENT=	H.265/High Efficiency Video Coding (HEVC) format
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC:H}/COPYING
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off
-
-USES=		cmake compiler:c++14-lang pathfix dos2unix
-=======
 USES=		cmake compiler:c++14-lang cpe pathfix dos2unix
 
+USE_HARDENING=	pie:off
+
 CPE_VENDOR=		multicorewareinc
->>>>>>> origin/freebsd/main
 
 BB_TAG=	25b2c07035ff	# Top of the Release_3.4 branch at this time
 

@@ -12,15 +12,11 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off
-
-USES=		lua ssl
-=======
 USES=		cpe lua ssl
 
 CPE_VENDOR=	imapfilter_project
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	pie:off
 
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LUA_INCDIR}
 LDFLAGS+=	-L${LOCALBASE}/lib -L${LUA_LIBDIR}

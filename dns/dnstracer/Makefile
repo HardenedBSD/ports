@@ -14,11 +14,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		cpe perl5 tar:bz2
 USE_PERL5=	build
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
-=======
+
 CPE_VENDOR=	dnstracer_project
->>>>>>> origin/freebsd/main
 
 MAKE_ARGS=	VERSION="${PORTVERSION}"
 WRKSRC=		${WRKDIR}/${PORTNAME}

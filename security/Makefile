@@ -1324,6 +1324,7 @@
     SUBDIR += wazuh-agent
     SUBDIR += webfwlog
     SUBDIR += webscarab
+    SUBDIR += weggli
     SUBDIR += whatweb
     SUBDIR += wipe
     SUBDIR += wolfssh

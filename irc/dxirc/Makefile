@@ -13,7 +13,6 @@ USE_HARDENING=	pie:off
 
 USES=		cmake compiler:c++11-lang gnome pkgconfig xorg
 USE_XORG=	ice sm x11 xext
-INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=		NLS LUA ENCHANT NOTIFY
 OPTIONS_SINGLE=		GUI

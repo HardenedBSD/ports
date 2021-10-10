@@ -46,12 +46,13 @@ USE_RUBY=		yes
 RUBY_NO_BUILD_DEPENDS=	yes
 RUBY_NO_RUN_DEPENDS=	yes
 
-OPTIONS_DEFINE=		CAPIDOCS DEBUG DOCS EXAMPLES GMP RDOC
-OPTIONS_DEFAULT=	RDOC LIBEDIT
+OPTIONS_DEFINE=		CAPIDOCS DEBUG DOCS DTRACE EXAMPLES GMP RDOC
+OPTIONS_DEFAULT=	RDOC LIBEDIT DTRACE
 OPTIONS_SINGLE=		EDIT
 OPTIONS_SINGLE_EDIT=	LIBEDIT READLINE
 OPTIONS_SUB=		yes
 CAPIDOCS_DESC=		Build and install C API documents
+DTRACE_DESC=		Enable DTrace support
 GMP_DESC=		Use GMP to accelerate Bignum operations
 RDOC_DESC=		Build and install Rdoc indexes
 EDIT_DESC=		Which line editing lib to use
@@ -60,6 +61,7 @@ READLINE_DESC=		Use libreadline
 CAPIDOCS_BUILD_DEPENDS=	doxygen>=1.8.13,2:devel/doxygen \
 			dot:graphics/graphviz
 CAPIDOCS_CONFIGURE_ENABLE=	install-capi
+DTRACE_CONFIGURE_ENABLE=	dtrace
 GMP_CONFIGURE_WITH=	gmp
 GMP_LIB_DEPENDS=	libgmp.so:math/gmp
 LIBEDIT_CONFIGURE_ON=	--enable-libedit --with-libedit-dir=${LOCALBASE}
@@ -82,14 +84,6 @@ _SUF1=	_${PORTREVISION}
 
 .if ${PORTEPOCH} != 0
 _SUF2=	,${PORTEPOCH}
-.endif
-
-.if ${OPSYS} == "FreeBSD"
-.if exists(/usr/sbin/dtrace) && (${ARCH} == amd64 || ${ARCH} == i386)
-CONFIGURE_ARGS+=--enable-dtrace
-.else
-CONFIGURE_ARGS+=--disable-dtrace
-.endif
 .endif
 
 # keep in sync with all platforms where libunwind is available

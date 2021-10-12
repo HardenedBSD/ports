@@ -9,14 +9,10 @@ COMMENT=	Portable OpenBSD Korn shell
 
 LICENSE=	PD
 
-<<<<<<< HEAD
-USE_HARDENING=	cfi safestack
-
-HAS_CONFIGURE=	yes
-=======
 FLAVORS=	dynamic static
 FLAVOR?=	${FLAVORS:[1]}
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	cfi safestack
 
 static_PKGNAMESUFFIX=	-static
 .if ${FLAVOR} == static

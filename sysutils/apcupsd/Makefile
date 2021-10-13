@@ -12,9 +12,13 @@ COMMENT=	Set of programs for controlling APC UPS
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 USES=		gmake
+=======
+USES=		cpe gmake
+>>>>>>> origin/freebsd/main
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sbindir=${PREFIX}/sbin \
 		--with-nologin=/var/run \

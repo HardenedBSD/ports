@@ -159,6 +159,8 @@
     SUBDIR += py-orange3-bioinformatics
     SUBDIR += py-orange3-single-cell
     SUBDIR += py-pandas-charm
+    SUBDIR += py-py2bit
+    SUBDIR += py-pybigwig
     SUBDIR += py-pyfaidx
     SUBDIR += py-pysam
     SUBDIR += py-python-libsbml

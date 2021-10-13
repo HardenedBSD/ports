@@ -12,9 +12,14 @@ COMMENT=	Unix system management and proactive monitoring
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 USES=		bison gmake
+=======
+USES=		bison cpe gmake
+CPE_VENDOR=	m${PORTNAME}
+>>>>>>> origin/freebsd/main
 USE_RC_SUBR=	${PORTNAME}
 
 GNU_CONFIGURE=	yes

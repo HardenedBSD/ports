@@ -12,8 +12,13 @@ COMMENT=	Unix incarnation of the plan9 shell
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
+=======
+USES=		cpe
+CPE_VENDOR=	${PORTNAME}_project
+>>>>>>> origin/freebsd/main
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-history
 

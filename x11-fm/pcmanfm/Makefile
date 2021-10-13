@@ -24,19 +24,15 @@ gtk3_LIB_DEPENDS=	libfm-gtk3.so:x11/libfm@gtk3
 gtk2_CONFLICTS_INSTALL=	pcmanfm-gtk3
 gtk3_CONFLICTS_INSTALL=	pcmanfm
 
-<<<<<<< HEAD
-USE_HARDENING=	cfi safestack
-CFI_OVERRIDE=	-fno-sanitize=cfi-icall
-
-USES=		desktop-file-utils gmake gnome gettext libtool localbase \
-=======
 USES=		cpe desktop-file-utils gmake gnome gettext libtool localbase \
->>>>>>> origin/freebsd/main
 		pkgconfig tar:xz xorg
 CPE_VENDOR=	${PORTNAME}_project
 USE_GNOME=	cairo gdkpixbuf2 intltool
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
+
+USE_HARDENING=	cfi safestack
+CFI_OVERRIDE=	-fno-sanitize=cfi-icall
 
 .if ${FLAVOR:Mgtk2}
 USE_GNOME+=	gtk20

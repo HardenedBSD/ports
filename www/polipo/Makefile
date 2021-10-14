@@ -12,9 +12,14 @@ COMMENT=	Small and fast caching web proxy
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 USES=		makeinfo
+=======
+USES=		cpe makeinfo
+CPE_VENDOR=	${PORTNAME}_project
+>>>>>>> origin/freebsd/main
 USE_RC_SUBR=	polipo
 
 INFO=		polipo

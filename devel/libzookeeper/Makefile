@@ -15,9 +15,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libcppunit.so:devel/cppunit
 
+<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
 USES=		autoreconf libtool pkgconfig
+=======
+USES=		autoreconf cpe libtool pkgconfig
+CPE_VENDOR=	apache
+>>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes

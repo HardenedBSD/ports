@@ -33,10 +33,15 @@ EXTRACT_AFTER_ARGS=	\
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
+=======
+USES+=		cpe
+CPE_VENDOR=	webdav
+>>>>>>> origin/freebsd/main
 .if !defined(WITHOUT_OPENSSL)
-USES+=	ssl
+USES+=		ssl
 CONFIGURE_ARGS+=	--with-ssl --with-force-ssl
 post-install:
 	#
@@ -51,7 +56,7 @@ OPTIONS_DEFINE=	NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USES=		gettext iconv
+USES+=		gettext iconv
 CONFIGURE_ARGS+=${ICONV_CONFIGURE_ARG} \
 		--with-libintl-prefix=${LOCALBASE}
 LANGS=en@quot es it

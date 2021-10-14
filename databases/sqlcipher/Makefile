@@ -9,9 +9,14 @@ COMMENT=	Encrypted SQLite database
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
 USES=		libedit libtool pathfix ssl tcl:86,build
+=======
+USES=		cpe libedit libtool pathfix ssl tcl:86,build
+CPE_VENDOR=	zetetic
+>>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 

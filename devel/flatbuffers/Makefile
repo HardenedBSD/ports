@@ -11,9 +11,14 @@ COMMENT=	Memory efficient serialization library
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off stackautoinit:off
 
 USES=		cmake compiler:c++11-lib
+=======
+USES=		cmake compiler:c++11-lib cpe
+CPE_VENDOR=	google
+>>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes

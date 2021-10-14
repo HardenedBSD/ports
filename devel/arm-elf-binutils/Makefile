@@ -14,7 +14,8 @@ USE_HARDENING=	pie:off relro:off
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
 
-USES=		gettext gmake localbase makeinfo tar:xz
+USES=		cpe gettext gmake localbase makeinfo tar:xz
+CPE_VENDOR=	gnu
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--target=${PKGNAMEPREFIX:S/-$//} --disable-werror \
 		--disable-nls

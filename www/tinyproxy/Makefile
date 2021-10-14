@@ -13,14 +13,10 @@ COMMENT=	Small, efficient HTTP proxy server
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
-USE_HARDENING=	safestack
-
-USES=		gmake tar:xz
-=======
 USES=		cpe gmake tar:xz
 CPE_VENDOR=	${PORTNAME}_project
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	safestack
 
 CONFIGURE_ARGS=	--bindir=${PREFIX}/sbin \
 		--disable-manpage_support \

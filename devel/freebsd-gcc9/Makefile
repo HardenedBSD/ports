@@ -22,14 +22,10 @@ RUN_DEPENDS=	${BU_PREFIX}-as:devel/binutils@${TARGETARCH}
 FLAVORS=	aarch64 amd64 i386 mips mips64 powerpc powerpc64 riscv64 sparc64
 TARGETARCH=	${FLAVOR}
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off pie:off
-
-USES=		compiler:c++11-lang gmake iconv libtool makeinfo tar:xz
-=======
 USES=		compiler:c++11-lang cpe gmake iconv libtool makeinfo tar:xz
 CPE_VENDOR=	gnu
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	stackautoinit:off pie:off
 
 PLIST_SUB=	OPSYS=${OPSYS:tl} \
 		SUFFIX=${SUFFIX} \

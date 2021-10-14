@@ -22,17 +22,13 @@ BUILD_DEPENDS=	${BU_PREFIX}-as:devel/binutils@${PKGNAMEPREFIX:C/-$//:C/-/_/g} \
 		objdump:devel/binutils
 RUN_DEPENDS=	${BU_PREFIX}-as:devel/binutils@${PKGNAMEPREFIX:C/-$//:C/-/_/g}
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off relro:off
-
-USES=	compiler gmake iconv libtool makeinfo tar:bzip2
-=======
 USES=		compiler cpe gmake iconv libtool makeinfo tar:bzip2
 CPE_VENDOR=	gnu
->>>>>>> origin/freebsd/main
 PLIST_SUB=	TARGETARCH=${PKGNAMEPREFIX:C/-//g} \
 		OPSYS=${OPSYS:tl} \
 		GCC_TARGET=${GCC_TARGET}
+
+USE_HARDENING=	pie:off relro:off
 
 GCC_TARGET=	arm-none-eabi
 BU_PREFIX?=	${GCC_TARGET}

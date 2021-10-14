@@ -33,13 +33,8 @@ EXTRACT_AFTER_ARGS=	\
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off
-
-=======
 USES+=		cpe
 CPE_VENDOR=	webdav
->>>>>>> origin/freebsd/main
 .if !defined(WITHOUT_OPENSSL)
 USES+=		ssl
 CONFIGURE_ARGS+=	--with-ssl --with-force-ssl
@@ -50,6 +45,8 @@ post-install:
 	#
 	#
 .endif
+
+USE_HARDENING=	pie:off
 
 OPTIONS_DEFINE=	NLS
 

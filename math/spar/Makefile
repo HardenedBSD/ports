@@ -9,21 +9,16 @@ MASTER_SITES=	SF/${PORTNAME}/Spar/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Modular math parser
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off
-
-LICENSE=        GPLv2
-LICENSE_FILE=   ${WRKSRC}/COPYING
-=======
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
->>>>>>> origin/freebsd/main
 
 USES=		dos2unix libtool ncurses readline
 DOS2UNIX_FILES=	lib/randist/rand.c
 USE_CSTD=	gnu89
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
+
+USE_HARDENING=	pie:off
 
 post-patch:
 	@${REINPLACE_CMD} -e "s,-ldl,,g" \

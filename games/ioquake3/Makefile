@@ -14,7 +14,7 @@ COMMENT?=	Cleaned-up and enhanced version of Quake 3
 LICENSE?=	GPLv2
 LICENSE_FILE?=	${WRKSRC}/COPYING.txt
 
-USES=		pkgconfig gmake
+USES=		cpe pkgconfig gmake
 
 USE_HARDENING=	safestack
 

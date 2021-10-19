@@ -46,6 +46,5 @@ post-install:
 .for F in ${FLASHLOADERS}
 	${INSTALL_DATA} ${WRKSRC}/flashloaders/${F} ${STAGEDIR}${DATADIR}/${F}
 .endfor
-	
 
 .include <bsd.port.post.mk>

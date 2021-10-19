@@ -1,7 +1,8 @@
-# Created by: Dan Langille<dvl@freebsd.org>
+# Created by: Dan Langille <dvl@freebsd.org>
 
 PORTNAME=	django-auth-kerberos
 PORTVERSION=	1.2.5
+PORTREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,7 +11,6 @@ MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Kerberos authentication backend for Django
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}kerberos>1.1.10:security/py-kerberos@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}coverage>=0:devel/py-coverage@${PY_FLAVOR}

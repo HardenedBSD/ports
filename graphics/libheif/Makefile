@@ -14,17 +14,13 @@ COMMENT=	ISO/IEC 23008-12:2017 HEIF file format de- and encoder
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
-USE_HARDENING=		stackautoinit:off
-
-USES=		cmake compiler:c++11-lang gettext-runtime gnome \
-=======
 USES=		cmake compiler:c++11-lang cpe gettext-runtime gnome \
->>>>>>> origin/freebsd/main
 		localbase:ldflags pkgconfig
 CPE_VENDOR=	struktur
 USE_GNOME=	gdkpixbuf2 glib20
 USE_LDCONFIG=	yes
+
+USE_HARDENING=		stackautoinit:off
 
 CMAKE_OFF=	WITH_EXAMPLES
 

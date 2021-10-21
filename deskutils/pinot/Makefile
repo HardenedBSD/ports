@@ -37,13 +37,7 @@ RUN_DEPENDS=	update-mime-database:misc/shared-mime-info	\
 USE_GITHUB=	yes
 GH_ACCOUNT=	FabriceColin
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off relro:off
-
-USES=		compiler:c++11-lang autoreconf gettext gnome libarchive \
-=======
 USES=		compiler:c++11-lang autoreconf gettext gnome libarchive	\
->>>>>>> origin/freebsd/main
 		libtool pkgconfig python shebangfix sqlite:3 ssl xorg
 USE_CXXSTD=	c++11
 USE_XORG=	pixman
@@ -51,6 +45,8 @@ USE_GNOME=	atkmm cairo cairomm gdkpixbuf2 glibmm gtk30 gtkmm30	\
 		libsigc++20 libxml2 pangomm
 USE_LDCONFIG=	${PREFIX}/lib/pinot/backends ${PREFIX}/lib/pinot/filters
 SHEBANG_FILES=	scripts/bash/*.sh
+
+USE_HARDENING=	pie:off relro:off
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-http=curl --with-ssl=${OPENSSLBASE} --enable-libarchive	\

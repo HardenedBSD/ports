@@ -11,14 +11,10 @@ COMMENT=	Program set interconverts between various bibliography formats
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/Copying
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off
-
-USES=		gmake
-=======
 USES=		cpe gmake
 CPE_VENDOR=	${PORTNAME}_project
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	pie:off
 
 HAS_CONFIGURE=	yes
 TEST_TARGET=	test

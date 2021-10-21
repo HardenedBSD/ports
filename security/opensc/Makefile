@@ -9,14 +9,10 @@ COMMENT=	Libraries and utilities to access smart cards
 
 LICENSE=	LGPL21
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		autoreconf compiler:c11 gmake libtool pkgconfig ssl
-=======
 USES=		autoreconf compiler:c11 cpe gmake libtool pkgconfig ssl
 CPE_VENDOR=	${PORTNAME}_project
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	stackautoinit:off
 
 OPTIONS_SINGLE=	BACKEND
 OPTIONS_SINGLE_BACKEND=PCSC OPENCT CTAPI

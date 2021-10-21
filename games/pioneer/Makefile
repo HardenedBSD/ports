@@ -34,13 +34,7 @@ LIB_DEPENDS=	libassimp.so:multimedia/assimp \
 		libsigc-2.0.so:devel/libsigc++20 \
 		libvorbisfile.so:audio/libvorbis
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off relro:off
-
-USES=		cmake compiler:c++11-lib gl gnome pkgconfig sdl
-=======
 USES=		cmake compiler:c++17-lang gl gnome lua:52 pkgconfig sdl
->>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 USE_GL=		gl glu glew
 USE_SDL=	image2 sdl2
@@ -48,6 +42,8 @@ GH_ACCOUNT=	pioneerspacesim
 ALL_TARGET=	all build-data
 CMAKE_ARGS=	-DPIONEER_DATA_DIR:PATH="${DATADIR}/data"
 CMAKE_ON=	USE_SYSTEM_LIBGLEW USE_SYSTEM_LIBLUA
+
+USE_HARDENING=	pie:off relro:off
 
 PORTDATA=	data
 PORTDOCS=	AUTHORS.txt Changelog.txt Modelviewer.txt Quickstart.txt \

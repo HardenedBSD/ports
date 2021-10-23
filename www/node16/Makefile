@@ -1,8 +1,9 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	17.0.0
+DISTVERSION=	16.12.0
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${DISTVERSION}/
+PKGNAMESUFFIX=	16
 
 MAINTAINER=	bhughes@FreeBSD.org
 COMMENT=	V8 JavaScript for client and server
@@ -11,10 +12,9 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_SSL=		libressl libressl-devel
-BROKEN_SSL_REASON=	Node.js 17.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
+BROKEN_SSL_REASON=	Node.js 16.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
-LLVM_OBJDUMP_UNSAFE=	yes
 USES=		compiler:c++11-lib gmake python:3.6-3.9,build pkgconfig \
 		localbase shebangfix
 
@@ -47,7 +47,7 @@ DTRACE_CONFIGURE_ON=	--with-dtrace
 
 HAS_CONFIGURE=	yes
 
-CONFLICTS_INSTALL=	node10-[0-9]* node14-[0-9]* node16-[0-9]*
+CONFLICTS_INSTALL=	node10-[0-9]* node14-[0-9]* node-[0-9]*
 
 CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} \
 		--without-npm \

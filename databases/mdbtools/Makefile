@@ -17,13 +17,7 @@ LIB_DEPENDS=	libodbcinst.so:databases/unixODBC \
 		libpcre.so:devel/pcre
 RUN_DEPENDS=	bash-completion>=0:shells/bash-completion
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		autoreconf bison gettext gnome iconv libtool pathfix \
-=======
 USES=		autoreconf bison gnome iconv:wchar_t libtool pathfix \
->>>>>>> origin/freebsd/main
 		pkgconfig readline
 USE_GITHUB=	yes
 USE_GNOME=	glib20
@@ -31,6 +25,8 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} \
 		--with-unixodbc=${LOCALBASE}
+
+USE_HARDENING=	stackautoinit:off
 
 INSTALL_TARGET=	install-strip
 

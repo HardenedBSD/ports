@@ -12,14 +12,10 @@ COMMENT=	Foomatic wrapper scripts
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		autoreconf ghostscript perl5 pkgconfig
-=======
 USES=		autoreconf cpe ghostscript perl5 pkgconfig
 CPE_VENDOR=	linuxfoundation
->>>>>>> origin/freebsd/main
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_A2PS=${LOCALBASE}/bin/a2ps \
 		ac_cv_path_CUPS=${LOCALBASE}/libexec/cups \

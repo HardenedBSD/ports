@@ -1136,6 +1136,7 @@
     SUBDIR += py-sshtunnel
     SUBDIR += py-sshuttle
     SUBDIR += py-stomp.py
+    SUBDIR += py-suds-community
     SUBDIR += py-suds-jurko
     SUBDIR += py-tacacs_plus
     SUBDIR += py-terminado
@@ -1299,6 +1300,7 @@
     SUBDIR += rubygem-http-parser
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
+    SUBDIR += rubygem-ipaddr
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
     SUBDIR += rubygem-kas-grpc

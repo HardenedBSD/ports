@@ -950,6 +950,7 @@
     SUBDIR += p5-HTTP-Tiny-Multipart
     SUBDIR += p5-HTTP-Tiny-SPDY
     SUBDIR += p5-HTTP-Tiny-UA
+    SUBDIR += p5-HTTP-Tiny-UNIX
     SUBDIR += p5-HTTP-WebTest
     SUBDIR += p5-HTTP-XSCookies
     SUBDIR += p5-HTTPD-Log-Filter
@@ -1998,7 +1999,6 @@
     SUBDIR += rubygem-kaminari-rails52
     SUBDIR += rubygem-kaminari-rails60
     SUBDIR += rubygem-kaminari-rails61
-    SUBDIR += rubygem-kensa
     SUBDIR += rubygem-kubeclient
     SUBDIR += rubygem-layout_yullio_generator
     SUBDIR += rubygem-less

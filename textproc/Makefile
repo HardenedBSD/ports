@@ -1471,6 +1471,7 @@
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-sphinxcontrib-qthelp
     SUBDIR += py-sphinxcontrib-serializinghtml
+    SUBDIR += py-sphinxcontrib-towncrier
     SUBDIR += py-sphinxcontrib-websupport
     SUBDIR += py-sphinxemoji
     SUBDIR += py-sphinxext-opengraph
@@ -1487,7 +1488,7 @@
     SUBDIR += py-tinycss2
     SUBDIR += py-toml
     SUBDIR += py-tomli
-    SUBDIR += py-tomli_w
+    SUBDIR += py-tomli-w
     SUBDIR += py-tomlkit
     SUBDIR += py-toronado
     SUBDIR += py-towncrier
@@ -1599,10 +1600,6 @@
     SUBDIR += rubygem-colored
     SUBDIR += rubygem-colored2
     SUBDIR += rubygem-commonmarker
-    SUBDIR += rubygem-compass
-    SUBDIR += rubygem-compass-blueprint
-    SUBDIR += rubygem-compass-core
-    SUBDIR += rubygem-compass-import-once
     SUBDIR += rubygem-creole
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin

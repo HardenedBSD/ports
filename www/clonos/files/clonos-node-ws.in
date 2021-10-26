@@ -1,0 +1,123 @@
+#!/bin/sh
+
+# $FreeBSD: $
+#
+# PROVIDE: clonos-node-ws
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# clonos_node_ws_enable (bool):	Set to YES to enable the clonos_node_ws service.
+#			Default: NO
+# clonos_node_ws_config (str):	File containing clonos_node_ws configuration details.
+#			Default: %%PREFIX%%/etc/clonos_node_ws/clonos_node_ws.yml
+# clonos_node_ws_user (str):	The user account used to run the clonos_node_ws daemon.
+#			Do not specifically set this to an empty string as this
+#			will cause the daemon to run as root.
+#			Default: root
+# clonos_node_ws_group (str):	The group account used to run the clonos_node_ws daemon.
+#			Do not specifically set this to an empty string as this
+#			will cause the daemon to run with group wheel.
+#			Default: wheel
+# clonos_node_ws_flags (str):	Extra flags passed to clonos_node_ws
+#			Default: ""
+# clonos_node_ws_facility (str):	Syslog facility to use
+#			Default: local0
+# clonos_node_ws_priority (str):	Syslog priority to use
+#			Default: alert
+
+. /etc/rc.subr
+name=clonos_node_ws
+rcvar=${name}_enable
+load_rc_config $name
+
+: ${clonos_node_ws_enable:="NO"}
+: ${clonos_node_ws_user:="www"}
+: ${clonos_node_ws_group:="www"}
+: ${clonos_node_ws_directory:="/tmp"}
+: ${clonos_node_ws_flags:=""}
+: ${clonos_node_ws_facility:="local0"}
+: ${clonos_node_ws_priority:="alert"}
+
+pidfile="/var/run/clonos_node_ws/daemon.pid"
+pidfile_daemon="/var/run/clonos_node_ws/daemon_command.pid"
+command="/usr/sbin/daemon"
+procname="%%PREFIX%%/bin/node"
+command_args="-r -P ${pidfile_daemon} -p ${pidfile} -S -l ${clonos_node_ws_facility} -s ${clonos_node_ws_priority} -T ${name} ${procname} %%PREFIX%%/www/clonos/node/wsClonos.js"
+
+start_precmd="clonos_node_ws_precmd"
+stop_cmd=${name}_stop
+status_cmd="${name}_status"
+
+clonos_node_ws_precmd()
+{
+	cbsd_workdir="/usr/jails"
+
+	if [ ! -d ${clonos_node_ws_directory} ]; then
+		echo "no such directory: ${clonos_node_ws_directory}"
+		exit 1
+	fi
+
+	cd ${clonos_node_ws_directory}
+
+	if [ ! -d "/var/run/clonos_node_ws" ]; then
+		install -d -g ${clonos_node_ws_group} -o ${clonos_node_ws_user} -m 0700 -- "/var/run/clonos_node_ws"
+	fi
+
+	if [ ! -e "${pidfile}" ]; then
+		install -g ${clonos_node_ws_group} -o ${clonos_node_ws_user} -- /dev/null "${pidfile}"
+	fi
+}
+
+clonos_node_ws_status()
+{
+	local _err
+
+	if [ -f "${pidfile}" ]; then
+		pids=$( pgrep -F ${pidfile} 2>&1 )
+		_err=$?
+		if [ ${_err} -eq  0 ]; then
+			echo "${name} is running as pid ${pids}."
+			return 0
+		else
+			echo "pgrep: ${pids}"
+		fi
+	else
+		echo "${name} is not running."
+		return 1
+	fi
+}
+
+clonos_node_ws_stop()
+{
+	if [ -f "${pidfile}" ]; then
+		pids=$( pgrep -F ${pidfile} 2>&1 )
+		_err=$?
+		if [ ${_err} -eq  0 ]; then
+			kill -9 ${pids} && /bin/rm -f ${pidfile}
+		else
+			echo "pgrep: ${pids}"
+			#return ${_err}
+		fi
+		rm -f ${pidfile}
+	fi
+
+	if [ -f "${pidfile_daemon}" ]; then
+		pids=$( pgrep -F ${pidfile_daemon} 2>&1 )
+		_err=$?
+		if [ ${_err} -eq  0 ]; then
+			kill -9 ${pids} && /bin/rm -f ${pidfile_daemon}
+		else
+			echo "pgrep: ${pids}"
+			#return ${_err}
+		fi
+		rm -f ${pidfile_daemon}
+	fi
+
+	return ${_err}
+
+}
+
+run_rc_command "$1"

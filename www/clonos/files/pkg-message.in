@@ -1,0 +1,213 @@
+ClonOS post installation setup:
+
+[*] Check for RACCT is enabled on the host, please add:
+
+kern.racct.enable="1"
+
+    into /boot/loader.conf and reboot host
+
+
+[*] Init CBSD workdir
+
+    See https://www.bsdstore.ru/en/installing_cbsd.html#initenv for details
+
+
+[*] Ensure CBSD is started:
+
+sysrc cbsdd_enable=YES
+service cbsdd status || service cbsdd start
+
+
+[*] Configure and run beanstalkd:
+
+sysrc beanstalkd_flags="-l 127.0.0.1 -p 11300"
+sysrc beanstalkd_enable=YES
+service beanstalkd restart
+
+
+[*] Change in %%PREFIX%%/etc/php-fpm.conf events mechanism to BSD-specific.
+    To do this, uncomment and edit the events.mechanism parameter to:
+    vi %%PREFIX%%/etc/php-fpm.conf:
+
+..
+events.mechanism = kqueue
+..
+
+    Or copy: cp %%PREFIX%%/etc/php-fpm.conf.clonos.sample %%PREFIX%%/etc/php-fpm.conf
+
+
+[*] Uncomment and change in %%PREFIX%%/etc/php-fpm.d/www.conf port to Unix socket and
+    set's correct access permission:
+
+..
+listen = /tmp/php-fpm.sock
+..
+listen.backlog = -1
+..
+listen.owner = www
+listen.group = www
+listen.mode = 0660
+..
+
+    Or copy: cp %%PREFIX%%/etc/php-fpm.d/www-php-fpm.conf.clonos.sample %%PREFIX%%/etc/php-fpm.d/www.conf
+
+
+[*] Add "www" user to "cbsd" group:
+
+pw groupmod cbsd -M www
+
+[*] To execute CBSD commands, let the www user run CBSD through sudo. Please make
+    sure you have %%PREFIX%%/etc/sudoers.d/10_www with follow content:
+
+Defaults     env_keep += "workdir DIALOG NOCOLOR CBSD_RNODE"
+Cmnd_Alias   WEB_CMD = /usr/local/bin/cbsd
+www   ALL=(ALL) NOPASSWD:SETENV: WEB_CMD
+
+    And make sure the file permissions are safe:
+
+chown root:wheel %%PREFIX%%/etc/sudoers.d/10_www
+chmod 0440 %%PREFIX%%/etc/sudoers.d/10_www
+
+    Or copy: cp %%PREFIX%%/etc/sudoers_10_www.clonos.sample cp %%PREFIX%%/etc/sudoers.d/10_www
+
+
+[*] Enable and start websocket daemon:
+
+service clonos-ws enable
+service clonos-ws restart
+
+
+[*] Enable and start ClonOS node daemon:
+
+service clonos-node-ws enable
+service clonos-node-ws restart
+
+
+[*] Change %%PREFIX%%/etc/php.ini params:
+
+..
+memory_limit = 256M
+..
+post_max_size = 12G
+..
+upload_tmp_dir = /tmp
+..
+upload_max_filesize = 16G
+..
+opcache.enable=1
+
+    Or copy: cp %%PREFIX%%/etc/php.ini.clonos.sample %%PREFIX%%/etc/php.ini
+
+
+[*] Configure NGINX. Make sure/merge this settings into
+    %%PREFIX%%/etc/nginx/nginx.conf:
+
+user www;
+load_module %%PREFIX%%/libexec/nginx/ngx_stream_module.so;
+events {
+        use kqueue;
+}
+http {
+        include       %%PREFIX%%/etc/nginx/mime.types;
+        default_type  application/octet-stream;
+        client_max_body_size    1m;
+        include %%PREFIX%%/etc/nginx/sites-enabled/*.conf;
+}
+stream {
+        include %%PREFIX%%/etc/nginx/conf.stream.d/*.conf;
+        include %%PREFIX%%/etc/nginx/streams-enabled/*;
+}
+
+    Or copy: cp %%PREFIX%%/etc/nginx/nginx.conf.clonos.sample %%PREFIX%%/etc/nginx/nginx.conf
+
+
+[*] Make sure %%PREFIX%%/etc/nginx/sites-enabled/cbsdweb.conf
+    have correct path to CBSD workdir. Please check that line "fastcgi_param WORKDIR.."
+    in %%PREFIX%%/etc/nginx/sites-enabled/cbsdweb.conf pointed to ~cbsd path:
+
+    fastcgi_param WORKDIR /usr/jails;
+                          ^^^^^^^^^^
+
+[*] Enable nginx, php-fpm and clonos_vnc2wss to run at system startup:
+
+sysrc nginx_enable="YES"
+sysrc php_fpm_enable="YES"
+sysrc supervisord_enable="YES"
+sysrc clonos_vnc2wss_enable="YES"
+
+
+[*] Start nginx and php-fpm:
+
+service nginx restart
+service php-fpm restart
+
+
+[*] Configure CBSD:
+
+  1) Install and compile vncterm module:
+
+cbsd module mode=install vncterm
+make -C /usr/local/cbsd/modules/vncterm.d
+
+  2) Install additional ConvectIX scripts module
+
+cbsd module mode=install convectix
+
+  3) Install Puppet module
+
+cbsd module mode=install puppet
+
+  4) Install ClonOS database module
+
+cbsd module mode=install clonos-database
+
+  5) Copy queue config file:
+
+cp -a /usr/local/cbsd/modules/cbsd_queue.d/etc-sample/cbsd_queue.conf ~cbsd/etc/
+
+  6) Add additional module name into ~cbsd/etc/modules, 
+     e.g. complete ~cbsd/etc/modules.conf must have:
+
+pkg.d
+bsdconf.d
+zfsinstall.d
+puppet.d
+convectix.d
+cbsd_queue.d
+vncterm.d
+
+    Or copy: cp %%PREFIX%%/etc/cbsd-modules.conf.clonos.sample ~cbsd/etc/modules.conf
+
+  7) Re-run CBSD initenv to init modules:
+
+cbsd initenv
+
+  8) Init web user database:
+
+sh %%PREFIX%%/cbsd/modules/clonos_database/initforms.sh
+
+  9) Configure and run CBSD RACCT stats daemon:
+
+sysrc cbsd_statsd_hoster_enable=YES
+sysrc cbsd_statsd_jail_enable=YES
+sysrc cbsd_statsd_bhyve_enable=YES
+service cbsd-statsd-hoster restart
+service cbsd-statsd-jail restart
+service cbsd-statsd-bhyve restart
+
+  10) Install/upgrade noVNC via npm:
+
+cd /usr/local/www/clonos/public/novnc
+npm install .
+
+  11) Create symlink from python3 to valid python bin:
+
+ln -sf /usr/local/bin/python3.8 /usr/local/bin/python3
+
+
+[*] Open the ClonOS UI in your web browser.
+
+  Default login: 'admin', default password: 'admin'
+
+
+[*] Enjoy the ClonOS !

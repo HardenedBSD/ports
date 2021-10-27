@@ -8,25 +8,13 @@ COMMENT=	STM32 ST-Link JTAG variant tools
 
 LICENSE=	BSD3CLAUSE
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=		GTK3 DOCS
-OPTIONS_SUB=		yes
-GTK3_EXTRA_PATCHES_OFF=	${FILESDIR}/extra-pacth-turn-off-gtk
-GTK3_USES=		gnome
-GTK3_USE=		GNOME=gtk30
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	stlink-org
-
-USE_HARDENING=	pie:off
-
-=======
->>>>>>> origin/freebsd/main
 USES=		cmake pkgconfig
 USE_CSTD=	c99
 USE_GITHUB=	yes
 GH_ACCOUNT=	stlink-org
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	pie:off
 
 PORTDOCS=	${ALLDOCS} README.md
 

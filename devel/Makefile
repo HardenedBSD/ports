@@ -4298,6 +4298,7 @@
     SUBDIR += py-cachetools
     SUBDIR += py-cachetools3
     SUBDIR += py-cachy
+    SUBDIR += py-cadquery-pywrap
     SUBDIR += py-canonicaljson
     SUBDIR += py-capstone
     SUBDIR += py-capturer
@@ -4322,6 +4323,7 @@
     SUBDIR += py-cheetah3
     SUBDIR += py-circuits
     SUBDIR += py-ciso8601
+    SUBDIR += py-clang
     SUBDIR += py-cld
     SUBDIR += py-cle
     SUBDIR += py-cleo
@@ -4389,6 +4391,7 @@
     SUBDIR += py-cwcwidth
     SUBDIR += py-cxx
     SUBDIR += py-cycler
+    SUBDIR += py-cymbal
     SUBDIR += py-cymem
     SUBDIR += py-cysignals
     SUBDIR += py-cytoolz
@@ -4710,6 +4713,7 @@
     SUBDIR += py-logilab-common
     SUBDIR += py-loguru
     SUBDIR += py-logutils
+    SUBDIR += py-logzero
     SUBDIR += py-louie
     SUBDIR += py-lunardate
     SUBDIR += py-lxml

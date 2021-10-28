@@ -1,15 +1,13 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
+# Created by: Sergey A. Osokin <osa@FreeBSD.org>
 
 PORTNAME=	luajit
-DISTVERSIONPREFIX=	v
-DISTVERSION=	2.1-20210510
+DISTVERSION=	2.1.0.20211027
 CATEGORIES=	lang
-PKGNAMESUFFIX=	-openresty
+PKGNAMESUFFIX=	-devel
+DISTNAME=	LuaJIT-${DISTVERSION}
 
-PATCH_SITES=	https://github.com/openresty/luajit2/commit/
-
-MAINTAINER=	mm@FreeBSD.org
-COMMENT=	Just-In-Time Compiler for Lua (OpenResty branch)
+MAINTAINER=	osa@FreeBSD.org
+COMMENT=	Just-In-Time Compiler for Lua
 
 LICENSE=	MIT PD
 LICENSE_COMB=	multi
@@ -17,16 +15,14 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 IGNORE_riscv64=		fails to compile: lj_arch.h:73:2: No support for this architecture (yet)
 
+#CONFLICTS_INSTALL=	luajit luajit-openresty
+
 USES=		cpe gmake
-
-CONFLICTS_INSTALL=	luajit luajit-devel
-
 USE_LDCONFIG=	yes
-MAKE_ARGS=	CC=${CC} Q=
+MAKE_ARGS=	CC=${CC} CCOPT= CCOPT_x86= Q=
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	openresty
-GH_PROJECT=	luajit2
+GH_TUPLE=	LuaJIT:LuaJIT:b4b2dce
 
 LUAJIT_VERSION=	2.1.0-beta3
 LUAJIT_SOVERSION=	2.1.0
@@ -40,7 +36,7 @@ USE_GCC=yes
 .endif
 
 post-install:
-	${LN} -sf ${PORTNAME}-${LUAJIT_VERSION} \
+	${LN} -sf ${PORTNAME}-${DISTVERSION} \
 		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_MAN} ${WRKSRC}/etc/luajit.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 

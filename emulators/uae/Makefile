@@ -11,13 +11,9 @@ COMMENT=	Commodore Amiga emulator
 
 LICENSE=	GPLv2
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-CONFLICTS=	e-uae-[0-9]*
-=======
 CONFLICTS=	e-uae
->>>>>>> origin/freebsd/main
 
 USES=		gmake gnome pkgconfig tar:bzip2
 GNU_CONFIGURE=	yes

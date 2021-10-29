@@ -22,13 +22,9 @@ USES=		compiler:c++11-lang gmake localbase:ldflags perl5 pkgconfig ssl \
 USE_RC_SUBR=	courier-imap-imapd courier-imap-imapd-ssl \
 		courier-imap-pop3d courier-imap-pop3d-ssl
 
-<<<<<<< HEAD
 USE_HARDENING= pie:off relro:off
 
-CONFLICTS=	courier-[0-9]* imap-uw-[0-9]* panda-imap-[0-9]*
-=======
 CONFLICTS=	courier imap-uw panda-imap
->>>>>>> origin/freebsd/main
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	REHASH=${SCRIPTDIR}/c_rehash

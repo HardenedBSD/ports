@@ -20,7 +20,7 @@ USE_HARDENING=	pie:off relro:off
 
 USES=		cpe libtool tar:bzip2 ssl
 
-CONFLICTS=	racoon-[0-9]*
+CONFLICTS=	racoon
 INSTALL_TARGET=	install-strip
 USE_RC_SUBR=	racoon
 GNU_CONFIGURE=	yes

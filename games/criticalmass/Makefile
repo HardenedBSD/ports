@@ -25,9 +25,13 @@ USE_CXXSTD=	gnu++98
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-optimize
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 CONFLICTS=	shaaft-[0-9]*
+=======
+CONFLICTS=	shaaft
+>>>>>>> origin/freebsd/main
 
 PLIST_FILES=	bin/Packer \
 		bin/critter \

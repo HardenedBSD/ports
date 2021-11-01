@@ -32,6 +32,7 @@
     SUBDIR += cassandra3
     SUBDIR += cassandra4
     SUBDIR += casstcl
+    SUBDIR += caterva
     SUBDIR += cayley
     SUBDIR += cdb
     SUBDIR += cego
@@ -756,6 +757,7 @@
     SUBDIR += py-bsddb3
     SUBDIR += py-carbon
     SUBDIR += py-cassandra-driver
+    SUBDIR += py-caterva
     SUBDIR += py-couchdb
     SUBDIR += py-dbf
     SUBDIR += py-dbutils
@@ -969,7 +971,6 @@
     SUBDIR += rubygem-puppetdb_cli
     SUBDIR += rubygem-rbase
     SUBDIR += rubygem-redis
-    SUBDIR += rubygem-redis44
     SUBDIR += rubygem-redis-actionpack
     SUBDIR += rubygem-redis-actionpack-rails5
     SUBDIR += rubygem-redis-actionpack-rails50
@@ -978,6 +979,7 @@
     SUBDIR += rubygem-redis-actionpack-rails61
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace16
+    SUBDIR += rubygem-redis44
     SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3

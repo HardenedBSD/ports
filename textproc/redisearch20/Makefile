@@ -1,8 +1,8 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
 
-PORTNAME=	redisearch
+PORTNAME=	redisearch20
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.2.1
+DISTVERSION=	2.0.12
 CATEGORIES=	textproc
 
 MAINTAINER=	osa@FreeBSD.org
@@ -21,9 +21,10 @@ GH_PROJECT=	RediSearch
 
 CMAKE_ARGS=	-DGIT_DESCRIBE_VERSION:STRING=${PKGVERSION}
 
-PLIST_FILES=	lib/redisearch.so
+PLIST_FILES=	lib/redisearch20.so
 
 do-install:
-	${INSTALL_LIB} ${INSTALL_WRKSRC}/redisearch.so ${STAGEDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${INSTALL_WRKSRC}/redisearch.so \
+		${STAGEDIR}${PREFIX}/lib/redisearch20.so
 
 .include <bsd.port.mk>

@@ -42,6 +42,9 @@ INSTALL_TARGET=		install
 INSTALL_TARGET+=	install-doc
 .endif
 
+# For fix https://git.hardenedbsd.org/hardenedbsd/ports/-/issues/13
+RUN_DEPENDS=    rubygem-dbm>0:databases/rubygem-dbm
+
 # For PKG_DBDRIVER={bdb_btree,bdb_hash}
 RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/bdb.so:databases/ruby-bdb
 

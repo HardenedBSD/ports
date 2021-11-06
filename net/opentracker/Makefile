@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.bayofrum.net/dist/${PORTNAME}/
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Free lightweight bittorrent tracker using libowfat
 
-BROKEN_riscv64=		fails to link: duplicate symbol: first_deferred
+BROKEN=		fails to link: duplicate symbol: first_deferred, known libowfat issue
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libowfat.a:devel/libowfat
 
@@ -16,7 +16,7 @@ USE_HARDENING=	pie:off relro:off
 USES=		tar:bzip2
 USE_RC_SUBR=	${PORTNAME} ${PORTNAME}-ipv6
 
-OPTIONS_DEFINE= COMPRESSION_GZIP DEBUG_HTTPERROR FULLSCRAPE RESTRICT_STATS
+OPTIONS_DEFINE=	COMPRESSION_GZIP DEBUG_HTTPERROR FULLSCRAPE RESTRICT_STATS
 OPTIONS_SINGLE=	ACCESSLIST
 OPTIONS_SINGLE_ACCESSLIST=	ACCESSLIST_OPEN ACCESSLIST_BLACK \
 				ACCESSLIST_WHITE

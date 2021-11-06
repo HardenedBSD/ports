@@ -14,12 +14,15 @@ COMMENT=	Cross-platform game SDK
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+DEPRECATED=	Older than expired and removed devel/clanlib
+EXPIRATION_DATE=2021-12-31
+
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libmikmod.so:audio/libmikmod \
 		libvorbis.so:audio/libvorbis \
 		libogg.so:audio/libogg
 
-USES=		alias gl gmake jpeg libtool localbase:ldflags pathfix pkgconfig \
+USES=		alias cpe gl gmake jpeg libtool localbase:ldflags pathfix pkgconfig \
 		sdl tar:tgz xorg
 USE_CXXSTD=	c++98
 USE_XORG=	x11 xi xxf86vm

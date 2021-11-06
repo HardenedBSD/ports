@@ -1,7 +1,7 @@
 # Created by: "Mahdi Mokhtari <mokhi64@gmail.com>"
 
 PORTNAME=	mysql
-PORTREVISION=	1
+PORTREVISION=	0
 PKGNAMESUFFIX=	57-client
 
 COMMENT=	Multithreaded SQL database (client)
@@ -21,6 +21,9 @@ CONFLICTS_INSTALL=	mysql5[0-68-9]-client-* \
 
 CMAKE_ARGS+=	-DWITHOUT_SERVER=1 \
 		-DWITH_NDBCLUSTER=1
+
+CFLAGS+=	-DNDEBUG
+CXXFLAGS+=	-DNDEBUG
 
 USE_LDCONFIG+=	${PREFIX}/lib/mysql
 

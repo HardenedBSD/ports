@@ -1,8 +1,8 @@
 # Created by: Eduard Martinescu
 
 PORTNAME=	smartmontools
-PORTVERSION=	7.2
-PORTREVISION=	1
+DISTVERSION=	7.2
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	SF
 
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_HARDENING=	safestack
 
-USES=		alias compiler:c++11-lib shebangfix
+USES=		alias compiler:c++11-lib cpe shebangfix
 USE_RC_SUBR=	smartd
 
 SHEBANG_FILES=	examplescripts/Example5

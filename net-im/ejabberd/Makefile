@@ -1,5 +1,6 @@
 PORTNAME=	ejabberd
 PORTVERSION=	21.07
+PORTREVISION=	1
 CATEGORIES=	net-im
 
 MAINTAINER=	ashish@FreeBSD.org
@@ -64,7 +65,7 @@ MAKE_ARGS=	"CPPFLAGS=${CPPFLAGS}" "CFLAGS=${CFLAGS}" "LDFLAGS=${LDFLAGS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-SUBS= 		PORTNAME=${PORTNAME} PORTVERSION=${PORTVERSION}		\
+SUBS=		PORTNAME=${PORTNAME} PORTVERSION=${PORTVERSION}		\
 		EJABBERD_LIBDIR=${EJABBERD_LIBDIR}			\
 		BASE64URL_VER=${BASE64URL_VER}				\
 		CACHE_TAB_VER=${CACHE_TAB_VER} EIMP_VER=${EIMP_VER}	\
@@ -170,10 +171,6 @@ pre-everything::
 post-patch:
 	@${REINPLACE_CMD} -e 's,^convert,${LOCALBASE}/bin/convert,' ${WRKSRC}/tools/captcha.sh
 	@${REINPLACE_CMD} -e 's,%%PORTVERSION%%,${PORTVERSION},' ${WRKSRC}/configure.ac
-.if ${OSVERSION} < 1200000
-	# Disable LTO required by dependency, not available by default in < 12.x
-	@${REINPLACE_CMD} -e 's/$$FLTO_FLAG//' ${WRKSRC}/deps/jiffy/rebar.config
-.endif
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
@@ -198,5 +195,6 @@ post-install:
 		${STAGEDIR}${DATADIR}
 	@${CHMOD} +x ${STAGEDIR}${PREFIX}/${EJABBERD_LIBDIR}/${PORTNAME}-${PORTVERSION}/lib/eimp-${EIMP_VER}/priv/bin/eimp
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/${EJABBERD_LIBDIR}/${PORTNAME}-${PORTVERSION}/lib/eimp-${EIMP_VER}/priv/bin/eimp
+	@cd ${WRKSRC}/sql && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/${EJABBERD_LIBDIR}/${PORTNAME}-${PORTVERSION}/priv/sql
 
 .include <bsd.port.post.mk>

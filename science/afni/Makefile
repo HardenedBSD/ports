@@ -1,14 +1,12 @@
 PORTNAME=		afni
 DISTVERSIONPREFIX=	AFNI_
-DISTVERSION=		21.2.01
+DISTVERSION=		21.3.00
 CATEGORIES=		science biology graphics perl5 python
 
 MAINTAINER=	fernape@FreeBSD.org
 COMMENT=	Advanced Functional Neuro Imaging
 
 LICENSE=	GPLv2
-
-BROKEN_powerpc64=	fails to compile: ./predicates_init.c:46: error: implicit declaration of function 'fpsetprec'
 
 CRAN_DEPENDS=	R-cran-lme4>0:math/R-cran-lme4 \
 		R-cran-snow>0:science/R-cran-snow \
@@ -30,14 +28,14 @@ RUN_DEPENDS=	endian:sysutils/endian \
 		R:math/R \
 		${CRAN_DEPENDS}
 
-USE_HARDENING=	stackautoinit:off
-
-USES=		compiler:openmp gettext gl gmake gnome iconv jpeg:run motif
+USES=		gettext gl gmake gnome iconv jpeg:run motif
 USES+=		perl5 python shebangfix tar:xz xorg
 USE_GITHUB=	yes
 USE_GL=		gl glu
 USE_GNOME=	glib20
 USE_XORG=	x11 xext xi xmu xt
+
+USE_HARDENING=	stackautoinit:off
 
 SHEBANG_FILES=	scripts_install/* \
 		python_scripts/afnipy/*.py \
@@ -52,6 +50,7 @@ SHEBANG_FILES=	scripts_install/* \
 
 MAKE_ENV=	CC="${CC}" R_SHARE_DIR=${LOCALBASE}/lib/R/share
 MAKE_JOBS_UNSAFE=yes
+CFLAGS+=	-fcommon
 
 ALL_TARGET=	vastness suma
 
@@ -70,9 +69,9 @@ PRESTAGE=	${WRKSRC}/prestage
 
 .include <bsd.port.options.mk>
 
-CONFLICTS=	im-[0-9]* \
-		nifticlib-[0-9]* \
-		open-usp-tukubai-[0-9]*
+CONFLICTS=	im \
+		nifticlib \
+		open-usp-tukubai
 
 X11R6_FILES=	coxplot/Makefile \
 		coxplot/Makefile.f2c

@@ -1,6 +1,6 @@
---- chrome/browser/resources/settings/route.js.orig	2021-06-11 09:29:55 UTC
+--- chrome/browser/resources/settings/route.js.orig	2021-09-24 04:25:59 UTC
 +++ chrome/browser/resources/settings/route.js
-@@ -183,7 +183,7 @@ function createBrowserSettingsRoutes() {
+@@ -185,7 +185,7 @@ function createBrowserSettingsRoutes() {
  
      r.ACCESSIBILITY = r.ADVANCED.createSection('/accessibility', 'a11y');
  

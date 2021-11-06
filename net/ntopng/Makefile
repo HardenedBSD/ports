@@ -1,7 +1,7 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
 
 PORTNAME=	ntopng
-PORTVERSION=	4.2.d20210615
+PORTVERSION=	5.0.d20210923
 PORTEPOCH=	1
 CATEGORIES=	net
 
@@ -27,7 +27,8 @@ BUILD_DEPENDS=	bash:shells/bash
 USE_HARDENING=	pie:off relro:off
 
 USES=		autoreconf compiler:c++11-lang cpe gmake libtool localbase \
-		mysql pathfix pkgconfig shebangfix sqlite ssl
+		lua:53 mysql pathfix pkgconfig shebangfix sqlite ssl
+USE_OPENLDAP=	yes
 
 SUB_FILES=	ntopng-geoip2update.sh pkg-deinstall
 SHEBANG_FILES=	httpdocs/misc/ntopng-add-user.sh \
@@ -41,7 +42,7 @@ PLIST_SUB=	NTOPNGUSER="${USERS}" NTOPNGROUP="${GROUPS}"
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ntop
-GH_TAGNAME=	0139dd5
+GH_TAGNAME=	e8c2ba4
 
 CPE_VENDOR=	ntop
 
@@ -54,6 +55,8 @@ NLS_USES=	gettext
 USE_RC_SUBR=	ntopng
 
 post-patch:
+	@${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		${WRKSRC}/Makefile.in
 	cd ${WRKSRC} && ${SH} autogen.sh
 
 post-install:

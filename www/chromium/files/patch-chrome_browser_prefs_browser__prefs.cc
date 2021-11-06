@@ -1,6 +1,6 @@
---- chrome/browser/prefs/browser_prefs.cc.orig	2021-05-12 22:05:44 UTC
+--- chrome/browser/prefs/browser_prefs.cc.orig	2021-09-24 04:25:59 UTC
 +++ chrome/browser/prefs/browser_prefs.cc
-@@ -386,14 +386,14 @@
+@@ -405,14 +405,14 @@
  #endif
  
  #if defined(OS_WIN) || defined(OS_MAC) || \
@@ -17,7 +17,7 @@
  #include "chrome/browser/browser_switcher/browser_switcher_prefs.h"
  #endif
  
-@@ -840,10 +840,10 @@ void RegisterLocalState(PrefRegistrySimple* registry) 
+@@ -1012,10 +1012,10 @@ void RegisterLocalState(PrefRegistrySimple* registry) 
  
  // TODO(crbug/1169547) Remove `BUILDFLAG(IS_CHROMEOS_LACROS)` once the
  // migration is complete.
@@ -30,7 +30,7 @@
  
  #if defined(OS_MAC)
    confirm_quit::RegisterLocalState(registry);
-@@ -871,7 +871,7 @@ void RegisterLocalState(PrefRegistrySimple* registry) 
+@@ -1043,7 +1043,7 @@ void RegisterLocalState(PrefRegistrySimple* registry) 
  #endif  // defined(OS_WIN)
  
  #if defined(OS_WIN) || defined(OS_MAC) || \
@@ -39,7 +39,7 @@
    web_app::url_handler_prefs::RegisterLocalStatePrefs(registry);
  #endif
  
-@@ -1153,7 +1153,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySync
+@@ -1335,7 +1335,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySync
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
  #if defined(OS_WIN) || defined(OS_MAC) || \

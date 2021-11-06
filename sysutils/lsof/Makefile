@@ -16,9 +16,11 @@ LICENSE_NAME=	lsof
 LICENSE_FILE=	${FILESDIR}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+USES=		compiler cpe shebangfix tar:bzip2
+
 USE_HARDENING=	safestack
 
-USES=		compiler shebangfix tar:bzip2
+CPE_VENDOR=	lsof_project
 
 HAS_CONFIGURE=	yes
 

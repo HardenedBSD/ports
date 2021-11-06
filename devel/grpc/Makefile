@@ -1,7 +1,7 @@
 # Created by: vanilla@
 
 PORTNAME=	grpc
-PORTVERSION=	1.39.0
+PORTVERSION=	1.41.1
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	2
 CATEGORIES=	devel
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libprotobuf.so:devel/protobuf \
 		libre2.so:devel/re2
 
-USES=		cmake compiler:c++17-lang localbase:ldflags pkgconfig ssl
+USES=		cmake compiler:c++17-lang cpe localbase:ldflags pkgconfig ssl
 
 USE_GITHUB=	yes
 
@@ -46,5 +46,15 @@ USE_HARDENING=	pie:off relro:off
 .if ${SSL_DEFAULT} == base
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-CMakeLists.txt
 .endif
+
+post-patch:
+# Clean up bundled libraries
+	@${RM} -r ${WRKSRC}/third_party/abseil-cpp/
+	@${RM} -r ${WRKSRC}/third_party/benchmark/
+	@${RM} -r ${WRKSRC}/third_party/boringssl-with-bazel/
+	@${RM} -r ${WRKSRC}/third_party/cares/
+	@${RM} -r ${WRKSRC}/third_party/protobuf/
+	@${RM} -r ${WRKSRC}/third_party/re2/
+	@${RM} -r ${WRKSRC}/third_party/zlib/
 
 .include <bsd.port.post.mk>

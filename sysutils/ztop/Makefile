@@ -1,6 +1,7 @@
 PORTNAME=	ztop
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.0
+DISTVERSION=	0.1.1
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	asomers@FreeBSD.org
@@ -45,7 +46,7 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		structopt-0.3.22 \
 		structopt-derive-0.4.15 \
 		syn-1.0.74 \
-		sysctl-0.4.1 \
+		sysctl-0.4.2 \
 		termion-1.5.6 \
 		textwrap-0.11.0 \
 		thiserror-1.0.26 \

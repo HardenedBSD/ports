@@ -83,6 +83,7 @@
     SUBDIR += rubygem-railsbench
     SUBDIR += scimark2
     SUBDIR += scimark2c
+    SUBDIR += shellbench
     SUBDIR += siege
     SUBDIR += sipp
     SUBDIR += slowloris
@@ -102,6 +103,7 @@
     SUBDIR += uperf
     SUBDIR += vegeta
     SUBDIR += vkmark
+    SUBDIR += vkpeak
     SUBDIR += webbench
     SUBDIR += wrk
 

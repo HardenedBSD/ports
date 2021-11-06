@@ -1,9 +1,14 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
 
 PORTNAME=	R
-DISTVERSION=	4.1.0
+DISTVERSION=	4.1.1
+PORTREVISION=	3
 CATEGORIES=	math lang
-MASTER_SITES=	CRAN/src/base/R-${PORTVERSION:C|\..*||}
+MASTER_SITES=	CRAN/src/base/R-${PORTVERSION:C|\..*||} \
+		CRAN/src/contrib/Archive/mgcv:mgcv
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		mgcv_1.8-37${EXTRACT_SUFX}:mgcv
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Language for statistical computing and graphics
@@ -24,8 +29,9 @@ RUN_DEPENDS=	gmake:devel/gmake
 # - Create ports for each of the recommended packages
 # - Create a meta-port for the recommended packages
 
-USES=		compiler:c++11-lang gmake iconv libtool localbase pathfix perl5 \
-		readline
+USES=		compiler:c++11-lang cpe gmake iconv libtool localbase pathfix \
+		perl5 readline
+CPE_VENDOR=	r-project
 USE_LDCONFIG=	${PREFIX}/lib/R/lib
 USE_PERL5=	build
 
@@ -56,7 +62,7 @@ OPTIONS_GROUP_NEEDX11=	CAIROPANGO GHOSTSCRIPT JPEG PNG TCLTK TEXDOCS TIFF
 OPTIONS_SINGLE=		BLAS
 OPTIONS_SINGLE_BLAS=	ATLAS NETLIB OPENBLAS RBLAS
 
-OPTIONS_SUB=		YES
+OPTIONS_SUB=	YES
 
 CAIROPANGO_DESC=	Cairo graphics device and Pango multi-language text
 FLANG_DESC=		Use experimental flang Fortran compiler
@@ -76,6 +82,7 @@ X11_DESC=		X11 graphics device
 ATLAS_USES=			blaslapack:atlas
 ATLAS_CONFIGURE_ON=		--disable-BLAS-shlib
 CAIROPANGO_IMPLIES=		X11
+CAIROPANGO_LIB_DEPENDS=		libharfbuzz.so:print/harfbuzz
 CAIROPANGO_USES=		gettext gnome jpeg pkgconfig
 CAIROPANGO_USE=			GNOME=cairo,pango
 CAIROPANGO_CONFIGURE_WITH=	cairo
@@ -133,11 +140,15 @@ _MAJORVER=	${DISTVERSION:R:R}
 
 .include <bsd.port.options.mk>
 
+## Cannot use FLANG_USES_OFF=fortran because the FLANG option is only for amd64
 .if ! ${PORT_OPTIONS:MFLANG}
 USES+=		fortran
 .endif
 
 post-patch:
+	@${CP} ${DISTDIR}/mgcv_1.8-37${EXTRACT_SUFX} ${WRKSRC}/src/library/Recommended/
+	@${RM} ${WRKSRC}/src/library/Recommended/mgcv.tgz ${WRKSRC}/src/library/Recommended/mgcv_1.8-36.tar.gz
+	@${LN} -s ${WRKSRC}/src/library/Recommended/mgcv_1.8-37${EXTRACT_SUFX} ${WRKSRC}/src/library/Recommended/mgcv.tgz
 	@${REINPLACE_CMD} -e "s|/usr/local|${LOCALBASE}|g" ${WRKSRC}/configure
 	@${REINPLACE_CMD} \
 		-e "s|%%FULLVER%%|${DISTVERSION}|" \

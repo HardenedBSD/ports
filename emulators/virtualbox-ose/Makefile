@@ -1,8 +1,8 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
 
 PORTNAME=	virtualbox-ose
-PORTVERSION=	6.1.22
-PORTREVISION=	1
+PORTVERSION=	6.1.28
+PORTREVISION=   1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.virtualbox.org/virtualbox/${PORTVERSION}/
 DISTFILES=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
@@ -56,6 +56,9 @@ VBOX_UTILS=	VBoxExtPackHelperApp VBoxNetAdpCtl VBoxNetDHCP VBoxNetNAT \
 OPTIONS_DEFINE=	AIO ALSA DBUS DEBUG GUESTADDITIONS MANUAL NLS OPUS PULSEAUDIO \
 		PYTHON QT5 R0LOGGING UDPTUNNEL VDE VNC WEBSERVICE VPX X11
 OPTIONS_DEFAULT=	AIO DBUS QT5 UDPTUNNEL VNC WEBSERVICE X11
+# Since version 6.1.24 pulseaudio is broken at runtime, preventing
+# virtual machines from starting if configured to use it.
+OPTIONS_EXCLUDE+=	PULSEAUDIO
 OPTIONS_SUB=	yes
 
 AIO_DESC=	Enable Asyncronous IO support (check pkg-message)
@@ -162,7 +165,6 @@ USE_GL=		gl glu
 USE_QT=		buildtools_build core dbus gui linguisttools_build opengl
 USE_QT+=	printsupport widgets x11extras
 USE_XORG=	xcb
-INSTALLS_ICONS=	yes
 VBOX_PROGS+=	VirtualBox VirtualBoxVM
 VBOX_UTILS+=	VBoxTestOGL
 VBOX_WITH_QT=	1
@@ -211,7 +213,7 @@ KMK_FLAGS+=	-j${MAKE_JOBS_NUMBER}
 # llvm10 in FreeBSD before r364284 miscompiles virtualbox 6.1 causing errors.
 # force llvm11 from ports
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300109
-BUILD_DEPENDS+=	clang11:devel/llvm${VBOX_LLVM_VER}
+BUILD_DEPENDS+=	clang${VBOX_LLVM_VER}:devel/llvm${VBOX_LLVM_VER}
 CC=		${LOCALBASE}/bin/clang${VBOX_LLVM_VER}
 CXX=		${LOCALBASE}/bin/clang++${VBOX_LLVM_VER}
 VBOX_LLVM_VER?=	11
@@ -232,18 +234,18 @@ PLIST_SUB+=	PYTHON_PYCDIR=/ \
 CONFIGURE_ARGS+=	--with-openssl-dir="${OPENSSLBASE}"
 .endif
 
-pre-everything::
-.if ${ARCH} == "amd64"
-.if ${_ELF32} != yes
-	@${ECHO_MSG} 'Requires 32-bit runtime support in kernel.'
-	@${ECHO_MSG} 'Rebuild kernel with "options COMPAT_FREEBSD32" and reboot.'
-	@${FALSE}
-.elif !exists(/usr/lib32/libc.so)
-	@${ECHO_MSG} 'Requires 32-bit libraries installed under /usr/lib32.'
-	@${ECHO_MSG} 'Do: cd /usr/src; make build32 install32; service ldconfig restart'
-	@${FALSE}
-.endif
-.endif
+#pre-everything::
+#.if ${ARCH} == "amd64"
+#.if ${_ELF32} != yes
+#	@${ECHO_MSG} 'Requires 32-bit runtime support in kernel.'
+#	@${ECHO_MSG} 'Rebuild kernel with "options COMPAT_FREEBSD32" and reboot.'
+#	@${FALSE}
+#.elif !exists(/usr/lib32/libc.so)
+#	@${ECHO_MSG} 'Requires 32-bit libraries installed under /usr/lib32.'
+#	@${ECHO_MSG} 'Do: cd /usr/src; make build32 install32; service ldconfig restart'
+#	@${FALSE}
+#.endif
+#.endif
 
 post-patch:
 	@${ECHO_CMD} 'VBOX_PATH_APP_PRIVATE_ARCH = ${VBOX_DIR}' > \

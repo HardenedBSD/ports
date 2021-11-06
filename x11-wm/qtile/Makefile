@@ -1,7 +1,7 @@
 # Created by: William Grzybowski <william88@gmail.com>
 
 PORTNAME=	qtile
-PORTVERSION=	0.17.0
+PORTVERSION=	0.18.1
 CATEGORIES=	x11-wm
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -46,6 +46,5 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/xsessions
 	(cd ${WRKDIR} && ${INSTALL_DATA} qtile.desktop \
 		${STAGEDIR}${PREFIX}/share/xsessions)
-
 
 .include <bsd.port.mk>

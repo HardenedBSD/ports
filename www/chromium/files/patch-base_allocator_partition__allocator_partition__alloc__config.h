@@ -1,6 +1,6 @@
---- base/allocator/partition_allocator/partition_alloc_config.h.orig	2021-05-18 13:58:13 UTC
+--- base/allocator/partition_allocator/partition_alloc_config.h.orig	2021-09-24 04:25:55 UTC
 +++ base/allocator/partition_allocator/partition_alloc_config.h
-@@ -34,9 +34,13 @@ static_assert(sizeof(void*) != 8, "");
+@@ -61,9 +61,13 @@ static_assert(sizeof(void*) != 8, "");
  #define PA_HAS_LINUX_KERNEL
  #endif
  

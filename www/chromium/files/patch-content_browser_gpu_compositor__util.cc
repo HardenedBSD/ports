@@ -1,4 +1,4 @@
---- content/browser/gpu/compositor_util.cc.orig	2021-05-12 22:05:52 UTC
+--- content/browser/gpu/compositor_util.cc.orig	2021-09-24 04:26:05 UTC
 +++ content/browser/gpu/compositor_util.cc
 @@ -127,11 +127,11 @@ const GpuFeatureData GetGpuFeatureData(
      {"video_decode",

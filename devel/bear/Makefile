@@ -1,8 +1,8 @@
 # Created by: Jov <amutu@amutu.com>
 
 PORTNAME=	bear
-DISTVERSION=	3.0.13
-PORTREVISION=	2
+DISTVERSION=	3.0.16
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	jrm@FreeBSD.org
@@ -23,7 +23,7 @@ USES=		cmake compiler:c++17-lang pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	rizsotto
 GH_PROJECT=	Bear
-USE_LDCONFIG=	yes
+USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 
 CMAKE_ARGS=	-DCMAKE_INSTALL_DOCDIR=${DOCSDIR} \
 		-DENABLE_FUNC_TESTS=OFF \
@@ -31,19 +31,12 @@ CMAKE_ARGS=	-DCMAKE_INSTALL_DOCDIR=${DOCSDIR} \
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
-# Patch 11.x, which requires #define _WITH_DPRINTF
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-source_intercept_source_report_libexec_Logger.cc
-.endif
-
 pre-install:
 	${MV} ${STAGEDIR}/${CONFIGURE_WRKSRC}/stage ${CONFIGURE_WRKSRC}/
 	${RM} -r ${STAGEDIR}/wrkdirs
 
 post-install:
-.for l in bin/citnames bin/intercept libexec/bear/libexec.so libexec/bear/wrapper
+.for l in bin/citnames bin/intercept lib/bear/libexec.so lib/bear/wrapper
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/${l}
 .endfor
 

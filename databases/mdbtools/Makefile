@@ -1,6 +1,8 @@
+# Created by: Anders Nordby <anders@fix.no>
+
 PORTNAME=	mdbtools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.3
+DISTVERSION=	1.0.0
 CATEGORIES=	databases
 
 MAINTAINER=	rhurlin@FreeBSD.org
@@ -10,38 +12,38 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	bash-completion>=0:shells/bash-completion \
 		flex:textproc/flex \
-		gawk:lang/gawk \
-		txt2man:textproc/txt2man
-LIB_DEPENDS=	libodbcinst.so:databases/unixODBC
+		gawk:lang/gawk
+LIB_DEPENDS=	libodbcinst.so:databases/unixODBC \
+		libpcre.so:devel/pcre
 RUN_DEPENDS=	bash-completion>=0:shells/bash-completion
 
-USE_HARDENING=	stackautoinit:off
-
-USES=		autoreconf bison gettext gnome iconv libtool pathfix \
+USES=		autoreconf bison gnome iconv:wchar_t libtool pathfix \
 		pkgconfig readline
 USE_GITHUB=	yes
-GH_ACCOUNT=	mdbtools
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} \
 		--with-unixodbc=${LOCALBASE}
 
+USE_HARDENING=	stackautoinit:off
+
 INSTALL_TARGET=	install-strip
 
 CPPFLAGS+=	-I${WRKSRC}/include
 
-OPTIONS_DEFINE=		DOCS MANPAGES LIBMSWSTR
+OPTIONS_DEFINE=		DOCS MANPAGES LIBMSWSTR NLS
 OPTIONS_DEFAULT=	MANPAGES
 OPTIONS_SUB=		yes
 
 LIBMSWSTR_DESC=	Read and parse JET 4 mdb file indices
 
-LIBMSWSTR_LIB_DEPENDS=	libmswstr.so:databases/libmswstr
+LIBMSWSTR_LIB_DEPENDS=		libmswstr.so:databases/libmswstr
 LIBMSWSTR_CONFIGURE_ENV_OFF=	ac_cv_lib_mswstr_DBLCMapStringW=no
 MANPAGES_CONFIGURE_OFF=		--disable-man
+NLS_USES=			gettext
 
-DOCS=		AUTHORS ChangeLog HACKING NEWS README TODO.md
+DOCS=		AUTHORS HACKING.md NEWS README.md TODO.md
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

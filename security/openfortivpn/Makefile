@@ -1,5 +1,5 @@
 PORTNAME=	openfortivpn
-PORTVERSION=	1.17.0
+PORTVERSION=	1.17.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security net-vpn
 
@@ -11,7 +11,8 @@ BUILD_DEPENDS=	gsed:textproc/gsed
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		autoreconf pkgconfig ssl
+USES=		autoreconf cpe pkgconfig ssl
+CPE_VENDOR=	${PORTNAME}_project
 USE_GITHUB=	yes
 GH_ACCOUNT=	adrienverge
 

@@ -1,5 +1,5 @@
 PORTNAME=	cyrus-imapd
-PORTVERSION=	3.2.7
+PORTVERSION=	3.2.8
 PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/cyrusimap/cyrus-imapd/releases/download/${PORTNAME}-${PORTVERSION}/

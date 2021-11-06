@@ -14,7 +14,6 @@ LICENSE_FILE_GPLv3+ =	${WRKSRC}/COPYING
 LICENSE_FILE_GPLv2+ =	${WRKSRC}/COPYING-GPLV2
 LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING-LGPLV3
 
-IGNORE_FreeBSD_11=	fails to build: fails to compile dwarf_abbrev_hash.c
 BROKEN_armv6=		fails to build: fails to compile i386_disasm.c
 BROKEN_sparc64=		sparc patch does not apply cleanly to 0.172
 
@@ -33,7 +32,8 @@ NLS_USES=	gettext
 NLS_USES_OFF=	gettext  # used anyway
 NLS_CONFIGURE_ENABLE=	nls
 
-USES=		autoreconf gmake libtool pkgconfig tar:bzip2
+USES=		autoreconf cpe gmake libtool pkgconfig tar:bzip2
+CPE_VENDOR=	${PORTNAME}_project
 USE_GCC=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

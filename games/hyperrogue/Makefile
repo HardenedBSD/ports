@@ -1,5 +1,5 @@
 PORTNAME=	hyperrogue
-PORTVERSION=	12.0c
+PORTVERSION=	12.0f
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games
 
@@ -8,8 +8,6 @@ COMMENT=	Roguelike in a non-euclidean world
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_FreeBSD_11=	does not build: hyperrogue-hyper.o: file not recognized: File format not recognized
 
 LIB_DEPENDS=	libpng.so:graphics/png
 

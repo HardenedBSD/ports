@@ -1,4 +1,4 @@
---- components/cast_channel/cast_message_util.cc.orig	2021-06-11 09:34:59 UTC
+--- components/cast_channel/cast_message_util.cc.orig	2021-09-14 01:51:54 UTC
 +++ components/cast_channel/cast_message_util.cc
 @@ -168,7 +168,7 @@ int GetVirtualConnectPlatformValue() {
    return 4;

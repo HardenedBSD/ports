@@ -12,12 +12,13 @@ COMMENT=	Liboping, a C library, and utility to generate ICMP echo requests
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_HARDENING=	stackautoinit:off
-
-USES=		libtool ncurses perl5 shebangfix
+USES=		cpe libtool ncurses perl5 shebangfix
+CPE_VENDOR=	noping
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-pkgconfigdir="${PREFIX}/libdata/pkgconfig"
+
+USE_HARDENING=	stackautoinit:off
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Net/Oping/Oping.so

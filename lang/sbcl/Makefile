@@ -3,7 +3,7 @@
 # pinned to exact versions of everything used to build them.
 
 PORTNAME=	sbcl
-DISTVERSION=	2.1.7
+DISTVERSION=	2.1.9
 DISTVERSIONSUFFIX=	-source
 PORTEPOCH=	1
 CATEGORIES=	lang lisp

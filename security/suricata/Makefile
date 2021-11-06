@@ -1,6 +1,6 @@
 PORTNAME=	suricata
-DISTVERSION=	6.0.2
-PORTREVISION=	3
+DISTVERSION=	6.0.3
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	https://www.openinfosecfoundation.org/download/
 
@@ -32,6 +32,7 @@ USE_HARDENING=	pie:configure
 CONFIGURE_ARGS+=--enable-gccprotect \
 		--enable-bundled-htp \
 	        --disable-gccmarch-native
+MAKE_ENV=	RUSTFLAGS="${RUSTFLAGS} -C linker=${CC:Q} ${LDFLAGS:C/.+/-C link-arg=&/}"
 
 INSTALL_TARGET=		install-strip
 TEST_TARGET=		check
@@ -74,7 +75,7 @@ HYPERSCAN_LIB_DEPENDS=		libhs.so:devel/hyperscan
 
 IPFW_CONFIGURE_ON=		--enable-ipfw
 
-LUAJIT_LIB_DEPENDS=		libluajit-5.1.so:lang/luajit
+LUAJIT_LIB_DEPENDS=		libluajit-5.1.so:lang/luajit-openresty
 LUAJIT_CONFIGURE_ON=		--enable-luajit
 
 LUA_USES=			lua:51

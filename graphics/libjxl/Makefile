@@ -1,10 +1,11 @@
 PORTNAME=	libjxl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5
+DISTVERSION=	0.6.1
 CATEGORIES=	graphics
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	adb32f3f8f37.patch:-p1 # https://github.com/libjxl/libjxl/pull/193
+PATCHFILES+=	c31dca74e68f.patch:-p1 # https://github.com/libjxl/libjxl/pull/678
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	JPEG XL reference encoder/decoder
@@ -17,7 +18,8 @@ LICENSE_FILE_ZLIB=	${WRKSRC}/third_party/lodepng/LICENSE
 LIB_DEPENDS=	libbrotlienc.so:archivers/brotli
 TEST_DEPENDS=	googletest>0:devel/googletest
 
-USES=		cmake:testing compiler:c++11-lib localbase:ldflags pkgconfig shared-mime-info
+USES=		cmake:testing compiler:c++11-lib cpe localbase:ldflags pkgconfig shared-mime-info
+CPE_VENDOR=	${PORTNAME}_project
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_TUPLE=	barmco:skcms:6437475:skcms/third_party/skcms \
@@ -41,6 +43,8 @@ GIF_LIB_DEPENDS=	libgif.so:graphics/giflib
 GIF_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_GIF
 
 GIMP_DESC=		GIMP plugin support
+GIMP_USES=		gnome
+GIMP_USE=		GNOME=gtk20
 GIMP_LIB_DEPENDS=	libgegl-0.4.so:graphics/gegl \
 			libgimp-2.0.so:graphics/gimp-app \
 			libbabl-0.1.so:x11/babl
@@ -50,10 +54,6 @@ JPEG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_JPEG
 
 LTO_CMAKE_BOOL=		CMAKE_INTERPROCEDURAL_OPTIMIZATION
 LTO_CMAKE_ON=		-DCMAKE_POLICY_DEFAULT_CMP0069:STRING=NEW
-.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
-# --plugin isn't supported by old GNU ld.bfd in base
-LTO_LDFLAGS=		-fuse-ld=lld
-.endif
 
 MANPAGES_BUILD_DEPENDS=	a2x:textproc/asciidoc
 MANPAGES_USES=		python:build
@@ -72,8 +72,6 @@ PNG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_PNG
 post-patch:
 	@${REINPLACE_CMD} 's,/usr,${LOCALBASE},' \
 		${WRKSRC}/plugins/gdk-pixbuf/jxl.thumbnailer
-	${REINPLACE_CMD} 's,OpenEXR::Int64,uint64_t,' \
-		${WRKSRC}/lib/extras/codec_exr.cc
 
 # pkg_check_modules doesn't support CMAKE_DISABLE_*
 post-patch-GIMP-off:

@@ -1,5 +1,6 @@
 PORTNAME=	hmat-oss
 DISTVERSION=	1.7.1
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,10 +11,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 LIB_DEPENDS=	libopenblas.so:math/openblas
 
-USE_HARDENING=	stackautoinit:off
-
-USES=		cmake compiler:openmp
+USES=		cmake
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	stackautoinit:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	jeromerobert
@@ -24,12 +25,6 @@ CMAKE_OFF=	HMAT_GIT_VERSION
 
 LDFLAGS+=	-lexecinfo
 
-.include <bsd.port.pre.mk>
-
-.if ${CHOSEN_COMPILER_TYPE} == gcc
-USE_GCC=	yes
-.endif
-
 do-test:
 	@cd ${BUILD_WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DBUILD_EXAMPLES:BOOL=ON ${CMAKE_SOURCE_PATH} && \
@@ -37,4 +32,4 @@ do-test:
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

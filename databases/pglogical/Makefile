@@ -2,7 +2,7 @@
 
 PORTNAME=	pglogical
 DISTVERSIONPREFIX=	REL
-DISTVERSION=	2_3_4
+DISTVERSION=	2_4_0
 CATEGORIES=	databases
 
 MAINTAINER=	matthew@FreeBSD.org
@@ -10,7 +10,8 @@ COMMENT=	Logical replication system as a PostgreSQL extension
 
 LICENSE=	PostgreSQL
 
-USES=		compiler:c11 gettext-runtime gmake pgsql
+USES=		compiler:c11 cpe gettext-runtime gmake pgsql
+CPE_VENDOR=	2ndquadrant
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	2ndQuadrant

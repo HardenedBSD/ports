@@ -1,10 +1,10 @@
 PORTNAME=	transient
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.6
+DISTVERSION=	0.3.7
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	yasu@utahime.org
+MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Emacs key and popup interface for complex keybindings
 
 LICENSE=	GPLv3+

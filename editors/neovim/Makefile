@@ -2,7 +2,7 @@
 
 PORTNAME=	neovim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.0
+DISTVERSION=	0.5.1
 CATEGORIES=	editors
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -25,7 +25,7 @@ TEST_DEPENDS=	autoconf>=0:devel/autoconf \
 		gmake:devel/gmake \
 		libtool:devel/libtool
 
-USES=		cmake iconv pathfix pkgconfig
+USES=		cmake cpe iconv pathfix pkgconfig
 USE_GITHUB=	yes
 GH_TUPLE=	libmpack:libmpack:1.0.5:libmpack \
 		libmpack:libmpack-lua:1.0.7:libmpack_lua
@@ -42,8 +42,6 @@ OPTIONS_DEFINE=	LUAJIT NLS PYNVIM
 OPTIONS_DEFAULT=LUAJIT
 OPTIONS_EXCLUDE_aarch64=LUAJIT
 OPTIONS_EXCLUDE_mips64=	LUAJIT
-OPTIONS_EXCLUDE_powerpc=LUAJIT
-OPTIONS_EXCLUDE_riscv=	LUAJIT
 OPTIONS_EXCLUDE_riscv64=LUAJIT
 OPTIONS_EXCLUDE_sparc64=LUAJIT
 OPTIONS_SUB=	yes

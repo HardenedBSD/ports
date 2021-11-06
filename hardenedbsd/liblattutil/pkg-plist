@@ -1,0 +1,3 @@
+include/liblattutil.h
+lib/liblattutil.so
+lib/liblattutil.so.0

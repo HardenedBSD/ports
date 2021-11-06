@@ -1,8 +1,6 @@
 PORTNAME=	skanlite
-DISTVERSION=	2.2.0
-PORTREVISION=	2
-CATEGORIES=	graphics kde
-MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION:R}/
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Simple image scanning application
@@ -20,6 +18,5 @@ USE_KDE=	auth config configwidgets codecs completion \
 		doctools_build ecm_build
 USE_QT=		core concurrent dbus gui network widgets xml \
 		buildtools_build qmake_build testlib_build
-
 
 .include <bsd.port.mk>

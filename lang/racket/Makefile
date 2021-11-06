@@ -26,7 +26,8 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 		libffi.so:devel/libffi \
 		libpng.so:graphics/png
 
-USES=		gmake gnome iconv jpeg libtool localbase sqlite tar:tgz
+USES=		cpe gmake gnome iconv jpeg libtool localbase sqlite tar:tgz
+CPE_VENDOR=	${PORTNAME}-lang
 USE_GNOME=	cairo pango
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-pthread \
@@ -35,7 +36,7 @@ WRKSRC=		${WRKDIR}/racket-${PORTVERSION}/src
 PATCH_WRKSRC=	${WRKDIR}/racket-${PORTVERSION}
 USE_LDCONFIG=	yes
 REINPLACE_ARGS=	-i ""
-CONFLICTS=	racket-minimal-[0-9]*
+CONFLICTS=	racket-minimal
 
 OPTIONS_DEFINE=	DOCS
 OPTIONS_DEFAULT=	CS

@@ -17,9 +17,9 @@ MASTER_SITES=		https://www.openldap.org/software/download/OpenLDAP/%SUBDIR%/ \
 			http://www.openldap.org/software/download/OpenLDAP/%SUBDIR%/
 MASTER_SITE_SUBDIR=	openldap-release
 .if defined(CLIENT_ONLY)
-PKGNAMESUFFIX=		-client
+PKGNAMESUFFIX=		24-client
 .else
-PKGNAMESUFFIX=		-server
+PKGNAMESUFFIX=		24-server
 .endif
 
 MAINTAINER=		delphij@FreeBSD.org
@@ -34,7 +34,11 @@ LICENSE_NAME=		OpenLDAP Public License
 LICENSE_FILE=		${WRKSRC}/LICENSE
 LICENSE_PERMS=		dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-CONFLICTS=		${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-2.[0-35-9].*
+.if defined(CLIENT_ONLY)
+CONFLICTS_INSTALL=	${PORTNAME}2[0-3][5-9]-client-* ${PORTNAME}-client-*
+.else
+CONFLICTS_INSTALL=	${PORTNAME}2[0-3][5-9]-server-* ${PORTNAME}-server-*
+.endif
 
 GNU_CONFIGURE=		yes
 # :keepla because port uses lt_dlopen
@@ -45,15 +49,17 @@ WANT_OPENLDAP_VER?=	24
 BROKEN=			incompatible OpenLDAP version: ${WANT_OPENLDAP_VER}
 .endif
 
-PORTREVISION_CLIENT=	1
-PORTREVISION_SERVER=	3
+PORTREVISION_CLIENT=	4
+PORTREVISION_SERVER=	7
 OPENLDAP_SHLIB_MAJOR=	2
 OPENLDAP_SHLIB_MINOR=	11.7
 OPENLDAP_MAJOR=		${DISTVERSION:R}
 
 OPTIONS_DEFINE=		DEBUG FETCH GSSAPI
+OPTIONS_DEFAULT=	DEBUG
 
 FETCH_DESC=		Enable fetch(3) support
+FETCH_BUILD_DEPENDS=	autoconf>0:devel/autoconf
 GSSAPI_DESC=		With GSSAPI support
 
 FETCH_CONFIGURE_WITH=	fetch
@@ -110,7 +116,7 @@ OPTIONS_DEFINE+=	OUTLOOK
 OPTIONS_DEFINE+=	KQUEUE
 OPTIONS_DEFINE+=	DYNAMIC_MODULES
 
-OPTIONS_DEFAULT=	DYNAMIC_MODULES
+OPTIONS_DEFAULT+=	DYNAMIC_MODULES
 OPTIONS_DEFAULT+=	${BKNDS_DEFAULTS}
 OPTIONS_DEFAULT+=	${OPTIONS_GROUP_OVLYS}
 
@@ -581,7 +587,7 @@ pre-configure:
 		${ECHO_CMD} "${PKGNAME}: bind installed with PORT_REPLACES_BASE_BIND causes build problems."; \
 		${FALSE}; \
 	fi
-.if ${PORT_OPTIONS:MKQUEUE}
+.if ${PORT_OPTIONS:MKQUEUE} || ${PORT_OPTIONS:MFETCH}
 	@(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf)
 .endif
 
@@ -616,8 +622,11 @@ post-install:
 		${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/$${prog}; \
 	done
 
-	for library in lber ldap ldap_r; do \
+	for library in lber ldap_r; do \
 		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib$${library}-${OPENLDAP_MAJOR}.so.${OPENLDAP_SHLIB_MAJOR}; \
+	done
+	for suffix in -${OPENLDAP_MAJOR}.so.2 -${OPENLDAP_MAJOR}.so.${OPENLDAP_SHLIB_MAJOR}.${OPENLDAP_SHLIB_MINOR} .a .la .so; do \
+		${LN} -sf libldap_r$${suffix} ${STAGEDIR}${PREFIX}/lib/libldap$${suffix}; \
 	done
 .else
 	${MKDIR} ${STAGEDIR}${LDAP_RUN_DIR}

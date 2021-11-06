@@ -6,8 +6,8 @@ CATEGORIES=		security
 .if !defined(MASTERDIR)
 PKGNAMESUFFIX=		-devel
 .endif
-HASH=			593e16448
-MIT_COMMIT_DATE=	2021.07.16
+HASH=			d22ed9b92
+MIT_COMMIT_DATE=	2021.10.28
 
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2
@@ -15,14 +15,12 @@ PATCH_DIST_STRIP=	-p2
 MAINTAINER=		cy@FreeBSD.org
 COMMENT=		MIT implementation of RFC 4120 network authentication service
 
-BROKEN_FreeBSD_11=	OpenSSL 1.0.2 is not supported
-
 LICENSE=		MIT
 
 USE_GITHUB=		yes
 GH_TAGNAME=		${HASH}
 
-CONFLICTS=		heimdal-[0-9]* srp-[0-9]* krb5-11[345]-[0-9]* \
+CONFLICTS=		heimdal srp krb5-11[345] \
 			krb5-1.[0-9]*
 
 KERBEROSV_URL=		http://web.mit.edu/kerberos/

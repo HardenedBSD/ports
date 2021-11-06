@@ -4,15 +4,13 @@ PORTNAME=	quagga
 PORTVERSION=	1.2.4
 PORTREVISION=	8
 CATEGORIES=	net
-MASTER_SITES=	SAVANNAH
+MASTER_SITES=	https://github.com/Quagga/quagga/releases/download/${DISTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free RIPv1, RIPv2, OSPFv2, BGP4, IS-IS route software
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BUILD_DEPENDS=	gawk:lang/gawk
 
 # Quagga uses shared libraries as plugins, but
 # does not fail with safestack as no port depends
@@ -25,6 +23,8 @@ USES=		compiler:c11 cpe gmake libtool makeinfo \
 CONFLICTS=	frr7 openbgpd pimd zebra
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	GAWK=${AWK}
+
 CFLAGS+=	-fcommon
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes

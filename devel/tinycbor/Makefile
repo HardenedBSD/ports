@@ -1,7 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 
 PORTNAME=	tinycbor
-PORTVERSION=	0.5.3
+PORTVERSION=	0.5.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -15,16 +15,15 @@ LIB_DEPENDS=	libcjson.so:devel/libcjson
 
 USES=		gmake localbase pathfix
 
+USE_HARDENING=	pie:off
+
 INSTALL_TARGET=	install-strip
 MAKE_ARGS=	SOVERSION=${PORTVERSION:R:R}
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 GH_ACCOUNT=	intel
-GH_PROJECT=	tinycbor
 USE_GITHUB=	yes
-
-USE_HARDENING=	pie:off
 
 do-configure:
 	@cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} configure

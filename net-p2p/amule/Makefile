@@ -1,8 +1,7 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
 
 PORTNAME=	amule
-PORTVERSION=	2.3.2
-PORTREVISION=	12
+PORTVERSION=	2.3.3
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF/${PORTNAME}/aMule/${PORTVERSION}
 DISTNAME=	aMule-${PORTVERSION}
@@ -15,11 +14,11 @@ LICENSE_FILE_GPLv2+ =	${WRKSRC}/docs/COPYING
 
 LIB_DEPENDS=	libcryptopp.so:security/cryptopp
 
-CONFLICTS=	amule-devel-[0-9]*
+CONFLICTS=	amule-devel
 
 USE_HARDENING=	safestack
 
-USES=		bison compiler:c++11-lang desktop-file-utils gmake \
+USES=		bison compiler:c++11-lang cpe desktop-file-utils gmake \
 		localbase:ldflags perl5 pkgconfig shebangfix tar:xz
 USE_PERL5=	build
 USE_WX=		2.8
@@ -35,9 +34,8 @@ LDFLAGS+=	-lpthread
 
 SHEBANG_FILES=	src/utils/scripts/*.pl src/utils/xas/*.pl src/libs/ec/*.pl
 
-OPTIONS_DEFINE=	ALC ALCC AMULECMD AMULEDAEMON AMULEGUI CAS DEBUG DOCS ED2K \
-	FILEVIEW MMAP MONOLITHIC NLS UPNP \
-	WEBSERVER WXCAS XAS
+OPTIONS_DEFINE=	ALC ALCC AMULECMD AMULEDAEMON AMULEGUI BOOST CAS DEBUG \
+	DOCS ED2K FILEVIEW MMAP MONOLITHIC NLS UPNP WEBSERVER WXCAS XAS
 ALC_DESC=		Compile aMule Link Creator for GUI
 ALCC_DESC=		Compile aMule Link Creator for console
 AMULECMD_DESC=		Compile aMule command line client
@@ -72,6 +70,9 @@ AMULEDAEMON_USE=	RC_SUBR=amuled
 
 AMULEGUI_CONFIGURE_ON=	--enable-amule-gui
 
+BOOST_CONFIGURE_ON=	--with-boost
+BOOST_LIB_DEPENDS+=	libboost_system.so:devel/boost-libs
+
 CAS_CONFIGURE_ON=	--enable-cas
 CAS_LIB_DEPENDS=	libgd.so:graphics/gd
 
@@ -88,7 +89,7 @@ UPNP_LIB_DEPENDS=	libupnp.so:devel/upnp
 UPNP_CONFIGURE_OFF=	--disable-upnp
 
 WEBSERVER_CONFIGURE_ON=	--enable-webserver
-WEBSERVER_LIB_DEPENDS=  libpng.so:graphics/png
+WEBSERVER_LIB_DEPENDS=	libpng.so:graphics/png
 WEBSERVER_USES=		readline
 
 WXCAS_CONFIGURE_ON=	--enable-wxcas

@@ -14,7 +14,7 @@ BROKEN_armv7=	fails to link: undefined reference to check_control
 
 USE_HARDENING=	stackautoinit:off
 
-USES=		compiler:nestedfct
+USES=		compiler:nestedfct cpe
 CFLAGS+=	-fcommon
 
 PORTDOCS=	README

@@ -1,6 +1,6 @@
---- content/browser/web_contents/web_contents_view_aura.cc.orig	2021-05-12 22:05:52 UTC
+--- content/browser/web_contents/web_contents_view_aura.cc.orig	2021-09-14 01:51:56 UTC
 +++ content/browser/web_contents/web_contents_view_aura.cc
-@@ -152,7 +152,7 @@ class WebDragSourceAura : public content::WebContentsO
+@@ -157,7 +157,7 @@ class WebDragSourceAura : public content::WebContentsO
    DISALLOW_COPY_AND_ASSIGN(WebDragSourceAura);
  };
  
@@ -9,7 +9,7 @@
  // Fill out the OSExchangeData with a file contents, synthesizing a name if
  // necessary.
  void PrepareDragForFileContents(const DropData& drop_data,
-@@ -235,7 +235,7 @@ void PrepareDragData(const DropData& drop_data,
+@@ -240,7 +240,7 @@ void PrepareDragData(const DropData& drop_data,
    if (!drop_data.download_metadata.empty())
      PrepareDragForDownload(drop_data, provider, web_contents);
  #endif

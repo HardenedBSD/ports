@@ -11,7 +11,7 @@ LICENSE_FILE=	${WRKSRC}/LICENCE.TXT
 USE_HARDENING=	cfi safestack
 CFI_OVERRIDE=	-fno-sanitize=cfi-icall
 
-USES+=		cmake:insource,noninja
+USES+=		cmake:insource,noninja cpe
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	TigerVNC

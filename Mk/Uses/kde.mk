@@ -75,16 +75,18 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.22.4
+KDE_PLASMA_VERSION?=		5.23.2
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS_VERSION?=	5.83.0
+KDE_FRAMEWORKS_VERSION?=	5.87.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	21.04.3
-KDE_APPLICATIONS_SHLIB_VER?=	5.17.3
+KDE_APPLICATIONS_VERSION?=	21.08.3
+KDE_APPLICATIONS_SHLIB_VER?=	5.18.3
+# G as in KDE Gear, and as in "don't make the variable name longer than required"
+KDE_APPLICATIONS_SHLIB_G_VER?=	21.8.3
 KDE_APPLICATIONS_BRANCH?=	stable
 
 # Extended KDE universe applications.
@@ -263,7 +265,7 @@ _USE_PLASMA_ALL=	activitymanagerd breeze breeze-gtk \
 			decoration discover drkonqi hotkeys \
 			infocenter kde-cli-tools kde-gtk-config \
 			kdeplasma-addons kgamma5 kmenuedit kscreen \
-			kscreenlocker ksshaskpass ksysguard kwallet-pam \
+			kscreenlocker ksshaskpass ksysguard ksystemstats kwallet-pam \
 			kwayland-integration kwin kwrited layer-shell-qt libkscreen \
 			libksysguard milou oxygen plasma-browser-integration \
 			plasma-desktop plasma-disks plasma-integration plasma-pa \
@@ -590,6 +592,9 @@ kde-ksshaskpass_PATH=		${KDE_PREFIX}/bin/ksshaskpass
 kde-ksysguard_PORT=		sysutils/plasma5-ksysguard
 kde-ksysguard_PATH=		${KDE_PREFIX}/bin/ksysguard
 
+kde-ksystemstats_PORT=		sysutils/plasma5-ksystemstats
+kde-ksystemstats_PATH=		${KDE_PREFIX}/bin/ksystemstats
+
 kde-kwallet-pam_PORT=		security/plasma5-kwallet-pam
 kde-kwallet-pam_PATH=		${KDE_PREFIX}/lib/pam_kwallet5.so
 
@@ -633,7 +638,7 @@ kde-plasma-sdk_PORT=		devel/plasma5-plasma-sdk
 kde-plasma-sdk_PATH=		${KDE_PREFIX}/bin/plasmoidviewer
 
 kde-plasma-workspace_PORT=	x11/plasma5-plasma-workspace
-kde-plasma-workspace_LIB=	libkdeinit5_kcminit.so
+kde-plasma-workspace_LIB=	libkworkspace5.so
 
 kde-plasma-workspace-wallpapers_PORT=	x11-themes/plasma5-plasma-workspace-wallpapers
 kde-plasma-workspace-wallpapers_PATH=	${KDE_PREFIX}/share/wallpapers/Autumn/contents/images/1280x1024.jpg

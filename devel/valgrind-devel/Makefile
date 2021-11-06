@@ -19,7 +19,7 @@ USE_HARDENING=	pie:off relro:off
 
 ONLY_FOR_ARCHS=	amd64 i386
 
-USES=		pathfix pkgconfig gmake perl5 shebangfix autoreconf
+USES=		cpe pathfix pkgconfig gmake perl5 shebangfix autoreconf
 USE_PERL5=	build
 
 GNU_CONFIGURE=	yes
@@ -27,7 +27,7 @@ SHEBANG_FILES=	callgrind/callgrind_annotate.in callgrind/callgrind_control.in
 SSP_UNSAFE=	yes
 LIB32_PATH?=	/usr/lib32/libc.so
 
-CONFLICTS=	valgrind-[0-9]*
+CONFLICTS=	valgrind
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	paulfloyd

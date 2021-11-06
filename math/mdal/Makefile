@@ -1,8 +1,7 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
 
 PORTNAME=	mdal
-DISTVERSION=	0.8.1
-PORTREVISION=	1
+DISTVERSION=	0.9.0
 CATEGORIES=	math geography
 
 MAINTAINER=	wen@FreeBSD.org
@@ -19,7 +18,7 @@ LIB_DEPENDS=	libpdal_base.so:math/pdal \
 		libhdf5.so:science/hdf5 \
 		libsz.so:science/szip
 
-USES=		cmake localbase
+USES=		cmake gnome localbase
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 

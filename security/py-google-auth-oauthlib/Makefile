@@ -1,7 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 
 PORTNAME=	google-auth-oauthlib
-PORTVERSION=	0.4.4
+PORTVERSION=	0.4.6
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,5 +19,11 @@ USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=	TOOL
+OPTIONS_DEFAULT=TOOL
+TOOL_DESC=	Tool for obtaining authorization and credentials
+
+TOOL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>=6.0.0:devel/py-click@${PY_FLAVOR}
 
 .include <bsd.port.mk>

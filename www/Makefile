@@ -75,6 +75,7 @@
     SUBDIR += chpasswd
     SUBDIR += chrome-gnome-shell
     SUBDIR += chromium
+    SUBDIR += cinny
     SUBDIR += civetweb
     SUBDIR += ckeditor
     SUBDIR += cl-lml
@@ -108,6 +109,7 @@
     SUBDIR += dojo
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
+    SUBDIR += dolibarr13
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += drupal7
@@ -120,7 +122,6 @@
     SUBDIR += e2guardian
     SUBDIR += edbrowse
     SUBDIR += eden
-    SUBDIR += efront
     SUBDIR += element-web
     SUBDIR += elgg
     SUBDIR += elinks
@@ -221,6 +222,7 @@
     SUBDIR += guile-www
     SUBDIR += gurl
     SUBDIR += gwsocket
+    SUBDIR += h2c
     SUBDIR += h2o
     SUBDIR += h2o-devel
     SUBDIR += habari
@@ -260,6 +262,7 @@
     SUBDIR += ilias6
     SUBDIR += interchange
     SUBDIR += itop
+    SUBDIR += janus
     SUBDIR += jericho-html
     SUBDIR += jesred
     SUBDIR += jetty8
@@ -309,6 +312,7 @@
     SUBDIR += linux-opera
     SUBDIR += litmus
     SUBDIR += ljdeps
+    SUBDIR += llhttp
     SUBDIR += logswan
     SUBDIR += logtools
     SUBDIR += ls-qpack
@@ -452,6 +456,7 @@
     SUBDIR += node
     SUBDIR += node10
     SUBDIR += node14
+    SUBDIR += node16
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -459,12 +464,14 @@
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-node14
+    SUBDIR += npm-node16
     SUBDIR += nspluginwrapper
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += oneshot
     SUBDIR += onionbalance
     SUBDIR += onionshare
+    SUBDIR += openarc
     SUBDIR += opencart
     SUBDIR += orangehrm
     SUBDIR += osrm-backend
@@ -945,6 +952,7 @@
     SUBDIR += p5-HTTP-Tiny-Multipart
     SUBDIR += p5-HTTP-Tiny-SPDY
     SUBDIR += p5-HTTP-Tiny-UA
+    SUBDIR += p5-HTTP-Tiny-UNIX
     SUBDIR += p5-HTTP-WebTest
     SUBDIR += p5-HTTP-XSCookies
     SUBDIR += p5-HTTPD-Log-Filter
@@ -1455,13 +1463,16 @@
     SUBDIR += py-dj32-django-cors-headers
     SUBDIR += py-dj32-django-debug-toolbar
     SUBDIR += py-dj32-django-filter
+    SUBDIR += py-dj32-django-graphiql-debug-toolbar
     SUBDIR += py-dj32-django-js-asset
+    SUBDIR += py-dj32-django-modelcluster
     SUBDIR += py-dj32-django-mptt
     SUBDIR += py-dj32-django-prometheus
     SUBDIR += py-dj32-django-redis
     SUBDIR += py-dj32-django-tables2
     SUBDIR += py-dj32-django-taggit
     SUBDIR += py-dj32-django-timezone-field
+    SUBDIR += py-dj32-django-treebeard
     SUBDIR += py-dj32-djangorestframework
     SUBDIR += py-dj32-drf-yasg
     SUBDIR += py-django
@@ -1506,6 +1517,7 @@
     SUBDIR += py-django-filter
     SUBDIR += py-django-formset-js-improved
     SUBDIR += py-django-formtools
+    SUBDIR += py-django-graphiql-debug-toolbar
     SUBDIR += py-django-gravatar2
     SUBDIR += py-django-guardian
     SUBDIR += py-django-happenings-update
@@ -1540,12 +1552,12 @@
     SUBDIR += py-django-post_office
     SUBDIR += py-django-prometheus
     SUBDIR += py-django-pyscss
+    SUBDIR += py-django-radius
     SUBDIR += py-django-ranged-response
     SUBDIR += py-django-recaptcha
     SUBDIR += py-django-redis
     SUBDIR += py-django-registration
     SUBDIR += py-django-registration-redux
-    SUBDIR += py-django-rest-swagger
     SUBDIR += py-django-reversion
     SUBDIR += py-django-reversion-compare
     SUBDIR += py-django-sekizai
@@ -1562,7 +1574,6 @@
     SUBDIR += py-django-tables2
     SUBDIR += py-django-tagging
     SUBDIR += py-django-taggit
-    SUBDIR += py-django-taggit-serializer
     SUBDIR += py-django-tastypie
     SUBDIR += py-django-templatetag-sugar
     SUBDIR += py-django-timezone-field
@@ -1629,6 +1640,7 @@
     SUBDIR += py-frozen-flask
     SUBDIR += py-gandi.cli
     SUBDIR += py-gevent-websocket
+    SUBDIR += py-ghp-import
     SUBDIR += py-google
     SUBDIR += py-google-api-core
     SUBDIR += py-google-api-python-client
@@ -1650,6 +1662,7 @@
     SUBDIR += py-grip
     SUBDIR += py-gunicorn
     SUBDIR += py-h2
+    SUBDIR += py-habanero
     SUBDIR += py-horizon
     SUBDIR += py-hpack
     SUBDIR += py-hstspreload
@@ -1705,7 +1718,7 @@
     SUBDIR += py-puppetboard
     SUBDIR += py-py-restclient
     SUBDIR += py-pygsheets
-    SUBDIR += py-pyjwt
+    SUBDIR += py-pyjwt1
     SUBDIR += py-pylsqpack
     SUBDIR += py-pyocclient
     SUBDIR += py-pyramid
@@ -1722,6 +1735,7 @@
     SUBDIR += py-qt5-webkit
     SUBDIR += py-qt5-webkitwidgets
     SUBDIR += py-qt5-websockets
+    SUBDIR += py-quilt3
     SUBDIR += py-rackspace-monitoring
     SUBDIR += py-recaptcha
     SUBDIR += py-requests
@@ -1893,7 +1907,9 @@
     SUBDIR += rubygem-faraday-net_http
     SUBDIR += rubygem-faraday-net_http_persistent
     SUBDIR += rubygem-faraday-patron
+    SUBDIR += rubygem-faraday-rack
     SUBDIR += rubygem-faraday0
+    SUBDIR += rubygem-faraday14
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0
     SUBDIR += rubygem-faye
@@ -1984,7 +2000,6 @@
     SUBDIR += rubygem-kaminari-rails52
     SUBDIR += rubygem-kaminari-rails60
     SUBDIR += rubygem-kaminari-rails61
-    SUBDIR += rubygem-kensa
     SUBDIR += rubygem-kubeclient
     SUBDIR += rubygem-layout_yullio_generator
     SUBDIR += rubygem-less
@@ -2185,7 +2200,6 @@
     SUBDIR += sqstat
     SUBDIR += squid
     SUBDIR += squid-devel
-    SUBDIR += squid3
     SUBDIR += squid_radius_auth
     SUBDIR += squidanalyzer
     SUBDIR += squidclamav
@@ -2235,6 +2249,7 @@
     SUBDIR += transproxy
     SUBDIR += tt-rss
     SUBDIR += ttf2eot
+    SUBDIR += tusc
     SUBDIR += tusd
     SUBDIR += twiki
     SUBDIR += twiki-BehaviourContrib
@@ -2271,6 +2286,7 @@
     SUBDIR += twiki-WysiwygPlugin
     SUBDIR += twms
     SUBDIR += typo3-10
+    SUBDIR += typo3-11
     SUBDIR += typo3-9
     SUBDIR += uchiwa
     SUBDIR += ufdbguard
@@ -2330,6 +2346,7 @@
     SUBDIR += wordpress
     SUBDIR += wpebackend-fdo
     SUBDIR += writeas-cli
+    SUBDIR += writefreely
     SUBDIR += wsdlpull
     SUBDIR += wslay
     SUBDIR += wsmake
@@ -2347,6 +2364,7 @@
     SUBDIR += yanopaste
     SUBDIR += yarn
     SUBDIR += yarn-node14
+    SUBDIR += yarn-node16
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

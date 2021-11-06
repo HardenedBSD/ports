@@ -2,7 +2,7 @@
 
 PORTNAME=	nginx
 PORTVERSION=	1.20.1
-PORTREVISION?=	2
+PORTREVISION?=	5
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
@@ -25,7 +25,7 @@ PORTSCOUT=	limit:^1\.20\.[0-9]*
 
 USES=		compiler:c11 cpe
 
-CPE_VENDOR=	nginx
+CPE_VENDOR=	f5
 CPE_PRODUCT=	nginx
 USE_GITHUB=	nodefault
 

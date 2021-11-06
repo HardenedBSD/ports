@@ -1,7 +1,7 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 
 PORTNAME=	yelp
-DISTVERSION=	40.2
+DISTVERSION=	40.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome3
@@ -28,7 +28,6 @@ USES=		compiler:c11 desktop-file-utils gettext gmake gnome \
 USE_XORG=	x11 ice
 USE_GNOME=	cairo gtk30 libxml2 libxslt
 GNU_CONFIGURE=	yes
-INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GLIB_SCHEMAS=	org.gnome.yelp.gschema.xml
 INSTALL_TARGET=	install-strip

@@ -1,6 +1,6 @@
---- extensions/browser/api/messaging/message_service.cc.orig	2021-05-12 22:05:54 UTC
+--- extensions/browser/api/messaging/message_service.cc.orig	2021-09-24 04:26:06 UTC
 +++ extensions/browser/api/messaging/message_service.cc
-@@ -63,7 +63,7 @@ namespace {
+@@ -68,7 +68,7 @@ namespace {
  
  const char kReceivingEndDoesntExistError[] =
      "Could not establish connection. Receiving end does not exist.";
@@ -9,7 +9,7 @@
      defined(OS_CHROMEOS)
  const char kMissingPermissionError[] =
      "Access to native messaging requires nativeMessaging permission.";
-@@ -394,7 +394,7 @@ void MessageService::OpenChannelToNativeApp(
+@@ -406,7 +406,7 @@ void MessageService::OpenChannelToNativeApp(
    if (!opener_port->IsValidPort())
      return;
  
@@ -18,7 +18,7 @@
      defined(OS_CHROMEOS)
    bool has_permission = extension->permissions_data()->HasAPIPermission(
        mojom::APIPermissionID::kNativeMessaging);
-@@ -445,12 +445,12 @@ void MessageService::OpenChannelToNativeApp(
+@@ -460,12 +460,12 @@ void MessageService::OpenChannelToNativeApp(
    channel->opener->IncrementLazyKeepaliveCount();
  
    AddChannel(std::move(channel), receiver_port_id);

@@ -1,5 +1,5 @@
 PORTNAME=	keycloak
-PORTVERSION=	14.0.0
+PORTVERSION=	15.0.2
 CATEGORIES=	net java
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${PORTVERSION}/
 
@@ -28,6 +28,8 @@ PLIST_SUB+=	POSTGRES=""
 PLIST_SUB+=	POSTGRES="@comment "
 .endif
 
+USES=		cpe
+CPE_VENDOR=	redhat
 USE_JAVA=	yes
 JAVA_VERSION=	1.8+
 JAVA_OS=	native

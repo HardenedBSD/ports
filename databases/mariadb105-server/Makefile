@@ -1,8 +1,8 @@
 # Created by: Bernard Spil <brnrd@FreeBSD.org>
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.5.11
-PORTREVISION?=	0
+PORTVERSION=	10.5.12
+PORTREVISION?=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
 		http://mirror2.hs-esslingen.de/pub/Mirrors/${SITESDIR}/ \
@@ -25,7 +25,7 @@ LIB_DEPENDS+=	libpcre2-8.so:devel/pcre2
 # Ugly workaround for MariaDB/CMake library detection
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-USES=		bison:build cmake:insource compiler:c++11-lib cpe iconv:translit libedit ncurses shebangfix ssl
+USES=		bison:build cmake:insource,noninja compiler:c++11-lib cpe iconv:translit libedit ncurses shebangfix ssl
 
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
@@ -196,12 +196,6 @@ CMAKE_ARGS+=		-DPLUGIN_${PLUGIN}=NO
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200057
-SUB_LIST+=	LEGACY_LIMITS="@comment " MODERN_LIMITS=""
-.else
-SUB_LIST+=	LEGACY_LIMITS="" MODERN_LIMITS="@comment "
-.endif
-
 .if ${SSL_DEFAULT} != base && ${PORT_OPTIONS:MGSSAPI_BASE}
 GSSAPI_BASE_IGNORE=	GSSAPI_BASE is not compatible with OpenSSL from ports. Use other GSSAPI options or OpenSSL from base system
 .endif
@@ -211,13 +205,11 @@ PLIST_SUB+=	WSREP="@comment "
 .endif
 
 .if ${ARCH} == i386
-USE_GCC=	9
-CFLAGS+=	-DHAVE_GCC_C11_ATOMICS -latomic -DUSE_NEW_READLINE_INTERFACE
-CXXFLAGS+=	-fpermissive
+USE_GCC=	yes
+CFLAGS+=	-latomic -fasynchronous-unwind-tables
 .endif
 
 post-patch:
-	${MV} ${WRKSRC}/storage/mroonga/version ${WRKSRC}/storage/mroonga/version_txt
 .if ${OPSYS} == DragonFly
 	${CP} ${WRKSRC}/cmake/os/FreeBSD.cmake \
 		${WRKSRC}/cmake/os/DragonFly.cmake

@@ -1,7 +1,8 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
 
 PORTNAME=	openttd
-DISTVERSION=	1.11.2
+DISTVERSION=	12.0
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-source
@@ -45,7 +46,6 @@ SERVER_LIB_DEPENDS_OFF=	libfontconfig.so:x11-fonts/fontconfig \
 			libicu-le-hb.so:devel/icu-le-hb \
 			libiculx.so:devel/icu-lx
 SERVER_VARS=		USE_RC_SUBR=${PORTNAME}
-SERVER_VARS_OFF=	INSTALLS_ICONS=yes
 
 post-install-SERVER-on:
 	@${REINPLACE_CMD} -E '/icons|pixmaps/d' ${TMPPLIST}

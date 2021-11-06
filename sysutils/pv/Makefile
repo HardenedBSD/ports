@@ -1,7 +1,7 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
 
 PORTNAME=	pv
-PORTVERSION=	1.6.6
+PORTVERSION=	1.6.20
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ivarch.com/programs/sources/
 
@@ -12,7 +12,7 @@ LICENSE=	ART20
 
 USES=	tar:bzip2 gmake
 
-CONFLICTS=	waon-[0-9]*
+CONFLICTS=	waon
 
 GNU_CONFIGURE=	yes
 MAKE_ENV+=	LD=${LD}

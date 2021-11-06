@@ -11,14 +11,15 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}-extra${EXTRACT_SUFX}:tlmgr \
 DIST_SUBDIR=	TeX
 EXTRACT_ONLY=	${PORTNAME}-${PORTVERSION}-extra${EXTRACT_SUFX}
 
-MAINTAINER=	freebsd-tex@FreeBSD.org
+MAINTAINER=	tex@FreeBSD.org
 COMMENT=	TeXLive manager modules
 
 RUN_DEPENDS=	tex-kpathsea>=6.2.1_1:devel/tex-kpathsea
 
-CONFLICTS=	texlive-infra-[0-9]* texlive-base-20150521_[12345]
+CONFLICTS=	texlive-infra texlive-base-20150521_[12345]
 
-USES=		perl5 tar:xz
+USES=		cpe perl5 tar:xz
+CPE_VENDOR=	tug
 USE_PERL5=	run
 USE_TEX=	kpathsea
 PATCH_WRKSRC=	${WRKDIR}

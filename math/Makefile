@@ -119,6 +119,7 @@
     SUBDIR += R-cran-statmod
     SUBDIR += R-cran-survey
     SUBDIR += R-cran-tensor
+    SUBDIR += R-cran-terra
     SUBDIR += R-cran-truncnorm
     SUBDIR += R-cran-units
     SUBDIR += R-cran-uroot
@@ -134,6 +135,7 @@
     SUBDIR += add
     SUBDIR += adept
     SUBDIR += adol-c
+    SUBDIR += alberta
     SUBDIR += algae
     SUBDIR += alglib
     SUBDIR += alps
@@ -161,6 +163,7 @@
     SUBDIR += bcps
     SUBDIR += bitwise
     SUBDIR += blacs
+    SUBDIR += blahtexml
     SUBDIR += blas
     SUBDIR += blasfeo
     SUBDIR += blaze
@@ -175,6 +178,7 @@
     SUBDIR += btor2tools
     SUBDIR += cadabra2
     SUBDIR += cadical
+    SUBDIR += cado-nfs
     SUBDIR += calc
     SUBDIR += calcoo
     SUBDIR += cantor
@@ -245,9 +249,11 @@
     SUBDIR += dune-functions
     SUBDIR += dune-geometry
     SUBDIR += dune-grid
+    SUBDIR += dune-grid-glue
     SUBDIR += dune-istl
     SUBDIR += dune-localfunctions
     SUBDIR += dune-metagrid
+    SUBDIR += dune-multidomaingrid
     SUBDIR += dune-pdelab
     SUBDIR += dune-polygongrid
     SUBDIR += dune-spgrid
@@ -274,6 +280,7 @@
     SUBDIR += facile
     SUBDIR += faiss
     SUBDIR += fann
+    SUBDIR += fastops
     SUBDIR += fcl
     SUBDIR += fcl05
     SUBDIR += fflas-ffpack
@@ -289,6 +296,7 @@
     SUBDIR += flintqs
     SUBDIR += flopc++
     SUBDIR += form
+    SUBDIR += fparser
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
     SUBDIR += fpc-numlib
@@ -314,6 +322,7 @@
     SUBDIR += ggobi
     SUBDIR += gh-bc
     SUBDIR += giacxcas
+    SUBDIR += gismo
     SUBDIR += givaro
     SUBDIR += gkmap
     SUBDIR += glgraph
@@ -340,6 +349,7 @@
     SUBDIR += gsl
     SUBDIR += half
     SUBDIR += hexcalc
+    SUBDIR += heyoka
     SUBDIR += highs
     SUBDIR += hipmcl
     SUBDIR += hmat-oss
@@ -364,6 +374,7 @@
     SUBDIR += jtransforms
     SUBDIR += jts
     SUBDIR += kalgebra
+    SUBDIR += kalker
     SUBDIR += kbruch
     SUBDIR += kcalc
     SUBDIR += kfr
@@ -457,6 +468,7 @@
     SUBDIR += multichoose
     SUBDIR += mumps
     SUBDIR += mumps4
+    SUBDIR += munkres-cpp
     SUBDIR += muparser
     SUBDIR += muparserx
     SUBDIR += nanoflann
@@ -468,6 +480,7 @@
     SUBDIR += nlopt
     SUBDIR += ntl
     SUBDIR += numdiff
+    SUBDIR += obake
     SUBDIR += ocaml-ocamlgraph
     SUBDIR += ocaml-zarith
     SUBDIR += ocamlgsl
@@ -565,6 +578,7 @@
     SUBDIR += oleo
     SUBDIR += onednn
     SUBDIR += openblas
+    SUBDIR += openfst
     SUBDIR += openlibm
     SUBDIR += openmesh
     SUBDIR += opensolaris-libm
@@ -733,6 +747,7 @@
     SUBDIR += pari_galpol
     SUBDIR += pari_nftables
     SUBDIR += pari_seadata
+    SUBDIR += paritwine
     SUBDIR += parmetis
     SUBDIR += parmgridgen
     SUBDIR += pdal
@@ -741,6 +756,7 @@
     SUBDIR += pecl-bitset
     SUBDIR += pecl-stats2
     SUBDIR += permlib
+    SUBDIR += petanque
     SUBDIR += petiga
     SUBDIR += php73-bcmath
     SUBDIR += php73-gmp
@@ -752,6 +768,7 @@
     SUBDIR += picosat
     SUBDIR += piranha
     SUBDIR += planarity
+    SUBDIR += plantri
     SUBDIR += plman
     SUBDIR += ploticus
     SUBDIR += ploticus-nox11
@@ -759,11 +776,13 @@
     SUBDIR += plplot-ada
     SUBDIR += poly2tri
     SUBDIR += polylib
+    SUBDIR += polymake
     SUBDIR += primegen
     SUBDIR += primesieve
     SUBDIR += primme
     SUBDIR += prng
     SUBDIR += pspp
+    SUBDIR += psurface
     SUBDIR += py-CyLP
     SUBDIR += py-Diofant
     SUBDIR += py-GridDataFormats
@@ -779,6 +798,7 @@
     SUBDIR += py-amply
     SUBDIR += py-apgl
     SUBDIR += py-arviz
+    SUBDIR += py-arybo
     SUBDIR += py-autograd
     SUBDIR += py-baycomp
     SUBDIR += py-bayesian-optimization
@@ -816,6 +836,7 @@
     SUBDIR += py-gym
     SUBDIR += py-hdbscan
     SUBDIR += py-hdmedians
+    SUBDIR += py-heyoka
     SUBDIR += py-iminuit
     SUBDIR += py-intspan
     SUBDIR += py-iohexperimenter
@@ -838,6 +859,7 @@
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-munkres10
+    SUBDIR += py-ndindex
     SUBDIR += py-networkx
     SUBDIR += py-nevergrad
     SUBDIR += py-numexpr
@@ -869,6 +891,7 @@
     SUBDIR += py-pyhull
     SUBDIR += py-pyipopt
     SUBDIR += py-pymc3
+    SUBDIR += py-pynauty
     SUBDIR += py-pyneqsys
     SUBDIR += py-pynleq2
     SUBDIR += py-pynndescent
@@ -878,6 +901,7 @@
     SUBDIR += py-pysmt
     SUBDIR += py-pystan
     SUBDIR += py-pysym
+    SUBDIR += py-pytanque
     SUBDIR += py-python-fcl
     SUBDIR += py-python-igraph
     SUBDIR += py-python-louvain
@@ -889,6 +913,7 @@
     SUBDIR += py-random2
     SUBDIR += py-roman
     SUBDIR += py-rpy2
+    SUBDIR += py-rvlib
     SUBDIR += py-scikit-umfpack
     SUBDIR += py-scs
     SUBDIR += py-seaborn
@@ -913,6 +938,7 @@
     SUBDIR += py-theano
     SUBDIR += py-triangle
     SUBDIR += py-uncertainties
+    SUBDIR += py-unyt
     SUBDIR += py-vincenty
     SUBDIR += py-yt
     SUBDIR += py-z3-solver
@@ -920,6 +946,7 @@
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
+    SUBDIR += qhull8
     SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot-doc
@@ -980,6 +1007,8 @@
     SUBDIR += spooles-mpich
     SUBDIR += spot
     SUBDIR += sprng
+    SUBDIR += stan
+    SUBDIR += stanmath
     SUBDIR += stp
     SUBDIR += suitesparse
     SUBDIR += suitesparse-amd
@@ -1013,6 +1042,7 @@
     SUBDIR += tetgen
     SUBDIR += teyjus
     SUBDIR += timbl
+    SUBDIR += tiny-bignum-c
     SUBDIR += tmv
     SUBDIR += tomsfastmath
     SUBDIR += topaz

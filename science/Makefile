@@ -25,6 +25,7 @@
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
     SUBDIR += apbs
+    SUBDIR += ascent
     SUBDIR += atompaw
     SUBDIR += avogadro2
     SUBDIR += avogadrolibs
@@ -34,6 +35,7 @@
     SUBDIR += berkeleygw
     SUBDIR += bodr
     SUBDIR += buddy
+    SUBDIR += cantera
     SUBDIR += cdcl
     SUBDIR += cdf
     SUBDIR += cdk
@@ -65,6 +67,7 @@
     SUBDIR += dlib-cpp
     SUBDIR += drawxtl
     SUBDIR += dvc
+    SUBDIR += dynare
     SUBDIR += eccodes
     SUBDIR += elk
     SUBDIR += elmerfem
@@ -102,6 +105,7 @@
     SUBDIR += hdf5
     SUBDIR += hdf5-18
     SUBDIR += healpix
+    SUBDIR += helfem
     SUBDIR += hepmc3
     SUBDIR += highfive
     SUBDIR += hypre
@@ -138,6 +142,7 @@
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
+    SUBDIR += linux-zotero
     SUBDIR += luscus
     SUBDIR += madness
     SUBDIR += maeparser
@@ -171,12 +176,19 @@
     SUBDIR += nwchem-data
     SUBDIR += octopus
     SUBDIR += openbabel
+    SUBDIR += openems
     SUBDIR += openkim
     SUBDIR += openkim-models
+    SUBDIR += openmc
+    SUBDIR += openmx
     SUBDIR += opensim-core
     SUBDIR += opensph
     SUBDIR += opsin
     SUBDIR += orthanc
+    SUBDIR += orthanc-dicomweb
+    SUBDIR += orthanc-mysql
+    SUBDIR += orthanc-postgresql
+    SUBDIR += orthanc-webviewer
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
     SUBDIR += p5-Chemistry-Bond-Find
@@ -211,6 +223,7 @@
     SUBDIR += pagmo2
     SUBDIR += paje
     SUBDIR += pcmsolver
+    SUBDIR += phonopy
     SUBDIR += plumed
     SUBDIR += pnetcdf
     SUBDIR += pulseview
@@ -220,8 +233,10 @@
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
+    SUBDIR += py-OpenMC
     SUBDIR += py-PubChemPy
     SUBDIR += py-PyFR
+    SUBDIR += py-PyNE
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-access
@@ -250,6 +265,7 @@
     SUBDIR += py-gsd
     SUBDIR += py-h5json
     SUBDIR += py-h5py
+    SUBDIR += py-hiphive
     SUBDIR += py-inequality
     SUBDIR += py-jupyter_jsmol
     SUBDIR += py-kim-query
@@ -275,11 +291,13 @@
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi
+    SUBDIR += py-pyberny
     SUBDIR += py-pycsw
     SUBDIR += py-pydicom
     SUBDIR += py-pygeodesy
     SUBDIR += py-pygeometa
     SUBDIR += py-pygmo2
+    SUBDIR += py-pyked
     SUBDIR += py-pymatgen
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
@@ -330,6 +348,7 @@
     SUBDIR += scidavis
     SUBDIR += segyio
     SUBDIR += shelxle
+    SUBDIR += siconos
     SUBDIR += siesta
     SUBDIR += sigrok-cli
     SUBDIR += sigrok-firmware

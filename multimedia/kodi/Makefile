@@ -1,7 +1,6 @@
 PORTNAME=	kodi
-DISTVERSION=	19.1
+DISTVERSION=	19.3
 DISTVERSIONSUFFIX=	-${KODI_CODENAME}
-PORTREVISION=	4
 CATEGORIES=	multimedia java
 
 MAINTAINER=	yzrh@noema.org
@@ -42,7 +41,7 @@ LIB_DEPENDS=	libass.so:multimedia/libass \
 		libtinyxml.so:textproc/tinyxml \
 		libuuid.so:misc/e2fsprogs-libuuid
 
-USES=		cmake compiler:c++14-lang gettext \
+USES=		cpe cmake compiler:c++14-lang gettext \
 		gnome iconv jpeg pkgconfig python:3.5+ sqlite ssl
 
 KODI_CODENAME=	Matrix
@@ -61,7 +60,6 @@ KODI_ARCH_powerpc64le=	powerpc64le
 
 PLIST_SUB=	ARCH=${KODI_ARCH_${ARCH}}
 
-INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 USE_JAVA=	yes
 JAVA_BUILD=	jre
@@ -79,7 +77,7 @@ OPTIONS_DEFINE=		AIRPLAY AVAHI LIBBLURAY CEC DBUS DVDCSS LCMS2 \
 			LIRC WEBSERVER NFS DVD SMB TEST UDEV UPNP \
 			VAAPI VDPAU XSLT DOCS
 OPTIONS_DEFAULT=	LIBBLURAY CEC DVDCSS LCMS2 WEBSERVER \
-			DVD UPNP VAAPI VDPAU XSLT WAYLAND X11 GL
+			DVD UPNP VAAPI VDPAU XSLT WAYLAND X11 GL SMB
 OPTIONS_DEFAULT_amd64=	SSE SSE2 SSE3 SSSE3 SSE4_1 SSE4_2
 OPTIONS_DEFAULT_i386=	SSE SSE2 SSE3
 OPTIONS_SINGLE=		RENDER

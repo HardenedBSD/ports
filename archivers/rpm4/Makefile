@@ -2,6 +2,7 @@
 
 PORTNAME=	rpm
 PORTVERSION=	4.16.1.3
+PORTREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://ftp.rpm.org/releases/rpm-4.16.x/
 PKGNAMESUFFIX=	4
@@ -20,11 +21,11 @@ LIB_DEPENDS=	libpopt.so:devel/popt \
 RUN_DEPENDS=	bash:shells/bash \
 		gxargs:misc/findutils
 
-USE_HARDENING=	stackautoinit:off
-
-USES=		alias bdb sqlite compiler:openmp gmake iconv libarchive libtool \
+USES=		alias bdb sqlite cpe gmake iconv libarchive libtool \
 		lua:52+ pathfix pkgconfig shebangfix tar:bzip2
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	stackautoinit:off
 
 GNU_CONFIGURE=	yes
 BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed

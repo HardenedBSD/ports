@@ -3,7 +3,7 @@
 PORTNAME=	synfigstudio
 PORTVERSION=	1.2.2
 DISTVERSIONPREFIX=v
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	graphics multimedia
 
 MAINTAINER=	portmaster@BSDforge.com
@@ -38,7 +38,6 @@ BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
 CONFIGURE_ARGS=	--disable-update-mimedb
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
-INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	DOCS JACK NLS
 OPTIONS_SUB=	yes

@@ -1,7 +1,7 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
 
 PORTNAME=	decorator
-PORTVERSION=	5.0.9
+PORTVERSION=	5.1.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,8 @@ COMMENT=	Decorators for Humans
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		python
+USES=		cpe python
+CPE_VENDOR=	python
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

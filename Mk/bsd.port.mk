@@ -997,10 +997,16 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # DISABLE_SIZE	- Do not check the size of a distfile even if the SIZE field
 #				  has been specified in distinfo.  This is useful
 #				  when using an alternate FETCH_CMD.
-#
-# PKG_CREATE_VERBOSE		- If set, pass the -v option to pkg create which
+# PKG_CREATE_VERBOSE
+#				- If set, pass the -v option to pkg create which
 #				  ensures periodic output during packaging and
 #				  will help prevent timeouts by build monitors
+# PKG_COMPRESSION_FORMAT
+#				- the compression format used when creating a package, see
+#				  pkg-create(8) for valid formats
+# PKG_COMPRESSION_LEVEL
+#				- the compression level to use when creating a package, see
+#				  pkg-create(8) for valid values
 #
 # End of the list of all variables that need to be defined in a port.
 # Most port authors should not need to understand anything after this point.
@@ -1171,7 +1177,7 @@ OSVERSION!=	${AWK} '/^\#define[[:blank:]]__FreeBSD_version/ {print $$3}' < ${SRC
 .endif
 _EXPORTED_VARS+=	OSVERSION
 
-.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1104000 || (${OSVERSION} >= 1200000 && ${OSVERSION} < 1202000))) || \
+.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1202000) || \
     (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
@@ -1195,7 +1201,9 @@ _OSVERSION_MAJOR=	${OSVERSION:C/([0-9]?[0-9])([0-9][0-9])[0-9]{3}/\1/}
 # Skip if OSVERSION specified on cmdline for testing. Only works for bmake.
 .if !defined(.MAKEOVERRIDES) || !${.MAKEOVERRIDES:MOSVERSION}
 .if ${_OSVERSION_MAJOR} != ${_OSRELEASE:R}
+.if !defined(I_DONT_CARE_IF_MY_BUILDS_TARGET_THE_WRONG_RELEASE)
 .error UNAME_r (${_OSRELEASE}) and OSVERSION (${OSVERSION}) do not agree on major version number.
+.endif
 .elif ${_OSVERSION_MAJOR} != ${OSREL:R}
 .error OSREL (${OSREL}) and OSVERSION (${OSVERSION}) do not agree on major version number.
 .endif
@@ -1584,6 +1592,12 @@ ${v}+=	${${FLAVOR}_${v}}
 ${v}=	flavor "${FLAVOR}" ${${FLAVOR}_${v}}
 .endif
 .endfor
+.if defined(FLAVORS_SUB)
+PLIST_SUB+=	${FLAVORS:N${FLAVOR}:@v@${v:tu}="\@comment " NO_${v:tu}=""@}
+PLIST_SUB+=	${FLAVOR:tu}="" NO_${FLAVOR:tu}="@comment "
+SUB_LIST+=	${FLAVORS:N${FLAVOR}:@v@${v:tu}="\@comment " NO_${v:tu}=""@}
+SUB_LIST+=	${FLAVOR:tu}="" NO_${FLAVOR:tu}="@comment "
+.endif
 .endif # defined(${FLAVOR})
 
 
@@ -1662,9 +1676,11 @@ TEST_ENV?=		${MAKE_ENV}
 PKG_ENV+=		PORTSDIR=${PORTSDIR}
 CONFIGURE_ENV+=	XDG_DATA_HOME=${WRKDIR} \
 				XDG_CONFIG_HOME=${WRKDIR} \
+				XDG_CACHE_HOME=${WRKDIR}/.cache \
 				HOME=${WRKDIR}
 MAKE_ENV+=		XDG_DATA_HOME=${WRKDIR} \
 				XDG_CONFIG_HOME=${WRKDIR} \
+				XDG_CACHE_HOME=${WRKDIR}/.cache \
 				HOME=${WRKDIR}
 # Respect TMPDIR passed via make.conf or similar and pass it down
 # to configure and make.
@@ -1841,6 +1857,10 @@ INSTALL_TARGET:=	${INSTALL_TARGET:S/^install-strip$/install/g}
 .endif
 .endif
 
+.if defined(USE_LTO)
+.include "${PORTSDIR}/Mk/bsd.lto.mk"
+.endif
+
 .if !defined(WITHOUT_SSP)
 .include "${PORTSDIR}/Mk/bsd.ssp.mk"
 .endif
@@ -1915,11 +1935,6 @@ CFLAGS+=	-Qunused-arguments
 .if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
 LDFLAGS+=	-fuse-ld=bfd
 BINARY_ALIAS+=	ld=${LD}
-.  if ${ARCH} == powerpc64
-# Base ld.bfd can't do ELFv2 which powerpc64 with Clang in base uses
-USE_BINUTILS=	yes
-LDFLAGS+=		-B${LOCALBASE}/bin
-.  endif
 .  if !defined(USE_BINUTILS)
 .    if exists(/usr/bin/ld.bfd)
 LD=	/usr/bin/ld.bfd
@@ -3566,6 +3581,9 @@ _EXTRA_PACKAGE_TARGET_DEP+=	${WRKDIR_PKGFILE}
 
 .if !target(do-package)
 PKG_CREATE_ARGS+= -f ${PKG_COMPRESSION_FORMAT}
+.if defined(PKG_COMPRESSION_LEVEL)
+PKG_CREATE_ARGS+= -l ${PKG_COMPRESSION_LEVEL}
+.endif
 PKG_CREATE_ARGS+=	-r ${STAGEDIR}
 .  if defined(PKG_CREATE_VERBOSE)
 PKG_CREATE_ARGS+=	-v
@@ -4041,7 +4059,9 @@ _CHECKSUM_INIT_ENV= \
 # checksum and sizes checks.
 makesum: check-sanity
 	@cd ${.CURDIR} && ${MAKE} fetch NO_CHECKSUM=yes \
-			DISABLE_SIZE=yes DISTFILES="${DISTFILES}"
+			DISABLE_SIZE=yes DISTFILES="${DISTFILES}" \
+			MASTER_SITES="${MASTER_SITES}" \
+			PATCH_SITES="${PATCH_SITES}"
 	@${SETENV} \
 			${_CHECKSUM_INIT_ENV} \
 			dp_CHECKSUM_ALGORITHMS='${CHECKSUM_ALGORITHMS:tu}' \
@@ -4821,18 +4841,23 @@ flavors-package-names: .PHONY
 # Fake installation of package so that user can pkg delete it later.
 .if !target(fake-pkg)
 STAGE_ARGS=		-i ${STAGEDIR}
+.if defined(NO_PKG_REGISTER)
+STAGE_ARGS=	-N
+.endif
 
-.if !defined(NO_PKG_REGISTER)
 fake-pkg:
 .if defined(INSTALLS_DEPENDS)
+.if !defined(NO_PKG_REGISTER)
 	@${ECHO_MSG} "===>   Registering installation for ${PKGNAME} as automatic"
+.endif
 	@${SETENV} ${PKG_ENV} FORCE_POST="${_FORCE_POST_PATTERNS}" ${PKG_REGISTER} -d ${STAGE_ARGS} -m ${METADIR} -f ${TMPPLIST}
 .else
+.if !defined(NO_PKG_REGISTER)
 	@${ECHO_MSG} "===>   Registering installation for ${PKGNAME}"
+.endif
 	@${SETENV} ${PKG_ENV} FORCE_POST="${_FORCE_POST_PATTERNS}" ${PKG_REGISTER} ${STAGE_ARGS} -m ${METADIR} -f ${TMPPLIST}
 .endif
 	@${RM} -r ${METADIR}
-.endif
 .endif
 
 # Depend is generally meaningless for arbitrary ports, but if someone wants

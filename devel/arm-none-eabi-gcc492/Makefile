@@ -22,12 +22,13 @@ BUILD_DEPENDS=	${BU_PREFIX}-as:devel/binutils@${PKGNAMEPREFIX:C/-$//:C/-/_/g} \
 		objdump:devel/binutils
 RUN_DEPENDS=	${BU_PREFIX}-as:devel/binutils@${PKGNAMEPREFIX:C/-$//:C/-/_/g}
 
-USE_HARDENING=	pie:off relro:off
-
-USES=	compiler gmake iconv libtool makeinfo tar:bzip2
+USES=		compiler cpe gmake iconv libtool makeinfo tar:bzip2
+CPE_VENDOR=	gnu
 PLIST_SUB=	TARGETARCH=${PKGNAMEPREFIX:C/-//g} \
 		OPSYS=${OPSYS:tl} \
 		GCC_TARGET=${GCC_TARGET}
+
+USE_HARDENING=	pie:off relro:off
 
 GCC_TARGET=	arm-none-eabi
 BU_PREFIX?=	${GCC_TARGET}
@@ -35,7 +36,7 @@ BU_PREFIX?=	${GCC_TARGET}
 GNU_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 # libstdcxx won't build, but we don't need it or multiple float-abi libs.
-CONFIGURE_ARGS= --target=${GCC_TARGET} --disable-nls --enable-languages=c,c++ \
+CONFIGURE_ARGS=	--target=${GCC_TARGET} --disable-nls --enable-languages=c,c++ \
 		--without-headers \
 		--with-gmp=${LOCALBASE} \
 		--with-pkgversion="FreeBSD Ports Collection for ${PKGNAMEPREFIX:C/-//g}" \

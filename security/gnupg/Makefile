@@ -1,5 +1,6 @@
 PORTNAME=	gnupg
-PORTVERSION=	2.3.1
+PORTVERSION=	2.3.3
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	GNUPG
 
@@ -23,7 +24,7 @@ CPPFLAGS=	-fPIC
 
 USES=		compiler:c11 cpe gmake iconv makeinfo pkgconfig readline sqlite tar:bzip2
 
-CONFLICTS=	gnupg-2.0.* dirmngr-[0-9]*
+CONFLICTS=	gnupg-2.0.* dirmngr
 CPE_VENDOR=	gnupg
 
 CONFIGURE_ARGS=	--disable-ntbtls --enable-gpg-is-gpg2 --enable-symcryptrun
@@ -76,5 +77,9 @@ pre-build:
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/bin/gpgsplit ${STAGEDIR}${PREFIX}/bin/gpgsplit2
 	${MV} ${STAGEDIR}${DATADIR}/help*.txt ${STAGEDIR}${DOCSDIR}
+
+# Necessary because of --enable-gpg-is-gpg2
+pre-test:
+	${LN} -s gpg ${WRKSRC}/bin/gpg2
 
 .include <bsd.port.mk>

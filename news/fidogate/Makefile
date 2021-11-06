@@ -10,13 +10,9 @@ COMMENT=	Fido-Internet Gateway and Tosser
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_HARDENING=	pie:off
-USES=	autoreconf perl5 iconv
-
+USES=		autoreconf perl5 iconv
 USE_GITHUB=	yes
 GH_ACCOUNT=	ykaliuta
-GH_PROJECT=	fidogate
-
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libexec=${PREFIX}/libexec/fidogate \
 		--sysconfdir=${PREFIX}/etc/fido/gate \
@@ -28,6 +24,8 @@ CONFIGURE_ARGS=	--libexec=${PREFIX}/libexec/fidogate \
 		${ICONV_CONFIGURE_BASE}
 CONFIGURE_TARGET=	--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
 INSTALL_TARGET=	install-strip
+
+USE_HARDENING=	pie:off
 
 CONFLICTS=	fidogate-4* fidogate4-4*
 

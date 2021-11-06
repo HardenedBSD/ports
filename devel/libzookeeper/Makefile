@@ -15,12 +15,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libcppunit.so:devel/cppunit
 
-USE_HARDENING=	stackautoinit:off
-
-USES=		autoreconf libtool pkgconfig
+USES=		autoreconf cpe libtool pkgconfig
+CPE_VENDOR=	apache
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
+
+USE_HARDENING=	stackautoinit:off
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/zookeeper-client/zookeeper-client-c
 

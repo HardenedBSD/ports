@@ -19,15 +19,16 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 
 DISTINFO_FILE=		${.CURDIR}/../thrift/distinfo
 
-USE_HARDENING=		stackautoinit:off
-
-USES=			bison cmake pkgconfig compiler:c++11-lang \
+USES=			bison cmake pkgconfig compiler:c++11-lang cpe \
 			libtool pathfix ssl
+CPE_VENDOR=		apache
 USE_LDCONFIG=		yes
 MAKE_JOBS_UNSAFE=	yes
 PLIST_SUB=		PORTVERSION="${THRIFT_PORTVERSION}"
 CMAKE_ON=	BUILD_CPP BUILD_SHARED_LIBS
 CMAKE_OFF=	BUILD_C_GLIB BUILD_JAVA BUILD_JAVASCRIPT BUILD_NODEJS BUILD_PYTHON BUILD_HASKELL
+
+USE_HARDENING=		stackautoinit:off
 
 .include <bsd.port.pre.mk>
 

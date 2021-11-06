@@ -2,6 +2,7 @@
 
 SUBDIR += hardenedbsd-meta
 SUBDIR += hbsdmon
+SUBDIR += liblattutil
 SUBDIR += secadm
 SUBDIR += secadm-kmod
 SUBDIR += testmprotect

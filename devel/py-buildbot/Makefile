@@ -2,6 +2,7 @@
 
 PORTNAME=	buildbot
 PORTVERSION=	2.10.5
+PORTREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,11 +17,11 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>=2.1:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}autobahn>=0.16.0:www/py-autobahn@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}twisted>=17.9.0:devel/py-twisted@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}zope.interface>=4.1.1:devel/py-zope.interface@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}sqlalchemy12>=1.2.0<1.4:databases/py-sqlalchemy12@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}sqlalchemy14>=1.2.0<1.5:databases/py-sqlalchemy14@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlalchemy-migrate>=0.13:databases/py-sqlalchemy-migrate@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=1.5:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}txaio>=2.2.2:devel/py-txaio@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pyjwt>=0:www/py-pyjwt@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyjwt1>=0:www/py-pyjwt1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}treq>0:www/py-treq@${PY_FLAVOR} \
@@ -33,7 +34,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}treq>0:www/py-treq@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}parameterized>0:devel/py-parameterized@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}moto>0:devel/py-moto@${PY_FLAVOR}
 
-USES=		python:3.5+
+USES=		cpe python:3.5+
 USE_RC_SUBR=	buildbot
 USE_PYTHON=	autoplist concurrent distutils
 

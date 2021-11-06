@@ -1,8 +1,7 @@
 # Created by: Pedro Giffuni
 
 PORTNAME=	ccx
-PORTVERSION=	2.17
-PORTREVISION=	1
+PORTVERSION=	2.18
 CATEGORIES=	cad
 MASTER_SITES=	http://www.dhondt.de/
 PKGNAMEPREFIX=	CalculiX-
@@ -18,10 +17,10 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libarpack.so:math/arpack-ng	\
 		libspooles.so:math/spooles
 
-USE_HARDENING=	stackautoinit:off
-
-USES=		blaslapack compiler:openmp fortran gmake perl5 tar:bzip2
+USES=		blaslapack fortran gmake perl5 tar:bzip2
 USE_PERL5=	build
+
+USE_HARDENING=	stackautoinit:off
 
 DIST_SOURCES=	ccx_${PORTVERSION}.src${EXTRACT_SUFX}
 DIST_HTM=	ccx_${PORTVERSION}.htm${EXTRACT_SUFX}

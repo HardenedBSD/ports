@@ -1,7 +1,7 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
 
 PORTNAME=	haml
-PORTVERSION=	5.2.1
+PORTVERSION=	5.2.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
 RUN_DEPENDS=	rubygem-temple>=0.8.0:devel/rubygem-temple \
 		rubygem-tilt>=0:devel/rubygem-tilt
 
-USES=		gem
+USES=		cpe gem
 USE_RUBY=	yes
 
 NO_ARCH=	yes

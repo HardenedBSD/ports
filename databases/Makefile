@@ -32,6 +32,7 @@
     SUBDIR += cassandra3
     SUBDIR += cassandra4
     SUBDIR += casstcl
+    SUBDIR += caterva
     SUBDIR += cayley
     SUBDIR += cdb
     SUBDIR += cego
@@ -99,6 +100,7 @@
     SUBDIR += gdbm
     SUBDIR += geoserver-mysql-plugin
     SUBDIR += gigabase
+    SUBDIR += gmdb2
     SUBDIR += gnats4
     SUBDIR += gnatsweb4
     SUBDIR += go-carbon
@@ -201,7 +203,6 @@
     SUBDIR += mongodb42
     SUBDIR += mongodb42-tools
     SUBDIR += mongodb44
-    SUBDIR += mongodb49
     SUBDIR += mongodb50
     SUBDIR += mroonga
     SUBDIR += mtop
@@ -228,7 +229,6 @@
     SUBDIR += mysqldump-secure
     SUBDIR += mysqlreport
     SUBDIR += mysqlsla
-    SUBDIR += mysqlsniffer
     SUBDIR += mysqltcl
     SUBDIR += mysqltuner
     SUBDIR += mysqlwsrep56-server
@@ -573,6 +573,7 @@
     SUBDIR += pg_citus
     SUBDIR += pg_dirtyread
     SUBDIR += pg_ed25519
+    SUBDIR += pg_filedump
     SUBDIR += pg_hashids
     SUBDIR += pg_partman
     SUBDIR += pg_qualstats
@@ -671,6 +672,7 @@
     SUBDIR += postgresql-relay
     SUBDIR += postgresql-repmgr
     SUBDIR += postgresql-rum
+    SUBDIR += postgresql-semver
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-zhparser
     SUBDIR += postgresql10-client
@@ -748,12 +750,15 @@
     SUBDIR += py-aioredis
     SUBDIR += py-aiosqlite
     SUBDIR += py-alembic
+    SUBDIR += py-alembic14
     SUBDIR += py-apsw
+    SUBDIR += py-asyncmy
     SUBDIR += py-asyncpg
     SUBDIR += py-berkeleydb
     SUBDIR += py-bsddb3
     SUBDIR += py-carbon
     SUBDIR += py-cassandra-driver
+    SUBDIR += py-caterva
     SUBDIR += py-couchdb
     SUBDIR += py-dbf
     SUBDIR += py-dbutils
@@ -853,8 +858,10 @@
     SUBDIR += redis
     SUBDIR += redis-devel
     SUBDIR += redis5
+    SUBDIR += redis6
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
+    SUBDIR += redisjson
     SUBDIR += retcl
     SUBDIR += rocksdb
     SUBDIR += rocksdb-lite
@@ -973,6 +980,7 @@
     SUBDIR += rubygem-redis-actionpack-rails61
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace16
+    SUBDIR += rubygem-redis44
     SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
@@ -1019,6 +1027,8 @@
     SUBDIR += tile38
     SUBDIR += tiledb
     SUBDIR += timescaledb
+    SUBDIR += timescaledb-backup
+    SUBDIR += timescaledb-tune
     SUBDIR += tinycdb
     SUBDIR += tokyocabinet
     SUBDIR += tokyotyrant
@@ -1042,5 +1052,6 @@
     SUBDIR += xtrabackup
     SUBDIR += xtrabackup8
     SUBDIR += zabbix3-libzbxpgsql
+    SUBDIR += zodb
 
 .include <bsd.port.subdir.mk>

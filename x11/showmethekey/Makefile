@@ -1,6 +1,6 @@
 PORTNAME=	showmethekey
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.6
+DISTVERSION=	1.5.0
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -26,6 +26,5 @@ PLIST_FILES=	bin/${PORTNAME}-cli \
 		share/locale/zh_CN/LC_MESSAGES/${PORTNAME}.mo \
 		share/pixmaps/${PORTNAME}.png
 GLIB_SCHEMAS=	one.alynx.showmethekey.gschema.xml
-INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>

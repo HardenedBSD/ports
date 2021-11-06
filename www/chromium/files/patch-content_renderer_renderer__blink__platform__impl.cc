@@ -1,6 +1,6 @@
---- content/renderer/renderer_blink_platform_impl.cc.orig	2021-05-12 22:05:53 UTC
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2021-09-14 01:51:57 UTC
 +++ content/renderer/renderer_blink_platform_impl.cc
-@@ -102,7 +102,7 @@
+@@ -107,7 +107,7 @@
  
  #if defined(OS_MAC)
  #include "content/child/child_process_sandbox_support_impl_mac.h"
@@ -9,7 +9,7 @@
  #include "content/child/child_process_sandbox_support_impl_linux.h"
  #endif
  
-@@ -171,7 +171,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
+@@ -176,7 +176,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
        main_thread_scheduler_(main_thread_scheduler) {
    // RenderThread may not exist in some tests.
    if (RenderThreadImpl::current()) {
@@ -18,7 +18,7 @@
      mojo::PendingRemote<font_service::mojom::FontService> font_service;
      RenderThreadImpl::current()->BindHostReceiver(
          font_service.InitWithNewPipeAndPassReceiver());
-@@ -181,7 +181,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
+@@ -186,7 +186,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
  #endif
    }
  

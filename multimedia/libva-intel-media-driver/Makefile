@@ -1,6 +1,6 @@
 PORTNAME=	media-driver
 DISTVERSIONPREFIX=	intel-media-
-DISTVERSION=	21.3.0
+DISTVERSION=	21.4.0
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	libva-intel-
 
@@ -14,7 +14,6 @@ PATCHFILES+=	eb2da1838a51.patch:-p1 # https://github.com/intel/media-driver/pull
 PATCHFILES+=	dc18089c0fb4.patch:-p1 # https://github.com/intel/media-driver/pull/819
 PATCHFILES+=	7ff0adca274b.patch:-p1 # https://github.com/intel/media-driver/pull/819
 PATCHFILES+=	217287d7ec2f.patch:-p1 # https://github.com/intel/media-driver/pull/819
-PATCHFILES+=	8e59bad40d92.patch:-p1 # https://github.com/intel/media-driver/pull/1214
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	VAAPI driver for Intel HD 5000 (Gen8) or newer
@@ -24,7 +23,7 @@ LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 ONLY_FOR_ARCHS=	amd64 i386
-ONLY_FOR_ARCHS_REASON=	Only Intel GPUs on x86 are supported
+ONLY_FOR_ARCHS_REASON=	only Intel GPUs on x86 are supported
 
 BUILD_DEPENDS=	gmmlib>=19.3.1:multimedia/gmmlib \
 		libva>=2.7.0:multimedia/libva

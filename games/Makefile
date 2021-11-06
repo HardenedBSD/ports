@@ -14,10 +14,13 @@
     SUBDIR += DDNet
     SUBDIR += HeroesOfMightAndMagic
     SUBDIR += KnightCap
+    SUBDIR += LibreMines
     SUBDIR += NBlood
     SUBDIR += OpenDiablo2
     SUBDIR += OpenLara
     SUBDIR += OpenTomb
+    SUBDIR += SRB2
+    SUBDIR += SpaceCadetPinball
     SUBDIR += abbayedesmorts
     SUBDIR += abe
     SUBDIR += abstreet
@@ -64,6 +67,7 @@
     SUBDIR += atr3d
     SUBDIR += atris
     SUBDIR += atris-sounds
+    SUBDIR += augustus
     SUBDIR += auralquiz
     SUBDIR += automuteus
     SUBDIR += avanor
@@ -113,6 +117,7 @@
     SUBDIR += brickshooter
     SUBDIR += brikx
     SUBDIR += briquolo
+    SUBDIR += brogue
     SUBDIR += brumbrumrally
     SUBDIR += brutalchess
     SUBDIR += bs
@@ -135,6 +140,7 @@
     SUBDIR += cataclysm-dda-tiles
     SUBDIR += catesc
     SUBDIR += cave9
+    SUBDIR += cavezofphear
     SUBDIR += cdogs-sdl
     SUBDIR += cgoban
     SUBDIR += chapping
@@ -301,6 +307,7 @@
     SUBDIR += gbrainy
     SUBDIR += gcompris-qt
     SUBDIR += gemdropx
+    SUBDIR += gemrb
     SUBDIR += genact
     SUBDIR += gigalomania
     SUBDIR += gillo
@@ -485,6 +492,7 @@
     SUBDIR += libretro-beetle_pce_fast
     SUBDIR += libretro-beetle_pcfx
     SUBDIR += libretro-beetle_psx
+    SUBDIR += libretro-beetle_saturn
     SUBDIR += libretro-beetle_supergrafx
     SUBDIR += libretro-beetle_vb
     SUBDIR += libretro-beetle_wswan
@@ -498,6 +506,7 @@
     SUBDIR += libretro-fbneo
     SUBDIR += libretro-fceumm
     SUBDIR += libretro-fmsx
+    SUBDIR += libretro-freeintv
     SUBDIR += libretro-fuse
     SUBDIR += libretro-gambatte
     SUBDIR += libretro-genesis_plus_gx
@@ -755,7 +764,7 @@
     SUBDIR += pokerth
     SUBDIR += polyglot
     SUBDIR += pongix
-    SUBDIR += ponscripter-sekai
+    SUBDIR += ponscripter-07th-mod
     SUBDIR += popstar
     SUBDIR += pouetchess
     SUBDIR += powder
@@ -768,6 +777,7 @@
     SUBDIR += puckman
     SUBDIR += pushover
     SUBDIR += pvpgn
+    SUBDIR += py-2048-py
     SUBDIR += py-cbeams
     SUBDIR += py-discord.py
     SUBDIR += py-fife
@@ -851,6 +861,7 @@
     SUBDIR += rubygem-fortune_gem
     SUBDIR += rubygem-lolcat
     SUBDIR += rubygem-vimgolf
+    SUBDIR += runelite
     SUBDIR += sampsvr
     SUBDIR += sarien
     SUBDIR += sauerbraten
@@ -919,7 +930,6 @@
     SUBDIR += stratagus
     SUBDIR += stuntrally
     SUBDIR += sudsol
-    SUBDIR += super_methane_brothers
     SUBDIR += supertux
     SUBDIR += supertux2
     SUBDIR += supertuxkart
@@ -1007,6 +1017,7 @@
     SUBDIR += voadi
     SUBDIR += volleyball
     SUBDIR += vor
+    SUBDIR += vt100-art-and-animations
     SUBDIR += vultures-eye
     SUBDIR += vvvvvv
     SUBDIR += wanderer
@@ -1024,6 +1035,7 @@
     SUBDIR += wolfpack
     SUBDIR += wop
     SUBDIR += wordplay
+    SUBDIR += wordsearch
     SUBDIR += wordwarvi
     SUBDIR += worldofpadman
     SUBDIR += wtf

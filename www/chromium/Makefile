@@ -1,8 +1,9 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
 
 PORTNAME=	chromium
-PORTVERSION=	91.0.4472.164
-CATEGORIES=	www java
+PORTVERSION=	94.0.4606.81
+PORTREVISION=	2
+CATEGORIES=	www
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		LOCAL/rene/chromium/:fonts
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -13,7 +14,6 @@ COMMENT=	Google web browser based on WebKit
 LICENSE=	BSD3CLAUSE LGPL21 MPL11
 LICENSE_COMB=	multi
 
-BROKEN_FreeBSD_11_aarch64=	components/safe_browsing_db/v4_rice.cc:120:18: use of overloaded operator '&' is ambiguous
 ONLY_FOR_ARCHS=			aarch64 amd64 i386
 
 BUILD_DEPENDS=	bash:shells/bash \
@@ -28,7 +28,8 @@ BUILD_DEPENDS=	bash:shells/bash \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 		${LOCALBASE}/share/usbids/usb.ids:misc/usbids \
 		${PYTHON_PKGNAMEPREFIX}html5lib>0:www/py-html5lib@${PY_FLAVOR} \
-		${LOCALBASE}/include/va/va.h:multimedia/libva
+		${LOCALBASE}/include/va/va.h:multimedia/libva \
+		${LOCALBASE}/bin/python2.7:lang/python27
 
 LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libatspi.so:accessibility/at-spi2-core \
@@ -66,14 +67,13 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		noto-basic>0:x11-fonts/noto-basic
 
 USES=		bison compiler:c++17-lang cpe desktop-file-utils dos2unix gl gnome jpeg localbase:ldflags \
-		ninja perl5 pkgconfig python:2.7,build shebangfix tar:xz xorg
+		ninja perl5 pkgconfig python:3.6-3.9,build shebangfix tar:xz xorg
 
 CPE_VENDOR=	google
 CPE_PRODUCT=	chrome
-DOS2UNIX_FILES=	third_party/skia/third_party/vulkanmemoryallocator/include/vk_mem_alloc.h \
-		third_party/vulkan_memory_allocator/src/vk_mem_alloc.h
+DOS2UNIX_FILES=	third_party/skia/third_party/vulkanmemoryallocator/include/vk_mem_alloc.h
 USE_GL=		gbm gl
-USE_GNOME=	atk dconf glib20 gtk30 libxml2 libxslt
+USE_GNOME=	atk dconf gdkpixbuf2 glib20 gtk30 libxml2 libxslt
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	${DATADIR}
 USE_PERL5=	build
@@ -84,7 +84,8 @@ SHEBANG_FILES=	chrome/tools/build/linux/chrome-wrapper buildtools/linux64/clang-
 MAKE_ARGS=	-C out/${BUILDTYPE}
 ALL_TARGET=	chrome
 
-BINARY_ALIAS=	python=${PYTHON_CMD}
+BINARY_ALIAS=	python=${LOCALBASE}/bin/python2.7 \
+		python3=${PYTHON_CMD}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-clang
 
 # TODO bz@ : install libwidevinecdm.so (see third_party/widevine/cdm/BUILD.gn)
@@ -99,7 +100,6 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		enable_nacl=false \
 		enable_one_click_signin=true \
 		enable_remoting=false \
-		fieldtrial_testing_like_official_build=true \
 		is_clang=true \
 		optimize_webui=false \
 		toolkit_views=true \
@@ -111,7 +111,7 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		use_gnome_keyring=false \
 		use_lld=true \
 		use_sysroot=false \
-		use_system_freetype=true \
+		use_system_freetype=false \
 		use_system_harfbuzz=true \
 		use_system_libjpeg=true \
 		extra_cxxflags="${CXXFLAGS}" \
@@ -138,6 +138,7 @@ SUB_LIST+=	COMMENT="${COMMENT}"
 
 OPTIONS_DEFINE=	CODECS CUPS DEBUG DRIVER KERBEROS LTO TEST
 OPTIONS_DEFAULT=	CODECS CUPS DRIVER KERBEROS SNDIO
+OPTIONS_EXCLUDE_aarch64=LTO
 OPTIONS_GROUP=		AUDIO
 OPTIONS_GROUP_AUDIO=	ALSA PULSEAUDIO SNDIO
 OPTIONS_RADIO=		KERBEROS
@@ -186,6 +187,7 @@ KERBEROS_VARS_OFF=	GN_ARGS+=use_kerberos=false
 LTO_VARS=		GN_ARGS+=use_thin_lto=true \
 			GN_ARGS+=thin_lto_enable_optimizations=true \
 			WANTSPACE="14 GB"
+LTO_VARS_OFF=		GN_ARGS+=use_thin_lto=false
 
 MIT_LIB_DEPENDS=	libkrb.so.3:security/krb5
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
@@ -207,6 +209,12 @@ TEST_ALL_TARGET=	${TEST_TARGETS}
 
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
+
+# Add extra-patch-no-mempcpy-nasm only when there's no mempcpy() in base.
+# Nested variable expansion avoids executing the test when not needed for
+# expanding EXTRA_PATCHES.
+EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
+	|| ${TRUE}!}" == "":?${PATCHDIR}/extra-patch-no-mempcpy-nasm:}
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base
@@ -266,15 +274,11 @@ pre-configure:
 	#./build/linux/unbundle/remove_bundled_libraries.py [list of preserved]
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${PYTHON_CMD} \
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
-		ffmpeg flac fontconfig freetype harfbuzz-ng libdrm libpng libwebp libxml libxslt openh264 opus snappy || ${FALSE}
-
-	# We need the site package from xcbgen, which installs as python3.x (really: default version), while the chromium
-	# build still needs to use python2.7. It works, because xcbgen can run with both versions, but we want to avoid
-	# having the pre-compiled pyc files from 2.7 in the 3.x site packages
-	# Remove this as soon as chromium uses python3.x as well
-	@${MKDIR} ${WRKDIR}/site-packages/xcbgen
-	${CP} ${PYTHONBASE}/lib/python${PYTHON_DEFAULT}/site-packages/xcbgen/*.py \
-		${WRKDIR}/site-packages/xcbgen
+		flac fontconfig freetype harfbuzz-ng libdrm libpng libwebp libxml libxslt openh264 opus snappy || ${FALSE}
+	# Chromium uses an unreleased version of FFmpeg, so configure it
+	${CP} -R \
+		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux/ \
+		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/freebsd
 
 do-configure:
 	# GN generator bootstrapping and generating ninja files
@@ -292,6 +296,7 @@ do-configure:
 	@${MKDIR} ${WRKSRC}/buildtools/freebsd
 	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/freebsd
 	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/freebsd
+	${LN} -sf /usr/bin/strip ${WRKSRC}/buildtools/freebsd/strip
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}

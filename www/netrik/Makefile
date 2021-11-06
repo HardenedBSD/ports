@@ -10,7 +10,7 @@ COMMENT=	Text web browser, ambitious, in active development
 
 RUN_DEPENDS=	wget:ftp/wget
 
-USES=		gmake ncurses
+USES=		cpe gmake ncurses
 GNU_CONFIGURE=	yes
 
 USE_HARDENING=	pie:off
@@ -25,7 +25,7 @@ OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} "s|^CFLAGS =|CFLAGS?=|" ${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} "s|ncursesw|${NCURSES_IMPL}|g" ${WRKSRC}/configure
+	@${REINPLACE_CMD} "s|-lncursesw|${NCURSESLIBS}|g" ${WRKSRC}/configure
 	@${REINPLACE_CMD} "s/#include <ncursesw\//#include </" \
 		${WRKSRC}/*.c
 

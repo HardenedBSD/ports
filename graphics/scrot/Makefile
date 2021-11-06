@@ -12,8 +12,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	autoconf-archive>=0:devel/autoconf-archive
-LIB_DEPENDS=	libgiblib.so:graphics/giblib \
-		libImlib2.so:graphics/imlib2
+LIB_DEPENDS=	libImlib2.so:graphics/imlib2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	resurrecting-open-source-projects
@@ -22,10 +21,10 @@ USE_HARDENING=	cfi safestack
 
 CFLAGS+=	-fuse-ld=lld
 
-USES=		autoreconf xorg
+USES=		autoreconf pkgconfig xorg
 USE_CSTD=	c99
 GNU_CONFIGURE=	yes
-USE_XORG=	x11 xfixes xcomposite
+USE_XORG=	x11 xext xfixes xcomposite
 
 PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
 PORTDOCS=	*

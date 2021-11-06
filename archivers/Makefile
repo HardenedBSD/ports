@@ -13,6 +13,7 @@
     SUBDIR += bzip
     SUBDIR += bzip2
     SUBDIR += c-blosc
+    SUBDIR += c-blosc2
     SUBDIR += cabextract
     SUBDIR += cmdpack
     SUBDIR += dact
@@ -20,6 +21,7 @@
     SUBDIR += deco
     SUBDIR += deutex
     SUBDIR += dpkg
+    SUBDIR += draco
     SUBDIR += dzip
     SUBDIR += engrampa
     SUBDIR += erlang-snappy
@@ -53,6 +55,7 @@
     SUBDIR += lib1541img
     SUBDIR += libarc
     SUBDIR += libarchive
+    SUBDIR += libarchive-qt
     SUBDIR += libcabinet
     SUBDIR += libcomprex
     SUBDIR += libdeflate
@@ -112,6 +115,7 @@
     SUBDIR += p5-Compress-Raw-Lzma
     SUBDIR += p5-Compress-Raw-Zlib
     SUBDIR += p5-Compress-Snappy
+    SUBDIR += p5-Compress-Zstd
     SUBDIR += p5-Gzip-Faster
     SUBDIR += p5-IO-Compress
     SUBDIR += p5-IO-Compress-Brotli
@@ -216,6 +220,7 @@
     SUBDIR += snzip
     SUBDIR += squsq
     SUBDIR += star
+    SUBDIR += streamvbyte
     SUBDIR += stuffit
     SUBDIR += szip
     SUBDIR += tar-stream-chunker
@@ -244,6 +249,7 @@
     SUBDIR += urbackup-client
     SUBDIR += urbackup-server
     SUBDIR += v1541commander
+    SUBDIR += vbz-compression
     SUBDIR += xar
     SUBDIR += xarchive
     SUBDIR += xarchiver

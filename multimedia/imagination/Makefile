@@ -17,7 +17,6 @@ USE_HARDENING=	pie:off
 GNU_CONFIGURE=	yes
 USES=		gmake gnome libtool localbase pkgconfig
 USE_GNOME=	gtk20 intltool libxslt
-INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=	NLS

@@ -13,15 +13,17 @@ COMMENT=	Small, efficient HTTP proxy server
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_HARDENING=	safestack
+USES=		cpe gmake tar:xz
 
-USES=		gmake tar:xz
+USE_HARDENING=	safestack
 
 CONFIGURE_ARGS=	--bindir=${PREFIX}/sbin \
 		--disable-manpage_support \
 		--program-transform-name=""
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=	tinyproxy
+
+CPE_VENDOR=	tinyproxy_project
 
 OPTIONS_DEFINE=	FILTER REVERSE UPSTREAM TRANSPARENT XHEADER
 OPTIONS_DEFAULT=FILTER REVERSE UPSTREAM TRANSPARENT XHEADER

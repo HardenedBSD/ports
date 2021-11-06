@@ -18,10 +18,11 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz
 
-USES=		desktop-file-utils gettext gmake gnome iconv libtool pkgconfig \
+USES=		cpe desktop-file-utils gettext gmake gnome iconv libtool pkgconfig \
 		tar:bzip2
 USE_GNOME=	gtk20 cairo gdkpixbuf2
 USE_LDCONFIG=	yes
+CPE_VENDOR=	sylpheed_project
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
@@ -32,7 +33,7 @@ CONFIGURE_ARGS=	--enable-ipv6 \
 		--prefix=${PREFIX} \
 		--program-transform-name=''
 
-CONFLICTS=	sylpheed-1.[0-8]* sylpheed-2.[0-9]* sylpheed-gtk2-[0-9]*
+CONFLICTS=	sylpheed-1.[0-8]* sylpheed-2.[0-9]* sylpheed-gtk2
 
 OPTIONS_DEFINE=	CA_BUNDLE COMPFACE CURL DOCS GPGME GTKSPELL LDAP \
 		ONIGURUMA SSL HIDE_OSSIG

@@ -1,7 +1,7 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 
 PORTNAME=	gjs
-PORTVERSION=	1.68.1
+PORTVERSION=	1.70.0
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -29,6 +29,5 @@ USE_LDCONFIG=	yes
 
 CONFIGURE_ENV=	PYTHONDONTWRITEBYTECODE=1
 MAKE_ENV=	PYTHONDONTWRITEBYTECODE=1
-
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	cells
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.2.9
+DISTVERSION=	2.2.12
 CATEGORIES=	www
 PKGNAMEPREFIX=	pydio-
 
@@ -15,7 +15,8 @@ NOT_FOR_ARCHS_REASON=	Not supported on i386
 
 BUILD_DEPENDS=	pydio-packr:devel/pydio-packr
 
-USES=		go gmake
+USES=		cpe go gmake
+CPE_VENDOR=	pydio
 USE_RC_SUBR=	${PORTNAME}
 USE_GITHUB=	yes
 GH_ACCOUNT=	pydio

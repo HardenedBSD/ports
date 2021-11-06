@@ -1,10 +1,7 @@
 PORTNAME=	libfabric
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.13.0
+DISTVERSION=	1.13.2
 CATEGORIES=	net
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
-PATCHFILES=	c2c317d6ccdacca3fcdcd7b1d3a91f47426246f4.patch:-p1
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open Fabric Interfaces
@@ -34,10 +31,8 @@ OPTIONS_DEFAULT=		${OPTIONS_MULTI_PROVIDERS}
 OPTIONS_SUB=			yes
 PROVIDERS_DESC=			Providers to build:
 
-.if exists(/usr/include/infiniband/verbs.h) # some earlier FreeBSD 11 systems don't have it
 OPTIONS_MULTI_PROVIDERS+=	VERBS
 VERBS_PLIST_FILES=		man/man7/fi_verbs.7.gz
-.endif
 
 .for p in ${OPTIONS_MULTI_PROVIDERS}
 ${p}_DESC=			'${p:tl}' provider

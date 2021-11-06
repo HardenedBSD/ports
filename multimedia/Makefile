@@ -109,6 +109,7 @@
     SUBDIR += gstreamer1-plugins-openh264
     SUBDIR += gstreamer1-plugins-resindvd
     SUBDIR += gstreamer1-plugins-rtmp
+    SUBDIR += gstreamer1-plugins-rust
     SUBDIR += gstreamer1-plugins-smoothstreaming
     SUBDIR += gstreamer1-plugins-svt-av1
     SUBDIR += gstreamer1-plugins-svt-hevc
@@ -154,6 +155,7 @@
     SUBDIR += kodi-addon-visualization.fishbmc
     SUBDIR += kodi-addon-visualization.shadertoy
     SUBDIR += kodi-addon-visualization.spectrum
+    SUBDIR += kooha
     SUBDIR += kvazaar
     SUBDIR += l-smash
     SUBDIR += libaacs
@@ -229,6 +231,7 @@
     SUBDIR += minisatip
     SUBDIR += minitube
     SUBDIR += mjpegtools
+    SUBDIR += mjpg-streamer
     SUBDIR += mkclean
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix
@@ -260,11 +263,13 @@
     SUBDIR += msopenh264
     SUBDIR += mswebrtc
     SUBDIR += musikcube
+    SUBDIR += musique
     SUBDIR += mxflib
     SUBDIR += mythtv
     SUBDIR += mythtv-frontend
     SUBDIR += naludump
     SUBDIR += navidrome
+    SUBDIR += neolink
     SUBDIR += nordlicht
     SUBDIR += nostt
     SUBDIR += obs-audio-spectralizer
@@ -321,6 +326,8 @@
     SUBDIR += py-gstreamer1
     SUBDIR += py-guessit
     SUBDIR += py-librtmp
+    SUBDIR += py-mat2
+    SUBDIR += py-metadata-cleaner
     SUBDIR += py-mido
     SUBDIR += py-mlt6
     SUBDIR += py-moviepy
@@ -363,7 +370,6 @@
     SUBDIR += smplayer
     SUBDIR += smplayer-skins
     SUBDIR += smplayer-themes
-    SUBDIR += sms1xxx-kmod
     SUBDIR += smtube
     SUBDIR += snapcast
     SUBDIR += snappy

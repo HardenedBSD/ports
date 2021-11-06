@@ -1,7 +1,7 @@
 # Created by: Derek Schrock <dereks@lifeofadishwasher.com>
 
 PORTNAME=	universal-ctags
-PORTVERSION=	p5.9.20210704.0
+PORTVERSION=	p5.9.20211017.0
 CATEGORIES=	devel
 
 MAINTAINER=	dereks@lifeofadishwasher.com
@@ -10,12 +10,11 @@ COMMENT=	Fork of Exuberant Ctags to generate index/tag files
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		autoreconf pkgconfig
-
-USE_HARDENING=	pie:off
-
+USES=		autoreconf gmake pkgconfig
 USE_GITHUB=	yes
 GH_PROJECT=	ctags
+
+USE_HARDENING=	pie:off
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-prefix=u

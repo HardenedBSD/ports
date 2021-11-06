@@ -1,8 +1,7 @@
 # Created by: Tony Shadwick <tshadwick@oss-solutions.com>
 
 PORTNAME=	htop
-DISTVERSION=	3.0.4
-PORTREVISION=	1
+DISTVERSION=	3.1.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	gaod@hychen.org
@@ -13,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_HARDENING=	safestack
 
-USES=		autoreconf compiler:c11 libtool localbase ncurses pkgconfig \
+USES=		autoreconf compiler:c11 cpe libtool localbase ncurses pkgconfig \
 		python:build shebangfix
 
 USE_GITHUB=	yes

@@ -1,12 +1,12 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
 
 PORTNAME=	git-modes
-DISTVERSION=	1.3.1
+DISTVERSION=	1.4.0
 PORTEPOCH=	1
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	yasu@utahime.org
+MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	GNU Emacs modes for Git-related files
 
 LICENSE=	GPLv3
@@ -17,8 +17,6 @@ RUN_DEPENDS=	git:devel/git
 USES=		emacs gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	magit
-
-ALL_TARGET=	lisp
 
 NO_ARCH=	yes
 

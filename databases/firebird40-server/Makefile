@@ -1,6 +1,6 @@
 PORTNAME=	firebird
 PORTVERSION=	4.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES?=	databases
 MASTER_SITES=	https://github.com/FirebirdSQL/${PORTNAME}/releases/download/v${PORTVERSION}/
 PKGNAMESUFFIX?=	${PORTVERSION:R:S/.//}-server
@@ -29,6 +29,7 @@ USES=		cpe gmake pkgconfig localbase:ldflags libedit tar:xz
 USE_CXXSTD=	c++11
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
+CPE_VENDOR=	firebirdsql
 
 CONFIGURE_ARGS=	--prefix=${LOCALSTATEDIR} \
 		--exec-prefix=${PREFIX} \

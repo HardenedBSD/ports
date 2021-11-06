@@ -1,5 +1,5 @@
 PORTNAME=	bibutils
-PORTVERSION=	6.10
+PORTVERSION=	7.1
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -11,12 +11,14 @@ COMMENT=	Program set interconverts between various bibliography formats
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/Copying
 
-USE_HARDENING=	pie:off
+USES=		cpe gmake
 
-USES=		gmake
+USE_HARDENING=	pie:off
 
 HAS_CONFIGURE=	yes
 TEST_TARGET=	test
+
+CPE_VENDOR=	bibutils_project
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*

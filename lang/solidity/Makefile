@@ -1,7 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
 
 PORTNAME=	solidity
-PORTVERSION=	0.8.6
+PORTVERSION=	0.8.9
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://github.com/ethereum/solidity/releases/download/v${PORTVERSION}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -18,7 +19,8 @@ BUILD_DEPENDS=	boost-libs>=0:devel/boost-libs \
 		range-v3>=0:devel/range-v3
 LIB_DEPENDS=	libjsoncpp.so:devel/jsoncpp
 
-USES=		cmake compiler:c++14-lang
+USES=		cmake compiler:c++14-lang cpe
+CPE_VENDOR=	${PORTNAME}lang
 
 OPTIONS_DEFINE=	Z3 CVC4
 OPTIONS_DEFAULT=Z3 CVC4

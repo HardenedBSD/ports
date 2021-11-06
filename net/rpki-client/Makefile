@@ -1,5 +1,5 @@
 PORTNAME=	rpki-client
-DISTVERSION=	7.1
+DISTVERSION=	7.2
 CATEGORIES=	net
 
 MAINTAINER=	zeising@FreeBSD.org
@@ -10,7 +10,8 @@ LICENSE=	ISCL
 BUILD_DEPENDS=	rsync>0:net/rsync
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libtls.so:security/libretls
-RUN_DEPENDS=	rsync>0:net/rsync
+RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
+		rsync>0:net/rsync
 
 USES=		autoreconf libtool pkgconfig ssl
 
@@ -26,13 +27,7 @@ USERS=		_rpki-client
 GROUPS=		${USERS}
 PLIST_SUB=	USERS="${USERS}"
 
-.include <bsd.port.pre.mk>
-
-.if ${OSREL:R} < 12 && ${SSL_DEFAULT} == "base"
-BROKEN=		requires OpenSSL 1.1.1, upgrade to FreeBSD 12.x/13.x or add DEFAULT_VERSIONS+=ssl=[openssl|libressl*] to /etc/make.conf
-.endif
-
 pre-configure:
 	cd ${WRKSRC} && ${SH} update.sh
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

@@ -14,7 +14,11 @@ COMMENT=	Create/update ZIP files compatible with PKZIP
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+USES=		cpe
+
 USE_HARDENING=	cfi
+
+CPE_VENDOR=	info-zip_project
 
 OPTIONS_DEFINE=	DOCS
 

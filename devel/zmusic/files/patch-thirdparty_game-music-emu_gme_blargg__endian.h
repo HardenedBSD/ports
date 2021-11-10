@@ -1,5 +1,5 @@
---- game-music-emu/gme/blargg_endian.h.orig	2021-02-10 16:11:06 UTC
-+++ game-music-emu/gme/blargg_endian.h
+--- thirdparty/game-music-emu/gme/blargg_endian.h.orig	2021-05-19 06:13:53 UTC
++++ thirdparty/game-music-emu/gme/blargg_endian.h
 @@ -33,9 +33,7 @@
  #if defined (LSB_FIRST) || defined (__LITTLE_ENDIAN__) || BLARGG_CPU_X86 || \
  		(defined (LITTLE_ENDIAN) && LITTLE_ENDIAN+0 != 1234)

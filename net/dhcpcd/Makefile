@@ -22,8 +22,6 @@ CONFIGURE_ARGS=	--datadir=${PREFIX}/share/examples \
 		--privsepuser="_dhcp" \
 		--without-udev
 
-CONFLICTS_INSTALL=	dhcpcd-devel
-
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/etc/dhcpcd.conf \
 		${STAGEDIR}${PREFIX}/share/examples/dhcpcd

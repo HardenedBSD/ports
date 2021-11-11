@@ -1926,7 +1926,7 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .include "${PORTSDIR}/Mk/bsd.gcc.mk"
 .endif
 
-.if !defined(USE_GCC)
+.if !defined(USE_GCC) && defined(USES) && !${USES:Mfortran}
 .if !defined(NO_UNUSED_ARGUMENTS_CHECK)
 CFLAGS+=	-Qunused-arguments
 .endif

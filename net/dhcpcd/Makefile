@@ -2,6 +2,7 @@
 
 PORTNAME=	dhcpcd
 DISTVERSION=	9.4.1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://roy.marples.name/downloads/dhcpcd/
 
@@ -15,17 +16,20 @@ USES=		compiler:c11 cpe tar:xz
 CPE_VENDOR=	dhcpcd_project
 USE_RC_SUBR=	dhcpcd
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 GNU_CONFIGURE=	yes
+=======
+HAS_CONFIGURE=	yes
+>>>>>>> origin/freebsd/main
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/examples \
+		--prefix=${PREFIX} \
 		--privsepuser="_dhcp" \
 		--without-udev
 
 post-install:
-	${MV} ${STAGEDIR}${PREFIX}/etc/dhcpcd.conf \
-		${STAGEDIR}${PREFIX}/share/examples/dhcpcd
+	${MV} ${STAGEDIR}${PREFIX}/etc/dhcpcd.conf ${STAGEDIR}${PREFIX}/etc/dhcpcd.conf.sample
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/dhcpcd
-	${MKDIR} ${STAGEDIR}/var/db/dhcpcd
 
 .include <bsd.port.mk>

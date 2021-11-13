@@ -16,13 +16,9 @@ USES=		compiler:c11 cpe tar:xz
 CPE_VENDOR=	dhcpcd_project
 USE_RC_SUBR=	dhcpcd
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-GNU_CONFIGURE=	yes
-=======
 HAS_CONFIGURE=	yes
->>>>>>> origin/freebsd/main
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/examples \
 		--prefix=${PREFIX} \
 		--privsepuser="_dhcp" \

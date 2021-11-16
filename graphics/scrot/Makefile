@@ -1,8 +1,12 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
 
 PORTNAME=	scrot
+<<<<<<< HEAD
 DISTVERSION=	1.5
 PORTREVISION=	1
+=======
+DISTVERSION=	1.7
+>>>>>>> origin/freebsd/main
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org

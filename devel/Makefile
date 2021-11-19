@@ -924,6 +924,7 @@
     SUBDIR += grcov
     SUBDIR += grex
     SUBDIR += grpc
+    SUBDIR += grpc130
     SUBDIR += grpc134
     SUBDIR += grv
     SUBDIR += gsettings-desktop-schemas
@@ -7219,6 +7220,7 @@
     SUBDIR += z80-asm
     SUBDIR += z80asm
     SUBDIR += z80ex
+    SUBDIR += z88dk
     SUBDIR += zanata-cli
     SUBDIR += zanata-platform
     SUBDIR += zapcc

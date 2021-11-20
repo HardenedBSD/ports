@@ -1778,6 +1778,7 @@
     SUBDIR += p5-Array-Iterator
     SUBDIR += p5-Array-Unique
     SUBDIR += p5-Array-Window
+    SUBDIR += p5-Asm-Preproc
     SUBDIR += p5-Async-Interrupt
     SUBDIR += p5-Async-MergePoint
     SUBDIR += p5-AtExit
@@ -1847,6 +1848,7 @@
     SUBDIR += p5-CPANPLUS
     SUBDIR += p5-CPANPLUS-Dist-Build
     SUBDIR += p5-CPS
+    SUBDIR += p5-CPU-Z80-Assembler
     SUBDIR += p5-Cache
     SUBDIR += p5-Cache-AgainstFile
     SUBDIR += p5-Cache-Cache

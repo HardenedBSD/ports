@@ -1024,6 +1024,7 @@
     SUBDIR += py-vici
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility3
+    SUBDIR += py-vpn-slice
     SUBDIR += py-vulndb
     SUBDIR += py-webauthn
     SUBDIR += py-xkcdpass

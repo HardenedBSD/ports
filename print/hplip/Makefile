@@ -18,7 +18,7 @@ RUN_DEPENDS=	cups-filters>=0:print/cups-filters \
 		${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gobject3>=0:devel/py-gobject3@${PY_FLAVOR}
 
-CONFLICTS_INSTALL=	hpijs-[0-9]*
+CONFLICTS_INSTALL=	hpijs
 
 USE_HARDENING=	pie:off
 

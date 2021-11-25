@@ -17,7 +17,7 @@ LIB_DEPENDS=	libmaeparser.so:science/maeparser	\
 		libcoordgen.so:science/coordgenlibs	\
 		libboost_thread.so:devel/boost-libs
 
-CONFLICTS_INSTALL=	babel-*
+CONFLICTS_INSTALL=	babel
 
 USE_HARDENING=	stackautoinit:off
 

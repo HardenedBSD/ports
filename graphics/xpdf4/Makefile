@@ -16,9 +16,9 @@ USE_HARDENING=  safestack
 
 CONFLICTS_INSTALL=	xpdf
 .if !defined(MASTERDIR)
-CONFLICTS_INSTALL+=	xpdf3-* xpdf-*
+CONFLICTS_INSTALL+=	xpdf3 xpdf
 .else
-CONFLICTS_INSTALL+=	xpdf3-*	xpdf4-*
+CONFLICTS_INSTALL+=	xpdf3 xpdf4
 .endif
 
 USES=		compiler:c++11-lang cmake cpe localbase:ldflags

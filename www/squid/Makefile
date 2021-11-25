@@ -29,7 +29,7 @@ USE_HARDENING=	safestack
 
 USES=		compiler:c++11-lib cpe perl5 shebangfix tar:xz
 
-CONFLICTS=	squid3-* squid-devel-*
+CONFLICTS=	squid3 squid-devel
 CPE_VENDOR=	squid-cache
 SHEBANG_FILES=	scripts/*.pl contrib/*.pl tools/*.pl
 GNU_CONFIGURE=	yes

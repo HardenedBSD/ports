@@ -12,7 +12,7 @@ COMMENT=	OpenGL 3D falling block game similar to Blockout
 
 LIB_DEPENDS=	libpng.so:graphics/png
 
-CONFLICTS=	criticalmass-*
+CONFLICTS=	criticalmass
 
 USE_HARDENING=	pie:off relro:off
 

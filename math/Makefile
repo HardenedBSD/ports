@@ -398,6 +398,7 @@
     SUBDIR += libRmath
     SUBDIR += libbraiding
     SUBDIR += libccd
+    SUBDIR += libdivide
     SUBDIR += libflame
     SUBDIR += libhomfly
     SUBDIR += libmesh
@@ -777,6 +778,7 @@
     SUBDIR += poly2tri
     SUBDIR += polylib
     SUBDIR += polymake
+    SUBDIR += primecount
     SUBDIR += primegen
     SUBDIR += primesieve
     SUBDIR += primme

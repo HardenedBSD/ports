@@ -22,18 +22,11 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libphysfs.so:devel/physfs \
 		libboost_system.so:devel/boost-libs
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off pie:off
 
-USES=		cmake compiler:c++11-lang gl gettext-runtime \
-		gettext-tools:build localbase:ldflags openal python:build \
-		sdl shebangfix
-USE_SDL=	image2 ttf2
-=======
 USES=		cmake compiler:c++11-lang gettext-runtime gettext-tools:build \
 		gl gnome localbase:ldflags openal perl5 python:build sdl \
 		shebangfix
->>>>>>> origin/freebsd/main
 USE_GL=		gl glew glu
 USE_GNOME=	librsvg2:build
 USE_PERL5=	build

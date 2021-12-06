@@ -2,7 +2,7 @@
 
 PORTNAME=	nmap
 DISTVERSION=	7.91
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://nmap.org/dist/ \
 		LOCAL/ohauer
@@ -30,7 +30,7 @@ GNU_CONFIGURE=	yes
 
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	DOCS PCAP SSH2 SSL
-OPTIONS_DEFAULT=PCAP SSH2 SSL
+OPTIONS_DEFAULT=SSH2 SSL
 
 PCAP_DESC=		Build with libpcap from nmap
 SSH2_DESC=		SSH2 protocol support
@@ -54,6 +54,12 @@ CONFIGURE_ARGS+=--without-localdirs \
 		--with-libpcre=${LOCALBASE} \
 		--with-liblua=included \
 		--without-nmap-update
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MPCAP}
+BROKEN_FreeBSD_14=	Conflicts with pcap in base
+.endif
 
 # XXX limit results if we do a grep in the sources!
 post-extract:

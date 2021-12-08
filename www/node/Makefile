@@ -19,8 +19,7 @@ USES=		compiler:c++11-lib gmake python:3.6-3.9,build pkgconfig \
 		localbase shebangfix
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
-OPTIONS_DEFAULT=	DTRACE
-OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
+OPTIONS_DEFAULT=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 OPTIONS_SUB=		yes
 
 .if !exists(/usr/sbin/dtrace)

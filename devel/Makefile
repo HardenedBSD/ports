@@ -33,6 +33,7 @@
     SUBDIR += R-cran-covr
     SUBDIR += R-cran-cpp11
     SUBDIR += R-cran-crayon
+    SUBDIR += R-cran-cyclocomp
     SUBDIR += R-cran-data.table
     SUBDIR += R-cran-desc
     SUBDIR += R-cran-devtools
@@ -65,6 +66,7 @@
     SUBDIR += R-cran-itertools
     SUBDIR += R-cran-later
     SUBDIR += R-cran-lifecycle
+    SUBDIR += R-cran-lintr
     SUBDIR += R-cran-listenv
     SUBDIR += R-cran-lubridate
     SUBDIR += R-cran-magrittr

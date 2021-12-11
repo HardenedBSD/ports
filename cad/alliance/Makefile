@@ -20,13 +20,9 @@ BROKEN_aarch64=	fails to link: collect2: error: ld returned 1 exit status
 
 BUILD_DEPENDS=	fig2dev:print/fig2dev
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		autoreconf:build gmake libtool motif tar:bz2 xorg
-=======
 USES=		autoreconf:build gmake libtool magick:build motif tar:bz2 xorg
->>>>>>> origin/freebsd/main
 USE_GCC=	yes
 USE_TEX=	dvipsk:build latex:build
 USE_XORG=	ice sm x11 xext xt

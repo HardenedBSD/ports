@@ -23,15 +23,8 @@ LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
 		libzstd.so:archivers/zstd
 .endif
 
-<<<<<<< HEAD
 USE_HARDENING?=	pie:off relro:off
 
-.if !defined(PKGNAMESUFFIX) || (${PKGNAMESUFFIX} != "-utils" && ${PKGNAMESUFFIX} != "-guest-agent")
-ONLY_FOR_ARCHS=	amd64 powerpc powerpc64 powerpc64 powerpc64le
-USES=		bison compiler:c11 cpe gmake gnome iconv:wchar_t ninja perl5 \
-		pkgconfig python:build tar:xz xorg
-USE_GNOME=	cairo glib20 libxml2
-=======
 FLAVORS=	default nox11 tools
 FLAVOR?=	${FLAVORS:[1]}
 default_CONFLICTS_INSTALL=	qemu5* qemu42 qemu-devel qemu-nox11 qemu-tools qemu-utils
@@ -46,7 +39,6 @@ tools_PLIST=	${.CURDIR}/pkg-plist-tools
 
 USES=	cpe gmake gnome ninja perl5 pkgconfig python:build tar:xz
 USE_GNOME=	glib20
->>>>>>> origin/freebsd/main
 USE_PERL5=	build
 .if (empty(FLAVOR) || ${FLAVOR:U} == nox11) && (${FLAVOR:U} != tools || ${PKGNAMESUFFIX} != "-guest-agent")
 ONLY_FOR_ARCHS=	amd64 powerpc powerpc64 powerpc64 powerpc64le

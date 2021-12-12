@@ -68,7 +68,7 @@ www   ALL=(ALL) NOPASSWD:SETENV: WEB_CMD
 chown root:wheel %%PREFIX%%/etc/sudoers.d/10_www
 chmod 0440 %%PREFIX%%/etc/sudoers.d/10_www
 
-    Or copy: cp %%PREFIX%%/etc/sudoers_10_www.clonos.sample cp %%PREFIX%%/etc/sudoers.d/10_www
+    Or copy: cp %%PREFIX%%/etc/sudoers_10_www.clonos.sample %%PREFIX%%/etc/sudoers.d/10_www
 
 
 [*] Enable and start websocket daemon:

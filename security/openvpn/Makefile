@@ -2,7 +2,7 @@
 
 PORTNAME=		openvpn
 DISTVERSION=		2.5.4
-PORTREVISION?=		2
+PORTREVISION?=		3
 CATEGORIES=		security net net-vpn
 MASTER_SITES=		https://swupdate.openvpn.org/community/releases/ \
 			https://build.openvpn.net/downloads/releases/ \
@@ -38,18 +38,18 @@ GROUPS=			openvpn
 PORTDOCS=		*
 PORTEXAMPLES=		*
 
-OPTIONS_DEFINE=		PKCS11 EASYRSA DOCS EXAMPLES X509ALTUSERNAME \
-			TEST LZ4 LZO SMALL TUNNELBLICK ASYNC_PUSH UNITTESTS
-OPTIONS_DEFAULT=	EASYRSA OPENSSL TEST LZ4 LZO
+OPTIONS_DEFINE=		ASYNC_PUSH DOCS EASYRSA EXAMPLES LZ4 LZO PKCS11 SMALL \
+			TEST TUNNELBLICK UNITTESTS X509ALTUSERNAME
+OPTIONS_DEFAULT=	EASYRSA LZ4 LZO OPENSSL PKCS11 TEST
 OPTIONS_SINGLE=		SSL
 OPTIONS_SINGLE_SSL=	OPENSSL MBEDTLS
 ASYNC_PUSH_DESC=	Enable async-push support
 EASYRSA_DESC=		Install security/easy-rsa RSA helper package
-LZO_DESC=		LZO compression support (incompatible with LibreSSL)
-MBEDTLS_DESC=		LICENSE BROKEN - SSL/TLS via mbedTLS (lacks TLS v1.3)
+LZO_DESC=		LZO compression (incompatible with LibreSSL)
+MBEDTLS_DESC=		SSL/TLS via mbedTLS (lacks TLS v1.3)
 PKCS11_DESC=		Use security/pkcs11-helper (OpenSSL only)
 SMALL_DESC=		Build a smaller executable with fewer features
-TUNNELBLICK_DESC=	Tunnelblick XOR scramble patch (READ HELP!)
+TUNNELBLICK_DESC=	XOR scrambling patch - DEPRECATED!
 UNITTESTS_DESC=		Enable unit tests
 X509ALTUSERNAME_DESC=	Enable --x509-username-field (OpenSSL only)
 
@@ -97,7 +97,6 @@ CFLAGS+=		-DLOG_OPENVPN=${LOG_OPENVPN}
 
 .if ${PORT_OPTIONS:MMBEDTLS}
 BROKEN_FreeBSD_14=      OpenVPN-mbedTLS fails on FreeBSD 14
-BROKEN=		License under clarification, OpenVPN is GPLv2-only and mbedTLS under Apache License 2.0, which are incompatible
 _tlslibs=libmbedtls libmbedx509 libmbedcrypto
 .else
 # OpenSSL
@@ -122,10 +121,11 @@ pre-everything::
 	@${SHELL} -c 'exit 1'
 .endif
 
-.if !empty(PORT_OPTIONS:MMBEDTLS)
+.if !empty(PORT_OPTIONS:MMBEDTLS) || !empty(PORT_OPTIONS:MTUNNELBLICK)
 pre-everything::
-	@${ECHO_CMD} >&2 "License under clarification, OpenVPN is GPLv2-only and mbedTLS under Apache License 2.0, which are incompatible."
-	@${SHELL} -c 'exit 1'
+	@${ECHO_CMD} >&2 "======================================================================"
+	@${ECHO_CMD} >&2 "Note that the mbedTLS and Tunnelblick options will go away 2022-03-31."
+	@${ECHO_CMD} >&2 "======================================================================"
 .endif
 
 post-patch:

@@ -24,22 +24,13 @@ CPE_VENDOR=	openinfosecfoundation
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	${PORTNAME}
 
-<<<<<<< HEAD
-GNU_CONFIGURE=	yes
-
 USE_HARDENING=	pie:configure
 
-CONFIGURE_ARGS+=--enable-gccprotect \
-		--enable-bundled-htp \
-	        --disable-gccmarch-native
-MAKE_ENV=	RUSTFLAGS="${RUSTFLAGS} -C linker=${CC:Q} ${LDFLAGS:C/.+/-C link-arg=&/}"
-=======
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gccmarch-native \
 			--enable-bundled-htp \
 			--enable-gccprotect
 MAKE_ENV=		RUSTFLAGS="${RUSTFLAGS} -C linker=${CC:Q} ${LDFLAGS:C/.+/-C link-arg=&/}"
->>>>>>> origin/freebsd/main
 
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check

@@ -11,22 +11,19 @@ COMMENT=	3D collision detection and rigid body dynamics library
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off
-=======
 FLAVORS=	single double
 FLAVOR?=	${FLAVORS:[1]}
 
 double_PKGNAMESUFFIX=	-double
 
 single_CONFLICTS_INSTALL=${PORTNAME}-double
-double_CONFLICTS_INSTALL=${PORTNAME}
->>>>>>> origin/freebsd/main
 
 USES=		cmake compiler:c++11-lang gl xorg
 USE_GL=		gl glu glut
 USE_LDCONFIG=	yes
 USE_XORG=	x11
+
+USE_HARDENING=	pie:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	bulletphysics

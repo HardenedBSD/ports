@@ -16,16 +16,13 @@ DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen \
 DOXYGEN_CONFIGURE_ENABLE=	dot doxygen html-docs
 DOXYGEN_CONFIGURE_ON=	--htmldir="${DOCSDIR}/html"
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-=======
 USES=		libtool pathfix compiler:c++11-lang
->>>>>>> origin/freebsd/main
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 OPTIONS_SUB=	yes
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	stackautoinit:off
 
 SUB_FILES=	cppunit-config
 SUB_LIST+=	DISTVERSION=${DISTVERSION}

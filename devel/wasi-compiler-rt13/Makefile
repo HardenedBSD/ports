@@ -28,6 +28,8 @@ BUILD_DEPENDS=	${WASI_SYSROOT}/include/stdarg.h:devel/wasi-libc \
 USES=		cmake tar:xz
 NO_ARCH=	yes
 
+SSP_UNSAFE=	yes
+
 PLIST_FILES=	llvm${LLVM_SUFFIX}/lib/clang/${LLVM_RELEASE}/lib/wasi/libclang_rt.builtins-wasm32.a
 
 CC=		${LOCALBASE}/bin/clang${LLVM_SUFFIX}

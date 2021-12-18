@@ -1,0 +1,7 @@
+TIMESTAMP = 1566902945
+SHA256 (cbsd-cbsd-plugin-wsqueue-0.1-c93543f_GH0.tar.gz) = 0c0f64cabc0e69f6290380f92fa45304f9b699e84b4f7563b359fe16f6ed8623
+SIZE (cbsd-cbsd-plugin-wsqueue-0.1-c93543f_GH0.tar.gz) = 701
+SHA256 (go-logfmt-logfmt-v0.3.0_GH0.tar.gz) = 74a958064177fc33cc66c60ae118f95faf9f986bcab0465c47f40d8cad978fce
+SIZE (go-logfmt-logfmt-v0.3.0_GH0.tar.gz) = 11546
+SHA256 (gorilla-websocket-v1.4.0_GH0.tar.gz) = 2b5743c72bd0930c5a80e49c0138b5b7d27fa7c085efd0c86805cccfa7220c9d
+SIZE (gorilla-websocket-v1.4.0_GH0.tar.gz) = 50228

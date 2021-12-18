@@ -1,0 +1,3 @@
+Post Installation:
+
+* Please add 'cbsd_queue.d' into ~cbsd/etc/modules.conf to enable wsqueue plugin

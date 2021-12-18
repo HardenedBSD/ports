@@ -80,6 +80,7 @@
     SUBDIR += cl-lml
     SUBDIR += cl-lml-sbcl
     SUBDIR += clearsilver
+    SUBDIR += clonos
     SUBDIR += closure-compiler
     SUBDIR += cntlm
     SUBDIR += codeigniter

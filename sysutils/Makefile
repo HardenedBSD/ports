@@ -147,6 +147,7 @@
     SUBDIR += cbsd
     SUBDIR += cbsd-mq-api
     SUBDIR += cbsd-mq-router
+    SUBDIR += cbsd-plugin-wsqueue
     SUBDIR += ccd2iso
     SUBDIR += cciss_vol_status
     SUBDIR += ccze
@@ -185,6 +186,7 @@
     SUBDIR += clockspeed
     SUBDIR += clone
     SUBDIR += clonehdd
+    SUBDIR += clonos-ws
     SUBDIR += cloudabi-utils
     SUBDIR += clsync
     SUBDIR += cluster-glue

@@ -1,0 +1,4 @@
+To enable clonos-ws:
+
+service clonos-ws enable
+service clonos-ws restart

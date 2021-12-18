@@ -28,7 +28,7 @@ DEMOS_DESC=	Install demos
 WRKSRC=		${WRKDIR}/${PORTNAME}${TK_VERSION}/unix
 
 ALL_TARGET=	all
-INSTALL_TARGET=	install-strip
+INSTALL_TARGET=	install
 TEST_TARGET=	test
 
 USES+=		tcl:${SHORT_TK_VER},tea xorg

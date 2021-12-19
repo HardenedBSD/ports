@@ -13,16 +13,11 @@ LICENSE=	BSD3CLAUSE GPLv2
 LICENSE_COMB=	multi
 
 IGNORE_DragonFly=	only supported on FreeBSD
-<<<<<<< HEAD
 
 USE_HARDENING=	stackautoinit:off
 
-USES=		gmake tar:bzip2
-
-=======
 MMC_GITHASH=	a1b233c2a31baa5b77cb67c0c3be4767be86f727
 MMC_GITSHASH=	${MMC_GITHASH:C/^(........).*/\1/}
->>>>>>> origin/freebsd/main
 PLIST_FILES=	man/man1/mmc.1.gz sbin/mmc
 USES=		gmake
 WRKSRC=		${WRKDIR}/${MMC_GITHASH}

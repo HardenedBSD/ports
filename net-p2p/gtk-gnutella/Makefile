@@ -28,9 +28,13 @@ CONFIGURE_ARGS=	-O -Dyacc='byacc' \
 MAKE_ARGS=	INSTALL_PREFIX="${STAGEDIR}"
 INSTALL_TARGET=	install install.man
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 PLIST_SUB=	ARCH="${ARCH}" OPSYS="${OPSYS:tl}"
+=======
+PLIST_SUB=	ARCH="${ARCH:C/powerpc.*/powerpc/}" OPSYS="${OPSYS:tl}"
+>>>>>>> origin/freebsd/main
 
 OPTIONS_DEFINE=		DBUS DEBUG GUI IPV6 NLS PORTABILITY TLS
 OPTIONS_DEFAULT=	GUI TLS

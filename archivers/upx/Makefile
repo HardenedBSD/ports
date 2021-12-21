@@ -13,19 +13,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libucl.so:archivers/ucl
 
-USES=		cpe gmake perl5
-<<<<<<< HEAD
-USE_GITHUB=	yes
-USE_PERL5=	build # provides pod2man/pod2html/pod2text required for docs
-
 USE_HARDENING=	stackautoinit:off
 
-CPE_VENDOR=	upx_project
+USES=		cpe gmake perl5
 
-GH_TUPLE=	upx:upx-lzma-sdk:${DISTVERSIONPREFIX}${DISTVERSION}:lzma/src/lzma-sdk
-=======
 USE_PERL5=	build
->>>>>>> origin/freebsd/main
 
 MAKE_ENV=	UPX_UCLDIR=${LOCALBASE} \
 		target=freebsd

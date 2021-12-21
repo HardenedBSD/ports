@@ -1025,6 +1025,7 @@
     SUBDIR += py-azure-cli-telemetry
     SUBDIR += py-bitrot
     SUBDIR += py-borgmatic
+    SUBDIR += py-concurrent-log-handler
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
     SUBDIR += py-dict-toolbox

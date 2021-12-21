@@ -1244,7 +1244,6 @@
     SUBDIR += rubygem-fog-aws
     SUBDIR += rubygem-fog-azure
     SUBDIR += rubygem-fog-brightbox
-    SUBDIR += rubygem-fog-brightbox0
     SUBDIR += rubygem-fog-cloudatcost
     SUBDIR += rubygem-fog-cloudstack
     SUBDIR += rubygem-fog-digitalocean
@@ -1252,7 +1251,6 @@
     SUBDIR += rubygem-fog-dynect
     SUBDIR += rubygem-fog-ecloud
     SUBDIR += rubygem-fog-google
-    SUBDIR += rubygem-fog-google19
     SUBDIR += rubygem-fog-gridscale
     SUBDIR += rubygem-fog-internet-archive
     SUBDIR += rubygem-fog-joyent
@@ -1295,8 +1293,6 @@
     SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
     SUBDIR += rubygem-grpc
-    SUBDIR += rubygem-grpc124
-    SUBDIR += rubygem-grpc130
     SUBDIR += rubygem-grpc142
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http-parser
@@ -1324,7 +1320,6 @@
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
-    SUBDIR += rubygem-omniauth-auth014
     SUBDIR += rubygem-omniauth-authentiq
     SUBDIR += rubygem-omniauth-azure-activedirectory-v2
     SUBDIR += rubygem-omniauth-azure-oauth2

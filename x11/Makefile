@@ -405,6 +405,7 @@
     SUBDIR += workrave
     SUBDIR += wshowkeys
     SUBDIR += wtype
+    SUBDIR += wvkbd
     SUBDIR += x-on-resize
     SUBDIR += x11perf
     SUBDIR += x3270

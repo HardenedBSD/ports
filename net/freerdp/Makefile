@@ -21,14 +21,10 @@ BROKEN_SSL_REASON_libressl-devel=	fails to compile: no member named 'alert_dispa
 
 LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim
 
-<<<<<<< HEAD
 USE_HARDENING=	cfi safestack
 CFI_OVERRIDE=	-fno-sanitize=cfi-icall
 
-USES=		alias cmake compiler:c++11-lib cpe gettext gnome localbase pathfix pkgconfig ssl
-=======
 USES=		alias cmake compiler:c++11-lib cpe gettext localbase pathfix pkgconfig ssl
->>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
 
 PATCHVERSION=	${PORTVERSION}

@@ -1,0 +1,24 @@
+diff -Nurp a/Makefile b/Makefile
+--- Makefile	2016-07-18 05:00:34.000000000 +0200
++++ Makefile	2021-05-13 17:22:39.900956000 +0200
+@@ -20,7 +20,7 @@ openbsd:
+ 	gmake -f Makefile.OpenBSD
+ 
+ freebsd:
+-	make -f Makefile.FreeBSD
++	gmake -f Makefile.FreeBSD
+ 
+ clean:
+ 	make -f Makefile.psm clean
+diff -Nurp a/Makefile.FreeBSD b/Makefile.FreeBSD
+--- Makefile.FreeBSD	2016-07-18 04:56:44.000000000 +0200
++++ Makefile.FreeBSD	2021-05-13 17:23:02.644779000 +0200
+@@ -1,6 +1,6 @@
+-#!/usr/bin/env make
++#!/usr/bin/env gmake
+ 
+-CC=cc
++CC=gcc
+ ASFLAGS=
+ CC_PIE=
+ CFLAGS=

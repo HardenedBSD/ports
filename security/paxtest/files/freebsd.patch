@@ -1,0 +1,194 @@
+diff -Nurp a/genpaxtest b/genpaxtest
+--- genpaxtest	2016-07-18 04:56:44.000000000 +0200
++++ genpaxtest	2021-05-16 18:29:33.000000000 +0200
+@@ -3,6 +3,7 @@
+ # Script to run all the PaX memory protection tests
+ #
+ # Copyright(c) 2003,2004 by Peter Busser <peter@adamantix.org>
++# Copyright(c) 2015 by Oliver Pinter <op@hardenedbsd.org>
+ # This file has been released under the GNU Public Licence version 2 or later.
+ # See the file COPYING for details.
+ #
+@@ -13,9 +14,17 @@ then
+ 	RUNDIR=.
+ fi
+ 
++COMPILER_VERSION="`$1 -v 2>&1 | grep -E '(clang|gcc) version'`"
++shift
++
++OS_TYPE=`uname -o`
++
+ cat << __here__ > paxtest
+ #!/bin/sh
+ 
++# Disable generated core files
++ulimit -c 0
++
+ if [ \$# = 1 -o \$# = 2 ]
+ then
+ 	if [ "\$1" = "kiddie" ]
+@@ -24,8 +30,20 @@ then
+ 		shift
+ 	elif [ "\$1" = "blackhat" ]
+ 	then
++__here__
++if [ -z "${COMPILER_VERSION##*clang*}" ]
++then
++	cat << __here__ >> paxtest
++		echo "error: blackhat mode not supported by clang compiled version of paxtest"
++		exit 1
++__here__
++else
++	cat << __here__ >>paxtest
+ 		PAXTEST_MODE=1
+ 		shift
++__here__
++fi
++	cat << __here__ >>paxtest
+ 	else
+ 		echo "usage: paxtest [kiddie|blackhat] [logfile]"
+ 		exit 1
+@@ -53,7 +71,9 @@ fi
+ export LD_LIBRARY_PATH
+ 
+ cat <<__end__ | tee \$LOG
+-PaXtest - Copyright(c) 2003-2016 by Peter Busser <peter@adamantix.org> and Brad Spengler <spender@grsecurity.net>
++PaXtest
++Copyright(c) 2003-2016 by Peter Busser <peter@adamantix.org> and Brad Spengler <spender@grsecurity.net>
++Copyright(c) 2015 by Oliver Pinter <op@hardenedbsd.org>
+ Released under the GNU Public Licence version 2 or later
+ 
+ __end__
+@@ -67,8 +87,8 @@ if [ "\$PAXTEST_MODE" -eq 1 ]; then
+ fi
+ echo >>\$LOG
+ 
+-echo "Kernel: " >>\$LOG
+-uname -a >>\$LOG
++echo "Kernel: `uname -iKm`" >>\$LOG
++echo "Compiler: ${COMPILER_VERSION}" >>\$LOG
+ echo >>\$LOG
+ if [ -e /usr/bin/lsb_release ]; then
+ 	echo "Relase information: " >>\$LOG
+@@ -84,6 +105,22 @@ for i in $*
+ do
+ 	${RUNDIR}/\$i || echo
+ done 2>&1 | tee -a \$LOG
++__here__
++
++if [ ${OS_TYPE} = "FreeBSD" ]
++then
++	cat << __here__ >>paxtest
++if [ "$USER" != "root" ] && [ \`sysctl -n security.bsd.unprivileged_proc_debug\` = 0 ]
++then
++	echo >>\$LOG
++	echo "warning: the randvdso test may be invalid, try to retest with the security.bsd.unprivileged_proc_debug=1 sysctl setting" >>\$LOG
++fi
++__here__
++fi
++
++cat << __here__ >>paxtest
++echo "Test results:"
++cat \$LOG
+ 
+ echo
+ 
+diff -Nurp a/getshlib.c b/getshlib.c
+--- getshlib.c	2016-07-18 04:56:44.000000000 +0200
++++ getshlib.c	2021-05-16 18:29:33.000000000 +0200
+@@ -14,7 +14,7 @@
+ #ifdef __OpenBSD__
+ #undef RTLD_DEFAULT
+ #define RTLD_DEFAULT "libc.so"
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined (__HardenedBSD__)
+ #undef RTLD_DEFAULT
+ #define RTLD_DEFAULT "libc.so.7"
+ #endif
+diff -Nurp a/Makefile.FreeBSD b/Makefile.FreeBSD
+--- Makefile.FreeBSD	2016-07-18 04:56:44.000000000 +0200
++++ Makefile.FreeBSD	2021-05-16 18:29:33.000000000 +0200
+@@ -6,9 +6,9 @@ CC_PIE=
+ CFLAGS=
+ LDFLAGS=
+ SHLDFLAGS=
+-ifndef RUNDIR
++.ifndef RUNDIR
+ RUNDIR=.
+-endif
++.endif
+ 
+ ASFLAGS+= --noexecstack
+ 
+@@ -96,18 +96,18 @@ SHLIBS=	shlibtest.so \
+ 
+ all: ${SHLIBS} ${TESTS} ${UTILS} paxtest
+ 
+-ifdef DESTDIR
+-ifdef BINDIR
+-ifdef RUNDIR
++.ifdef DESTDIR
++.ifdef BINDIR
++.ifdef RUNDIR
+ install: all
+ 	mkdir -p ${DESTDIR}/${RUNDIR}
+ 	cp ${SHLIBS} ${TESTS} ${UTILS} ${DESTDIR}/${RUNDIR}
+ 	mkdir -p ${DESTDIR}/${BINDIR}
+ 	cp paxtest ${DESTDIR}/${BINDIR}
+ 	chmod 755 ${DESTDIR}/${BINDIR}/paxtest
+-endif
+-endif
+-endif
++.endif
++.endif
++.endif
+ 
+ body.o: body.c
+ 	${CC} ${CFLAGS} -fPIC -o ${.TARGET} -c ${.ALLSRC}
+diff -Nurp a/Makefile b/Makefile
+--- Makefile	2016-07-18 05:00:34.000000000 +0200
++++ Makefile	2021-05-16 18:29:33.000000000 +0200
+@@ -23,5 +23,5 @@ freebsd:
+ 	make -f Makefile.FreeBSD
+ 
+ clean:
+-	make -f Makefile.psm clean
++	make -f Makefile.FreeBSD clean
+ 
+diff --git a/Makefile.FreeBSD b/Makefile.FreeBSD
+index 73872ed..1941db7 100644
+--- Makefile.FreeBSD
++++ Makefile.FreeBSD
+@@ -89,7 +89,9 @@ UTILS=	getamap \
+ 	getarg1 \
+ 	getarg2 \
+ 	getexhaust1 \
+-	getexhaust2
++	getexhaust2 \
++	getshlibdelta1 \
++	getshlibdelta2
+ 
+ SHLIBS=	shlibtest.so \
+ 	shlibtest2.so
+@@ -151,12 +153,21 @@ getamap.o: getamap.c
+ getmain1: getmain.o
+ 	${CC} ${LDFLAGS} -o ${.TARGET} ${.ALLSRC}
+ 
++getshlibdelta1: getshlibdelta.o
++	${CC} ${LDFLAGS} -o ${.TARGET} ${.ALLSRC}
++
+ getmain2: getmain2.o
+ 	${CC} ${SHLDFLAGS} -pie -fPIE -o ${.TARGET} ${.ALLSRC}
+ 
+ getmain2.o: getmain.c
+ 	${CC} ${CFLAGS} -fPIC -o ${.TARGET} -c ${.ALLSRC}
+ 
++getshlibdelta2: getshlibdelta.c
++	${CC} ${SHLDFLAGS} -pie -fPIE -o ${.TARGET} ${.ALLSRC}
++
++#getshlibdelta2: getshlibdelta2.o
++#	#${CC} ${CFLAGS} -fPIC -o ${.TARGET} -c ${.ALLSRC}
++
+ getshlib: getshlib.o
+ 	${CC} ${LDFLAGS} -o ${.TARGET} ${.ALLSRC}
+ 

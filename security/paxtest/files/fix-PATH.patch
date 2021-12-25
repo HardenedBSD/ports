@@ -1,0 +1,25 @@
+diff --git a/genpaxtest b/genpaxtest
+index 2aca1d0..8dcdb50 100644
+--- genpaxtest
++++ genpaxtest
+@@ -64,9 +64,9 @@ export PAXTEST_MODE
+ 
+ if [ "\${LD_LIBRARY_PATH}" = "" ]
+ then
+-	LD_LIBRARY_PATH=${RUNDIR}
++	LD_LIBRARY_PATH=/usr/local/lib/paxtest
+ else
+-	LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:${RUNDIR}
++	LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:/usr/local/lib/paxtest
+ fi
+ export LD_LIBRARY_PATH
+ 
+@@ -103,7 +103,7 @@ echo "Test results:"
+ 
+ for i in $*
+ do
+-	${RUNDIR}/\$i || echo
++	/usr/local/lib/paxtest/\$i || echo
+ done 2>&1 | tee -a \$LOG
+ __here__
+ 

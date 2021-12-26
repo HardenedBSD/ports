@@ -40,8 +40,8 @@ DRM_VARS=		BACKENDS+="drm libinput"
 
 NVIDIA_DESC=		EGLStreams support for DRM backend (experimental)
 NVIDIA_PATCH_SITES=	https://github.com/danvd/${GL_PROJECT}-eglstreams/commit/:nvidia
-NVIDIA_PATCHFILES=	545d823db12d.patch:-p1:nvidia # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/2769
-NVIDIA_IMPLIES=		OPENGL
+NVIDIA_PATCHFILES=	c0fc017207f0.patch:-p1:nvidia # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/2769
+NVIDIA_IMPLIES=		DRM OPENGL X11
 .if make(makesum)
 .MAKEFLAGS:		WITH+=NVIDIA
 .endif

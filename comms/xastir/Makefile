@@ -25,13 +25,9 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libwmflite.so:graphics/libwmf \
 		libpcre.so:devel/pcre
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		gettext gmake gnome jpeg motif python:run shebangfix xorg
-=======
 USES=		autoreconf gmake gnome jpeg motif shebangfix xorg
->>>>>>> origin/freebsd/main
 
 USE_XORG=	ice sm x11 xext xt
 USE_GNOME+=	libxml2

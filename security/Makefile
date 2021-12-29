@@ -751,7 +751,6 @@
     SUBDIR += pamtester
     SUBDIR += paperkey
     SUBDIR += passivedns
-    SUBDIR += paxtest
     SUBDIR += pbc
     SUBDIR += pbnj
     SUBDIR += pcsc-tools

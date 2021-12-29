@@ -20,6 +20,8 @@ CPE_VENDOR=	torproject
 TPO_GEOIP=	7ce4b3d98d01ff33bad8007db3f488d5b172382a
 TPO_SNOWFLAKE=	ead5a960d7fa19dc890ccbfc0765c5ab6629eaa9
 
+USE_HARDENING=	pie:golang
+
 GO_PKGNAME=	git.torproject.org/pluggable-transports/snowflake.git/v2
 GO_TARGET=	./client ./proxy ./server
 

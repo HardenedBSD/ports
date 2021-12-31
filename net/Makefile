@@ -20,7 +20,6 @@
     SUBDIR += aoe
     SUBDIR += apache-commons-net
     SUBDIR += apinger
-    SUBDIR += appkonference
     SUBDIR += aprsc
     SUBDIR += aquantia-atlantic-kmod
     SUBDIR += arataga
@@ -412,7 +411,6 @@
     SUBDIR += libsignal-protocol-c
     SUBDIR += libslirp
     SUBDIR += libsrtp2
-    SUBDIR += libstorj
     SUBDIR += libtnl
     SUBDIR += libtrace
     SUBDIR += libunp
@@ -1038,7 +1036,6 @@
     SUBDIR += py-ec2-cli-tools
     SUBDIR += py-errbot
     SUBDIR += py-eventlet
-    SUBDIR += py-flask-xml-rpc
     SUBDIR += py-gdown
     SUBDIR += py-geopy
     SUBDIR += py-gntp
@@ -1599,7 +1596,6 @@
     SUBDIR += yconalyzer
     SUBDIR += yggdrasil
     SUBDIR += yptransitd
-    SUBDIR += zebra
     SUBDIR += zebra-server
     SUBDIR += zeroconf-ioslave
     SUBDIR += zerotier

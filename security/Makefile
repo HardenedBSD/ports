@@ -384,7 +384,6 @@
     SUBDIR += munge
     SUBDIR += mussh
     SUBDIR += n2n
-    SUBDIR += nacl
     SUBDIR += ncrack
     SUBDIR += ncrypt
     SUBDIR += nebula
@@ -407,7 +406,6 @@
     SUBDIR += nyx
     SUBDIR += oath-toolkit
     SUBDIR += obfs4proxy-tor
-    SUBDIR += obfsclient
     SUBDIR += ocaml-cryptgps
     SUBDIR += ocaml-cryptokit
     SUBDIR += ocaml-ssl

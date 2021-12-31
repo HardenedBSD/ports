@@ -1250,7 +1250,6 @@
     SUBDIR += samdruckerclientshell
     SUBDIR += samefile
     SUBDIR += samesame
-    SUBDIR += sample
     SUBDIR += sanoid
     SUBDIR += sanoid-devel
     SUBDIR += sas2ircu

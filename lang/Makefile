@@ -204,7 +204,6 @@
     SUBDIR += nhc98
     SUBDIR += nickle
     SUBDIR += nim
-    SUBDIR += nml
     SUBDIR += nqc
     SUBDIR += nwcc
     SUBDIR += nx
@@ -290,7 +289,6 @@
     SUBDIR += python3
     SUBDIR += python310
     SUBDIR += python311
-    SUBDIR += python36
     SUBDIR += python37
     SUBDIR += python38
     SUBDIR += python39

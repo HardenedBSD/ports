@@ -209,7 +209,6 @@
     SUBDIR += gopherus
     SUBDIR += gotty
     SUBDIR += gpx2map
-    SUBDIR += grafana
     SUBDIR += grafana6
     SUBDIR += grafana7
     SUBDIR += grafana8
@@ -335,7 +334,6 @@
     SUBDIR += matomo
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
-    SUBDIR += mediawiki131
     SUBDIR += mediawiki135
     SUBDIR += mediawiki136
     SUBDIR += mediawiki137
@@ -1401,7 +1399,6 @@
     SUBDIR += phpvirtualbox-legacy
     SUBDIR += piwigo
     SUBDIR += plasma5-plasma-browser-integration
-    SUBDIR += plugger
     SUBDIR += pmwiki
     SUBDIR += pnews
     SUBDIR += podcastamatic
@@ -1454,20 +1451,6 @@
     SUBDIR += py-cssmin
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
-    SUBDIR += py-dj31-django-auth-ldap
-    SUBDIR += py-dj31-django-cacheops
-    SUBDIR += py-dj31-django-cors-headers
-    SUBDIR += py-dj31-django-debug-toolbar
-    SUBDIR += py-dj31-django-filter
-    SUBDIR += py-dj31-django-js-asset
-    SUBDIR += py-dj31-django-mptt
-    SUBDIR += py-dj31-django-prometheus
-    SUBDIR += py-dj31-django-redis
-    SUBDIR += py-dj31-django-tables2
-    SUBDIR += py-dj31-django-taggit
-    SUBDIR += py-dj31-django-timezone-field
-    SUBDIR += py-dj31-djangorestframework
-    SUBDIR += py-dj31-drf-yasg
     SUBDIR += py-dj32-django-auth-ldap
     SUBDIR += py-dj32-django-cacheops
     SUBDIR += py-dj32-django-cors-headers
@@ -1593,7 +1576,6 @@
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django22
-    SUBDIR += py-django31
     SUBDIR += py-django32
     SUBDIR += py-django40
     SUBDIR += py-django_compressor
@@ -1778,6 +1760,7 @@
     SUBDIR += py-sentinelhub
     SUBDIR += py-slimit
     SUBDIR += py-slumber
+    SUBDIR += py-social-auth-app-django
     SUBDIR += py-sockjs-tornado
     SUBDIR += py-soupsieve
     SUBDIR += py-splinter

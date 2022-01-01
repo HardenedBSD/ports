@@ -16704,7 +16704,6 @@ java/intellij-rubymine|devel/rubymine|2021-12-31|Use better name and category
 lang/python36||2021-12-31|Has expired: Upgrade to a newer Python version. 3.6 is in maintenance status and gets security fixes only. End-of-Life: 2021-12-23. See https://devguide.python.org/
 devel/sdl_sge||2021-12-31|Has expired: Upstream no longer maintained
 net/appkonference||2021-12-31|Has expired: Outdated, depends on unsupported version of net/asterisk
-dns/bind911|dns/bind916|2021-12-31|Has expired: End of life, please migrate to a newer version of BIND9
 net/zebra||2021-12-31|Has expired: Abandoned upstream, last release in 2005. Consider migrating to net/frr7 or net/bird2
 audio/osalp||2021-12-31|Has expired: Abandoned upstream, listed as beta and no new release since 2008
 games/stransball2||2021-12-31|Has expired: Depends on expired devel/sdl_sge
@@ -16724,7 +16723,6 @@ www/py-dj31-django-mptt||2021-12-31|Has expired: Extended support of Django 3.1 
 net/py-flask-xml-rpc||2021-12-31|Has expired: No longer maintained upstream
 audio/libaacplus||2021-12-31|Has expired: Abandoned upstream, no new release since 2011
 security/obfsclient||2021-12-31|Has expired: https://github.com/Yawning/obfsclient/issues/37
-devel/eric6||2021-12-31|Has expired: Uses EOL Python 2.7 via www/py-qt5-webengine
 www/grafana||2021-12-31|Has expired: No longer maintained upstream, use www/grafana8
 www/py-dj31-django-auth-ldap||2021-12-31|Has expired: Extended support of Django 3.1 ends December 2021, upgrade to the Django 3.2+ version of this port. See https://www.djangoproject.com/download/
 www/py-dj31-django-filter||2021-12-31|Has expired: Extended support of Django 3.1 ends December 2021, upgrade to the Django 3.2+ version of this port. See https://www.djangoproject.com/download/
@@ -16758,6 +16756,6 @@ www/py-dj31-django-redis||2021-12-31|Has expired: Extended support of Django 3.1
 devel/py-dj31-django-rq||2021-12-31|Has expired: Extended support of Django 3.1 ends December 2021, upgrade to the Django 3.2+ version of this port. See https://www.djangoproject.com/download/
 graphics/libreatlas||2021-12-31|Has expired: Abandoned upstream, no new release since 2012
 www/py-dj31-djangorestframework||2021-12-31|Has expired: Extended support of Django 3.1 ends December 2021, upgrade to the Django 3.2+ version of this port. See https://www.djangoproject.com/download/
-devel/es-eric6||2021-12-31|Slave of expired devel/eric6
-german/eric6||2021-12-31|Slave of expired devel/eric6
-russian/eric6||2021-12-31|Slave of expired devel/eric6
+astro/google-earth||2022-01-01|Has expired: Needs newer version to connect to server
+net/tramp||2022-01-01|Has expired: Not updated in 5 years and now part of Emacs
+archivers/p7zip-codec-rar||2022-01-01|Has expired: Unmaintained for years and has known vulnerabilities

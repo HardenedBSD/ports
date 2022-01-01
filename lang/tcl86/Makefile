@@ -46,7 +46,7 @@ PATCH_WRKSRC=	${WRKDIR}/${PORTNAME}${TCL_VERSION}
 WRKSRC=		${PATCH_WRKSRC}/unix
 
 ALL_TARGET=	all
-INSTALL_TARGET=	install-strip install-libraries install-private-headers
+INSTALL_TARGET=	install install-libraries install-private-headers
 TEST_TARGET=	test-tcl
 
 TCL_VERSION=	8.6.12

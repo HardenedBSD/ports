@@ -617,7 +617,8 @@ CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--enable-gpl \
 		--enable-avresample \
 		--cc="${CC}" \
-		--cxx="${CXX}"
+		--cxx="${CXX}" \
+		--toolchain=hardened
 
 DOC_FILES=	Changelog CREDITS INSTALL.md LICENSE.md MAINTAINERS \
 		README.md RELEASE_NOTES

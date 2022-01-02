@@ -1,11 +1,11 @@
-PORTNAME=	azure-mgmt-containerregistry
-DISTVERSION=	8.2.0
+PORTNAME=	azure-mgmt-servicelinker
+DISTVERSION=	1.0.0b1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
-COMMENT=	Microsoft Azure Container Registry Client Library for Python
+COMMENT=	Microsoft Azure Servicelinker Management Client Library for Python
 
 LICENSE=	MIT
 

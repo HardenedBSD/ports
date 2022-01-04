@@ -63,6 +63,7 @@
     SUBDIR += dcl
     SUBDIR += devisor
     SUBDIR += dftbplus
+    SUBDIR += dftd4
     SUBDIR += dkh
     SUBDIR += dlib-cpp
     SUBDIR += drawxtl
@@ -150,6 +151,7 @@
     SUBDIR += mbdyn
     SUBDIR += mcstas
     SUBDIR += mcstas-comps
+    SUBDIR += mctc-lib
     SUBDIR += mcxtrace
     SUBDIR += mcxtrace-comps
     SUBDIR += mdynamix
@@ -165,6 +167,8 @@
     SUBDIR += mpb
     SUBDIR += mpqc
     SUBDIR += msms
+    SUBDIR += mstore
+    SUBDIR += multicharge
     SUBDIR += multiwfn
     SUBDIR += namd
     SUBDIR += nest

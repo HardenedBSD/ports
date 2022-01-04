@@ -1,8 +1,6 @@
-# Created by: Andrey Zonov <andrey@zonov.org>
-
 PORTNAME=	flock
-PORTVERPREFIX=	2.30
-PORTVERSION=	${PORTVERPREFIX}.1
+PORTVERPREFIX=	2.37
+PORTVERSION=	${PORTVERPREFIX}.2
 CATEGORIES=	sysutils
 MASTER_SITES=	KERNEL_ORG/linux/utils/util-linux/v${PORTVERPREFIX}/
 DISTNAME=	util-linux-${PORTVERSION}
@@ -13,18 +11,25 @@ COMMENT=	Manage locks from shell scripts
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-GNU_CONFIGURE=	yes
 USES=		libtool pkgconfig
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 OPTIONS_DEFINE=	NLS
+=======
+GNU_CONFIGURE=	yes
+>>>>>>> origin/freebsd/main
 
-NLS_CONFIGURE_ENABLE=	nls
-NLS_USES=	autoreconf gettext
+CFLAGS=		-D_WITH_CPU_SET_T
 
 PLIST_FILES=	bin/flock man/man1/flock.1.gz \
 		etc/bash_completion.d/flock
+
+OPTIONS_DEFINE=	NLS
+
+NLS_USES=	autoreconf gettext
+NLS_CONFIGURE_ENABLE=	nls
 
 do-build:
 	# skip building unneeded utils

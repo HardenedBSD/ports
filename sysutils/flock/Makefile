@@ -13,13 +13,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		libtool pkgconfig
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-OPTIONS_DEFINE=	NLS
-=======
 GNU_CONFIGURE=	yes
->>>>>>> origin/freebsd/main
 
 CFLAGS=		-D_WITH_CPU_SET_T
 

@@ -11,15 +11,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake:insource cpe go:no_targets localbase perl5
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off stackautoinit:off
-=======
+
 CONFLICTS_INSTALL=	security/libressl \
 			security/libressl-devel \
 			security/openssl \
 			security/openssl-devel \
 			security/openssl-quictls
->>>>>>> origin/freebsd/main
 
 CPE_VENDOR=	google
 

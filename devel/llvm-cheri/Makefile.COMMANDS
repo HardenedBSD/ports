@@ -14,7 +14,6 @@ LLVM_COMMANDS=	\
 		llvm-cov \
 		llvm-cvtres \
 		llvm-cxxmap \
-		llvm-debuginfod-find \
 		llvm-diff \
 		llvm-dis \
 		llvm-dlltool \
@@ -30,6 +29,7 @@ LLVM_COMMANDS=	\
 		llvm-link \
 		llvm-lipo \
 		llvm-mc \
+		llvm-mca \
 		llvm-ml \
 		llvm-modextract \
 		llvm-mt \
@@ -56,7 +56,6 @@ LLVM_COMMANDS=	\
 		llvm-symbolizer \
 		llvm-tapi-diff \
 		llvm-tblgen \
-		llvm-tli-checker \
 		llvm-undname \
 		llvm-windres \
 		llvm-xray \
@@ -73,10 +72,9 @@ CLANG_COMMANDS=	\
 		clang-cpp \
 		clang-extdef-mapping \
 		clang-format \
-		clang-nvlink-wrapper \
 		clang-offload-bundler \
 		clang-offload-wrapper \
-		clang-repl \
+		clang-rename \
 		clang-scan-deps \
 		diagtool \
 		hmaptool \
@@ -84,28 +82,6 @@ CLANG_COMMANDS=	\
 		scan-build \
 		scan-build-py \
 		scan-view
-
-EXTRAS_COMMANDS= \
-		clangd \
-		clang-apply-replacements \
-		clang-change-namespace \
-		clang-doc \
-		clang-include-fixer \
-		clang-move \
-		clang-query \
-		clang-rename \
-		clang-reorder-fields \
-		clang-tidy \
-		find-all-symbols \
-		modularize \
-		pp-trace
-
-FLANG_COMMANDS=	\
-		f18-parse-demo \
-		fir-opt \
-		flang \
-		flang-new \
-		tco
 
 LIT_COMMANDS=	\
 		FileCheck \
@@ -115,6 +91,8 @@ LIT_COMMANDS=	\
 LLD_COMMANDS=	\
 		ld.lld \
 		ld64.lld \
+		ld64.lld.darwinnew \
+		ld64.lld.darwinold \
 		lld \
 		lld-link \
 		wasm-ld
@@ -125,15 +103,3 @@ LLDB_COMMANDS=	\
 		lldb-instr \
 		lldb-server \
 		lldb-vscode
-
-MLIR_COMMANDS=	\
-		mlir-cpu-runner \
-		mlir-lsp-server \
-		mlir-opt \
-		mlir-pdll \
-		mlir-reduce \
-		mlir-tblgen \
-		mlir-translate
-
-OPENMP_COMMANDS=	\
-		llvm-omp-device-info

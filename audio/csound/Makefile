@@ -22,11 +22,9 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 CPE_VENDOR=	csounds
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
-=======
+
 CONFLICTS_INSTALL= clearsilver go-cs libextractor outguess
->>>>>>> origin/freebsd/main
 
 CFLAGS_powerpc=	-maltivec
 CFLAGS_powerpcspe=	-DPFFFT_SIMD_DISABLE

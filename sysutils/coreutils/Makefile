@@ -22,11 +22,9 @@ CONFIGURE_ARGS=	--program-prefix=g	\
 		--program-transform-name=s/stat/nustat/
 CONFIGURE_ENV=	FORCE_UNSAFE_CONFIGURE=1
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
-=======
+
 CONFLICTS_INSTALL=	gdu geneweb gexpr rubygem-god # bin/gdu bin/gexpr bin/god bin/gwc
->>>>>>> origin/freebsd/main
 
 INFO=		coreutils
 

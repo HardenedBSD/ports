@@ -20,7 +20,11 @@ USE_PERL5=	run
 USE_RC_SUBR=	apache24 htcacheclean
 GNU_CONFIGURE=	yes
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
+=======
+CONFLICTS_INSTALL=	py*-circuits # bin/htpasswd
+>>>>>>> origin/freebsd/main
 
 CPE_VENDOR=	apache
 CPE_PRODUCT=	http_server

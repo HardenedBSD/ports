@@ -18,7 +18,11 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	elm
 GH_PROJECT=	compiler
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
+=======
+CONFLICTS_INSTALL=	elm # bin/elm (from mail/elm)
+>>>>>>> origin/freebsd/main
 
 USE_CABAL=	ansi-terminal-0.8.2 \
 		ansi-wl-pprint-0.6.8.2_2 \

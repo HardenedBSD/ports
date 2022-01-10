@@ -50,6 +50,8 @@ GNU_CONFIGURE=	yes
 # a postinstall mv.
 CONFIGURE_ARGS=	AR="ar cr" --without-boost --libdir=${PREFIX}/lib/ncbi-tools++
 
+CONFLICTS_INSTALL=	ncbi-cxx-toolkit
+
 WRKSRC_SUBDIR=	c++
 
 .include <bsd.port.pre.mk>

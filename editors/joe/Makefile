@@ -12,9 +12,13 @@ COMMENT=	Joe's Own Editor
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=  safestack
 
 CONFLICTS=	joe-2.*
+=======
+CONFLICTS=	jupp
+>>>>>>> origin/freebsd/main
 
 USES=		gmake iconv localbase ncurses
 GNU_CONFIGURE=	yes

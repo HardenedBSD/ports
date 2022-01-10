@@ -23,7 +23,7 @@ LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR} \
 
 FLAVORS=	${12 11:L:S/^/llvm/}
 
-CONFLICTS_INSTALL=	${PORTNAME}-*
+CONFLICTS_INSTALL=	${PORTNAME}-llvm*
 
 USE_HARDENING=	pie:off
 

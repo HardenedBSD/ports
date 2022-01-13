@@ -3,7 +3,7 @@
 PORTNAME=       paxtest
 PORTVERSION=	0.9.15
 PORTREVISION=	0
-CATEGORIES=     hardenedbsd
+CATEGORIES=     security
 MAINTAINER=     loic.f@hardenedbsd.org
 MASTER_SITES=	https://www.grsecurity.net/~spender/
 DISTNAME=       ${PORTNAME}-${PORTVERSION}

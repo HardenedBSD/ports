@@ -1,16 +1,16 @@
 # Created by: Rozhuk Ivan <rozhuk.im@gmail.com>
 
-PORTNAME=	game.libretro.genplus
-PORTVERSION=	1.7.4.31
+PORTNAME=	game.libretro.fceumm
+PORTVERSION=	0.0.1.36
 DISTVERSIONSUFFIX=	-Matrix
 CATEGORIES=	games
 
 MAINTAINER=	rozhuk.im@gmail.com
-COMMENT=	Kodi game addon for Sega - MS/GG/MD/CD (Genesis Plus GX)
+COMMENT=	Kodi game addon for NES / Famicom (FCEUmm)
 
 LICENSE=	GPLv2+
 
-LIBRETRO_PORT=	libretro-genesis_plus_gx
+LIBRETRO_PORT=	libretro-fceumm
 
 RUN_DEPENDS=	kodi-addon-game.libretro>=0:games/kodi-addon-game.libretro \
 		${LIBRETRO_PORT}>=0:games/${LIBRETRO_PORT}

@@ -996,7 +996,6 @@
     SUBDIR += pimcommon
     SUBDIR += pimd
     SUBDIR += pimdd
-    SUBDIR += pipsecd
     SUBDIR += pjsip
     SUBDIR += pkt-gen
     SUBDIR += pktanon

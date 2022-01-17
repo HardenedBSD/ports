@@ -50,6 +50,7 @@ CONFIGURE_ARGS=	--with-ssl="${OPENSSLBASE}" \
 		--pcre2 \
 		--mandir=${PREFIX}/man \
 		${ICONV_CONFIGURE_ARGS}
+CONFIGURE_ENV=	CC_FOR_BUILD="${CC}"
 
 # Header cache
 BDB_CONFIGURE_ON=		--bdb

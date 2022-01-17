@@ -21,7 +21,7 @@ USE_HARDENING=	pie:off
 USE_GITHUB=	yes
 GH_ACCOUNT=	dhmunro
 
-COFNLICTS_INSTALL=	gist p5-App-gist py*-python-gist # bin/gist
+CONFLICTS_INSTALL=	gist p5-App-gist py*-python-gist # bin/gist
 
 INFO=		yorick
 PORTDOCS=	FILE_FORMATS README drat.doc graph.doc hex.doc \

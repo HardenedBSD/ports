@@ -472,6 +472,7 @@
     SUBDIR += mpd5
     SUBDIR += mpich
     SUBDIR += mpich2
+    SUBDIR += mpifx
     SUBDIR += mping
     SUBDIR += mptsd
     SUBDIR += mrouted

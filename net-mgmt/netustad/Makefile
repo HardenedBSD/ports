@@ -9,10 +9,16 @@ MASTER_SITES=	http://www.enderunix.org/netustad/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Web based admin tool that manages network services
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: adminpasswd
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: adminpasswd
+=======
+BROKEN=		Unfetchable
+DEPRECATED=	Abandonware, dead upstream, unfetchable and is marked BROKEN for 13+
+EXPIRATION_DATE=2022-03-31
+>>>>>>> origin/freebsd/main
 
 USES=		gettext
 USE_RC_SUBR=	${PORTNAME}

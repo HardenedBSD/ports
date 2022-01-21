@@ -38,13 +38,9 @@ LIB_DEPENDS=	liblcms2.so:graphics/lcms2 \
 		libqxp-0.0.so:textproc/libqxp \
 		libzmf-0.0.so:graphics/libzmf
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		cmake compiler:gcc-c++11-lib desktop-file-utils dos2unix gnome \
-=======
 USES=		cmake compiler:c++17-lang desktop-file-utils dos2unix gnome \
->>>>>>> origin/freebsd/main
 		jpeg pkgconfig python:3.6+ qt:5 shared-mime-info tar:xz
 USE_QT=		buildtools_build core declarative gui linguisttools_build \
 		network opengl printsupport qmake_build widgets xml

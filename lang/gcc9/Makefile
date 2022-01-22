@@ -4,11 +4,12 @@ BINARY_ALIAS= objdump=/usr/local/bin/objdump
 
 PORTNAME=	gcc
 PORTVERSION=	9.4.0
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
 
-MAINTAINER=	gerald@FreeBSD.org
+MAINTAINER=	toolchain@FreeBSD.org
 COMMENT=	GNU Compiler Collection 9
 
 LICENSE=	GPLv3 GPLv3RLE

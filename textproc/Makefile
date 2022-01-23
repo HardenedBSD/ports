@@ -1407,6 +1407,7 @@
     SUBDIR += py-pybtex
     SUBDIR += py-pybtex-docutils
     SUBDIR += py-pycountry
+    SUBDIR += py-pydata-sphinx-theme
     SUBDIR += py-pyexcel
     SUBDIR += py-pyexcel-ezodf
     SUBDIR += py-pyexcel-io
@@ -1467,7 +1468,9 @@
     SUBDIR += py-sphinx
     SUBDIR += py-sphinx-argparse
     SUBDIR += py-sphinx-autoapi
+    SUBDIR += py-sphinx-autobuild
     SUBDIR += py-sphinx-autodoc-typehints
+    SUBDIR += py-sphinx-book-theme
     SUBDIR += py-sphinx-copybutton
     SUBDIR += py-sphinx-inline-tabs
     SUBDIR += py-sphinx-intl
@@ -1475,6 +1478,7 @@
     SUBDIR += py-sphinx-markdown-tables
     SUBDIR += py-sphinx-me
     SUBDIR += py-sphinx-tabs
+    SUBDIR += py-sphinx-theme-builder
     SUBDIR += py-sphinx_press_theme
     SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_wikipedia
@@ -1747,7 +1751,6 @@
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
-    SUBDIR += rubygem-rouge2
     SUBDIR += rubygem-rouge312
     SUBDIR += rubygem-rouge326
     SUBDIR += rubygem-rttool

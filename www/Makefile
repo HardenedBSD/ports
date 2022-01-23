@@ -1902,10 +1902,12 @@
     SUBDIR += rubygem-faraday-em_http
     SUBDIR += rubygem-faraday-em_synchrony
     SUBDIR += rubygem-faraday-httpclient
+    SUBDIR += rubygem-faraday-multipart
     SUBDIR += rubygem-faraday-net_http
     SUBDIR += rubygem-faraday-net_http_persistent
     SUBDIR += rubygem-faraday-patron
     SUBDIR += rubygem-faraday-rack
+    SUBDIR += rubygem-faraday-retry
     SUBDIR += rubygem-faraday0
     SUBDIR += rubygem-faraday14
     SUBDIR += rubygem-faraday_middleware
@@ -2037,6 +2039,7 @@
     SUBDIR += rubygem-ostatus2
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
+    SUBDIR += rubygem-patron
     SUBDIR += rubygem-platform-api
     SUBDIR += rubygem-propshaft
     SUBDIR += rubygem-protocol-hpack

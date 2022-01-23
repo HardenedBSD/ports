@@ -1,7 +1,7 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
 
 PORTNAME=	proxychains-ng
-PORTVERSION=	4.15
+PORTVERSION=	4.16
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net security
 
@@ -18,6 +18,8 @@ GH_ACCOUNT=	rofl0r
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
+
+CFLAGS+=	-DMONTEREY_HOOKING
 
 CONFLICTS=	proxychains
 

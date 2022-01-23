@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--enable-pie
 .elif ${pie_ARGS:Mjava}
 CONFIGURE_ARGS+=	--with-extra-cflags="-fPIE -fPIC" \
 			--with-extra-cxxflags="-fPIE -fPIC" \
-			--with-extra-ldflags="-pie"
+			--with-extra-ldflags="-fPIC -pie"
 .elif ${pie_ARGS:Mgolang}
 .if ${ARCH} != aarch64
 GO_BUILDFLAGS+=		-buildmode=pie

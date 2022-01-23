@@ -87,7 +87,11 @@ _SUF2=	,${PORTEPOCH}
 .endif
 
 .if ${OPSYS} == "FreeBSD"
+<<<<<<< HEAD
 .if exists(/usr/sbin/dtrace) && (${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc)
+=======
+.if exists(/usr/sbin/dtrace) && (${ARCH} == amd64 || ${ARCH} == i386 || ${ARCH} == powerpc64le || ${ARCH} == powerpc64 || ${ARCH} == powerpc)
+>>>>>>> origin/freebsd/main
 CONFIGURE_ARGS+=--enable-dtrace
 .else
 CONFIGURE_ARGS+=--disable-dtrace

@@ -1307,7 +1307,6 @@
     SUBDIR += tripwire
     SUBDIR += tripwire-131
     SUBDIR += trousers
-    SUBDIR += truecrypt
     SUBDIR += tthsum
     SUBDIR += u2f-devd
     SUBDIR += uacme

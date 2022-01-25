@@ -12,16 +12,10 @@ COMMENT=	Redirect connection through proxy servers
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		gmake tar:bzip2
-USE_GITHUB=	yes
-GH_ACCOUNT=	rofl0r
-=======
 USES=		gmake tar:xz
 HAS_CONFIGURE=	yes
->>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
 
 CFLAGS+=	-DMONTEREY_HOOKING

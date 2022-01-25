@@ -2386,7 +2386,6 @@
     SUBDIR += ytdl
     SUBDIR += yuicompressor
     SUBDIR += zend-framework
-    SUBDIR += zend-framework1
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
     SUBDIR += zola

@@ -11,9 +11,13 @@ COMMENT=	File and directory integrity checker
 LIB_DEPENDS=	libmhash.so:security/mhash \
 		libpcre.so:devel/pcre
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 USES=		autoreconf bison gmake localbase
+=======
+USES=		bison gmake localbase
+>>>>>>> origin/freebsd/main
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-mhash \

@@ -393,7 +393,6 @@
     SUBDIR += mod_mono
     SUBDIR += mod_mpm_itk
     SUBDIR += mod_perl2
-    SUBDIR += mod_php73
     SUBDIR += mod_php74
     SUBDIR += mod_php80
     SUBDIR += mod_php81
@@ -1378,9 +1377,6 @@
     SUBDIR += pglogd
     SUBDIR += phalcon
     SUBDIR += phalcon4
-    SUBDIR += php73-opcache
-    SUBDIR += php73-session
-    SUBDIR += php73-tidy
     SUBDIR += php74-opcache
     SUBDIR += php74-session
     SUBDIR += php74-tidy
@@ -1674,6 +1670,7 @@
     SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
+    SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
     SUBDIR += py-httpx013
     SUBDIR += py-hyper

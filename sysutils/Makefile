@@ -41,6 +41,7 @@
     SUBDIR += android-file-transfer-qt5
     SUBDIR += angrysearch
     SUBDIR += ansible
+    SUBDIR += ansible4
     SUBDIR += ansible-iocage
     SUBDIR += ansible-kld
     SUBDIR += ansible-sshjail
@@ -956,8 +957,6 @@
     SUBDIR += pfstat
     SUBDIR += pftables
     SUBDIR += pftop
-    SUBDIR += php73-fileinfo
-    SUBDIR += php73-posix
     SUBDIR += php74-fileinfo
     SUBDIR += php74-posix
     SUBDIR += php80-fileinfo
@@ -1020,6 +1019,7 @@
     SUBDIR += pxp-agent
     SUBDIR += py-ansible-base
     SUBDIR += py-ansible-core
+    SUBDIR += py-ansible-core211
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
     SUBDIR += py-azure-cli

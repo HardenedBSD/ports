@@ -10,13 +10,9 @@ COMMENT=	Accounting and aggregation tool for IPv4 and IPv6 traffic
 
 LICENSE=	GPLv2
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		libtool pkgconfig localbase
-=======
 USES=		libtool pkgconfig localbase autoreconf
->>>>>>> origin/freebsd/main
 USE_RC_SUBR=	pmacctd nfacctd sfacctd
 SUB_FILES=	pkg-message
 GNU_CONFIGURE=	yes

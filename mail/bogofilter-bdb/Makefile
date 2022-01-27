@@ -30,6 +30,8 @@ SHEBANG_FILES=	contrib/randomtrain.sh contrib/scramble.sh \
 USE_PERL5=	run
 GNU_CONFIGURE=	yes
 
+USE_HARDENING=	stackautoinit:off
+
 CPE_VENDOR=	bogofilter_project
 
 UNICODE_USES=	iconv

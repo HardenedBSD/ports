@@ -30,6 +30,11 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 USES=		compiler:c++14-lang cpe python:3.5+,build scons shebangfix
 USE_RC_SUBR=	mongod
 
+MPROTECT_DISABLE=	bin/install_compass
+MPROTECT_DISABLE+=	bin/mongo
+MPROTECT_DISABLE+=	bin/mongod
+MPROTECT_DISABLE+=	bin/mongos
+
 CONFLICTS_INSTALL=	mongodb36 mongodb4[24] mongodb50
 
 SHEBANG_FILES=	src/mongo/installer/compass/install_compass

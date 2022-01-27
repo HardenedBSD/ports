@@ -33,6 +33,10 @@ USE_RC_SUBR=	mongod
 SHEBANG_FILES=	buildscripts/scons.py
 python_OLD_CMD=	@python_interpreter@
 
+MPROTECT_DISABLE+=	bin/mongo
+MPROTECT_DISABLE+=	bin/mongod
+MPROTECT_DISABLE+=	bin/mongos
+
 CONFLICTS_INSTALL=	mongodb36 mongodb4[024]
 
 USERS=		mongodb

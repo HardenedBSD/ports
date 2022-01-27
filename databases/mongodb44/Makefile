@@ -32,6 +32,10 @@ USE_RC_SUBR=	mongod
 
 PORTSCOUT=	limit:^4\.4\.
 
+MPROTECT_DISABLE+=	bin/mongo
+MPROTECT_DISABLE+=	bin/mongod
+MPROTECT_DISABLE+=	bin/mongos
+
 CONFLICTS_INSTALL=	mongodb36 mongodb4[02] mongodb50
 
 OPTIONS_DEFINE=	LTO SASL SSL

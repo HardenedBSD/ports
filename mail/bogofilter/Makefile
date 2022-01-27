@@ -1,28 +1,22 @@
-# Created by: Matthias Andree <matthias.andree@gmx.de>
-
 PORTNAME=	bogofilter
-DISTVERSION=	1.2.5
-PORTREVISION?=	3
-CATEGORIES?=	mail
-MASTER_SITES=	SF/bogofilter/bogofilter-stable/
+PORTREVISION=	3
+CATEGORIES=	mail
+PKGNAMESUFFIX=	# blank, to override bogofilter-bdb's
 
-MAINTAINER?=	mandree@FreeBSD.org
-COMMENT=	Fast, teachable, learning spam detector
+MAINTAINER=	mandree@FreeBSD.org
 
-LICENSE=	GPLv2
+LIB_DEPENDS=	liblmdb.so:databases/lmdb
 
-.if !defined(MASTERDIR) || ${MASTERDIR} == ${.CURDIR}
-# building master port
-USES+=		bdb:5+
-.endif
+CONFLICTS_INSTALL=	bogofilter-bdb bogofilter-kc bogofilter-sqlite
 
-OPTIONS_DEFINE=		GSL UNICODE DOCS
-OPTIONS_DEFAULT=	GSL UNICODE
-GSL_DESC=		Link with system-wide GSL dynamically (recommended)
-UNICODE_DESC=		Normalize tokens to Unicode (UTF-8) (recommended)
+CONFIGURE_ARGS=	--with-database=lmdb
+BF_CPPFLAGS=	-I${LOCALBASE}/include
+BF_LIBS=
+DESCR=		${PKGDIR}/pkg-descr
 
-CONFLICTS_INSTALL?=	bogofilter-sqlite bogofilter-lmdb bogofilter-kc
+MASTERDIR=	${.CURDIR}/../bogofilter-bdb
 
+<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
 USES+=		cpe perl5 shebangfix tar:xz
@@ -97,3 +91,6 @@ post-install:
 .endfor
 
 .include <bsd.port.post.mk>
+=======
+.include "${MASTERDIR}/Makefile"
+>>>>>>> origin/freebsd/main

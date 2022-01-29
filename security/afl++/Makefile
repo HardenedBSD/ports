@@ -23,14 +23,10 @@ _LLVM_VER=		13
 llvm_BUILD_DEPENDS=	clang${_LLVM_VER}:devel/llvm${_LLVM_VER}
 llvm_RUN_DEPENDS=	clang${_LLVM_VER}:devel/llvm${_LLVM_VER}
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off retpoline:off stackautoinit:off
 NO_UNUSED_ARGUMENTS_CHECK=  yes
 
-USES=		gmake tar:tgz
-=======
 USES=		gmake shebangfix tar:tgz
->>>>>>> origin/freebsd/main
 .if ${FLAVOR} == gcc
 USE_GCC=	yes
 .endif

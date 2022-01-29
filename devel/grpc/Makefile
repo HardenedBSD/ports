@@ -38,11 +38,9 @@ USE_LDCONFIG=	yes
 PLIST_SUB=	SHLIB_MAJOR=${PORTVERSION:R} \
 		SHLIB_MINOR=${PORTVERSION:E}
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off relro:off
-=======
 CONFLICTS_INSTALL=	grpc130 grpc134
->>>>>>> origin/freebsd/main
+
+USE_HARDENING=	pie:off relro:off
 
 .include <bsd.port.pre.mk>
 

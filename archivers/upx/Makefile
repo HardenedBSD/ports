@@ -14,15 +14,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libucl.so:archivers/ucl
 
-<<<<<<< HEAD
-USE_HARDENING=	stackautoinit:off
-
-USES=		cpe gmake perl5
-
-=======
 USES=		cpe gmake perl5 tar:xz
->>>>>>> origin/freebsd/main
 USE_PERL5=	build
+
+USE_HARDENING=	stackautoinit:off
 
 MAKE_ENV=	UPX_UCLDIR=${LOCALBASE} \
 		target=freebsd

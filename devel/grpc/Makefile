@@ -1,7 +1,7 @@
 # Created by: vanilla@
 
 PORTNAME=	grpc
-PORTVERSION=	1.42.0
+PORTVERSION=	1.43.2
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	2
 CATEGORIES=	devel
@@ -35,12 +35,14 @@ CMAKE_ARGS=	-DCMAKE_CXX_STANDARD=17 \
 CMAKE_ON=	BUILD_SHARED_LIBS
 USE_LDCONFIG=	yes
 
-CONFLICTS_INSTALL=	grpc130 grpc134
-
 PLIST_SUB=	SHLIB_MAJOR=${PORTVERSION:R} \
 		SHLIB_MINOR=${PORTVERSION:E}
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
+=======
+CONFLICTS_INSTALL=	grpc130 grpc134
+>>>>>>> origin/freebsd/main
 
 .include <bsd.port.pre.mk>
 

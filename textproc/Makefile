@@ -449,8 +449,8 @@
     SUBDIR += mdbook
     SUBDIR += mdbook-linkcheck
     SUBDIR += mdocml
-    SUBDIR += meld
     SUBDIR += meilisearch
+    SUBDIR += meld
     SUBDIR += mergestat
     SUBDIR += metauml
     SUBDIR += mgdiff
@@ -1622,6 +1622,7 @@
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
     SUBDIR += rubygem-cucumber-html-formatter
+    SUBDIR += rubygem-cucumber-html-formatter17
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
@@ -1702,8 +1703,8 @@
     SUBDIR += rubygem-minima
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
-    SUBDIR += rubygem-nokogiri111
     SUBDIR += rubygem-nokogiri-diff
+    SUBDIR += rubygem-nokogiri111
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opml
@@ -1742,7 +1743,6 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge312
-    SUBDIR += rubygem-rouge326
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt

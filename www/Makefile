@@ -1590,6 +1590,7 @@
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
     SUBDIR += py-fastapi
+    SUBDIR += py-fastapi-users
     SUBDIR += py-feedgenerator
     SUBDIR += py-flask
     SUBDIR += py-flask-admin

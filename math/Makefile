@@ -944,6 +944,7 @@
     SUBDIR += py-symcxx
     SUBDIR += py-sympy
     SUBDIR += py-theano
+    SUBDIR += py-topologic
     SUBDIR += py-triangle
     SUBDIR += py-uncertainties
     SUBDIR += py-unyt
@@ -1056,6 +1057,7 @@
     SUBDIR += tomsfastmath
     SUBDIR += topaz
     SUBDIR += topcom
+    SUBDIR += topologic
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += trlib

@@ -14,19 +14,14 @@ COMMENT?=	Complete color management solution
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off stackautoinit:off
 
-USES=		alias cmake compiler:c++11-lang localbase:ldflags pkgconfig \
-		shebangfix
-=======
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libImath.so:math/Imath \
 		libpystring.so:devel/pystring \
 		libyaml-cpp.so:devel/yaml-cpp
 USES=		alias cmake compiler:c++14-lang localbase:ldflags \
 		pkgconfig
->>>>>>> origin/freebsd/main
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	AcademySoftwareFoundation

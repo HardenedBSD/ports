@@ -1299,6 +1299,7 @@
     SUBDIR += smartmontools
     SUBDIR += smenu
     SUBDIR += smp_utils
+    SUBDIR += smug
     SUBDIR += snap
     SUBDIR += snapraid
     SUBDIR += snmp_exporter

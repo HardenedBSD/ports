@@ -41,6 +41,8 @@ USE_SDL=	sdl2
 USE_XORG=	x11 xcursor
 USE_PERL5=	build
 
+MPROTECT_DISABLE=	bin/pyrogenesis
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}-alpha
 BUILD_WRKSRC=	${WRKSRC}/build/workspaces/gcc
 MAKE_ARGS=	config=release verbose=1

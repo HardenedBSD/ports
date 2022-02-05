@@ -210,6 +210,7 @@
     SUBDIR += asyncplusplus
     SUBDIR += atf
     SUBDIR += athens
+    SUBDIR += atlantis
     SUBDIR += atlas
     SUBDIR += atlas-devel
     SUBDIR += aunit
@@ -935,6 +936,7 @@
     SUBDIR += grpc
     SUBDIR += grpc130
     SUBDIR += grpc134
+    SUBDIR += grpc142
     SUBDIR += grv
     SUBDIR += gsettings-desktop-schemas
     SUBDIR += gsoap

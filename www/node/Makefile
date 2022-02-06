@@ -18,6 +18,8 @@ LLVM_OBJDUMP_UNSAFE=	yes
 USES=		compiler:c++11-lib gmake python:3.6-3.9,build pkgconfig \
 		localbase shebangfix
 
+MPROTECT_DISABLE=	bin/node
+
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
 OPTIONS_DEFAULT=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 OPTIONS_SUB=		yes

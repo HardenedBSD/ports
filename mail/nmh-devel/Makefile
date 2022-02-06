@@ -1,17 +1,22 @@
 # Created by: Scott Blachowicz <scott+ports@sabami.seaslug.org>
 
 PORTNAME=	nmh
-PORTVERSION=	1.7.1
-PORTREVISION=	2
+PORTVERSION=	${NMH_COMMIT_DATE}
 CATEGORIES=	mail
-MASTER_SITES=	SAVANNAH
+PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Cleaned up MH mailer suite
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	cschuber
+GH_PROJECT=     nmh
+GH_TAGNAME=     9159514406
+COMMIT_DATE=    2022.02.04
+
 LICENSE=	BSD3CLAUSE
 
-USES=		cpe gmake iconv ncurses readline shebangfix
+USES=		autoreconf:build cpe gmake iconv ncurses readline shebangfix
 SHEBANG_FILES=	docs/contrib/ml docs/contrib/replyfilter docs/contrib/vpick
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/libexec/nmh \
@@ -93,7 +98,10 @@ LDFLAGS+=	-g
 DEBUG_FLAGS+=	-O0 -Wall -Wextra -g
 .endif
 
-CONFLICTS_INSTALL=	ali ja-mh pixie p5-Dist-Joseki nmh-devel
+CONFLICTS_INSTALL=	ali ja-mh pixie p5-Dist-Joseki nmh-1.*
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
 
 post-install:
 	@${FIND} ${STAGEDIR}${ETCDIR} -type f -exec ${MV} {} {}-dist \;

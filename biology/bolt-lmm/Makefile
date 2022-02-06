@@ -36,6 +36,8 @@ MAKE_ARGS=		BOOST_INSTALL_DIR=${LOCALBASE} \
 			MEMCPY="" \
 			LLAPACK="-lopenblas -lgfortran"
 
+CONFLICTS_INSTALL=	rubygem-bolt # bin/bolt
+
 PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	EXAMPLES

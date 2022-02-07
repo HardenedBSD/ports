@@ -2,17 +2,19 @@
 
 PORTNAME=	nmh
 PORTVERSION=	${NMH_COMMIT_DATE}
+PORTREVISION=	2
+MASTER_SITES=	#
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-devel
+DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${NMH_COMMIT_DATE}-${GIT_TAGNAME}
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Cleaned up MH mailer suite
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	cschuber
-GH_PROJECT=     nmh
-GH_TAGNAME=     9159514406
-NMH_COMMIT_DATE=    2022.02.04
+GIT_TAGNAME=	9159514
+NMH_COMMIT_DATE=	2022.02.04
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${GIT_TAGNAME}
 
 LICENSE=	BSD3CLAUSE
 
@@ -22,7 +24,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/libexec/nmh \
 		--sysconfdir=${PREFIX}/etc \
 		--docdir=${DOCSDIR}
-LIB_DEPENDS=	libcurl.so:ftp/curl
+LIB_DEPENDS=	libcurl.so:ftp/curl \
+		liblockfile.so:devel/liblockfile
 
 OPTIONS_DEFINE=	DOCS HASH_BKP SASL2 TLS REPLYFILTER
 OPTIONS_RADIO=	MIME_HTML
@@ -81,7 +84,7 @@ W3M_DESC=	Install dependencies for www/w3m
 W3M_BUILD_DEPENDS=	w3m>=0:www/w3m
 W3M_RUN_DEPENDS=	w3m>=0:www/w3m
 
-OPTIONS_DEFAULT=	SMTP FLOCK W3M
+OPTIONS_DEFAULT=	SENDMAIL_PIPE FLOCK W3M
 
 .include <bsd.port.options.mk>
 
@@ -99,6 +102,13 @@ DEBUG_FLAGS+=	-O0 -Wall -Wextra -g
 .endif
 
 CONFLICTS_INSTALL=	ali ja-mh pixie p5-Dist-Joseki nmh-1.*
+
+do-fetch:
+	@cd ${DISTDIR} && \
+	if [ ! -f ${DISTNAME}${EXTRACT_SUFX} ]; then \
+		fetch -o ${DISTNAME}${EXTRACT_SUFX} \
+		    "https://git.savannah.gnu.org/gitweb/?p=nmh.git;a=snapshot;h=${GIT_TAGNAME};sf=tgz"; \
+	fi
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh

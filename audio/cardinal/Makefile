@@ -19,7 +19,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libsndfile.so:audio/libsndfile \
 		libspeexdsp.so:audio/speexdsp
 
-USES=		gl gmake libarchive localbase:ldflags pkgconfig python shebangfix xorg
+USES=		compiler:c++11-lang gl gmake libarchive localbase:ldflags pkgconfig python shebangfix xorg
 USE_XORG=	x11 xcursor xext xrandr
 USE_GL=		gl
 

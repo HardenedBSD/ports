@@ -29,6 +29,9 @@ GH_TUPLE=	libmpack:libmpack:1.0.5:libmpack \
 		libmpack:libmpack-lua:1.0.7:libmpack_lua
 PORTSCOUT=	limit:^[0-9\.v]+$$
 
+MPROTECT_DISABLE=	bin/nvim
+DISALLOW_MAP32BIT_DISABLE=	bin/nvim
+
 CMAKE_ARGS=	-DLUA_PRG:FILEPATH="${LUA_CMD}" \
 		-DCMAKE_INSTALL_MANDIR:PATH="${MANPREFIX}/man" \
 		-DDEPS_PREFIX:PATH="${LOCALBASE}"

@@ -27,6 +27,7 @@ CMAKE_ARGS=	-DMultiMC_LAYOUT="lin-system"
 CMAKE_OFF=	MultiMC_UPDATER
 CXXFLAGS+=	-Wno-inconsistent-missing-override \
 		-Wno-delete-non-virtual-dtor \
+		-Wno-unused-but-set-variable \
 		-DLWJGL_DIR='\"${LOCALBASE}/lib/lwjgl\"'
 
 post-install:

@@ -9,6 +9,8 @@ COMMENT?=	Java Development Kit ${JDK_MAJOR_VERSION}
 
 LICENSE=	GPLv2
 
+USE_HARDENING=	pie:java
+
 ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	zip:archivers/zip \

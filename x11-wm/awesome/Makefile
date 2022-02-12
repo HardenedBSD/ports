@@ -51,6 +51,8 @@ DBUS_CMAKE_OFF=		-DWITH_DBUS:BOOL=OFF
 MANPAGES_BUILD_DEPENDS=	asciidoctor:textproc/rubygem-asciidoctor
 MANPAGES_CMAKE_OFF=	-DGENERATE_MANPAGES:BOOL=OFF
 
+MPROTECT_DISABLE=	bin/awesome
+PAGEEXEC_DISABLE=	bin/awesome
 .include <bsd.port.pre.mk>
 
 .if	(exists(${LOCALBASE}/libdata/pkgconfig/cairo.pc) && \

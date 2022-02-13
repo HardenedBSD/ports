@@ -10,6 +10,8 @@ COMMENT=	Java Development Kit ${JDK_MAJOR_VERSION}
 
 LICENSE=	GPLv2
 
+USE_HARDENING=	pie:java
+
 ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	zip:archivers/zip \
@@ -31,6 +33,94 @@ USES=		compiler:features cpe gmake iconv jpeg pkgconfig xorg
 USE_XORG=	x11 xext xi xrandr xrender xt xtst
 
 CPE_VENDOR=	oracle
+
+MPROTECT_DISABLE=	openjdk16/bin/jinfo
+MPROTECT_DISABLE+=	openjdk16/bin/jdb
+MPROTECT_DISABLE+=	openjdk16/bin/java-rmi.cgi
+MPROTECT_DISABLE+=	openjdk16/bin/jdeps
+MPROTECT_DISABLE+=	openjdk16/bin/wsimport
+MPROTECT_DISABLE+=	openjdk16/bin/appletviewer
+MPROTECT_DISABLE+=	openjdk16/bin/extcheck
+MPROTECT_DISABLE+=	openjdk16/bin/tnameserv
+MPROTECT_DISABLE+=	openjdk16/bin/jps
+MPROTECT_DISABLE+=	openjdk16/bin/jarsigner
+MPROTECT_DISABLE+=	openjdk16/bin/jhat
+MPROTECT_DISABLE+=	openjdk16/bin/rmid
+MPROTECT_DISABLE+=	openjdk16/bin/javah
+MPROTECT_DISABLE+=	openjdk16/bin/keytool
+MPROTECT_DISABLE+=	openjdk16/bin/jstack
+MPROTECT_DISABLE+=	openjdk16/bin/policytool
+MPROTECT_DISABLE+=	openjdk16/bin/orbd
+MPROTECT_DISABLE+=	openjdk16/bin/xjc
+MPROTECT_DISABLE+=	openjdk16/bin/rmic
+MPROTECT_DISABLE+=	openjdk16/bin/idlj
+MPROTECT_DISABLE+=	openjdk16/bin/jrunscript
+MPROTECT_DISABLE+=	openjdk16/bin/servertool
+MPROTECT_DISABLE+=	openjdk16/bin/pack200
+MPROTECT_DISABLE+=	openjdk16/bin/jconsole
+MPROTECT_DISABLE+=	openjdk16/bin/jjs
+MPROTECT_DISABLE+=	openjdk16/bin/jstat
+MPROTECT_DISABLE+=	openjdk16/bin/jsadebugd
+MPROTECT_DISABLE+=	openjdk16/bin/jstatd
+MPROTECT_DISABLE+=	openjdk16/bin/java
+MPROTECT_DISABLE+=	openjdk16/bin/jcmd
+MPROTECT_DISABLE+=	openjdk16/bin/wsgen
+MPROTECT_DISABLE+=	openjdk16/bin/native2ascii
+MPROTECT_DISABLE+=	openjdk16/bin/clhsdb
+MPROTECT_DISABLE+=	openjdk16/bin/javap
+MPROTECT_DISABLE+=	openjdk16/bin/schemagen
+MPROTECT_DISABLE+=	openjdk16/bin/javac
+MPROTECT_DISABLE+=	openjdk16/bin/hsdb
+MPROTECT_DISABLE+=	openjdk16/bin/rmiregistry
+MPROTECT_DISABLE+=	openjdk16/bin/jar
+MPROTECT_DISABLE+=	openjdk16/bin/serialver
+MPROTECT_DISABLE+=	openjdk16/bin/javadoc
+MPROTECT_DISABLE+=	openjdk16/bin/jmap
+MPROTECT_DISABLE+=	openjdk16/bin/unpack200
+
+PAGEEXEC_DISABLE=	openjdk16/bin/jinfo
+PAGEEXEC_DISABLE+=	openjdk16/bin/jdb
+PAGEEXEC_DISABLE+=	openjdk16/bin/java-rmi.cgi
+PAGEEXEC_DISABLE+=	openjdk16/bin/jdeps
+PAGEEXEC_DISABLE+=	openjdk16/bin/wsimport
+PAGEEXEC_DISABLE+=	openjdk16/bin/appletviewer
+PAGEEXEC_DISABLE+=	openjdk16/bin/extcheck
+PAGEEXEC_DISABLE+=	openjdk16/bin/tnameserv
+PAGEEXEC_DISABLE+=	openjdk16/bin/jps
+PAGEEXEC_DISABLE+=	openjdk16/bin/jarsigner
+PAGEEXEC_DISABLE+=	openjdk16/bin/jhat
+PAGEEXEC_DISABLE+=	openjdk16/bin/rmid
+PAGEEXEC_DISABLE+=	openjdk16/bin/javah
+PAGEEXEC_DISABLE+=	openjdk16/bin/keytool
+PAGEEXEC_DISABLE+=	openjdk16/bin/jstack
+PAGEEXEC_DISABLE+=	openjdk16/bin/policytool
+PAGEEXEC_DISABLE+=	openjdk16/bin/orbd
+PAGEEXEC_DISABLE+=	openjdk16/bin/xjc
+PAGEEXEC_DISABLE+=	openjdk16/bin/rmic
+PAGEEXEC_DISABLE+=	openjdk16/bin/idlj
+PAGEEXEC_DISABLE+=	openjdk16/bin/jrunscript
+PAGEEXEC_DISABLE+=	openjdk16/bin/servertool
+PAGEEXEC_DISABLE+=	openjdk16/bin/pack200
+PAGEEXEC_DISABLE+=	openjdk16/bin/jconsole
+PAGEEXEC_DISABLE+=	openjdk16/bin/jjs
+PAGEEXEC_DISABLE+=	openjdk16/bin/jstat
+PAGEEXEC_DISABLE+=	openjdk16/bin/jsadebugd
+PAGEEXEC_DISABLE+=	openjdk16/bin/jstatd
+PAGEEXEC_DISABLE+=	openjdk16/bin/java
+PAGEEXEC_DISABLE+=	openjdk16/bin/jcmd
+PAGEEXEC_DISABLE+=	openjdk16/bin/wsgen
+PAGEEXEC_DISABLE+=	openjdk16/bin/native2ascii
+PAGEEXEC_DISABLE+=	openjdk16/bin/clhsdb
+PAGEEXEC_DISABLE+=	openjdk16/bin/javap
+PAGEEXEC_DISABLE+=	openjdk16/bin/schemagen
+PAGEEXEC_DISABLE+=	openjdk16/bin/javac
+PAGEEXEC_DISABLE+=	openjdk16/bin/hsdb
+PAGEEXEC_DISABLE+=	openjdk16/bin/rmiregistry
+PAGEEXEC_DISABLE+=	openjdk16/bin/jar
+PAGEEXEC_DISABLE+=	openjdk16/bin/serialver
+PAGEEXEC_DISABLE+=	openjdk16/bin/javadoc
+PAGEEXEC_DISABLE+=	openjdk16/bin/jmap
+PAGEEXEC_DISABLE+=	openjdk16/bin/unpack200
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	battleblow
@@ -106,7 +196,7 @@ JDK_BUILD_TYPE=		release
 .include <bsd.port.pre.mk>
 
 BOOTSTRAP_JDKS=	${LOCALBASE}/openjdk16 \
-		${LOCALBASE}/openjdk15
+		${LOCALBASE}/openjdk16
 
 # do we have valid native jdk installed?
 .for BJDK in ${BOOTSTRAP_JDKS}
@@ -117,8 +207,8 @@ BOOTSTRAPJDKDIR=	${BJDK}
 
 # if no valid jdk found, set dependency
 .if !defined(BOOTSTRAPJDKDIR)
-BOOTSTRAPJDKDIR?=	${LOCALBASE}/openjdk15
-BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:java/openjdk15
+BOOTSTRAPJDKDIR?=	${LOCALBASE}/openjdk16
+BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:java/openjdk16
 .endif
 
 JDK_BUILD_JVM=	server

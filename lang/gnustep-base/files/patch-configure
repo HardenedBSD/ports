@@ -1,0 +1,12 @@
+--- configure
++++ configure
+@@ -10833,8 +10833,6 @@
+ fi
+ done
+ 
+-  else
+-    as_fn_error $? "The ffi library (libffi) does not appear to be working.  Perhaps it's missing or you need a more recent version.  Version 3.0.9 or later should work, and you can find a link to it n the list of packages for download at http://www.gnustep.org/resources/sources.html" "$LINENO" 5
+   fi
+ elif test $enable_ffcall = yes; then
+ 
+

@@ -15,14 +15,13 @@ LICENSE_COMB=	multi
 BROKEN_FreeBSD_12_powerpc64=	fails to link: ld.lld: error: /usr/src/lib/csu/common/crtend.c:55: relocation R_PPC64_ADDR16_DS out of range: -32776 is not in [-32768, 32767]
 
 LIB_DEPENDS+=	libffi.so:devel/libffi
+LIB_DEPENDS+=  libffcall.so:devel/libffcall
 LIB_DEPENDS+=	libxml2.so:textproc/libxml2
 LIB_DEPENDS+=	libxslt.so:textproc/libxslt
 LIB_DEPENDS+=	libgmp.so:math/gmp
 LIB_DEPENDS+=	libgcrypt.so:security/libgcrypt
 
 RUN_DEPENDS+=	${LOCALBASE}/GNUstep/System/Library/Makefiles/GNUstep.sh:devel/gnustep-make
-
-USE_HARDENING=	pie:off relro:off
 
 USES=		pkgconfig iconv gnustep
 USE_GNUSTEP=	build
@@ -33,7 +32,7 @@ GH_ACCOUNT=	gnustep
 GH_PROJECT=	libs-base
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-procfs --disable-mixedabi --with-installation-domain=SYSTEM
+CONFIGURE_ARGS=	--disable-procfs --disable-mixedabi --with-installation-domain=SYSTEM --disable-invocations
 CONFIGURE_ENV=	OBJCFLAGS='-fobjc-runtime=gnustep-2.0 -fblocks'
 
 MAKE_FLAGS=	OPTFLAG="${CFLAGS}"

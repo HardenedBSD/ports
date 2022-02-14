@@ -351,6 +351,7 @@
     SUBDIR += swaybg
     SUBDIR += swayfloatingswitcher
     SUBDIR += swayidle
+    SUBDIR += swayimg
     SUBDIR += swaylock
     SUBDIR += swaylock-effects
     SUBDIR += swaync

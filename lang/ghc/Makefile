@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 ONLY_FOR_ARCHS=	amd64 i386 aarch64 armv6 armv7
 
 USE_HARDENING=		pie:off
-LLVM_AR_UNSAFE=		yes
+CONFIGURE_ARGS+=	--enable-dtrace=0
 
 USES=			autoreconf compiler:c11 gmake iconv:patch,translit \
 			localbase:ldflags ncurses perl5 tar:xz

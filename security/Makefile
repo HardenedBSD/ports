@@ -749,6 +749,7 @@
     SUBDIR += pam_yubico
     SUBDIR += pamtester
     SUBDIR += paperkey
+    SUBDIR += passh
     SUBDIR += passivedns
     SUBDIR += paxtest
     SUBDIR += pbc

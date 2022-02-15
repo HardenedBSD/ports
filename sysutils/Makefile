@@ -481,6 +481,7 @@
     SUBDIR += gomplate
     SUBDIR += google-compute-engine-oslogin
     SUBDIR += gotop
+    SUBDIR += govmomi
     SUBDIR += gpart
     SUBDIR += graffer
     SUBDIR += graveman

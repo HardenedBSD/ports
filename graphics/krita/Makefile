@@ -11,6 +11,8 @@ COMMENT=	Sketching and painting program
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+MPROTECT_DISABLE=	bin/krita
+
 LIB_DEPENDS=	libImath.so:math/Imath \
 		libOpenColorIOv1.so:graphics/opencoloriov1 \
 		libX11.so:x11/libX11 \

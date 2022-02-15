@@ -15,6 +15,9 @@ COMMENT=	Next generation GNOME desktop shell
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+MPROTECT_DISABLE+=	bin/gnome-shell
+PAGEEXEC_DISABLE+=	bin/gnome-shell
+
 BUILD_DEPENDS=	${LOCALBASE}/share/bash-completion/bash_completion.sh:shells/bash-completion \
 		a2x:textproc/asciidoc \
 		docbook-xsl>=0:textproc/docbook-xsl \

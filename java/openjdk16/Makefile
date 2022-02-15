@@ -196,7 +196,7 @@ JDK_BUILD_TYPE=		release
 .include <bsd.port.pre.mk>
 
 BOOTSTRAP_JDKS=	${LOCALBASE}/openjdk16 \
-		${LOCALBASE}/openjdk16
+		${LOCALBASE}/openjdk15
 
 # do we have valid native jdk installed?
 .for BJDK in ${BOOTSTRAP_JDKS}
@@ -207,8 +207,8 @@ BOOTSTRAPJDKDIR=	${BJDK}
 
 # if no valid jdk found, set dependency
 .if !defined(BOOTSTRAPJDKDIR)
-BOOTSTRAPJDKDIR?=	${LOCALBASE}/openjdk16
-BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:java/openjdk16
+BOOTSTRAPJDKDIR?=	${LOCALBASE}/openjdk15
+BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:java/openjdk15
 .endif
 
 JDK_BUILD_JVM=	server

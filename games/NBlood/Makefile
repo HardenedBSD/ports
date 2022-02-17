@@ -17,13 +17,9 @@ LIB_DEPENDS=	libvpx.so:multimedia/libvpx \
 		libFLAC.so:audio/flac \
 		libvorbis.so:audio/libvorbis
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
 
-USES=		compiler:gcc-c++11-lib gl gmake pkgconfig sdl
-=======
 USES=		compiler:c++14-lang gl gmake pkgconfig sdl
->>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	nukeykt
 GH_TAGNAME=	d2c0ef3

@@ -36,6 +36,10 @@ MPROTECT_DISABLE+=	bin/mongo
 MPROTECT_DISABLE+=	bin/mongod
 MPROTECT_DISABLE+=	bin/mongos
 
+PAGEEXEC_DISABLE+=	bin/mongo
+PAGEEXEC_DISABLE+=	bin/mongod
+PAGEEXEC_DISABLE+=	bin/mongos
+
 CONFLICTS_INSTALL=	mongodb36 mongodb4[02] mongodb50
 
 OPTIONS_DEFINE=	LTO SASL SSL

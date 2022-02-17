@@ -35,6 +35,12 @@ MPROTECT_DISABLE+=	bin/mongod
 MPROTECT_DISABLE+=	bin/mongoperf
 MPROTECT_DISABLE+=	bin/mongos
 
+PAGEEXEC_DISABLE=	bin/install_compass
+PAGEEXEC_DISABLE+=	bin/mongo
+PAGEEXEC_DISABLE+=	bin/mongod
+PAGEEXEC_DISABLE+=	bin/mongoperf
+PAGEEXEC_DISABLE+=	bin/mongos
+
 CONFLICTS_INSTALL=	mongodb4[024]
 
 SHEBANG_FILES=	src/mongo/installer/compass/install_compass.in

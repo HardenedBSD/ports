@@ -17,6 +17,7 @@ SHEBANG_FILES=	scripts/irq2nvic_h \
 		scripts/lpcvtcksum
 
 USE_HARDENING=	stackautoinit:off retpoline:off
+NO_UNUSED_ARGUMENTS_CHECK=	yes
 
 TOOLCHAIN_FULL_VERSION?=10-2020-q4-major
 TOOLCHAIN_PORT_VERSION?=10.2.20201211

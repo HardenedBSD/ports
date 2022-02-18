@@ -41,31 +41,9 @@ OPTIONS_DEFINE=		DEP-RSA1024 DNSCRYPT DNSTAP DOCS DOH ECDSA EVAPI \
 OPTIONS_DEFAULT=	DOH ECDSA GOST LIBEVENT THREADS
 OPTIONS_SUB=		yes
 
-<<<<<<< HEAD
-OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	THREADS PYTHON GOST ECDSA MUNIN_PLUGIN DOCS LIBEVENT \
-		FILTER_AAAA DNSTAP DNSCRYPT SUBNET EVAPI TFOCL TFOSE \
-		HIREDIS DOH DEP-RSA1024
-OPTIONS_DEFAULT=THREADS ECDSA LIBEVENT GOST DOH
-
 # Additional defaults for HardenedBSD
 OPTIONS_DEFAULT+=	DNSCRYPT PYTHON
 
-LIBEVENT_DESC=	Build against libevent
-GOST_DESC=	Enable GOST support (requires OpenSSL >= 1.0)
-ECDSA_DESC=	Enable ECDSA (elliptic curve) support (OpenSSL >= 1.0)
-MUNIN_PLUGIN_DESC=	Install Munin plugin
-FILTER_AAAA_DESC=	Build with AAAA filter functionality (contrib)
-DNSTAP_DESC=	Enable dnstap logging support
-DNSCRYPT_DESC=	Enable dnscrypt support
-SUBNET_DESC=	Enable client subnet support
-EVAPI_DESC=	(Experimental) pluggable event based libunbound API support
-TFOCL_DESC=	Enable TCP Fast Open for client mode
-TFOSE_DESC=	Enable TCP Fast Open for server mode
-HIREDIS_DESC=	Enable hiredis support for the cachedb module
-DOH_DESC=	Enable DNS-over-HTTPS support
-=======
->>>>>>> origin/freebsd/main
 DEP-RSA1024_DESC=	Deprecate the use of RSA 1024 keys
 DNSCRYPT_DESC=		Enable dnscrypt support
 DNSTAP_DESC=		Enable dnstap logging support

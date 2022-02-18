@@ -1,5 +1,5 @@
 PORTNAME=	boringssl
-PORTVERSION=	0.0.0.0.2022.02.14.01
+PORTVERSION=	0.0.0.0.2022.02.16.01
 CATEGORIES=	security
 
 MAINTAINER=	osa@FreeBSD.org
@@ -10,19 +10,24 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake:insource cpe go:no_targets localbase perl5
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off stackautoinit:off
 
 CONFLICTS_INSTALL=	security/libressl \
 			security/libressl-devel \
 			security/openssl \
 			security/openssl-devel \
+=======
+CONFLICTS_INSTALL=	security/libressl security/libressl-devel \
+			security/openssl security/openssl-devel \
+>>>>>>> origin/freebsd/main
 			security/openssl-quictls
 
 CPE_VENDOR=	google
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google
-GH_TAGNAME=	9cad13e
+GH_TAGNAME=	263f489
 GH_TUPLE=	golang:crypto:c07d793c2f9a:golang_crypto/vendor/golang.org/x/crypto \
 		golang:net:04defd469f4e:golang_net/vendor/golang.org/x/net \
 		golang:sys:04245dca01da:golang_sys/vendor/golang.org/x/sys \
@@ -32,7 +37,9 @@ CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=1 \
 USE_LDCONFIG=	yes
 LDFLAGS+=	-Wl,-rpath,${LOCALBASE}/lib
 TEST_TARGET=	run_tests
-MAKE_ENV+=	GOPATH=${WRKSRC}/vendor GOPROXY=off GOFLAGS=-mod=vendor
+MAKE_ENV+=	GOFLAGS=-mod=vendor \
+		GOPATH=${WRKSRC}/vendor \
+		GOPROXY=off
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tool/bssl ${STAGEDIR}${PREFIX}/bin/

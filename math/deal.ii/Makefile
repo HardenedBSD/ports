@@ -20,6 +20,8 @@ LIB_DEPENDS=	libboost_serialization.so:devel/boost-libs \
 USES=		blaslapack cmake:testing compiler:c++17-lang localbase:ldflags
 USE_LDCONFIG=	yes
 
+USE_HARDENING=	pie:off
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	${PORTNAME:tl:S/.//}
 GH_PROJECT=	${PORTNAME:tl:S/.//}

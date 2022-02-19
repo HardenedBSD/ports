@@ -10,6 +10,7 @@ COMMENT=	Neuroimaging Informatics Technology Initiative data format
 LICENSE=	PD
 
 USES=		gmake
+LLD_UNSAFE= yes
 
 # AFNI currently has nifti embedded in the distfile and installs the
 # nifti bins by itself.

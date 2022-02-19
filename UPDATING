@@ -5,6 +5,41 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20220219:
+  AFFECTS: users of sysutils/intel-pcm-devel
+  AUTHOR: egypcio@FreeBSD.org
+
+  sysutils/intel-pcm-devel became quite obsolte once sysutils/intel-pcm is
+  now pretty much following a constant and stable update cycle, so users of
+  the -devel version are encouraged to switch to it.
+
+  If you still have sysutils/intel-pcm-devel installed, please delete it from
+  your system and install sysutils/intel-pcm instead:
+
+  # pkg delete sysutils/intel-pcm-devel
+  # pkg install sysutils/intel-pcm
+
+20220219:
+  AFFECTS: users of math/qhull*
+  AUTHOR: stephen@FreeBSD.org
+
+  Because of entries in MOVED, portupgrade can get confused updating qhull.
+  It is recommended that you delete qhull and ports depending upon it, and
+  then reinstalling all the dependent ports.
+
+20220218:
+  AFFECTS: users of TeX*
+  AUTHOR: bofh@FreeBSD.org
+
+  TeX system has been updated to 2021 from 2015. Normal pkg upgrade or
+  portmaster -a should handle all the upgrade properly. In case not please
+  create a ticket or send a mail to tex@FreeBSD.org
+
+  print/tex-aleph has been removed as per upstream. This package should be
+  removed manually:
+
+  # pkg remove tex-aleph
+
 20220218:
   AFFECTS: users of net-mgmt/librenms
   AUTHOR: dvl@FreeBSD.org

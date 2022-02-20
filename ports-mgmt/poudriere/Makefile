@@ -52,6 +52,8 @@ post-patch:
 	    -e "s,^\(POUDRIERE_VERSION\)=.*,\1='${PKGVERSION}'," \
 	    ${WRKSRC}/poudriere
 	${REINPLACE_CMD} '/.PHONY: poudriere/d' ${WRKSRC}/Makefile.*
+	${REINPLACE_CMD} '/linuxelf:linux/d' \
+	    ${WRKSRC}/src/share/poudriere/common.sh
 
 post-install:
 	${LN} -fs ${LOCALBASE}/share/freebsd/MANIFESTS \

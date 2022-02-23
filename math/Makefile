@@ -216,8 +216,9 @@
     SUBDIR += coin-or-data-netlib
     SUBDIR += coin-or-data-sample
     SUBDIR += coin-or-data-stochastic
+    SUBDIR += coin-or-metis
+    SUBDIR += coin-or-mumps
     SUBDIR += coinmp
-    SUBDIR += coinmumps
     SUBDIR += coinutils
     SUBDIR += colpack
     SUBDIR += combblas
@@ -359,6 +360,7 @@
     SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-penrose
+    SUBDIR += hsl
     SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph

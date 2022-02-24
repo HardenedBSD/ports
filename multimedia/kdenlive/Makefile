@@ -32,6 +32,8 @@ USE_XORG=	x11
 CFLAGS+=	-isystem${LOCALBASE}/include # linux/input.h
 CMAKE_ARGS=	-DFFMPEG_SUFFIX:STRING="${FFMPEG_SUFX}"
 
+MPROTECT_DISABLE=	bin/kdenlive
+
 # Keep in sync with multimedia/mlt, possibly.
 FFMPEG_SUFX=	# Currently empty.
 

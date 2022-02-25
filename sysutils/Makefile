@@ -628,6 +628,7 @@
     SUBDIR += libretto-config
     SUBDIR += libsunacl
     SUBDIR += libsysstat
+    SUBDIR += libtree
     SUBDIR += libudisks
     SUBDIR += liburcu
     SUBDIR += lineak-defaultplugin

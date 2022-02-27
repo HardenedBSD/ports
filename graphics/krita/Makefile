@@ -10,13 +10,10 @@ COMMENT=	Sketching and painting program
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
-MPROTECT_DISABLE=	bin/krita
+MPROTECT_DISABLE=   bin/krita
 
-=======
 BUILD_DEPENDS=	vc>=1.1.0:devel/vc \
 		libheif>=1.12.0:graphics/libheif
->>>>>>> origin/freebsd/main
 LIB_DEPENDS=	libImath.so:math/Imath \
 		libOpenColorIO.so:graphics/opencolorio \
 		libX11.so:x11/libX11 \

@@ -24,11 +24,8 @@ BROKEN_FreeBSD_12=	ld: error: undefined symbol: streflop_libm::__inline_isnanf(f
 ONLY_FOR_ARCHS=		amd64
 ONLY_FOR_ARCHS_REASON=	relies on x86 floating-point math and amd64 atomic ops
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USE_SDL=	sdl2
-=======
 USE_GITHUB=	yes
 GH_TUPLE=	spring:Python:3bb6837:Python/AI/Interfaces/Python \
 		spring:AAI:a15f45c:AAI/AI/Skirmish/AAI \
@@ -42,7 +39,6 @@ GH_TUPLE=	spring:Python:3bb6837:Python/AI/Interfaces/Python \
 
 USES=		cmake compiler:c++11-lib desktop-file-utils gl localbase:ldflags \
 		openal:al pkgconfig sdl shared-mime-info xorg
->>>>>>> origin/freebsd/main
 USE_GL=		gl glu glew
 USE_SDL=	sdl2
 USE_XORG=	x11 xcursor

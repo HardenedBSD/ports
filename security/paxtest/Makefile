@@ -11,11 +11,8 @@ DISTNAME=       ${PORTNAME}-${PORTVERSION}
 LICENSE=        GPLv2
 COMMENT=        PaX regression test suite
 
-EXTRA_PATCHES+= ${FILESDIR}/freebsd.patch \
-                ${FILESDIR}/fix-RUNDIR.patch \
-                ${FILESDIR}/fix-PATH.patch
-
-MAKE_ENV+=      make -f Makefile.FreeBSD
+post-patch:
+	@${CP} ${WRKSRC}/Makefile.FreeBSD ${WRKSRC}/Makefile
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/paxtest
@@ -25,8 +22,5 @@ do-install:
 	${CP} ${WRKSRC}/ChangeLog ${STAGEDIR}${PREFIX}/share/doc/paxtest/
 	${CP} ${WRKSRC}/README ${STAGEDIR}${PREFIX}/share/doc/paxtest/
 	${CP} ${WRKSRC}/results/HardenedBSD-11_x86_64.kiddie ${STAGEDIR}${PREFIX}/share/doc/paxtest/results
-
-clean:
-	$(MAKE) -C ${WRKSRC} -f ${WRKSRC}/Makefile.FreeBSD clean
 
 .include <bsd.port.mk>

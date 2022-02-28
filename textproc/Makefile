@@ -1289,6 +1289,7 @@
     SUBDIR += py-dbfread
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docrepr
+    SUBDIR += py-docstring-parser
     SUBDIR += py-docutils
     SUBDIR += py-docx2txt
     SUBDIR += py-dominate
@@ -1363,9 +1364,11 @@
     SUBDIR += py-misaka
     SUBDIR += py-mistune
     SUBDIR += py-mkdocs
+    SUBDIR += py-mkdocs-autorefs
     SUBDIR += py-mkdocs-material
     SUBDIR += py-mkdocs-material-extensions
     SUBDIR += py-mkdocs-nature
+    SUBDIR += py-mkdocstrings
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
     SUBDIR += py-nbsphinx
@@ -1437,6 +1440,7 @@
     SUBDIR += py-python-slugify
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
+    SUBDIR += py-pytkdocs
     SUBDIR += py-pytoml
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode

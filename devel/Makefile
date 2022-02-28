@@ -4193,6 +4193,7 @@
     SUBDIR += py-autocommand
     SUBDIR += py-autoflake
     SUBDIR += py-automaton
+    SUBDIR += py-autopage
     SUBDIR += py-autoprop
     SUBDIR += py-avro
     SUBDIR += py-awesomeversion
@@ -4341,6 +4342,7 @@
     SUBDIR += py-case
     SUBDIR += py-castellan
     SUBDIR += py-catalogue
+    SUBDIR += py-cattrs
     SUBDIR += py-cbor
     SUBDIR += py-cbor2
     SUBDIR += py-cclib
@@ -5352,6 +5354,7 @@
     SUBDIR += py-types-xxhash
     SUBDIR += py-typing-extensions
     SUBDIR += py-typing-inspect
+    SUBDIR += py-tzdata
     SUBDIR += py-tzlocal
     SUBDIR += py-u-msgpack-python
     SUBDIR += py-ua_parser
@@ -6228,6 +6231,7 @@
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-create-meta
     SUBDIR += rubygem-cucumber-cucumber-expressions
+    SUBDIR += rubygem-cucumber-cucumber-expressions14
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-messages4
@@ -6418,6 +6422,7 @@
     SUBDIR += rubygem-grape-path-helpers
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
+    SUBDIR += rubygem-grape15
     SUBDIR += rubygem-grape_logging
     SUBDIR += rubygem-graphiql-rails
     SUBDIR += rubygem-graphlient
@@ -6433,6 +6438,7 @@
     SUBDIR += rubygem-hashery
     SUBDIR += rubygem-hashie
     SUBDIR += rubygem-hashie-forbidden_attributes
+    SUBDIR += rubygem-hashie4
     SUBDIR += rubygem-health_check
     SUBDIR += rubygem-heapy
     SUBDIR += rubygem-highline

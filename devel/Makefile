@@ -137,19 +137,14 @@
     SUBDIR += acme
     SUBDIR += acsccid
     SUBDIR += activitymail
-    SUBDIR += ada-util
-    SUBDIR += adabooch
     SUBDIR += adacurses
-    SUBDIR += adaid
     SUBDIR += aegis
     SUBDIR += agar
-    SUBDIR += ahven
     SUBDIR += aifad
     SUBDIR += aixlog
     SUBDIR += ald
     SUBDIR += allegro
     SUBDIR += allegro5
-    SUBDIR += alog
     SUBDIR += aml
     SUBDIR += ammonite
     SUBDIR += amqp-cpp
@@ -215,7 +210,6 @@
     SUBDIR += atlantis
     SUBDIR += atlas
     SUBDIR += atlas-devel
-    SUBDIR += aunit
     SUBDIR += autobook
     SUBDIR += autoconf
     SUBDIR += autoconf-archive
@@ -696,7 +690,6 @@
     SUBDIR += flex-sdk35
     SUBDIR += flexdock
     SUBDIR += flexjson
-    SUBDIR += florist-gpl
     SUBDIR += flyspray
     SUBDIR += fmake
     SUBDIR += fnccheck
@@ -927,7 +920,6 @@
     SUBDIR += govendor
     SUBDIR += gperf
     SUBDIR += gpm
-    SUBDIR += gprbuild
     SUBDIR += gputils
     SUBDIR += gradle
     SUBDIR += gradle-completion
@@ -1389,7 +1381,6 @@
     SUBDIR += libsmraw
     SUBDIR += libsoup
     SUBDIR += libsoup3
-    SUBDIR += libspark2012
     SUBDIR += libspice-server
     SUBDIR += libstatgrab
     SUBDIR += libstatgrab0
@@ -1557,7 +1548,6 @@
     SUBDIR += marisa-trie
     SUBDIR += marl
     SUBDIR += mate-common
-    SUBDIR += matreshka
     SUBDIR += maven
     SUBDIR += maven-wrapper
     SUBDIR += maven3
@@ -1837,6 +1827,7 @@
     SUBDIR += p5-Benchmark-Timer
     SUBDIR += p5-Best
     SUBDIR += p5-Border-Style
+    SUBDIR += p5-BorderStyle
     SUBDIR += p5-BorderStyleBase
     SUBDIR += p5-BorderStyles-Standard
     SUBDIR += p5-Brannigan
@@ -3808,7 +3799,6 @@
     SUBDIR += pcre
     SUBDIR += pcre++
     SUBDIR += pcre2
-    SUBDIR += pcsc-ada
     SUBDIR += pcsc-lite
     SUBDIR += pdcurses
     SUBDIR += pear
@@ -4086,7 +4076,6 @@
     SUBDIR += poxml
     SUBDIR += ppl
     SUBDIR += pprof
-    SUBDIR += pragmarcs
     SUBDIR += premake
     SUBDIR += premake4
     SUBDIR += premake5
@@ -5235,6 +5224,7 @@
     SUBDIR += py-setuptools
     SUBDIR += py-setuptools-git
     SUBDIR += py-setuptools-pkg
+    SUBDIR += py-setuptools-rust
     SUBDIR += py-setuptools44
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
@@ -7005,7 +6995,6 @@
     SUBDIR += sdl20
     SUBDIR += sdl2pp
     SUBDIR += sdl_console
-    SUBDIR += sdl_gnat
     SUBDIR += sdlmm
     SUBDIR += sdlskk
     SUBDIR += sdts++

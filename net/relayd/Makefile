@@ -8,13 +8,8 @@ COMMENT=	OpenBSD relay daemon
 
 LICENSE=	ISCL
 
-<<<<<<< HEAD
-GH_ACCOUNT=	mmatuska
+USE_HARDENING=  safestack
 
-USE_HARDENING=	safestack
-
-=======
->>>>>>> origin/freebsd/main
 USES=		ssl uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	mmatuska

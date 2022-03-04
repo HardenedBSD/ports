@@ -43,6 +43,8 @@ CONFIGURE_ARGS=	--with-tiff-library=${LOCALBASE}/lib \
 # exception causes a crash inside rtld.
 LLD_UNSAFE=	yes
 
+USE_HARDENING=  pie:off
+
 MAKE_FLAGS+=	OPTFLAG="${CFLAGS} -I${LOCALBASE}/include"
 BACKVERSION=	${PORTVERSION:C/([0-9])*[.]([0-9]*).*/\1\2/1}
 

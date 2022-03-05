@@ -179,7 +179,11 @@
     SUBDIR += fwlogwatch
     SUBDIR += gcr
     SUBDIR += gef
+<<<<<<< HEAD
     SUBDIR += gibson
+=======
+    SUBDIR += git-credential-gopass
+>>>>>>> origin/freebsd/main
     SUBDIR += git-crypt
     SUBDIR += git-remote-gcrypt
     SUBDIR += git-secret

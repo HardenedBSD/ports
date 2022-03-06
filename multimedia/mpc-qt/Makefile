@@ -18,6 +18,7 @@ USE_QT=		qmake_build buildtools_build linguisttools_build \
 		core dbus gui network svg_run widgets x11extras
 QMAKE_ARGS=	MPCQT_VERSION="${DISTVERSION}${DISTVERSIONSUFFIX}"
 
+OPTIONS_DEFINE=	DOCS
 USE_HARDENING=	safestack
 
 .include <bsd.port.mk>

@@ -1142,6 +1142,7 @@
     SUBDIR += libIDL
     SUBDIR += libPropList
     SUBDIR += libabigail
+    SUBDIR += libac
     SUBDIR += libafterbase
     SUBDIR += liballium
     SUBDIR += libantlr3c
@@ -1276,6 +1277,7 @@
     SUBDIR += libibuddy
     SUBDIR += libical
     SUBDIR += libindicator
+    SUBDIR += libinjection
     SUBDIR += libinotify
     SUBDIR += libiqxmlrpc
     SUBDIR += libisofs
@@ -4514,6 +4516,7 @@
     SUBDIR += py-filemagic
     SUBDIR += py-filetype
     SUBDIR += py-findlibs
+    SUBDIR += py-findpython
     SUBDIR += py-first
     SUBDIR += py-five.globalrequest
     SUBDIR += py-fixtures
@@ -4604,6 +4607,7 @@
     SUBDIR += py-guppy3
     SUBDIR += py-gyp
     SUBDIR += py-hash_ring
+    SUBDIR += py-hatch
     SUBDIR += py-heapdict
     SUBDIR += py-helpdev
     SUBDIR += py-hg-evolve
@@ -4634,6 +4638,7 @@
     SUBDIR += py-inifile
     SUBDIR += py-iniparse
     SUBDIR += py-installer
+    SUBDIR += py-installer03
     SUBDIR += py-intbitset
     SUBDIR += py-intelhex
     SUBDIR += py-intervals
@@ -5339,6 +5344,7 @@
     SUBDIR += py-types-click
     SUBDIR += py-types-docutils
     SUBDIR += py-types-futures
+    SUBDIR += py-types-mock
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-psycopg2
     SUBDIR += py-types-requests

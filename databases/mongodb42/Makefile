@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	4.2.18
+DISTVERSION=	4.2.19
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -35,6 +35,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 USES=		compiler:c++17-lang cpe python:3.5+,build scons shebangfix
 USE_RC_SUBR=	mongod
 
+<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/install_compass
 MPROTECT_DISABLE+=	bin/mongo
 MPROTECT_DISABLE+=	bin/mongod
@@ -46,6 +47,9 @@ PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
 CONFLICTS_INSTALL=	mongodb36 mongodb4[04] mongodb50
+=======
+CONFLICTS_INSTALL=	mongodb[0-9][0-9]
+>>>>>>> origin/freebsd/main
 
 OPTIONS_DEFINE=	LTO SASL SSL
 OPTIONS_DEFAULT=LTO SASL SSL

@@ -22,6 +22,9 @@ USES=		gnome tar:bzip2 kmod pkgconfig
 USE_GNOME=	gtk20 cairo gdkpixbuf2
 USE_RC_SUBR=	oss
 
+CFLAGS+=	-Wno-incompatible-pointer-types
+CFLAGS+=	-Wno-compare-distinct-pointer-types
+
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 CONFIGURE_ENV=	HOSTCC="${CC}"

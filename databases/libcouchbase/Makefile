@@ -24,8 +24,6 @@ CONFLICTS_INSTALL=      coin-or-cbc
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == aarch64 || ${ARCH:Marmv*} || ${ARCH} == riscv64
 CMAKE_ARGS+=	-DDTRACE:BOOL=FALSE
-.endif
 
 .include <bsd.port.post.mk>

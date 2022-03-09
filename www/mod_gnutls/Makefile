@@ -23,6 +23,7 @@ SUB_FILES=	pkg-message
 SUB_LIST=	DBDIR="${DBDIR}"
 
 CFLAGS+=	-Wno-deprecated-declarations
+CFLAGS+=	-Wno-null-pointer-subtraction
 CONFIGURE_ARGS=	--with-apxs="${APXS}"
 
 post-install:

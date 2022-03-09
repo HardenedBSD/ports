@@ -19,6 +19,8 @@ USE_SDL=	sdl2
 USE_XORG=	x11 xtst
 CMAKE_ARGS=	-DLOCALBASE:PATH="${LOCALBASE}"
 
+CFLAGS+=	-Wno-unused-but-set-variable
+
 OPTIONS_DEFINE=	DOCS
 
 post-patch:

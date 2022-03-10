@@ -16,4 +16,6 @@ RUN_DEPENDS=	R-cran-DBI>=0.2.5:databases/R-cran-DBI
 
 USES=		cran:auto-plist,compiles
 
+USE_HARDENING=  pie:off
+
 .include <bsd.port.mk>

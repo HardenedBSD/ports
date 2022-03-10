@@ -15,4 +15,6 @@ RUN_DEPENDS=	R-cran-testthat>0:devel/R-cran-testthat
 
 USES=		cran:auto-plist,compiles pkgconfig
 
+USE_HARDENING=  pie:off
+
 .include <bsd.port.mk>

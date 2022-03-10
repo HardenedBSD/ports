@@ -16,4 +16,6 @@ RUN_DEPENDS=	${CRAN_DEPENDS}
 
 USES=		cran:auto-plist,compiles
 
+USE_HARDENING=  pie:off
+
 .include <bsd.port.mk>

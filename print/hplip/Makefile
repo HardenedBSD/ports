@@ -19,17 +19,10 @@ RUN_DEPENDS=	cups-filters>=0:print/cups-filters \
 		${PYTHON_PKGNAMEPREFIX}distro>=1.0.1:sysutils/py-distro@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gobject3>=0:devel/py-gobject3@${PY_FLAVOR}
 
-<<<<<<< HEAD
-CONFLICTS_INSTALL=	hpijs
-
 USE_HARDENING=	pie:off
 
-INSTALL_TARGET=	install-strip
-USES=		dos2unix jpeg libtool pkgconfig python:3.6+ shebangfix
-=======
 USES=		dos2unix jpeg libtool localbase pkgconfig python:3.6+ \
 		shebangfix
->>>>>>> origin/freebsd/main
 USE_LDCONFIG=	yes
 
 DOS2UNIX_FILES=	scan/sane/OrbliteScan/LinuxCommon.h scan/sane/orblite.c

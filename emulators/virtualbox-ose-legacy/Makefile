@@ -233,11 +233,9 @@ pre-everything::
 .if ${_ELF32} != yes
 	@${ECHO_MSG} 'Requires 32-bit runtime support in kernel.'
 	@${ECHO_MSG} 'Rebuild kernel with "options COMPAT_FREEBSD32" and reboot.'
-	@${FALSE}
 .elif !exists(/usr/lib32/libc.so)
 	@${ECHO_MSG} 'Requires 32-bit libraries installed under /usr/lib32.'
 	@${ECHO_MSG} 'Do: cd /usr/src; make build32 install32; service ldconfig restart'
-	@${FALSE}
 .endif
 .endif
 

@@ -21,6 +21,7 @@ ONLY_FOR_ARCHS=	amd64 i386 aarch64 armv6 armv7
 
 USE_HARDENING=		pie:off
 CONFIGURE_ARGS+=	--enable-dtrace=0
+MPROTECT_DISABLE=	lib/ghc-${GHC_VERSION}/bin/ghc
 
 USES=			autoreconf compiler:c11 gmake iconv:patch,translit \
 			localbase:ldflags ncurses perl5 tar:xz
@@ -30,8 +31,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		PATH=${SLAVES_PREFIX}/bin:${PATH}
 MAKE_ENV=		PATH=${SLAVES_PREFIX}/bin:${PATH}
 NO_CCACHE=		yes
-
-MPROTECT_DISABLE+=	lib/ghc-${GHC_VERSION}/bin/ghc
 
 SUB_FILES=		build.mk
 SUB_LIST=		GHC_VERSION=${GHC_VERSION} \

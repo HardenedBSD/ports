@@ -22,7 +22,7 @@ USE_QT=		concurrent core gui network webkit widgets x11extras \
 		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xcb xext
 
-MPROTECT_DISABLE+=	bin/zeal
+MPROTECT_DISABLE=	bin/zeal
 
 GH_ACCOUNT=	zealdocs
 

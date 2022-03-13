@@ -15,6 +15,9 @@ ONLY_FOR_ARCHS=	amd64 i386 powerpc64 powerpc64le
 
 USES=		tar:xz
 
+MPROTECT_DISABLE=	bootstrap-openjdk11/bin/java
+PAGEEXEC_DISABLE=	bootstrap-openjdk11/bin/java
+
 NO_BUILD=	yes
 PLIST_SUB=	JDK_ROOT=${JDK_ROOT}
 WRKSRC=		${WRKDIR}/${JDK_ROOT}

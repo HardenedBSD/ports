@@ -45,6 +45,7 @@ USE_QT=		buildtools concurrent core dbus gui linguisttools_build network \
 		testlib x11extras xml xmlpatterns widgets
 
 CXXFLAGS+=	-Wno-unused-but-set-variable
+
 CONFLICTS=	mixxx22*
 
 CMAKE_ARGS+=	-DINSTALL_USER_UDEV_RULES:BOOL=OFF \

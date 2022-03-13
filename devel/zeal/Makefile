@@ -23,6 +23,7 @@ USE_QT=		concurrent core gui network webkit widgets x11extras \
 USE_XORG=	ice sm x11 xcb xext
 
 MPROTECT_DISABLE=	bin/zeal
+PAGEEXEC_DISABLE=	bin/zeal
 
 GH_ACCOUNT=	zealdocs
 

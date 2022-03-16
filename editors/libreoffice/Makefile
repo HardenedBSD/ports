@@ -123,6 +123,7 @@ USE_OPENLDAP=	yes
 USE_PERL5=	build
 USE_XORG=	ice sm x11 xaw xcb xext xinerama xrandr xrender
 
+USE_HARDENING=		pie:off
 PAGEEXEC_DISABLE=	lib/libreoffice/program/soffice.bin
 MPROTECT_DISABLE=	lib/libreoffice/program/soffice.bin
 

@@ -24,6 +24,8 @@ TEST_TARGET=	check
 
 LIBS+=		-lexecinfo
 
+LIB_DEPENDS+=	libunwind.so:devel/libunwind
+
 DOCSDIR=	${PREFIX}/share/doc/gperftools
 
 OPTIONS_DEFINE=		DOCS

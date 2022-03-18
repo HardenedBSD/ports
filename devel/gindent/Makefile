@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-prefix=g --htmldir=${DOCSDIR}
 
 CPPFLAGS+=	-DBERKELEY_DEFAULTS=1
+CFLAGS+=	-Wno-unused-but-set-variable
 
 OPTIONS_DEFINE=		DOCS NLS
 OPTIONS_SUB=		yes

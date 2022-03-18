@@ -25,11 +25,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} \
 		--with-unixodbc=${LOCALBASE}
 
-<<<<<<< HEAD
 USE_HARDENING=	stackautoinit:off
-=======
+
 CPE_VENDOR=	mdbtools_project
->>>>>>> origin/freebsd/main
 
 INSTALL_TARGET=	install-strip
 

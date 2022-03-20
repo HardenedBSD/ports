@@ -484,6 +484,7 @@
     SUBDIR += onlyoffice-documentserver
     SUBDIR += openarc
     SUBDIR += opencart
+    SUBDIR += openresty
     SUBDIR += orangehrm
     SUBDIR += osrm-backend
     SUBDIR += osticket

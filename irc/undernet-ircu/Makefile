@@ -19,6 +19,8 @@ BROKEN_riscv64=		Fails to compile: undefined reference to .mcount
 USE_GCC=	yes
 USE_RC_SUBR=	undernet
 
+USE_HARDENING=		pie:off
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-dpath=${PREFIX}/etc/ --with-symlink=no
 

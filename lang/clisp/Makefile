@@ -22,6 +22,8 @@ USES=		compiler gettext ghostscript gnome iconv localbase:ldflags
 USE_GCC=	yes
 USE_GITLAB=	yes
 
+USE_HARDENING=  pie:off relro:off
+
 GL_ACCOUNT=	gnu-clisp
 GL_PROJECT=	clisp
 GL_COMMIT=	df3b9f6fdcff22832898e89a989eb499c0f842ed

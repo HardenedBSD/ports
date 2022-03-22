@@ -1,0 +1,3 @@
+include/libsock.h
+lib/libsock.so
+lib/libsock.so.0

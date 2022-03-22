@@ -411,6 +411,7 @@
     SUBDIR += librsync
     SUBDIR += libsignal-protocol-c
     SUBDIR += libslirp
+    SUBDIR += libsock
     SUBDIR += libsrtp2
     SUBDIR += libtnl
     SUBDIR += libtrace

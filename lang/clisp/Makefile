@@ -22,7 +22,7 @@ USES=		compiler gettext ghostscript gnome iconv localbase:ldflags
 USE_GCC=	yes
 USE_GITLAB=	yes
 
-USE_HARDENING=  pie:off relro:off
+USE_HARDENING=  pie:off
 
 GL_ACCOUNT=	gnu-clisp
 GL_PROJECT=	clisp

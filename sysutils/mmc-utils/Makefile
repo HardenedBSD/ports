@@ -14,8 +14,6 @@ LICENSE_COMB=	multi
 
 IGNORE_DragonFly=	only supported on FreeBSD
 
-USE_HARDENING=	stackautoinit:off
-
 MMC_GITHASH=	a1b233c2a31baa5b77cb67c0c3be4767be86f727
 MMC_GITSHASH=	${MMC_GITHASH:C/^(........).*/\1/}
 PLIST_FILES=	man/man1/mmc.1.gz sbin/mmc

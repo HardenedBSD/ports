@@ -13,8 +13,6 @@ LICENSE=	GPLv2
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	not yet ported to anything other than amd64/i386
 
-USE_HARDENING=	stackautoinit:off
-
 BUILD_DEPENDS=	bash:shells/bash \
 		syslinux:sysutils/syslinux
 

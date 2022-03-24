@@ -19,6 +19,4 @@ RUN_DEPENDS=	${LOCALBASE}/include/CL/opencl.h:devel/opencl
 
 USES=		cmake localbase
 
-USE_HARDENING=	stackautoinit:off
-
 .include <bsd.port.mk>

@@ -45,8 +45,6 @@ USE_GL=		gl glu
 USE_GNOME=	glib20
 USE_XORG= 	ice sm x11 xau xcb xdmcp xext xft xi xmu xrender xt
 
-USE_HARDENING=	stackautoinit:off
-
 SHEBANG_FILES=	scripts_install/* \
 		python_scripts/afnipy/*.py \
 		python_scripts/scripts/*.py \

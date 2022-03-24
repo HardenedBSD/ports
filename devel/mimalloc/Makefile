@@ -16,8 +16,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 USE_LDCONFIG=	yes
 
-USE_HARDENING=	stackautoinit:off
-
 CMAKE_ON=	MI_INSTALL_TOPLEVEL
 TEST_TARGET=	test
 

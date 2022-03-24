@@ -14,8 +14,6 @@ CPE_VENDOR=	zetetic
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 
-USE_HARDENING=	stackautoinit:off
-
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-tempstore=yes --disable-tcl --disable-readline
 CPPFLAGS+=	-DSQLITE_HAS_CODEC

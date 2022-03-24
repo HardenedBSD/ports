@@ -21,8 +21,6 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 
 USES=		compiler:c++11-lang cpe ncurses
 
-USE_HARDENING=	stackautoinit:off
-
 CPE_VENDOR=	cmake_project
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKE=make

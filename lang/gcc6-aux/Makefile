@@ -21,7 +21,7 @@ EXPIRATION_DATE=2022-02-28
 
 .include "${.CURDIR}/Makefile.common"
 
-USE_HARDENING=	pie:off relro:off retpoline:off stackautoinit:off
+USE_HARDENING=	pie:off relro:off retpoline:off
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
 

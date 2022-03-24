@@ -15,8 +15,6 @@ LICENSE=	LGPL21
 RUN_DEPENDS=	curl:ftp/curl \
 		gpatch:devel/patch
 
-USE_HARDENING=	stackautoinit:off
-
 USES=		gmake
 
 GNU_CONFIGURE=	yes

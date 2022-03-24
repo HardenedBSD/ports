@@ -15,9 +15,6 @@ LIB_DEPENDS+=	libpulse.so:audio/pulseaudio \
 		libboost_program_options.so:devel/boost-libs
 
 USES=		compiler:gcc-c++11-lib gmake localbase
-
-USE_HARDENING= stackautoinit:off
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	cdemoulins
 

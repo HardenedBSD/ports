@@ -17,8 +17,6 @@ LIB_DEPENDS=	libCbc.so:math/cbc \
 		libOsi.so:math/osi \
 		libOsiClp.so:math/clp
 
-USE_HARDENING=	stackautoinit:off
-
 USES=		bison cmake compiler:c++11-lang
 USE_LDCONFIG=	yes
 

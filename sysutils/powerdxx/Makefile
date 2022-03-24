@@ -8,7 +8,7 @@ COMMENT=	CPU clock speed/frequency daemon
 
 LICENSE=	ISCL
 
-USE_HARDENING=	safestack stackautoinit:off
+USE_HARDENING=	safestack
 
 USES=		compiler:c++17-lang
 

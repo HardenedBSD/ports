@@ -20,7 +20,7 @@ ONLY_FOR_ARCHS=	amd64 i386
 LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
 		libossp-uuid.so:misc/ossp-uuid
 
-USE_HARDENING=	stackautoinit:off pie:off
+USE_HARDENING=	pie:off
 
 USES=		gmake iconv:lib ncurses
 USE_GITHUB=	yes

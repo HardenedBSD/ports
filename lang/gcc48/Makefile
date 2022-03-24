@@ -32,7 +32,7 @@ USE_PERL5=	build
 
 CPE_VENDOR=	gnu
 
-USE_HARDENING=	pie:off relro:off retpoline:off stackautoinit:off
+USE_HARDENING=	pie:off relro:off retpoline:off
 
 NO_UNSED_ARGUMENTS_CHECK=	yes
 

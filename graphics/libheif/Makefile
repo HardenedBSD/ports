@@ -17,8 +17,6 @@ CPE_VENDOR=	struktur
 USE_GNOME=	gdkpixbuf2 glib20
 USE_LDCONFIG=	yes
 
-USE_HARDENING=		stackautoinit:off
-
 CMAKE_OFF=	WITH_EXAMPLES
 
 USE_GITHUB=	yes

@@ -25,8 +25,6 @@ USES=		alias bdb sqlite cpe gmake iconv libarchive libtool \
 		lua:53+ pathfix pkgconfig shebangfix tar:bzip2
 USE_LDCONFIG=	yes
 
-USE_HARDENING=	stackautoinit:off
-
 GNU_CONFIGURE=	yes
 BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
 SHEBANG_FILES=	scripts/check-prereqs \

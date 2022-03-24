@@ -25,7 +25,7 @@ TARGETARCH=	${FLAVOR}
 USES=		compiler:c++11-lang cpe gmake iconv libtool makeinfo tar:xz
 CPE_VENDOR=	gnu
 
-USE_HARDENING=	stackautoinit:off pie:off
+USE_HARDENING=	pie:off
 
 PLIST_SUB=	OPSYS=${OPSYS:tl} \
 		SUFFIX=${SUFFIX} \

@@ -33,6 +33,8 @@ USE_LDCONFIG=	${PREFIX}/dt/lib
 USE_RC_SUBR=	dtcms dtlogin
 USE_XORG=	ice sm x11 xau xdmcp xext xinerama xmu xscrnsaver xt
 
+USE_HARDENING=	pie:off
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 ALL_TARGET=	World
 MAKE_ARGS+=	PERL=${PERL} "LOCAL_LDFLAGS=${LDFLAGS}"

@@ -17,6 +17,8 @@ LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
 USES=		desktop-file-utils gettext-tools gmake gnome libtool meson \
 		pkgconfig sqlite
 
+USE_HARDENING=	pie:off
+
 USE_GITHUB=	yes
 
 # clang fails to compile a C source (gnome-shell-extension.c) generated

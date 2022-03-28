@@ -11,6 +11,8 @@ CONFLICTS=	bareos17-client bareos16-client bareos-client
 WITH_CLIENT_ONLY=yes
 USE_RC_SUBR=	bareos-fd
 
+USE_HARDENING=	pie:off
+
 PLIST=		${PKGDIR}/pkg-plist.client
 MASTERDIR=	${.CURDIR}/../../sysutils/bareos18-server
 

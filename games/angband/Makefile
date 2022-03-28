@@ -16,6 +16,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_NCURSES_CONFIG=${TRUE}
 CONFIGURE_ARGS=	--localstatedir=/var
 
+USE_HARDENING=	pie:off
+
 CPPFLAGS+=	-I${NCURSESINC}
 LDFLAGS+=	-Wl,--Bstatic -L${NCURSESLIB} -lncursesw -Wl,--Bdynamic
 

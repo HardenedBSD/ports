@@ -11,6 +11,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GITHUB=	yes
 
+USE_HARDENING=	pie:off
+
 GH_ACCOUNT=	outpaddling
 
 PLIST_FILES=	bin/mst-bench man/man1/mst-bench.1.gz

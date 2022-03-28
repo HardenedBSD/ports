@@ -20,6 +20,8 @@ USES=		gnustep tar:bzip2
 USE_GNUSTEP=	gui base build
 LLD_UNSAFE=	yes
 
+USE_HARDENING=	pie:off
+
 WRKSRC=		${WRKDIR}/Cenon
 MAINVERSION=	4.0.2
 FULLVERSION=	4.0.0

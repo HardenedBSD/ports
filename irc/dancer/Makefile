@@ -17,6 +17,8 @@ LDFLAGS+=	-lm
 CPP=		#
 USE_CSTD=	gnu89
 
+USE_HARDENING=	pie:off
+
 CONFLICTS_INSTALL=	p5-Dancer
 
 do-install:

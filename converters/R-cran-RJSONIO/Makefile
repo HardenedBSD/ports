@@ -12,4 +12,6 @@ LICENSE=	BSD3CLAUSE
 
 USES=		cran:auto-plist,compiles
 
+USE_HARDENING=	pie:off
+
 .include <bsd.port.mk>

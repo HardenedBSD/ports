@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 USES=		dos2unix gnome libtool pkgconfig ssl
 USE_GNOME=	gtk20
 
+USE_HARDENING=	pie:off
+
 OPTIONS_DEFINE=	DOCS NLS
 NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=	nls

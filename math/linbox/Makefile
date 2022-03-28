@@ -22,6 +22,8 @@ GH_ACCOUNT=	linbox-team
 
 USES=		autoreconf blaslapack:openblas compiler:c++11-lang gmake libtool localbase pkgconfig shebangfix
 
+USE_HARDENING=	pie:off
+
 SHEBANG_FILES=	benchmarks/perfpublisher.sh examples/test.sh	\
 		linbox-auto-install.sh linbox-config.in tests/jenkins-maker.sh	\
 		tests/perfpublisher.sh tests/test_leak.sh

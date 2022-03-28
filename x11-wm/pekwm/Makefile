@@ -23,4 +23,6 @@ USE_XORG=	xft xpm x11 sm ice xext xinerama xrandr
 USE_GITHUB=	yes
 GH_ACCOUNT=	pekdon
 
+USE_HARDENING=	pie:off
+
 .include <bsd.port.mk>

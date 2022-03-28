@@ -14,6 +14,8 @@ CPE_VENDOR=	${PORTNAME}_project
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+USE_HARDENING=	pie:off
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	enferex
 

@@ -30,6 +30,8 @@ SHEBANG_FILES=	share/scripts/banbrutes.php \
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
+USE_HARDENING=	pie:off
+
 CONFIGURE_ARGS=	--without-fdsize \
 		--without-libqt4 \
 		--with-zlib=/usr

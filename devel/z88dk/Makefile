@@ -40,6 +40,8 @@ SHEBANG_FILES=	src/z80asm/asmpp.pl
 TEST_TARGET=	testsuite test
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+USE_HARDENING=	pie:off
+
 MAKE_JOBS_UNSAFE=	../../z80asm: No such file or directory
 
 post-patch:

@@ -18,6 +18,8 @@ USES=		bison:build compiler:c11 gmake gnome libtool makeinfo \
 USE_XORG=	pixman
 USE_GNOME=	glib20 libxml2
 
+USE_HARDENING=	pie:off
+
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--target-list=ppc64-softmmu \
 		--cc=${CC} \

@@ -11,4 +11,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cran:auto-plist,compiles
 
+USE_HARDENING=	pie:off
+
 .include <bsd.port.mk>

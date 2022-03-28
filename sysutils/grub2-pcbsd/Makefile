@@ -27,6 +27,8 @@ GNU_CONFIGURE=	yes
 INFO=		grub grub-dev
 MAKE_JOBS_UNSAFE=	yes
 
+USE_HARDENING=	pie:off
+
 CPE_PRODUCT=	grub
 CPE_VENDOR=	gnu
 

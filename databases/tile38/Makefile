@@ -22,6 +22,8 @@ GH_ACCOUNT=	tidwall
 USE_RC_SUBR=	tile38
 SSP_UNSAFE=	yes
 
+USE_HARDENING=  pie:off relro:off
+
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 

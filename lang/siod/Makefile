@@ -14,7 +14,7 @@ LICENSE=	LGPL21	# Declared inside slib.c
 
 USES=		uidfix tar:tgz dos2unix
 
-USE_HARDENING=  pie:off relro:off retpoline:off stackautoinit:off
+USE_HARDENING=  pie:off relro:off retpoline:off
 
 USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/siod
 

@@ -14,6 +14,8 @@ LICENSE=	LGPL21	# Declared inside slib.c
 
 USES=		uidfix tar:tgz dos2unix
 
+USE_HARDENING=  pie:off relro:off retpoline:off stackautoinit:off
+
 USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/siod
 
 DOS2UNIX_FILES=	sql_oracle.c ss.c siod.scm

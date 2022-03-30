@@ -26,6 +26,8 @@ USES=		cmake compiler:c++14-lang gnome localbase:ldflags pkgconfig shebangfix xo
 USE_GNOME=	cairo gtk30 gtkmm30
 USE_XORG=	ice sm x11 xcb xext
 
+USE_HARDENING=  relro:off
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	steinbergmedia
 GH_TUPLE=	\

@@ -354,41 +354,4 @@ OPTIONS_GROUP_HARDENING+=SLH
 .endif
 .endif
 
-#####################################
-### Stack Auto-Zero-Initialzation ###
-#####################################
-
-.if ${HARDENING_OFF:Mstackautoinit} == ""
-
-.if ${OSVERSION} >= 1300135 && ${HBSDVERSION} >= 1300061 \
-	&& ${ARCH} == "amd64" && ${LLD_IS_LD} == "yes" \
-	&& !defined(LLD_UNSAFE) && !defined(USE_GCC)
-
-stackautoinit_ARGS?=	auto
-
-.if ${stackautoinit_ARGS:Mauto}
-.if ${_USE_HARDENING:Mfortran}
-stackautoinit_ARGS+=    off
-.else
-USE_HARDENING:=		stackautoinit ${USE_HARDENING:Nstackautoinit}
-.endif
-.endif
-
-STACKAUTOINIT_DESC=		Stack Auto-Zero-Initialization
-STACKAUTOINIT_USES=		stack_autoinit
-
-.if ${_USE_HARDENING:Mlock} == ""
-OPTIONS_GROUP_HARDENING+=STACKAUTOINIT
-.endif
-
-.if ${USE_HARDENING:Mstackautoinit} && ${stackautoinit_ARGS:Moff} == ""
-OPTIONS_DEFAULT+=	STACKAUTOINIT
-.if ${_USE_HARDENING:Mlock} != ""
-OPTIONS_GROUP_HARDENING+=STACKAUTOINIT
-.endif
-.endif
-
-.endif
-.endif
-
 .endif # !HARDENINGMKINCLUDED

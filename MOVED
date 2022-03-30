@@ -15890,7 +15890,6 @@ www/trac-ldap||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
 www/trac-spam-filter||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
 www/trac-timingandestimation||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
 www/trac-themeengine||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
-www/iridium||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
 editors/atom||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
 devel/electron4||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
 devel/electron5||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
@@ -16972,3 +16971,5 @@ devel/py-asyncio||2022-03-25|Remove obsoleted port. The asyncio package has been
 math/py-mutatormath|math/py-MutatorMath|2022-03-25|Remove duplicate port
 math/py-symcxx||2022-03-28|Deprecated because the upstream repository was experimental and is now archived
 net-p2p/bazarr-devel|net-p2p/bazarr|2022-03-29|Use net-p2p/bazarr instead
+dns/py-dnspython2|dns/py-dnspython|2022-03-30|Has expired: Use dns/py-dnspython
+net/inlets||2022-03-30|FOSS version removed, project went commercial

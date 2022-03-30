@@ -22,6 +22,8 @@ RUN_DEPENDS=	gnuplot:math/gnuplot \
 
 USES=		autoreconf gmake makeinfo shared-mime-info
 
+USE_HARDENING=  pie:off relro:off
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	PYTHON=dummy
 

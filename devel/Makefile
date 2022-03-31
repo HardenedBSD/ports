@@ -1033,7 +1033,6 @@
     SUBDIR += interactive_rebase_tool
     SUBDIR += ioncube
     SUBDIR += ipython
-    SUBDIR += ipython5
     SUBDIR += ireport
     SUBDIR += isa-l
     SUBDIR += isfreedesktop
@@ -5731,6 +5730,7 @@
     SUBDIR += rubygem-aws-sdk-backup
     SUBDIR += rubygem-aws-sdk-backupgateway
     SUBDIR += rubygem-aws-sdk-batch
+    SUBDIR += rubygem-aws-sdk-billingconductor
     SUBDIR += rubygem-aws-sdk-braket
     SUBDIR += rubygem-aws-sdk-budgets
     SUBDIR += rubygem-aws-sdk-chime
@@ -5821,6 +5821,7 @@
     SUBDIR += rubygem-aws-sdk-frauddetector
     SUBDIR += rubygem-aws-sdk-fsx
     SUBDIR += rubygem-aws-sdk-gamelift
+    SUBDIR += rubygem-aws-sdk-gamesparks
     SUBDIR += rubygem-aws-sdk-glacier
     SUBDIR += rubygem-aws-sdk-globalaccelerator
     SUBDIR += rubygem-aws-sdk-glue

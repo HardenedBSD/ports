@@ -68,7 +68,7 @@ HBSDVERSION!=		${AWK} '/^\#define[[:blank:]]__HardenedBSD_version/ {print $$3}' 
 HBSDVERSION=		0
 .endif
 
-HARDENING_ALL=		cfi pie relro retpoline safestack slh stackautoinit
+HARDENING_ALL=		cfi pie relro retpoline safestack slh
 HARDENING_OFF?=		# all features are on by default
 
 USE_HARDENING?=		# implicit auto-defaults may apply

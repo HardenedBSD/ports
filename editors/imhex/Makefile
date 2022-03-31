@@ -36,7 +36,7 @@ USE_GL=		gl
 USE_GNOME=	cairo gdkpixbuf2 gtk30
 USE_XORG=	x11 xcb xau xdmcp
 
-USE_HARDENING=	retpoline:off stackautoinit:off
+USE_HARDENING=	retpoline:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	WerWolv

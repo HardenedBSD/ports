@@ -23,7 +23,7 @@ _LLVM_VER=		13
 llvm_BUILD_DEPENDS=	clang${_LLVM_VER}:devel/llvm${_LLVM_VER}
 llvm_RUN_DEPENDS=	clang${_LLVM_VER}:devel/llvm${_LLVM_VER}
 
-USE_HARDENING=	pie:off retpoline:off stackautoinit:off
+USE_HARDENING=	pie:off retpoline:off
 NO_UNUSED_ARGUMENTS_CHECK=  yes
 
 USES=		gmake shebangfix tar:tgz

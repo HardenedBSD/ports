@@ -14,8 +14,6 @@ LIB_DEPENDS=	libopenblas.so:math/openblas
 USES=		cmake
 USE_LDCONFIG=	yes
 
-USE_HARDENING=	stackautoinit:off
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	jeromerobert
 

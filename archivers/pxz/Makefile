@@ -18,8 +18,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		cpe tar:xz
 PLIST_FILES=	bin/pxz share/man/man1/pxz.1.gz
 
-USE_HARDENING=	stackautoinit:off
-
 CPE_VENDOR=	pxz_project
 
 MAKE_ENV+=	BINDIR=${PREFIX}/bin \

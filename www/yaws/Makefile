@@ -22,8 +22,6 @@ USES=		autoreconf cpe gmake libtool pathfix shebangfix
 
 SHEBANG_FILES=	www/cgi-bin/foo.py
 
-USE_HARDENING=	stackautoinit:off
-
 OPTIONS_DEFINE=	WWW
 
 WWW_DESC=	Install sample applications

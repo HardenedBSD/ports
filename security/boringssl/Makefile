@@ -11,7 +11,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake:insource cpe go:no_targets localbase perl5
 
-USE_HARDENING=	pie:off stackautoinit:off
+USE_HARDENING=	pie:off
 
 CONFLICTS_INSTALL=	security/libressl security/libressl-devel \
 			security/openssl security/openssl-devel \

@@ -25,8 +25,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} \
 		--with-unixodbc=${LOCALBASE}
 
-USE_HARDENING=	stackautoinit:off
-
 CPE_VENDOR=	mdbtools_project
 
 INSTALL_TARGET=	install-strip

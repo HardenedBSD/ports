@@ -14,7 +14,7 @@ COMMENT?=	Complete color management solution
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USE_HARDENING=	pie:off stackautoinit:off
+USE_HARDENING=	pie:off
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libImath.so:math/Imath \

@@ -18,8 +18,6 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-pkgconfigdir="${PREFIX}/libdata/pkgconfig"
 
-USE_HARDENING=	stackautoinit:off
-
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Net/Oping/Oping.so
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/liboping.so.0.2.11

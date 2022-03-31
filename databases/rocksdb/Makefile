@@ -18,7 +18,7 @@ BROKEN_armv6?=		does not build: db/c.cc:2281:44: implicit conversion loses integ
 BROKEN_armv7?=		does not build: /nxb-bin/usr/bin/ld: undefined reference to symbol `__gnu_Unwind_Find_exidx@@FBSD_1.4' (try adding -lc) #'`
 BROKEN_FreeBSD_12_powerpc64=	does not build: util/crc32c.cc:435:22: 'arch_ppc_probe' was not declared in this scope
 
-USE_HARDENING=	pie:off stackautoinit:off
+USE_HARDENING=	pie:off
 
 BUILD_DEPENDS=	bash:shells/bash
 LIB_DEPENDS=	libgflags.so:devel/gflags \

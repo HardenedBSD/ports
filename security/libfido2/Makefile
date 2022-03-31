@@ -13,8 +13,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libcbor.so:devel/libcbor
 
-USE_HARDENING=	stackautoinit:off
-
 USES=		cmake compiler:c11 pkgconfig ssl
 
 CMAKE_OFF=	FUZZ LIBFUZZER NFC_LINUX USE_HIDAPI USE_WINHELLO

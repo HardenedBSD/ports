@@ -14,8 +14,6 @@ ONLY_FOR_ARCHS_REASON=	not yet supported
 
 BUILD_DEPENDS=	llvm${_LLVM_VER}>=0:devel/llvm${_LLVM_VER}
 
-USE_HARDENING=	stackautoinit:off
-
 CONFLICTS=	zig
 
 USES=		cmake compiler:c++11-lang localbase:ldflags tar:xz

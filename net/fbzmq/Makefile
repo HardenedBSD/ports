@@ -27,7 +27,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libzmq.so:net/libzmq4 \
 		libzstd.so:archivers/zstd
 
-USE_HARDENING=	pie:off stackautoinit:off
+USE_HARDENING=	pie:off
 
 USES=		cmake compiler:c++17-lang ssl
 USE_GITHUB=	yes

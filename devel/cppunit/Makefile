@@ -21,8 +21,6 @@ INSTALL_TARGET=	install-strip
 OPTIONS_SUB=	yes
 USE_LDCONFIG=	yes
 
-USE_HARDENING=	stackautoinit:off
-
 SUB_FILES=	cppunit-config
 SUB_LIST+=	DISTVERSION=${DISTVERSION}
 

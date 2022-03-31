@@ -22,8 +22,6 @@ USES+=		cmake:insource compiler:c++11-lang cpe localbase perl5 pkgconfig \
 USE_GITHUB=	yes
 USE_PERL5=	run
 
-USE_HARDENING=	stackautoinit:off
-
 USERS=		bareos
 GROUPS=		${USERS}
 

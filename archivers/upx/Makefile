@@ -17,8 +17,6 @@ LIB_DEPENDS=	libucl.so:archivers/ucl
 USES=		cpe gmake perl5 tar:xz
 USE_PERL5=	build
 
-USE_HARDENING=	stackautoinit:off
-
 MAKE_ENV=	UPX_UCLDIR=${LOCALBASE} \
 		target=freebsd
 

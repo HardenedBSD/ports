@@ -14,8 +14,6 @@ LIB_DEPENDS=	libnlopt.so:math/nlopt \
 		libopenblas.so:math/openblas \
 		libboost_program_options.so:devel/boost-libs
 
-USE_HARDENING=	stackautoinit:off
-
 USES=		gmake
 
 BUILD_WRKSRC=		${WRKDIR}/${DISTNAME}/src

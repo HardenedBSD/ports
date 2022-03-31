@@ -19,8 +19,6 @@ LIB_DEPENDS=	libhts.so:biology/htslib
 USES=		compiler:c++11-lib libtool
 USE_LDCONFIG=	yes
 
-USE_HARDENING=	stackautoinit:off
-
 GNU_CONFIGURE=	yes
 
 INSTALL_TARGET=	install-strip

@@ -15,7 +15,7 @@ USES=		cmake:testing compiler:c++11-lib cpe python:build
 CPE_VENDOR=	google
 USE_LDCONFIG=	yes
 
-USE_HARDENING=	pie:off stackautoinit:off
+USE_HARDENING=	pie:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google

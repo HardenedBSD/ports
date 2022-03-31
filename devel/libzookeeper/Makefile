@@ -21,8 +21,6 @@ USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 
-USE_HARDENING=	stackautoinit:off
-
 WRKSRC=		${WRKDIR}/${DISTNAME}/zookeeper-client/zookeeper-client-c
 
 post-extract:

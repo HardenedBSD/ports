@@ -27,7 +27,7 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
 BUILD_DEPENDS+=	runtest:misc/dejagnu
 .endif
 
-USE_HARDENING=	stackautoinit:off pie:off stackautoinit:off relro:off retpoline:off
+USE_HARDENING=	pie:off relro:off retpoline:off
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
 

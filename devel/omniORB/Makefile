@@ -17,7 +17,7 @@ BROKEN_SSL_REASON_openssl=	member access into incomplete type 'DH' (aka 'dh_st')
 USE_LDCONFIG=	yes
 USE_PYTHON=	py3kplist
 
-USE_HARDENING=  pie:off stackautoinit:off
+USE_HARDENING=  pie:off
 
 SHEBANG_FILES=	src/tool/omniidl/python2/scripts/omniidlrun.py \
 		src/tool/omniidl/python3/scripts/omniidlrun.py

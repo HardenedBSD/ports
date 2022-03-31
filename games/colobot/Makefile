@@ -22,7 +22,7 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libphysfs.so:devel/physfs \
 		libboost_system.so:devel/boost-libs
 
-USE_HARDENING=	stackautoinit:off pie:off
+USE_HARDENING=	pie:off
 
 USES=		cmake compiler:c++11-lang gettext-runtime gettext-tools:build \
 		gl gnome localbase:ldflags openal perl5 python:build sdl \

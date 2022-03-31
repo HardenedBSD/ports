@@ -22,7 +22,7 @@ MAKE_ENV=	LANG=en_EN.UTF-8
 ALL_TARGET=	all-lang doc
 USE_RC_SUBR=	iroffer
 
-USE_HARDENING=	pie:off relro:off stackautoinit:off
+USE_HARDENING=	pie:off relro:off
 
 IROFFER_DOCS=	README README.modDinoex LIESMICH.modDinoex \
 		LICENSE THANKS TODO \

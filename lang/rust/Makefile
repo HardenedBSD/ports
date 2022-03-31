@@ -34,8 +34,6 @@ LIB_DEPENDS=	libcurl.so:ftp/curl
 
 USES=		cpe ninja:build pkgconfig python:3.6+,build ssl tar:xz
 
-USE_HARDENING=	stackautoinit:off
-
 CPE_VENDOR=	rust-lang
 
 MAKE_ENV=	DESTDIR=${STAGEDIR} \

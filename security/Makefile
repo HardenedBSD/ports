@@ -292,6 +292,7 @@
     SUBDIR += libotr
     SUBDIR += libotr3
     SUBDIR += libp11
+    SUBDIR += libprelude
     SUBDIR += libpwquality
     SUBDIR += libressl
     SUBDIR += libressl-devel

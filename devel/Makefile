@@ -1663,6 +1663,7 @@
     SUBDIR += ocaml-uutf
     SUBDIR += ocaml-xstr
     SUBDIR += ocaml-xstrp4
+    SUBDIR += oci-cli
     SUBDIR += ocl-icd
     SUBDIR += oclgrind
     SUBDIR += ode
@@ -5051,6 +5052,7 @@
     SUBDIR += py-pyrsistent
     SUBDIR += py-pysdl2
     SUBDIR += py-pyshp
+    SUBDIR += py-pysimdjson
     SUBDIR += py-pysparklines
     SUBDIR += py-pystorm
     SUBDIR += py-pyte

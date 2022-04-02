@@ -293,6 +293,7 @@
     SUBDIR += libotr3
     SUBDIR += libp11
     SUBDIR += libprelude
+    SUBDIR += libpreludedb
     SUBDIR += libpwquality
     SUBDIR += libressl
     SUBDIR += libressl-devel

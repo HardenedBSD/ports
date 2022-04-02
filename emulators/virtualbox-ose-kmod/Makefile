@@ -90,6 +90,8 @@ post-patch:
 	@${REINPLACE_CMD} \
 	    -e 's|\$$KBUILDDIR_BIN/kmk_sed|${LOCALBASE}/bin/kmk_sed|g' \
 	    ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e "s|0, VM_MAP_PROTECT_SET_PROT|FALSE|g" \
+	    ${WRKSRC}/src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c
 
 pre-build:
 	cd ${WRKSRC}/src/VBox/HostDrivers && ${SH} -c \

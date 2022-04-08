@@ -1,18 +1,16 @@
-PORTNAME=	libvmod-dynamic
-PORTVERSION=	20220202
+PORTNAME=	libvmod-redis
+PORTVERSION=	20220118
 CATEGORIES=	www
 PKGNAMEPREFIX=	varnish-
 
 MAINTAINER=	zi@FreeBSD.org
-COMMENT=	Varnish Module (vmod) for dynamic backends
+COMMENT=	Varnish Module (vmod) for redis
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_FreeBSD_13=	ld: error: duplicate symbol: objects
-BROKEN_FreeBSD_14=	ld: error: duplicate symbol: objects
-
-LIB_DEPENDS=	libgetdns.so:dns/getdns
+LIB_DEPENDS=	libev.so:devel/libev \
+		libhiredis.so:databases/hiredis
 BUILD_DEPENDS=	rst2man:textproc/py-docutils@${PY_FLAVOR}
 
 USES=		autoreconf compiler:c11 gmake libtool pkgconfig \
@@ -20,16 +18,16 @@ USES=		autoreconf compiler:c11 gmake libtool pkgconfig \
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-static
+CONFIGURE_ARGS=	--disable-static --disable-tls
 INSTALL_TARGET=	install-strip
-DOCSDIR=	${PREFIX}/share/doc/vmod-dynamic
+DOCSDIR=	${PREFIX}/share/doc/vmod-redis
 MAKE_JOBS_UNSAFE=	yes
 
 CFLAGS+=	-I${WRKSRC}/src
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	nigoroll
-GH_TAGNAME=	9666973
+GH_ACCOUNT=	carlosabalde
+GH_TAGNAME=	5e1c20e
 
 OPTIONS_DEFINE=	DOCS
 

@@ -829,7 +829,9 @@
     SUBDIR += py-azure-keyvault-certificates
     SUBDIR += py-azure-keyvault-keys
     SUBDIR += py-azure-keyvault-secrets
+    SUBDIR += py-base58
     SUBDIR += py-bcrypt
+    SUBDIR += py-bitbox02
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
     SUBDIR += py-cert-human
@@ -903,6 +905,7 @@
     SUBDIR += py-muacrypt
     SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
+    SUBDIR += py-noiseprotocol
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib

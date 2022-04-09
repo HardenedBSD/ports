@@ -113,6 +113,9 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		extra_cxxflags="${CXXFLAGS}" \
 		extra_ldflags="${LDFLAGS}"
 
+PAGEEXEC_DISABLE=	share/iridium/iridium
+MPROTECT_DISABLE=	share/iridium/iridium
+
 # TODO: investigate building with these options:
 # use_system_minigbm
 GN_BOOTSTRAP_FLAGS=	--no-clean --no-rebuild --skip-generate-buildfiles

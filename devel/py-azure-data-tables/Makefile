@@ -1,17 +1,16 @@
-PORTNAME=	azure-mgmt-storage
-PORTVERSION=	19.1.0
+PORTNAME=	azure-data-tables
+DISTVERSION=	12.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
-COMMENT=	Microsoft Azure Storage Management Client Library for Python
+COMMENT=	Microsoft Azure Data Tables Client Library for Python
 
 LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}msrest>=0.6.21:net-mgmt/py-msrest@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}azure-common>=1.1:www/py-azure-common@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}azure-core>=1.3.0<2.0.0:devel/py-azure-core@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}azure-core>=1.14.0<2.0.0:devel/py-azure-core@${PY_FLAVOR}
 
 USES=		azurepy python:3.6+ zip
 USE_PYTHON=	autoplist concurrent distutils

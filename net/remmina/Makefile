@@ -10,14 +10,10 @@ COMMENT=	GTK+ Remote Desktop Client
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-LIB_DEPENDS=	libjson-glib-1.0.so:devel/json-glib \
-=======
 LIB_DEPENDS=	libappindicator3.so:devel/libappindicator \
 		libjson-glib-1.0.so:devel/json-glib \
->>>>>>> origin/freebsd/main
 		libpcre2-8.so:devel/pcre2 \
 		libsodium.so:security/libsodium \
 		libsoup-2.4.so:devel/libsoup \

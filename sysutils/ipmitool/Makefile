@@ -23,6 +23,8 @@ PLIST_FILES=	bin/ipmitool man/man1/ipmitool.1.gz man/man8/ipmievd.8.gz \
 SUB_FILES=	status-ipmi.sh
 PORTDOCS=	AUTHORS COPYING ChangeLog README
 
+USES+=		stack_autoinit:uninitialized
+
 PERIODIC_DIR=	etc/periodic/daily
 
 OPTIONS_DEFINE=	FREEIPMI DOCS

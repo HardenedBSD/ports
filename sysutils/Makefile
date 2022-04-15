@@ -275,6 +275,7 @@
     SUBDIR += diskonaut
     SUBDIR += diskscrub
     SUBDIR += disktype
+    SUBDIR += diskus
     SUBDIR += dmg2img
     SUBDIR += dmidecode
     SUBDIR += dnf

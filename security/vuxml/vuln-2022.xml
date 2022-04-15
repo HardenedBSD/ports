@@ -1,3 +1,32 @@
+  <vuln vid="a25ea27b-bced-11ec-87b5-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>100.0.4896.127</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_14.html">
+	  <p>This release contains 2 security fixes, including:</p>
+	  <ul>
+	    <li>[1315901] High CVE-2022-1364: Type Confusion in V8. Reported by Clément Lecigne of Google's Threat Analysis Group on 2022-0-13</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-1364</cvename>
+      <url>https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_14.html</url>
+    </references>
+    <dates>
+      <discovery>2022-04-14</discovery>
+      <entry>2022-04-15</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="a5de43ed-bc49-11ec-b516-0897988a1c07">
     <topic>Asterisk -- func_odbc: Possible SQL Injection</topic>
     <affects>
@@ -118,17 +147,17 @@
 	<range><ge>1.11.0</ge><lt>1.14.2</lt></range>
       </package>
       <package>
-        <name>mod_dav_svn</name>
-        <range><ge>1.10.0</ge><lt>1.10.8</lt></range>
-        <range><ge>1.11.0</ge><lt>1.14.2</lt></range>
+	<name>mod_dav_svn</name>
+	<range><ge>1.10.0</ge><lt>1.10.8</lt></range>
+	<range><ge>1.11.0</ge><lt>1.14.2</lt></range>
       </package>
       <package>
-        <name>subversion-lts</name>
-        <range><ge>1.10.0</ge><lt>1.10.8</lt></range>
+	<name>subversion-lts</name>
+	<range><ge>1.10.0</ge><lt>1.10.8</lt></range>
       </package>
       <package>
-        <name>mod_dav_svn-lts</name>
-        <range><ge>1.10.0</ge><lt>1.10.8</lt></range>
+	<name>mod_dav_svn-lts</name>
+	<range><ge>1.10.0</ge><lt>1.10.8</lt></range>
       </package>
      </affects>
     <description>
@@ -136,20 +165,20 @@
 	<p>Subversion project reports:</p>
 	<blockquote cite="https://subversion.apache.org/security/CVE-2021-28544-advisory.txt">
 	  <p>
-            Subversion servers reveal 'copyfrom' paths that should be hidden according
-            to configured path-based authorization (authz) rules.  When a node has been
-            copied from a protected location, users with access to the copy can see the
-            'copyfrom' path of the original.  This also reveals the fact that the node
-            was copied.  Only the 'copyfrom' path is revealed; not its contents. Both
-            httpd and svnserve servers are vulnerable.
-          </p>
+	    Subversion servers reveal 'copyfrom' paths that should be hidden according
+	    to configured path-based authorization (authz) rules.  When a node has been
+	    copied from a protected location, users with access to the copy can see the
+	    'copyfrom' path of the original.  This also reveals the fact that the node
+	    was copied.  Only the 'copyfrom' path is revealed; not its contents. Both
+	    httpd and svnserve servers are vulnerable.
+	  </p>
 	</blockquote>
-        <blockquote cite="https://subversion.apache.org/security/CVE-2022-24070-advisory.txt">
-          <p>
-            While looking up path-based authorization rules, mod_dav_svn servers
-            may attempt to use memory which has already been freed.
-          </p>
-        </blockquote>
+	<blockquote cite="https://subversion.apache.org/security/CVE-2022-24070-advisory.txt">
+	  <p>
+	    While looking up path-based authorization rules, mod_dav_svn servers
+	    may attempt to use memory which has already been freed.
+	  </p>
+	</blockquote>
       </body>
     </description>
     <references>
@@ -252,6 +281,32 @@
     <dates>
       <discovery>2022-04-12</discovery>
       <entry>2022-04-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6eb9cf14-bab0-11ec-8f59-4437e6ad11c4">
+    <topic>mutt -- mutt_decode_uuencoded() can read past the of the input line</topic>
+    <affects>
+      <package>
+	<name>mutt</name>
+	<range><lt>2.2.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tavis Ormandy reports:</p>
+	<blockquote cite="https://gitlab.com/muttmua/mutt/-/issues/404">
+	  <p>mutt_decode_uuencoded(), the line length is read from the untrusted uuencoded part without validation. This could result in including private memory in message parts, for example fragments of other messages, passphrases or keys in replys</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-1328</cvename>
+      <url>https://gitlab.com/muttmua/mutt/-/issues/404</url>
+    </references>
+    <dates>
+      <discovery>2022-04-04</discovery>
+      <entry>2022-04-12</entry>
     </dates>
   </vuln>
 

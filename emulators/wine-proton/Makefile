@@ -26,6 +26,9 @@ LIB_DEPENDS=	libFAudio.so:audio/faudio \
 USES=		bison desktop-file-utils gettext-runtime gl gmake gnome jpeg localbase openal pkgconfig sdl shebangfix tar:xz xorg
 USE_GCC=	yes
 
+USE_HARDENING=	pie:off
+SSP_CFLAGS=	-fstack-protector-strong
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	ValveSoftware
 GH_PROJECT=	wine

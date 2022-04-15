@@ -25,6 +25,9 @@ USES=		bison cpe desktop-file-utils gmake localbase \
 USE_GCC=	yes
 USE_SDL=	sdl2
 
+USE_HARDENING=	pie:off
+SSP_CFLAGS=	-fstack-protector-strong
+
 CPE_VENDOR=	winehq
 
 CONFLICTS_INSTALL=	wine

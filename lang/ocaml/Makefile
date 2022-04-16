@@ -38,15 +38,13 @@ LDFLAGS_armv6=	-Wl,-znotext
 LDFLAGS_armv7=	-Wl,-znotext
 LDFLAGS_i386=	-Wl,-znotext
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 LLD_UNSAFE= yes
-=======
+
 SHEBANG_LANG=	awk
 awk_OLD_CMD=	/bin/awk
 awk_CMD=	/usr/bin/awk
 SHEBANG_FILES=	tools/ocaml-instr-graph tools/ocaml-instr-report
->>>>>>> origin/freebsd/main
 
 CONFIGURE_ARGS=	-verbose -prefix "${PREFIX}" \
 		-cc "${CC}" \

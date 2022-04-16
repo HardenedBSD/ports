@@ -2,6 +2,7 @@
 
 PORTNAME=	GraphicsMagick
 PORTVERSION=	1.3.38
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF
@@ -15,7 +16,7 @@ USES=		cpe libtool localbase pathfix tar:bzip2
 
 CONFIGURE_ARGS=	--enable-shared --enable-static \
 		--with-windows-font-dir=${WINDOWS_FONT_DIR} \
-		--without-perl --without-trio
+		--without-jxl --without-perl --without-trio
 CONFIGURE_ENV=	PTHREAD_LIBS=-lpthread
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip

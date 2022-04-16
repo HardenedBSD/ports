@@ -929,8 +929,6 @@
     SUBDIR += grcov
     SUBDIR += grex
     SUBDIR += grpc
-    SUBDIR += grpc130
-    SUBDIR += grpc134
     SUBDIR += grpc142
     SUBDIR += grv
     SUBDIR += gsettings-desktop-schemas
@@ -3334,6 +3332,7 @@
     SUBDIR += p5-Syntax-Keyword-Dynamically
     SUBDIR += p5-Syntax-Keyword-Gather
     SUBDIR += p5-Syntax-Keyword-Junction
+    SUBDIR += p5-Syntax-Keyword-Match
     SUBDIR += p5-Syntax-Keyword-Try
     SUBDIR += p5-Sys-CPU
     SUBDIR += p5-Sys-Info
@@ -4322,6 +4321,7 @@
     SUBDIR += py-cachetools3
     SUBDIR += py-cachy
     SUBDIR += py-cadquery-pywrap
+    SUBDIR += py-calver
     SUBDIR += py-canonicaljson
     SUBDIR += py-capstone
     SUBDIR += py-capturer
@@ -5146,6 +5146,7 @@
     SUBDIR += py-pytrie
     SUBDIR += py-pytvmaze
     SUBDIR += py-pytz
+    SUBDIR += py-pytz-deprecation-shim
     SUBDIR += py-pytzdata
     SUBDIR += py-pyudev
     SUBDIR += py-pyupgrade
@@ -5326,7 +5327,7 @@
     SUBDIR += py-transitions
     SUBDIR += py-tree-format
     SUBDIR += py-trimesh
-    SUBDIR += py-trollius
+    SUBDIR += py-trove-classifiers
     SUBDIR += py-ttictoc
     SUBDIR += py-ttystatus
     SUBDIR += py-twiggy
@@ -5376,6 +5377,7 @@
     SUBDIR += py-user_agents
     SUBDIR += py-userpath
     SUBDIR += py-uvloop
+    SUBDIR += py-validate-pyproject
     SUBDIR += py-validators
     SUBDIR += py-validictory
     SUBDIR += py-vcrpy
@@ -5922,6 +5924,7 @@
     SUBDIR += rubygem-aws-sdk-pinpoint
     SUBDIR += rubygem-aws-sdk-pinpointemail
     SUBDIR += rubygem-aws-sdk-pinpointsmsvoice
+    SUBDIR += rubygem-aws-sdk-pinpointsmsvoicev2
     SUBDIR += rubygem-aws-sdk-polly
     SUBDIR += rubygem-aws-sdk-pricing
     SUBDIR += rubygem-aws-sdk-prometheusservice
@@ -6238,6 +6241,7 @@
     SUBDIR += rubygem-cucumber-cucumber-expressions14
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
+    SUBDIR += rubygem-cucumber-messages17
     SUBDIR += rubygem-cucumber-messages4
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
@@ -6419,6 +6423,7 @@
     SUBDIR += rubygem-google-apis-storage_v1
     SUBDIR += rubygem-google-gax
     SUBDIR += rubygem-google-protobuf
+    SUBDIR += rubygem-google-protobuf319
     SUBDIR += rubygem-googleapis-common-protos
     SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf

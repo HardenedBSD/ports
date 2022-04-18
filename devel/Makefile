@@ -2001,6 +2001,7 @@
     SUBDIR += p5-Complete-Sequence
     SUBDIR += p5-Complete-Util
     SUBDIR += p5-Config-AST
+    SUBDIR += p5-Config-AWS
     SUBDIR += p5-Config-Any
     SUBDIR += p5-Config-ApacheFormat
     SUBDIR += p5-Config-Auto
@@ -2186,6 +2187,7 @@
     SUBDIR += p5-Data-Visitor-Encode
     SUBDIR += p5-Data-Visitor-Tiny
     SUBDIR += p5-Data-Walk
+    SUBDIR += p5-DataStruct-Flat
     SUBDIR += p5-Date-Business
     SUBDIR += p5-Date-Calc
     SUBDIR += p5-Date-Calc-Iterator
@@ -2792,6 +2794,7 @@
     SUBDIR += p5-Mo
     SUBDIR += p5-Mock-MonkeyPatch
     SUBDIR += p5-Mock-Quick
+    SUBDIR += p5-Mock-Sub
     SUBDIR += p5-Module-Build
     SUBDIR += p5-Module-Build-Convert
     SUBDIR += p5-Module-Build-Kwalitee
@@ -3077,6 +3080,7 @@
     SUBDIR += p5-Paranoid-Log-Syslog
     SUBDIR += p5-Parse-CPAN-Packages
     SUBDIR += p5-Parse-CPAN-Packages-Fast
+    SUBDIR += p5-Parse-Distname
     SUBDIR += p5-Parse-ErrorString-Perl
     SUBDIR += p5-Parse-ExuberantCTags
     SUBDIR += p5-Parse-LocalDistribution
@@ -3313,6 +3317,7 @@
     SUBDIR += p5-Sub-Exporter-GlobExporter
     SUBDIR += p5-Sub-Exporter-Lexical
     SUBDIR += p5-Sub-Exporter-Progressive
+    SUBDIR += p5-Sub-HandlesVia
     SUBDIR += p5-Sub-Identify
     SUBDIR += p5-Sub-Infix
     SUBDIR += p5-Sub-Info
@@ -4632,7 +4637,6 @@
     SUBDIR += py-inifile
     SUBDIR += py-iniparse
     SUBDIR += py-installer
-    SUBDIR += py-installer03
     SUBDIR += py-intbitset
     SUBDIR += py-intelhex
     SUBDIR += py-intervals
@@ -6473,6 +6477,7 @@
     SUBDIR += rubygem-instance_storage
     SUBDIR += rubygem-interact
     SUBDIR += rubygem-io-console
+    SUBDIR += rubygem-io-event
     SUBDIR += rubygem-io-like
     SUBDIR += rubygem-io-nonblock
     SUBDIR += rubygem-io-wait

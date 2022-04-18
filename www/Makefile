@@ -423,6 +423,7 @@
     SUBDIR += moodle310
     SUBDIR += moodle311
     SUBDIR += moodle39
+    SUBDIR += moodle40
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -807,6 +808,7 @@
     SUBDIR += p5-HTML-Element-Library
     SUBDIR += p5-HTML-Element-Replacer
     SUBDIR += p5-HTML-Encoding
+    SUBDIR += p5-HTML-Escape
     SUBDIR += p5-HTML-ExtractContent
     SUBDIR += p5-HTML-ExtractMain
     SUBDIR += p5-HTML-Field
@@ -1429,6 +1431,7 @@
     SUBDIR += py-azure-storage
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
+    SUBDIR += py-beautifulsoup449
     SUBDIR += py-betamax
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
@@ -1480,6 +1483,7 @@
     SUBDIR += py-django-babel
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
+    SUBDIR += py-django-bleach
     SUBDIR += py-django-bootstrap-form
     SUBDIR += py-django-bootstrap-pagination
     SUBDIR += py-django-bootstrap3

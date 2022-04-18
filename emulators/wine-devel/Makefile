@@ -36,7 +36,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--verbose \
 		--disable-kerberos \
 		--disable-tests \
-		--without-alsa \
 		--without-capi \
 		--without-coreaudio \
 		--without-dbus \
@@ -50,7 +49,6 @@ CONFIGURE_ARGS+=--verbose \
 		--without-netapi \
 		--without-opencl \
 		--without-osmesa \
-		--with-oss \
 		--with-pcap \
 		--with-pthread \
 		--without-pulse \
@@ -75,7 +73,9 @@ SUB_FILES=	pkg-message
 PORTDATA=	wine.inf
 
 OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP OPENAL STAGING V4L WINEMAKER X11 GECKO MONO
-OPTIONS_DEFAULT=GNUTLS OPENAL X11
+OPTIONS_DEFAULT=GNUTLS OPENAL OSS X11
+OPTIONS_RADIO=	AUDIO
+OPTIONS_RADIO_AUDIO=	ALSA OSS
 OPTIONS_SUB=	yes
 
 DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
@@ -83,6 +83,9 @@ STAGING_DESC=	Include Wine Staging patchset (experimental&unsupported)
 WINEMAKER_DESC=	Fully support winemaker (requires Perl)
 GECKO_DESC=	Bundle Gecko MSI package for Wine
 MONO_DESC=	Bundle Mono MSI package for Wine
+
+ALSA_CONFIGURE_ON=	--with-alsa --without-oss
+ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 
 CUPS_CONFIGURE_WITH=	cups
 CUPS_LIB_DEPENDS=	libcups.so:print/cups
@@ -101,6 +104,8 @@ MONO_RUN_DEPENDS=	wine-mono-devel>0:emulators/wine-mono-devel
 
 OPENAL_CONFIGURE_WITH=	openal
 OPENAL_USES=		openal
+
+OSS_CONFIGURE_ON=	--without-alsa --with-oss
 
 STAGING_MASTER_SITES=	https://github.com/wine-staging/wine-staging/archive/:staging
 STAGING_DIST=		v${DISTVERSION}.tar.gz

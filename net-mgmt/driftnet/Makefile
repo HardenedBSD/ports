@@ -17,12 +17,8 @@ LIB_DEPENDS=	libgif.so:graphics/giflib \
 		libwebp.so:graphics/webp \
 		libwebsockets.so:net/libwebsockets
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-GNU_CONFIGURE=	yes
-=======
->>>>>>> origin/freebsd/main
 USES=		autoreconf gettext-runtime gmake gnome jpeg localbase:ldflags \
 		pkgconfig xorg
 USE_CSTD=	c99

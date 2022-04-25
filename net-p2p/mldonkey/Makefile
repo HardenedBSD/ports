@@ -100,7 +100,7 @@ ALL_TARGET+=	\
 .include <bsd.port.pre.mk>
 
 .if ${ARCH:Mpowerpc64*}
-USE_GCC=	yes
+LLD_UNSAFE=	yes
 .endif
 
 post-patch:

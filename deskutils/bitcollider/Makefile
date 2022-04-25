@@ -9,12 +9,10 @@ MASTER_SITES=	SF/${PORTNAME}/Bitcollider/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Bitzi metadata generator
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
-=======
+
 DEPRECATED=	bitzi.com is no longer available, closed down in 2013
 EXPIRATION_DATE=2022-06-30
->>>>>>> origin/freebsd/main
 
 GNU_CONFIGURE=	yes
 USES=		libtool

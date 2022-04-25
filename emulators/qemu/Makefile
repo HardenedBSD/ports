@@ -27,7 +27,6 @@ LIB_DEPENDS+=	libfdt.so:sysutils/dtc \
 LIB_DEPENDS+=	libepoxy.so:graphics/libepoxy
 .endif
 
-<<<<<<< HEAD
 USE_HARDENING?=	pie:off relro:off
 MPROTECT_DISABLE=	bin/qemu-system-aarch64
 MPROTECT_DISABLE+=	bin/qemu-system-alpha
@@ -60,15 +59,10 @@ MPROTECT_DISABLE+=	bin/qemu-system-x86_64
 MPROTECT_DISABLE+=	bin/qemu-system-xtensa
 MPROTECT_DISABLE+=	bin/qemu-system-xtensaeb
 
-FLAVORS=	default nox11 tools
-FLAVOR?=	${FLAVORS:[1]}
-default_CONFLICTS_INSTALL=	qemu5* qemu42 qemu-devel qemu-nox11 qemu-tools qemu-utils
-=======
 FLAVORS=			default nox11 tools
 FLAVOR?=			${FLAVORS:[1]}
 default_CONFLICTS_INSTALL=	qemu-devel qemu-nox11 qemu-tools qemu-utils \
 				qemu5* qemu6*
->>>>>>> origin/freebsd/main
 nox11_PKGNAMESUFFIX=		-nox11
 nox11_CONFLICTS_INSTALL=	qemu qemu-devel qemu5* qemu6*
 nox11_COMMENT=			(without X11)

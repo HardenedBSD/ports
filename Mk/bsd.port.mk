@@ -1211,7 +1211,6 @@ _OSVERSION_MAJOR=	${OSVERSION:C/([0-9]?[0-9])([0-9][0-9])[0-9]{3}/\1/}
 # Only define tools here (for transition period with between pkg tools)
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
-<<<<<<< HEAD
 .if ${OSVERSION} < 1200020
 LLD_IS_LD=	no
 .endif
@@ -1258,22 +1257,13 @@ LLVM_OBJDUMP_IS_OBJDUMP=	no
 .endif
 _EXPORTED_VARS+=	LLVM_OBJDUMP_IS_OBJDUMP
 
-.if !defined(_PKG_CHECKED) && !defined(PACKAGE_BUILDING) && exists(${PKG_BIN})
-.if !defined(_PKG_VERSION)
-=======
 .    if !defined(_PKG_CHECKED) && !defined(PACKAGE_BUILDING) && exists(${PKG_BIN})
 .      if !defined(_PKG_VERSION)
->>>>>>> origin/freebsd/main
 _PKG_VERSION!=	${PKG_BIN} -v
 .      endif
 # XXX hack for smooth transition towards pkg 1.17
-<<<<<<< HEAD
-_PKG_BEFORE_PKGEXT!= ${PKG_BIN} version -t ${_PKG_VERSION:C/-.*//g} 1.16.3
-.if ${_PKG_BEFORE_PKGEXT} == "<"
-=======
 _PKG_BEFORE_PKGEXT!= ${PKG_BIN} version -t ${_PKG_VERSION:C/-.*//g} 1.17.0
 .      if ${_PKG_BEFORE_PKGEXT} == "<"
->>>>>>> origin/freebsd/main
 _PKG_TRANSITIONING_TO_NEW_EXT=	yes
 _EXPORTED_VARS+=	_PKG_TRANSITIONING_TO_NEW_EXT
 WARNING+=	"It is strongly recommended to upgrade to a newer version of pkg first"
@@ -1905,17 +1895,13 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .include "${PORTSDIR}/Mk/bsd.gcc.mk"
 .    endif
 
-<<<<<<< HEAD
 .if !defined(USE_GCC) && defined(USES) && !${USES:Mfortran}
 .if !defined(NO_UNUSED_ARGUMENTS_CHECK)
 CFLAGS+=	-Qunused-arguments
 .endif
 .endif
 
-.if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
-=======
 .    if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
->>>>>>> origin/freebsd/main
 LDFLAGS+=	-fuse-ld=bfd
 BINARY_ALIAS+=	ld=${LD}
 .      if !defined(USE_BINUTILS)
@@ -1929,7 +1915,6 @@ USE_BINUTILS=	yes
 .      endif
 .    endif
 
-<<<<<<< HEAD
 _TEST_AR=/usr/bin/ar
 .if defined(LLVM_AR_UNSAFE) && ${_TEST_AR:tA} == "/usr/bin/llvm-ar"
 AR=	elftc-ar
@@ -1951,10 +1936,7 @@ MAKE_ENV+=	OBJDUMP=${OBJDUMP}
 CMAKE_ARGS+=	-DCMAKE_OBJDUMP:STRING=${OBJDUMP}
 .endif
 
-.if defined(USE_BINUTILS) && !defined(DISABLE_BINUTILS)
-=======
 .    if defined(USE_BINUTILS) && !defined(DISABLE_BINUTILS)
->>>>>>> origin/freebsd/main
 BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
 BINUTILS?=	ADDR2LINE AR AS CPPFILT GPROF LD NM OBJCOPY OBJDUMP RANLIB \
 	READELF SIZE STRINGS

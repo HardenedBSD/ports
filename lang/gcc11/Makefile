@@ -13,6 +13,7 @@ LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
 USE_HARDENING=  pie:off relro:off retpoline:off
+USE_GCC=	yes
 
 ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
 

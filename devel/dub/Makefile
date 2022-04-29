@@ -1,5 +1,6 @@
 PORTNAME=	dub
 PORTVERSION=	1.14.0
+BROKEN=	outdated and failing construction upstream
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 

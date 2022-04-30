@@ -25,13 +25,9 @@ LIB_DEPENDS=	libnss3.so:security/nss \
 		libfarstream-0.2.so:net-im/farstream
 RUN_DEPENDS=	pidgin:net-im/pidgin
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		compiler:c11 gmake gnome libtool localbase pkgconfig tar:bzip2 ssl
-=======
 USES=		compiler:c11 gmake gnome gstreamer libtool localbase pkgconfig tar:bzip2 ssl
->>>>>>> origin/freebsd/main
 USE_GNOME=	gtk20 intltool libxml2
 
 USE_LDCONFIG=	yes

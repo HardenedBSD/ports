@@ -18,13 +18,9 @@ LIB_DEPENDS=	libdiscid.so:audio/libdiscid \
 		libbrasero-media3.so:sysutils/brasero \
 		libunique-1.0.so:x11-toolkits/unique
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		desktop-file-utils gettext gnome meson pkgconfig \
-=======
 USES=		desktop-file-utils gettext gnome gstreamer meson pkgconfig \
->>>>>>> origin/freebsd/main
 		python:3.5+,build tar:xz xorg
 USE_GNOME=	glib20 gtk30 intlhack
 USE_XORG=	x11

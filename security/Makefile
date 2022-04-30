@@ -783,7 +783,7 @@
     SUBDIR += pinentry-curses
     SUBDIR += pinentry-efl
     SUBDIR += pinentry-fltk
-    SUBDIR += pinentry-gnome3
+    SUBDIR += pinentry-gnome
     SUBDIR += pinentry-gtk2
     SUBDIR += pinentry-qt5
     SUBDIR += pinentry-tty
@@ -975,7 +975,6 @@
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
     SUBDIR += py-spake2
-    SUBDIR += py-ssh
     SUBDIR += py-ssh-audit
     SUBDIR += py-sshpubkeys
     SUBDIR += py-stem

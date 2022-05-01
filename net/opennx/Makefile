@@ -20,6 +20,8 @@ USES=		gmake gnome samba:lib xorg
 USE_XORG=	ice sm x11 xau xmu
 USE_WX=		2.8+
 
+USE_HARDENING=	pie:off
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-0.16
 
 GNU_CONFIGURE=	yes
@@ -27,6 +29,8 @@ GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib -L${SAMBALIBS}
 CONFIGURE_ARGS=	--with-wx-config=${WX_CONFIG}
 CPPFLAGS+=	-I${LOCALBASE}/include -I${SAMBAINCLUDES}
+CFLAGS+=	-fPIC
+CXXFLAGS+=	-fPIC
 
 NO_PACKAGE=	must generate a fresh private key at install time
 LEGAL_PACKAGE=	yes

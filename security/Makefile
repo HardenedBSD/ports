@@ -1155,6 +1155,7 @@
     SUBDIR += seahorse
     SUBDIR += seal
     SUBDIR += seccure
+    SUBDIR += seclists
     SUBDIR += secpanel
     SUBDIR += sectok
     SUBDIR += secure_delete

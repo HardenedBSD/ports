@@ -15,20 +15,11 @@ COMMENT=	Network file distribution/synchronization utility
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-LIB_DEPENDS=	libxxhash.so:devel/xxhash \
-		libzstd.so:archivers/zstd \
-		liblz4.so:archivers/liblz4
-
-USES=		cpe shebangfix ssl
-SHEBANG_FILES=	support/rrsync
-=======
 LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 		libxxhash.so:devel/xxhash \
 		libzstd.so:archivers/zstd
->>>>>>> origin/freebsd/main
 
 USES=		cpe python shebangfix ssl
 CPE_VENDOR=	samba

@@ -136,6 +136,7 @@
     SUBDIR += libcouchbase
     SUBDIR += libdbi
     SUBDIR += libdbi-drivers
+    SUBDIR += libdbwrap
     SUBDIR += libdrizzle
     SUBDIR += libdrizzle-redux
     SUBDIR += libgda5

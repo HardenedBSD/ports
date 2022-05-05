@@ -1,0 +1,5 @@
+include/dbwrap.h
+include/dbwrap_mysql.h
+include/dbwrap_sqlite.h
+lib/libdbwrap.so
+lib/libdbwrap.so.0

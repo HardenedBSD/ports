@@ -69,6 +69,8 @@ IGNORE=	USES=go has invalid arguments: ${go_ARGS:Nmodules:Nno_targets:Nrun}
 
 # Settable variables
 
+GO_PORT?=	lang/go
+
 .  if empty(GO_PKGNAME)
 .    if !empty(GH_SUBDIR)
 GO_PKGNAME=	${GH_SUBDIR:S|^src/||}
@@ -90,6 +92,10 @@ GO_BUILDFLAGS+=-v -buildmode=exe
 GO_BUILDFLAGS+=	-ldflags=-s
 .  endif
 GO_TESTFLAGS+=	-v
+.  if ${GO_PORT} != lang/go117
+GO_BUILDFLAGS+=	-buildvcs=false
+GO_TESTFLAGS+=	-buildvcs=false
+.  endif
 
 CGO_ENABLED?=	1
 CGO_CFLAGS+=	-I${LOCALBASE}/include
@@ -146,8 +152,6 @@ GO_ENV+=	GOPATH="${GO_GOPATH}" \
 		GOBIN="" \
 		GO111MODULE=off
 .  endif
-
-GO_PORT?=	lang/go
 
 BUILD_DEPENDS+=	${GO_CMD}:${GO_PORT}
 .  if ${go_ARGS:Mrun}

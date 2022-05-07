@@ -28,13 +28,11 @@ USES=		compiler:c++11-lang cpe gmake iconv libtool makeinfo perl5 tar:xz
 USE_BINUTILS=	yes
 USE_PERL5=	build
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off retpoline:off
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
-=======
+
 CONFLICTS=	gcc12
->>>>>>> origin/freebsd/main
 
 CPE_VENDOR=	gnu
 CPE_VERSION=	${GCC_VERSION}

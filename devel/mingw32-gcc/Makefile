@@ -28,6 +28,10 @@ GCCVERSION=	4.8.1
 
 SSP_UNSAFE=	yes
 
+LLVM_AR_UNSAFE=         yes
+LLD_UNSAFE=             yes
+NO_UNUSED_ARGUMENTS_CHECK=	yes
+
 ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 sparc64
 USE_LDCONFIG=	yes
 USES=		bison cpe iconv gmake libtool makeinfo perl5 tar:bzip2

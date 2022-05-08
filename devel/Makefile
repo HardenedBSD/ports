@@ -316,6 +316,7 @@
     SUBDIR += cargo-generate
     SUBDIR += cask
     SUBDIR += catch
+    SUBDIR += cbang
     SUBDIR += cbrowser
     SUBDIR += cc65
     SUBDIR += ccache
@@ -348,6 +349,7 @@
     SUBDIR += chrpath
     SUBDIR += chruby
     SUBDIR += cil
+    SUBDIR += cirrus-cli
     SUBDIR += cityhash
     SUBDIR += cjose
     SUBDIR += cl-alexandria

@@ -9,15 +9,13 @@ MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Network UPS Tools
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
-=======
+
 LICENSE=	GPLv2+ GPLv3+ ART10 GPLv1+
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS=	nut-devel-*
->>>>>>> origin/freebsd/main
 
 GNU_CONFIGURE=	yes
 USES=		autoreconf:build compiler:c11 gmake libtool pkgconfig python:build

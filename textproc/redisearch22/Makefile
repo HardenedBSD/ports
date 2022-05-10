@@ -1,8 +1,8 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
 
-PORTNAME=	redisearch16
+PORTNAME=	redisearch22
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.16
+DISTVERSION=	2.2.10
 CATEGORIES=	textproc
 
 MAINTAINER=	ports@FreeBSD.org
@@ -19,12 +19,13 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	RediSearch
 GH_PROJECT=	RediSearch
 
-CMAKE_ARGS=	-DGIT_DESCRIBE_VERSION:STRING=${PKGVERSION}
+CMAKE_ARGS=	-DGIT_DESCRIBE_VERSION:STRING=${PKGVERSION} \
+		-DOS=freebsd
 
-PLIST_FILES=	lib/redisearch16.so
+PLIST_FILES=	lib/redisearch22.so
 
 do-install:
 	${INSTALL_LIB} ${INSTALL_WRKSRC}/redisearch.so \
-		${STAGEDIR}${PREFIX}/lib/redisearch16.so
+		${STAGEDIR}${PREFIX}/lib/redisearch22.so
 
 .include <bsd.port.mk>

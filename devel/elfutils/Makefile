@@ -17,14 +17,10 @@ LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING-LGPLV3
 BROKEN_armv6=		fails to build: fails to compile i386_disasm.c
 BROKEN_sparc64=		sparc patch does not apply cleanly to 0.172
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-LIB_DEPENDS=	libargp.so:devel/argp-standalone
-=======
 LIB_DEPENDS=	libargp.so:devel/argp-standalone \
 		libcurl.so:ftp/curl
->>>>>>> origin/freebsd/main
 BUILD_DEPENDS=	gnulib>=0:devel/gnulib
 
 PLIST_SUB=	VERSION=${PORTVERSION}

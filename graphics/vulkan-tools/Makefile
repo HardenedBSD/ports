@@ -1,6 +1,6 @@
 PORTNAME=	vulkan-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.212
+DISTVERSION=	1.3.213
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -38,6 +38,10 @@ XLIB_DESC=		${X11_DESC} via libX11
 XLIB_USES=		xorg
 XLIB_USE=		XORG=x11,xext,ice,sm
 XLIB_CMAKE_BOOL=	BUILD_WSI_XLIB_SUPPORT
+
+# https://github.com/KhronosGroup/Vulkan-Tools/issues/649
+display-build:		.IGNORE
+display-install:	.IGNORE
 
 # https://github.com/KhronosGroup/Vulkan-Tools/issues/307
 .for _wsi in display wayland xcb xlib

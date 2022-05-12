@@ -1048,6 +1048,7 @@
     SUBDIR += rubygem-gpgme
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
+    SUBDIR += rubygem-haiti-hash
     SUBDIR += rubygem-hkdf
     SUBDIR += rubygem-hkdf0
     SUBDIR += rubygem-hrr_rb_ssh

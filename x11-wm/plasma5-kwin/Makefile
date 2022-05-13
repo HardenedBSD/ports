@@ -26,6 +26,8 @@ BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 		xwayland-devel>0:x11-servers/xwayland-devel
 RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel
 
+MPROTECT_DISABLE=	bin/kwin_x11
+
 CONFLICTS_INSTALL=	kwinft # bin/kwin_wayland
 
 USES=		cmake compiler:c++11-lib gettext gl gnome kde:5 pkgconfig \

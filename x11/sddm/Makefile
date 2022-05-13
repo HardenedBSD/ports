@@ -32,6 +32,8 @@ USE_QT=		core declarative dbus gui network \
 		buildtools_build linguisttools_build qmake_build testlib_build
 USE_XORG=	xcb
 
+MPROTECT_DISABLE=	bin/sddm-greeter
+
 CONFLICTS_INSTALL=	lightdm
 
 CMAKE_ON=	BUILD_MAN_PAGES

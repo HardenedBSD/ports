@@ -1,0 +1,12 @@
+--- unit-tests/Makefile
++++ unit-tests/Makefile
+@@ -131,7 +131,7 @@
+ TESTS+=		deptgt-end-jobs
+ TESTS+=		deptgt-error
+ TESTS+=		deptgt-ignore
+-TESTS+=		deptgt-interrupt
++#TESTS+=		deptgt-interrupt
+ TESTS+=		deptgt-main
+ TESTS+=		deptgt-makeflags
+ TESTS+=		deptgt-no_parallel
+

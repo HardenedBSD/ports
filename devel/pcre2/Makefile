@@ -21,13 +21,8 @@ CONFIGURE_ARGS=	--enable-pcre2-16 \
 		--enable-pcre2-32
 INSTALL_TARGET=	install-strip
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=	DOCS JIT
-OPTIONS_RADIO=	CLI
-=======
-OPTIONS_DEFINE=		DOCS LIBBZ2 LIBZ
+OPTIONS_DEFINE=		DOCS LIBBZ2 LIBZ JIT
 OPTIONS_RADIO=		CLI
->>>>>>> origin/freebsd/main
 OPTIONS_RADIO_CLI=	LIBEDIT READLINE
 
 LIBBZ2_DESC=	Using pcre2grep with .bz2 files

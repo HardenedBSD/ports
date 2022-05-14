@@ -16,4 +16,6 @@ USE_KDE=	activities activities-stats auth codecs completion config \
 USE_QT=		concurrent core dbus declarative gui network widgets xml \
 		buildtools_build qmake_build
 
+MPROTECT_DISABLE=	bin/systemsettings
+
 .include <bsd.port.mk>

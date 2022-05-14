@@ -2,9 +2,9 @@
 
 PORTNAME=	flatbuffers
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.6
-PORTEPOCH=	1
+DISTVERSION=	2.0.5
 CATEGORIES=	devel
+PKGNAMESUFFIX=	205
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Memory efficient serialization library
@@ -15,8 +15,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 USES=		cmake:testing compiler:c++11-lib cpe python:build
 CPE_VENDOR=	google
 USE_LDCONFIG=	yes
-
-USE_HARDENING=	pie:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google

@@ -15,4 +15,9 @@ USE_KDE=	config coreaddons crash dbusaddons \
 USE_QT=		concurrent core dbus declarative gui network \
 		buildtools_build qmake_build testlib_build
 
+
+MPROTECT_DISABLE=	lib/libexec/baloo_file
+MPROTECT_DISABLE=	lib/libexec/baloo_file_extractor
+SEGVGUARD_DISABLE=	lib/libexec/baloo_file_extractor
+
 .include <bsd.port.mk>

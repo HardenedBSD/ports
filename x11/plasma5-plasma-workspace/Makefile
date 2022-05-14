@@ -47,6 +47,8 @@ USE_QT=		concurrent core dbus declarative graphicaleffects gui network \
 USE_XORG=	ice sm x11 xau xcb xcomposite xcursor xext xfixes xft xkbfile xrender xtst
 
 MPROTECT_DISABLE=	bin/ksplashqml
+MPROTECT_DISABLE=	bin/plasmashell
+PAGEEXEC_DISABLE=	bin/plasmashell
 CPE_VENDOR=	kde
 
 CMAKE_OFF=	BUILD_TESTING

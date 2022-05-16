@@ -106,8 +106,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
 		${WRKSRC}/cmake/Modules/*.cmake
 
-<<<<<<< HEAD
-
 .if ${PORT_OPTIONS:MCLIENT}
 MPROTECT_DISABLE+=	bin/minetest
 DISALLOW_MAP32BIT_DISABLE+=	bin/minetest
@@ -117,12 +115,11 @@ DISALLOW_MAP32BIT_DISABLE+=	bin/minetest
 MPROTECT_DISABLE+=	bin/minetestserver
 DISALLOW_MAP32BIT_DISABLE+=	bin/minetestserver
 .endif
-=======
+
 do-test-CLIENT-on:
 	cd ${WRKDIR} && ${SETENV} ${TEST_ENV} ${STAGEDIR}${PREFIX}/bin/minetest --run-unittests
 
 do-test-SERVER-on:
 	cd ${WRKDIR} && ${SETENV} ${TEST_ENV} ${STAGEDIR}${PREFIX}/bin/minetestserver --run-unittests
->>>>>>> origin/freebsd/main
 
 .include <bsd.port.mk>

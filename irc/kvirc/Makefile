@@ -27,9 +27,13 @@ USE_XORG=	ice sm x11 xext xrender xscrnsaver
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 CMAKE_ARGS=	-DMANDIR:STRING=man
+=======
+CMAKE_ARGS=	-DMANDIR:STRING=share/man
+>>>>>>> origin/freebsd/main
 
 PLIST_SUB=	VER=5.0
 

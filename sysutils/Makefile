@@ -659,6 +659,7 @@
     SUBDIR += logstash7
     SUBDIR += logtool
     SUBDIR += logwatch
+    SUBDIR += loki
     SUBDIR += lookat
     SUBDIR += lr
     SUBDIR += lsblk

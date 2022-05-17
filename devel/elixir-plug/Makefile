@@ -1,5 +1,6 @@
 PORTNAME=	plug
 PORTVERSION=	1.4.5
+BROKEN=	expired since December 2018
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 PKGNAMEPREFIX=	elixir-

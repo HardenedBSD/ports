@@ -21,12 +21,8 @@ CONFLICTS=	zig-devel
 
 USES=		cmake compiler:c++11-lang localbase:ldflags tar:xz
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=		STATIC
-=======
 OPTIONS_DEFINE=		STATIC DOCS
-OPTIONS_DEFAULT=	STATIC DOCS
->>>>>>> origin/freebsd/main
+OPTIONS_DEFAULT=	DOCS
 
 STATIC_DESC=	sets ZIG_STATIC to avoid 800MiB LLVM runtime dependency
 

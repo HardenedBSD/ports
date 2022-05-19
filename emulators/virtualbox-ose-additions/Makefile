@@ -121,7 +121,9 @@ post-patch:
 	    ${WRKSRC}/src/VBox/Additions/x11/VBoxClient/Makefile.kmk
 	@${ECHO_CMD} 'VBOX_ICONV_DEFS = LIBICONV_PLUG' >> ${WRKSRC}/LocalConfig.kmk
 .endif
-	@${REINPLACE_CMD} -e "s|0, VM_MAP_PROTECT_SET_PROT|FALSE|g" \
+	@${REINPLACE_CMD} -e "s|1300135|1400001|g" \
+	    ${WRKSRC}/src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c
+	@${REINPLACE_CMD} -e "s|VM_MAP_PROTECT_SET_PROT|FALSE|g" \
 	    ${WRKSRC}/src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c
 
 post-patch-X11-on:

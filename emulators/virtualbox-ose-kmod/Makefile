@@ -93,7 +93,9 @@ post-patch:
 	@${REINPLACE_CMD} \
 	    -e 's|\$$KBUILDDIR_BIN/kmk_sed|${LOCALBASE}/bin/kmk_sed|g' \
 	    ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e "s|0, VM_MAP_PROTECT_SET_PROT|FALSE|g" \
+	@${REINPLACE_CMD} -e "s|1300135|1400001|g" \
+	    ${WRKSRC}/src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c
+	@${REINPLACE_CMD} -e "s|VM_MAP_PROTECT_SET_PROT|FALSE|g" \
 	    ${WRKSRC}/src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c
 
 pre-build:

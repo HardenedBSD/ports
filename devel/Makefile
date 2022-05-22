@@ -250,6 +250,7 @@
     SUBDIR += aws-sdk-php
     SUBDIR += awscli
     SUBDIR += axmldec
+    SUBDIR += ayatana-ido
     SUBDIR += b2
     SUBDIR += babeltrace
     SUBDIR += bam
@@ -1164,6 +1165,8 @@
     SUBDIR += libatomic_ops
     SUBDIR += libaura
     SUBDIR += libavl
+    SUBDIR += libayatana-appindicator
+    SUBDIR += libayatana-indicator
     SUBDIR += libb2
     SUBDIR += libbacktrace
     SUBDIR += libbde

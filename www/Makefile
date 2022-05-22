@@ -113,6 +113,7 @@
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
     SUBDIR += dolibarr13
+    SUBDIR += dolibarr14
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += drupal7

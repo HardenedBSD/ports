@@ -35,13 +35,8 @@ CRYPTO_CONFIGURE_ON=	--enable-crypto
 EXTRAS_DESC=	Build and install extra NTFS utilities
 EXTRAS_CONFIGURE_ON=	--enable-extras
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-OPTIONS_DEFINE=	LOCK UBLIO DOCS
-OPTIONS_DEFAULT=LOCK UBLIO
-=======
->>>>>>> origin/freebsd/main
 LOCK_DESC=	Lock the device when mounting (avoids access)
 LOCK_CFLAGS=	-DUSE_LOCK
 

@@ -19,6 +19,7 @@ LICENSE_FILE=	${WRKSRC}/electron/LICENSE
 
 DEPRECATED=	EOLed upstream, switch to newer version
 EXPIRATION_DATE=	2022-06-30
+BROKEN=	Deprecated, Outdated and takes a long time to compile
 
 FETCH_DEPENDS=		yarn-node14>0:www/yarn-node14
 EXTRACT_DEPENDS=	yarn-node14>0:www/yarn-node14

@@ -218,8 +218,8 @@
     SUBDIR += autobook
     SUBDIR += autoconf
     SUBDIR += autoconf-archive
-    SUBDIR += autoconf-wrapper
-    SUBDIR += autoconf213
+    SUBDIR += autoconf-switch
+    SUBDIR += autoconf2.13
     SUBDIR += autodia
     SUBDIR += autogen
     SUBDIR += automake
@@ -838,6 +838,7 @@
     SUBDIR += gettext-tiny
     SUBDIR += gettext-tools
     SUBDIR += gflags
+    SUBDIR += gfold
     SUBDIR += gh
     SUBDIR += ghidra
     SUBDIR += ghq

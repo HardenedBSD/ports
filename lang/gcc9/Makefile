@@ -14,15 +14,13 @@ COMMENT=	GNU Compiler Collection 9
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off retpoline:off
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
-=======
+
 DEPRECATED=	Unsupported by upstream. Use GCC 10 or newer instead.
 EXPIRATION_DATE=2024-06-30
 
->>>>>>> origin/freebsd/main
 ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le sparc64
 
 LIB_DEPENDS=	libgmp.so:math/gmp \

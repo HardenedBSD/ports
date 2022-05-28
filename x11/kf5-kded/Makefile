@@ -11,4 +11,6 @@ USE_KDE=	config coreaddons crash dbusaddons service \
 USE_QT=		core dbus gui widgets \
 		buildtools_build qmake_build 
 
+MPROTECT_DISABLE=	bin/kded5
+
 .include <bsd.port.mk>

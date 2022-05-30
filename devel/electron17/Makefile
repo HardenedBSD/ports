@@ -15,6 +15,8 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Build cross-platform desktop apps with JavaScript, HTML, and CSS
 
+MPROTECT_DISABLE=	bin/electron17
+
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
 

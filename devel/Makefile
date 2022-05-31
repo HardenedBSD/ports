@@ -5087,6 +5087,7 @@
     SUBDIR += py-pypugjs
     SUBDIR += py-pyqtree
     SUBDIR += py-pyquery
+    SUBDIR += py-pyquil
     SUBDIR += py-pyral
     SUBDIR += py-pyrepl
     SUBDIR += py-pyrfc3339
@@ -5179,6 +5180,7 @@
     SUBDIR += py-python-magic
     SUBDIR += py-python-mimeparse
     SUBDIR += py-python-pcre
+    SUBDIR += py-python-rapidjson
     SUBDIR += py-python-socketio
     SUBDIR += py-python-statsd
     SUBDIR += py-python-subunit
@@ -5240,6 +5242,7 @@
     SUBDIR += py-resolver
     SUBDIR += py-resource
     SUBDIR += py-responses
+    SUBDIR += py-retry2
     SUBDIR += py-retrying
     SUBDIR += py-retype
     SUBDIR += py-rfc3339
@@ -5251,6 +5254,7 @@
     SUBDIR += py-robotremoteserver
     SUBDIR += py-rope
     SUBDIR += py-rose
+    SUBDIR += py-rpcq
     SUBDIR += py-rply
     SUBDIR += py-rq
     SUBDIR += py-rq-scheduler

@@ -1,6 +1,6 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 
-PORTNAME=	suds-community
+PORTNAME=	suds
 PORTVERSION=	1.1.1
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
@@ -12,7 +12,7 @@ COMMENT=	Lightweight SOAP client (community fork)
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0,1:devel/py-pytest@${PY_FLAVOR}
 
 USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils

@@ -29,6 +29,8 @@ USE_GCC=	yes
 USE_HARDENING=	pie:off
 SSP_CFLAGS=	-fstack-protector-strong
 
+MPROTECT_DISABLE=	bin/wine64.bin
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	ValveSoftware
 GH_PROJECT=	wine

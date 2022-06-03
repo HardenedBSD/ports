@@ -2,10 +2,10 @@
 
 PORTNAME=	pftop
 PORTVERSION=	0.7
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	sysutils net
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	grembo@FreeBSD.org
 COMMENT=	Utility for real-time display of statistics for pf
 
 LICENSE=	BSD2CLAUSE
@@ -13,7 +13,7 @@ LICENSE=	BSD2CLAUSE
 USE_HARDENING=	safestack
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	araujobsd
+GH_ACCOUNT=	grembo
 
 OPTIONS_DEFINE=	ALTQ
 

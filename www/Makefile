@@ -471,7 +471,7 @@
     SUBDIR += npm
     SUBDIR += npm-node14
     SUBDIR += npm-node16
-    SUBDIR += npm-node17
+    SUBDIR += npm-node18
     SUBDIR += nspluginwrapper
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -1914,7 +1914,6 @@
     SUBDIR += rubygem-faraday-rack
     SUBDIR += rubygem-faraday-retry
     SUBDIR += rubygem-faraday0
-    SUBDIR += rubygem-faraday110
     SUBDIR += rubygem-faraday14
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0
@@ -2383,7 +2382,7 @@
     SUBDIR += yarn
     SUBDIR += yarn-node14
     SUBDIR += yarn-node16
-    SUBDIR += yarn-node17
+    SUBDIR += yarn-node18
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

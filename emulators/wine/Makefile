@@ -28,6 +28,8 @@ USE_SDL=	sdl2
 USE_HARDENING=	pie:off
 SSP_CFLAGS=	-fstack-protector-strong
 
+MPROTECT_DISABLE=	bin/wine64.bin
+
 CPE_VENDOR=	winehq
 
 CONFLICTS_INSTALL=	wine-devel

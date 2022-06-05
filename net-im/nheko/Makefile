@@ -31,6 +31,8 @@ USE_QT=		concurrent core dbus declarative gui multimedia network \
 		graphicaleffects_run \
 		buildtools_build linguist_build qmake_build
 
+MPROTECT_DISABLE=	bin/nheko
+
 # There is one external dependency: lmdb++
 #  - lmdb++ is a single header file, it just needs to be included
 CMAKE_ARGS=	-DLMDBXX_INCLUDE_DIR=${WRKSRC}/deps/lmdb \

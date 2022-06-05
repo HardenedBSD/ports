@@ -345,6 +345,7 @@
     SUBDIR += mediawiki135
     SUBDIR += mediawiki136
     SUBDIR += mediawiki137
+    SUBDIR += mediawiki138
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -1907,13 +1908,19 @@
     SUBDIR += rubygem-faraday-em_synchrony
     SUBDIR += rubygem-faraday-http-cache
     SUBDIR += rubygem-faraday-httpclient
+    SUBDIR += rubygem-faraday-httpclient1
     SUBDIR += rubygem-faraday-multipart
     SUBDIR += rubygem-faraday-net_http
+    SUBDIR += rubygem-faraday-net_http1
     SUBDIR += rubygem-faraday-net_http_persistent
+    SUBDIR += rubygem-faraday-net_http_persistent1
     SUBDIR += rubygem-faraday-patron
+    SUBDIR += rubygem-faraday-patron1
     SUBDIR += rubygem-faraday-rack
+    SUBDIR += rubygem-faraday-rack1
     SUBDIR += rubygem-faraday-retry
     SUBDIR += rubygem-faraday0
+    SUBDIR += rubygem-faraday1
     SUBDIR += rubygem-faraday14
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0

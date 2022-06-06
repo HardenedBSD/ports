@@ -21,6 +21,8 @@ USE_QT=		core dbus declarative gui multimedia network widgets \
 		quickcontrols quickcontrols2 \
 		buildtools_build linguist_build qmake_build
 
+MPROTECT_DISABLE=	bin/quaternion
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	quotient-im
 

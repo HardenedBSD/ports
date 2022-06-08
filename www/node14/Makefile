@@ -11,15 +11,9 @@ COMMENT=	V8 JavaScript for client and server
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/node
 
-BROKEN_SSL=		libressl libressl-devel
-BROKEN_SSL_REASON=	Node.js 14.x LTS requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
-ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
-=======
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
->>>>>>> origin/freebsd/main
 
 BUILD_DEPENDS+=	brotli>=1.0.9,1:archivers/brotli \
 		c-ares>=1.17.2:dns/c-ares \
@@ -31,11 +25,6 @@ LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
 		libnghttp2.so:www/libnghttp2 \
 		libuv.so:devel/libuv
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
-OPTIONS_DEFAULT=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
-OPTIONS_SUB=		yes
-=======
 USES=		compiler:c++11-lib gmake localbase pkgconfig \
 		python:2.7-3.10,build shebangfix
 BROKEN_SSL=	libressl libressl-devel
@@ -67,9 +56,8 @@ PREFIX_RELDEST=	${PREFIX:S,^${DESTDIR},,}
 REINPLACE_ARGS=	-i ''
 
 OPTIONS_DEFINE=		BUNDLED_SSL COREPACK DOCS DTRACE NLS
-OPTIONS_DEFAULT=	COREPACK DTRACE
+OPTIONS_DEFAULT=	COREPACK
 OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
->>>>>>> origin/freebsd/main
 
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE+=	DTRACE

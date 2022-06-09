@@ -11,17 +11,10 @@ COMMENT=	Xdebug Profiling Web Frontend in PHP
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
 
-<<<<<<< HEAD
-MAKEFILE=	${WRKSRC}/makefile
-
 USE_HARDENING=	safestack
 
-OPTIONS_DEFINE=	CALLGRAPH
-
-=======
 USES=		cpe php
 CPE_VENDOR=	webgrind_project
->>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	jokkedk
 

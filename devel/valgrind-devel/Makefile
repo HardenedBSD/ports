@@ -1,11 +1,7 @@
 # Created by: Simon Barner <barner@gmx.de>
 
 PORTNAME=	valgrind
-<<<<<<< HEAD
-PORTVERSION=	3.19.0.g20211211
-=======
 PORTVERSION=	3.20.0.g20220612
->>>>>>> origin/freebsd/main
 DISTVERSIONPREFIX=	freebsd-
 PORTEPOCH=	1
 CATEGORIES=	devel
@@ -32,13 +28,9 @@ LIB32_PATH?=	/usr/lib32/libc.so
 USE_GITHUB=	yes
 GH_ACCOUNT=	paulfloyd
 GH_PROJECT=	freebsd_valgrind
-<<<<<<< HEAD
-GH_TAGNAME=	6b5e155
-=======
 GH_TAGNAME=	d785030d3
 
 CONFLICTS=	valgrind
->>>>>>> origin/freebsd/main
 
 CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL}
 

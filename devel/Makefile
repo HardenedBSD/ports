@@ -4501,6 +4501,8 @@
     SUBDIR += py-distributed
     SUBDIR += py-dj32-django-rq
     SUBDIR += py-dj32-graphene-django
+    SUBDIR += py-dj40-django-rq
+    SUBDIR += py-dj40-graphene-django
     SUBDIR += py-django-rq
     SUBDIR += py-docker-py
     SUBDIR += py-dockerpty
@@ -4532,6 +4534,7 @@
     SUBDIR += py-eventlib
     SUBDIR += py-ewmh
     SUBDIR += py-exam
+    SUBDIR += py-exceptiongroup
     SUBDIR += py-executing
     SUBDIR += py-expiringdict
     SUBDIR += py-extras
@@ -4572,6 +4575,7 @@
     SUBDIR += py-flexmock
     SUBDIR += py-flit
     SUBDIR += py-flit-core
+    SUBDIR += py-flit-scm
     SUBDIR += py-fluent
     SUBDIR += py-fluent-logger
     SUBDIR += py-flufl.i18n
@@ -5465,6 +5469,7 @@
     SUBDIR += py-venusian
     SUBDIR += py-verboselogs
     SUBDIR += py-versiontools
+    SUBDIR += py-verspec
     SUBDIR += py-vine
     SUBDIR += py-virtualenv
     SUBDIR += py-virtualenv-api

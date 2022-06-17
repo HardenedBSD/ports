@@ -33,7 +33,6 @@ USE_RC_SUBR=	mongod
 SHEBANG_FILES=	buildscripts/scons.py
 python_OLD_CMD=	@python_interpreter@
 
-<<<<<<< HEAD
 MPROTECT_DISABLE+=	bin/mongo
 MPROTECT_DISABLE+=	bin/mongod
 MPROTECT_DISABLE+=	bin/mongos
@@ -42,18 +41,6 @@ PAGEEXEC_DISABLE+=	bin/mongo
 PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
-CONFLICTS_INSTALL=	mongodb36 mongodb4[024]
-
-USERS=		mongodb
-GROUPS=		mongodb
-
-OPTIONS_DEFINE=			LTO SASL SSL
-OPTIONS_DEFAULT=		LTO SASL SSL
-OPTIONS_EXCLUDE_aarch64=	${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
-OPTIONS_EXCLUDE_aarch64_14=	LTO # Does not work with llvm12/llvm13 on aarch64.
-
-=======
->>>>>>> origin/freebsd/main
 MAKE_ARGS=	--cxx-std=17 \
 		--disable-warnings-as-errors \
 		--libc++ \

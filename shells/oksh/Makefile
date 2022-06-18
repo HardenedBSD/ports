@@ -22,6 +22,7 @@ COMMENT+=		(rescue(8) version)
 HAS_CONFIGURE=		yes
 .if ${FLAVOR} == static
 CONFIGURE_ARGS+=	--enable-static
+OPTIONS_EXCLUDE=	SAFESTACK PIE
 PLIST=			/dev/null
 PLIST_FILES=		"@shell /rescue/oksh"
 .endif

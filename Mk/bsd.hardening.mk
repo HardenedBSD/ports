@@ -222,10 +222,8 @@ OPTIONS_GROUP_HARDENING+=RELRO
 
 safestack_ARGS?=
 
-.if ${safestack_ARGS:Mauto}
 .if ${_USE_HARDENING:Mstatic}
 safestack_ARGS+=	off
-.endif
 .endif
 
 SAFESTACK_DESC=		Build with SafeStack
@@ -261,10 +259,8 @@ OPTIONS_GROUP_HARDENING+=SAFESTACK
 
 cfi_ARGS?=
 
-.if ${cfi_ARGS:Mauto}
 .if ${_USE_HARDENING:Mstatic}
 cfi_ARGS+=		off
-.endif
 .endif
 
 CFI_DESC=		Build with Control Flow Integrity

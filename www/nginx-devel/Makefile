@@ -17,7 +17,7 @@ LICENSE_FILE?=	${WRKSRC}/LICENSE
 
 CONFLICTS_INSTALL=	nginx
 
-PORTSCOUT=	limit:^1\.21\.[0-9]*
+PORTSCOUT=	limit:^1\.23\.[0-9]*
 
 USES=		cpe
 
@@ -271,7 +271,7 @@ post-patch-FASTDFS-on:
 		${WRKSRC_fastdfs}/src/config
 
 post-patch-GRIDFS-on:
-	@${REINPLACE_CMD} 's!%%LOCALBASE%%!${LOCALBASE}!g' \
+	@${REINPLACE_CMD} 's!\/usr!${LOCALBASE}!g' \
 		${WRKSRC_gridfs}/nginx-gridfs/config
 
 post-patch-HTTP_AUTH_KRB5-on:

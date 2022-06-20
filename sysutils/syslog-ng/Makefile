@@ -20,6 +20,8 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 USES=		autoreconf:build compiler:c11 cpe gettext-runtime gmake gnome \
 		libtool pathfix pkgconfig python:3.5+,build shebangfix ssl
 
+PAGEEXEC_DISABLE=	sbin/syslog-ng
+
 CPE_VENDOR=	oneidentity
 
 CONFLICTS?=	syslog-ng syslog-ng[0-9] \

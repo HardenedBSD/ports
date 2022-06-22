@@ -18,6 +18,8 @@ ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 USES=		compiler:c++11-lib gmake python:3.6-3.10,build pkgconfig \
 		localbase shebangfix
 
+MPROTECT_DISABLE=	bin/node
+
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE COREPACK
 OPTIONS_DEFAULT=	COREPACK
 OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}

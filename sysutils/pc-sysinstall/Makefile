@@ -3,13 +3,12 @@ PORTVERSION=	2022060400
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 
-MAINTAINER=	kmoore@FreeBSD.org
+MAINTAINER=	loic.f@hardenedbsd.org
 COMMENT=	TrueOS install backend
 
 LICENSE=	BSD2CLAUSE
 
-RUN_DEPENDS=	cpdup:sysutils/cpdup \
-		ghostbsd-refind>=0.1:sysutils/ghostbsd-refind
+RUN_DEPENDS=	cpdup:sysutils/cpdup
 
 USES=		pkgconfig tar:xz
 MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}

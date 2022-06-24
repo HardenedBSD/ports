@@ -946,6 +946,7 @@
     SUBDIR += pax-utils
     SUBDIR += pbimaker
     SUBDIR += pc-networkmanager
+    SUBDIR += pc-sysinstall
     SUBDIR += pcapfix
     SUBDIR += pciutils
     SUBDIR += pcpustat

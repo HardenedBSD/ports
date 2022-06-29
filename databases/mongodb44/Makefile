@@ -32,6 +32,7 @@ USE_RC_SUBR=	mongod
 
 PORTSCOUT=	limit:^4\.4\.
 
+<<<<<<< HEAD
 MPROTECT_DISABLE+=	bin/mongo
 MPROTECT_DISABLE+=	bin/mongod
 MPROTECT_DISABLE+=	bin/mongos
@@ -41,6 +42,9 @@ PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
 CONFLICTS_INSTALL=	mongodb[0-9][0-9]
+=======
+CONFLICTS_INSTALL=	mongodb[0-9][0-9] # etc/mongodb.conf.sample
+>>>>>>> origin/freebsd/main
 
 OPTIONS_DEFINE=	LTO SASL SSL
 OPTIONS_DEFAULT=LTO SASL SSL

@@ -30,6 +30,7 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 USES=		compiler:c++14-lang cpe python:3.7+,build scons shebangfix
 USE_RC_SUBR=	mongod
 
+<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/install_compass
 MPROTECT_DISABLE+=	bin/mongo
 MPROTECT_DISABLE+=	bin/mongod
@@ -41,6 +42,9 @@ PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
 CONFLICTS_INSTALL=	mongodb36 mongodb4[24] mongodb50
+=======
+CONFLICTS_INSTALL=	mongodb[0-9][0-9] # etc/mongodb.conf.sample
+>>>>>>> origin/freebsd/main
 
 SHEBANG_FILES=	src/mongo/installer/compass/install_compass
 python_OLD_CMD=	@python_interpreter@

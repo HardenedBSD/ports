@@ -2358,6 +2358,7 @@
     SUBDIR += webhook
     SUBDIR += webinject
     SUBDIR += webkit2-gtk3
+    SUBDIR += webkit2-gtk4
     SUBDIR += weblint++
     SUBDIR += webpy
     SUBDIR += webresolve

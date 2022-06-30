@@ -183,8 +183,7 @@ JDK_BUILD_TYPE=		release
 
 .include <bsd.port.pre.mk>
 
-BOOTSTRAP_JDKS=	${LOCALBASE}/openjdk11 \
-		${LOCALBASE}/bootstrap-openjdk11
+BOOTSTRAP_JDKS=	${LOCALBASE}/bootstrap-openjdk11
 
 # do we have valid native jdk installed?
 .for BJDK in ${BOOTSTRAP_JDKS}

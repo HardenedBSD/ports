@@ -21,6 +21,8 @@ USES=		autoreconf compiler:c++11-lang cpe libtool localbase:ldflags pathfix \
 CPE_VENDOR=	ntop
 USE_LDCONFIG=	yes
 
+USE_HARDENING=	pie:off
+
 CONFIGURE_ARGS=	--with-pic
 CPPFLAGS+=	-I${LOCALBASE}/include/json-c
 LIBS+=		-ljson-c

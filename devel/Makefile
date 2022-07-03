@@ -291,6 +291,7 @@
     SUBDIR += boost-python-libs
     SUBDIR += boost_build
     SUBDIR += bossa
+    SUBDIR += boxfort
     SUBDIR += bpython
     SUBDIR += brz
     SUBDIR += bsdbuild
@@ -440,6 +441,7 @@
     SUBDIR += crc32c
     SUBDIR += creduce
     SUBDIR += critcl
+    SUBDIR += criterion
     SUBDIR += cscope
     SUBDIR += cscout
     SUBDIR += csmith
@@ -1539,6 +1541,7 @@
     SUBDIR += mutagen
     SUBDIR += myrepos
     SUBDIR += nana
+    SUBDIR += nanopb
     SUBDIR += nant
     SUBDIR += nasm
     SUBDIR += naturaldocs

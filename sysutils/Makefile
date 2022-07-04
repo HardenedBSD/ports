@@ -457,6 +457,7 @@
     SUBDIR += garcon
     SUBDIR += gather
     SUBDIR += gconf-editor
+    SUBDIR += gcp-ops-agent
     SUBDIR += gdisk
     SUBDIR += gdmap
     SUBDIR += gdu

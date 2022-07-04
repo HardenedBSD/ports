@@ -187,6 +187,7 @@
     SUBDIR += blahtexml
     SUBDIR += blas
     SUBDIR += blasfeo
+    SUBDIR += blaspp
     SUBDIR += blaze
     SUBDIR += blazeiterative
     SUBDIR += blis
@@ -415,6 +416,7 @@
     SUBDIR += lapack++
     SUBDIR += lapack95
     SUBDIR += lapacke
+    SUBDIR += lapackpp
     SUBDIR += laspack
     SUBDIR += latte-integrale
     SUBDIR += lcalc

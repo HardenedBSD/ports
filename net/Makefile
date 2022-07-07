@@ -167,6 +167,8 @@
     SUBDIR += frp
     SUBDIR += frr7
     SUBDIR += frr7-pythontools
+    SUBDIR += frr8
+    SUBDIR += frr8-pythontools
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -416,6 +418,7 @@
     SUBDIR += libvncserver
     SUBDIR += libwebsockets
     SUBDIR += libyang
+    SUBDIR += libyang2
     SUBDIR += libzapojit
     SUBDIR += libzmq2
     SUBDIR += libzmq3

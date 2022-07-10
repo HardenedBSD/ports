@@ -83,7 +83,8 @@ OPTIONS_DEFAULT_powerpc=	ALTIVEC
 OPTIONS_DEFAULT_powerpc64=	ALTIVEC
 OPTIONS_SUB=	yes
 
-OPTIONS_DEFAULT+=	SMB
+# HBSD: Add some nice defaults that makes life easier
+OPTIONS_DEFAULT+=	MTP SMB
 
 AOM_DESC=	AV1 video encoding/decoding via libaom
 ASS_DESC=	ASS/SSA subtitle rendering

@@ -16,7 +16,7 @@ LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
 BROKEN_SSL=	libressl libressl-devel
-BROKEN_SSL_REASON=	Missing upstream support
+BROKEN_SSL_REASON=	missing upstream support
 
 USES=		cpe libtool perl5 shebangfix ssl
 USE_PERL5=	build
@@ -29,6 +29,10 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var/tmp --enable-static --disable-systemd \
 		--with-ssl="${OPENSSLBASE}"
 SHEBANG_FILES=	src/stunnel3.in
+SUB_FILES=	daemon.conf
+SUB_LIST=	STUNNEL_PIDFILE=${STUNNEL_PIDFILE} \
+		STUNNEL_USER=${STUNNEL_USER} \
+		STUNNEL_GROUP=${STUNNEL_GROUP}
 
 OPTIONS_DEFINE=			DOCS EXAMPLES FIPS IPV6 LIBWRAP
 OPTIONS_SINGLE=			THREAD
@@ -44,6 +48,7 @@ FORK_DESC=			Use the fork(3) threading model
 PTHREAD_DESC=			Use the pthread(3) threading model
 UCONTEXT_DESC=			Use the ucontext(3) threading model
 
+STUNNEL_PIDFILE=/var/run/stunnel/stunnel.pid
 STUNNEL_USER?=	stunnel
 STUNNEL_GROUP?=	stunnel
 
@@ -103,7 +108,7 @@ post-build:
 
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}/conf.d/
-	${INSTALL_DATA} ${FILESDIR}/pid.conf ${STAGEDIR}${ETCDIR}/conf.d/00-pid.conf
+	${INSTALL_DATA} ${WRKDIR}/daemon.conf ${STAGEDIR}${ETCDIR}/conf.d/00-daemon.conf
 
 cert:
 	@${ECHO} ""

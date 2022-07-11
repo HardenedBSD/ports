@@ -1523,6 +1523,7 @@
     SUBDIR += virtualmin
     SUBDIR += vivid
     SUBDIR += vm-bhyve
+    SUBDIR += vm-bhyve-devel
     SUBDIR += vmdktool
     SUBDIR += vmtouch
     SUBDIR += vobcopy

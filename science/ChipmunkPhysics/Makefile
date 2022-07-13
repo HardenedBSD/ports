@@ -3,7 +3,7 @@
 PORTNAME=	ChipmunkPhysics
 PORTVERSION=	7.0.1
 PORTREVISION=	2
-CATEGORIES=	devel
+CATEGORIES=	science # physics
 MASTER_SITES=	http://chipmunk-physics.net/release/Chipmunk-7.x/ \
 		http://files.slembcke.net/chipmunk/release/Chipmunk-7.x/ \
 		http://files.libsiege.org/chipmunk/
@@ -13,6 +13,8 @@ MAINTAINER=	ports@stdrand.com
 COMMENT=	2D physics engine written in C
 
 LICENSE=	MIT
+
+BROKEN_armv7=	src/cpHastySpace.c:31:4: error: Cannot use CP_USE_DOUBLES on 32 bit ARM
 
 USES=		cmake tar:tgz
 USE_LDCONFIG=	yes

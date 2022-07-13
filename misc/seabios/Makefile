@@ -14,7 +14,12 @@ ONLY_FOR_ARCHS_REASON=	specific to x86
 
 USES=	gmake python:build
 
+<<<<<<< HEAD
 MAKE_ARGS=	HOSTCC="${CC}" LD="${LD}" PYTHON="${PYTHON_CMD}" OBJDUMP="/usr/local/bin/objdump"
+=======
+MAKE_ARGS=	HOSTCC="${CC}" LD="${LD}" PYTHON="${PYTHON_CMD}"
+NO_ARCH=	yes
+>>>>>>> origin/freebsd/main
 USE_GCC=	yes:build
 USE_BINUTILS=	yes
 

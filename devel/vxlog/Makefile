@@ -16,6 +16,8 @@ LICENSE_FILE=	${WRKSRC}/doc/COPYING.txt
 USES=		cmake
 USE_LDCONFIG=	yes
 
+USE_GCC=	10
+
 CMAKE_ARGS+=	-DTESTING:BOOL=OFF
 
 .include <bsd.port.mk>

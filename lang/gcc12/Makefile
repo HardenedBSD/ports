@@ -12,6 +12,10 @@ COMMENT=	GNU Compiler Collection 12
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
+USE_HARDENING=  pie:off relro:off retpoline:off
+
+USE_GCC=	11
+
 ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libgmp.so:math/gmp \

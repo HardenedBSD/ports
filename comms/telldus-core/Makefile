@@ -28,6 +28,9 @@ CMAKE_ARGS+=	-DSTATE_INSTALL_DIR="/var/telldus"
 CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
 CXXFLAGS_clang=	-Wno-c++11-narrowing
 
+USE_GCC=	10
+CXXFLAGS+=	-Wno-narrowing
+
 MAKE_JOBS_UNSAFE=	yes
 
 USE_RC_SUBR=	telldusd

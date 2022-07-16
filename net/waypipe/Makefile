@@ -9,6 +9,8 @@ COMMENT=	Network transparency with Wayland
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_GCC=	10
+
 USES=		compiler:c11 localbase:ldflags meson pkgconfig
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.freedesktop.org

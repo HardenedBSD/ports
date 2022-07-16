@@ -24,6 +24,8 @@ MAKE_ARGS+=	PREFIX="${PREFIX}"
 USES=		compiler:c++11-lang
 USE_CXXSTD=	c++11
 
+USE_GCC=	10
+
 OPTIONS_DEFINE=	DOCS
 
 .include	"${.CURDIR}/../../multimedia/vdr/Makefile.plugins"

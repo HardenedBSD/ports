@@ -20,6 +20,9 @@ GH_TAGNAME=	770874c
 
 USE_LDCONFIG=	yes
 
+CFLAGS+=	-Wno-unused-but-set-variable
+USE_GCC=	yes:build
+
 ALL_TARGET=	libobjecthash.so
 
 PLIST_FILES=	include/objecthash.h lib/libobjecthash.so

@@ -3,13 +3,14 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.13
 CATEGORIES=	math
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	444ed837298d595f0f579d93e6e96d5af085bdac.patch:-p1
+
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	APRON numerical abstract domain library
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_aarch64=	ld: error: ../apron/libapron_debug.so: undefined reference to fpsetround
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \

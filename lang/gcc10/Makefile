@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
 
 BINARY_ALIAS= objdump=/usr/local/bin/objdump
 
+=======
+>>>>>>> origin/freebsd/main
 PORTNAME=	gcc
 PORTVERSION=	10.4.0
 CATEGORIES=	lang

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-# Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-
-BINARY_ALIAS= objdump=/usr/local/bin/objdump
-
-=======
->>>>>>> origin/freebsd/main
 PORTNAME=	gcc
 PORTVERSION=	10.4.0
 CATEGORIES=	lang
@@ -18,6 +11,8 @@ LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
 USE_HARDENING=  pie:off relro:off retpoline:off
+
+BINARY_ALIAS= objdump=/usr/local/bin/objdump
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
 

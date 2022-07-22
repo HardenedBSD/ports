@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_HARDENING=	pie:off relro:off
 
 MPROTECT_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
+SEGVGUARD_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
 
 ONLY_FOR_ARCHS=	amd64 i386
 

@@ -19,6 +19,9 @@ GH_TUPLE=	rumpkernel:src-netbsd:82f3a69:netbsd/src
 USE_LDCONFIG=	yes
 USES=		compiler
 
+USE_GCC=	yes:build
+CWARNFLAGS+=	-Wno-error
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == amd64 || ${ARCH} == i386

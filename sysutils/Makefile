@@ -475,7 +475,6 @@
     SUBDIR += gkrellm-trayicons
     SUBDIR += gkrellm2
     SUBDIR += gkrelltop
-    SUBDIR += gksu
     SUBDIR += glogg
     SUBDIR += glow
     SUBDIR += gnome-control-center
@@ -633,7 +632,6 @@
     SUBDIR += libfvde
     SUBDIR += libg15
     SUBDIR += libg15render
-    SUBDIR += libgksu
     SUBDIR += libieee1284
     SUBDIR += libptytty
     SUBDIR += libretto-config
@@ -733,7 +731,6 @@
     SUBDIR += memtester
     SUBDIR += metalog
     SUBDIR += mfid
-    SUBDIR += mgeupsd
     SUBDIR += minikube
     SUBDIR += minimunin
     SUBDIR += minipot

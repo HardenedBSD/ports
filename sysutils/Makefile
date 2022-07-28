@@ -1396,6 +1396,7 @@
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
     SUBDIR += tmux23
+    SUBDIR += topgrade
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl

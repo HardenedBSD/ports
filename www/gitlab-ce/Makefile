@@ -1,6 +1,6 @@
 PORTNAME=	gitlab-ce
 PORTVERSION=	15.1.4
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -26,7 +26,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	gtar>0:archivers/gtar \
 	bash>0:shells/bash \
 	rubygem-rails61>=6.1.6.0<6.1.7:www/rubygem-rails61 \
-	rubygem-bootsnap>=1.12.0<1.13:devel/rubygem-bootsnap \
+	rubygem-bootsnap112>=1.12.0<1.13:devel/rubygem-bootsnap112 \
 	rubygem-responders-rails61>=3.0<4.0:www/rubygem-responders-rails61 \
 	rubygem-sprockets3>=3.7<3.8:devel/rubygem-sprockets3 \
 	rubygem-view_component-rails61>=2.50.0<2.51:devel/rubygem-view_component-rails61 \
@@ -130,7 +130,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	rubygem-asciidoctor-include-ext>=0.4.0<0.5.0:textproc/rubygem-asciidoctor-include-ext \
 	rubygem-asciidoctor-plantuml00>=0.0.12<0.1:textproc/rubygem-asciidoctor-plantuml00 \
 	rubygem-asciidoctor-kroki>=0.5.0<0.6:textproc/rubygem-asciidoctor-kroki \
-	rubygem-rouge>=3.29.0<3.30:textproc/rubygem-rouge \
+	rubygem-rouge329>=3.29.0<3.30:textproc/rubygem-rouge329 \
 	rubygem-truncato>=0.7.11<0.8.0:textproc/rubygem-truncato \
 	rubygem-bootstrap_form>=4.2.0<4.3.0:devel/rubygem-bootstrap_form \
 	rubygem-nokogiri>=1.13.6<1.14:textproc/rubygem-nokogiri \

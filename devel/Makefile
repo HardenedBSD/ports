@@ -5209,7 +5209,9 @@
     SUBDIR += py-robotframework
     SUBDIR += py-robotframework-databaselibrary
     SUBDIR += py-robotframework-pabot
+    SUBDIR += py-robotframework-pythonlibcore
     SUBDIR += py-robotframework-seleniumlibrary
+    SUBDIR += py-robotframework-stacktrace
     SUBDIR += py-robotremoteserver
     SUBDIR += py-rope
     SUBDIR += py-rose
@@ -5383,6 +5385,7 @@
     SUBDIR += py-ua_parser
     SUBDIR += py-uhid-freebsd
     SUBDIR += py-ujson
+    SUBDIR += py-unearth
     SUBDIR += py-unicodecsv
     SUBDIR += py-unicodedata2
     SUBDIR += py-unipath
@@ -5718,6 +5721,7 @@
     SUBDIR += rubygem-avro
     SUBDIR += rubygem-awesome_print
     SUBDIR += rubygem-awrence
+    SUBDIR += rubygem-aws-crt
     SUBDIR += rubygem-aws-eventstream
     SUBDIR += rubygem-aws-partitions
     SUBDIR += rubygem-aws-sdk

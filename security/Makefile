@@ -1266,6 +1266,7 @@
     SUBDIR += vxquery
     SUBDIR += wapiti
     SUBDIR += wazuh-agent
+    SUBDIR += wazuh-manager
     SUBDIR += webfwlog
     SUBDIR += weggli
     SUBDIR += whatweb

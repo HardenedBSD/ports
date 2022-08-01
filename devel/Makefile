@@ -776,6 +776,7 @@
     SUBDIR += ghidra
     SUBDIR += ghq
     SUBDIR += ghub
+    SUBDIR += ghub-devel
     SUBDIR += gindent
     SUBDIR += gio-sharp
     SUBDIR += git
@@ -7234,6 +7235,7 @@
     SUBDIR += tpasm
     SUBDIR += tradcpp
     SUBDIR += transient
+    SUBDIR += transient-devel
     SUBDIR += transwarp
     SUBDIR += tree-sitter
     SUBDIR += treepy.el

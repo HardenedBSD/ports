@@ -21,18 +21,11 @@ CPE_VENDOR=	torproject
 TPO_GEOIP=	7ce4b3d98d01ff33bad8007db3f488d5b172382a
 TPO_SNOWFLAKE=	c983c13a84554d0ba1ffcdd054491090c0eafc54
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:golang
 
-GO_PKGNAME=	git.torproject.org/pluggable-transports/snowflake.git/v2
-GO_TARGET=	./client ./proxy ./server
-=======
-
 GO_MODULE=      git.torproject.org/pluggable-transports/snowflake.git/v2
-GO_BUILDFLAGS=  -ldflags '-s -w -extldflags "-static"'
 GO_PKGNAME=	${GO_MODULE}
 GO_TARGET=	./broker ./client ./proxy ./server
->>>>>>> origin/freebsd/main
 
 GL_SITE=	https://gitlab.torproject.org/tpo
 GL_TUPLE=	anti-censorship:pluggable-transports/${PORTNAME}:${TPO_SNOWFLAKE}:tpo_acs_snowflake/vendor/git.torproject.org/pluggable-transports/snowflake.git/v2 \

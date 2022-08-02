@@ -83,7 +83,6 @@ LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
 		libepoxy.so:graphics/libepoxy
 .endif
 
-<<<<<<< HEAD
 # HardenedBSD note:
 # Due to how xorg handles loadable modules, it cannot be compiled
 # with RELRO + BIND_NOW.
@@ -91,14 +90,12 @@ USE_HARDENING=	relro:off cfi safestack
 CFI_OVERRIDE=	-fno-sanitize=cfi-icall
 
 .include <bsd.port.options.mk>
-=======
 .if ${FLAVOR} == xephyr
 LIB_DEPENDS+=	libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-icccm.so:x11/xcb-util-wm \
 		libxcb-keysyms.so:x11/xcb-util-keysyms
 .endif
->>>>>>> origin/freebsd/main
 
 FONTPATH_ROOT?=	${LOCALBASE}/share/fonts
 FONTPATHD?=	${PREFIX}/etc/X11/fontpath.d

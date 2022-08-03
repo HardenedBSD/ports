@@ -1539,6 +1539,7 @@
     SUBDIR += mspdebug
     SUBDIR += mstch
     SUBDIR += mtbl
+    SUBDIR += muon
     SUBDIR += mustache
     SUBDIR += mutagen
     SUBDIR += myrepos
@@ -7107,6 +7108,7 @@
     SUBDIR += simdjson
     SUBDIR += simgear
     SUBDIR += simian
+    SUBDIR += sjasmplus
     SUBDIR += skalibs
     SUBDIR += skypat
     SUBDIR += slf4j

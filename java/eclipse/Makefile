@@ -26,6 +26,8 @@ PORTSCOUT=	ignore:1
 USES=		compiler:c++11-lang gmake pkgconfig gnome
 USE_GNOME=	gtk30
 
+USE_HARDENING=	pie:off
+
 USE_GITHUB=	yes
 GH_TUPLE=	eclipse-platform:eclipse.platform.releng.aggregator:${ECLIPSE_TAG} \
 		eclipse-jdt:eclipse.jdt:${ECLIPSE_TAG}:a/eclipse.jdt \

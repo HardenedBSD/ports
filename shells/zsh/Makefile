@@ -19,12 +19,9 @@ MAKE_JOBS_UNSAFE=	yes
 
 USES=		cpe iconv localbase:ldflags ncurses perl5 shebangfix tar:xz
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-=======
 USE_PERL5=	build
->>>>>>> origin/freebsd/main
 SHEBANG_LANG=	zsh
 zsh_OLD_CMD=	zsh	# shebang appears as /bin/zsh and just zsh
 SHEBANG_FILES=	Functions/Calendar/* \

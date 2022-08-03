@@ -3,7 +3,7 @@ Type=Application
 Name=Signal
 Comment=Signal - Private Messenger
 Icon=signal-desktop
-Exec=signal-desktop -- %u
+Exec=signal-desktop --js-flags=--jitless  -- %u
 Terminal=false
 Categories=Network;InstantMessaging;
 StartupWMClass=Signal

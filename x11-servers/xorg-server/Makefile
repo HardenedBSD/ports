@@ -86,7 +86,7 @@ LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
 # HardenedBSD note:
 # Due to how xorg handles loadable modules, it cannot be compiled
 # with RELRO + BIND_NOW.
-USE_HARDENING=	relro:off cfi safestack
+USE_HARDENING=	relro:off cfi
 CFI_OVERRIDE=	-fno-sanitize=cfi-icall
 
 .include <bsd.port.options.mk>

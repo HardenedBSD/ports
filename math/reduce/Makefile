@@ -1,10 +1,10 @@
 PORTNAME=	reduce
-PORTVERSION=	20211019
+PORTVERSION=	${SFSUBDIR:S/snapshot_//:S/-//g}
 CATEGORIES=	math lang
 MASTER_SITES=	SF/${PORTNAME}-algebra/${SFSUBDIR}/
-DISTNAME=	Reduce-svn6110-src
+DISTNAME=	Reduce-svn6339-src
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Codemist Standard Lisp REDUCE general-purpose computer system
 
 LICENSE=	BSD2CLAUSE
@@ -23,7 +23,7 @@ USES=		autoreconf:build libtool gmake ncurses jpeg xorg
 
 USE_HARDENING=	pie:off
 
-SFSUBDIR=	snapshot_2021-10-19
+SFSUBDIR=	snapshot_2022-06-17
 
 TARGET_SDIR=	${ARCH:S/amd64/x86_64/}-unknown-${OPSYS:tl}${OSREL}
 CPPFLAGS+=	-I${NCURSESINC}

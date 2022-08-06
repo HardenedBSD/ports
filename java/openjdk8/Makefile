@@ -381,6 +381,7 @@ LIB_DEPENDS+=	libffi.so:devel/libffi
 .if ${COMPILER_TYPE} == clang
 MAKE_ENV+=	COMPILER_WARNINGS_FATAL=false USE_CLANG=true
 CONFIGURE_ENV+=	LIBCXX="-lc++"
+<<<<<<< HEAD
 .if ${COMPILER_VERSION} >= 130
 CONFIGURE_ARGS+=	--with-extra-cflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
 CONFIGURE_ARGS+=	--with-extra-cxxflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
@@ -392,6 +393,8 @@ BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
 CC=		${LOCALBASE}/bin/clang${LLVM_VER}
 CXX=		${LOCALBASE}/bin/clang++${LLVM_VER}
 .endif
+=======
+>>>>>>> origin/freebsd/main
 .endif
 
 # GCC is broken with PCH: https://lists.freebsd.org/pipermail/svn-src-all/2015-March/101722.html

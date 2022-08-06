@@ -1027,6 +1027,7 @@
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
     SUBDIR += py-avahi
+    SUBDIR += py-cepa
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-cloudflare-scrape-js2py

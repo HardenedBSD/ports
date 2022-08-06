@@ -47,6 +47,8 @@ USE_LDCONFIG=	${DT_PREFIX}/lib
 USE_RC_SUBR=	dtcms${DT_ID} dtlogin${DT_ID}
 USE_XORG=	ice sm x11 xau xdmcp xext xinerama xmu xscrnsaver xt
 
+USE_HARDENING=	pie:off
+
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_PREFIX=	${DT_PREFIX}
 MANPREFIX=	${DT_PREFIX}/share

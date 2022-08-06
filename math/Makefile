@@ -984,6 +984,7 @@
     SUBDIR += py-timple
     SUBDIR += py-topologic
     SUBDIR += py-triangle
+    SUBDIR += py-umap-learn
     SUBDIR += py-uncertainties
     SUBDIR += py-unyt
     SUBDIR += py-vincenty
@@ -1057,6 +1058,7 @@
     SUBDIR += spooles-mpich
     SUBDIR += spot
     SUBDIR += sprng
+    SUBDIR += ssht
     SUBDIR += stan
     SUBDIR += stanmath
     SUBDIR += stp

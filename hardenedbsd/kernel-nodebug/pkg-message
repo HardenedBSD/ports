@@ -1,0 +1,13 @@
+[
+{ type: install
+  message: <<EOM
+To use this kernel, you will need to reboot your operating system
+and press the "6" key in HardenedBSD loader to select this.
+
+If you want to use this kernel automatically at startup,
+please edit the "/boot/loader.conf" file to have this:
+
+  kernel="kernel-nodebug"
+EOM
+}
+]

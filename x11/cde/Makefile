@@ -1,11 +1,11 @@
-PORTNAME=	cde
-DISTVERSION=	2.4.0
-CATEGORIES=	x11
-MASTER_SITES=	SF/cdesktopenv/src/
+VERSIONS=		24 25
+# The reason we will keep our main CDE metaport at 2.4.3 is to
+# avoid a POLA violation due to font differences.
+CDE_VERSION?=		24
 
-MAINTAINER=	cy@FreeBSD.org
-COMMENT=	Common Desktop Environment
+MASTERDIR=		${.CURDIR}/../cde-${CDE_VERSION}
 
+<<<<<<< HEAD
 LICENSE=	LGPL21
 
 BROKEN_mips64=		fails to build: ./config/imake/imake: No such file or directory
@@ -122,3 +122,6 @@ post-install:
 	${FIND} ${STAGEDIR}/${PREFIX}/dt -type f -name 'ecp.*' -delete
 
 .include <bsd.port.mk>
+=======
+.include "${MASTERDIR}/Makefile"
+>>>>>>> origin/freebsd/main

@@ -52,13 +52,11 @@ OPTIONS_DEFAULT_amd64=	SVTAV1
 # i386 is too register-starved for LTO (PR257124)
 OPTIONS_EXCLUDE_i386=	LTO
 
-<<<<<<< HEAD
-OPTIONS_DEFAULT+=	SMB
-=======
 # intel-media-sdk only for i386/amd64
 OPTIONS_DEFINE_amd64=	MFX
 OPTIONS_DEFINE_i386=	MFX
->>>>>>> origin/freebsd/main
+
+OPTIONS_DEFAULT+=	SMB
 
 .if !exists(${.CURDIR:H:H}/multimedia/davs2)
 # https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/5985a1bf7233

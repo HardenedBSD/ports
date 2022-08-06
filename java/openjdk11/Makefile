@@ -211,20 +211,9 @@ CONFIGURE_ARGS+=	--with-extra-ldflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFA
 			--with-extra-cxxflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT}"
 .else
 MAKE_ENV+=	USE_CLANG=true
-<<<<<<< HEAD
-.if ${COMPILER_VERSION} >= 130
 CONFIGURE_ARGS+=	--with-extra-cflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
 CONFIGURE_ARGS+=	--with-extra-cxxflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
 CONFIGURE_ARGS+=	--with-extra-ldflags="-Wno-error=unused-command-line-argument"
-# PR258954: OpenJDK <= 13 crash due to undefined behavior with clang >= 13
-# See also https://bugs.openjdk.java.net/browse/JDK-8229258
-LLVM_VER=	14
-BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
-CC=		${LOCALBASE}/bin/clang${LLVM_VER}
-CXX=		${LOCALBASE}/bin/clang++${LLVM_VER}
-.endif
-=======
->>>>>>> origin/freebsd/main
 .endif
 
 .if ${ARCH} == aarch64 || ${ARCH:Marmv*} || ${ARCH:Mpowerpc64*}

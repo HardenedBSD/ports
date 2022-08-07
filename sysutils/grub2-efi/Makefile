@@ -25,6 +25,8 @@ USE_GCC=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
+USE_HARDENING=	pie:off
+
 CPE_PRODUCT=	grub
 CPE_VENDOR=	gnu
 

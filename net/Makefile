@@ -546,6 +546,7 @@
     SUBDIR += onedrive
     SUBDIR += onenetd
     SUBDIR += onioncat
+    SUBDIR += onionprobe
     SUBDIR += ooni-mini
     SUBDIR += ooni-probe-cli
     SUBDIR += opal

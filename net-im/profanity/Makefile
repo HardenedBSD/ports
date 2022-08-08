@@ -34,7 +34,7 @@ CONFIGURE_ARGS=	--enable-otr --enable-python-plugins --enable-c-plugins \
 		--enable-omemo
 CONFIGURE_ENV=	LIBS="${CFLAGS} -lcrypto"
 
-USE_HARDENING=	safestack
+USE_HARDENING=	pie:off safestack
 
 INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=	NOTIFY

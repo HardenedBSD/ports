@@ -13,7 +13,7 @@ LIB_DEPENDS=	libpcre.so:devel/pcre
 
 USES=		fuse pkgconfig
 
-USE_HARDENING= pie:off
+USE_HARDENING=  pie:off
 
 DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${SH} bootstrap-nofuse.sh
 

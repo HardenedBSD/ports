@@ -19,7 +19,7 @@ GH_PROJECT=	XEphem
 
 LDFLAGS+=	-lfontconfig
 
-USE_HARDENING= pie:off
+USE_HARDENING=  pie:off
 
 WRKSRC_SUBDIR=	GUI/xephem
 

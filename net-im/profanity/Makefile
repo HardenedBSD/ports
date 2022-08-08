@@ -27,8 +27,6 @@ USE_GNOME=	glib20
 USE_GITHUB=	yes
 GH_ACCOUNT=	profanity-im
 
-USE_HARDENING= pie:off
-
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-otr --enable-python-plugins --enable-c-plugins \
 		--enable-pgp --enable-icons-and-clipboard=no \
@@ -36,7 +34,7 @@ CONFIGURE_ARGS=	--enable-otr --enable-python-plugins --enable-c-plugins \
 		--enable-omemo
 CONFIGURE_ENV=	LIBS="${CFLAGS} -lcrypto"
 
-USE_HARDENING=	safestack
+USE_HARDENING=	pie:off safestack
 
 INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=	NOTIFY

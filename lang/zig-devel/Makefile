@@ -25,7 +25,7 @@ USES=		cmake compiler:c++11-lang localbase:ldflags tar:xz
 OPTIONS_DEFINE=		STATIC DOCS
 OPTIONS_DEFAULT=	STATIC DOCS
 
-USE_HARDENING= pie:off
+USE_HARDENING=  pie:off
 
 STATIC_DESC=	sets ZIG_STATIC to avoid 800MiB LLVM runtime dependency
 

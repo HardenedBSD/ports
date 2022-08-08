@@ -19,6 +19,8 @@ GH_PROJECT=	XEphem
 
 LDFLAGS+=	-lfontconfig
 
+USE_HARDENING= pie:off
+
 WRKSRC_SUBDIR=	GUI/xephem
 
 MAKE_JOBS_UNSAFE=	yes

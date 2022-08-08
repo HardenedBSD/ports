@@ -4130,6 +4130,7 @@
     SUBDIR += py-aspy.yaml
     SUBDIR += py-astor
     SUBDIR += py-astroid
+    SUBDIR += py-astroid253
     SUBDIR += py-asttokens
     SUBDIR += py-astunparse
     SUBDIR += py-async_generator
@@ -4734,6 +4735,7 @@
     SUBDIR += py-logutils
     SUBDIR += py-logzero
     SUBDIR += py-louie
+    SUBDIR += py-lru-dict
     SUBDIR += py-lunardate
     SUBDIR += py-lxml
     SUBDIR += py-lxml-stubs

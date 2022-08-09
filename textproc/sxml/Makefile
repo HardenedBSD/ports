@@ -13,6 +13,8 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USES=		tar:bzip2
 
+LLD_UNSAFE=	yes
+
 do-test:
 	cd ${BUILD_WRKSRC}/examples && ${MAKE} all
 

@@ -19,6 +19,8 @@ CONFIGURE_ARGS=	--disable-static --enable-shared --with-glpk=${LOCALBASE} --with
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
+USE_HARDENING=	pie:off
+
 TEST_TARGET=	check # tests fail to run: https://github.com/4ti2/4ti2/issues/26
 
 .include <bsd.port.mk>

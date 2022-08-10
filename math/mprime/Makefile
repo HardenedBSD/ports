@@ -22,6 +22,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl					\
 
 USES=		localbase zip
 
+USE_HARDENING=	pie:off
+
 NO_WRKSUBDIR=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PATCH_WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}

@@ -16,6 +16,8 @@ GH_ACCOUNT=	fluent
 
 USES=		cmake:noninja gmake bison
 
+USE_HARDENING=	pie:off
+
 OPTIONS_DEFINE=		SSL PGSQL
 OPTIONS_DEFAULT=	SSL
 

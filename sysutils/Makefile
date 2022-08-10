@@ -1061,6 +1061,7 @@
     SUBDIR += py-dlipower
     SUBDIR += py-docker
     SUBDIR += py-drmaa
+    SUBDIR += py-elf_diff
     SUBDIR += py-execnet
     SUBDIR += py-filelike
     SUBDIR += py-filelock

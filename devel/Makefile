@@ -1428,6 +1428,7 @@
     SUBDIR += llvm12
     SUBDIR += llvm13
     SUBDIR += llvm14
+    SUBDIR += llvm15
     SUBDIR += llvm70
     SUBDIR += llvm80
     SUBDIR += llvm90
@@ -4111,6 +4112,7 @@
     SUBDIR += py-anyconfig
     SUBDIR += py-anyio
     SUBDIR += py-anyjson
+    SUBDIR += py-anytree
     SUBDIR += py-apache_conf_parser
     SUBDIR += py-apipkg
     SUBDIR += py-apispec
@@ -4809,6 +4811,7 @@
     SUBDIR += py-nose-cov
     SUBDIR += py-nose-timer
     SUBDIR += py-nose2
+    SUBDIR += py-noseofyeti
     SUBDIR += py-nosexcover
     SUBDIR += py-notebook-shim
     SUBDIR += py-notify2

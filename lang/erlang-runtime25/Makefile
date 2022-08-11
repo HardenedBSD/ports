@@ -54,6 +54,8 @@ OPTIONS_EXCLUDE_armv7=	DTRACE
 OPTIONS_EXCLUDE_i386=	DTRACE
 OPTIONS_EXCLUDE_riscv64=	DTRACE
 
+OPTIONS_EXCLUDE_amd64=	DTRACE
+
 CHUNKS_DESC=	Enable in-line documentation in Erlang console
 CORBA_DESC=	Enable Corba support
 KQUEUE_DESC=	Enable Kernel Poll (kqueue) support

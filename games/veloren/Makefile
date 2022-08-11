@@ -33,6 +33,9 @@ PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		share/pixmaps/net.veloren.veloren.png
 PORTDATA=	*
 
+MPROTECT_DISABLE=	bin/veloren-voxygen
+PAGEEXEC_DISABLE=	bin/veloren-voxygen
+
 CARGO_CRATES=	ab_glyph-0.2.15 \
 		ab_glyph_rasterizer-0.1.5 \
 		addr2line-0.17.0 \

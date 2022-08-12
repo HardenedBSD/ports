@@ -1,5 +1,5 @@
 PORTNAME=	gcc
-PORTVERSION=	9.5.0
+PORTVERSION=	12.1.0
 CATEGORIES=	devel
 MASTER_SITES=	GCC
 PKGNAMEPREFIX=	${TARGETARCH}-
@@ -18,13 +18,11 @@ LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpc.so:math/mpc
 RUN_DEPENDS=	${BU_PREFIX}-as:devel/binutils@${BU_FLAVOR}
 
-FLAVORS=	aarch64 amd64 armv6 armv7 i386 mips mips64 powerpc powerpc64 riscv64 sparc64
+FLAVORS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 riscv64
 TARGETARCH=	${FLAVOR}
 
 USES=		compiler:c++11-lang cpe gmake iconv libtool makeinfo tar:xz
 CPE_VENDOR=	gnu
-
-USE_HARDENING=	pie:off
 
 PLIST_SUB=	OPSYS=${OPSYS:tl} \
 		SUFFIX=${SUFFIX} \
@@ -78,7 +76,7 @@ GCC_TARGET=	${TARGETARCH:S/amd64/x86_64/}-${TARGET_ABI}-${OPSYS:tl}${OSREL}
 
 post-patch:
 	@${REINPLACE_CMD} -e '/LIBSTDCXX/ s/stdc\+\+/c\+\+/g ' \
-		${WRKSRC}//gcc/cp/g++spec.c
+		${WRKSRC}//gcc/cp/g++spec.cc
 	@${REINPLACE_CMD} -e '/LOCAL_INCLUDE_DIR/ d ' \
 		${WRKSRC}//gcc/Makefile.in
 
@@ -127,9 +125,6 @@ PLIST+=		${.CURDIR}/pkg-plist.amd64
 .if ${TARGETARCH} == "amd64" || ${TARGETARCH} == "i386"
 PLIST+=		${.CURDIR}/pkg-plist.i386
 .endif
-.if ${TARGETARCH:Mmips*}
-PLIST+=		${.CURDIR}/pkg-plist.mips
-.endif
 .if ${TARGETARCH:Mpowerpc64*}
 PLIST+=		${.CURDIR}/pkg-plist.powerpc64
 .elif ${TARGETARCH:Mpowerpc*}
@@ -137,9 +132,6 @@ PLIST+=		${.CURDIR}/pkg-plist.powerpc
 .endif
 .if ${TARGETARCH:Mriscv*}
 PLIST+=		${.CURDIR}/pkg-plist.riscv
-.endif
-.if ${TARGETARCH} == "sparc64"
-PLIST+=		${.CURDIR}/pkg-plist.sparc64
 .endif
 
 post-install:

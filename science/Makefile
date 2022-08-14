@@ -281,8 +281,12 @@
     SUBDIR += py-cirq-pasqal
     SUBDIR += py-cirq-rigetti
     SUBDIR += py-coards
+    SUBDIR += py-dimod
     SUBDIR += py-dipy
     SUBDIR += py-dlib
+    SUBDIR += py-dwave-neal
+    SUBDIR += py-dwave-samplers
+    SUBDIR += py-dwave-tabu
     SUBDIR += py-eccodes
     SUBDIR += py-esda
     SUBDIR += py-fresnel

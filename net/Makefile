@@ -475,6 +475,7 @@
     SUBDIR += mrouted
     SUBDIR += mrtparse
     SUBDIR += msend
+    SUBDIR += msoak
     SUBDIR += mtr
     SUBDIR += mtr-nox11
     SUBDIR += multicat

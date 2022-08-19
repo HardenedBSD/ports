@@ -317,6 +317,7 @@
     SUBDIR += kidentitymanagement
     SUBDIR += kimap
     SUBDIR += kio-gdrive
+    SUBDIR += kio-zeroconf
     SUBDIR += kippo
     SUBDIR += kitinerary
     SUBDIR += kldap
@@ -1605,7 +1606,6 @@
     SUBDIR += yggdrasil
     SUBDIR += yptransitd
     SUBDIR += zebra-server
-    SUBDIR += zeroconf-ioslave
     SUBDIR += zerotier
     SUBDIR += zillion
     SUBDIR += zmap

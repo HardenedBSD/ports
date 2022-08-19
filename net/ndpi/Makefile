@@ -19,13 +19,9 @@ USES=		autoreconf compiler:c++11-lang cpe libtool localbase:ldflags pathfix \
 CPE_VENDOR=	ntop
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CONFIGURE_ARGS=	--with-pic
-=======
 CONFIGURE_ARGS=	--with-pic --with-local-libgcrypt
->>>>>>> origin/freebsd/main
 CPPFLAGS+=	-I${LOCALBASE}/include/json-c
 LIBS+=		-ljson-c
 MAKE_ENV+=	EXAMPLESDIR="${EXAMPLESDIR_REL}"

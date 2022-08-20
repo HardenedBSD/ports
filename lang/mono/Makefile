@@ -13,9 +13,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 MPROTECT_DISABLE+=	bin/mono
 MPROTECT_DISABLE+=	bin/mono-sgen
+MPROTECT_DISABLE+=	bin/mono-boehm
 PAGEEXEC_DISABLE+=	bin/mono
 PAGEEXEC_DISABLE+=	bin/mono-sgen
+PAGEEXEC_DISABLE+=	bin/mono-boehm
 DISALLOW_MAP32BIT+=	bin/mono-sgen
+DISALLOW_MAP32BIT+= bin/mono-boehm
 
 
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le

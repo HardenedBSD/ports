@@ -1,10 +1,11 @@
-======================================================================
-
+[
+{ type: install
+  message: <<EOM
 When you running on custom kernel config, please consult with the 
 kernel's source tree, especially with UPDATING-HardenedBSD file.
 
-If you have any other question, you can inform on FreeNode's IRC
-#hardenedbsd channel.
+If you have any other question, you can inform on Matrix
+(https://matrix.to/#/#hardenedbsd:matrix.org).
 
 Keywords:
 
@@ -14,6 +15,7 @@ Keywords:
 
  hbsdcontrol secadm
 
- https://github.com/HardenedBSD/hardenedBSD/blob/hardened/current/master/UPDATING-HardenedBSD#L1
-
-======================================================================
+ https://git.hardenedbsd.org/hardenedbsd/HardenedBSD/-/blob/hardened/current/master/UPDATING-HardenedBSD
+EOM
+}
+]

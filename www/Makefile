@@ -122,6 +122,7 @@
     SUBDIR += drupal9
     SUBDIR += drush
     SUBDIR += dtse
+    SUBDIR += dufs
     SUBDIR += e107
     SUBDIR += e2guardian
     SUBDIR += edbrowse

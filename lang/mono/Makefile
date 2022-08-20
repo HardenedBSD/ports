@@ -17,6 +17,7 @@ MPROTECT_DISABLE+=	bin/mono-boehm
 PAGEEXEC_DISABLE+=	bin/mono
 PAGEEXEC_DISABLE+=	bin/mono-sgen
 PAGEEXEC_DISABLE+=	bin/mono-boehm
+DISALLOW_MAP32BIT+=	bin/mono
 DISALLOW_MAP32BIT+=	bin/mono-sgen
 DISALLOW_MAP32BIT+= bin/mono-boehm
 

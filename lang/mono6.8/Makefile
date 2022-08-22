@@ -12,6 +12,17 @@ COMMENT=	Open source implementation of .NET Development Framework
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+MPROTECT_DISABLE+=	bin/mono
+MPROTECT_DISABLE+=	bin/mono-sgen
+MPROTECT_DISABLE+=	bin/mono-boehm
+PAGEEXEC_DISABLE+=	bin/mono
+PAGEEXEC_DISABLE+=	bin/mono-sgen
+PAGEEXEC_DISABLE+=	bin/mono-boehm
+DISALLOW_MAP32BIT+=	bin/mono
+DISALLOW_MAP32BIT+=	bin/mono-sgen
+DISALLOW_MAP32BIT+=	bin/mono-boehm
+
+
 NOT_FOR_ARCHS=	riscv64 riscv64sf sparc64
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \

@@ -1170,6 +1170,7 @@
     SUBDIR += qoauth-qt5
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth
+    SUBDIR += qt6-networkauth
     SUBDIR += quagga
     SUBDIR += quiche
     SUBDIR += quiterss

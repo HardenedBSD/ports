@@ -23,7 +23,6 @@
 # This file can be linted with Tools/scripts/MOVEDlint.awk
 #
 # Port|Moved to|Date|Why
-deskutils/planner|deskutils/gnome-planner|2020-05-31|Revive in more appropriate port name
 audio/polypaudio|audio/pulseaudio|2008-01-01|Project renamed
 audio/akode-plugins-polypaudio||2008-01-01|Polypaudio is obsolete in favor of Pulseaudio
 audio/teknap|net-p2p/teknap|2008-01-09|Moved to net-p2p category
@@ -11592,7 +11591,6 @@ devel/qca@qt5|devel/qca|2019-03-16|Flavor has been removed
 x11-themes/adwaita@qt4||2019-03-16|Qt4 deprecation
 x11-themes/adwaita@qt5|x11-themes/adwaita-qt|2019-03-16|Flavor has been removed
 devel/libdbusmenu-qt@qt4||2019-03-16|Qt4 deprecation
-devel/libdbusmenu-qt@qt5|devel/libdbusmenu-qt|2019-03-16|Flavor has been removed
 multimedia/gstreamer1-qt@qt4||2019-03-16|Qt4 deprecation
 multimedia/gstreamer1-qt@qt5|multimedia/gstreamer1-qt|2019-03-16|Flavor has been removed
 x11-toolkits/qwt6@qt4||2019-03-16|Qt4 deprecation
@@ -17180,6 +17178,7 @@ math/py-cdecimal||2022-05-27|Has expired: upstream does not support it after Pyt
 devel/py-meliae||2022-05-27|Has expired: does not build against Python-3.9
 databases/R-cran-RSQLite.extfuns|databases/R-cran-RSQLite|2022-05-31|Has expired: RSQLite incorporates RSQLite.extfuns
 net/mpich2|net/mpich|2022-05-31|Has been deprecrated for a long time and build fails with GCC 11
+deskutils/planner|deskutils/gnome-planner|2022-05-31|Revive in more appropriate port name
 net-im/jabber.el||2022-06-01|Has expired: is marked as broken: fails to build: jabber-chat.el:25:1: Error: Wrong number of arguments: (3 . 3), 2
 x11-fm/Arqiver|x11-fm/arqiver|2022-06-01|Convert PORTNATE to lowercase
 net/py-suds-community|net/py-suds|2022-06-03|Remove obsoleted port. Use net/py-suds instead
@@ -17539,3 +17538,5 @@ mail/roundcube-umich||2022-08-05|Removed, broken and no upstream updates
 science/openkim|science/openkim-models|2022-08-07|Retire obsolete science/openkim, users should install science/openkim-models instead
 net/zeroconf-ioslave|net/kio-zeroconf|2022-08-18|Renamed upstream
 japanese/font-hackgen-nerd|japanese/font-hackgen-nf|2022-08-20|Renamed upstream
+x11-themes/adwaita-qt|x11-themes/adwaita-qt5|2022-08-23|Renamed to make space for x11-themes/adwaita-qt6
+devel/libdbusmenu-qt|devel/libdbusmenu-qt@qt5|2022-08-22|Flavor has been readded

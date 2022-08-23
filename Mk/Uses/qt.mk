@@ -71,6 +71,9 @@ QT_ETCDIR_REL?=		etc/xdg
 QT_EXAMPLEDIR_REL?=	share/examples/${_QT_RELNAME}
 QT_TESTDIR_REL?=	${QT_DATADIR_REL}/tests
 QT_CMAKEDIR_REL?=	lib/cmake
+_QT5_TOOLDIR_REL=	${QT_BINDIR_REL}
+_QT6_TOOLDIR_REL=	${QT_LIBEXECDIR_REL}
+QT_TOOLDIR_REL=		${_QT${_QT_VER}_TOOLDIR_REL}
 
 # Not customizable.
 QT_MKSPECDIR_REL=	${QT_ARCHDIR_REL}/mkspecs
@@ -79,12 +82,12 @@ _QT_LIBVER=		${_QT_VERSION:R:R}
 LCONVERT?=		${QT_BINDIR}/lconvert
 LRELEASE?=		${QT_BINDIR}/lrelease
 LUPDATE?=		${QT_BINDIR}/lupdate
-MOC?=			${QT_BINDIR}/moc
-RCC?=			${QT_BINDIR}/rcc
-UIC?=			${QT_BINDIR}/uic
+MOC?=			${QT_TOOLDIR}/moc
+RCC?=			${QT_TOOLDIR}/rcc
+UIC?=			${QT_TOOLDIR}/uic
 QMAKE?=			${QT_BINDIR}/qmake
-QCOLLECTIONGENERATOR?=	${QT_BINDIR}/qcollectiongenerator
-QHELPGENERATOR?=	${QT_BINDIR}/qhelpgenerator
+QCOLLECTIONGENERATOR?=	${QT_TOOLDIR}/qcollectiongenerator
+QHELPGENERATOR?=	${QT_TOOLDIR}/qhelpgenerator
 
 # Needed to redefine the qmake target for internal Qt configuration.
 _QMAKE?=		${QMAKE}
@@ -99,7 +102,7 @@ QMAKE_COMPILER=	$$(ccver="$$(${CXX} --version)"; case "$$ccver" in *clang*) echo
 
 .  for dir in BIN INC LIB ARCH PLUGIN LIBEXEC IMPORT \
 	QML DATA DOC L10N ETC EXAMPLE TEST MKSPEC \
-	CMAKE
+	CMAKE TOOL
 QT_${dir}DIR=	${PREFIX}/${QT_${dir}DIR_REL}
 # Export all directories to the plist substituion for QT_DIST ports.
 # For the others, exclude QT_CMAKEDIR and QT_ETCDIR.
@@ -127,32 +130,25 @@ _USES_POST+=		qt
 _QT_MK_POST_INCLUDED=	qt.mk
 
 # The Qt components supported by qt.mk: list of shared, and version specific ones
-_USE_QT_ALL=		assistant dbus declarative declarative-test designer doc gui help \
-			imageformats l10n linguist linguisttools multimedia \
-			network opengl pixeltool qdbusviewer qmake script \
-			scripttools sql sql-mysql sql-odbc sql-pgsql \
-			sql-sqlite2 sql-sqlite3 svg testlib webkit \
-			xml xmlpatterns
+_USE_QT_COMMON=		3d charts datavis3d declarative doc imageformats multimedia \
+			networkauth quick3d quicktimeline remoteobjects scxml \
+			sensors serialbus serialport svg virtualkeyboard wayland \
+			webchannel websockets
+
+_USE_QT5_ONLY=		assistant buildtools concurrent connectivity core dbus \
+			declarative-test designer diag examples gamepad \
+			graphicaleffects gui help l10n linguist linguisttools location \
+			network opengl paths phonon4 pixeltool plugininfo printsupport \
+			qdbus qdbusviewer qdoc qdoc-data qev qmake quickcontrols \
+			quickcontrols2 script scripttools speech sql sql-mysql sql-odbc \
+			sql-pgsql sql-sqlite2 sql-sqlite3 sql-tds testlib uiplugin \
+			uitools webengine webglplugin webkit websockets-qml webview \
+			widgets x11extras xml xmlpatterns
 .  if ${ARCH} == amd64 || ${ARCH} == i386
-_USE_QT_ALL+=	sql-ibase
+_USE_QT5_ONLY+=		sql-ibase
 .  endif
 
-_USE_QT5_ONLY=		3d buildtools charts concurrent connectivity \
-			core datavis3d diag examples gamepad graphicaleffects \
-			location networkauth paths phonon4 plugininfo printsupport \
-			qdbus qdoc qdoc-data qev quick3d quickcontrols quickcontrols2 \
-			quicktimeline remoteobjects scxml sensors serialbus serialport \
-			speech sql-tds uiplugin uitools virtualkeyboard wayland \
-			webchannel webglplugin 	webengine websockets websockets-qml \
-			webview widgets x11extras assistant dbus declarative designer \
-			doc gui help imageformats l10n linguist linguisttools \
-			multimedia network opengl pixeltool qdbusviewer qmake script \
-			scripttools sql sql-mysql sql-odbc sql-pgsql sql-sqlite2 \
-			sql-sqlite3 svg testlib webkit xml xmlpatterns
-
-_USE_QT6_ONLY=		3d 5compat base declarative doc imageformats quick3d \
-			quickcontrols2 quicktimeline networkauth shadertools \
-			svg tools translations wayland
+_USE_QT6_ONLY=		5compat base languageserver lottie shadertools tools translations
 
 # Dependency tuples: _LIB should be preferred if possible.
 qt-3d_PORT=		graphics/${_QT_RELNAME}-3d
@@ -221,6 +217,12 @@ qt-help_LIB=		libQt${_QT_LIBVER}Help.so
 
 qt-imageformats_PORT=	graphics/${_QT_RELNAME}-imageformats
 qt-imageformats_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/imageformats/libqtiff.so
+
+qt-languageserver_PORT=	devel/${_QT_RELNAME}-languageserver
+qt-languageserver_LIB=	libQt${_QT_LIBVER}LanguageServer.so
+
+qt-lottie_PORT=		graphics/${_QT_RELNAME}-lottie
+qt-lottie_LIB=		libQt${_QT_LIBVER}Bodymovin.so
 
 qt-linguist_PORT=	devel/${_QT_RELNAME}-linguist
 qt-linguist_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/linguist
@@ -389,7 +391,8 @@ qt-xmlpatterns_PORT=	textproc/${_QT_RELNAME}-xmlpatterns
 qt-xmlpatterns_LIB=	libQt${_QT_LIBVER}XmlPatterns.so
 
 # Actually add the dependencies to the proper lists.
-_USE_QT_ALL+=		${_USE_QT${_QT_VER}_ONLY}
+_USE_QT_ALL=		${_USE_QT_COMMON} \
+			${_USE_QT${_QT_VER}_ONLY}
 _USE_QT=		${USE_QT}
 # Iterate through components deprived of suffix.
 .  for component in ${_USE_QT:O:u:C/_(build|run)$//}

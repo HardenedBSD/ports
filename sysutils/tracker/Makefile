@@ -10,7 +10,6 @@ COMMENT=	Object database, tag/metadata database, search tool and indexer
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LGPL
 
-BUILD_DEPENDS=	valac:lang/vala
 LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
 		libsoup-2.4.so:devel/libsoup \
 		libdbus-1.so:devel/dbus \
@@ -22,7 +21,7 @@ PORTSCOUT=	limitw:1,even
 USE_HARDENING=	pie:off relro:off
 
 USES=		compiler:c++11-lib gettext gnome localbase:ldflags meson \
-		pkgconfig python:3.4+,build sqlite tar:xz
+		pkgconfig python:3.4+,build sqlite tar:xz vala:build
 USE_GNOME=	glib20 introspection:build libxml2
 USE_LDCONFIG=	yes
 MESON_ARGS=	-Ddocs=false \

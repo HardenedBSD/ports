@@ -1062,6 +1062,8 @@
     SUBDIR += spblas
     SUBDIR += spectra
     SUBDIR += speedcrunch
+    SUBDIR += spfft
+    SUBDIR += spla
     SUBDIR += spooles
     SUBDIR += spooles-mpich
     SUBDIR += spot

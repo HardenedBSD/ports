@@ -22,7 +22,7 @@ PLIST_SUB=	SHLIB_VER=${DISTVERSION}
 
 .include <bsd.port.pre.mk>
 
-.if ${COMPILER_TYPE} == clang
+.if ${CHOSEN_COMPILER_TYPE} == clang
 CFLAGS+=	-Wno-error=varargs
 .endif
 

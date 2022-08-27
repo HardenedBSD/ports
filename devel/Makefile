@@ -681,9 +681,9 @@
     SUBDIR += fpc-zlib
     SUBDIR += fpp
     SUBDIR += frama-c
+    SUBDIR += freebsd-gcc12
     SUBDIR += freebsd-gcc6
     SUBDIR += freebsd-gcc9
-    SUBDIR += freebsd-gcc12
     SUBDIR += freebsd-git-devtools
     SUBDIR += freebsd-sysroot
     SUBDIR += frink
@@ -3440,6 +3440,7 @@
     SUBDIR += p5-Test-Lazy
     SUBDIR += p5-Test-LeakTrace
     SUBDIR += p5-Test-LectroTest
+    SUBDIR += p5-Test-Lib
     SUBDIR += p5-Test-LoadAllModules
     SUBDIR += p5-Test-Log-Log4perl
     SUBDIR += p5-Test-Log4perl
@@ -4742,6 +4743,7 @@
     SUBDIR += py-logan
     SUBDIR += py-logbook
     SUBDIR += py-logfury
+    SUBDIR += py-logfury0
     SUBDIR += py-logilab-common
     SUBDIR += py-loguru
     SUBDIR += py-logutils
@@ -4904,6 +4906,7 @@
     SUBDIR += py-pathtools
     SUBDIR += py-paver
     SUBDIR += py-pbr
+    SUBDIR += py-pcodedmp
     SUBDIR += py-pdm
     SUBDIR += py-pdm-pep517
     SUBDIR += py-pebble
@@ -5102,6 +5105,7 @@
     SUBDIR += py-pytest-helpers-namespace
     SUBDIR += py-pytest-html
     SUBDIR += py-pytest-httpbin
+    SUBDIR += py-pytest-httpserver
     SUBDIR += py-pytest-isort
     SUBDIR += py-pytest-lazy-fixture
     SUBDIR += py-pytest-localserver
@@ -5114,6 +5118,7 @@
     SUBDIR += py-pytest-nunit
     SUBDIR += py-pytest-pep8
     SUBDIR += py-pytest-plus
+    SUBDIR += py-pytest-profiling
     SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-randomly
     SUBDIR += py-pytest-regressions
@@ -5310,6 +5315,7 @@
     SUBDIR += py-stdlib-list
     SUBDIR += py-stdnum
     SUBDIR += py-stevedore
+    SUBDIR += py-stone
     SUBDIR += py-stopit
     SUBDIR += py-strategies
     SUBDIR += py-streamparse
@@ -5339,6 +5345,7 @@
     SUBDIR += py-tempora
     SUBDIR += py-tenacity
     SUBDIR += py-termcolor
+    SUBDIR += py-termcolor-whl
     SUBDIR += py-termstyle
     SUBDIR += py-testfixtures
     SUBDIR += py-testinfra
@@ -5944,6 +5951,7 @@
     SUBDIR += rubygem-aws-sdk-lexmodelsv2
     SUBDIR += rubygem-aws-sdk-lexruntimev2
     SUBDIR += rubygem-aws-sdk-licensemanager
+    SUBDIR += rubygem-aws-sdk-licensemanagerusersubscriptions
     SUBDIR += rubygem-aws-sdk-lightsail
     SUBDIR += rubygem-aws-sdk-locationservice
     SUBDIR += rubygem-aws-sdk-lookoutequipment
@@ -6308,6 +6316,7 @@
     SUBDIR += rubygem-corefines
     SUBDIR += rubygem-cork
     SUBDIR += rubygem-countries
+    SUBDIR += rubygem-cow_proxy
     SUBDIR += rubygem-crack
     SUBDIR += rubygem-cri
     SUBDIR += rubygem-csv
@@ -6599,6 +6608,7 @@
     SUBDIR += rubygem-kgio
     SUBDIR += rubygem-launchy
     SUBDIR += rubygem-lazy_priority_queue
+    SUBDIR += rubygem-libdatadog
     SUBDIR += rubygem-libddprof
     SUBDIR += rubygem-libddwaf
     SUBDIR += rubygem-librarian

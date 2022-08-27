@@ -1,7 +1,8 @@
 PORTNAME=	odoo
-PORTVERSION=	15.0
+PORTVERSION=	14.0
 CATEGORIES=	finance www
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	14
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Suite of web based open source business apps
@@ -9,7 +10,7 @@ COMMENT=	Suite of web based open source business apps
 LICENSE=	LGPL3
 
 USE_GITHUB=	yes
-GH_TAGNAME=	02b4e98ebb2c45d9a4af10fe1bc732f048708f85
+GH_TAGNAME=	c976a0920dd8d7910c7635cc1e2bbff47edcafa9
 
 LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
 		libxslt.so:textproc/libxslt \
@@ -76,19 +77,21 @@ GROUPS=		${USERS}
 USE_RC_SUBR=	${PORTNAME}
 SUB_FILES=	pkg-message
 
-CONFLICTS=	odoo14
+CONFLICTS=	odoo
 
 ETCDIR=		${PREFIX}/etc/odoo
 
 post-patch:
 	@${REINPLACE_CMD} -i "" -e '25d' ${WRKSRC}/odoo/service/wsgi_server.py
 	@${REINPLACE_CMD} -i "" -e 's|werkzeug.url_quote_plus|werkzeug.urls.url_quote_plus|g' \
-		${WRKSRC}/odoo/addons/base/models/ir_ui_view.py 
+		${WRKSRC}/odoo/addons/base/models/ir_ui_view.py
 	@${REINPLACE_CMD} -i "" -e 's|werkzeug.url_unquote_plus|werkzeug.urls.url_quote_plus|g' \
+		-e 's|.NumberConverter|.converters.NumberConverter|g' \
 		${WRKSRC}/odoo/addons/base/models/ir_http.py \
 		${WRKSRC}/odoo/addons/http_routing/models/ir_http.py
 	@${REINPLACE_CMD} -i "" -e 's|from werkzeug import url_encode|from werkzeug.urls import url_encode|g' \
 		${WRKSRC}/odoo/addons/mail/models/mail_thread.py \
+		${WRKSRC}/odoo/addons/mail/controllers/main.py \
 		${WRKSRC}/odoo/addons/hr/models/hr_employee.py
 
 post-extract:

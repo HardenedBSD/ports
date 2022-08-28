@@ -8,11 +8,10 @@
 # program.  If you are really unconvinced, go ahead but do not
 # complain to me about it.
 
-PORTNAME=	ksh93
-PORTVERSION=	${AST_COMMIT_DATE}
+DISTVERSIONPREFIX=	v
+PORTNAME=	ksh
+PORTVERSION=	1.0.3
 CATEGORIES=	shells
-PKGNAMESUFFIX=	-devel
-DIST_SUBDIR=	ksh93
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Development branch of AT&T KornShell 93
@@ -22,15 +21,11 @@ LICENSE=	EPL
 BROKEN_aarch64=		Fails to link: missing sbrk
 BROKEN_riscv64=		Fails to link: missing sbrk
 
-HASH=		cc1bca27
-AST_COMMIT_DATE=	2020.06.30
-
 USES=		compiler:c11
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	att
-GH_PROJECT=	ast
-GH_TAGNAME=	${HASH}
+GH_ACCOUNT=	ksh93
+GH_PROJECT=	ksh
 
 USE_HARDENING=	pie:off
 
@@ -38,7 +33,7 @@ USE_HARDENING=	pie:off
 #		arcane build failures due to already installed ksh/ksh93 in
 #		$PATH.
 KSH_CONFLICTS=		pdksh
-KSH93_CONFLICTS=	ksh2020 ksh93 ast-ksh
+KSH93_CONFLICTS=	ksh2020 ksh93 ast-ksh ksh-devel
 
 OPTIONS_DEFAULT=	KSH93 EXAMPLES
 OPTIONS_DEFINE=		EXAMPLES STATIC
@@ -46,6 +41,7 @@ OPTIONS_SINGLE=		BIN_KSH
 OPTIONS_SINGLE_BIN_KSH=	KSH KSH93
 KSH_DESC=		Install to ${PREFIX}/bin/ksh
 KSH93_DESC=		Install to ${PREFIX}/bin/ksh93
+KSH93N_DESC=		Install to ${PREFIX}/bin/ksh93n (new)
 
 CFLAGS+=	-DMAP_TYPE
 LDFLAGS+=	-lm
@@ -55,26 +51,27 @@ STATIC_MAKE_ENV=	LDFLAGS+=-static
 
 KSH_PLIST_SUB=		93=""
 KSH93_PLIST_SUB=	93="93"
+KSH93N_PLIST_SUB=	93="93n"
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MKSH93}
-PNAME=		ksh93
-.else
-PNAME=		ksh
+.if ${PORT_OPTIONS:MKSH93N}
+PSUFFIX=	93n
+.elif ${PORT_OPTIONS:MKSH93}
+PSUFFIX=	93
 .endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|SF_FLAGS|SFIO_FLAGS|g' ${WRKSRC}/src/lib/libast/include/sfio*.h ${WRKSRC}/src/lib/libast/sfio/*.c
 
 do-build:
-	@cd ${WRKSRC}/ && ${SETENV} -i ${MAKE_ENV} ${SH} bin/package flat make ksh93
+	@cd ${WRKSRC}/ && ${SETENV} -i ${MAKE_ENV} ${SH} bin/package flat make
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/ksh ${STAGEDIR}${PREFIX}/bin/${PNAME}
-	${INSTALL_MAN} ${WRKSRC}/man/man1/sh.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/${PNAME}.1
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
-	cd ${WRKSRC}/fun/ && ${INSTALL_SCRIPT} dirs popd pushd ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/ksh ${STAGEDIR}${PREFIX}/bin/ksh${PSUFFIX}
+	${INSTALL_MAN} ${WRKSRC}/man/man1/sh.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/ksh${PSUFFIX}.1
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}${PSUFFIX}/
+	cd ${WRKSRC}/fun/ && ${INSTALL_SCRIPT} dirs popd pushd ${STAGEDIR}${EXAMPLESDIR}${PSUFFIX}/
 
 do-test:
 	cd ${WRKSRC}/src/cmd/ksh93/tests/ && ${SETENV} SHELL=${WRKSRC}/bin/ksh ${WRKSRC}/bin/ksh shtests

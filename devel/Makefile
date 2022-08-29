@@ -268,6 +268,7 @@
     SUBDIR += benchmark
     SUBDIR += bennugd-core
     SUBDIR += bennugd-modules
+    SUBDIR += bfg
     SUBDIR += bglibs
     SUBDIR += binaryen
     SUBDIR += bingrep
@@ -282,7 +283,6 @@
     SUBDIR += bmkdep
     SUBDIR += bnf
     SUBDIR += boehm-gc
-    SUBDIR += boehm-gc-redirect
     SUBDIR += boehm-gc-threaded
     SUBDIR += boost-all
     SUBDIR += boost-docs
@@ -1348,7 +1348,7 @@
     SUBDIR += libtextstyle
     SUBDIR += libthai
     SUBDIR += libthmap
-    SUBDIR += libthreader
+    SUBDIR += libthreadar
     SUBDIR += libtickit
     SUBDIR += libtifiles2
     SUBDIR += libtool

@@ -3455,6 +3455,7 @@
     SUBDIR += p5-Test-Mock-Guard
     SUBDIR += p5-Test-Mock-LWP
     SUBDIR += p5-Test-Mock-LWP-Dispatch
+    SUBDIR += p5-Test-Mock-One
     SUBDIR += p5-Test-Mock-Redis
     SUBDIR += p5-Test-MockDateTime
     SUBDIR += p5-Test-MockModule
@@ -4514,6 +4515,7 @@
     SUBDIR += py-flake8-docstrings
     SUBDIR += py-flake8-import-order
     SUBDIR += py-flake8-polyfill
+    SUBDIR += py-flake8-print
     SUBDIR += py-flake8-quotes
     SUBDIR += py-flaky
     SUBDIR += py-flask-babel
@@ -6727,6 +6729,7 @@
     SUBDIR += rubygem-ostruct
     SUBDIR += rubygem-p4ruby
     SUBDIR += rubygem-paint
+    SUBDIR += rubygem-pairing_heap
     SUBDIR += rubygem-paperclip-rails5
     SUBDIR += rubygem-paperclip-rails50
     SUBDIR += rubygem-parser

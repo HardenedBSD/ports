@@ -14,7 +14,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=		bin/op
-CONFLICTS_INSTALL=	security/1password-client security/op
+CONFLICTS_INSTALL=	security/1password-client security/op security/1password-client2-beta
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/op \

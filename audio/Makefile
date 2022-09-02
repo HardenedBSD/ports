@@ -734,6 +734,8 @@
     SUBDIR += somafm-cli
     SUBDIR += sonata
     SUBDIR += sonic-visualiser
+    SUBDIR += sonivox
+    SUBDIR += sonivox-eas
     SUBDIR += sorcer-lv2
     SUBDIR += sound-juicer
     SUBDIR += soundgrab

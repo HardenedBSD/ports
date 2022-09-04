@@ -35,6 +35,9 @@ OPTIONS_MULTI=	BUILD
 OPTIONS_MULTI_BUILD=	CLIENT DEDICATED MASTER
 OPTIONS_DEFAULT=	CLIENT DEDICATED
 
+MPROTECT_DISABLE=	bin/assaultcube_client
+PAGEEXEC_DISABLE=	bin/assaultcube_client
+
 CLIENT_DESC=	Build client
 CLIENT_USES=		compiler:c++11-lang gettext-runtime gl openal:al sdl \
 			xorg

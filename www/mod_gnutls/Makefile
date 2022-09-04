@@ -25,12 +25,7 @@ PLIST_SUB=	SED="${SED}" WWWGRP=${WWWGRP} WWWOWN=${WWWOWN}
 SUB_FILES=	pkg-message
 SUB_LIST=	DBDIR="${DBDIR}"
 
-<<<<<<< HEAD
-CFLAGS+=	-Wno-deprecated-declarations
-CFLAGS+=	-Wno-null-pointer-subtraction
-=======
 CFLAGS+=	-Wno-deprecated-declarations -Wno-null-pointer-subtraction
->>>>>>> origin/freebsd/main
 CONFIGURE_ARGS=	--with-apxs="${APXS}"
 
 INSTALL_TARGET=	install-strip

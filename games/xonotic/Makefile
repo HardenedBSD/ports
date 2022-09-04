@@ -30,6 +30,9 @@ OPTIONS_MULTI=		COMPONENTS
 OPTIONS_MULTI_COMPONENTS=CLIENT DEDICATED
 OPTIONS_DEFAULT=	CLIENT DEDICATED
 
+MPROTECT_DISABLE=	bin/xonotic
+PAGEEXEC_DISABLE=	bin/xonotic
+
 CLIENT_DESC=		Build client
 CLIENT_LIB_DEPENDS=	libtheora.so:multimedia/libtheora \
 			libvorbis.so:audio/libvorbis \

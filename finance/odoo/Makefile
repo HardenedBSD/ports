@@ -5,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Suite of web based open source business apps
+WWW=		https://www.odoo.com
 
 LICENSE=	LGPL3
 
@@ -83,7 +84,7 @@ ETCDIR=		${PREFIX}/etc/odoo
 post-patch:
 	@${REINPLACE_CMD} -i "" -e '25d' ${WRKSRC}/odoo/service/wsgi_server.py
 	@${REINPLACE_CMD} -i "" -e 's|werkzeug.url_quote_plus|werkzeug.urls.url_quote_plus|g' \
-		${WRKSRC}/odoo/addons/base/models/ir_ui_view.py 
+		${WRKSRC}/odoo/addons/base/models/ir_ui_view.py
 	@${REINPLACE_CMD} -i "" -e 's|werkzeug.url_unquote_plus|werkzeug.urls.url_quote_plus|g' \
 		${WRKSRC}/odoo/addons/base/models/ir_http.py \
 		${WRKSRC}/odoo/addons/http_routing/models/ir_http.py

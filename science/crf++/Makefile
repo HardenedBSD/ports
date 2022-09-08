@@ -10,6 +10,7 @@ PATCHFILES=	15.patch:-p1:pr \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet Another CRF toolkit
+WWW=		https://taku910.github.io/crfpp/
 
 USE_HARDENING=	pie:off
 

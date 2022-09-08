@@ -1,11 +1,11 @@
 PORTNAME=	libaccounts-glib
-DISTVERSION=	1.25
-PORTREVISION=	2
+DISTVERSION=	1.26
 CATEGORIES=	net-im
 DIST_SUBDIR=	KDE/${GL_ACCOUNT}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Accounts and SSO framework for Linux and POSIX based platforms
+WWW=		https://code.google.com/p/accounts-sso/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -24,7 +24,7 @@ INSTALL_TARGET=	install-strip
 # GitLab variables.
 USE_GITLAB=	yes
 GL_ACCOUNT=	accounts-sso
-GL_COMMIT=	886a80b3ba975d8a59a6500ade2b1debb552660c
+GL_COMMIT=	d31d74997c8524cac862a2c5f0cd902f99a39fc6
 
 OPTIONS_DEFINE=	DOCS
 OPTIONS_SUB=	yes

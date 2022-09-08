@@ -7,6 +7,7 @@ MASTER_SITES=	https://github.com/ccache/ccache/releases/download/v${DISTVERSION}
 
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Tool to minimize the compile time of C/C++ programs
+WWW=		https://ccache.samba.org/
 
 USE_HARDENING=	safestack
 

@@ -5,6 +5,7 @@ MASTER_SITES=	http://devel.ringlet.net/net/urelay/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	UCSPI-based TCP forwarder
+WWW=		https://devel.ringlet.net/net/urelay/
 
 USE_HARDENING=	pie:off
 

@@ -6,6 +6,7 @@ MASTER_SITES=	http://sourceforge.net/projects/${PORTNAME}/files/
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Joystick to keyboard/mouse events translator written in C
+WWW=		http://chiselapp.com/user/beyert/repository/joytran/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
@@ -18,10 +19,6 @@ CMAKE_ARGS=	-DLOCALBASE:PATH="${LOCALBASE}"
 CFLAGS+=	-Wno-unused-but-set-variable
 
 OPTIONS_DEFINE=	DOCS
-
-post-patch:
-	@${REINPLACE_CMD} -e '/WARNING_FLAGS/s,-pedantic,& -fcommon,' \
-		${WRKSRC}/CMakeLists.txt
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}

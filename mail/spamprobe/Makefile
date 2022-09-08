@@ -6,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Spam detector using Bayesian analysis of word counts
+WWW=		http://spamprobe.sourceforge.net/
 
 USE_HARDENING=	pie:off relro:off
 

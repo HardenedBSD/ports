@@ -6,6 +6,7 @@ MASTER_SITES=	https://qgis.org/downloads/
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Free and Open Source Geographic Information System
+WWW=		https://qgis.org/en/site/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
@@ -103,7 +104,7 @@ USES=		bison cmake compiler:features desktop-file-utils \
 USE_GL=		gl
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
-USE_PYQT=	pyqt5 qscintilla2 pysip sip 
+USE_PYQT=	pyqt5 qscintilla2 pysip sip
 USE_QT=		3d buildtools_build core concurrent dbus declarative \
 		designer_build qdoc_build gamepad gui linguist_build location \
 		network printsupport qmake_build script serialport \

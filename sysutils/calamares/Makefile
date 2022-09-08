@@ -5,6 +5,7 @@ MASTER_SITES=	https://github.com/calamares/${PORTNAME}/releases/download/v${DIST
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	Distro- and desktop-independent installer
+WWW=		https://calamares.io/
 
 LIB_DEPENDS=	libicui18n.so:devel/icu \
 		libyaml-cpp.so:devel/yaml-cpp \
@@ -19,5 +20,5 @@ USE_QT=		concurrent core dbus declarative gui network quickcontrols2 \
 		buildtools_build qmake_build
 
 CMAKE_OFF=	INSTALL_POLKIT
-		
+
 .include <bsd.port.mk>

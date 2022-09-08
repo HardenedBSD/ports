@@ -5,6 +5,7 @@ CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Monitors S.M.A.R.T. capable devices for imminent failure
+WWW=		https://invent.kde.org/plasma/plasma-disks
 
 # XXX license
 # https://invent.kde.org/plasma/plasma-disks/-/tree/master/LICENSES
@@ -19,7 +20,7 @@ LICENSE_FILE_GPLv3=	${WRKSRC}/LICENSES/GPL-3.0-only.txt
 LICENSE_FILE_LGPL3=	${WRKSRC}/LICENSES/LGPL-3.0-only.txt
 #LICENSE_FILE_FSF=	${WRKSRC}/LICENSES/FSFAP.txt
 #LICENSE_PERMS_KDE-GPL=	gpl3
-#LICENSE_PERMS_KDE-LGPL= gpl3	
+#LICENSE_PERMS_KDE-LGPL= gpl3
 
 RUN_DEPENDS=	smartmontools>0:sysutils/smartmontools
 

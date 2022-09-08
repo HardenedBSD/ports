@@ -6,6 +6,7 @@ DISTNAME=	spread-src-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Spread Group Communication System, a network toolkit
+WWW=		http://www.spread.org/
 
 USE_HARDENING=	pie:off
 

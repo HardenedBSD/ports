@@ -7,6 +7,7 @@ PKGNAMESUFFIX=		-tor
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Pluggable Transport using WebRTC inspired by Flashproxy
+WWW=		https://snowflake.torproject.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKDIR}/${PORTNAME}-${TPO_SNOWFLAKE}/LICENSE
@@ -22,8 +23,11 @@ CPE_VENDOR=	torproject
 TPO_GEOIP=	7ce4b3d98d01ff33bad8007db3f488d5b172382a
 TPO_SNOWFLAKE=	c983c13a84554d0ba1ffcdd054491090c0eafc54
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:golang
 
+=======
+>>>>>>> origin/freebsd/main
 GO_MODULE=      git.torproject.org/pluggable-transports/snowflake.git/v2
 GO_PKGNAME=	${GO_MODULE}
 GO_TARGET=	./broker ./client ./proxy ./server

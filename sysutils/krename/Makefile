@@ -1,11 +1,11 @@
 PORTNAME=	krename
-PORTVERSION=	5.0.1
-PORTREVISION=	1
+DISTVERSION=	5.0.2
 CATEGORIES=	sysutils kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Powerful batch file renamer for KDE
+WWW=		https://userbase.kde.org/KRename
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

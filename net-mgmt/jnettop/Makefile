@@ -7,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.13 \
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Traffic visualizer, similar to nettop
+WWW=		https://sourceforge.net/projects/jnettop/
 
 USE_HARDENING=	pie:off
 

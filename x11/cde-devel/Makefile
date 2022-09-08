@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Common Desktop Environment
+WWW=		https://sourceforge.net/p/cdesktopenv/wiki/Home/
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	cschuber
@@ -124,6 +125,5 @@ post-install:
 	@cd ${STAGEDIR}/${DT_PREFIX}; ${LN} -sf share/examples
 	# Only a problem on armv7 so far
 	${FIND} ${STAGEDIR}/${DT_PREFIX} -type f -name 'ecp.*' -delete
-
 
 .include <bsd.port.mk>

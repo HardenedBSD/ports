@@ -7,6 +7,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER?=	ahicks@p-o.co.uk
 COMMENT?=	Homebrew PVR project
+WWW=		https://www.mythtv.org/
 
 LICENSE=	GPLv2+
 
@@ -113,7 +114,7 @@ OPTIONS_DEFAULT=	BINDINGS HDHOMERUN VDPAU
 OPTIONS_SUB=		yes
 
 BINDINGS_DESC=		Perl and Python bindings
-BINDINGS_BUILD_DEPENDS= ${PYTHON_PKGNAMEPREFIX}mysqlclient>=0:databases/py-mysqlclient@${PY_FLAVOR} \
+BINDINGS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mysqlclient>=0:databases/py-mysqlclient@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}future>=0:devel/py-future@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \

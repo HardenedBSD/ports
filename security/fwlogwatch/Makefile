@@ -5,6 +5,7 @@ MASTER_SITES=	http://fwlogwatch.inside-security.de/sw/
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Packet filter and firewall log analyzer
+WWW=		http://fwlogwatch.inside-security.de/
 
 USE_HARDENING=	pie:off
 

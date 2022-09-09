@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 USE_HARDENING=	pie:off
 
 BUILD_DEPENDS=	bash:shells/bash \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		liburiparser.so:net/uriparser \

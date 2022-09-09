@@ -16,7 +16,7 @@ WWW=		https://www.waffle-gl.org/
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BUILD_DEPENDS=	cmake:devel/cmake
+BUILD_DEPENDS=	cmake:devel/cmake-core
 
 USE_HARDENING=	pie:off
 

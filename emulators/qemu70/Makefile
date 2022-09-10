@@ -25,6 +25,37 @@ LIB_DEPENDS+=	libfdt.so:sysutils/dtc \
 LIB_DEPENDS+=	libepoxy.so:graphics/libepoxy
 .endif
 
+MPROTECT_DISABLE=	bin/qemu-system-aarch64
+MPROTECT_DISABLE+=	bin/qemu-system-alpha
+MPROTECT_DISABLE+=	bin/qemu-system-avr
+MPROTECT_DISABLE+=	bin/qemu-system-arm
+MPROTECT_DISABLE+=	bin/qemu-system-cris
+MPROTECT_DISABLE+=	bin/qemu-system-hppa
+MPROTECT_DISABLE+=	bin/qemu-system-i386
+MPROTECT_DISABLE+=	bin/qemu-system-m68k
+MPROTECT_DISABLE+=	bin/qemu-system-microblaze
+MPROTECT_DISABLE+=	bin/qemu-system-microblazeel
+MPROTECT_DISABLE+=	bin/qemu-system-mips
+MPROTECT_DISABLE+=	bin/qemu-system-mips64
+MPROTECT_DISABLE+=	bin/qemu-system-mips64el
+MPROTECT_DISABLE+=	bin/qemu-system-mipsel
+MPROTECT_DISABLE+=	bin/qemu-system-nios2
+MPROTECT_DISABLE+=	bin/qemu-system-or1k
+MPROTECT_DISABLE+=	bin/qemu-system-ppc
+MPROTECT_DISABLE+=	bin/qemu-system-ppc64
+MPROTECT_DISABLE+=	bin/qemu-system-riscv32
+MPROTECT_DISABLE+=	bin/qemu-system-riscv64
+MPROTECT_DISABLE+=	bin/qemu-system-rx
+MPROTECT_DISABLE+=	bin/qemu-system-s390x
+MPROTECT_DISABLE+=	bin/qemu-system-sh4
+MPROTECT_DISABLE+=	bin/qemu-system-sh4eb
+MPROTECT_DISABLE+=	bin/qemu-system-sparc
+MPROTECT_DISABLE+=	bin/qemu-system-sparc64
+MPROTECT_DISABLE+=	bin/qemu-system-tricore
+MPROTECT_DISABLE+=	bin/qemu-system-x86_64
+MPROTECT_DISABLE+=	bin/qemu-system-xtensa
+MPROTECT_DISABLE+=	bin/qemu-system-xtensaeb
+
 FLAVORS=			default nox11 tools
 FLAVOR?=			${FLAVORS:[1]}
 default_PKGNAMESUFFIX=		70

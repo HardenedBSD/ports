@@ -4,7 +4,6 @@ CATEGORIES=	devel kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Extra modules and scripts for CMake
-WWW=		https://quickgit.kde.org/?p=extra-cmake-modules.git
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING-CMAKE-SCRIPTS

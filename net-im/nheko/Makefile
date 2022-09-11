@@ -29,8 +29,8 @@ USES=		cmake compiler:c++17-lang desktop-file-utils \
 		localbase:ldflags pkgconfig qt:5 ssl tar:xz
 USE_QT=		concurrent core dbus declarative gui multimedia network \
 		quickcontrols2 svg widgets \
-		graphicaleffects_run \
-		buildtools_build linguist_build qmake_build
+		graphicaleffects:run \
+		buildtools:build linguist:build qmake:build
 
 MPROTECT_DISABLE=	bin/nheko
 

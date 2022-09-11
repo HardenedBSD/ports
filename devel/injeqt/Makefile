@@ -16,7 +16,7 @@ GH_ACCOUNT=	vogel
 USE_HARDENING=	pie:off
 
 USES=		cmake compiler:c++11-lib pathfix qt:5
-USE_QT=		core buildtools_build qmake_build testlib_build
+USE_QT=		core buildtools:build qmake:build testlib:build
 USE_LDCONFIG=	yes
 
 CMAKE_ON=	DISABLE_EXAMPLES \

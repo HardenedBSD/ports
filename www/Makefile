@@ -1403,6 +1403,7 @@
     SUBDIR += pserv
     SUBDIR += publicfile
     SUBDIR += punbb
+    SUBDIR += py-Pituophis
     SUBDIR += py-Tenjin
     SUBDIR += py-WebError
     SUBDIR += py-WebFlash

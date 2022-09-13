@@ -1543,6 +1543,7 @@
     SUBDIR += watchfolder
     SUBDIR += watchman
     SUBDIR += watchmen
+    SUBDIR += waynergy
     SUBDIR += webmin
     SUBDIR += weedit
     SUBDIR += wemux

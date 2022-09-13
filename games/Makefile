@@ -527,6 +527,7 @@
     SUBDIR += libretro-mame2003
     SUBDIR += libretro-mame2003_plus
     SUBDIR += libretro-mgba
+    SUBDIR += libretro-melonds
     SUBDIR += libretro-mu
     SUBDIR += libretro-nestopia
     SUBDIR += libretro-nxengine
@@ -612,6 +613,7 @@
     SUBDIR += megaglest
     SUBDIR += megaglest-data
     SUBDIR += megamario
+    SUBDIR += melonds
     SUBDIR += memonix
     SUBDIR += meqcc
     SUBDIR += meritous

@@ -87,6 +87,8 @@ CONFIGURE_ARGS=	--host=${GNU_HOST} \
 
 INFO=		octave liboctave
 
+LDFLAGS+=	-fuse-ld=lld
+
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 

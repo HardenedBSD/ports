@@ -24,6 +24,8 @@ PORTSCOUT=	site:https://code.mpimet.mpg.de/projects/cdo/files
 
 USES=		compiler:c++17-lang gmake libtool localbase pathfix
 
+LDFLAGS+=	-fuse-ld=lld
+
 CONFIGURE_ARGS=	--disable-data \
 		--disable-extra \
 		--disable-fortran \

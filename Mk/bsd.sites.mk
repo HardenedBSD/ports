@@ -248,23 +248,13 @@ MASTER_SITE_FRUGALWARE+= \
 .if !defined(IGNORE_MASTER_SITE_GCC)
 MASTER_SITE_GCC+= \
 	https://mirrors.kernel.org/sourceware/gcc/%SUBDIR%/ \
-	http://gcc.parentingamerica.com/%SUBDIR%/ \
-	http://gcc.cybermirror.org/%SUBDIR%/ \
-	http://gcc-uk.internet.bs/%SUBDIR%/ \
-	http://www.netgull.com/gcc/%SUBDIR%/ \
-	http://robotlab.itk.ppke.hu/gcc/%SUBDIR%/ \
-	http://gcc.fyxm.net/%SUBDIR%/ \
 	https://ftp-stud.hs-esslingen.de/pub/Mirrors/sourceware.org/gcc/%SUBDIR%/ \
-	ftp://ftp.funet.fi/pub/mirrors/sourceware.org/pub/gcc/%SUBDIR%/ \
-	ftp://gcc.gnu.org/pub/gcc/%SUBDIR%/ \
-	ftp://ftp.lip6.fr/pub/gcc/%SUBDIR%/ \
-	ftp://ftp.irisa.fr/pub/mirrors/gcc.gnu.org/gcc/%SUBDIR%/ \
-	ftp://ftp.uvsq.fr/pub/gcc/%SUBDIR%/ \
-	ftp://ftp.gwdg.de/pub/misc/gcc/%SUBDIR%/ \
-	ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/gcc.gnu.org/pub/gcc/%SUBDIR%/ \
-	ftp://ftp.nluug.nl/mirror/languages/gcc/%SUBDIR%/ \
-	ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/%SUBDIR%/ \
-	ftp://ftp.ntua.gr/pub/gnu/gcc/%SUBDIR%/
+	https://ftp.funet.fi/pub/mirrors/sourceware.org/pub/gcc/%SUBDIR%/ \
+	https://ftp.mpi-inf.mpg.de/pub/gnu/mirror/gcc.gnu.org/pub/gcc/%SUBDIR%/ \
+	https://mirrorservice.org/sites/sourceware.org/pub/gcc/%SUBDIR%/ \
+	http://mirror.koddos.net/gcc/%SUBDIR%/ \
+	http://ftp.ntua.gr/pub/gnu/gcc/%SUBDIR%/ \
+	http://gcc.gnu.org/pub/gcc/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_GENTOO)
@@ -937,16 +927,18 @@ MASTER_SITE_SAMBA+= \
 	https://ftp.samba.org/pub/%SUBDIR%/
 .endif
 
-# List:	https://download.savannah.gnu.org/mirmon/
+# List:	https://download-mirror.savannah.gnu.org/releases/00_MIRRORS.html
 .if !defined(IGNORE_MASTER_SITE_SAVANNAH)
 MASTER_SITE_SAVANNAH+= \
 	https://download.savannah.gnu.org/releases/%SUBDIR%/ \
-	https://download-mirror.savannah.gnu.org/releases/%SUBDIR%/ \
+	https://nongnu.uib.no/%SUBDIR%/ \
+	https://mirror.kumi.systems/nongnu/%SUBDIR%/ \
+	https://mirrors.up.pt/pub/nongnu/%SUBDIR%/ \
 	http://nongnu.askapache.com/%SUBDIR%/ \
-	http://mirror.lihnidos.org/GNU/savannah/%SUBDIR%/ \
-	http://ftp.twaren.net/Unix/NonGNU/%SUBDIR%/ \
-	ftp://ftp.twaren.net/Unix/NonGNU/%SUBDIR%/ \
-	http://gnu.mirrors.pair.com/savannah/savannah/%SUBDIR%/
+	http://mirror.netcologne.de/savannah/%SUBDIR%/ \
+	http://mirror.csclub.uwaterloo.ca/nongnu/%SUBDIR%/ \
+	http://mirror.easyname.at/nongnu/%SUBDIR%/ \
+	https://download-mirror.savannah.gnu.org/releases/%SUBDIR%/
 .endif
 
 # List:		https://sourceforge.net/p/forge/documentation/Mirrors/

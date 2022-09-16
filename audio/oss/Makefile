@@ -27,6 +27,7 @@ CFLAGS+=	-Wno-compare-distinct-pointer-types
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 CONFIGURE_ENV=	HOSTCC="${CC}"
+MAKE_ENV=	WERROR="" # fix build: otherwise sys/conf/kmod.mk adds -Werror that breaks build
 ALL_TARGET=	all install
 
 SUB_FILES=	pkg-install pkg-deinstall

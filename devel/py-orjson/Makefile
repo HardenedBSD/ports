@@ -57,6 +57,8 @@ CARGO_TARGET_DIR=${WRKSRC}/target
 MAKE_ENV=	${CARGO_ENV}
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
+.include <bsd.port.options.mk>
+
 # This is to prevent Mk/Uses/python.mk do-configure target from firing.
 do-configure:
 	@${ECHO} 'No configure'
@@ -73,6 +75,10 @@ do-build:
 # Due to upstream not supplying a setup.py file or other way to install
 # using pip command for now...
 do-install:
+.if ${ARCH:Mpowerpc64*}
+	@(cd ${INSTALL_WRKSRC}; \
+		${FIND} . -name "*whl" -exec sh -c 'mv {} `echo {} | sed  -E -e "s/powerpc.*/powerpc.whl/"`' \;)
+.endif
 	@${SETENV} ${MAKE_ENV} pip install \
 		--isolated \
 		--root=${STAGEDIR} \

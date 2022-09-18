@@ -130,18 +130,13 @@ USE_OPENLDAP=	yes
 USE_PERL5=	build
 USE_XORG=	ice sm x11 xaw xcb xext xinerama xrandr xrender
 
-<<<<<<< HEAD
 PAGEEXEC_DISABLE=	lib/libreoffice/program/soffice.bin
 MPROTECT_DISABLE=	lib/libreoffice/program/soffice.bin
 
-OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 GTK4 JAVA KF5 LTO MMEDIA PDFIUM PGSQL MARIADB QT5 SDK TEST WEBDAV
-OPTIONS_DEFAULT=	CUPS DOCS MMEDIA PDFIUM QT5
-=======
 OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 GTK4 JAVA KF5 LTO MMEDIA PDFIUM PGSQL MARIADB SDK TEST WEBDAV
 OPTIONS_RADIO=	QT
 OPTIONS_RADIO_QT=	QT5 QT6
 OPTIONS_DEFAULT=	CUPS DOCS JAVA MMEDIA PDFIUM QT5
->>>>>>> origin/freebsd/main
 #OPTIONS_EXCLUDE=	GTK4
 
 COINMP_DESC=	Enable CoinMP (deprecated) math solver
@@ -344,11 +339,6 @@ MAKE_ENV+=	verbose=1
     (${OSVERSION} >= 1301500 && ${OSVERSION} < 1301502) || \
     (${OSVERSION} >= 1400051 && ${OSVERSION} < 1400057))
 BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
-.endif
-
-.if ${OSVERSION} < 1400000
-# HBSD: OpenJDK is broken in 14-CURRENT.
-OPTIONS_DEFAULT+=	JAVA
 .endif
 
 .if ${ARCH:Mpowerpc*}

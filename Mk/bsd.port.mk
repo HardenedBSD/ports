@@ -1222,7 +1222,8 @@ LLD_IS_LD=	no
 _EXPORTED_VARS+=	LLD_IS_LD
 
 _TEST_AR=/usr/bin/ar
-.if ${_TEST_AR:tA} == "/usr/bin/llvm-ar"
+_AR_VERSION!=	${_TEST_AR} -V
+.if ${_AR_VERSION:MLLVM}
 LLVM_AR_IS_AR=	yes
 .else
 LLVM_AR_IS_AR=	no
@@ -1230,7 +1231,8 @@ LLVM_AR_IS_AR=	no
 _EXPORTED_VARS+=	LLVM_AR_IS_AR
 
 _TEST_NM=/usr/bin/nm
-.if ${_TEST_NM:tA} == "/usr/bin/llvm-nm"
+_NM_VERSION!=	${_TEST_NM} -V
+.if ${_NM_VERSION:MLLVM}
 LLVM_NM_IS_NM=	yes
 .else
 LLVM_NM_IS_NM=	no
@@ -1238,7 +1240,8 @@ LLVM_NM_IS_NM=	no
 _EXPORTED_VARS+=	LLVM_NM_IS_NM
 
 _TEST_RANLIB=/usr/bin/ranlib
-.if ${_TEST_RANLIB:tA} == "/usr/bin/llvm-ar"
+_RANLIB_VERSION!=	${_TEST_RANLIB} -v
+.if ${_RANLIB_VERSION:MLLVM}
 LLVM_RANLIB_IS_RANLIB=	yes
 .else
 LLVM_RANLIB_IS_RANLIB=	no
@@ -1246,7 +1249,8 @@ LLVM_RANLIB_IS_RANLIB=	no
 _EXPORTED_VARS+=	LLVM_RANLIB_IS_RANLIB
 
 _TEST_OBJDUMP=/usr/bin/objdump
-.if ${_TEST_OBJDUMP:tA} == "/usr/bin/llvm-objdump"
+_OBJDUMP_VERSION!=	${_TEST_OBJDUMP} -v
+.if ${_OBJDUMP_VERSION:MLLVM}
 LLVM_OBJDUMP_IS_OBJDUMP=	yes
 .else
 LLVM_OBJDUMP_IS_OBJDUMP=	no

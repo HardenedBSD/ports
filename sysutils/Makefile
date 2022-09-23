@@ -773,6 +773,7 @@
     SUBDIR += most
     SUBDIR += mountsmb2
     SUBDIR += mping
+    SUBDIR += mprocs
     SUBDIR += mptd
     SUBDIR += msiklm
     SUBDIR += msktutil

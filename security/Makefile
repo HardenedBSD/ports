@@ -1279,7 +1279,10 @@
     SUBDIR += vxquery
     SUBDIR += wapiti
     SUBDIR += wazuh-agent
+    SUBDIR += wazuh-dashboard
+    SUBDIR += wazuh-indexer
     SUBDIR += wazuh-manager
+    SUBDIR += wazuh-server
     SUBDIR += webfwlog
     SUBDIR += weggli
     SUBDIR += whatweb

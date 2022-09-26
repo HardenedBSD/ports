@@ -35,15 +35,9 @@ CONFIGURE_ARGS=	--enable-otr --enable-python-plugins --enable-c-plugins \
 		--enable-pgp --disable-icons-and-clipboard \
 		--without-xscreensaver --disable-gdk-pixbuf \
 		--enable-omemo --enable-omemo-qrcode
-<<<<<<< HEAD
-CONFIGURE_ENV=	LIBS="${CFLAGS} -lcrypto"
 
 USE_HARDENING=	pie:off safestack
 
-INSTALL_TARGET=	install-strip
-=======
-
->>>>>>> origin/freebsd/main
 OPTIONS_DEFINE=	NOTIFY
 
 NOTIFY_LIB_DEPENDS=	libnotify.so:devel/libnotify

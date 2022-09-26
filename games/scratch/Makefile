@@ -13,6 +13,8 @@ LICENSE_COMB=	multi
 
 USE_GNOME=	cairo glib20 pango
 
+BUILD_DEPENDS=	pkg-config:devel/pkgconf \
+		${LOCALBASE}/include/pango-1.0/pango/pangocairo.h:x11-toolkits/pango
 RUN_DEPENDS=	squeak:lang/squeak
 
 BINARY_ALIAS=	gcc=${CC} g++=${CXX}

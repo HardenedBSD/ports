@@ -880,6 +880,7 @@
     SUBDIR += scourge
     SUBDIR += scourge-data
     SUBDIR += scramble
+    SUBDIR += scratch
     SUBDIR += scummvm
     SUBDIR += scummvm-tools
     SUBDIR += sdb

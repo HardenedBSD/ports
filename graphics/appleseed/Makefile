@@ -1,12 +1,11 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	appleseed
 DISTVERSION=	2.1.0-beta
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	graphics
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Modern, physically-based production renderer
+WWW=		https://appleseedhq.net/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -68,7 +67,7 @@ PYTHON_CMAKE_ON=	-DWITH_PYTHON3_BINDINGS:BOOL=ON
 STUDIO_DESC=	Build appleseed.studio (Qt-based)
 STUDIO_LIB_DEPENDS=	${PY_BOOST}
 STUDIO_USES=	qt:5
-STUDIO_USE=	QT=buildtools_build,qmake_build,concurrent,core,gui,opengl,widgets
+STUDIO_USE=	QT=buildtools:build,qmake:build,concurrent,core,gui,opengl,widgets
 STUDIO_CMAKE_OFF=	-DWITH_STUDIO:BOOL=OFF
 STUDIO_IMPLIES=	PYTHON
 

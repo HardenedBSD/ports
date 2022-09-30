@@ -1,5 +1,3 @@
-# Created by: Oliver Eikemeier
-
 PORTNAME=		bash
 PATCHLEVEL=		16
 PORTVERSION=		5.1.${PATCHLEVEL:S/^0//g}
@@ -17,6 +15,7 @@ PATCHFILES!=		/usr/bin/jot -s " " -w \
 
 MAINTAINER=		ehaupt@FreeBSD.org
 COMMENT=		GNU Project's Bourne Again SHell
+WWW=		https://www.gnu.org/software/bash/
 
 LICENSE=		GPLv3+
 LICENSE_FILE=		${WRKSRC}/COPYING

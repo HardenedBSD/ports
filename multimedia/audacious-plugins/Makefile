@@ -1,12 +1,12 @@
-# Created by: Zastupov Stepan [RedChrom] <redchrom@mail.ru>
-
 PORTNAME=	audacious-plugins
 PORTVERSION=	4.2
+PORTREVISION=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Plugins needed for audacious
+WWW=		https://audacious-media-player.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

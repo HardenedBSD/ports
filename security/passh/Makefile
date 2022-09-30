@@ -1,5 +1,3 @@
-# Created by: Mateusz Piotrowski <0mp@FreeBSD.org>
-
 PORTNAME=	passh
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.1
@@ -7,6 +5,7 @@ CATEGORIES=	security
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Non-interactive password inputting CLI
+WWW=		https://github.com/clarkwang/passh
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

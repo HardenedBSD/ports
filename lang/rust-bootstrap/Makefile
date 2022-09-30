@@ -2,7 +2,7 @@
 # to upload them to ~/public_distfiles on freefall in preparation
 # for the next lang/rust update.
 PORTNAME=	rust
-PORTVERSION=	1.62.0
+PORTVERSION=	1.63.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 PKGNAMEPREFIX=	${FLAVOR:S/_/-/g}-
@@ -12,6 +12,7 @@ DIST_SUBDIR=	rust
 
 MAINTAINER=	rust@FreeBSD.org
 COMMENT=	Create bootstrap compilers for building lang/rust
+WWW=		https://www.rust-lang.org/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
@@ -22,7 +23,7 @@ ONLY_FOR_ARCHS=	amd64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	untested on other architectures
 
 BUILD_DEPENDS=	${FLAVOR:S/_/-/g}-freebsd-sysroot>=a2021.09.14:devel/freebsd-sysroot@${FLAVOR} \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		gmake:devel/gmake \
 		rust>=${PORTVERSION}:lang/rust
 

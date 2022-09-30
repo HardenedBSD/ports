@@ -5,8 +5,13 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Universal Radio Hacker: investigate wireless protocols like a boss
+WWW=		https://github.com/jopohl/urh
 
 LICENSE=	GPLv3
+
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY} \

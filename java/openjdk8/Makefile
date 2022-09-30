@@ -7,6 +7,7 @@ PKGNAMESUFFIX?=	${JDK_MAJOR_VERSION}
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT?=	Java Development Kit ${JDK_MAJOR_VERSION}
+WWW=		https://openjdk.java.net/
 
 LICENSE=	GPLv2
 
@@ -230,8 +231,8 @@ INSTALLDIR=	${PREFIX}/${PKGBASE}
 NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	8
-JDK_UPDATE_VERSION=	332
-JDK_BUILD_NUMBER=	09
+JDK_UPDATE_VERSION=	342
+JDK_BUILD_NUMBER=	07
 BSD_JDK_VERSION=	1
 JTREG_VERSION=		4.1
 JTREG_BUILD_NUMBER=	b08
@@ -382,9 +383,14 @@ LIB_DEPENDS+=	libffi.so:devel/libffi
 .if ${COMPILER_TYPE} == clang
 MAKE_ENV+=	COMPILER_WARNINGS_FATAL=false USE_CLANG=true
 CONFIGURE_ENV+=	LIBCXX="-lc++"
-.if ${COMPILER_VERSION} >= 130
-# PR258954: OpenJDK <= 13 crash due to undefined behavior with clang >= 13
-# See also https://bugs.openjdk.java.net/browse/JDK-8229258
+CONFIGURE_ARGS+=	--with-extra-cflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
+CONFIGURE_ARGS+=	--with-extra-cxxflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
+CONFIGURE_ARGS+=	--with-extra-ldflags="-Wno-error=unused-command-line-argument"
+.if ${COMPILER_VERSION} >= 130 && ${ARCH} == aarch64
+# PR258954: see <https://bugs.openjdk.org/browse/JDK-8247766>. Even though the
+# upstream fix has been applied to this version of the JDK, users still report
+# the assertion "guarantee(val < (1U << nbits)) failed: Field too big for insn"
+# occurring, when it is built with recent versions of clang.
 LLVM_VER=	12
 BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
 CC=		${LOCALBASE}/bin/clang${LLVM_VER}
@@ -464,7 +470,6 @@ post-build:
 .endif
 
 post-build-TZUPDATE-on:
-	@# Update time zones
 	@${RM} -r ${JRE_IMAGEDIR}/lib/zi
 	@${LN} -sf ${LOCALBASE}/share/java/zi ${JRE_IMAGEDIR}/lib
 

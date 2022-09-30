@@ -1,5 +1,3 @@
-# Created by: gordon@FreeBSD.org
-
 PORTNAME=	p4
 PORTVERSION=	${YEAR}.${MAJOR}.${MINOR}
 PORTREVISION=	3
@@ -16,6 +14,7 @@ DIST_SUBDIR=	perforce/p4
 
 MAINTAINER=	asomers@FreeBSD.org
 COMMENT=	Perforce client
+WWW=		https://www.perforce.com/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

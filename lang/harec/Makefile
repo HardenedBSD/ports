@@ -1,12 +1,13 @@
 PORTNAME=	harec
-PORTVERSION=	g20220501
+PORTVERSION=	g20220709
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~sircmpwn/${PORTNAME}/archive/
-DISTNAME=	fba0a9b5
+DISTNAME=	8da848e1
 DIST_SUBDIR=	hare
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Hare compiler written in C11
+WWW=		https://harelang.org/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

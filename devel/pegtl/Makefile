@@ -1,9 +1,10 @@
 PORTNAME=	pegtl
-DISTVERSION=	3.2.6
+DISTVERSION=	3.2.7
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Parsing Expression Grammar Template Library
+WWW=		https://github.com/taocpp/PEGTL
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

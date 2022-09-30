@@ -1,5 +1,3 @@
-# Created by: David Naylor <dbn@FreeBSD.org>
-
 PORTNAME=	userspace-rcu
 PORTVERSION=	0.7.16
 DISTVERSIONSUFFIX=	-1.el7
@@ -8,6 +6,7 @@ MASTER_SITES=	EPEL7/u
 
 MAINTAINER=	emulation@FreeBSD.org
 COMMENT=	Userspace read-copy-update (RCU) data synchronization library (CentOS ${LINUX_DIST_VER})
+WWW=		https://liburcu.org/
 
 LICENSE=	LGPL21+
 

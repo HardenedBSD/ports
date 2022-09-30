@@ -1,7 +1,5 @@
-# Created by: Martti Kuparinen <martti.kuparinen@ericsson.com>
-
 PORTNAME=	stunnel
-DISTVERSION=	5.63
+DISTVERSION=	5.65
 PORTEPOCH=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.stunnel.org/downloads/archive/5.x/ \
@@ -10,6 +8,7 @@ MASTER_SITES=	https://www.stunnel.org/downloads/archive/5.x/ \
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	SSL encryption wrapper for standard network daemons
+WWW=		https://www.stunnel.org/
 
 # FIXME: IMHO, there really ought to be a GPL-2+ option or some such.
 LICENSE=	GPLv2 GPLv3

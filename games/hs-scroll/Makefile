@@ -1,5 +1,3 @@
-# Created by: Nikolai Lifanov <lifanov@mail.lifanov.com>
-
 PORTNAME=	scroll
 PORTVERSION=	1.20180421
 PORTREVISION=	11
@@ -7,6 +5,7 @@ CATEGORIES=	games haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Roguelike game
+WWW=		https://joeyh.name/code/scroll/
 
 LICENSE=	GPLv2
 

@@ -1,10 +1,11 @@
 PORTNAME=	mbedtls
-PORTVERSION=	2.28.0
+PORTVERSION=	2.28.1
 DISTVERSIONPREFIX=${PORTNAME}-
 CATEGORIES=	security devel
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	SSL/TLS and cryptography library
+WWW=		https://www.trustedfirmware.org/projects/mbed-tls/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

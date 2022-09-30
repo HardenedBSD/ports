@@ -1,8 +1,6 @@
-# Created by: Shaun Amott <shaun@FreeBSD.org>
-
 PORTNAME=	bitcoin
 PORTVERSION=	23.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	net-p2p finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PORTVERSION}/ \
 		LOCAL/swills:icon
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${_DISTFILES:N*.png}
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT?=	Virtual Peer-to-Peer Currency Client (QT)
+WWW=		https://www.bitcoin.org/
 
 LICENSE=	MIT
 
@@ -27,7 +26,7 @@ SLAVE_PORT?=	no
 .if defined(SLAVE_PORT) && ${SLAVE_PORT} == "no"
 USES+=		desktop-file-utils
 USE_QT=		core gui network widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 
 BUILD_DEPENDS+=	protoc:devel/protobuf
 LIB_DEPENDS+=	libprotobuf.so:devel/protobuf

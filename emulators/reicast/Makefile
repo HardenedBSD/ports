@@ -1,5 +1,3 @@
-# Created by: Timothy Beyer <beyert@cs.ucr.edu>
-
 PORTNAME=	reicast
 PORTVERSION=	0.20201231
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	emulators games
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Multi-platform Sega Dreamcast emulator
+WWW=		https://github.com/reicast/reicast-emulator
 
 LICENSE=	BSD3CLAUSE GPLv2 LGPL21
 LICENSE_COMB=	multi

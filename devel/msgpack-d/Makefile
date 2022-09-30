@@ -1,11 +1,10 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	msgpack-d
 DISTVERSION=	1.0.0-beta8
 CATEGORIES=	devel
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Pure D implementation of MessagePack
+WWW=		https://github.com/msgpack/msgpack-d
 
 LICENSE=	BSL
 

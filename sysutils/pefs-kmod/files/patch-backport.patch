@@ -1,0 +1,189 @@
+From 2e7c0b44decd74282b415cac1ca82e5c802fc1e5 Mon Sep 17 00:00:00 2001
+From: Daniel O'Connor <darius@dons.net.au>
+Date: Thu, 31 Mar 2022 11:25:26 +1030
+Subject: [PATCH] Fix for FreeBSD 13.1 and -current
+
+---
+ sbin/pefs/pefs.8            |  2 +-
+ sys/fs/pefs/pefs_dircache.c |  5 -----
+ sys/fs/pefs/pefs_subr.c     |  8 ++++++++
+ sys/fs/pefs/pefs_vfsops.c   |  8 ++++++++
+ sys/fs/pefs/pefs_vnops.c    | 26 ++++++++++++++++++++++++++
+ 5 files changed, 43 insertions(+), 6 deletions(-)
+
+diff --git a/sbin/pefs/pefs.8 b/sbin/pefs/pefs.8
+index 99b8ac9..ee8c2cc 100644
+--- sbin/pefs/pefs.8
++++ sbin/pefs/pefs.8
+@@ -147,7 +147,7 @@ section for information on options):
+ .It Cm mount
+ Mount file system.
+ Encryption keys should be specified separately after mounting the file system.
+-If no agrumnt specified prints all mounted
++If no argument specified prints all mounted
+ .Nm
+ file systems.
+ See
+diff --git a/sys/fs/pefs/pefs_dircache.c b/sys/fs/pefs/pefs_dircache.c
+index 5f844b9..0bc5e21 100644
+--- sys/fs/pefs/pefs_dircache.c
++++ sys/fs/pefs/pefs_dircache.c
+@@ -233,25 +233,20 @@ dircache_gc_locked(struct pefs_dircache *pd)
+ static void
+ dircache_entry_expire_locked(struct pefs_dircache_entry *pde)
+ {
+-	struct pefs_dircache_pool *pdp;
+-	struct pefs_dircache_listhead *bucket;
+ 	struct pefs_dircache *pd;
+ 	struct mtx_padalign *bucket_mtx;
+ 
+ 	pd = pde->pde_dircache;
+-	pdp = pd->pd_pool;
+ 	pde->pde_dircache = NULL;
+ 
+ 	LIST_REMOVE(pde, pde_dir_entry);
+ 	LIST_INSERT_HEAD(&pd->pd_stalehead, pde, pde_dir_entry);
+ 
+-	bucket = DIRCACHE_TBL(pdp, pde->pde_namehash);
+ 	bucket_mtx = DIRCACHE_MTX(pde->pde_namehash);
+ 	mtx_lock(bucket_mtx);
+ 	LIST_REMOVE(pde, pde_hash_entry);
+ 	mtx_unlock(bucket_mtx);
+ 
+-	bucket = DIRCACHE_ENCTBL(pdp, pde->pde_encnamehash);
+ 	bucket_mtx = DIRCACHE_MTX(pde->pde_encnamehash);
+ 	mtx_lock(bucket_mtx);
+ 	LIST_REMOVE(pde, pde_enchash_entry);
+diff --git a/sys/fs/pefs/pefs_subr.c b/sys/fs/pefs/pefs_subr.c
+index 3d6aabe..d1d260c 100644
+--- sys/fs/pefs/pefs_subr.c
++++ sys/fs/pefs/pefs_subr.c
+@@ -428,9 +428,17 @@ pefs_node_get(struct mount *mp, struct vnode *lvp, struct vnode **vpp,
+ 	vp->v_vnlock = lvp->v_vnlock;
+ 	if (vp->v_vnlock == NULL)
+ 		panic("pefs_node_get: Passed a NULL vnlock.\n");
++#if __FreeBSD_version > 1400050
++	error = insmntque1(vp, mp);
++	if (error != 0) {
++		pefs_insmntque_dtr(vp, pn);
++		return (error);
++	}
++#else
+ 	error = insmntque1(vp, mp, pefs_insmntque_dtr, pn);
+ 	if (error != 0)
+ 		return (error);
++#endif
+ 	/*
+ 	 * Atomically insert our new node into the hash or vget existing
+ 	 * if someone else has beaten us to it.
+diff --git a/sys/fs/pefs/pefs_vfsops.c b/sys/fs/pefs/pefs_vfsops.c
+index ffe344c..583959f 100644
+--- sys/fs/pefs/pefs_vfsops.c
++++ sys/fs/pefs/pefs_vfsops.c
+@@ -200,7 +200,11 @@ pefs_mount(struct mount *mp)
+ 	/*
+ 	 * Find lower node
+ 	 */
++#if __FreeBSD_version > 1400042
++	NDINIT(ndp, LOOKUP, FOLLOW, UIO_SYSSPACE, from);
++#else
+ 	NDINIT(ndp, LOOKUP, FOLLOW, UIO_SYSSPACE, from, curthread);
++#endif
+ 	error = namei(ndp);
+ 
+ 	if (error == 0) {
+@@ -225,7 +229,11 @@ pefs_mount(struct mount *mp)
+ 
+ 	if (error != 0)
+ 		return (error);
++#if __FreeBSD_version > 1300134
++	NDFREE_PNBUF(ndp);
++#else
+ 	NDFREE(ndp, NDF_ONLY_PNBUF);
++#endif
+ 
+ 	/*
+ 	 * Sanity check on lower vnode
+diff --git a/sys/fs/pefs/pefs_vnops.c b/sys/fs/pefs/pefs_vnops.c
+index 19c7ef5..a6994fe 100644
+--- sys/fs/pefs/pefs_vnops.c
++++ sys/fs/pefs/pefs_vnops.c
+@@ -2191,7 +2191,11 @@ pefs_readmapped(struct vnode *vp, struct uio *uio, ssize_t bsize,
+ 			VM_OBJECT_WLOCK(vp->v_object);
+ 			goto lookupvpg;
+ 		}
++#if __FreeBSD_version > 130000 /* 63e9755548e4feebf798686ab8bce0cdaaaf7b46 */
++		vm_page_busy_acquire(m, VM_ALLOC_SBUSY);
++#else
+ 		vm_page_sbusy(m);
++#endif
+ 		*mp = m;
+ 	}
+ 	VM_OBJECT_WUNLOCK(vp->v_object);
+@@ -2227,7 +2231,11 @@ pefs_readmapped(struct vnode *vp, struct uio *uio, ssize_t bsize,
+ 		if (vm_page_sleep_if_busy(m, FALSE, "pefsmr"))
+ 			goto lookupvpg;
+ #endif
++#if __FreeBSD_version > 130000 /* 63e9755548e4feebf798686ab8bce0cdaaaf7b46 */
++		vm_page_busy_acquire(m, VM_ALLOC_SBUSY);
++#else
+ 		vm_page_busy(m);
++#endif
+ #if __FreeBSD_version >= 1000030
+ 		VM_OBJECT_WUNLOCK(vp->v_object);
+ #else
+@@ -2273,7 +2281,11 @@ pefs_readmapped(struct vnode *vp, struct uio *uio, ssize_t bsize,
+ 		if (vm_page_sleep_if_busy(m, FALSE, "pefsmr"))
+ 			goto lookupvpg;
+ #endif
++#if __FreeBSD_version > 130000 /* 63e9755548e4feebf798686ab8bce0cdaaaf7b46 */
++		vm_page_busy_acquire(m, VM_ALLOC_SBUSY);
++#else
+ 		vm_page_busy(m);
++#endif
+ 		*mp = m;
+ 	}
+ 
+@@ -2479,7 +2491,11 @@ pefs_writemapped(struct vnode *vp, struct uio *uio,
+ 			VM_OBJECT_WLOCK(vp->v_object);
+ 			goto lookupvpg;
+ 		}
++#if __FreeBSD_version > 130000 /* 63e9755548e4feebf798686ab8bce0cdaaaf7b46 */
++		vm_page_busy_acquire(m, VM_ALLOC_SBUSY);
++#else
+ 		vm_page_sbusy(m);
++#endif
+ 		vm_page_undirty(m);
+ 		VM_OBJECT_WUNLOCK(vp->v_object);
+ 		PEFSDEBUG("pefs_write: mapped: "
+@@ -2539,12 +2555,20 @@ pefs_writemapped(struct vnode *vp, struct uio *uio,
+ 			vm_page_sleep(m, "pefsmw");
+ 			goto lookupvpg;
+ 		}
++#if __FreeBSD_version > 130000 /* 63e9755548e4feebf798686ab8bce0cdaaaf7b46 */
++		vm_page_busy_acquire(m, VM_ALLOC_SBUSY);
++#else
+ 		vm_page_busy(m);
++#endif
+ 		vm_page_undirty(m);
+ #else
+ 		if (vm_page_sleep_if_busy(m, FALSE, "pefsmw"))
+ 			goto lookupvpg;
++#if __FreeBSD_version > 130000 /* 63e9755548e4feebf798686ab8bce0cdaaaf7b46 */
++		vm_page_busy_acquire(m, VM_ALLOC_SBUSY);
++#else
+ 		vm_page_busy(m);
++#endif
+ 		vm_page_lock_queues();
+ 		vm_page_undirty(m);
+ 		vm_page_unlock_queues();
+@@ -2836,7 +2860,9 @@ pefs_setkey(struct vnode *vp, struct pefs_key *pk, struct ucred *cred,
+ 		return (error);
+ 	}
+ 	bzero(&cn, sizeof(cn));
++#if __FreeBSD_version < 1400037
+ 	cn.cn_thread = td;
++#endif
+ 	cn.cn_cred = cred;
+ 	cn.cn_flags = LOCKPARENT | LOCKLEAF | ISLASTCN | SAVENAME;
+ 	cn.cn_lkflags = LK_EXCLUSIVE;

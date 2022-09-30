@@ -1,5 +1,3 @@
-# Created by: Samy Al Bahra <sbahra@kerneled.org>
-
 PORTNAME=	xmobar
 PORTVERSION=	0.43
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	x11 haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Minimalistic text-based status bar
+WWW=		https://xmobar.org/
 
 LICENSE=	BSD3CLAUSE
 

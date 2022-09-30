@@ -1,13 +1,12 @@
-# Created by: Vasil Dimov <vd@FreeBSD.org>
-
 PORTNAME=	qtum
 PORTVERSION=	0.20.3
 DISTVERSIONPREFIX=	mainnet-fastlane-v
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PoS cryptocurrency that can execute smart contract as part of an UTXO
+WWW=		https://qtum.org/
 
 LICENSE=	GPLv3
 

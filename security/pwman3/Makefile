@@ -1,5 +1,3 @@
-# Created by: Yarodin <yarodin@gmail.com>
-
 PORTNAME=	pwman3
 PORTVERSION=	0.0.6
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	Pwman3-${PORTVERSION}
 
 MAINTAINER=	yarodin@gmail.com
 COMMENT=	Console password management application with sql storage
+WWW=		http://pwman.bleurgh.com
 
 DEPRECATED=	Depends on expired security/py-pycrypto
 EXPIRATION_DATE=2022-09-30

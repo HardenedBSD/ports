@@ -1,8 +1,6 @@
-# Created by: Andrew Thompson <andy@fud.org.nz>
-
 PORTNAME=	handbrake
 DISTVERSION=	1.5.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	https://github.com/HandBrake/HandBrake/releases/download/${DISTVERSION}/
 MASTER_SITES+=	https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/:contrib
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	naito.yuichiro@gmail.com
 COMMENT=	Versatile DVD ripper and video transcoder
+WWW=		https://handbrake.fr/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -20,7 +19,7 @@ ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 powerpc64le
 
 BUILD_DEPENDS=	bash:shells/bash \
 		nasm:devel/nasm \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		meson:devel/meson
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libgudev-1.0.so:devel/libgudev \

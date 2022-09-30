@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	s2
 PORTVERSION=	0.10.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python binding of S2 Geometry Library
+WWW=		https://s2geometry.io/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/../../LICENSE

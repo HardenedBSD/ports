@@ -1,4 +1,3 @@
-# Created by: Stijn Hoop <stijn@win.tue.nl>
 #
 # For those wondering why this port is not under `x11-drivers' category,
 # have a look at https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=121930.
@@ -24,6 +23,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	danfe@FreeBSD.org
 COMMENT?=	NVidia graphics card binary drivers for hardware OpenGL rendering
+WWW=		https://www.nvidia.com/object/unix.html
 
 LICENSE_FILE=	${WRKSRC}/doc/license.txt
 .include "${.CURDIR}/../nvidia-driver/Makefile.common"

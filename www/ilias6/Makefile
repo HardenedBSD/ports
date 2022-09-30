@@ -1,14 +1,12 @@
-# Created by: Bartlomiej Rutkowski <r@robakdesign.com>
-
 PORTNAME=	ilias
-PORTVERSION=	6.17
-PORTREVISION=	1
+PORTVERSION=	6.18
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www education
 PKGNAMESUFFIX=	6${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Powerful, dynamic, PHP and MySQL based e-learning platform
+WWW=		https://www.ilias.de
 
 LICENSE=	GPLv2
 

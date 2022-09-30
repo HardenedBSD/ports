@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	gtksourceview
 PORTVERSION=	3.24.11
 PORTREVISION=	2
@@ -10,15 +8,15 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Text widget that adds syntax highlighting to the GtkTextView widget
+WWW=		https://wiki.gnome.org/Projects/GtkSourceView/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		compiler:c11 tar:xz
+USES=		compiler:c11 tar:xz vala:build
 
 PORTSCOUT=	limitw:1,even
 
-BUILD_DEPENDS=	vala:lang/vala
 LIB_DEPENDS=	libfribidi.so:converters/fribidi
 
 USES+=		gettext gmake gnome libtool localbase pathfix pkgconfig

@@ -1,13 +1,14 @@
 PORTNAME=	hare
-PORTVERSION=	g20220430
+PORTVERSION=	g20220709
 CATEGORIES=	devel
 MASTER_SITES=	https://git.sr.ht/~sircmpwn/${PORTNAME}/archive/
 PKGNAMESUFFIX=	-lang
-DISTNAME=	51884435
+DISTNAME=	bd1c1c4a
 DIST_SUBDIR=	hare
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Hare language build system and standard library
+WWW=		https://harelang.org/
 
 LICENSE=	MPL20 GPLv3
 LICENSE_COMB=	multi
@@ -18,8 +19,7 @@ ONLY_FOR_ARCHS=	amd64 # aarch64 riscv64
 BUILD_DEPENDS=	harec:lang/harec \
 		qbe:devel/qbe \
 		scdoc:textproc/scdoc
-RUN_DEPENDS=	harec:lang/harec \
-		qbe:devel/qbe
+RUN_DEPENDS=	harec:lang/harec
 
 MAKE_ARGS=	DESTDIR=${STAGEDIR}
 

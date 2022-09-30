@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	google-cloud-bigtable-admin-v2
-PORTVERSION=	0.13.0
+PORTVERSION=	0.14.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby Client for the Cloud Bigtable Admin V2 API
+WWW=		https://github.com/googleapis/google-cloud-ruby/tree/master/google-cloud-bigtable-admin-v2
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

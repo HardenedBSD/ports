@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	inifiled
 PORTVERSION=	1.3.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Compile-time .ini file parser and writer generator for D
+WWW=		https://github.com/burner/inifiled
 
 LICENSE=	BSL
 

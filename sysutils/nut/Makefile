@@ -1,13 +1,12 @@
-# Created by: Boris Popov <bp@FreeBSD.org>
-
 PORTNAME=	nut
 PORTVERSION=	2.8.0
-PORTREVISION=	6
+PORTREVISION=	11
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Network UPS Tools
+WWW=		https://www.networkupstools.org/
 
 USE_HARDENING=	pie:off relro:off
 
@@ -146,6 +145,7 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${PATCHDIR}/nut.syslog ${STAGEDIR}${EXAMPLESDIR}/syslog.sample
 	${INSTALL_DATA} ${PATCHDIR}/nut.newsyslog ${STAGEDIR}${EXAMPLESDIR}/newsyslog.sample
+	${INSTALL_DATA} ${PATCHDIR}/nut_upslog.sample ${STAGEDIR}${EXAMPLESDIR}/nut_upslog.sample
 	${MKDIR} ${STAGEDIR}/var/log/nut
 	@${RM} ${STAGEDIR}${PREFIX}/etc/nut/solaris-init/nut
 	@${RMDIR} ${STAGEDIR}${PREFIX}/etc/nut/solaris-init

@@ -1,5 +1,3 @@
-# Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-
 PORTNAME=	lua-gd
 PORTVERSION=	2.0.33r3
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	sergey.dyatko@gmail.com
 COMMENT=	GD bindings for the Lua programming language
+WWW=		https://www.ittner.com.br/lua-gd/
 
 LICENSE=	MIT
 

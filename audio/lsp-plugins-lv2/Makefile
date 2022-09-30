@@ -7,13 +7,15 @@ DISTFILES=	${PORTNAME}-src-${DISTVERSION}.tar.gz
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Collection of free LV2 plugins
+WWW=		https://lsp-plug.in/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 ONLY_FOR_ARCHS=	amd64 armv7 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	assembly only for these architectures
-BROKEN_i386=	error: inline assembly requires more registers than available
+BROKEN_armv7=	arch/arm/neon-d32/copy.h:371:17: error: operand must be an immediate in the range [0,15], see https://github.com/sadko4u/lsp-plugins/issues/266
+BROKEN_i386=	error: inline assembly requires more registers than available, see https://github.com/sadko4u/lsp-plugins/issues/266
 
 BUILD_DEPENDS=	lv2>0:audio/lv2
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \

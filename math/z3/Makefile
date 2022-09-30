@@ -1,10 +1,11 @@
 PORTNAME=	z3
 DISTVERSIONPREFIX=	z3-
-DISTVERSION=	4.8.17
+DISTVERSION=	4.10.2
 CATEGORIES=	math
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Z3 Theorem Prover
+WWW=		https://github.com/Z3Prover/z3
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -32,6 +33,7 @@ GMP_CONFIGURE_ON=	--gmp
 GMP_USES=		localbase:ldflags
 GMP_LIB_DEPENDS=	libgmp.so:math/gmp
 
+CXXFLAGS_armv7=	-fPIC
 CXXFLAGS_powerpc=	-fPIC
 LDFLAGS_i386=		-Wl,-znotext
 BUILD_WRKSRC=		${WRKSRC}/build

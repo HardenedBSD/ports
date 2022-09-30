@@ -5,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Simple IDE for NASM, MASM, GAS and FASM assembly languages
+WWW=		https://dman95.github.io/SASM/english.html
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,7 +14,7 @@ USES=		compiler:c++11-lang gl qmake qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	Dman95
 USE_GL=		gl
-USE_QT=		core gui network widgets buildtools_build
+USE_QT=		core gui network widgets buildtools:build
 
 CONFLICTS_INSTALL=	fasm fasm-fpga
 

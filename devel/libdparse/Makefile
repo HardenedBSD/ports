@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	libdparse
 PORTVERSION=	0.11.4
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Library for lexing and parsing D source code
+WWW=		https://github.com/dlang-community/libdparse
 
 LICENSE=	BSL
 

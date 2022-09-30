@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	tools
 PORTVERSION=	2.085.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	dlang-
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Ancillary tools for the D programming language compiler
+WWW=		https://github.com/dlang/tools
 
 LICENSE=	BSL
 

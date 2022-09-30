@@ -1,5 +1,3 @@
-# Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-
 PORTNAME=	a2jmidid
 PORTVERSION=	9
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	hselasky@FreeBSD.org
 COMMENT=	ALSA to JACK MIDI bridge
+WWW=		https://github.com/jackaudio/a2jmidid
 
 LICENSE=	GPLv2+
 

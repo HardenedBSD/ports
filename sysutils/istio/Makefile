@@ -1,12 +1,11 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	istio
 PORTVERSION=	1.7.4
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	sysutils
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Open platform to connect, manage, and secure microservices
+WWW=		https://istio.io
 
 LICENSE=	APACHE20
 

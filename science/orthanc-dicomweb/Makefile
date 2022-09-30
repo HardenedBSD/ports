@@ -1,8 +1,6 @@
-# Created by: maintainer.freebsd@xpoundit.com
-
 PORTNAME=	orthanc-dicomweb
 DISTVERSION=	1.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	https://www.orthanc-server.com/downloads/get.php?path=/plugin-dicom-web/:main \
 		https://www.orthanc-server.com/downloads/get.php?path=/orthanc/:framework \
@@ -23,6 +21,7 @@ EXTRACT_ONLY=	OrthancDicomWeb-${PORTVERSION}.tar.gz
 
 MAINTAINER=	maintainer.freebsd@xpoundit.com
 COMMENT=	Orthanc plugin to bring support of the DICOMweb standard into Orthanc
+WWW=		https://www.orthanc-server.com/static.php?page=dicomweb
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

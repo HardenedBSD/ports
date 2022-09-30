@@ -1,5 +1,3 @@
-# Created by: John Marino <marino@FreeBSD.org>
-
 PORTNAME=	synth
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.12
@@ -7,6 +5,7 @@ CATEGORIES=	ports-mgmt
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Custom package repository builder for FreeBSD and DragonFly
+WWW=		https://github.com/jrmarino/synth
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/License.txt

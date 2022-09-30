@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	opencascade
 PORTVERSION=	7.4.0 # resurrected because science/chrono only builds with opencascade-7.4.0, see https://github.com/projectchrono/chrono/issues/359#issuecomment-1023478083
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	740
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Open CASCADE Technology, 3D modeling & numerical simulation
+WWW=		https://www.opencascade.org/
 
 LICENSE=	OCTPL
 LICENSE_NAME=	LGPL21 with exception
@@ -140,6 +139,5 @@ regression-test:	install
 	CSF_TestDataPath=${OCCROOT}/data		\
 	DRAWEXE -f ${FILESDIR}/regtest "
 .endif
-
 
 .include <bsd.port.mk>

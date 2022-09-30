@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-
 PORTNAME=	mono
 PORTVERSION=	6.8.0.123
 PORTREVISION=	1
@@ -10,25 +8,36 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Open source implementation of .NET Development Framework
+WWW=		https://www.mono-project.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+MPROTECT_DISABLE+=	bin/mono
+MPROTECT_DISABLE+=	bin/mono-sgen
+MPROTECT_DISABLE+=	bin/mono-boehm
+PAGEEXEC_DISABLE+=	bin/mono
+PAGEEXEC_DISABLE+=	bin/mono-sgen
+PAGEEXEC_DISABLE+=	bin/mono-boehm
+DISALLOW_MAP32BIT+=	bin/mono
+DISALLOW_MAP32BIT+=	bin/mono-sgen
+DISALLOW_MAP32BIT+=	bin/mono-boehm
+
 
 NOT_FOR_ARCHS=	riscv64 riscv64sf sparc64
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash \
-		cmake>0:devel/cmake
+		cmake-core>0:devel/cmake-core
 LIB_DEPENDS=	libinotify.so:devel/libinotify
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow@${PY_FLAVOR} \
 		ca_root_nss>=0:security/ca_root_nss \
 		sqlite3>0:databases/sqlite3 \
 		zip>=0:archivers/zip
 
-CONFLICTS_BUILD=	brotli
 CONFLICTS_INSTALL=	certmgr coin-or-disco disco mono mono[0-9]*
 
-USES=	autoreconf bison compiler:c11 cpe gmake iconv libtool \
+USES=	autoreconf bison compiler:c11 cpe gmake iconv libtool localbase \
 	pathfix perl5 python:3.6+ shebangfix tar:xz
 USE_PERL5=	build
 

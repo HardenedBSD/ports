@@ -1,11 +1,10 @@
-# Created by: Rozhuk Ivan rozhuk.im@gmail.com
-
 PORTNAME=		aravis
 DISTVERSION=		0.8.20
 CATEGORIES=		multimedia
 
 MAINTAINER=		rozhuk.im@gmail.com
 COMMENT=		Camera control and image acquisition viewer
+WWW=		https://github.com/AravisProject/aravis
 
 LICENSE=		LGPL21+
 LICENSE_FILE=		${WRKSRC}/COPYING

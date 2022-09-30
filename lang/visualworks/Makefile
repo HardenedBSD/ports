@@ -1,5 +1,3 @@
-# Created by: js@jeannot.org
-
 PORTNAME=		visualworks
 PORTVERSION=		7.6
 PORTREVISION=		1
@@ -11,6 +9,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=		ports@FreeBSD.org
 COMMENT=		High performance Smalltalk environment
+WWW=		https://smalltalk.cincom.com/
 
 # Converted from RESTRICTED
 LICENSE=	VISUALWORKS

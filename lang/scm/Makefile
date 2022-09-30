@@ -1,5 +1,3 @@
-# Created by: hsu
-
 PORTNAME=	scm
 PORTVERSION=	5f2
 PORTREVISION=	10
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX} slib-3b5.zip
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Scheme interpreter
+WWW=		https://people.csail.mit.edu/jaffer/SCM
 
 LICENSE=	LGPL21
 

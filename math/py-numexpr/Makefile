@@ -1,5 +1,3 @@
-# Created by: Ju Pengfei <ju.pengfei@gmail.com>
-
 PORTNAME=	numexpr
 PORTVERSION=	2.8.3
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast numerical array expression evaluator for Python and NumPy
+WWW=		https://github.com/pydata/numexpr
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

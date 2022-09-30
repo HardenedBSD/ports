@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pyproject-metadata
 PORTVERSION=	0.6.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEP 621 metadata parsing
+WWW=		https://github.com/FFY00/python-pyproject-metadata
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

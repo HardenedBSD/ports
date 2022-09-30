@@ -1,8 +1,6 @@
-# Created by: Devon H. O'Dell <devon.odell@gmail.com>
-
 PORTNAME=	go
-DISTVERSION?=	g20220706
-PORTREVISION?=	1
+DISTVERSION?=	g20220802
+PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES?=	https://github.com/dmgk/go-bootstrap/releases/download/${BOOTSTRAP_TAG}/:bootstrap \
 		LOCAL/dmgk:bootstrap
@@ -11,6 +9,7 @@ DISTFILES?=	go-${OPSYS:tl}-${GOARCH_${ARCH}}${GOARM_${ARCH}}-${BOOTSTRAP_TAG}.ta
 
 MAINTAINER=	go@FreeBSD.org
 COMMENT?=	Go programming language (development version)
+WWW=		https://golang.org
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -36,8 +35,8 @@ CPE_VENDOR=	golang
 .ifndef MASTERDIR
 USE_GITHUB=	yes
 GH_ACCOUNT=	golang
-# go1.19rc1
-GH_TAGNAME=	bac4eb53d64ee402af1d52ac18fb9f0ea76c74e2
+# go1.19
+GH_TAGNAME=	43456202a1e55da55666fac9d56ace7654a65b64
 .endif
 
 SHEBANG_FILES=	misc/wasm/go_js_wasm_exec \

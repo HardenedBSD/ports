@@ -1,5 +1,3 @@
-# Created by: Leonardo Martins <lmartins@nepe.eee.ufg.br>
-
 PORTNAME=	geos
 PORTVERSION=	3.11.0
 CATEGORIES=	graphics geography
@@ -8,6 +6,7 @@ MASTER_SITES=	https://download.osgeo.org/geos/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Geometry Engine, Open Source
+WWW=		https://libgeos.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

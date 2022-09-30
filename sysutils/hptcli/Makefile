@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	hptcli
 PORTVERSION=	3.6
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	CLI-FreeBSD-3.6-1-120913
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	HighPoint storage controllers management CLI
+WWW=		http://www.highpoint-tech.com/USA_new/cs-service_support.htm
 
 # Converted from RESTRICTED
 LICENSE=	hptcli

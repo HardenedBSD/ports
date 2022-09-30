@@ -1,5 +1,3 @@
-# Created by: michael@fuckner.net
-
 PORTNAME=	arcconf
 DISTVERSION=	4_01_24763
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	arcconf_v${DISTVERSION}
 
 MAINTAINER=	michael@fuckner.net
 COMMENT=	Adaptec SCSI/SAS RAID administration tool
+WWW=		https://storage.microsemi.com/en-us/support/
 
 LICENSE=	Microsemi
 LICENSE_NAME=	Microsemi License

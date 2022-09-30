@@ -1,5 +1,3 @@
-# Created by: Klaus Aehlig <aehlig@linta.de>
-
 PORTNAME=	bazel
 DISTVERSION=	0.29.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	029
 
 MAINTAINER=	aehlig@linta.de
 COMMENT=	Fast and correct build system
+WWW=		https://bazel.build/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

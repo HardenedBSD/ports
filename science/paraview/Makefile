@@ -1,14 +1,13 @@
-# Created by: anholt@FreeBSD.org
-
 PORTNAME=	paraview
 DISTVERSION=	5.10.1
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	science graphics
 MASTER_SITES=	http://www.paraview.org/files/v${VERMAJORMINOR}/
 DISTNAME=	ParaView-v${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Powerful scientific data visualization application
+WWW=		https://www.paraview.org/
 
 LICENSE=	ParaView_License_1.2
 LICENSE_NAME=	ParaView_License
@@ -64,7 +63,7 @@ USES=		alias cmake compiler:c11 eigen:3 fortran gl gnome jpeg localbase	\
 		pkgconfig python qt:5 shebangfix tar:xz xorg
 USE_GL=		gl glew glu glut
 USE_GNOME=	libxml2
-USE_QT=		buildtools_build core gui help network opengl qmake_build sql svg	\
+USE_QT=		buildtools:build core gui help network opengl qmake:build sql svg	\
 		widgets x11extras xmlpatterns
 USE_XORG=	ice sm x11 xau xcb xcursor xdamage xdmcp xext xfixes xorgproto xrender	\
 		xxf86vm

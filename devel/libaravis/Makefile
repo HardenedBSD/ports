@@ -1,5 +1,3 @@
-# Created by: Rozhuk Ivan
-
 PORTNAME=		libaravis
 DISTVERSION=		0.8.20
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PATCHFILES=		cb27eb4e4c38553b6dfbbc70cc18caa51a365107.patch:-p1 # FreeBSD suppor
 
 MAINTAINER=		rozhuk.im@gmail.com
 COMMENT=		Camera control and image acquisition library
+WWW=		https://github.com/AravisProject/aravis
 
 LICENSE=		LGPL21+
 LICENSE_FILE=		${WRKSRC}/COPYING

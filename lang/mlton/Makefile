@@ -1,5 +1,3 @@
-# Created by: Stephen Weeks <sweeks@sweeks.com>
-
 # Previously maintained by Jesper Louis Andersen
 # (jesper.louis.andersen@gmail.com) and Geoffrey Mainland
 # (mainland@apeiron.net)
@@ -21,6 +19,7 @@ DISTFILES+= ${BOOTNAME}.i386-${OPSYS:tl}-13.txz:bootstrap \
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Optimizing Standard ML compiler
+WWW=		http://mlton.org/
 
 LICENSE=	HPND
 LICENSE_GROUPS=	COPYFREE OSI

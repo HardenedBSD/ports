@@ -1,5 +1,3 @@
-# Created by: Anton Yudin <toha@toha.org.ua>
-
 PORTNAME=	jmf
 PORTVERSION=	2.1.1e
 PORTREVISION=	3
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/./_/g}-alljava
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java Media Framework
+WWW=		https://www.oracle.com/java/technologies/javase/java-media-framework.html
 
 # Converted from RESTRICTED
 LICENSE=	jmf

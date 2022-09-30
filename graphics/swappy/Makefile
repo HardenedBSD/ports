@@ -1,10 +1,11 @@
 PORTNAME=	swappy
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.0
-CATEGORIES=	graphics
+CATEGORIES=	graphics wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Snapshot editing for Wayland (a la Snappy on macOS)
+WWW=		https://github.com/jtheoof/swappy
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

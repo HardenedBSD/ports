@@ -1,5 +1,3 @@
-# Created by: Conrad Meyer <cem@FreeBSD.org>
-
 PORTNAME=	lkl
 DISTVERSION=	4.16.g20180628
 PORTREVISION=	3
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	fusefs-
 
 MAINTAINER=	cem@FreeBSD.org
 COMMENT=	Full-featured Linux BTRFS, Ext4, XFS as a FUSE module
+WWW=		https://github.com/lkl/linux/
 
 LICENSE=	GPLv2
 

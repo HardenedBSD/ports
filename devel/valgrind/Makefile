@@ -1,5 +1,3 @@
-# Created by: Simon Barner <barner@gmx.de>
-
 PORTNAME=	valgrind
 PORTVERSION=	3.19.0
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SOURCEWARE/valgrind
 
 MAINTAINER=	pjfloyd@wanadoo.fr
 COMMENT=	Memory debugging and profiling tool
+WWW=		https://www.valgrind.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -29,6 +28,9 @@ CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL}
 PORTDOCS=	html
 
 USE_HARDENING=	pie:off relro:off
+
+MPROTECT_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
+SEGVGUARD_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
 
 OPTIONS_DEFINE=		DOCS MANPAGES MPI
 OPTIONS_DEFINE_amd64=	32BIT

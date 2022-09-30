@@ -1,5 +1,5 @@
 PORTNAME=	gamescope
-DISTVERSION=	3.11.32
+DISTVERSION=	3.11.45-2
 CATEGORIES=	x11-wm wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -9,13 +9,14 @@ PATCHFILES+=	a618ea074660.patch:-p1 # https://github.com/Plagman/gamescope/issue
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Micro-compositor from SteamOS
+WWW=		https://github.com/Plagman/gamescope
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	glslangValidator:graphics/glslang \
 		evdev-proto>0:devel/evdev-proto \
-		libliftoff>=0.2.0<0.3.0:graphics/libliftoff \
+		libliftoff>=0.3.0<0.4.0:graphics/libliftoff \
 		vulkan-headers>0:graphics/vulkan-headers \
 		wayland-protocols>=1.17:graphics/wayland-protocols \
 		wlroots>=0.15.0<0.16.0:x11-toolkits/wlroots

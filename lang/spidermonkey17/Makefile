@@ -1,5 +1,3 @@
-# Created by: Dan Rench <citric@cubicone.tmetic.com>
-
 PORTNAME=	spidermonkey17
 DISTVERSION=	1.7.0
 PORTREVISION=	5
@@ -9,6 +7,10 @@ DISTNAME=	js-${DISTVERSION}
 
 MAINTAINER=	citric@cubicone.tmetic.com
 COMMENT=	Standalone JavaScript interpreter from the Mozilla project
+WWW=		https://spidermonkey.dev/
+
+DEPRECATED=	Obsolete, released in 2007 and since long unsupported upstream
+EXPIRATION_DATE=2022-09-30
 
 BROKEN_aarch64=		fails to link: missing sbrk
 BROKEN_armv6=		fails to link: final link failed: Nonrepresentable section on output

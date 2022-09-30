@@ -1,10 +1,10 @@
 PORTNAME=	rpki-client
-DISTVERSION=	7.6
-PORTREVISION=	2
+DISTVERSION=	8.0
 CATEGORIES=	net
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Resource Public Key Infrastructure (RPKI) implementation from OpenBSD
+WWW=		https://www.rpki-client.org/
 
 LICENSE=	ISCL
 

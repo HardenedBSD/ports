@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	portupgrade
 PORTVERSION=	2.4.16
 PORTREVISION=	0
@@ -11,6 +9,7 @@ MASTER_SITES=	LOCAL/bdrewery/${PORTNAME}/ \
 
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	FreeBSD ports/packages administration and management tool suite
+WWW=		https://wiki.freebsd.org/portupgrade
 
 LICENSE=	BSD3CLAUSE
 

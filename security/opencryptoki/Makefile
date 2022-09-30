@@ -1,5 +1,3 @@
-# Created by: Ralf Meister
-
 PORTNAME=	opencryptoki
 PORTVERSION=	3.18.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	security
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Open PKCS\#11 implementation library
+WWW=		https://sourceforge.net/projects/opencryptoki/
 
 LICENSE=	CPL
 LICENSE_NAME=	Common Public License

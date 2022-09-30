@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	dcd
 PORTVERSION=	0.11.0
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ PKGNAMESUFFIX?=	-server
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT?=	Auto-complete program for the D programming language (server)
+WWW=		https://github.com/dlang-community/DCD
 
 LICENSE=	BSL
 

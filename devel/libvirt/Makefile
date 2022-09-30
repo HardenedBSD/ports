@@ -1,5 +1,3 @@
-# Created by: Jason Helfman <jgh@FreeBSD.org>
-
 PORTNAME=	libvirt
 PORTVERSION=	8.5.0
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	http://libvirt.org/sources/ \
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Toolkit to interact with virtualization capabilities
+WWW=		https://libvirt.org/
 
 LICENSE=	LGPL3
 

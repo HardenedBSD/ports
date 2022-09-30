@@ -1,11 +1,10 @@
-# Created by: Anonymous <swell.k@gmail.com>
-
 PORTNAME=	vdpauinfo
 PORTVERSION=	1.5
 CATEGORIES=	multimedia
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Tool to query VDPAU capabilities
+WWW=		https://freedesktop.org/wiki/Software/VDPAU
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

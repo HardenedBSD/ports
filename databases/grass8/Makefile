@@ -1,5 +1,6 @@
 PORTNAME=	grass
 DISTVERSION=	8.2.0
+PORTREVISION=	1
 CATEGORIES=	databases geography
 MASTER_SITES=	https://grass.osgeo.org/%SUBDIR%/ \
 		http://grass.cict.fr/%SUBDIR%/ \
@@ -17,6 +18,7 @@ PKGNAMESUFFIX=	8
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Open source Geographical Information System (GIS)
+WWW=		https://grass.osgeo.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/GPL.TXT

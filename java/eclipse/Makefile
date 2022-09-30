@@ -1,5 +1,3 @@
-# Created by: Jonathan Chen <jonc@chen.org.nz>
-
 PORTNAME=	eclipse
 PORTVERSION=	4.24
 CATEGORIES=	java devel
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	jonc@chen.org.nz
 COMMENT=	Eclipse IDE 2022-06
+WWW=		https://www.eclipse.org/
 
 LICENSE=	EPL
 
@@ -27,6 +26,8 @@ PORTSCOUT=	ignore:1
 
 USES=		compiler:c++11-lang gmake pkgconfig gnome
 USE_GNOME=	gtk30
+
+USE_HARDENING=	pie:off
 
 USE_GITHUB=	yes
 GH_TUPLE=	eclipse-platform:eclipse.platform.releng.aggregator:${ECLIPSE_TAG} \

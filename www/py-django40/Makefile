@@ -1,7 +1,5 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	django
-PORTVERSION=	4.0.6
+PORTVERSION=	4.0.7
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP \
 		https://www.djangoproject.com/m/releases/${PORTVERSION}/
@@ -12,6 +10,7 @@ DIST_SUBDIR=	python
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	High-level Python Web Framework
+WWW=		https://www.djangoproject.com/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -32,8 +31,8 @@ PORTDOCS=	*
 
 SHEBANG_FILES=	django/conf/project_template/manage.py-tpl
 
-CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}django22 \
-			${PYTHON_PKGNAMEPREFIX}django31
+CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}django32 \
+			${PYTHON_PKGNAMEPREFIX}django41
 
 CPE_VENDOR=	djangoproject
 

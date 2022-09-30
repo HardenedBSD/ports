@@ -1,5 +1,3 @@
-# Created by: Romain Tartière <romain@blogreen.org>
-
 PORTNAME=	pavumeter
 PORTVERSION=	0.9.3
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/${PORTNAME}/
 
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	GTK volume meter for PulseAudio
+WWW=		https://0pointer.de/lennart/projects/pavumeter/
 
 BUILD_DEPENDS=	pulseaudio>=0.9.7:audio/pulseaudio
 RUN_DEPENDS=	pulseaudio>=0.9.7:audio/pulseaudio

@@ -1,11 +1,12 @@
 PORTNAME=	wsjtx
 DISTVERSION=	2.5.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	comms hamradio
 MASTER_SITES=	SF/wsjt/${PORTNAME}-${PORTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Weak signal ham radio communication package
+WWW=		https://physics.princeton.edu/pulsar/k1jt/wsjtx.html
 
 LICENSE=	GPLv3
 
@@ -23,7 +24,7 @@ USES=	cmake:noninja compiler:c++11-lang fortran gl libedit \
 USE_GL=		glu
 USE_QT=		core gui network widgets \
 		multimedia concurrent printsupport serialport sql sql-sqlite3 \
-		buildtools_build linguisttools_build qmake_build testlib
+		buildtools:build linguisttools:build qmake:build testlib
 
 CONFLICTS_INSTALL=	wsjtz
 

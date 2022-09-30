@@ -1,5 +1,3 @@
-# Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-
 PORTNAME=	net-ssh
 PORTVERSION=	6.1.0
 CATEGORIES=	security rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	6
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Non-interactive SSH processing
+WWW=		https://github.com/net-ssh/net-ssh
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

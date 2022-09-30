@@ -1,7 +1,5 @@
-# Created by: alepulver
-
 PORTNAME=	eduke32
-PORTVERSION=	20220204
+PORTVERSION=	20220914
 CATEGORIES=	games
 MASTER_SITES=	http://dukeworld.com/eduke32/synthesis/${PORTVERSION}-${GITREVISION}/:eduke32 \
 		LOCAL/pkubaj/:erp \
@@ -16,6 +14,7 @@ EXTRACT_ONLY=	${PORTNAME}_src_${PORTVERSION}-${GITREVISION}${EXTRACT_SUFX}
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Duke Nukem 3D Port based on JFDuke and EDuke
+WWW=		https://eduke32.com/
 
 LICENSE=	GPLv2 BUILDLIC
 LICENSE_COMB=	multi
@@ -35,7 +34,7 @@ USE_GL=		gl glu
 USE_GNOME=	gtk20
 USE_SDL=	sdl2 mixer2
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}-${GITREVISION}
-GITREVISION=	9957-6df591a07
+GITREVISION=	10161-1585e73fc
 DATADIR=	${PREFIX}/share/duke3d
 SUB_FILES=	pkg-message
 MAKEFILE=	GNUmakefile

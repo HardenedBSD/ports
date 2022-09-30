@@ -1,5 +1,5 @@
 PORTNAME=	matrix-common
-DISTVERSION=	1.2.1
+DISTVERSION=	1.3.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +7,7 @@ DISTNAME=	matrix_common-${PORTVERSION}
 
 MAINTAINER=	ports@skyforge.at
 COMMENT=	Common utilities for Synapse, Sydent and Sygnal
+WWW=		https://www.matrix.org
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

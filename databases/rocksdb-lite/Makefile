@@ -1,5 +1,3 @@
-# Created by: David Thiel <lx@FreeBSD.org>
-
 PORTNAME=	rocksdb
 PORTVERSION=	7.2.2
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-lite
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Persistent key-value store for fast storage environments (lite version)
+WWW=		https://rocksdb.org/
 
 LICENSE=	APACHE20 GPLv2
 LICENSE_COMB=	dual

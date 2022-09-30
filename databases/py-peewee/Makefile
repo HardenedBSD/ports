@@ -1,5 +1,3 @@
-# Created by: Matthias Petermann <matthias@petermann-it.de>
-
 PORTNAME=	peewee
 DISTVERSION=	3.15.0
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	matthias@petermann-it.de
 COMMENT=	Small, expressive Python ORM
+WWW=		https://peewee.readthedocs.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

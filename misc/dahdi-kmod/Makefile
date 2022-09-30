@@ -1,5 +1,3 @@
-# Created by: Maxim Khon <fjoe@FreeBSD.org>
-
 PORTNAME=	dahdi-kmod
 PORTVERSION=	${DAHDI_VERSION:S/-//g}
 PORTREVISION=	7
@@ -13,6 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}\
 
 MAINTAINER=	dgilbert@eicat.ca
 COMMENT=	Digium/Asterisk Hardware Device Interface
+WWW=		https://svn.digium.com/svn/dahdi/freebsd/
 
 BROKEN=		does not compile: use of undeclared identifier 'SX_NOADAPTIVE'
 

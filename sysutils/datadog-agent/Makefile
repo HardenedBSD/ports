@@ -1,17 +1,18 @@
 PORTNAME=	datadog-agent
 DISTVERSION=	7.24.1
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	sysutils net www
 
 MAINTAINER=	uros@gruber.si
 COMMENT=	Datadog Agent: collect metrics and events from your systems and apps
+WWW=		https://www.datadoghq.com/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_i386=	fails to build: vendor/github.com/DataDog/gopsutil/process/process_freebsd.go:95:9: cannot use k.Start.Sec * 1000 (value of type int32) as type int64 in return statement
 
-BUILD_DEPENDS=	cmake>=3.12:devel/cmake \
+BUILD_DEPENDS=	cmake-core>=3.12:devel/cmake-core \
 		go-bindata>0:devel/go-bindata
 
 USES=		go:modules python:3.7+

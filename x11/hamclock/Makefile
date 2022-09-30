@@ -1,12 +1,15 @@
 PORTNAME=	hamclock
-PORTVERSION=	2.78
-PORTREVISION=	1
+PORTVERSION=	2.80
 CATEGORIES=	x11 hamradio
 MASTER_SITES=	https://www.clearskyinstitute.com/ham/HamClock/
 DISTNAME=	ESPHamClock
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Handy clock with features for amateur radio operators
+WWW=		https://www.clearskyinstitute.com/ham/HamClock/
+
+LICENSE=        MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 

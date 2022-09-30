@@ -1,5 +1,3 @@
-# Created by: Rozhuk Ivan <rozhuk.im@gmail.com>
-
 PORTNAME=	visualization.shadertoy
 PORTVERSION=	19.1.2
 DISTVERSIONSUFFIX=	-Matrix
@@ -7,6 +5,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Shadertoy visualizer for Kodi
+WWW=		https://github.com/xbmc/visualization.shadertoy
 
 LICENSE=	GPLv2+
 

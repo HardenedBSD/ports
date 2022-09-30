@@ -1,6 +1,3 @@
-# Created by: Anders F Bjorklund <afb@users.sourceforge.net>
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.26 2010/10/10 15:49:51 marcus Exp $
-
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.11
 PORTREVISION?=	9
@@ -9,6 +6,7 @@ MASTER_SITES=	http://www.packagekit.org/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	DBUS packaging abstraction layer
+WWW=		http://www.packagekit.org
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:textproc/docbook-utils
 LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \

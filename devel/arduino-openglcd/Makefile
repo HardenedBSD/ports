@@ -1,5 +1,3 @@
-# Created by: Craig Leres <leres@FreeBSD.org>
-
 PORTNAME=	arduino-openglcd
 DISTVERSION=	1.0rc3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	openGLCD-v${DISTVERSION}
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	GLCD Graphical LCD Library
+WWW=		https://bitbucket.org/bperrybap/openglcd/wiki/Home
 
 LICENSE=	GPLv3
 

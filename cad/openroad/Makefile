@@ -1,17 +1,22 @@
 PORTNAME=	openroad
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0-2930
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-gaa6d690df
 PORTEPOCH=	1
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	ASIC physical design tool
+WWW=		https://theopenroadproject.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_i386=	C++ issue on i386, should be resolved in the next update
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 BUILD_DEPENDS=	base64:converters/base64 \
 		boost-libs>0:devel/boost-libs \
@@ -23,7 +28,7 @@ LIB_DEPENDS=	libcudd.so:math/cudd \
 		libspdlog.so:devel/spdlog
 
 USES=		bison compiler:c++17-lang cmake eigen:3 qt:5 localbase:ldflags python:3.7+,build readline tcl:86 # the code asks for tcl-87, but build fails: https://github.com/The-OpenROAD-Project/OpenROAD/issues/508
-USE_QT=		core gui widgets buildtools_build qmake_build
+USE_QT=		core gui widgets buildtools:build qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	The-OpenROAD-Project

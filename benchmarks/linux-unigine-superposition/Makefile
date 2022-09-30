@@ -1,4 +1,3 @@
-# Created by: Hannes Hauswedell <h2+fbsdports@fsfe.org>
 #
 # The distfile for this port is quite huge (1.5GB); you might consider
 # fetching it via BitTorrent instead:
@@ -15,6 +14,7 @@ EXTRACT_SUFX=	.run
 
 MAINTAINER=	h2+fbsdports@fsfe.org
 COMMENT=	Unigine Superposition benchmark (basic version for GNU/Linux)
+WWW=		https://benchmark.unigine.com/superposition
 
 LICENSE=	Proprietary
 LICENSE_NAME=	Unigine "Basic" License

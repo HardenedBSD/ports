@@ -1,5 +1,5 @@
 PORTNAME=	kiwisolver
-PORTVERSION=	1.4.3
+PORTVERSION=	1.4.4
 PORTEPOCH=	1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
@@ -7,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Fast implementation of the Cassowary constraint solver
+WWW=		https://github.com/nucleic/kiwi
 
 LICENSE=	BSD3CLAUSE
 

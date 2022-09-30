@@ -18,6 +18,7 @@
 @sample %%ETCDIR%%/upsmon.conf.sample
 @sample %%ETCDIR%%/upssched.conf.sample
 @sample %%EXAMPLESDIR%%/newsyslog.sample etc/newsyslog.conf.d/nut.conf
+@sample %%EXAMPLESDIR%%/nut_upslog.sample
 @sample %%EXAMPLESDIR%%/syslog.sample etc/syslog.d/nut
 %%USB%%etc/devd/nut-usb.conf
 bin/nut-scanner
@@ -39,7 +40,7 @@ include/upsclient.h
 lib/libnutclient.a
 lib/libnutclient.so
 lib/libnutclient.so.2
-lib/libnutclient.so.2.0.0
+lib/libnutclient.so.2.0.1
 lib/libupsclient.a
 lib/libupsclient.so
 lib/libupsclient.so.6
@@ -52,6 +53,8 @@ lib/libnutscan.a
 lib/libnutscan.so
 lib/libnutscan.so.2
 lib/libnutscan.so.2.0.0
+%%PYTHON_SITELIBDIR%%/PyNUT.py
+%%PYTHON_SITELIBDIR%%/test_nutclient.py
 libdata/pkgconfig/libnutclient.pc
 libdata/pkgconfig/libnutscan.pc
 libdata/pkgconfig/libupsclient.pc

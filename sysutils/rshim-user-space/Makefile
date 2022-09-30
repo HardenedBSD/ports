@@ -1,13 +1,11 @@
-# Created by: Hans Petter Selasky <hselasky@freebsd.org>
-
 PORTNAME=	rshim-user-space
 DISTVERSIONPREFIX=	rshim-
-DISTVERSION=		2.0.6-11
-PORTREVISION=		1
+DISTVERSION=		2.0.6-14
 PORTEPOCH=		1
 
 MAINTAINER=	hselasky@FreeBSD.org
 COMMENT=	Userspace daemon for the Mellanox BlueField SoC
+WWW=		https://github.com/Mellanox/rshim-user-space/
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	filmulator
 PORTVERSION=	0.11.1
 DISTVERSIONPREFIX=	v
@@ -7,8 +5,13 @@ CATEGORIES=	graphics
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Simplified raw editor with the power of film
+WWW=		https://filmulator.org/
 
 LICENSE=	GPLv3+
+
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexiv2.so:graphics/exiv2 \
@@ -19,7 +22,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 
 USES=		cmake jpeg libarchive pkgconfig qt:5
 USE_GITHUB=	yes
-USE_QT=		buildtools_build qmake_build core declarative gui \
+USE_QT=		buildtools:build qmake:build core declarative gui \
 		network sql widgets
 
 GH_ACCOUNT=	CarVac

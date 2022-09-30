@@ -1,9 +1,11 @@
 PORTNAME=	ioc
 PORTVERSION=	0.8.2
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	stefan@gronke.net
 COMMENT=	Jail management CLI using libioc
+WWW=		https://github.com/bsdci/ioc
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -1,10 +1,15 @@
 PORTNAME=	speech-dispatcher
-DISTVERSION=	0.11.1
+DISTVERSION=	0.11.2
+PORTREVISION=	1
 CATEGORIES?=	accessibility audio
 MASTER_SITES=	https://github.com/brailcom/speechd/releases/download/${PORTVERSION}/
 
+PATCH_SITES=	https://github.com/brailcom/speechd/commit/
+PATCHFILES=	c204a23db76345d0bce2cdf395517c99699a8a4a.diff:-p1
+
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT?=	Common interface to speech synthesis
+WWW=		https://devel.freebsoft.org/speechd
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
@@ -35,14 +40,14 @@ ETCFILES=	clients/emacs.conf modules/cicero.conf modules/dtk-generic.conf \
 		modules/espeak-ng-mbrola-generic.conf modules/espeak-ng-mbrola.conf \
 		modules/espeak-ng.conf modules/espeak.conf modules/festival.conf \
 		modules/flite.conf modules/llia_phon-generic.conf modules/mary-generic.conf \
-		modules/swift-generic.conf speechd.conf
+		modules/mimic3-generic.conf modules/swift-generic.conf speechd.conf
 
 PORTDOCS=	ANNOUNCE AUTHORS FAQ NEWS README TODO
 
 INFO=		spd-say speech-dispatcher speech-dispatcher-cs ssip
 
-OPTIONS_DEFINE=		ALSA AO DOCS FESTIVAL FLITE NAS PULSEAUDIO VOXIN
-OPTIONS_DEFAULT=	PULSEAUDIO
+OPTIONS_DEFINE=		ALSA AO DOCS ESPEAK FESTIVAL FLITE NAS PULSEAUDIO VOXIN
+OPTIONS_DEFAULT=	ESPEAK PULSEAUDIO
 OPTIONS_SUB=		yes
 
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
@@ -50,6 +55,9 @@ ALSA_CONFIGURE_WITH=	alsa
 
 AO_LIB_DEPENDS=		libao.so:audio/libao
 AO_CONFIGURE_WITH=	libao
+
+ESPEAK_LIB_DEPENDS=	libespeak-ng.so:audio/espeak-ng
+ESPEAK_CONFIGURE_WITH=	espeak
 
 FESTIVAL_DESC=		Festival Speech Synthesis System support
 FESTIVAL_RUN_DEPENDS=	${LOCALBASE}/share/festival/lib/${PORTNAME}.scm:audio/festival-freebsoft-utils \

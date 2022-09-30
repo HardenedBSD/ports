@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Math-MPC
 PORTVERSION=	1.16
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to MPC Library
+WWW=		https://metacpan.org/release/Math-MPC
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

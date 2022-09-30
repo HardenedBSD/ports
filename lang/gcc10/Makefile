@@ -1,20 +1,19 @@
-# Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-
-BINARY_ALIAS= objdump=/usr/local/bin/objdump
-
 PORTNAME=	gcc
 PORTVERSION=	10.4.0
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
 
-MAINTAINER=	toolchain@FreeBSD.org
+MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	GNU Compiler Collection 10
+WWW=		https://gcc.gnu.org
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
 USE_HARDENING=  pie:off relro:off retpoline:off
+
+BINARY_ALIAS= objdump=/usr/local/bin/objdump
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
 
@@ -51,7 +50,7 @@ GRAPHITE_DESC=		Support for Graphite loop optimizations
 OPTIONS_DEFINE_amd64+=		MULTILIB
 OPTIONS_DEFAULT_amd64+=	MULTILIB
 OPTIONS_DEFINE_powerpc64+=	MULTILIB
-OPTIONS_DEFAULT_powerpc64+=	MULTILIB
+#OPTIONS_DEFAULT_powerpc64+=	MULTILIB # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=105010
 MULTILIB_DESC=		Build support for 32-bit and 64-bit targets
 MULTILIB_CONFIGURE_ENABLE=	multilib
 .else

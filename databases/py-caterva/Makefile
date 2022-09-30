@@ -1,19 +1,19 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	caterva
 PORTVERSION=	0.7.2
+PORTREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Caterva for Python (multidimensional compressed data containers)
+WWW=		https://github.com/Blosc/python-caterva
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	caterva>=0.5.0_1:databases/caterva \
-		cmake:devel/cmake \
+BUILD_DEPENDS=	caterva>=0.5.0_2:databases/caterva \
+		cmake:devel/cmake-core \
 		ninja:devel/ninja \
 		${PYTHON_PKGNAMEPREFIX}scikit-build>=0:devel/py-scikit-build@${PY_FLAVOR}
 LIB_DEPENDS=	libblosc2.so:archivers/c-blosc2 \

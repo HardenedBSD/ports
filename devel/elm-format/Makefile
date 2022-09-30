@@ -4,6 +4,7 @@ CATEGORIES=	devel textproc
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Elm source code formatter based on the official Elm Style Guide
+WWW=		https://github.com/avh4/elm-format/
 
 LICENSE=	BSD3CLAUSE
 
@@ -61,7 +62,7 @@ post-extract:
 
 post-patch:
 	@${REINPLACE_CMD} -e '/with-compiler: ghc-8.10.4/d' \
-		${WRKSRC}/cabal.project.${PORTNAME}
+		${WRKSRC}/cabal.project.${PORTNAME} || ${TRUE}
 	${RM} ${WRKSRC}/cabal.config
 
 .include <bsd.port.mk>

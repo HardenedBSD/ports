@@ -1,11 +1,12 @@
 PORTNAME=	geopandas
-PORTVERSION=	0.11.0
+PORTVERSION=	0.11.1
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Python tools for geographic data
+WWW=		https://pypi.org/project/geopandas/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

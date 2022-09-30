@@ -1,10 +1,12 @@
 PORTNAME=	horizon-eda
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.3.1
+PORTREVISION=	2
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	EDA package for printed circuit board design
+WWW=		https://horizon-eda.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

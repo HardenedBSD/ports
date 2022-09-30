@@ -4,6 +4,7 @@ CATEGORIES=		deskutils haskell
 
 MAINTAINER=		mail@dbalan.in
 COMMENT=		Completely automatic time tracker for X11 desktop
+WWW=		https://arbtt.nomeata.de/
 
 LICENSE=		GPLv2
 LICENSE_FILE=		${WRKSRC}/LICENSE
@@ -65,7 +66,7 @@ USE_CABAL=		OneTuple-0.3.1_2 \
 			vector-algorithms-0.8.0.4_1 \
 			witherable-0.4.2_2
 
-EXECUTABLES=		arbtt-capture arbtt-stats arbtt-recover arbtt-import arbtt-dump
+CABAL_EXECUTABLES=	arbtt-capture arbtt-stats arbtt-recover arbtt-import arbtt-dump
 
 SUB_FILES=		pkg-message
 SUB_LIST=		EXAMPLESDIR=${EXAMPLESDIR}

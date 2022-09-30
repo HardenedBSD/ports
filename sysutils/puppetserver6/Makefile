@@ -1,5 +1,5 @@
 PORTNAME=	puppetserver
-PORTVERSION=	6.19.0
+PORTVERSION=	6.20.0
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://downloads.puppetlabs.com/puppet/:upstream \
 		https://raw.githubusercontent.com/jruby/jruby/fb3ba4b3543b72e735ba53b51e6b7ec8a9916e1b/lib/ruby/stdlib/ffi/:ffi
@@ -10,6 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Puppet Server running in the JVM
+WWW=		https://docs.puppetlabs.com/puppetserver/latest/services_master_puppetserver.html
 
 LICENSE=	APACHE20
 

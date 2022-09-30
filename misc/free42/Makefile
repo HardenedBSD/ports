@@ -1,11 +1,12 @@
 PORTNAME=	free42
-DISTVERSION=	3.0.13
+DISTVERSION=	3.0.14
 CATEGORIES=	misc
 MASTER_SITES=	http://thomasokken.com/free42/upstream/
 DISTNAME=	${PORTNAME}-nologo-${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Simulation of the HP-42S scientific calculator and HP-82240 printer
+WWW=		https://thomasokken.com/free42
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

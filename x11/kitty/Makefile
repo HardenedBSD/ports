@@ -1,10 +1,11 @@
 PORTNAME=	kitty
-DISTVERSION=	0.25.0
+DISTVERSION=	0.26.2
 CATEGORIES=	x11 wayland
-MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/releases/download/v${DISTVERSION}/
+MASTER_SITES=	https://github.com/kovidgoyal/${PORTNAME}/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	alexis.praga@free.fr
 COMMENT=	Cross-platform, fast, featureful, GPU-based terminal emulator
+WWW=		https://sw.kovidgoyal.net/kitty/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -13,9 +14,11 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}furo>0:textproc/py-furo@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sphinx-copybutton>0:textproc/py-sphinx-copybutton@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sphinx-inline-tabs>0:textproc/py-sphinx-inline-tabs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sphinxext-opengraph>0:textproc/py-sphinxext-opengraph@${PY_FLAVOR} \
+		openssl>0:security/openssl \
 		sphinx-build:textproc/py-sphinx@${PY_FLAVOR} \
 		wayland-protocols>=0:graphics/wayland-protocols
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
+		libepoll-shim-interpose.so:devel/libepoll-shim \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
@@ -26,12 +29,11 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libwayland-cursor.so:graphics/wayland \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		compiler:c11 cpe gettext-runtime gl gmake pkgconfig \
-		python:3.5+ shebangfix tar:xz terminfo xorg
-GH_ACCOUNT=	kovidgoyal
+USES=		compiler:c11 cpe desktop-file-utils gettext-runtime gl gmake \
+		pkgconfig python:3.5+ shebangfix ssl tar:xz terminfo xorg
+CPE_VENDOR=	kitty_project
 USE_GL=		gl
 USE_XORG=	x11 xcb xcursor xi xinerama xrandr
-CPE_VENDOR=	kitty_project
 
 SHEBANG_FILES=	build-terminfo count-lines-of-code mypy-editor-integration \
 		update-on-ox update-on-ubuntu
@@ -39,6 +41,9 @@ SHEBANG_GLOB=	*.py
 
 TEST_ENV=	PATH="${STAGEDIR}${PREFIX}/bin:${PATH}"
 TEST_TARGET=	test
+
+CPPFLAGS+=	`pkg-config --cflags epoll-shim-interpose`
+LDFLAGS+=	`pkg-config --libs epoll-shim-interpose`
 
 BINARY_ALIAS=	python3=${PYTHON_CMD} python=${PYTHON_CMD}
 
@@ -61,9 +66,14 @@ MAKE_ENV+=	KITTY_NO_LTO=1
 
 # ncursesw and tinfo >= 6.1 seem to be neededd
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1400035
-USES+=ncurses:port
+USES+=		ncurses:port
 .else
-USES+=ncurses
+USES+=		ncurses
+.endif
+
+# fix clang static_assert on 12.x releases, https://github.com/kovidgoyal/kitty/pull/5398
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300000
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-kitty_data-types.h
 .endif
 
 # For librsync, we need to set header and library path

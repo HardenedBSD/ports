@@ -2,11 +2,12 @@ PORTNAME=	wlrobs
 DISTVERSIONPREFIX=	v
 PORTVERSION=	1.0
 PORTREVISION=	2
-CATEGORIES=	multimedia
+CATEGORIES=	multimedia wayland
 MASTER_SITES=	https://hg.sr.ht/~scoopta/${PORTNAME}/archive/${DISTVERSIONFULL:C/.*-//}${EXTRACT_SUFX}?dummy=/
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Wayland screen capture plugin for obs-studio
+WWW=		https://hg.sr.ht/~scoopta/wlrobs
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING.md

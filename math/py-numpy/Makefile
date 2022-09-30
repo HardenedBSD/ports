@@ -1,7 +1,5 @@
-# Created by: Tony Maher
-
 PORTNAME=	numpy
-PORTVERSION=	1.23.0
+PORTVERSION=	1.23.3
 PORTEPOCH=	1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP \
@@ -15,6 +13,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	The New Numeric Extension to Python
+WWW=		https://www.numpy.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

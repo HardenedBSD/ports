@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	grpc-stubs
 PORTVERSION=	1.24.11
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mypy stubs for gRPC
+WWW=		https://github.com/shabbyrobe/grpc-stubs
 
 LICENSE=	MIT
 

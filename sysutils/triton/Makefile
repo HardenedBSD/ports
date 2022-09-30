@@ -1,13 +1,17 @@
 PORTNAME=	triton
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Dynamic Binary Analysis (DBA) framework
+WWW=		https://triton.quarkslab.com/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+
+BROKEN_riscv64=	src/libtriton/includes/triton/tritonToZ3.hpp:43:17: error: no type named '__uint' in namespace 'triton'
 
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs
 LIB_DEPENDS=	libcapstone.so:devel/capstone4 \

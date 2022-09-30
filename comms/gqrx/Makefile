@@ -1,14 +1,13 @@
-# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-
 PORTNAME=	gqrx
 PORTVERSION=	2.15.9
-PORTREVISION=	1
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	1
 CATEGORIES=	comms hamradio
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Software defined radio receiver powered by GNU Radio and Qt
+WWW=		https://gqrx.dk
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

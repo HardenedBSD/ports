@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang
-
 PORTNAME=	rhtvision
 PORTVERSION=	2.2.1.1
 PORTREVISION=	10
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION:R}-${PORTVERSION:E}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Complete C++ Text User Interface (TUI) library
+WWW=		https://sourceforge.net/projects/tvision/
 
 OPTIONS_DEFINE=	NLS X11
 OPTIONS_SUB=	yes

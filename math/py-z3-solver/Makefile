@@ -6,18 +6,14 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python binding for Z3 Theorem Prover
+WWW=		https://github.com/Z3Prover/z3
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../../../LICENSE.txt
 
-CFLAGS_armv7=	-fPIC
-CFLAGS_powerpc=	-fPIC
+BROKEN_riscv64=	fails to configure, see https://github.com/Z3Prover/z3/issues/6183
 
-BROKEN_i386=	can't create dynamic relocation R_386_32 against symbol: .L.str in readonly segment; see https://github.com/Z3Prover/z3/issues/2442
-
-# CAVEAT: There should have LIB_DEPENDS=libz3.so:math/z3, but currently it rebuilds all code, see https://github.com/Z3Prover/z3/issues/1767
-
-BUILD_DEPENDS=	cmake:devel/cmake
+BUILD_DEPENDS=	cmake:devel/cmake-core
 
 USES=		compiler:c++11-lang python:3.6+
 USE_PYTHON=	distutils autoplist
@@ -26,7 +22,12 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	Z3Prover
 GH_PROJECT=	z3
 
+CFLAGS_armv7=	-fPIC
+CFLAGS_powerpc=	-fPIC
+
 WRKSRC_SUBDIR=	src/api/python
+
+# CAVEAT: There should have LIB_DEPENDS=libz3.so:math/z3, but currently it rebuilds all code, see https://github.com/Z3Prover/z3/issues/1767
 
 post-patch: # https://github.com/Z3Prover/z3/issues/2131
 	@${REINPLACE_CMD} 's|…|...|' ${WRKSRC}/../../ast/recfun_decl_plugin.h

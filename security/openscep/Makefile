@@ -1,5 +1,3 @@
-# Created by: Vsevolod Stakhov
-
 PORTNAME=	openscep
 PORTVERSION=	0.4.2
 PORTREVISION=	11
@@ -8,6 +6,7 @@ MASTER_SITES=	http://openscep.othello.ch/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source scep server
+WWW=		http://openscep.othello.ch/
 
 CONFLICTS_INSTALL=	nss-3.*
 

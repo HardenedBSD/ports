@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-
 PORTNAME=	cgrep
 PORTVERSION=	6.6.32
 PORTREVISION=	3
@@ -7,6 +5,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Context-aware grep for source codes
+WWW=		https://awgn.github.io/cgrep/
 
 LICENSE=	GPLv2
 

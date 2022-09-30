@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	google-cloud-logging-v2
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby Client for the Cloud Logging V2 API
+WWW=		https://github.com/googleapis/google-cloud-ruby/tree/master/google-cloud-logging-v2
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

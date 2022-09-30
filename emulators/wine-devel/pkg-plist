@@ -28,8 +28,12 @@ bin/wmc
 bin/wrc
 include/wine/debug.h
 include/wine/exception.h
+include/wine/iaccessible2.h
+include/wine/iaccessible2.idl
 include/wine/itss.h
 include/wine/itss.idl
+include/wine/mfinternal.h
+include/wine/mfinternal.idl
 include/wine/svcctl.h
 include/wine/svcctl.idl
 include/wine/msvcrt/assert.h
@@ -589,6 +593,8 @@ include/wine/windows/mcx.h
 include/wine/windows/mediaerr.h
 include/wine/windows/mediaobj.h
 include/wine/windows/mediaobj.idl
+include/wine/windows/medparam.h
+include/wine/windows/medparam.idl
 include/wine/windows/metahost.h
 include/wine/windows/metahost.idl
 include/wine/windows/mfapi.h
@@ -614,6 +620,7 @@ include/wine/windows/mimeole.h
 include/wine/windows/mimeole.idl
 include/wine/windows/minidumpapiset.h
 include/wine/windows/minmax.h
+include/wine/windows/minschannel.h
 include/wine/windows/mlang.h
 include/wine/windows/mlang.idl
 include/wine/windows/mmc.h
@@ -884,6 +891,7 @@ include/wine/windows/sqlucode.h
 include/wine/windows/srcrst.idl
 include/wine/windows/srrestoreptapi.h
 include/wine/windows/sspi.h
+%%STAGING%%include/wine/windows/stdole32.idl
 include/wine/windows/stgprop.h
 include/wine/windows/sti.h
 include/wine/windows/storage.h
@@ -1203,6 +1211,7 @@ lib/wine/%%WINEARCH%%-unix/libadvapi32.a
 lib/wine/%%WINEARCH%%-unix/libadvpack.a
 lib/wine/%%WINEARCH%%-unix/libatl.a
 lib/wine/%%WINEARCH%%-unix/libatl100.a
+lib/wine/%%WINEARCH%%-unix/libatl110.a
 lib/wine/%%WINEARCH%%-unix/libatl80.a
 lib/wine/%%WINEARCH%%-unix/libatlthunk.a
 lib/wine/%%WINEARCH%%-unix/libavicap32.a
@@ -1297,6 +1306,7 @@ lib/wine/%%WINEARCH%%-unix/libmf.a
 lib/wine/%%WINEARCH%%-unix/libmfplat.a
 lib/wine/%%WINEARCH%%-unix/libmfplay.a
 lib/wine/%%WINEARCH%%-unix/libmfreadwrite.a
+lib/wine/%%WINEARCH%%-unix/libmfsrcsnk.a
 lib/wine/%%WINEARCH%%-unix/libmfuuid.a
 lib/wine/%%WINEARCH%%-unix/libmlang.a
 lib/wine/%%WINEARCH%%-unix/libmpr.a
@@ -1680,6 +1690,7 @@ lib/wine/%%WINEARCH%%-windows/hnetcfg.dll
 lib/wine/%%WINEARCH%%-windows/hostname.exe
 lib/wine/%%WINEARCH%%-windows/http.sys
 lib/wine/%%WINEARCH%%-windows/httpapi.dll
+lib/wine/%%WINEARCH%%-windows/ia2comproxy.dll
 lib/wine/%%WINEARCH%%-windows/icacls.exe
 lib/wine/%%WINEARCH%%-windows/iccvid.dll
 lib/wine/%%WINEARCH%%-windows/icinfo.exe
@@ -1724,6 +1735,7 @@ lib/wine/%%WINEARCH%%-windows/libadvapi32.a
 lib/wine/%%WINEARCH%%-windows/libadvpack.a
 lib/wine/%%WINEARCH%%-windows/libatl.a
 lib/wine/%%WINEARCH%%-windows/libatl100.a
+lib/wine/%%WINEARCH%%-windows/libatl110.a
 lib/wine/%%WINEARCH%%-windows/libatl80.a
 lib/wine/%%WINEARCH%%-windows/libatlthunk.a
 lib/wine/%%WINEARCH%%-windows/libavicap32.a
@@ -1818,6 +1830,7 @@ lib/wine/%%WINEARCH%%-windows/libmf.a
 lib/wine/%%WINEARCH%%-windows/libmfplat.a
 lib/wine/%%WINEARCH%%-windows/libmfplay.a
 lib/wine/%%WINEARCH%%-windows/libmfreadwrite.a
+lib/wine/%%WINEARCH%%-windows/libmfsrcsnk.a
 lib/wine/%%WINEARCH%%-windows/libmfuuid.a
 lib/wine/%%WINEARCH%%-windows/libmlang.a
 lib/wine/%%WINEARCH%%-windows/libmpr.a
@@ -1967,6 +1980,7 @@ lib/wine/%%WINEARCH%%-windows/mfmediaengine.dll
 lib/wine/%%WINEARCH%%-windows/mfplat.dll
 lib/wine/%%WINEARCH%%-windows/mfplay.dll
 lib/wine/%%WINEARCH%%-windows/mfreadwrite.dll
+lib/wine/%%WINEARCH%%-windows/mfsrcsnk.dll
 lib/wine/%%WINEARCH%%-windows/mgmtapi.dll
 lib/wine/%%WINEARCH%%-windows/midimap.dll
 lib/wine/%%WINEARCH%%-windows/mlang.dll
@@ -2034,6 +2048,7 @@ lib/wine/%%WINEARCH%%-windows/msvcp120.dll
 lib/wine/%%WINEARCH%%-windows/msvcp120_app.dll
 lib/wine/%%WINEARCH%%-windows/msvcp140.dll
 lib/wine/%%WINEARCH%%-windows/msvcp140_1.dll
+lib/wine/%%WINEARCH%%-windows/msvcp140_2.dll
 lib/wine/%%WINEARCH%%-windows/msvcp140_atomic_wait.dll
 lib/wine/%%WINEARCH%%-windows/msvcp60.dll
 lib/wine/%%WINEARCH%%-windows/msvcp70.dll

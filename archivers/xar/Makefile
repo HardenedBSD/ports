@@ -1,5 +1,3 @@
-# Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-
 PORTNAME=	xar
 PORTVERSION=	1.6.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	https://github.com/downloads/mackyle/xar/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenDarwin XML eXtensible ARchiver
+WWW=		https://mackyle.github.io/xar/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

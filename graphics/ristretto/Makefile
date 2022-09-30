@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	ristretto
 PORTVERSION=	0.12.3
 CATEGORIES=	graphics xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Image viewer with Xfce integration
+WWW=		https://goodies.xfce.org/projects/applications/ristretto
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

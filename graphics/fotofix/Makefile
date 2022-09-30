@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	fotofix
 PORTVERSION=	0.01.1.88
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple image viewer
+WWW=		http://www.prima.eu.org/fotofix/
 
 RUN_DEPENDS=	IPA>=1.03:graphics/IPA \
 		p5-Prima>=1.22:x11-toolkits/p5-Prima

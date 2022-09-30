@@ -1,5 +1,6 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20220707
+PORTVERSION=	s20220721
+PORTREVISION=	1
 CATEGORIES=	emulators
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -17,6 +18,7 @@ PATCHFILES+=	d657ea69c94c.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/8240
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
+WWW=		https://yuzu-emu.org/
 
 LICENSE=	APACHE20 BSD3CLAUSE GPLv3+ ISCL MIT UNLICENSE
 LICENSE_COMB=	multi
@@ -41,11 +43,11 @@ TEST_DEPENDS=	catch>0:devel/catch
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	313f047f9
+GH_TAGNAME=	6e36f4d23
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-32-ga3fdfe8:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
 		KhronosGroup:Vulkan-Headers:v1.3.213:Vulkan_Headers/externals/Vulkan-Headers \
-		MerryMage:dynarmic:6.0.0-4-g7f848707:dynarmic/externals/dynarmic \
+		MerryMage:dynarmic:6.2.0-7-g91d1f944:dynarmic/externals/dynarmic \
 		ReinUsesLisp:sirit:aa292d5:sirit/externals/sirit \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		benhoyt:inih:r52:inih/externals/inih/inih \
@@ -77,7 +79,7 @@ JACK_BUILD_DEPENDS=	jackit>0:audio/jack
 JACK_CMAKE_BOOL=	USE_JACK
 
 NLS_DESC=		UI translations (implies QT5)
-NLS_USE=		QT=linguisttools_build
+NLS_USE=		QT=linguisttools:build
 NLS_CMAKE_BOOL=		ENABLE_QT_TRANSLATION
 NLS_IMPLIES=		QT5
 
@@ -85,7 +87,7 @@ PULSEAUDIO_BUILD_DEPENDS=pulseaudio>0:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	USE_PULSE
 
 QT5_USES=		desktop-file-utils qt:5 shared-mime-info
-QT5_USE=		QT=qmake_build,buildtools_build,concurrent_build,core,gui,widgets
+QT5_USE=		QT=qmake:build,buildtools:build,concurrent:build,core,gui,widgets
 QT5_CMAKE_BOOL=		ENABLE_QT
 QT5_PLIST_FILES=	bin/${PORTNAME} \
 			share/applications/org.yuzu_emu.yuzu.desktop \

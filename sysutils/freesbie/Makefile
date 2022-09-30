@@ -1,5 +1,3 @@
-# Created by: Thomas E. Zander <riggs@rrr.de>
-
 PORTNAME=	freesbie
 PORTVERSION=	2.0.20070710
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/2.0.//}
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	Yet another cool answer to the system-on-cd question
+WWW=		http://www.freesbie.org/
 
 LICENSE=	BSD2CLAUSE
 

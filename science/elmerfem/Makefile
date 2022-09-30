@@ -1,13 +1,12 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	elmerfem
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	9.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	science
 
 MAINTAINER=	henrik@gulbra.net
 COMMENT=	Multiphysical simulation software
+WWW=		https://www.csc.fi/web/elmer
 
 LICENSE=	GPLv2
 
@@ -65,12 +64,13 @@ OCC_LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 			libvtksys-9.1.so:math/vtk9
 OCC_USES=		python
 OCC_CMAKE_BOOL=		WITH_OCC
-OCC_CMAKE_ON=		-DVTK_DIR=${LOCALBASE}/lib/cmake/vtk-9.0
+OCC_CMAKE_ON=		-DVTK_DIR=${LOCALBASE}/lib/cmake/vtk-9.0 \
+			-DPython3_EXECUTABLE=${PYTHON_CMD}
 
 _LIBSTAGEDIR=	${STAGEDIR}/${PREFIX}/lib/elmersolver
 _PYVERSION=	${PYTHON_VER}${PYTHON_ABIVER}
-_QT5_LIBS=	buildtools_build concurrent core declarative gui location \
-		network opengl printsupport qmake_build script sensors \
+_QT5_LIBS=	buildtools:build concurrent core declarative gui location \
+		network opengl printsupport qmake:build script sensors \
 		sql svg webchannel webkit widgets xml
 
 .include <bsd.port.pre.mk>
@@ -99,6 +99,10 @@ post-patch-OCC-on:
 		"${WRKSRC}/cmake/Modules/FindOCE.cmake"
 	@${REINPLACE_CMD} -e 's|$${INCLUDE}|${LOCALBASE}/include/OpenCASCADE|' \
 		"${WRKSRC}/cmake/Modules/FindOCE.cmake"
+
+post-configure:
+	# workaround for https://github.com/ElmerCSC/elmerfem/issues/334
+	@${REINPLACE_CMD} -e 's| -lMPI::MPI_C | |' ${BUILD_WRKSRC}/ElmerGUI/Application/CMakeFiles/ElmerGUI.dir/link.txt
 
 post-install:
 	${LN} -sf ElmerSolver_mpi ${STAGEDIR}${PREFIX}/bin/ElmerSolver

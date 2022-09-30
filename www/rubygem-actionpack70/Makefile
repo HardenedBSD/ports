@@ -1,11 +1,12 @@
 PORTNAME=	actionpack
-PORTVERSION=	7.0.3
+PORTVERSION=	7.0.3.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	70
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Action Controller and Action View of Rails MVC Framework
+WWW=		https://github.com/rails/rails/tree/main/actionpack
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

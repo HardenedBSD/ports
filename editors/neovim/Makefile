@@ -1,5 +1,3 @@
-# Created by: Anton Tornqvist <antont@inbox.lv>
-
 PORTNAME=	neovim
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.2
@@ -7,6 +5,7 @@ CATEGORIES=	editors
 
 MAINTAINER=	adamw@FreeBSD.org
 COMMENT=	Next-generation Vim
+WWW=		https://neovim.io/
 
 LICENSE=	APACHE20
 

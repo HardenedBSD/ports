@@ -1,9 +1,11 @@
 PORTNAME=	nn-insight
 DISTVERSION=	1.0.7
+PORTREVISION=	2
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Neural network visualization software
+WWW=		https://github.com/yurivict/nn-insight
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -20,13 +22,18 @@ LIB_DEPENDS=	libcgraph.so:graphics/graphviz \
 		libtcmalloc.so:devel/google-perftools
 
 USES=		compiler:c++17-lang cmake pkgconfig qt:5
+USE_QT=		core gui svg widgets buildtools:build qmake:build
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	yurivict
-USE_QT=		core gui svg widgets buildtools_build qmake_build
 
 PLIST_FILES=	bin/nn-insight \
 		libexec/nn-insight/tf-lite-plugin.so
 
 PORTSCOUT=	limit:^.*[1-9]\. # prevent hashes
+
+OPTIONS_DEFINE=		NATIVE
+NATIVE_DESC=		Build with native optimizations (-march=native)
+NATIVE_CMAKE_BOOL=	ENABLE_NATIVE_OPTIMIZATIONS
 
 .include <bsd.port.mk>

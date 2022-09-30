@@ -29,6 +29,9 @@
     SUBDIR += bmpanel2
     SUBDIR += brisk-menu
     SUBDIR += cde
+    SUBDIR += cde-24
+    SUBDIR += cde-25
+    SUBDIR += cde-devel
     SUBDIR += cinnamon
     SUBDIR += cinnamon-desktop
     SUBDIR += cinnamon-menus
@@ -64,6 +67,7 @@
     SUBDIR += eterm
     SUBDIR += evilvte
     SUBDIR += evtest
+    SUBDIR += eww
     SUBDIR += fbdesk
     SUBDIR += fbpanel
     SUBDIR += find-cursor
@@ -80,6 +84,7 @@
     SUBDIR += gmrun
     SUBDIR += gnome
     SUBDIR += gnome-clipboard-daemon
+    SUBDIR += gnome-console
     SUBDIR += gnome-desktop
     SUBDIR += gnome-menus
     SUBDIR += gnome-pie
@@ -114,6 +119,7 @@
     SUBDIR += innerspace
     SUBDIR += inputplug
     SUBDIR += j4-dmenu-desktop
+    SUBDIR += jbxvt
     SUBDIR += jgmenu
     SUBDIR += kanshi
     SUBDIR += kb2mb2
@@ -141,6 +147,7 @@
     SUBDIR += konsole
     SUBDIR += lavalauncher
     SUBDIR += lemonbar
+    SUBDIR += lemonbar-xft
     SUBDIR += libICE
     SUBDIR += libSM
     SUBDIR += libX11
@@ -260,6 +267,7 @@
     SUBDIR += nwg-look
     SUBDIR += nwg-menu
     SUBDIR += nxcomp
+    SUBDIR += openrgb
     SUBDIR += p5-Clipboard
     SUBDIR += p5-X11-GUITest
     SUBDIR += p5-X11-IdleTime
@@ -315,6 +323,7 @@
     SUBDIR += runner
     SUBDIR += rxvt-unicode
     SUBDIR += sakura
+    SUBDIR += salut
     SUBDIR += sbxkb
     SUBDIR += screen-message
     SUBDIR += screengrab
@@ -354,6 +363,7 @@
     SUBDIR += swaylock-effects
     SUBDIR += swaync
     SUBDIR += swayr
+    SUBDIR += swayrbar
     SUBDIR += swaysettings
     SUBDIR += sxhkd
     SUBDIR += sxpc
@@ -477,6 +487,7 @@
     SUBDIR += xfce4-terminal
     SUBDIR += xfce4-verve-plugin
     SUBDIR += xfce4-whiskermenu-plugin
+    SUBDIR += xfce4-windowck-plugin
     SUBDIR += xfd
     SUBDIR += xfishtank
     SUBDIR += xforward

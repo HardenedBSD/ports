@@ -1,8 +1,6 @@
-# Created by: maintainer.freebsd@xpoundit.com
-
 PORTNAME=	orthanc-webviewer
 DISTVERSION=	2.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	https://www.orthanc-server.com/downloads/get.php?path=/plugin-webviewer/:main \
 		https://www.orthanc-server.com/downloads/get.php?path=/orthanc/:framework \
@@ -21,6 +19,7 @@ EXTRACT_ONLY=	OrthancWebViewer-${PORTVERSION}.tar.gz
 
 MAINTAINER=	maintainer.freebsd@xpoundit.com
 COMMENT=	Orthanc plugin to extend Orthanc with a Web viewer of medical images
+WWW=		https://www.orthanc-server.com/static.php?page=web-viewer
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

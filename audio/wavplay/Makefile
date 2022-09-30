@@ -1,5 +1,3 @@
-# Created by: greg
-
 PORTNAME=	wavplay
 PORTVERSION=	2.0
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/Release%20Downloads/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Wav player and recorder
+WWW=		https://sourceforge.net/projects/wavplay/
 
 LICENSE=	GPLv2 # only
 LICENSE_FILE=	${WRKSRC}/COPYING

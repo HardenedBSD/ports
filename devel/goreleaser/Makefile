@@ -1,10 +1,11 @@
 PORTNAME=	goreleaser
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.10.1
+DISTVERSION=	1.11.4
 CATEGORIES=	devel
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Deliver Go binaries as fast and easily as possible
+WWW=		https://goreleaser.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

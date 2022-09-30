@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	gnumail
 PORTVERSION=	1.3.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	GNUMail-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNUstep mail client
+WWW=		http://www.collaboration-world.com/gnumail/
 
 LICENSE=	GPLv2
 

@@ -1,13 +1,12 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	actionmailer
-PORTVERSION=	6.1.6
+PORTVERSION=	6.1.6.1
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	61
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Easy email delivery and testing for Ruby
+WWW=		https://github.com/rails/rails/tree/main/actionmailer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

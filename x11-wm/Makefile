@@ -48,6 +48,7 @@
     SUBDIR += i3
     SUBDIR += i3-gaps
     SUBDIR += icewm
+    SUBDIR += ittywm
     SUBDIR += jewel
     SUBDIR += jwm
     SUBDIR += kickshaw
@@ -60,7 +61,6 @@
     SUBDIR += libwraster
     SUBDIR += lwm
     SUBDIR += lxappearance-obconf
-    SUBDIR += lxmed
     SUBDIR += lxqt
     SUBDIR += lxqt-panel
     SUBDIR += lxqt-session

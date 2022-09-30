@@ -1,5 +1,3 @@
-# Created by: Oliver Lehmann <oliver@FreeBSD.org>
-
 PORTNAME=	xfce4-settings
 PORTVERSION=	4.16.3
 CATEGORIES=	sysutils xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Xfce 4 settings application
+WWW=		https://docs.xfce.org/xfce/xfce4-settings/start
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Timothy Beyer <beyert@cs.ucr.edu>
-
 PORTNAME=	libretro-flycast
 PORTVERSION=	0.20210608
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	emulators games
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Standalone port of flycast to libretro
+WWW=		https://git.libretro.com/libretro/flycast
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,5 @@
 PORTNAME=	imhex
-PORTVERSION=	1.19.1
+PORTVERSION=	1.23.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 MASTER_SITES=	https://git.sr.ht/~danyspin97/xdgpp/blob/f01f810714443d0f10c333d4d1d9c0383be41375/:xdg
@@ -8,6 +8,7 @@ DIST_SUBDIR=	imhex
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	Hex editor for reverse engineers and programmers
+WWW=		https://github.com/WerWolv/ImHex
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,6 +18,7 @@ NOT_FOR_ARCHS_REASON=	__uint128_t and __int128_t are not supported
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX} \
 		btzy-nativefiledialog-extended-${GH_TAG_NATIVEFILEDIALOG}_GH0${EXTRACT_SUFX} \
 		capstone-engine-capstone-${GH_TAG_CAPSTONE}_GH0${EXTRACT_SUFX} \
+		CLIUtils-CLI11-${GH_TAG_CLI11}_GH0${EXTRACT_SUFX} \
 		fmtlib-fmt-${GH_TAG_FMT}_GH0${EXTRACT_SUFX} \
 		VirusTotal-yara-${GH_TAG_YARA}_GH0${EXTRACT_SUFX} \
 		WerWolv-libromfs-${GH_TAG_LIBROMFS}_GH0${EXTRACT_SUFX} \
@@ -24,7 +26,8 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX} \
 		WerWolv-PatternLanguage-${GH_TAG_PATTERN_LANGUAGE}_GH0${EXTRACT_SUFX}
 
 BUILD_DEPENDS=	glm>0:math/glm \
-		nlohmann-json>0:devel/nlohmann-json
+		nlohmann-json>0:devel/nlohmann-json \
+		${LOCALBASE}/include/range/v3/range.hpp:devel/range-v3
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libfreetype.so:print/freetype2 \
 		libglfw.so:graphics/glfw \
@@ -44,6 +47,7 @@ GH_ACCOUNT=	WerWolv
 GH_PROJECT=	ImHex
 GH_TUPLE=	btzy:nativefiledialog-extended:${GH_TAG_NATIVEFILEDIALOG}:nativefiledialog \
 		capstone-engine:capstone:${GH_TAG_CAPSTONE}:capstone \
+		CLIUtils:CLI11:${GH_TAG_CLI11}:cli11 \
 		fmtlib:fmt:${GH_TAG_FMT}:fmt \
 		VirusTotal:yara:${GH_TAG_YARA}:yara \
 		WerWolv:ImHex-Patterns:${GH_TAG_IMHEX_PATTERNS}:imhex_patterns \
@@ -51,15 +55,17 @@ GH_TUPLE=	btzy:nativefiledialog-extended:${GH_TAG_NATIVEFILEDIALOG}:nativefiledi
 		WerWolv:libromfs:${GH_TAG_LIBROMFS}:libromfs
 
 GH_TAG_CAPSTONE=	d5141c0
+GH_TAG_CLI11=	faea921
 GH_TAG_FMT=	c4ee726
-GH_TAG_IMHEX_PATTERNS=	48dd8f6
-GH_TAG_LIBROMFS=	58757f6
-GH_TAG_NATIVEFILEDIALOG=	28ade5a
-GH_TAG_PATTERN_LANGUAGE=	9e984e0
-GH_TAG_YARA=	1367943
+GH_TAG_IMHEX_PATTERNS=	5481c2f
+GH_TAG_LIBROMFS=	8c8556d
+GH_TAG_NATIVEFILEDIALOG=	6967d28
+GH_TAG_PATTERN_LANGUAGE=	143628a
+GH_TAG_YARA=	d5a7565
 
-CMAKE_ARGS=	-DUSE_SYSTEM_CURL=ON -DUSE_SYSTEM_NLOHMANN_JSON=ON
-CXXFLAGS+=	-fPIC
+CMAKE_ARGS=	-DUSE_SYSTEM_CURL=ON -DUSE_SYSTEM_NLOHMANN_JSON=ON \
+		-DIMHEX_STRIP_RELEASE=OFF -DIMHEX_PLUGINS_IN_SHARE=ON \
+		-DIMHEX_OFFLINE_BUILD=ON
 
 PORTDOCS=	README.md
 
@@ -72,7 +78,6 @@ OSMAJOR=${OSVERSION:C/([0-9]*)[0-9]{5}/\1/}
 
 # Before LLVM13 import to the base system
 .if (${OSMAJOR} == 12 && ${OSVERSION} < 1203505) \
-    || (${OSMAJOR} == 13 && ${OSVERSION} < 1300523) \
     || (${OSMAJOR} == 14 && ${OSVERSION} < 1400042)
 IGNORE=	will not build due to C++20 API functions unavailable in old libc++
 .endif
@@ -84,6 +89,7 @@ post-extract:
 	${CP} -R ${WRKSRC_libromfs}/* ${WRKSRC}/lib/external/libromfs
 	${CP} -R ${WRKSRC_nativefiledialog}/* ${WRKSRC}/lib/external/nativefiledialog
 	${CP} -R ${WRKSRC_pattern_language}/* ${WRKSRC}/lib/external/pattern_language
+	${CP} -R ${WRKSRC_cli11}/* ${WRKSRC}/lib/external/pattern_language/external/cli11
 	${CP} -R ${WRKSRC_yara}/* ${WRKSRC}/lib/external/yara/yara
 	${MKDIR} ${WRKDIR}/.build/_deps/imhex_patterns_src
 	${CP} -R ${WRKSRC_imhex_patterns}/* ${WRKDIR}/.build/_deps/imhex_patterns_src

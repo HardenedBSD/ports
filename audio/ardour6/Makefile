@@ -1,8 +1,6 @@
-# Created by: Michael Beer <beerml@sigma6audio.de>
-
 PORTNAME=	ardour6
 PORTVERSION=	6.9.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	LOCAL/nc/mirror/ \
 		https://community.ardour.org/srctar/ \
@@ -13,6 +11,7 @@ DISTNAME=	Ardour-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multichannel digital audio workstation
+WWW=		https://ardour.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

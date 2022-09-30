@@ -256,6 +256,7 @@
     SUBDIR += halibut
     SUBDIR += heirloom-doctools
     SUBDIR += hevea
+    SUBDIR += hexcode
     SUBDIR += hhm
     SUBDIR += hi-aspell
     SUBDIR += highlight
@@ -407,6 +408,7 @@
     SUBDIR += libxdiff
     SUBDIR += libxml++
     SUBDIR += libxml++26
+    SUBDIR += libxml++30
     SUBDIR += libxml2
     SUBDIR += libxmlb
     SUBDIR += libxmlbird
@@ -416,6 +418,7 @@
     SUBDIR += link-grammar
     SUBDIR += linux-c7-aspell
     SUBDIR += linux-c7-expat
+    SUBDIR += linux-c7-expat-devel
     SUBDIR += linux-c7-libcroco
     SUBDIR += linux-c7-libxml2
     SUBDIR += linux-c7-libxslt
@@ -1052,6 +1055,7 @@
     SUBDIR += p5-XML-Driver-HTML
     SUBDIR += p5-XML-Dumper
     SUBDIR += p5-XML-Elemental
+    SUBDIR += p5-XML-Enc
     SUBDIR += p5-XML-Encoding
     SUBDIR += p5-XML-Entities
     SUBDIR += p5-XML-FOAF
@@ -1131,6 +1135,7 @@
     SUBDIR += p5-XML-STX
     SUBDIR += p5-XML-Schematron
     SUBDIR += p5-XML-SemanticDiff
+    SUBDIR += p5-XML-Sig
     SUBDIR += p5-XML-Simple
     SUBDIR += p5-XML-SimpleObject
     SUBDIR += p5-XML-SimpleObject-LibXML
@@ -1212,6 +1217,7 @@
     SUBDIR += pear-YAML
     SUBDIR += pecl-xdiff2
     SUBDIR += pecl-yaml
+    SUBDIR += pecl-zephir_parser
     SUBDIR += peco
     SUBDIR += peg
     SUBDIR += perl2html
@@ -1261,7 +1267,6 @@
     SUBDIR += print-n-times
     SUBDIR += pugixml
     SUBDIR += pup
-    SUBDIR += py-Chameleon
     SUBDIR += py-CommonMark
     SUBDIR += py-Morfessor
     SUBDIR += py-QDarkStyle
@@ -1282,6 +1287,7 @@
     SUBDIR += py-bibtexparser
     SUBDIR += py-bracex
     SUBDIR += py-cchardet
+    SUBDIR += py-chameleon
     SUBDIR += py-chardet
     SUBDIR += py-charset-normalizer
     SUBDIR += py-citeproc-py
@@ -1296,6 +1302,7 @@
     SUBDIR += py-csvkit
     SUBDIR += py-custom_inherit
     SUBDIR += py-dbfread
+    SUBDIR += py-dict2xml
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docrepr
     SUBDIR += py-docstring-parser
@@ -1454,12 +1461,14 @@
     SUBDIR += py-python-lsp-jsonrpc
     SUBDIR += py-python-lsp-server
     SUBDIR += py-python-markdown-math
+    SUBDIR += py-python-pptx
     SUBDIR += py-python-slugify
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
     SUBDIR += py-pytkdocs
     SUBDIR += py-pytoml
     SUBDIR += py-pyx12
+    SUBDIR += py-pyxlsb2
     SUBDIR += py-qrcode
     SUBDIR += py-rdflib
     SUBDIR += py-readchar
@@ -1545,10 +1554,13 @@
     SUBDIR += py-translationstring
     SUBDIR += py-transpopy
     SUBDIR += py-ttp
+    SUBDIR += py-ttp-templates
     SUBDIR += py-typogrify
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
+    SUBDIR += py-untangle
     SUBDIR += py-wcmatch
+    SUBDIR += py-whatthepatch
     SUBDIR += py-whoosh
     SUBDIR += py-wordcloud
     SUBDIR += py-wordnet
@@ -1556,7 +1568,9 @@
     SUBDIR += py-wtf-peewee
     SUBDIR += py-wtforms
     SUBDIR += py-xhtml2pdf
+    SUBDIR += py-xlmmacrodeobfuscator
     SUBDIR += py-xlrd
+    SUBDIR += py-xlrd2
     SUBDIR += py-xlsxwriter
     SUBDIR += py-xlutils
     SUBDIR += py-xlwt
@@ -1632,7 +1646,6 @@
     SUBDIR += rubygem-asciidoctor-plantuml
     SUBDIR += rubygem-asciidoctor-plantuml00
     SUBDIR += rubygem-autoprefixer-rails
-    SUBDIR += rubygem-autoprefixer-rails-node16
     SUBDIR += rubygem-autoprefixer-rails1025
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
@@ -1654,6 +1667,7 @@
     SUBDIR += rubygem-cucumber-gherkin
     SUBDIR += rubygem-cucumber-gherkin23
     SUBDIR += rubygem-cucumber-html-formatter
+    SUBDIR += rubygem-cucumber-html-formatter19
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
@@ -1672,7 +1686,6 @@
     SUBDIR += rubygem-elasticsearch713
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils
-    SUBDIR += rubygem-escape_utils12
     SUBDIR += rubygem-extended-markdown-filter
     SUBDIR += rubygem-ezamar
     SUBDIR += rubygem-fast_xs
@@ -1770,8 +1783,7 @@
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
-    SUBDIR += rubygem-rouge312
-    SUBDIR += rubygem-rouge327
+    SUBDIR += rubygem-rouge329
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1909,6 +1921,7 @@
     SUBDIR += te-aspell
     SUBDIR += te-hunspell
     SUBDIR += teckit
+    SUBDIR += termshot
     SUBDIR += tet-aspell
     SUBDIR += texi2db
     SUBDIR += texi2html
@@ -1964,6 +1977,7 @@
     SUBDIR += urlview
     SUBDIR += utf8proc
     SUBDIR += uz-aspell
+    SUBDIR += vale
     SUBDIR += vbindiff
     SUBDIR += ve-hunspell
     SUBDIR += vgrep

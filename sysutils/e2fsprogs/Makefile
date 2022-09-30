@@ -1,4 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # heavily modified by: Matthias Andree <mandree@FreeBSD.org>
 #
 # supported FLAVORS=	default nobootfsck roothardlinks
@@ -20,6 +19,7 @@ MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 
 MAINTAINER?=	mandree@FreeBSD.org
 COMMENT?=	Utilities & library to manipulate ext2/3/4 filesystems
+WWW=		http://e2fsprogs.sourceforge.net/
 
 LICENSE?=	GPLv2+
 .if !defined(_no_license_file)

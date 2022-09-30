@@ -1,5 +1,3 @@
-# Created by: John Polstra <jdp@polstra.com>
-
 PORTNAME=	cfs
 DISTVERSION=	1.5.0.beta
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.bayofrum.net/dist/${PORTNAME}/
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Cryptographic file system implemented as a user-space NFS server
+WWW=		https://www.bayofrum.net/cgi-bin/fossil/cfs/
 
 ALL_TARGET=	cfs
 MAKE_ARGS=	CC="${CC}"

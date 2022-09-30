@@ -1,5 +1,3 @@
-# Created by: Juergen Lock <nox@FreeBSD.org>
-
 PORTNAME=	vdr-plugin-xineliboutput
 PORTVERSION=	1.0.90s20120511
 PORTREVISION=	32
@@ -10,6 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:snapshot
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Video Disk Recorder - xineliboutput plugin/viewer
+WWW=		https://sourceforge.net/projects/xineliboutput/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

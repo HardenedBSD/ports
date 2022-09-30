@@ -1,10 +1,13 @@
 PORTNAME=	seaweedfs
-DISTVERSION=	2.81
-PORTREVISION=	2
+DISTVERSION=	3.20
+PORTREVISION=	1
 CATEGORIES=	net sysutils
+MASTER_SITES=	https://raw.githubusercontent.com/${PORTNAME}/${PORTNAME}/${DISTVERSIONFULL}/:gomod
+DISTFILES=	go.mod:gomod
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Distributed Object Store and Filesystem
+WWW=		https://github.com/chrislusf/seaweedfs/wiki
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -12,10 +15,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		go:modules
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	chrislusf
-USE_GITLAB=	nodefault
 USE_RC_SUBR=	seaweedfs
 
+GO_MODULE=	github.com/seaweedfs/seaweedfs
 GO_TARGET=	./weed
 CGO_CFLAGS=	-I.
 
@@ -30,8 +32,6 @@ SUB_LIST=	GROUP=${SEAWEEDFS_GROUP} \
 
 USERS=		${SEAWEEDFS_USER}
 GROUPS=		${SEAWEEDFS_GROUP}
-
-.include "Makefile.deps"
 
 post-build:
 .for cfg in master filer security replication notification

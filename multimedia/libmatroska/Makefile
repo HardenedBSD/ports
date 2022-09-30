@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	libmatroska
 DISTVERSION=	1.6.3
 CATEGORIES=	multimedia audio
@@ -7,6 +5,7 @@ MASTER_SITES=	https://dl.matroska.org/downloads/libmatroska/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Extensible Multimedia Container Format
+WWW=		https://www.matroska.org/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE.LGPL

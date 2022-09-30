@@ -1,11 +1,12 @@
 PORTNAME=	fastf1
-PORTVERSION=	2.2.8
+PORTVERSION=	2.2.9
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Python module to accessing and analyzing Formula 1 data
+WWW=		https://github.com/theOehrly/Fast-F1
 
 LICENSE=	GPLv3
 

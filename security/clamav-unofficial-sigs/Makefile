@@ -1,11 +1,11 @@
-# Created by: Marko Njezic <sf@maxempire.com>
-
 PORTNAME=	clamav-unofficial-sigs
 PORTVERSION=	7.2.5
+PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	freebsd@mnd.sc
 COMMENT=	Update script for third-party ClamAV databases
+WWW=		https://github.com/extremeshok/clamav-unofficial-sigs
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

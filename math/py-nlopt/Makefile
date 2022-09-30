@@ -6,12 +6,13 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Nonlinear optimization library
+WWW=		https://github.com/DanielBok/nlopt-python
 
 LICENSE=	LGPL21 MIT
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	cmake:devel/cmake \
+BUILD_DEPENDS=	cmake:devel/cmake-core \
 		swig:devel/swig \
 		${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY}

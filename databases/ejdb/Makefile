@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	ejdb
 PORTVERSION=	2.72
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Embeddable JSON database engine library
+WWW=		https://ejdb.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Marcin Simonides <marcin@studio4plus.com>
-
 PORTNAME=	zfs-snapshot-mgmt
 PORTVERSION=	20090201
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://marcin.studio4plus.com/files/
 
 MAINTAINER=	johntdarrah@gmail.com
 COMMENT=	Automatic ZFS snapshot management tool
+WWW=		http://marcin.studio4plus.com/en/zfs-file-history/howto.html
 
 USE_RUBY=	yes
 USES=		shebangfix

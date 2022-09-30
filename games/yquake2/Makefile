@@ -1,5 +1,3 @@
-# Created by: Vasily Postnicov <shamaz.mazum@gmail.com>
-
 PORTNAME=	yquake2
 PORTVERSION=	8.01
 CATEGORIES=	games
@@ -8,6 +6,7 @@ DISTNAME=	quake2-${PORTVERSION}
 
 MAINTAINER=	shamaz.mazum@gmail.com
 COMMENT=	Improved version of Icculus Quake II
+WWW=		https://www.yamagi.org/quake2/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

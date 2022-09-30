@@ -1,12 +1,11 @@
-# Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-
 PORTNAME=	ntopng
-PORTVERSION=	5.2.d20220622
+PORTVERSION=	5.4.d20220812
 PORTEPOCH=	1
 CATEGORIES=	net
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Network monitoring tool with command line and web interfaces
+WWW=		https://www.ntop.org/products/traffic-analysis/ntop/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -21,7 +20,8 @@ LIB_DEPENDS=	librrd.so:databases/rrdtool \
 		libexpat.so:textproc/expat2 \
 		libzstd.so:archivers/zstd \
 		libgcrypt.so:security/libgcrypt \
-		libgpg-error.so:security/libgpg-error
+		libgpg-error.so:security/libgpg-error \
+		libhiredis.so:databases/hiredis
 BUILD_DEPENDS=	bash:shells/bash
 
 USE_HARDENING=	pie:off relro:off
@@ -41,8 +41,9 @@ GROUPS=		ntopng
 PLIST_SUB=	NTOPNGUSER="${USERS}" NTOPNGROUP="${GROUPS}"
 
 USE_GITHUB=	yes
+GH_TUPLE=	ntop:ntopng-dist:604aa39:dist/httpdocs/dist
 GH_ACCOUNT=	ntop
-GH_TAGNAME=	72622f9
+GH_TAGNAME=	8ade112
 
 CPE_VENDOR=	ntop
 
@@ -56,7 +57,8 @@ USE_RC_SUBR=	ntopng
 
 post-patch:
 	@${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-		${WRKSRC}/Makefile.in
+		${WRKSRC}/Makefile.in \
+		${WRKSRC}/configure.ac.in
 	cd ${WRKSRC} && ${SH} autogen.sh
 
 post-install:

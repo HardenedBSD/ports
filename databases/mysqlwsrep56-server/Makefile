@@ -1,15 +1,14 @@
-# Created by: Philip Stoev <philip.stoev@galeracluster.com>
-
 PORTNAME=	mysqlwsrep
 PORTVERSION?=	5.6.51
 DISTVERSIONPREFIX?=	wsrep_
 DISTVERSIONSUFFIX?=	-25.33
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	databases
 PKGNAMESUFFIX=	56-server
 
 MAINTAINER=	devel@galeracluster.com
 COMMENT=	MySQL database enhanced with Galera replication (server package)
+WWW=		https://galeracluster.com/
 
 LICENSE=	GPLv2
 

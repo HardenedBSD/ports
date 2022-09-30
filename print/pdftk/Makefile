@@ -1,5 +1,3 @@
-# Created by: Patrick Dung (patrick_dkt@yahoo.com.hk)
-
 PORTNAME=	pdftk
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.3.2
@@ -8,6 +6,7 @@ CATEGORIES=	print java
 
 MAINTAINER=	andreas@bilke.org
 COMMENT=	Simple tool for doing everyday things with PDF documents
+WWW=		https://gitlab.com/pdftk-java/pdftk
 
 LICENSE=	GPLv2
 

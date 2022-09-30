@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	xray_re-tools
 DISTVERSION=	g20180902
 CATEGORIES=	games converters
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	X-Ray engine game asset converter (unofficial)
+WWW=		https://github.com/abramcumner/xray_re-tools
 
 LIB_DEPENDS=	liblzo2.so:archivers/lzo2 \
 		libvorbisfile.so:audio/libvorbis \

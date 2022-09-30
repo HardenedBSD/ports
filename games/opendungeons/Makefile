@@ -1,10 +1,11 @@
 PORTNAME=	opendungeons
 PORTVERSION=	0.7.1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	games
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source game inspired by Dungeon Keeper
+WWW=		https://opendungeons.github.io/
 
 LICENSE=	CC-BY-3.0 CC-BY-SA-3.0 CC0-1.0 GPLv3 MIT OFL11
 LICENSE_COMB=	multi

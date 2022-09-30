@@ -1,5 +1,3 @@
-# Created by: Tim Bishop <tdb@FreeBSD.org>
-
 PORTNAME=	dynamicplaylist
 PORTVERSION=	2.9.3853
 CATEGORIES=	audio
@@ -10,6 +8,7 @@ DIST_SUBDIR=	logitechmediaserver
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Logitech Media Server plugin to create dynamic playlists
+WWW=		https://wiki.slimdevices.com/index.php/Dynamic_Playlist_plugin
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/DynamicPlayList/LICENSE.txt

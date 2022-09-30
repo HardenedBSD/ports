@@ -1,5 +1,3 @@
-# Created by: Sahil Tandon <sahil@tandon.net>
-
 PORTNAME=	namebench
 PORTVERSION=	1.3.1
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Open Source DNS benchmark utility
+WWW=		https://code.google.com/archive/p/namebench/
 
 LICENSE=	APACHE20
 

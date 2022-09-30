@@ -1,11 +1,12 @@
 PORTNAME=	git-town
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7.7.0
-PORTREVISION=	2
+DISTVERSION=	7.8.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Git extension for generic, high-level git workflow support
+WWW=		https://www.git-town.com
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Math-MPFR
 PORTVERSION=	4.24
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to MPFR Library
+WWW=		https://metacpan.org/release/Math-MPFR
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,6 +1,6 @@
 PORTNAME=	mesos
 PORTVERSION=	1.11.0
-PORTREVISION=	11
+PORTREVISION=	13
 CATEGORIES=	sysutils
 MASTER_SITES=	APACHE/mesos/${PORTVERSION}:mesos
 PKGNAMEPREFIX=	apache-
@@ -9,6 +9,7 @@ DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
 
 MAINTAINER=	james.wright@digital-chaos.com
 COMMENT=	Cluster manager providing resource isolation and sharing
+WWW=		https://mesos.apache.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

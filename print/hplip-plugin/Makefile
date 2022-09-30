@@ -1,5 +1,3 @@
-# Created by: amistry@am-productions.biz
-
 PORTNAME=	hplip-plugin
 PORTVERSION=	3.22.4
 CATEGORIES=	print
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	.run
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Binary plugin for some HP Printers and All-in-One devices
+WWW=		https://developers.hp.com/hp-linux-imaging-and-printing/binary_plugin.html
 
 # License agreement is required
 LICENSE=	HPLIP_PLUGIN

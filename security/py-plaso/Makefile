@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	plaso
 PORTVERSION=	20210606
 CATEGORIES=	security python
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Automatic creation of a super timeline
+WWW=		https://github.com/log2timeline/plaso/wiki
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

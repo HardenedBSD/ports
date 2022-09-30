@@ -1,13 +1,12 @@
-# Created by: Mark Pulford <mark@kyne.com.au>
-
 PORTNAME=	siege
-PORTVERSION=	4.1.3
+PORTVERSION=	4.1.5
 CATEGORIES=	benchmarks www
 MASTER_SITES=	http://download.joedog.org/siege/ \
 		http://fossies.org/linux/www/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	HTTP regression testing and benchmarking utility
+WWW=		https://www.joedog.org/JoeDog/Siege
 
 LICENSE=	GPLv2
 

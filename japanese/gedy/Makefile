@@ -1,5 +1,3 @@
-# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-
 PORTNAME=	gedy
 PORTVERSION=	0.9.0
 PORTREVISION=	3
@@ -11,6 +9,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	GNOME Edy Viewer
+WWW=		http://hito.music.coocan.jp/pasori/gedyviewer.html
 
 LICENSE=	GPLv2
 

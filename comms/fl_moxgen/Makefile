@@ -1,5 +1,3 @@
-# Created by: Stephen Hurd <shurd@FreeBSD.org>
-
 PORTNAME=	fl_moxgen
 PORTVERSION=	1.00
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	Fl_MoxGen-${PORTVERSION}
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Compute the dimensions of a Moxon Rectangle antenna
+WWW=		http://home.comcast.net/~andystewart/moxon_sw.html
 
 LICENSE=	GPLv3
 
@@ -20,7 +19,6 @@ DESKTOP_ENTRIES=	"Fl_MoxGen" "${COMMENT}" "" "${PORTNAME}" \
 USE_HARDENING=	pie:off
 
 OPTIONS_DEFINE=	PDF
-OPTIONS_DEFAULT=	PDF
 PDF_DESC=	Enable PDF Writing (requires libharu)
 
 PDF_LIB_DEPENDS=	libhpdf.so:print/libharu

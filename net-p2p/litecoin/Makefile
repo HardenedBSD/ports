@@ -1,10 +1,12 @@
 PORTNAME=	litecoin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.21.2
+DISTVERSION=	0.21.2.1
+PORTREVISION=	1
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	hsw@bitmark.com
 COMMENT?=	Virtual Peer-to-Peer Currency Client (QT)
+WWW=		https://www.litecoin.org/
 
 LICENSE=	MIT
 
@@ -22,7 +24,7 @@ SLAVE_PORT?=	no
 .if defined(SLAVE_PORT) && ${SLAVE_PORT} == "no"
 USES+=		desktop-file-utils
 USE_QT=		core gui network widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 
 BUILD_DEPENDS+=	protoc:devel/protobuf
 LIB_DEPENDS+=	libprotobuf.so:devel/protobuf

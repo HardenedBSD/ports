@@ -1,5 +1,3 @@
-# Created by: Tim Bishop <tdb@FreeBSD.org>
-
 PORTNAME=	lazysearch
 PORTVERSION=	3.6.5
 CATEGORIES=	audio
@@ -10,6 +8,7 @@ DIST_SUBDIR=	logitechmediaserver
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Logitech Media Server plugin for performing lazy searches
+WWW=		http://www.hickinbottom.com/lazysearch/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LazySearch2/LICENSE

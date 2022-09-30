@@ -1,11 +1,13 @@
 PORTNAME=	arx-libertatis
 PORTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://arx-libertatis.org/files/ \
 		https://github.com/arx/ArxLibertatis/releases/download/${PORTVERSION}/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Cross-platform port of Arx Fatalis
+WWW=		https://arx-libertatis.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

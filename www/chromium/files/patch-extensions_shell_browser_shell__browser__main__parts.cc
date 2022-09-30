@@ -1,6 +1,6 @@
---- extensions/shell/browser/shell_browser_main_parts.cc.orig	2022-02-28 16:54:41 UTC
+--- extensions/shell/browser/shell_browser_main_parts.cc.orig	2022-09-24 10:57:32 UTC
 +++ extensions/shell/browser/shell_browser_main_parts.cc
-@@ -142,7 +142,7 @@ void ShellBrowserMainParts::PostCreateMainMessageLoop(
+@@ -150,7 +150,7 @@ void ShellBrowserMainParts::PostCreateMainMessageLoop(
        switches::kAppShellAllowRoaming)) {
      network_controller_->SetCellularAllowRoaming(true);
    }

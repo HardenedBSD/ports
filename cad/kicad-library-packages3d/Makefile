@@ -1,7 +1,5 @@
-# Created by: Thierry Thomas <thierry@FreeBSD.org>
-
 PORTNAME=	kicad
-PORTVERSION=	6.0.6
+PORTVERSION=	6.0.8
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/libraries/${PORTNAME}-packages3D/-/archive/${DISTVERSION}/
 PKGNAMESUFFIX=	-library-packages3d
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-packages3D-${DISTVERSION}
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Official KiCad 3D model libraries for rendering and MCAD integration
+WWW=		https://gitlab.com/kicad/libraries/kicad-packages3D
 
 LICENSE=	GPLv2
 

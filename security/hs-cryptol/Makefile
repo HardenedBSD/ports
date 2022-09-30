@@ -4,6 +4,7 @@ CATEGORIES=	security lang haskell
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Language of cryptography
+WWW=		https://cryptol.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -122,7 +123,8 @@ USE_CABAL=	GraphSCC-1.0.4 \
 		zlib-0.6.3.0 \
 		zlib-bindings-0.1.1.5_2
 
-EXECUTABLES=	cryptol cryptol-html
+CABAL_EXECUTABLES=	cryptol cryptol-html
+CABAL_WRAPPER_SCRIPTS=	${CABAL_EXECUTABLES}
 
 post-install:
 	cd ${WRKSRC}/lib && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}

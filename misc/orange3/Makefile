@@ -5,6 +5,7 @@ CATEGORIES=	misc python
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Component-based data mining software
+WWW=		https://orange.biolab.si/
 
 LICENSE=	GPLv3
 
@@ -40,7 +41,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 
 USES=		python:3.7+ pyqt:5
 USE_PYTHON=	distutils cython autoplist noflavors
-USE_PYQT=	pyqt5_run webengine_run
+USE_PYQT=	pyqt5:run webengine:run
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	biolab
@@ -51,9 +52,9 @@ LDFLAGS+=	-Xlinker -strip-all # strip, stage-qa doesn't catch that it isn't stri
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == i386
-USE_PYQT+=	webengine_run
+USE_PYQT+=	webengine:run
 .else
-USE_PYQT+=	webkit_run
+USE_PYQT+=	webkit:run
 .endif
 
 xpost-install:

@@ -1,5 +1,3 @@
-# Created by: Warren Block <wblock@wonkity.com>
-
 PORTNAME=	arduino
 PORTVERSION=	1.0.6
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-linux32
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	Open-source electronics prototyping platform
+WWW=		https://www.arduino.cc/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi

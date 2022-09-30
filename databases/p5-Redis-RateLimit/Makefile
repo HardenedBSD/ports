@@ -1,5 +1,3 @@
-# Created by: Davíð Steinn Geirsson <david@isnic.is>
-
 PORTNAME=	Redis-RateLimit
 PORTVERSION=	1.0002
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	david@isnic.is
 COMMENT=	Sliding window rate limiting with Redis
+WWW=		https://metacpan.org/pod/Redis::RateLimit
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	IPA
 PORTVERSION=	1.08
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.prima.eu.org/IPA/ CPAN/Prima/KARASIK
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Image Processing Algorithms
+WWW=		http://www.prima.eu.org/IPA/
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

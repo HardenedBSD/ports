@@ -1,10 +1,11 @@
 PORTNAME=	nextpnr
 DISTVERSION=	g20200804
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	manu@FreeBSD.org
 COMMENT=	Portable FPGA place and route tool
+WWW=		https://github.com/YosysHQ/nextpnr
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -21,7 +22,7 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		${PY_BOOST}
 
 USES=		compiler:c++11-lang cmake qt:5 eigen:3 python:3.5+ gl
-USE_QT=		buildtools_build core gui opengl qmake_build widgets
+USE_QT=		buildtools:build core gui opengl qmake:build widgets
 USE_GL=		gl glu
 USE_GITHUB=	yes
 GH_ACCOUNT=	YosysHQ

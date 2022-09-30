@@ -5,6 +5,7 @@ CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	API for the Polarizable Continuum Model
+WWW=		https://github.com/PCMSolver/pcmsolver
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,7 +25,6 @@ do-configure: # full CMAKE_ARGS breaks configure: -DCMAKE_EXE_LINKER_FLAGS="${LD
 			-DCMAKE_BUILD_TYPE:STRING="Release" \
 			-DCMAKE_C_FLAGS_RELEASE:STRING="${CFLAGS}" \
 			-DCMAKE_CXX_FLAGS_RELEASE:STRING="${CXXFLAGS}" \
-			-DCMAKE_EXE_LINKER_FLAGS:STRING="${LOCALBASE}/lib/gcc${GCC_DEFAULT}/libgcc_s.so" \
 			-DCMAKE_C_COMPILER:STRING="${CC}" \
 			-DCMAKE_CXX_COMPILER:STRING="${CXX}" \
 			-DPYTHON_INTERPRETER:STRING="${PYTHON_CMD}" \

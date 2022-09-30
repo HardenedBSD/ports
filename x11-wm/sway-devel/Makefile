@@ -1,6 +1,7 @@
 PORTNAME=	sway
-DISTVERSION=	1.7-110
-DISTVERSIONSUFFIX=	-gb69d637f7
+DISTVERSION=	1.7-124
+DISTVERSIONSUFFIX=	-gcffb006f
+PORTREVISION=	1
 CATEGORIES=	x11-wm wayland
 PKGNAMESUFFIX=	-devel
 
@@ -10,13 +11,14 @@ PATCHFILES+=	f98ca3ab7ca1.patch:-p1 # https://github.com/swaywm/sway/pull/5090
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	i3-compatible Wayland compositor (development snapshot)
+WWW=		https://swaywm.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 		wayland-protocols>=1.24:graphics/wayland-protocols \
-		wlroots>=0.15.0.289<0.17.0:x11-toolkits/wlroots
+		wlroots>=0.15.0.316<0.17.0:x11-toolkits/wlroots
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
 		libevdev.so:devel/libevdev \
 		libudev.so:devel/libudev-devd \

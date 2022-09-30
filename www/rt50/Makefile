@@ -1,12 +1,12 @@
 PORTNAME=	rt
-DISTVERSION=	5.0.2
-PORTREVISION=	1
+DISTVERSION=	5.0.3
 CATEGORIES=	www
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 PKGNAMESUFFIX=	50
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Industrial-grade ticketing system written in Perl
+WWW=		https://www.bestpractical.com/rt/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

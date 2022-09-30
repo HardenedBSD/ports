@@ -6,10 +6,12 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Variant discovery in high-throughput sequencing data
+WWW=		https://gatk.broadinstitute.org/hc/en-us
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
+BROKEN=		fails to build: Build failed with an exception
 BROKEN_FreeBSD_12_powerpc64=	fails to build: String index out of range: -1
 
 BUILD_DEPENDS=	gradle:devel/gradle

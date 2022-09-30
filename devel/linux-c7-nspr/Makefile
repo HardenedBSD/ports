@@ -1,5 +1,3 @@
-# Created by: Piotr Kubaj <pkubaj@anongoth.pl>
-
 PORTNAME=	nspr
 PORTVERSION=	4.25.0
 DISTVERSIONSUFFIX=	-2.el7_9
@@ -7,6 +5,7 @@ CATEGORIES=	devel linux
 
 MAINTAINER=	emulation@FreeBSD.org
 COMMENT=	Netscape Portable Runtime (Linux CentOS ${LINUX_DIST_VER})
+WWW=		https://developer.mozilla.org/docs/Mozilla/Projects/NSPR
 
 USES=		linux:c7
 USE_LDCONFIG=	yes

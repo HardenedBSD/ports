@@ -1,12 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	minify
-PORTVERSION=	2.11.12
+PORTVERSION=	2.12.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc www
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Go minifiers for web formats
+WWW=		https://github.com/tdewolff/minify
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,7 +24,7 @@ GH_TUPLE=	djherbis:atime:v1.1.0:djherbis_atime/vendor/github.com/djherbis/atime 
 		golang:sys:05e143d:golang_sys/vendor/golang.org/x/sys \
 		matryer:try:9ac251b:matryer_try/vendor/github.com/matryer/try \
 		spf13:pflag:d5e0c06:spf13_pflag/vendor/github.com/spf13/pflag \
-		tdewolff:parse:v2.6.1:tdewolff_parse/vendor/github.com/tdewolff/parse/v2
+		tdewolff:parse:v2.6.3:tdewolff_parse/vendor/github.com/tdewolff/parse/v2
 USE_GITHUB=	yes
 
 .include <bsd.port.mk>

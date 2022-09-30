@@ -93,12 +93,15 @@
     SUBDIR += icingaweb2-module-grafana
     SUBDIR += icingaweb2-module-graphite
     SUBDIR += icingaweb2-module-idoreports
+    SUBDIR += icingaweb2-module-incubator
     SUBDIR += icingaweb2-module-ipl
+    SUBDIR += icingaweb2-module-jira
     SUBDIR += icingaweb2-module-map
     SUBDIR += icingaweb2-module-pdfexport
     SUBDIR += icingaweb2-module-reactbundle
     SUBDIR += icingaweb2-module-reporting
     SUBDIR += icingaweb2-module-vsphere
+    SUBDIR += icingaweb2-module-vspheredb
     SUBDIR += icingaweb2-module-x509
     SUBDIR += icmpmonitor
     SUBDIR += icmpquery
@@ -122,6 +125,7 @@
     SUBDIR += librenms
     SUBDIR += libsmi
     SUBDIR += lldpd
+    SUBDIR += mac-telnet
     SUBDIR += mbrowse
     SUBDIR += mdata-client
     SUBDIR += metronome
@@ -311,7 +315,7 @@
     SUBDIR += py-napalm
     SUBDIR += py-napalm-logs
     SUBDIR += py-ncclient
-    SUBDIR += py-netbox-plugin-extensions
+    SUBDIR += py-netutils
     SUBDIR += py-nxapi-plumbing
     SUBDIR += py-opn-cli
     SUBDIR += py-pdagent

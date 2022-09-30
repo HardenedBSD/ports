@@ -1,5 +1,3 @@
-# Created by: Oliver Braun <obraun@FreeBSD.org>
-
 PORTNAME=	darcs
 PORTVERSION=	2.16.5
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Distributed, interactive, smart revision control system
+WWW=		http://darcs.net/
 
 LICENSE=	GPLv2+
 

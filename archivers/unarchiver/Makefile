@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	unar
 PORTVERSION=	1.10.1
 PORTREVISION=	21
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}_src
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Unarchiver for a vast variety of file formats
+WWW=		https://unarchiver.c3.cx/commandline
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/License.txt

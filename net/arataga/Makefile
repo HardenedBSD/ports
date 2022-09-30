@@ -1,9 +1,7 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	arataga
 PORTVERSION=	0.5.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	SF/sobjectizer/oess/oess-2:oess
 DISTFILES=	oess-2.2.3-full.tar.bz2:oess
@@ -13,6 +11,7 @@ PATCHFILES=	0ec1144117ae.patch:-p2 1c78ad1dbca8.patch:-p2
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Performant SOCKS5/HTTP1.1 proxy server
+WWW=		https://github.com/Stiffstream/arataga
 
 LICENSE=	AGPLv3
 
@@ -37,7 +36,7 @@ GH_ACCOUNT=	Stiffstream
 GH_PROJECT=	noexcept-ctcheck:nectc restinio:rinio so5extra:so5e
 GH_TAGNAME=	v.1.0.0:nectc v.0.6.13:rinio v.1.4.1:so5e
 
-_SO5_LIBVER=	5.7.4.1
+_SO5_LIBVER=	5.7.4.2
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*.md

@@ -1,10 +1,12 @@
 PORTNAME=	cpprestsdk
 PORTVERSION=	2.10.16
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
 MAINTAINER=	projects@phess.net
 COMMENT=	Microsoft C++ REST SDK
+WWW=		https://github.com/Microsoft/cpprestsdk
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../license.txt

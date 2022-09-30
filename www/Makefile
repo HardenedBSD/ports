@@ -41,6 +41,7 @@
     SUBDIR += baculum-api
     SUBDIR += baculum-common
     SUBDIR += baculum-web
+    SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
     SUBDIR += bareos18-webui
@@ -122,6 +123,7 @@
     SUBDIR += drupal9
     SUBDIR += drush
     SUBDIR += dtse
+    SUBDIR += dufs
     SUBDIR += e107
     SUBDIR += e2guardian
     SUBDIR += edbrowse
@@ -324,7 +326,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki135
-    SUBDIR += mediawiki136
     SUBDIR += mediawiki137
     SUBDIR += mediawiki138
     SUBDIR += mergelog
@@ -406,7 +407,6 @@
     SUBDIR += mongoose
     SUBDIR += mongrel2
     SUBDIR += monolith
-    SUBDIR += moodle310
     SUBDIR += moodle311
     SUBDIR += moodle39
     SUBDIR += moodle40
@@ -461,6 +461,7 @@
     SUBDIR += oneshot
     SUBDIR += onionbalance
     SUBDIR += onionshare
+    SUBDIR += onionshare-cli
     SUBDIR += onlyoffice-documentserver
     SUBDIR += opencart
     SUBDIR += openresty
@@ -1401,6 +1402,7 @@
     SUBDIR += pserv
     SUBDIR += publicfile
     SUBDIR += punbb
+    SUBDIR += py-Pituophis
     SUBDIR += py-Tenjin
     SUBDIR += py-WebError
     SUBDIR += py-WebFlash
@@ -1409,6 +1411,7 @@
     SUBDIR += py-aioh2
     SUBDIR += py-aiohttp
     SUBDIR += py-aiohttp-middlewares
+    SUBDIR += py-aiohttp-session
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp_cors
     SUBDIR += py-aioquic
@@ -1419,7 +1422,6 @@
     SUBDIR += py-azure-storage
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
-    SUBDIR += py-beautifulsoup449
     SUBDIR += py-betamax
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
@@ -1435,6 +1437,7 @@
     SUBDIR += py-caldav
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
+    SUBDIR += py-cinemagoer
     SUBDIR += py-cookies
     SUBDIR += py-crossplane
     SUBDIR += py-css-parser
@@ -1452,6 +1455,7 @@
     SUBDIR += py-dj40-django-mptt
     SUBDIR += py-dj40-django-prometheus
     SUBDIR += py-dj40-django-redis
+    SUBDIR += py-dj40-django-rich
     SUBDIR += py-dj40-django-tables2
     SUBDIR += py-dj40-django-taggit
     SUBDIR += py-dj40-django-timezone-field
@@ -1536,6 +1540,7 @@
     SUBDIR += py-django-registration-redux
     SUBDIR += py-django-reversion
     SUBDIR += py-django-reversion-compare
+    SUBDIR += py-django-rich
     SUBDIR += py-django-sekizai
     SUBDIR += py-django-simple-captcha
     SUBDIR += py-django-simple-history
@@ -1559,6 +1564,7 @@
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django32
     SUBDIR += py-django40
+    SUBDIR += py-django41
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
@@ -1568,6 +1574,7 @@
     SUBDIR += py-djangorestframework-xml
     SUBDIR += py-draftjs-exporter
     SUBDIR += py-drf-yasg
+    SUBDIR += py-dropbox
     SUBDIR += py-dtflickr
     SUBDIR += py-enmerkar
     SUBDIR += py-fake-useragent
@@ -1716,10 +1723,13 @@
     SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
+    SUBDIR += py-requests-futures0
+    SUBDIR += py-requests-gssapi
     SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib
     SUBDIR += py-requests-toolbelt
     SUBDIR += py-requests-unixsocket
+    SUBDIR += py-requests-wsgi-adapter
     SUBDIR += py-requests_ntlm
     SUBDIR += py-respx
     SUBDIR += py-restclient
@@ -1735,6 +1745,7 @@
     SUBDIR += py-secure-cookie
     SUBDIR += py-selector
     SUBDIR += py-selenium
+    SUBDIR += py-semiphemeral
     SUBDIR += py-sentinelhub
     SUBDIR += py-slimit
     SUBDIR += py-slumber
@@ -1772,6 +1783,7 @@
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
+    SUBDIR += py-werkzeug21
     SUBDIR += py-wfuzz
     SUBDIR += py-whitenoise
     SUBDIR += py-wikipedia
@@ -1792,6 +1804,8 @@
     SUBDIR += qt5-websockets
     SUBDIR += qt5-websockets-qml
     SUBDIR += qt5-webview
+    SUBDIR += qt6-webchannel
+    SUBDIR += qt6-websockets
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale
@@ -1835,6 +1849,7 @@
     SUBDIR += rubygem-amazon-ecs
     SUBDIR += rubygem-anemone
     SUBDIR += rubygem-asana
+    SUBDIR += rubygem-asana0
     SUBDIR += rubygem-async-http
     SUBDIR += rubygem-async-pool
     SUBDIR += rubygem-async-rest
@@ -2029,6 +2044,8 @@
     SUBDIR += rubygem-protocol-http
     SUBDIR += rubygem-protocol-http1
     SUBDIR += rubygem-protocol-http2
+    SUBDIR += rubygem-protocol-rack
+    SUBDIR += rubygem-protocol-rack01
     SUBDIR += rubygem-protocol-websocket
     SUBDIR += rubygem-puma
     SUBDIR += rubygem-puma_worker_killer
@@ -2060,7 +2077,6 @@
     SUBDIR += rubygem-rails52
     SUBDIR += rubygem-rails60
     SUBDIR += rubygem-rails61
-    SUBDIR += rubygem-rails61-node16
     SUBDIR += rubygem-rails70
     SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
@@ -2093,6 +2109,7 @@
     SUBDIR += rubygem-responders-rails52
     SUBDIR += rubygem-responders-rails60
     SUBDIR += rubygem-responders-rails61
+    SUBDIR += rubygem-responders-rails70
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2119,6 +2136,7 @@
     SUBDIR += rubygem-sinatra-r18n
     SUBDIR += rubygem-sinatra-respond_to
     SUBDIR += rubygem-sinatra1
+    SUBDIR += rubygem-sitemap_generator
     SUBDIR += rubygem-smashing
     SUBDIR += rubygem-socksify
     SUBDIR += rubygem-stimulus-rails
@@ -2136,7 +2154,6 @@
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
     SUBDIR += rubygem-uglifier
-    SUBDIR += rubygem-uglifier-node16
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
     SUBDIR += rubygem-unicorn-worker-killer
@@ -2176,6 +2193,7 @@
     SUBDIR += sitecopy
     SUBDIR += slowcgi
     SUBDIR += slowhttptest
+    SUBDIR += smarty
     SUBDIR += smarty2
     SUBDIR += smarty3
     SUBDIR += smb_auth
@@ -2230,6 +2248,7 @@
     SUBDIR += tomcat-devel
     SUBDIR += tomcat-native
     SUBDIR += tomcat10
+    SUBDIR += tomcat101
     SUBDIR += tomcat85
     SUBDIR += tomcat9
     SUBDIR += tomee
@@ -2316,6 +2335,7 @@
     SUBDIR += w3m
     SUBDIR += w3m-img
     SUBDIR += w3mir
+    SUBDIR += wabt
     SUBDIR += web2ldap
     SUBDIR += webalizer
     SUBDIR += webbrowser

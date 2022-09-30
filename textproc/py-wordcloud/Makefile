@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	wordcloud
 DISTVERSION=	1.8.2.2
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Little word cloud generator in Python
+WWW=		https://amueller.github.io/word_cloud/
 
 LICENSE=	MIT
 

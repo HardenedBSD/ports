@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	train
 PORTVERSION=	3.10.1
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Transport interface to talk to different backends
+WWW=		https://github.com/inspec/train
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

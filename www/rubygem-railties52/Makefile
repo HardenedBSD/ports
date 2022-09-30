@@ -1,13 +1,12 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	railties
-PORTVERSION=	5.2.8
+PORTVERSION=	5.2.8.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	52
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Rails internals bootup, plugins, generators, and rake tasks
+WWW=		https://github.com/rails/rails/tree/main/railties
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

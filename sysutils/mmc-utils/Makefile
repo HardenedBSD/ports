@@ -1,5 +1,3 @@
-# Created by: Marius Strobl <marius@FreeBSD.org>
-
 PORTNAME=	mmc-utils
 DISTVERSION=	20211202
 DISTVERSIONSUFFIX=	-${MMC_GITSHASH}
@@ -8,6 +6,7 @@ MASTER_SITES=	https://git.kernel.org/pub/scm/utils/mmc/mmc-utils.git/snapshot/${
 
 MAINTAINER=	marius@FreeBSD.org
 COMMENT=	Userspace tools for MMC/SD devices
+WWW=		https://www.kernel.org/doc/Documentation/mmc/mmc-tools.txt
 
 LICENSE=	BSD3CLAUSE GPLv2
 LICENSE_COMB=	multi

@@ -1,13 +1,11 @@
-# Created by: Dirk Froemberg <dirk@FreeBSD.org>
-
 PORTNAME=	openssl
-PORTVERSION=	3.0.3
-PORTREVISION=	1
+PORTVERSION=	3.0.5
 CATEGORIES=	security devel
 PKGNAMESUFFIX=	-quictls
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	QUIC capable fork of OpenSSL
+WWW=		https://www.github.com/quictls/openssl
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -26,7 +24,7 @@ USES=		cpe perl5
 USE_PERL5=	build
 USE_GITHUB=	yes
 GH_ACCOUNT=	${PKGNAMESUFFIX:S/-//}
-GH_TAGNAME=	368c9d581b17f0bbe425f8dedeaa7b864a7b29ce
+GH_TAGNAME=	75e940831d0570d6b020cfebf128ae500f424867
 
 TEST_TARGET=	test
 

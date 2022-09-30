@@ -1,7 +1,5 @@
-# Created by: Marc Fonvieille <blackend@FreeBSD.org>
-
 PORTNAME=	freebsd-doc
-PORTVERSION=	20220702
+PORTVERSION=	20220825
 PORTEPOCH=	1
 CATEGORIES=	misc docs
 MASTER_SITES=	LOCAL/blackend

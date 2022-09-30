@@ -1,0 +1,25 @@
+--- src/tests/Makefile.am
++++ src/tests/Makefile.am
+@@ -24,7 +24,7 @@ t.query.config: t.query.config.in Makefile
+ ENVIRON_TESTS = t.abort t.env t.ctype t.bogodir t.leakfind t.u_fpe
+ 
+ if ENABLE_UNICODE
+-ENCODING_TESTS=t.encoding
++ENCODING_TESTS=
+ endif
+ 
+ PARSING_TESTS = \
+@@ -47,11 +47,11 @@ PARSING_TESTS = \
+ 	t.crash-invalid-base64 \
+ 	t.message_addr t.message_id t.queue_id
+ 
+-WORDLIST_TESTS = t.dump.load t.nonascii.replace t.maint t.robx t.regtest t.upgrade.subnet.prefix t.multiple.wordlists t.probe t.bf_compact
++WORDLIST_TESTS = t.nonascii.replace t.maint t.robx t.regtest t.upgrade.subnet.prefix t.multiple.wordlists t.probe t.bf_compact
+ 
+ SCORING_TESTS = t.score1 t.score2 t.systest t.grftest t.wordhist
+ 
+-BULKMODE_TESTS = t.bulkmode t.MH t.maildir t.bogoutil
++BULKMODE_TESTS = 
+ 
+ INTEGRITY_TESTS = t.lock1 t.lock3 t.valgrind
+ # INTEGRITY_TESTS += t.lock2

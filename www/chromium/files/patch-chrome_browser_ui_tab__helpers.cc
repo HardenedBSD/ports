@@ -1,6 +1,6 @@
---- chrome/browser/ui/tab_helpers.cc.orig	2022-06-17 14:20:10 UTC
+--- chrome/browser/ui/tab_helpers.cc.orig	2022-09-24 10:57:32 UTC
 +++ chrome/browser/ui/tab_helpers.cc
-@@ -196,7 +196,7 @@
+@@ -200,7 +200,7 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	chef-config
 PORTVERSION=	16.18.0
 CATEGORIES=	sysutils rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Default configuration and config loading library for Chef
+WWW=		https://github.com/chef/chef/tree/main/chef-config
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

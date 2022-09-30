@@ -1,13 +1,12 @@
-# Created by: Felix Palmen <felix@palmen-it.de>
-
 PORTNAME=	simavr
 PORTVERSION=	1.7
 DISTVERSIONPREFIX=	v
 PORTREVISION=	2
 CATEGORIES=	devel emulators
 
-MAINTAINER=	felix@palmen-it.de
+MAINTAINER=	zirias@FreeBSD.org
 COMMENT=	Simulator for several Atmel AVR chips
+WWW=		https://github.com/buserror/simavr
 
 LICENSE=	GPLv3
 

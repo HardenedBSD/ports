@@ -1,5 +1,3 @@
-# Created by: Espen Skoglund <esk@ira.uka.de>
-
 PORTNAME=	binutils
 PORTVERSION=	2.37
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	arm-elf-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU binutils for vanilla ARM cross-development
+WWW=		https://www.gnu.org/software/binutils
 
 USE_HARDENING=	pie:off relro:off
 

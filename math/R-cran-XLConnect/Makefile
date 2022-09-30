@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	XLConnect
 PORTVERSION=	1.0.5
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	R package for manipulating Microsoft Excel files
+WWW=		https://cran.r-project.org/package=XLConnect
 
 LICENSE=	GPLv3
 

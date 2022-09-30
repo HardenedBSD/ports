@@ -1,5 +1,3 @@
-# Created by: David Naylor <naylor.b.david@gmail.com>
-
 PORTNAME=	wine-mono
 DISTVERSION=	5.1.1
 DISTVERSIONSUFFIX=-x86
@@ -10,6 +8,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	gerald@FreeBSD.org
 COMMENT=	Mono .NET implementation for Wine
+WWW=		https://wiki.winehq.org/Mono
 
 LICENSE=	MIT GPLv2 LGPL20
 LICENSE_COMB=	multi

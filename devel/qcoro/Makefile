@@ -5,13 +5,14 @@ CATEGORIES=	devel kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Coroutines for Qt
+WWW=		https://github.com/danvratil/qcoro
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSES/MIT.txt
 
 USES=		cmake compiler:c++17-lang pkgconfig qt:5
 USE_QT=		concurrent core dbus network testlib websockets \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	danvratil

@@ -1,5 +1,3 @@
-# Created by: Romain Tartière <romain@blogreen.org>
-
 PORTNAME=	pavucontrol
 PORTVERSION=	5.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://freedesktop.org/software/pulseaudio/${PORTNAME}/
 
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	GTK mixer for PulseAudio
+WWW=		https://freedesktop.org/software/pulseaudio/pavucontrol/
 
 USE_HARDENING=	safestack
 

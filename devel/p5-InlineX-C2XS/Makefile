@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	InlineX-C2XS
 PORTVERSION=	0.27
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to create an XS file from an Inline C file
+WWW=		https://metacpan.org/release/InlineX-C2XS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

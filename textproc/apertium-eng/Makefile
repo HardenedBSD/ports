@@ -1,10 +1,12 @@
 PORTNAME=	apertium-eng
 PORTVERSION=	0.1.0.20220212
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Apertium monolingual language package for English
+WWW=		https://www.apertium.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

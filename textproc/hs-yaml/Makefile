@@ -4,6 +4,7 @@ CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Utilities for converting YAML and JSON documents back and forth
+WWW=		https://github.com/snoyberg/yaml/
 
 LICENSE=	BSD3CLAUSE
 
@@ -59,7 +60,7 @@ USE_CABAL=	OneTuple-0.3.1_2 \
 		vector-algorithms-0.8.0.4_1 \
 		witherable-0.4.2_2
 
-EXECUTABLES=	json2yaml yaml2json
-CABAL_FLAGS=	-no-exe
+CABAL_EXECUTABLES=	json2yaml yaml2json
+CABAL_FLAGS=		-no-exe
 
 .include <bsd.port.mk>

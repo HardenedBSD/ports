@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	mysqlbigram
 PORTVERSION=	1.0.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	bi_gram-src-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple n-gram (bi-gram) fulltext parser plugin for MySQL
+WWW=		http://mysqlbigram.googlepages.com/
 
 LICENSE=	LGPL21
 

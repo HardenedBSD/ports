@@ -6,12 +6,15 @@ CATEGORIES=	security math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library that implements homomorphic encryption
+WWW=		https://github.com/snucrypto/HEAAN
 
 LICENSE=	CC-BY-3.0
 LICENSE_FILE=	${WRKSRC}/../../LICENSE
 
 BROKEN_i386=	error: __int128 is not supported on this target
 BROKEN_powerpc=	error: __int128 is not supported on this target
+BROKEN_armv6=	error: __int128 is not supported on this target
+BROKEN_armv7=	error: __int128 is not supported on this target
 
 LIB_DEPENDS=	libntl.so:math/ntl
 

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	libgpkg
 PORTVERSION=	0.9.18
 PORTREVISION=	3
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	SQLite 3 extension of minimal OGC GeoPackage implementation
+WWW=		https://github.com/luciad/libgpkg
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

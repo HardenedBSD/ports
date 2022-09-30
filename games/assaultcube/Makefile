@@ -1,5 +1,3 @@
-# Created by: alepulver
-
 PORTNAME=	assaultcube
 PORTVERSION=	1.2.0.2
 PORTREVISION=	7
@@ -9,6 +7,7 @@ DISTNAME=	AssaultCube_v${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Total conversion of the FPS game called Cube
+WWW=		https://assault.cubers.net/
 
 LICENSE=	ACUBE CUBE MIT OTHER
 LICENSE_COMB=	multi
@@ -36,6 +35,9 @@ OPTIONS_DEFINE=	DOCS PORT_ENET
 OPTIONS_MULTI=	BUILD
 OPTIONS_MULTI_BUILD=	CLIENT DEDICATED MASTER
 OPTIONS_DEFAULT=	CLIENT DEDICATED
+
+MPROTECT_DISABLE=	bin/assaultcube_client
+PAGEEXEC_DISABLE=	bin/assaultcube_client
 
 CLIENT_DESC=	Build client
 CLIENT_USES=		compiler:c++11-lang gettext-runtime gl openal:al sdl \

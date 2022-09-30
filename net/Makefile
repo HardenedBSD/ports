@@ -218,7 +218,6 @@
     SUBDIR += gspoof
     SUBDIR += gssdp
     SUBDIR += gssdp14
-    SUBDIR += gstreamer1-plugins-libmms
     SUBDIR += gstreamer1-plugins-srtp
     SUBDIR += gtk-vnc
     SUBDIR += guacamole-server
@@ -317,6 +316,7 @@
     SUBDIR += kidentitymanagement
     SUBDIR += kimap
     SUBDIR += kio-gdrive
+    SUBDIR += kio-zeroconf
     SUBDIR += kippo
     SUBDIR += kitinerary
     SUBDIR += kldap
@@ -391,6 +391,7 @@
     SUBDIR += libopennet
     SUBDIR += liboping
     SUBDIR += libosip2
+    SUBDIR += libpaho-mqtt3
     SUBDIR += libpcap
     SUBDIR += libpcapnav
     SUBDIR += libpfctl
@@ -474,6 +475,7 @@
     SUBDIR += mrouted
     SUBDIR += mrtparse
     SUBDIR += msend
+    SUBDIR += msoak
     SUBDIR += mtr
     SUBDIR += mtr-nox11
     SUBDIR += multicat
@@ -545,12 +547,14 @@
     SUBDIR += onedrive
     SUBDIR += onenetd
     SUBDIR += onioncat
+    SUBDIR += onionprobe
     SUBDIR += ooni-mini
     SUBDIR += ooni-probe-cli
     SUBDIR += opal
     SUBDIR += open-isns
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
+    SUBDIR += openbgpd7
     SUBDIR += openldap24-client
     SUBDIR += openldap24-server
     SUBDIR += openldap25-client
@@ -1025,6 +1029,7 @@
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
     SUBDIR += py-avahi
+    SUBDIR += py-cepa
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-cloudflare-scrape-js2py
@@ -1088,13 +1093,7 @@
     SUBDIR += py-pypacker
     SUBDIR += py-pypcap
     SUBDIR += py-pyroute2
-    SUBDIR += py-pyroute2.core
-    SUBDIR += py-pyroute2.ethtool
-    SUBDIR += py-pyroute2.ipset
     SUBDIR += py-pyroute2.minimal
-    SUBDIR += py-pyroute2.ndb
-    SUBDIR += py-pyroute2.nftables
-    SUBDIR += py-pyroute2.nslink
     SUBDIR += py-pyroute2.protocols
     SUBDIR += py-pysendfile
     SUBDIR += py-pyshark
@@ -1170,6 +1169,7 @@
     SUBDIR += qoauth-qt5
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth
+    SUBDIR += qt6-networkauth
     SUBDIR += quagga
     SUBDIR += quiche
     SUBDIR += quiterss
@@ -1338,7 +1338,6 @@
     SUBDIR += rubygem-omniauth-kerberos
     SUBDIR += rubygem-omniauth-oauth
     SUBDIR += rubygem-omniauth-oauth2
-    SUBDIR += rubygem-omniauth-oauth2-v1
     SUBDIR += rubygem-omniauth-openid
     SUBDIR += rubygem-omniauth-salesforce
     SUBDIR += rubygem-omniauth-twitter
@@ -1607,7 +1606,6 @@
     SUBDIR += yggdrasil
     SUBDIR += yptransitd
     SUBDIR += zebra-server
-    SUBDIR += zeroconf-ioslave
     SUBDIR += zerotier
     SUBDIR += zillion
     SUBDIR += zmap

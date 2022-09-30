@@ -1,13 +1,12 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	rails
-PORTVERSION=	5.2.8
+PORTVERSION=	5.2.8.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	52
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Full-stack web application framework
+WWW=		https://github.com/rails/rails
 
 LICENSE=	MIT
 

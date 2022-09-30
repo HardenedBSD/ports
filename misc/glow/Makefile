@@ -1,11 +1,12 @@
 PORTNAME=	glow
 DISTVERSION=	g20200721
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	misc # machine-learning
 PKGNAMESUFFIX=	-nn-compiler
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Machine learning compiler and execution engine
+WWW=		https://github.com/pytorch/glow
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

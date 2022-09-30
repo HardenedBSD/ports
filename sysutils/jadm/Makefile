@@ -1,5 +1,3 @@
-# Created by: Nikolay Dachev <jadm@dachev.info>
-
 PORTNAME=	jadm
 PORTVERSION=	1.0
 CATEGORIES=	sysutils python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jadm@dachev.info
 COMMENT=	FreeBSD jail framework with zfs, vnet and jail.conf support
+WWW=		https://github.com/NikolayDachev/jadm
 
 LICENSE=	BSD3CLAUSE
 

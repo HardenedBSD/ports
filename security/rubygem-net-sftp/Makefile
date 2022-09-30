@@ -1,5 +1,3 @@
-# Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-
 PORTNAME=	net-sftp
 PORTVERSION=	3.0.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Implementation of the SFTP client protocol
+WWW=		https://github.com/net-ssh/net-sftp
 
 LICENSE=	MIT
 

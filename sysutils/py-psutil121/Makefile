@@ -1,5 +1,3 @@
-# Created by: Ju Pengfei <jupengfei@gmail.com>
-
 PORTNAME=	psutil
 PORTVERSION=	1.2.1
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	121
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Process utilities module for Python
+WWW=		https://pypi.org/project/psutil/
 
 LICENSE=	BSD3CLAUSE
 

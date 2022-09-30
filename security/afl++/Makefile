@@ -1,12 +1,11 @@
-# Created by: Fabian Keil <fk@fabiankeil.de>
-
 PORTNAME=	afl
 PORTVERSION=	4.00c
 CATEGORIES=	security
 PKGNAMESUFFIX=	++-${FLAVOR}
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast instrumented fuzzer
+WWW=		https://aflplus.plus/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/docs/COPYING

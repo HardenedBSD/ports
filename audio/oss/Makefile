@@ -1,5 +1,3 @@
-# Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-
 PORTNAME=	oss
 DISTVERSION=	4.2-build2019
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-v${DISTVERSION}-src-bsd
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Open Sound System from 4Front Technologies
+WWW=		http://opensound.com/
 
 LICENSE=	BSD2CLAUSE
 
@@ -28,6 +27,7 @@ CFLAGS+=	-Wno-compare-distinct-pointer-types
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 CONFIGURE_ENV=	HOSTCC="${CC}"
+MAKE_ENV=	WERROR="" # fix build: otherwise sys/conf/kmod.mk adds -Werror that breaks build
 ALL_TARGET=	all install
 
 SUB_FILES=	pkg-install pkg-deinstall

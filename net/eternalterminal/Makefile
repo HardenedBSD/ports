@@ -5,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	willtisdale@gmail.com
 COMMENT=	Remote shell that reconnects without interrupting session
+WWW=		https://eternalterminal.dev/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -21,6 +22,8 @@ GH_ACCOUNT=	MisterTea
 GH_PROJECT=	EternalTerminal
 
 CMAKE_ON=	DISABLE_VCPKG
+
+ALL_TARGET=	generated-code all # workaround for a suspected dependency problem, see https://github.com/MisterTea/EternalTerminal/issues/528
 
 CONFLICTS_INSTALL=	linux-enemyterritory # bin/et
 

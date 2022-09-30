@@ -1,5 +1,3 @@
-# Created by: alepulver
-
 PORTNAME=	joequake
 PORTVERSION=	0.15b1329
 PORTREVISION=	10
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Improved NQ engine with ZQuake and FuhQuake graphical effects
+WWW=		http://runecentral.com/joequake/
 
 LICENSE=	GPLv2+
 

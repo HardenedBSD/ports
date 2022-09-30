@@ -1,5 +1,3 @@
-# Created by: Sevan Janiyan <venture37@geeklan.co.uk>
-
 PORTNAME=	chillispot
 PORTVERSION=	1.0
 PORTREVISION=	12
@@ -10,6 +8,7 @@ MASTER_SITES=	http://www.chillispot.info/download/ \
 
 MAINTAINER=	venture37@geeklan.co.uk
 COMMENT=	Wireless LAN Access Point Controller
+WWW=		http://www.chillispot.info
 
 CONFLICTS=	coovachilli
 

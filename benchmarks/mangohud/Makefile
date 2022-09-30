@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	mangohud
 PORTVERSION=	0.6.5
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTFILES=	imgui-1.81-1-wrap.zip:igw
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Vulkan/OpenGL overlay for CPU/GPU monitoring
+WWW=		https://github.com/flightlessmango/MangoHud
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

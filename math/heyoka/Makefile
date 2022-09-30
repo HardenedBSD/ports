@@ -1,11 +1,12 @@
 PORTNAME=	heyoka
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.18.0
+DISTVERSION=	0.19.0
 PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ library for ODE integration via Taylor's method and LLVM
+WWW=		https://bluescarni.github.io/heyoka/
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYING

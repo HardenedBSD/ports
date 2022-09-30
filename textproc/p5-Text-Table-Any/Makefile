@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Text-Table-Any
 PORTVERSION=	0.115
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate text table using one of several backends
+WWW=		https://metacpan.org/release/Text-Table-Any
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

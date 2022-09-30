@@ -103,6 +103,7 @@
     SUBDIR += parallels-tools
     SUBDIR += pcem
     SUBDIR += pcemu
+    SUBDIR += pcsx2
     SUBDIR += pcsxr
     SUBDIR += ppsspp
     SUBDIR += ppsspp-qt5
@@ -116,6 +117,7 @@
     SUBDIR += qemu-user-static
     SUBDIR += qemu-user-static-devel
     SUBDIR += qemu6
+    SUBDIR += qemu70
     SUBDIR += qmc2
     SUBDIR += quasi88
     SUBDIR += reicast

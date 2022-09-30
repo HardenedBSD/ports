@@ -6,12 +6,13 @@ DISTNAME=	Arqiver-${PORTVERSION}
 
 MAINTAINER=	rigoletto@FreeBSD.org
 COMMENT=	Simple Qt archive manager
+WWW=		https://github.com/tsujan/Arqiver
 
 LICENSE=	GPLv3
 
 USES=		cmake qt:5 tar:xz xorg
 USE_XORG=	xcb
-USE_QT=		buildtools_build qmake_build \
+USE_QT=		buildtools:build qmake:build \
 		core gui linguist svg widgets \
 		x11extras
 

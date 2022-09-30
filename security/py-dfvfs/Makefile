@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	dfvfs
 PORTVERSION=	20210606
 CATEGORIES=	security devel python
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Digital Forensics Virtual File System
+WWW=		https://github.com/log2timeline/dfvfs
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

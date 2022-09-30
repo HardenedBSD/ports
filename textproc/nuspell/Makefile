@@ -1,11 +1,11 @@
 PORTNAME=	nuspell
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.1.0
-PORTREVISION=	1
+DISTVERSION=	5.1.2
 CATEGORIES=	textproc
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Fast and safe spellchecking C++ library
+WWW=		https://nuspell.github.io/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER

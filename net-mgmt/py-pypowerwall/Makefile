@@ -1,13 +1,12 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	pypowerwall
-PORTVERSION=	0.5.0
+PORTVERSION=	0.6.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-mgmt python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Python interface for Tesla Powerwall and solar power data
+WWW=		https://github.com/jasonacox/pypowerwall
 
 LICENSE=	MIT
 

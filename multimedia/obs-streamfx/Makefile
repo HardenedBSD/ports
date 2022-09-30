@@ -4,6 +4,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	OBS Studio Plugin: Modern effects
+WWW=		https://github.com/Xaymar/obs-StreamFX
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libobs.so:multimedia/obs-studio
 
 USES=		cmake localbase:ldflags qt:5 # localbase:ldflags is related to https://github.com/Xaymar/obs-StreamFX/issues/828
-USE_QT=		core gui widgets buildtools_build qmake_build
+USE_QT=		core gui widgets buildtools:build qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Xaymar

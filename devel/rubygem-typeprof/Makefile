@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	typeprof
 PORTVERSION=	0.21.3
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Type analysis tool for Ruby code
+WWW=		https://github.com/ruby/typeprof
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

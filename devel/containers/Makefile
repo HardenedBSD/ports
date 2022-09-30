@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	containers
 DISTVERSION=	0.8.0-alpha.11
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Containers backed on dlang by std.experimental.allocator
+WWW=		https://github.com/economicmodeling/containers
 
 LICENSE=	BSL
 

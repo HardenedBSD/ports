@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	netif
 PORTVERSION=	1.0.20220211
 CATEGORIES=	net python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python network configuration library for FreeBSD
+WWW=		https://github.com/freenas/py-netif
 
 LICENSE=	BSD2CLAUSE
 

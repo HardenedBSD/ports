@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	dlib
 PORTVERSION=	0.19.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Math, XML, I/O streams, image and audio processing for D
+WWW=		https://github.com/gecko0307/dlib
 
 LICENSE=	BSL
 

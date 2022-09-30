@@ -1,5 +1,3 @@
-# Created by: Vasil Dimov <vd@FreeBSD.org>
-
 PORTNAME=	c-lightning
 # To build from an arbitrary git commit comment PORTVERSION and PORTREVISION (if present)
 PORTVERSION=	0.11.2
@@ -11,6 +9,7 @@ CATEGORIES=	net-p2p finance
 
 MAINTAINER=	vd@FreeBSD.org
 COMMENT=	Lightning Network implementation in C
+WWW=		https://github.com/ElementsProject/lightning
 
 LICENSE=	MIT
 

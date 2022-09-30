@@ -1,13 +1,12 @@
-# Created by: Daniel Morante <daniel@morante.net>
-
 PORTNAME=	zetacoin
 PORTVERSION=	0.13.2.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	daniel@morante.net
 COMMENT=	Peer-to-Peer crypto currency with quick transactions
+WWW=		https://github.com/zetacoin/zetacoin
 
 LICENSE=	MIT
 
@@ -27,7 +26,7 @@ SLAVE_PORT?=	no
 .if defined(SLAVE_PORT) && ${SLAVE_PORT} == "no"
 USES+=		desktop-file-utils qt:5
 USE_QT=		core gui network widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 
 BUILD_DEPENDS+=	protoc:devel/protobuf
 LIB_DEPENDS+=	libprotobuf.so:devel/protobuf

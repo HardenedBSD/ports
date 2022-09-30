@@ -1,12 +1,12 @@
-# Created by: Andrew Lewis <freeghb@gmail.com>
-
 PORTNAME=	prosody
 DISTVERSION=	0.12.1
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	https://prosody.im/downloads/source/
 
 MAINTAINER=	thomas@beingboiled.info
 COMMENT=	Simple extensible XMPP server written in Lua
+WWW=		https://www.prosody.im/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -46,8 +46,8 @@ USERS=		prosody
 GROUPS=		${USERS}
 
 USE_RC_SUBR=	prosody
-SUB_FILES=	pkg-deinstall
-SUB_LIST=	USERS=${USERS} GROUPS=${GROUPS} LUA_PREFIX=${LUA_PREFIX} LUA_CMD=${LUA_CMD}
+SUB_FILES=	pkg-message
+SUB_LIST=	USERS=${USERS} GROUPS=${GROUPS} LUA_PREFIX=${LUA_PREFIX} LUA_CMD=${LUA_CMD} PORTNAME="${PORTNAME}"
 PLIST_SUB=	PROSODY_USER=${USERS} PROSODY_GROUP=${GROUPS}
 
 post-install:

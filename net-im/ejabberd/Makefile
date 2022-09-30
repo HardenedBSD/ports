@@ -1,5 +1,6 @@
 PORTNAME=	ejabberd
 PORTVERSION=	22.05
+PORTREVISION=	1
 CATEGORIES=	net-im
 
 # See https://github.com/processone/ejabberd/issues/3819
@@ -8,6 +9,7 @@ PATCH_SITES+=	https://github.com/processone/ejabberd/commit/
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
+WWW=		https://www.ejabberd.im/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

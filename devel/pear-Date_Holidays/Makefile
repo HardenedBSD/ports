@@ -1,5 +1,3 @@
-# Created by: Thomas Abthorpe <thomas@goodking.ca>
-
 PORTNAME=	Date_Holidays
 PORTVERSION=	0.21.8
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR driver based class to calculate holidays
+WWW=		https://pear.php.net/package/Date_Holidays
 
 LICENSE=	PHP301
 

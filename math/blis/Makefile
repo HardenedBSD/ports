@@ -1,5 +1,3 @@
-# Created by: Johannes M Dieterich <jmd@FreeBSD.org>
-
 PORTNAME=	blis
 PORTVERSION=	0.8.1
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	math
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Software framework for high-performance BLAS-like libraries
+WWW=		https://github.com/flame/blis
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

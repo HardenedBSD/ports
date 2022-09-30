@@ -1,4 +1,3 @@
-# Created by: Andrew Thompson <thompsa@FreeBSD.org>
 # Check v4l_compat and v4l-utils slave ports
 
 PORTNAME?=	libv4l
@@ -9,6 +8,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT?=	Video4Linux library
+WWW?=		https://linuxtv.org/wiki/index.php/V4l-utils
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	dual

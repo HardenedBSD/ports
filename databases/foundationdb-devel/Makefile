@@ -1,12 +1,13 @@
 PORTNAME=	foundationdb-devel
 DISTVERSION=	7.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases
 
 # PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/pull/
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Distributed, transactional key-value store
+WWW=		https://www.foundationdb.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

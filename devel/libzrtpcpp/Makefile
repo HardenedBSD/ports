@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	libzrtpcpp
 PORTVERSION=	2.3.4
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU/ccrtp
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	ZRTP extension for GNU ccRTP
+WWW=		https://www.gnu.org/software/ccrtp/
 
 BROKEN=		incompatible with current SSL, bad C++ code
 

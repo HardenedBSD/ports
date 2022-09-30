@@ -1,5 +1,3 @@
-# Created by: Timothy Beyer <beyert@cs.ucr.edu>
-
 PORTNAME=	urweb
 PORTVERSION=	20150520
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.impredicative.com/ur/
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Ultimate host for embedded domain-specific languages
+WWW=		http://www.impredicative.com/ur/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

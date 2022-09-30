@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	slade
 PORTVERSION=	3.1.13
 PORTREVISION=	4
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Modern editor for Doom-engine based games and source ports
+WWW=		https://slade.mancubus.net/
 
 LICENSE=	GPLv2
 

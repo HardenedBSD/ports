@@ -1,11 +1,10 @@
-# Created by: Emmanuel Vadot <manu@FreeBSD.org>
-
 PORTNAME=	gpu-firmware-intel-kmod
 PORTVERSION=	20220511
 CATEGORIES=	graphics
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Firmware modules for ${FLAVOR} Intel GPUs
+WWW=		https://github.com/freebsd/drm-kmod-firmware
 
 LICENSE=	INTEL
 LICENSE_NAME=	Intel firmware license (i915)

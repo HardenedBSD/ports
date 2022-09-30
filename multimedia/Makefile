@@ -124,6 +124,7 @@
     SUBDIR += gstreamer1-vaapi
     SUBDIR += gstreamer1-validate
     SUBDIR += gstreamermm
+    SUBDIR += gtk-pipe-viewer
     SUBDIR += gtk-youtube-viewer
     SUBDIR += handbrake
     SUBDIR += haruna
@@ -230,6 +231,7 @@
     SUBDIR += mlt6
     SUBDIR += mlt6-qt5
     SUBDIR += mlt7
+    SUBDIR += mlt7-glaxnimate
     SUBDIR += mlt7-qt5
     SUBDIR += motion
     SUBDIR += mp3cd
@@ -293,6 +295,7 @@
     SUBDIR += phonon-vlc
     SUBDIR += photofilmstrip
     SUBDIR += php-pHash
+    SUBDIR += pipe-viewer
     SUBDIR += pipewire
     SUBDIR += pitivi
     SUBDIR += playerctl
@@ -322,13 +325,17 @@
     SUBDIR += py-periscope
     SUBDIR += py-pretty_midi
     SUBDIR += py-pymediainfo
+    SUBDIR += py-pysubs2
     SUBDIR += py-soco
     SUBDIR += py-subliminal
     SUBDIR += py-tvnamer
     SUBDIR += qmmp-plugin-pack-qt5
+    SUBDIR += qmmp-plugin-pack-qt6
     SUBDIR += qmmp-qt5
+    SUBDIR += qmmp-qt6
     SUBDIR += qpwgraph
     SUBDIR += qt5-multimedia
+    SUBDIR += qt6-multimedia
     SUBDIR += quodlibet
     SUBDIR += qwinff
     SUBDIR += rage
@@ -417,7 +424,6 @@
     SUBDIR += w_scan2
     SUBDIR += webcamd
     SUBDIR += webcamoid
-    SUBDIR += webvfx-qt5
     SUBDIR += wf-recorder
     SUBDIR += win32-codecs
     SUBDIR += winff

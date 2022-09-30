@@ -1,5 +1,3 @@
-# Created by: Conrad Meyer <cem@FreeBSD.org>
-
 PORTNAME=	elfutils
 DISTVERSION=	0.187
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	https://sourceware.org/elfutils/ftp/${PORTVERSION}/
 
 MAINTAINER=	cem@FreeBSD.org
 COMMENT=	Library for manipulating ELF files and partial implementation of binutils
+WWW=		https://sourceware.org/elfutils/
 
 LICENSE=	LGPL3 GPLv2+ GPLv3+
 LICENSE_COMB=	multi

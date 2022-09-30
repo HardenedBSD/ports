@@ -1,5 +1,3 @@
-# Created by: vanhu
-
 # TODO: - libipsec issue ?
 #       - cleanup...
 #       - SYSCONFDIR
@@ -13,6 +11,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	KAME racoon IKE daemon, ipsec-tools version
+WWW=		http://ipsec-tools.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 

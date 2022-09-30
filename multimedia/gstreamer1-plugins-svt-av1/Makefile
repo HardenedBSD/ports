@@ -1,11 +1,12 @@
 PORTNAME=	svt-av1
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.0
+DISTVERSION=	1.2.1
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	gstreamer1-plugins-
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	GStreamer (svt-av1) plugin
+WWW=		https://01.org/svt
 
 LICENSE=	LGPL21+ # based on SPDX header
 LICENSE_FILE=	${_LICENSE_STORE}/LGPL21
@@ -17,7 +18,7 @@ USE_GITLAB=	yes
 USE_GNOME=	glib20
 GL_ACCOUNT=	AOMediaCodec
 GL_PROJECT=	SVT-AV1
-GL_COMMIT=	6e87a1de98281840abebc030781780edd822bae5
+GL_COMMIT=	6e24fb7f5f7438bb04061dc1a159f0c5b882d847
 WRKSRC_SUBDIR=	gstreamer-plugin
 PLIST_FILES=	lib/gstreamer-1.0/libgstsvtav1enc.so
 

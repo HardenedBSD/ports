@@ -1,11 +1,10 @@
-# Created by: Anton Shterenlikht
-
 PORTNAME=	opencoarrays
-DISTVERSION=	2.9.0
+DISTVERSION=	2.10.0
 CATEGORIES=	lang parallel
 
 MAINTAINER=	miguel@gocobachi.dev
 COMMENT=	Transport layer for coarray Fortran compilers
+WWW=		http://www.opencoarrays.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

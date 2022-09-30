@@ -1,5 +1,3 @@
-# Created by: ade, archie
-
 PORTNAME=	caja
 PORTVERSION=	1.26.1
 CATEGORIES=	x11-fm mate
@@ -8,6 +6,7 @@ DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	File manager for the MATE desktop
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi

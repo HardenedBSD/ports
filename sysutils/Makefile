@@ -129,6 +129,7 @@
     SUBDIR += bksh
     SUBDIR += bkt
     SUBDIR += boot-extract
+    SUBDIR += bottom
     SUBDIR += boxbackup-devel
     SUBDIR += bpytop
     SUBDIR += brasero
@@ -137,6 +138,7 @@
     SUBDIR += bsd-splash-changer
     SUBDIR += bsdconfig
     SUBDIR += bsdcrashtar
+    SUBDIR += bsdebfetch
     SUBDIR += bsdfan
     SUBDIR += bsdhwmon
     SUBDIR += bsdinfo
@@ -355,6 +357,7 @@
     SUBDIR += f2
     SUBDIR += f3
     SUBDIR += facter
+    SUBDIR += fakertc
     SUBDIR += fand
     SUBDIR += fanout
     SUBDIR += fatback
@@ -475,7 +478,6 @@
     SUBDIR += gkrellm-trayicons
     SUBDIR += gkrellm2
     SUBDIR += gkrelltop
-    SUBDIR += gksu
     SUBDIR += glogg
     SUBDIR += glow
     SUBDIR += gnome-control-center
@@ -608,6 +610,7 @@
     SUBDIR += kio-fuse
     SUBDIR += kldfind
     SUBDIR += kldpatch
+    SUBDIR += kopia
     SUBDIR += kops
     SUBDIR += kpmcore
     SUBDIR += krename
@@ -632,7 +635,6 @@
     SUBDIR += libfvde
     SUBDIR += libg15
     SUBDIR += libg15render
-    SUBDIR += libgksu
     SUBDIR += libieee1284
     SUBDIR += libptytty
     SUBDIR += libretto-config
@@ -663,6 +665,7 @@
     SUBDIR += logstash-forwarder
     SUBDIR += logstash6
     SUBDIR += logstash7
+    SUBDIR += logstash8
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += loki
@@ -732,7 +735,6 @@
     SUBDIR += memtester
     SUBDIR += metalog
     SUBDIR += mfid
-    SUBDIR += mgeupsd
     SUBDIR += minikube
     SUBDIR += minimunin
     SUBDIR += minipot
@@ -772,6 +774,7 @@
     SUBDIR += most
     SUBDIR += mountsmb2
     SUBDIR += mping
+    SUBDIR += mprocs
     SUBDIR += mptd
     SUBDIR += msiklm
     SUBDIR += msktutil
@@ -797,6 +800,7 @@
     SUBDIR += ncdu
     SUBDIR += ndmpd
     SUBDIR += neofetch
+    SUBDIR += nerdctl
     SUBDIR += netevent
     SUBDIR += nfcutils
     SUBDIR += nfs-over-tls
@@ -897,6 +901,7 @@
     SUBDIR += p5-Proclet
     SUBDIR += p5-Quota
     SUBDIR += p5-Rex
+    SUBDIR += p5-RundeckAPI
     SUBDIR += p5-Samba-SIDhelper
     SUBDIR += p5-Schedule-At
     SUBDIR += p5-Schedule-Cron
@@ -1060,6 +1065,7 @@
     SUBDIR += py-dlipower
     SUBDIR += py-docker
     SUBDIR += py-drmaa
+    SUBDIR += py-elf_diff
     SUBDIR += py-execnet
     SUBDIR += py-filelike
     SUBDIR += py-filelock
@@ -1069,10 +1075,12 @@
     SUBDIR += py-hared
     SUBDIR += py-hcloud
     SUBDIR += py-honcho
+    SUBDIR += py-howdoi
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
     SUBDIR += py-ioztat
     SUBDIR += py-jailconf
+    SUBDIR += py-keep
     SUBDIR += py-leviathan
     SUBDIR += py-liquidctl
     SUBDIR += py-mitogen
@@ -1397,6 +1405,7 @@
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
     SUBDIR += tmux23
+    SUBDIR += topgrade
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl
@@ -1536,6 +1545,7 @@
     SUBDIR += watchfolder
     SUBDIR += watchman
     SUBDIR += watchmen
+    SUBDIR += waynergy
     SUBDIR += webmin
     SUBDIR += weedit
     SUBDIR += wemux

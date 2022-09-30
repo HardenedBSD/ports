@@ -1,5 +1,3 @@
-# Created by: Rong-En Fan <rafan@infor.org>
-
 PORTNAME=	bibtool
 PORTVERSION=	2.68
 CATEGORIES=	textproc print
@@ -8,6 +6,7 @@ DISTNAME=	BibTool-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command line manipulation of BibTeX files
+WWW=		https://ctan.org/tex-archive/biblio/bibtex/utils/bibtool/
 
 LICENSE=	GPLv2+
 

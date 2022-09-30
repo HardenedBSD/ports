@@ -5,6 +5,7 @@ CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Command line client for RFC 4918 WebDAV protocol
+WWW=		http://floss.scru.org/hDAV
 
 LICENSE=	GPLv3
 
@@ -121,6 +122,6 @@ USE_CABAL=	OneTuple-0.3.1_2 \
 		xml-types-0.3.8 \
 		zlib-0.6.3.0
 
-EXECUTABLES=	hdav
+CABAL_EXECUTABLES=	hdav
 
 .include <bsd.port.mk>

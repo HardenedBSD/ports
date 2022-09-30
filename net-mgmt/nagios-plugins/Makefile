@@ -1,7 +1,6 @@
-# Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-
 PORTNAME=	nagios-plugins
 DISTVERSION=	2.4.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/release-${DISTVERSION}/ \
@@ -9,6 +8,7 @@ MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/relea
 
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	Plugins for Nagios
+WWW=		https://nagios-plugins.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

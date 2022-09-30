@@ -1,11 +1,12 @@
 PORTNAME=	railties
-PORTVERSION=	7.0.3
+PORTVERSION=	7.0.3.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	70
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Rails internals: application bootup, plugins, generators, and rake tasks
+WWW=		https://github.com/rails/rails/tree/master/railties
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

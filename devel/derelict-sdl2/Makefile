@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	derelict-sdl2
 PORTVERSION=	2.1.4
 PORTREVISION=	4
@@ -8,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Dynamic bindings to SDL2 and its libraries for the D lang
+WWW=		https://github.com/DerelictOrg/DerelictSDL2
 
 LICENSE=	BSL
 

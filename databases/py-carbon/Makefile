@@ -1,5 +1,3 @@
-# Created by: Evan Sarmiento <bsdports@wayfair.com>
-
 PORTNAME=	carbon
 PORTVERSION=	1.1.10
 PORTREVISION=	2
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Backend storage application for graphite
+WWW=		https://github.com/graphite-project/carbon
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

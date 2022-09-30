@@ -1,12 +1,11 @@
-# Created by: Gabriel M. Dutra <0xdutra@gmail.com>
-
 PORTNAME=	fx
 DISTVERSION=	24.0.0
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	sysutils
 
 MAINTAINER=	0xdutra@gmail.com
 COMMENT=	Terminal JSON viewer
+WWW=		https://github.com/antonmedv/fx
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

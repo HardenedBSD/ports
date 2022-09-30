@@ -10,6 +10,64 @@ in the release notes and/or placed into UPDATING.
 
 All ports committers are allowed to commit to this file.
 
+20220911:
+AUTHOR: zirias@FreeBSD.org
+
+  kde.mk, qt.mk and pyqt.mk now use a colon for component suffixes
+
+  Suffixes for build, run and test (for pyqt) dependencies used an underscore
+  previously. This was not in line with most other USES, using a colon for
+  that purpose.
+
+  So if you previously had for example
+
+	USE_QT=	buildtools_build
+
+  replace it with
+
+	USE_QT= buildtools:build
+
+20220907:
+AUTHOR: se@FreeBSD.org
+
+  The convention of a WWW: line at the end of each port's pkg-descr file
+  has been changed to a WWW= definition in the port's Makefile. All ports
+  have been converted to follow this new scheme.
+
+  The portlint and portfmt ports will be updated, but may erroneously flag
+  the new convention as incorrect until the new versions have been installed.
+
+20220826:
+AUTHOR: tcberner@FreeBSD.org
+
+  A new Uses for 'vala' has been added.
+
+  To depend on libvala, use
+  	USES=vala:lib
+  to only add a build-time dependency, use
+  	USES=vala:build
+
+20220821:
+AUTHOR: kde@FreeBSD.org
+
+  qt.mk now supports both Qt 5 and Qt 6.
+
+  To make use of Qt6 write:
+
+        USES=qt:6
+        USE_QT=list of Qt6 components
+
+  Please take a look at qt.mk to see the available components.
+
+20220722:
+AUTHOR: portmgr@FreeBSD.org
+
+  'Created by' are being removed from the ports makefiles.
+
+  Created by lines have historically been used to attribute contributions
+  to the original creators of the ports. However, those might no longer
+  be contributing to the port
+
 20220430:
 AUTHOR: tcberner@FreeBSD.org
 

@@ -1,7 +1,7 @@
 PORTNAME=	votca
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2022
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	science
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
@@ -9,6 +9,7 @@ PATCHFILES=	078c6814797749cd1b92a2b19f0302265ccf6463.patch:-p1 # fix testsuite b
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	CSG and XTP: libraries for atomistic simulations
+WWW=		https://github.com/votca/votca
 
 LICENSE=	APACHE20
 
@@ -47,7 +48,7 @@ SHEBANG_FILES=	csg/scripts/csg_call.in csg/scripts/csg_inverse.in \
 		xtp/scripts/xtp_qmmm2qm.in
 
 CMAKE_ON=	BUILD_XTP
-CMAKE_ARGS=	-DPython_EXECUTABLE=${PYTHON_CMD}
+CMAKE_ARGS=	-DLOCALBASE=${LOCALBASE} -DPython_EXECUTABLE=${PYTHON_CMD}
 
 OPTIONS_DEFINE=		APPS
 OPTIONS_DEFAULT=	APPS

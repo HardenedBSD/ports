@@ -1,5 +1,3 @@
-# Created by: trasz <trasz@pin.if.uz.zgora.pl>
-
 PORTNAME=	xsynth-dssi
 PORTVERSION=	0.9.4
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/dssi/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Classic analog style software synthesizer
+WWW=		http://dssi.sourceforge.net/download.html
 
 BUILD_DEPENDS=	${LOCALBASE}/include/dssi.h:audio/dssi \
 		${LOCALBASE}/include/ladspa.h:audio/ladspa

@@ -1,11 +1,12 @@
 PORTNAME=	setzer
 DISTVERSIONPREFIX=v
 DISTVERSION=	0.4.1
-PORTREVISION=	13
+PORTREVISION=	15
 CATEGORIES=	editors
 
 MAINTAINER=	greg@unrelenting.technology
 COMMENT=	LaTeX editor written in Python with Gtk
+WWW=		https://www.cvfosammmm.org/setzer/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

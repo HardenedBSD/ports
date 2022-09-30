@@ -1,11 +1,10 @@
-# Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-
 PORTNAME=	nvidia-settings
 PORTVERSION=	470.86
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Display Control Panel for X NVidia driver
+WWW=		https://www.nvidia.com/object/unix.html
 
 LICENSE=	GPLv2
 

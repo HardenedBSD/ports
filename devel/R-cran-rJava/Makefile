@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	rJava
 DISTVERSION=	1.0-6
 CATEGORIES=	devel java
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	R to Java interface
+WWW=		https://cran.r-project.org/package=rJava
 
 LICENSE=	LGPL21
 

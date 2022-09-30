@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	afdko
 PORTVERSION=	3.9.1
 CATEGORIES=	x11-fonts
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/adobe-type-tools/afdko/releases/download/${PORT
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Adobe Font Development Kit for OpenType (AFDKO)
+WWW=		https://github.com/adobe-type-tools/afdko
 
 LICENSE=	APACHE20
 

@@ -1,5 +1,3 @@
-# Created by: Lukas Slebodnik <lukas.slebodnik@intrak.sk>
-
 PORTNAME=	sssd
 PORTVERSION=	1.16.5
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	https://releases.pagure.org/SSSD/${PORTNAME}/
 
 MAINTAINER=	lukas.slebodnik@intrak.sk
 COMMENT=	System Security Services Daemon
+WWW=		https://pagure.io/SSSD/sssd
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

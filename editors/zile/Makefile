@@ -1,5 +1,3 @@
-# Created by: Jason Evans <jasone@FreeBSD.org>
-
 PORTNAME=	zile
 PORTVERSION=	2.6.2
 CATEGORIES=	editors
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small emacs-like text editor
+WWW=		https://www.gnu.org/software/zile/
 
 LICENSE=	GPLv3
 

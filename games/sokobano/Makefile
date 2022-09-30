@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	sokobano
 DISTVERSION=	1.0.3
 CATEGORIES=	games java
@@ -8,6 +6,7 @@ DISTFILES=	Sokobano.zip
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Entertaining Sokoban game with nice 3D graphics
+WWW=		http://sokobano.sourceforge.net/
 
 LICENSE=	GPLv2
 

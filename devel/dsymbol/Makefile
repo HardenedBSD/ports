@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	dsymbol
 PORTVERSION=	0.6.2
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Symbol lookup support for libdparse
+WWW=		https://github.com/dlang-community/dsymbol
 
 LICENSE=	BSL
 

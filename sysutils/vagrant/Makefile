@@ -1,5 +1,3 @@
-# Created by: Joseph Benden <joe@thrallingpenguin.com>
-
 PORTNAME=	vagrant
 PORTVERSION=	2.2.19
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	sysutils rubygems devel
 
 MAINTAINER=	joe@thrallingpenguin.com
 COMMENT=	Vagrant Virtual Machine Manager
+WWW=		https://www.vagrantup.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

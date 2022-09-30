@@ -1,5 +1,3 @@
-# Created by: Gustau Perez <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-sound-recorder
 DISTVERSION=	42.0
 CATEGORIES=	deskutils gnome
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME sound recorder application
+WWW=		https://wiki.gnome.org/Apps/SoundRecorder
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

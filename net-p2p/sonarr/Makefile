@@ -1,11 +1,12 @@
 PORTNAME=	sonarr
-PORTVERSION=	3.0.8.1507
+PORTVERSION=	3.0.9.1549
 CATEGORIES=	net-p2p
 MASTER_SITES=	http://download.sonarr.tv/v3/main/${PORTVERSION}/
 DISTNAME=	Sonarr.main.${PORTVERSION}.linux
 
 MAINTAINER=	michiel@vanbaak.eu
 COMMENT=	PVR for Usenet and BitTorrent users
+WWW=		https://sonarr.tv
 
 LICENSE=	GPLv3
 

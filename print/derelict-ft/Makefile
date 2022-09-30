@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	derelict-ft
 PORTVERSION=	1.1.3
 PORTREVISION=	4
@@ -8,6 +6,7 @@ CATEGORIES=	print
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Dynamic binding to the FreeType library for the D lang
+WWW=		https://github.com/DerelictOrg/DerelictFT
 
 LICENSE=	BSL
 

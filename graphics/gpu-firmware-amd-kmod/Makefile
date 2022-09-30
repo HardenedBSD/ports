@@ -1,11 +1,10 @@
-# Created by: Emmanuel Vadot <manu@FreeBSD.org>
-
 PORTNAME=	gpu-firmware-amd-kmod
 PORTVERSION=	20220511
 CATEGORIES=	graphics
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Firmware modules for ${FLAVOR} AMD GPUs
+WWW=		https://github.com/freebsd/drm-kmod-firmware
 
 LICENSE=	AMD
 LICENSE_NAME=	AMD firmware license (amdgpu/radeon)
@@ -51,9 +50,7 @@ FLAVORS=	banks \
 		sienna_cichlid
 
 green_sardine_IGNORE_FreeBSD_12=	"Not supported on < 13.1"
-green_sardine_IGNORE_FreeBSD_13.0=	"Not supported on < 13.1"
 sienna_cichlid_IGNORE_FreeBSD_12=	"Not supported on < 13.1"
-sienna_cichlid_IGNORE_FreeBSD_13.0=	"Not supported on < 13.1"
 
 USES=		kmod uidfix
 

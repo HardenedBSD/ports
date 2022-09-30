@@ -1,7 +1,5 @@
-# Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-
 PORTNAME?=	postgresql
-DISTVERSION?=	15beta2
+DISTVERSION?=	15rc1
 # PORTREVISION must be ?= otherwise, all slave ports get this PORTREVISION and
 # not their own.  Probably best to keep it at ?=0 when reset here too.
 PORTREVISION?=	0
@@ -11,6 +9,7 @@ PKGNAMESUFFIX?= ${PORTVERSION:R}${COMPONENT}
 
 MAINTAINER?=	pgsql@FreeBSD.org
 COMMENT?=	PostgreSQL is the most advanced open-source database available anywhere
+WWW=		https://www.postgresql.org/
 
 LICENSE=	PostgreSQL
 

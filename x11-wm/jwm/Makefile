@@ -1,5 +1,3 @@
-# Created by: Babak Farrokhi <babak@farrokhi.net>
-
 PORTNAME=	jwm
 PORTVERSION=	2.4.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES= https://github.com/joewing/jwm/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	john.grafton@gmail.com
 COMMENT=	Joe's Window Manager
+WWW=		https://joewing.net/projects/jwm/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

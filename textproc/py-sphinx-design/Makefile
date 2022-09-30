@@ -1,7 +1,5 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sphinx-design
-PORTVERSION=	0.2.0
+PORTVERSION=	0.3.0
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,6 +7,7 @@ DISTNAME=	sphinx_design-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sphinx extension for designing beautiful, view size responsive web components
+WWW=		https://github.com/executablebooks/sphinx-design
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

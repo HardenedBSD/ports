@@ -9,6 +9,7 @@
     SUBDIR += bash-static
     SUBDIR += bashc
     SUBDIR += bicon
+    SUBDIR += bosh
     SUBDIR += ch
     SUBDIR += dash
     SUBDIR += elvish
@@ -23,9 +24,10 @@
     SUBDIR += ion
     SUBDIR += jailkit
     SUBDIR += klish
+    SUBDIR += ksh
+    SUBDIR += ksh-devel
     SUBDIR += ksh2020
     SUBDIR += ksh93
-    SUBDIR += ksh93-devel
     SUBDIR += mksh
     SUBDIR += modernish
     SUBDIR += nologinmsg

@@ -1,5 +1,3 @@
-# Created by: Anthony Kim
-
 PORTNAME=	spamassassin
 PORTVERSION=	3.4.6
 CATEGORIES?=	mail perl5
@@ -8,6 +6,7 @@ DISTNAME=	Mail-SpamAssassin-${PORTVERSION}
 
 MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Highly efficient mail filter for identifying spam
+WWW=		https://spamassassin.apache.org/
 
 LICENSE=	APACHE20
 

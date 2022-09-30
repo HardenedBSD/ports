@@ -1,13 +1,12 @@
-# Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-
 PORTNAME=	krill
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	jaap@NLnetLabs.nl
 COMMENT=	RPKI daemon, Certificate Authority and Publication Server
+WWW=		https://github.com/NLnetLabs/krill
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

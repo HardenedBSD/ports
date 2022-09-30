@@ -1,13 +1,12 @@
-# Created by: Christoph Mallon <christoph.mallon@gmx.de>
-
 PORTNAME=	ja2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.19.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 
 MAINTAINER=	timp87@gmail.com
 COMMENT=	Port of "Jagged Alliance 2" using SDL
+WWW=		https://ja2-stracciatella.github.io/
 
 LICENSE=		PD SFI-SCLA
 LICENSE_COMB=		multi
@@ -23,7 +22,7 @@ ONLY_FOR_ARCHS_REASON=	requires little endian environment
 BUILD_DEPENDS=	string_theory>=3.1:devel/string_theory \
 		rapidjson>=1.1.0:devel/rapidjson \
 		sol2>=3.2.2:devel/sol2 \
-		miniaudio>=0.10.36<0.11:audio/miniaudio
+		miniaudio>=0.10.36,1<0.11,1:audio/miniaudio
 LIB_DEPENDS=	libfltk.so:x11-toolkits/fltk
 
 USES=		cargo cmake compiler:c++17-lang pkgconfig sdl xorg gl lua:53

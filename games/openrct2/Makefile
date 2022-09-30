@@ -1,10 +1,12 @@
 PORTNAME=	openrct2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.1
+PORTREVISION=	2
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Open source re-implementation of RollerCoaster Tycoon 2
+WWW=		https://openrct2.io/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/licence.txt

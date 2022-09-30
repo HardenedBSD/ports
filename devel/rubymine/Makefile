@@ -1,7 +1,5 @@
-# Created by: Stefan Wendler <stefan.wendler@tngtech.com>
-
 PORTNAME=	rubymine
-PORTVERSION=	2022.1.3
+PORTVERSION=	2022.2.2
 CATEGORIES=	devel java
 MASTER_SITES=	https://download.jetbrains.com/ruby/ \
 		http://download.jetbrains.com/ruby/
@@ -9,6 +7,7 @@ DISTNAME=	RubyMine-${PORTVERSION}
 
 MAINTAINER=	rene@FreeBSD.org
 COMMENT=	Ruby on Rails IDE by JetBrains
+WWW=		https://www.jetbrains.com/ruby/
 
 LICENSE=	IntelliJ-Rubymine
 LICENSE_NAME=	Subscription license agreement for business and organizations

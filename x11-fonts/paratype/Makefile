@@ -1,5 +1,3 @@
-# Created by: Alexey Illarionov <littlesavage@rambler.ru>
-
 PORTNAME=	paratype
 PORTVERSION=	2.005
 PORTREVISION=	2
@@ -13,6 +11,7 @@ DISTFILES=	ptsans-1.zip \
 
 MAINTAINER=	greg@unrelenting.technology
 COMMENT=	ParaType font collection for the languages of Russia
+WWW=		https://www.paratype.com/public/
 
 LICENSE=	OFL11
 

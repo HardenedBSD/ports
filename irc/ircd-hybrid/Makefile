@@ -1,12 +1,11 @@
-# Created by: David Taylor <davidt@yadt.co.uk>
-
 PORTNAME=	ircd-hybrid
-PORTVERSION=	8.2.40
+PORTVERSION=	8.2.42
 CATEGORIES=	irc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Fast irc daemon with a number of new features
+WWW=		https://www.ircd-hybrid.org/
 
 LICENSE=	GPLv2
 
@@ -68,6 +67,9 @@ RUN_DEPENDS+=	${CERTSFILE}:security/ca_root_nss
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PORTNAME}-${PORTVERSION} \
 			--localstatedir=/var/${PORTNAME} \
 			--sysconfdir=${PREFIX}/etc/${PORTNAME}
+
+post-extract:
+	@${MV} ${WRKDIR}/${PORTNAME} ${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 post-install:
 	@${MV} ${STAGEDIR}${PREFIX}/bin/mkpasswd ${STAGEDIR}${PREFIX}/bin/${PORTNAME}-mkpasswd

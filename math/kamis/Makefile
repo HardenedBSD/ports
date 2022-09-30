@@ -6,9 +6,14 @@ CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Maximum independent sets and vertex covers of large sparse graphs
+WWW=		https://karlsruhemis.github.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 USES=		cmake
 USE_LDCONFIG=	yes

@@ -1,6 +1,7 @@
 PORTNAME=	ipfs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.13.0
+PORTREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/ipfs/go-ipfs/releases/download/v${DISTVERSION}/
 PKGNAMESUFFIX=	-go
@@ -8,13 +9,14 @@ DISTNAME=	go-ipfs-source
 
 MAINTAINER=	jhixson@FreeBSD.org
 COMMENT=	IPFS implementation in Go
+WWW=		https://github.com/ipfs/go-ipfs
 
 LICENSE=	MIT APACHE20
 LICENSE_COMB=	dual
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 
-USES=		cpe go:modules
+USES=		cpe go:1.18,modules
 
 CPE_VENDOR=	protocol
 

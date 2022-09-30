@@ -1,13 +1,12 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	opencascade
 PORTVERSION=	7.6.0
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	cad science
 MASTER_SITES=	LOCAL/thierry
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Open CASCADE Technology, 3D modeling & numerical simulation
+WWW=		https://www.opencascade.org/
 
 LICENSE=	OCTPL
 LICENSE_NAME=	LGPL21 with exception
@@ -64,6 +63,12 @@ CMAKE_ARGS+=	-DINSTALL_DIR=${OCCROOT}				\
 		-DUSE_RAPIDJSON:BOOL=ON					\
 		-DUSE_VTK:BOOL=ON					\
 		-D3RDPARTY_VTK_INCLUDE_DIR:PATH=${LOCALBASE}/include/vtk-${VTKVER}
+CONFIGURE_ENV+=	DESTDIR=${STAGEDIR}
+
+.if defined(MAINTAINER_MODE)
+CMAKE_ARGS+=	-DCMAKE_MESSAGE_CONTEXT_SHOW:BOOL=ON	\
+		-DCMAKE_MESSAGE_LOG_LEVEL:STRING=DEBUG
+.endif
 
 # TODO: TBB to be replaced by onetbb later
 #CMAKE_ARGS+=	-DUSE_EIGEN:BOOL=ON -DUSE_TBB:BOOL=ON

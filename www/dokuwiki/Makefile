@@ -1,5 +1,3 @@
-# Created by: Chin-San Huang <chinsan@mail2000.com.tw>
-
 PORTNAME=	dokuwiki
 PORTVERSION=	${DIST_VER:S/${PORTNAME}//:S/-//g}
 CATEGORIES=	www
@@ -8,6 +6,7 @@ DISTNAME=	${DIST_VER}
 
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	Simple and easy to use wiki, no database required
+WWW=		https://www.dokuwiki.org/
 
 LICENSE=			BSD3CLAUSE GPLv2 GPLv2+ GPLv3 MIT
 LICENSE_COMB=			multi
@@ -17,10 +16,9 @@ LICENSE_FILE_GPLv2+ =		${WRKSRC}/vendor/geshi/geshi/LICENSE
 LICENSE_FILE_GPLv3=		${WRKSRC}/vendor/marcusschwarz/lesserphp/LICENSE
 LICENSE_FILE_MIT=		${WRKSRC}/vendor/composer/LICENSE
 
-DIST_VER=	${PORTNAME}-2020-07-29
+DIST_VER=	${PORTNAME}-2022-07-31a
 USES=		cpe php:web shebangfix tar:tgz
-USE_PHP=	gd hash json mbstring openssl pcre session xml zlib
-IGNORE_WITH_PHP=	80 81 82
+USE_PHP=	filter gd hash json mbstring openssl pcre session xml zlib
 NO_ARCH=	YES
 NO_BUILD=	YES
 

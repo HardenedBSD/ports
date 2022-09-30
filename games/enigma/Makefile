@@ -1,11 +1,10 @@
-# Created by: Edwin Groothuis
-
 PORTNAME=	enigma
 PORTVERSION=	1.30
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Reimplementation of Oxyd, a puzzle game
+WWW=		https://www.nongnu.org/enigma/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

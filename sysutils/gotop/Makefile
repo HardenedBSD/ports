@@ -1,11 +1,12 @@
 PORTNAME=	gotop
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.1.3
+DISTVERSION=	4.1.4
 PORTREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Terminal based graphical activity monitor inspired by gtop and vtop
+WWW=		https://github.com/xxxserxxx/gotop
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

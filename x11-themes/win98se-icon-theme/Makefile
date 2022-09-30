@@ -1,5 +1,3 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	win98se-icon-theme
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.13
@@ -7,6 +5,7 @@ CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	Enhanced Classic Win98SE icon theme
+WWW=		https://github.com/nestoris/Win98SE
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

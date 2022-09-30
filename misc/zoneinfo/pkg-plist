@@ -374,8 +374,8 @@
 %%DATADIR%%/Europe/Istanbul
 %%DATADIR%%/Europe/Jersey
 %%DATADIR%%/Europe/Kaliningrad
-%%DATADIR%%/Europe/Kiev
 %%DATADIR%%/Europe/Kirov
+%%DATADIR%%/Europe/Kyiv
 %%DATADIR%%/Europe/Lisbon
 %%DATADIR%%/Europe/Ljubljana
 %%DATADIR%%/Europe/London
@@ -404,7 +404,6 @@
 %%DATADIR%%/Europe/Tallinn
 %%DATADIR%%/Europe/Tirane
 %%DATADIR%%/Europe/Ulyanovsk
-%%DATADIR%%/Europe/Uzhgorod
 %%DATADIR%%/Europe/Vaduz
 %%DATADIR%%/Europe/Vatican
 %%DATADIR%%/Europe/Vienna
@@ -412,7 +411,6 @@
 %%DATADIR%%/Europe/Volgograd
 %%DATADIR%%/Europe/Warsaw
 %%DATADIR%%/Europe/Zagreb
-%%DATADIR%%/Europe/Zaporozhye
 %%DATADIR%%/Europe/Zurich
 %%DATADIR%%/Factory
 %%DATADIR%%/GMT
@@ -470,7 +468,6 @@
 %%DATADIR%%/Pacific/Tongatapu
 %%DATADIR%%/Pacific/Wake
 %%DATADIR%%/Pacific/Wallis
-%%DATADIR%%/UTC
 %%DATADIR%%/WET
 %%DATADIR%%/posixrules
 %%DATADIR%%/zone.tab
@@ -546,7 +543,10 @@
 %%BACKWARD%%%%DATADIR%%/Eire
 %%BACKWARD%%%%DATADIR%%/Etc/UCT
 %%BACKWARD%%%%DATADIR%%/Europe/Belfast
+%%BACKWARD%%%%DATADIR%%/Europe/Kiev
 %%BACKWARD%%%%DATADIR%%/Europe/Tiraspol
+%%BACKWARD%%%%DATADIR%%/Europe/Uzhgorod
+%%BACKWARD%%%%DATADIR%%/Europe/Zaporozhye
 %%BACKWARD%%%%DATADIR%%/GB
 %%BACKWARD%%%%DATADIR%%/GB-Eire
 %%BACKWARD%%%%DATADIR%%/GMT+0
@@ -593,6 +593,7 @@
 %%BACKWARD%%%%DATADIR%%/US/Mountain
 %%BACKWARD%%%%DATADIR%%/US/Pacific
 %%BACKWARD%%%%DATADIR%%/US/Samoa
+%%BACKWARD%%%%DATADIR%%/UTC
 %%BACKWARD%%%%DATADIR%%/Universal
 %%BACKWARD%%%%DATADIR%%/W-SU
 %%BACKWARD%%%%DATADIR%%/Zulu

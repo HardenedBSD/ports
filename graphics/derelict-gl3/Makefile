@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	derelict-gl3
 PORTVERSION=	1.0.24
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Dynamic binding to OpenGL for the D Programming Language
+WWW=		https://github.com/DerelictOrg/DerelictGL3
 
 LICENSE=	BSL
 

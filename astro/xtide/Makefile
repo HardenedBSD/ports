@@ -1,5 +1,3 @@
-# Created by: Brion Moss <brion@queeg.com>
-
 PORTNAME=	xtide
 PORTVERSION=	2.15.5
 CATEGORIES=	astro geography
@@ -10,6 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Harmonic tide clock and tide predictor
+WWW=		https://flaterco.com/xtide/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

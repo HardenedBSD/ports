@@ -1,11 +1,12 @@
 PORTNAME=	oslo.serialization
-PORTVERSION=	4.3.0
+PORTVERSION=	5.0.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Oslo Serialization library
+WWW=		https://docs.openstack.org/oslo.serialization/latest/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

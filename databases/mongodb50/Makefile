@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	5.0.9
+DISTVERSION=	5.0.12
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -9,6 +9,7 @@ DISTNAME=	mongodb-src-${DISTVERSIONPREFIX}${DISTVERSION}
 
 MAINTAINER=	ronald-lists@klop.ws
 COMMENT=	Distributed document-oriented "NoSQL" database (5.0.x Branch)
+WWW=		https://docs.mongodb.com/v5.0/
 
 LICENSE=	APACHE20 SSPLv1 # mongodb is SSPLv1, C++ driver is APACHE20
 LICENSE_COMB=	multi
@@ -23,9 +24,14 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/ar:devel/binutils \
 		${PYTHON_PKGNAMEPREFIX}cheetah3>0:devel/py-cheetah3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.11:devel/py-yaml@${PY_FLAVOR}
-LIB_DEPENDS=	libcurl.so:ftp/curl \
+LIB_DEPENDS=	libboost_log.so:devel/boost-libs \
+		libcurl.so:ftp/curl \
 		libpcre.so:devel/pcre \
-		libsnappy.so:archivers/snappy
+		libsnappy.so:archivers/snappy \
+		libstemmer.so:textproc/snowballstemmer \
+		libunwind.so:devel/libunwind \
+		libyaml-cpp.so:devel/yaml-cpp \
+		libzstd.so:archivers/zstd
 
 USES=		compiler:c++17-lang cpe python:3.5+,build scons shebangfix
 USE_RC_SUBR=	mongod
@@ -45,9 +51,14 @@ MAKE_ARGS=	--cxx-std=17 \
 		--disable-warnings-as-errors \
 		--libc++ \
 		--runtime-hardening=on \
+		--use-system-boost \
 		--use-system-pcre \
 		--use-system-snappy \
+		--use-system-stemmer \
+		--use-system-libunwind \
+		--use-system-yaml \
 		--use-system-zlib \
+		--use-system-zstd \
 		-j ${MAKE_JOBS_NUMBER} \
 		AR=${PREFIX}/bin/ar \
 		VERBOSE=on
@@ -59,8 +70,6 @@ GROUPS=		mongodb
 
 OPTIONS_DEFINE=			LTO SASL SSL
 OPTIONS_DEFAULT=		LTO SASL SSL
-OPTIONS_EXCLUDE_aarch64=	${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
-OPTIONS_EXCLUDE_aarch64_14=	LTO # Does not work with llvm12/llvm13 on aarch64.
 
 LTO_MAKE_ARGS=	--lto=on
 
@@ -86,6 +95,15 @@ CPE_PRODUCT=	mongodb
 
 pre-patch:
 	${MV} ${WRKSRC}/src/third_party/wiredtiger/src/checksum/power8/crc32.sx ${WRKSRC}/src/third_party/wiredtiger/src/checksum/power8/crc32.S
+
+post-patch:
+	${RM} -rf ${WRKSRC}/src/third_party/boost
+	${RM} -rf ${WRKSRC}/src/third_party/pcre-*
+	${RM} -rf ${WRKSRC}/src/third_party/snappy-*
+	${RM} -rf ${WRKSRC}/src/third_party/unwind
+	${RM} -rf ${WRKSRC}/src/third_party/yaml-cpp
+	${RM} -rf ${WRKSRC}/src/third_party/zlib-*
+	${RM} -rf ${WRKSRC}/src/third_party/zstandard-*
 
 do-build:
 	${WRKSRC}/buildscripts/scons.py	-C ${WRKSRC} ${MAKE_ARGS}

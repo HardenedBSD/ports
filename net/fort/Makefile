@@ -1,10 +1,11 @@
 PORTNAME=	fort
 DISTVERSION=	1.5.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 
 MAINTAINER=	toni@devboks.com
 COMMENT=	FORT Validator is an open source RPKI validator
+WWW=		https://fortproject.net/en/validator
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

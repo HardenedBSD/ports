@@ -1,7 +1,6 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	mprime
 PORTVERSION=	30.7b9
+PORTREVISION=	1
 CATEGORIES=	math benchmarks net
 MASTER_SITES=	http://www.mersenne.org/ftp_root/gimps/ \
 		ftp://mersenne.org/gimps/
@@ -9,6 +8,7 @@ DISTNAME=	p95v${PORTVERSION:R}${PORTVERSION:E}.source
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Great Internet Mersenne Prime Search
+WWW=		https://www.mersenne.org/
 
 LICENSE=	EULA
 LICENSE_NAME=	EULA
@@ -22,7 +22,9 @@ LIB_DEPENDS=	libcurl.so:ftp/curl					\
 		libhwloc.so.15:devel/hwloc2				\
 		libgmp.so:math/gmp
 
-USES=		zip
+USES=		localbase zip
+
+USE_HARDENING=	pie:off
 
 NO_WRKSUBDIR=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}

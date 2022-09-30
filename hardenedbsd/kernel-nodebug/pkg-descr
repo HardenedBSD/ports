@@ -1,0 +1,4 @@
+This HardenedBSD kernel port removes several debugging options,
+including WITNESS and INVARIANTS checking.
+
+WWW: https://hardenedbsd.org/

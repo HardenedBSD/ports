@@ -1,5 +1,3 @@
-# Created by: Douglas Thrift <douglas@douglasthrift.net>
-
 PORTNAME=	keyring
 PORTVERSION=	18.0.1
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Store and access your passwords safely
+WWW=		https://github.com/jaraco/keyring
 
 LICENSE=	PSFL
 

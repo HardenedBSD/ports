@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libregf
 DISTVERSION=	alpha-20220131
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/libyal/libregf/releases/download/${PORTVERSION:
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tools to support the Windows NT Registry File format
+WWW=		https://github.com/libyal/libregf
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

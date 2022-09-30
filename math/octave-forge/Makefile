@@ -1,5 +1,3 @@
-# Created by: Nakata Maho <maho@FreeBSD.org>
-
 PORTNAME=	octave-forge
 PORTVERSION=	20210221
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge metaport for math/octave
+WWW=		http://octave.sourceforge.net/
 
 USES=		metaport
 

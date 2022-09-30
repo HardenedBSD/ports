@@ -1,7 +1,5 @@
-# Created by: Muhammad Moinur Rahman <bofh@FreeBSD.org>
-
 PORTNAME=	irrd
-PORTVERSION=	4.2.4
+PORTVERSION=	4.2.5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	4
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Internet Routing Registry database server v4
+WWW=		http://www.irrd.net/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

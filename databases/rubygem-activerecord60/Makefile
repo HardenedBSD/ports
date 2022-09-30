@@ -1,13 +1,12 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	activerecord
-PORTVERSION=	6.0.5
+PORTVERSION=	6.0.5.1
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	60
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Object-relational mapping layer for Rails MVC Framework
+WWW=		https://github.com/rails/rails/tree/main/activerecord
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

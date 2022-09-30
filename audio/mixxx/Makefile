@@ -1,12 +1,11 @@
-# Created by: Jean-Yves Lefort <jylefort@brutele.be>
-
 PORTNAME=	mixxx
 DISTVERSION=	2.3.2
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	audio
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	DJ mixing application
+WWW=		https://mixxx.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -40,8 +39,8 @@ USE_XORG=	ice sm x11 xext
 USE_GL=		gl glu
 USE_GITHUB=	yes
 GH_ACCOUNT=	mixxxdj
-USE_QT=		buildtools concurrent core dbus gui linguisttools_build network \
-		opengl qmake_build  script scripttools sql sql-sqlite3 svg \
+USE_QT=		buildtools concurrent core dbus gui linguisttools:build network \
+		opengl qmake:build  script scripttools sql sql-sqlite3 svg \
 		testlib x11extras xml xmlpatterns widgets
 
 CXXFLAGS+=	-Wno-unused-but-set-variable
@@ -75,7 +74,7 @@ OPUS_LIB_DEPENDS=	libopus.so:audio/opus \
 			libopusfile.so:audio/opusfile
 OPUS_CMAKE_BOOL=	OPUS
 QTKEYCHAIN_DESC=	Secure credentials storage for Live Broadcasting profiles
-QTKEYCHAIN_LIB_DEPENDS=	libqt5keychain.so:security/qtkeychain
+QTKEYCHAIN_LIB_DEPENDS=	libqt5keychain.so:security/qtkeychain@qt5
 QTKEYCHAIN_CMAKE_BOOL=	QTKEYCHAIN
 WAVPACK_LIB_DEPENDS=	libwavpack.so:audio/wavpack
 WAVPACK_CMAKE_BOOL=	WAVPACK

@@ -6,9 +6,12 @@ MASTER_SITES=	https://www.linphone.org/releases/sources/plugins/mswebrtc/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mediastreamer plugin with WebRTC codecs
+WWW=		https://www.linphone.org/technical-corner/mediastreamer2.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN=		does not build: incorrect dependency on net/mediastreamer
 
 LIB_DEPENDS=	libbctoolbox.so:net/bctoolbox \
 		libmediastreamer_base.so:net/mediastreamer \

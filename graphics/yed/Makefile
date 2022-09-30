@@ -1,5 +1,3 @@
-# Created by: Eugene Mychlo <myc@barev.net>
-
 PORTNAME=	yed
 DISTVERSION=	3.22
 CATEGORIES=	graphics java
@@ -8,6 +6,7 @@ DISTNAME=	yEd-${DISTVERSION}
 
 MAINTAINER=	myc@barev.net
 COMMENT=	Editor for graphs and diagrams
+WWW=		https://www.yworks.com/products/yed
 
 LICENSE=	YED_1_1
 LICENSE_NAME=	yEd Software License Agreement (Version 1.1)

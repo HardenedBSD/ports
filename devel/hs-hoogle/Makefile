@@ -1,5 +1,3 @@
-# Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-
 PORTNAME=	hoogle
 PORTVERSION=	5.0.18.3
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Haskell API Search
+WWW=		https://www.haskell.org/hoogle/
 
 LICENSE=	BSD3CLAUSE
 

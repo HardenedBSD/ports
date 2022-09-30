@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	22.1-branchpoint-4058
-DISTVERSIONSUFFIX=	-gc73cc1785a6
+DISTVERSION=	22.2-branchpoint-3105
+DISTVERSIONSUFFIX=	-g5650d672429
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -13,6 +13,7 @@ PATCHFILES+=	19eb2c30bff0.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)
+WWW=		https://www.mesa3d.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/docs/license.rst
@@ -51,13 +52,13 @@ OPTIONS_DEFINE=		LIBUNWIND LLVM LTO VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
 OPTIONS_DEFAULT=	LIBUNWIND LLVM LTO VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
 OPTIONS_GROUP=		GALLIUM VULKAN
 OPTIONS_GROUP_GALLIUM=	crocus iris panfrost r600 radeonsi
-OPTIONS_GROUP_VULKAN=	anv radv
-OPTIONS_EXCLUDE_DragonFly=	LIBUNWIND anv
+OPTIONS_GROUP_VULKAN=	anv hasvk radv
+OPTIONS_EXCLUDE_DragonFly=	LIBUNWIND anv hasvk
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
 OPTIONS_EXCLUDE_powerpc64=	${"${/usr/bin/ld:L:tA}"==/usr/bin/ld.lld:?LTO:} # https://github.com/llvm/llvm-project/issues/46697
-OPTIONS_EXCLUDE+=	r600 # libc++ lacks <memory_resource>
+OPTIONS_EXCLUDE+=	panfrost # https://gitlab.freedesktop.org/mesa/mesa/-/issues/7252
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:C/.+/panfrost/}
-OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/anv crocus iris/}
+OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/anv crocus hasvk iris/}
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:Npowerpc64:Npowerpc64le:Nx86_64:C/.+/LIBUNWIND/}
 OPTIONS_EXCLUDE+=	${"${GL_DEFAULT:S/,/ /g:[-1]}"==${.CURDIR:T}:?COINST:}
 OPTIONS_SLAVE+=		${"${GL_DEFAULT:S/,/ /g:[-1]}"!=${.CURDIR:T}:?COINST:}
@@ -68,7 +69,7 @@ OPTIONS_SUB=		yes
 MESON_ARGS+=		-D${i:tl}-drivers=${${i}_DRIVERS:ts,}
 . for j in ${OPTIONS_GROUP_${i}}
 OPTIONS_DEFAULT+=	${j}
-${j}_VARS+=		${i}_DRIVERS+=${j:S/anv/intel/:S/radv/amd/}
+${j}_VARS+=		${i}_DRIVERS+=${j:S/anv/intel/:S/hasvk/intel_&/:S/radv/amd/}
 . endfor
 .endfor
 
@@ -80,7 +81,8 @@ r600_DESC=		R600, R700, Evergreen, Northern Islands (implies LLVM)
 radeonsi_DESC=		Southern Islands and newer (implies LLVM)
 
 VULKAN_DESC=		Vulkan drivers
-anv_DESC=		Haswell and newer
+anv_DESC=		Skylake and newer
+hasvk_DESC=		Ivy Bridge, Haswell, Broadwell
 radv_DESC=		Southern Islands and newer (implies LLVM)
 radv_BUILD_DEPENDS=	glslangValidator:graphics/glslang
 
@@ -96,7 +98,7 @@ LIBUNWIND_LIB_DEPENDS=	libunwind.so:devel/libunwind
 LIBUNWIND_MESON_ENABLED=	libunwind
 
 LLVM_DESC=		Build with LLVM support (see implies)
-LLVM_LIB_DEPENDS=	libLLVM-${LLVM_DEFAULT:C/^([6-9])0/\1/:S/-devel/15git/}.so:devel/llvm${LLVM_DEFAULT}
+LLVM_LIB_DEPENDS=	libLLVM-${LLVM_DEFAULT:C/^([6-9])0/\1/:S/-devel/16git/}.so:devel/llvm${LLVM_DEFAULT}
 LLVM_MESON_ENABLED=	llvm
 LLVM_BINARY_ALIAS=	llvm-config=llvm-config${LLVM_DEFAULT}
 .for i in r600 radeonsi radv
@@ -136,7 +138,7 @@ ZSTD_MESON_ENABLED=	zstd
 
 # Ignore Mk/bsd.default-versions.mk but respect make.conf(5)
 .if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*}
-LLVM_DEFAULT=	13 # bump if not latest release
+LLVM_DEFAULT=	13 # chase mesa-dri
 .endif
 
 post-extract:

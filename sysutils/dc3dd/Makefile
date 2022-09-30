@@ -1,5 +1,3 @@
-# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-
 PORTNAME=	dc3dd
 PORTVERSION=	7.2.646
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/${PORTNAME}%20${PORTVERS
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	dd program useful for computer forensics
+WWW=		http://dc3dd.sourceforge.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	mate-screensaver
 PORTVERSION=	1.26.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	MATE screen saver and locker
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv2 LGPL20
 LICENSE_COMB=	dual

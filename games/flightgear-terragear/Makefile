@@ -1,10 +1,11 @@
 PORTNAME=	flightgear-terragear
 PORTVERSION=	20171007
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	games
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tools for building scenery for the FlightGear project
+WWW=		https://github.com/FlightGear/terragear
 
 LICENSE=	GPLv2
 

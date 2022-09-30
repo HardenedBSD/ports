@@ -1,5 +1,3 @@
-# Created by: clsung
-
 PORTNAME=	pflogx
 PORTVERSION=	0.86
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION:S/.//}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple tool to export pf (packet filter) logs to XML files
+WWW=		http://akldev.free.fr/pflogx/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jupyter-server
 PORTVERSION=	1.18.1
 CATEGORIES=	devel python
@@ -10,6 +8,7 @@ DISTNAME=	jupyter_server-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	The backend to Jupyter web applications
+WWW=		https://github.com/jupyter-server/jupyter_server
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING.md

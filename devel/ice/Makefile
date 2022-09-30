@@ -1,5 +1,3 @@
-# Created by: Stefan Ehmann <shoesoft@gmx.net>
-
 PORTNAME=		Ice
 PORTVERSION=		3.6.5
 PORTREVISION=		1
@@ -8,6 +6,7 @@ CATEGORIES=		devel
 
 MAINTAINER=		grembo@FreeBSD.org
 COMMENT=		Modern alternative to object middleware such as CORBA/COM/DCOM/COM+
+WWW=		http://www.zeroc.com/
 
 LICENSE=		GPLv2
 

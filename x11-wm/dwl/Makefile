@@ -1,13 +1,14 @@
 PORTNAME=	dwl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.1
-CATEGORIES=	x11-wm
+CATEGORIES=	x11-wm wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	cba259e9bf4a.patch:-p1 # https://github.com/djpohly/dwl/pull/212
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	dwm for Wayland
+WWW=		https://github.com/djpohly/dwl
 
 LICENSE=	CC0-1.0 GPLv3+ MIT
 LICENSE_COMB=	multi

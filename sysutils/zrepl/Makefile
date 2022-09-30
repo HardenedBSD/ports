@@ -1,14 +1,13 @@
-# Created by: Nikolai Lifanov <lifanov@FreeBSD.org> and Ben Woods <woodsb02@FreeBSD.org>
-
 PORTNAME=	zrepl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5.0-8
-PORTREVISION=	1
+PORTREVISION=	4
 DISTVERSIONSUFFIX=	-g19b2deb
 CATEGORIES=	sysutils
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	ZFS dataset replication tool
+WWW=		https://zrepl.github.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

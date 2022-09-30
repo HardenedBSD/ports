@@ -1,5 +1,3 @@
-# Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-
 PORTNAME=	gtkmm
 PORTVERSION=	3.24.2
 PORTREVISION?=	2
@@ -10,6 +8,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Gtk+3
+WWW=		http://gtkmm.sourceforge.net/
 
 LICENSE=	LGPL21
 

@@ -1,12 +1,11 @@
-# Created by: Rod Person <rodperson@rodperson.com>
-
 PORTNAME=	dunst
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.9.0
-CATEGORIES=	sysutils
+CATEGORIES=	sysutils wayland
 
 MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Lightweight notification daemon
+WWW=		https://dunst-project.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

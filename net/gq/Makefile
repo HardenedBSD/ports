@@ -1,5 +1,3 @@
-# Created by: Roman Shterenzon <roman@xpert.com>
-
 PORTNAME=	gq
 PORTVERSION=	1.3.4
 PORTREVISION=	17
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}client/GQ%20Unstable/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK-based LDAP client
+WWW=		https://sourceforge.net/projects/gqclient/
 
 LICENSE=	GPLv2+ LGPL21+ # some source files are under lgpl
 LICENSE_COMB=	multi

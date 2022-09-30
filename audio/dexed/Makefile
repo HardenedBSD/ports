@@ -2,17 +2,16 @@ PORTNAME=	dexed
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.6-16
 DISTVERSIONSUFFIX=	-g1df9a58
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-synth
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	DX7 FM multi plaform/multi format plugin
+WWW=		https://asb2m10.github.io/dexed/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_aarch64=	fails to compile due to a seemingly clang issue: https://github.com/llvm/llvm-project/issues/55604
 
 BUILD_DEPENDS=	libX11>0:x11/libX11 \
 		libXcursor>0:x11/libXcursor \
@@ -20,9 +19,10 @@ BUILD_DEPENDS=	libX11>0:x11/libX11 \
 		libXrandr>0:x11/libXrandr
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libjack.so:audio/jack \
+		libpng16.so:graphics/png \
 		libasound.so:audio/alsa-lib # see https://github.com/asb2m10/dexed/issues/343 about the ALSA use
 
-USES=		cmake dos2unix localbase pkgconfig
+USES=		cmake dos2unix localbase:ldflags pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	asb2m10
@@ -49,6 +49,9 @@ VST3_DESC=		Build the VST3 plugin
 VST3_BUILD_DEPENDS=	vst3sdk>0:audio/vst3sdk
 VST3_CXXFLAGS=		-DJUCE_CUSTOM_VST3_SDK=1 -fPIC
 VST3_PLIST_FILES=	lib/vst3/Dexed.so
+
+CXXFLAGS+=	-DJUCE_INCLUDE_PNGLIB_CODE=0 # to fix build on powerpc64le, see bug#265446, https://github.com/juce-framework/JUCE/issues/1094
+LDFLAGS+=	-lpng16
 
 PORTSCOUT=	skipv:nightly
 

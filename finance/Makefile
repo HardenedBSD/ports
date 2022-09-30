@@ -48,6 +48,7 @@
     SUBDIR += myphpmoney
     SUBDIR += nextcloud-cospend
     SUBDIR += odoo
+    SUBDIR += odoo14
     SUBDIR += p5-Business-CreditCard
     SUBDIR += p5-Business-MaxMind-CreditCardFraudDetection
     SUBDIR += p5-Business-OCV
@@ -93,6 +94,7 @@
     SUBDIR += p5-PayflowPro
     SUBDIR += pear_Payment_DTA
     SUBDIR += prestashop
+    SUBDIR += py-Nasdaq-Data-Link
     SUBDIR += py-backtrader
     SUBDIR += py-bitcoin
     SUBDIR += py-ebaysdk

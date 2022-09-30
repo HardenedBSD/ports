@@ -1,14 +1,13 @@
-# Created by: Willem Jan Withagen <wjw@digiware.nl>
-
 PORTNAME=	ceph
 DISTVERSIONPREFIX=	v
 DISTVERSION=	14.2.22
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	net
 PKGNAMESUFFIX=	14
 
 MAINTAINER=	wjw@digiware.nl
 COMMENT=	Ceph delivers object, block, and file storage in a unified system
+WWW=		https://ceph.com/
 
 LICENSE=	GPLv2 LGPL3
 LICENSE_COMB=	dual
@@ -59,7 +58,7 @@ RUN_DEPENDS=	\
 	${PYTHON_PKGNAMEPREFIX}cherrypy>=0:www/py-cherrypy@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}pecan>=0:www/py-pecan@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
-	${PYTHON_PKGNAMEPREFIX}routes>=0:www/py-routes@${PY_FLAVOR} 
+	${PYTHON_PKGNAMEPREFIX}routes>=0:www/py-routes@${PY_FLAVOR}
 
 USES=		cmake:noninja compiler:c++17-lang cpe dos2unix fuse gettext-runtime gmake ncurses \
 		pkgconfig python:3.8-3.9 readline shebangfix ssl

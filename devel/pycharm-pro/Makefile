@@ -1,5 +1,5 @@
 PORTNAME=	pycharm-pro
-PORTVERSION=	2022.1.2
+PORTVERSION=	2022.2.2
 CATEGORIES=	devel java python
 MASTER_SITES=	https://download.jetbrains.com/python/ \
 		http://download.jetbrains.com/python/
@@ -7,6 +7,7 @@ DISTNAME=	pycharm-professional-${PORTVERSION}
 
 MAINTAINER=	guido@kollerie.com
 COMMENT=	JetBrains PyCharm Professional Edition IDE
+WWW=		https://www.jetbrains.com/pycharm/
 
 LICENSE=	PyCharm-Professional
 LICENSE_NAME=	Subscription license agreement for business and organizations

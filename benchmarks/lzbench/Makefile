@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	lzbench
 PORTVERSION=	1.8.1
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	benchmarks
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	In-memory benchmark of open-source LZ77/LZSS/LZMA compressors
+WWW=		https://github.com/inikep/lzbench
 
 USES=		compiler:c11 gmake
 USE_GITHUB=	yes

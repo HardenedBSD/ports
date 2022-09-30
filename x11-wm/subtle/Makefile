@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	subtle
 PORTVERSION=	0.11.3224
 CATEGORIES=	x11-wm ruby
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-xi
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Grid-based manual tiling window manager
+WWW=		https://subtle.subforge.org/
 
 LICENSE=	GPLv2
 

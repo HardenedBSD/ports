@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	tup
 PORTVERSION=	0.7.11
 DISTVERSIONPREFIX=	v
@@ -8,12 +6,15 @@ MASTER_SITES=	https://gittup.org/tup/releases/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Fast and smart file-based build system
+WWW=		https://gittup.org/tup/
 
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
 USES=		fuse pkgconfig
+
+USE_HARDENING=  pie:off
 
 DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${SH} bootstrap-nofuse.sh
 

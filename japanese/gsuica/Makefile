@@ -1,5 +1,3 @@
-# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-
 PORTNAME=	gsuica
 PORTVERSION=	0.9.1
 PORTREVISION=	4
@@ -11,6 +9,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	GNOME SUICA Viewer
+WWW=		http://hito.music.coocan.jp/pasori/gsuica.html
 
 LICENSE=	GPLv2
 

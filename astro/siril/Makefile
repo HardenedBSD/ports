@@ -1,17 +1,21 @@
 PORTNAME=	siril
-DISTVERSION=	1.0.3
+DISTVERSION=	1.0.5
 CATEGORIES=	astro graphics
 MASTER_SITES=	https://free-astro.org/download/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Astronomical image processing software
+WWW=		https://siril.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 BROKEN_i386=	undefined reference to `__atomic_load' and `__atomic_compare_exchange' #`
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
-BUILD_DEPENDS=	cmake:devel/cmake
+BUILD_DEPENDS=	cmake:devel/cmake-core
 LIB_DEPENDS=	libavformat.so:multimedia/ffmpeg \
 		libcfitsio.so:astro/cfitsio \
 		libconfig.so:devel/libconfig \

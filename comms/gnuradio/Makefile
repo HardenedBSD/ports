@@ -1,11 +1,12 @@
 PORTNAME=	gnuradio
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.8.4.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	comms astro hamradio
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Amateur Radio Software defined radio
+WWW=		https://www.gnuradio.org/
 
 LICENSE=	GPLv3
 

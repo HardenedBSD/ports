@@ -1,5 +1,3 @@
-# Created by: Carlo Strub <cs@FreeBSD.org>
-
 PORTNAME=	YubiOTP
 PORTVERSION=	1.0.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Library for verifying YubiKey OTP tokens
+WWW=		https://pypi.org/project/YubiOTP/
 
 LICENSE=	BSD2CLAUSE
 

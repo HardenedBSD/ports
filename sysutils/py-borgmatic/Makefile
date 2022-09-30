@@ -1,11 +1,13 @@
 PORTNAME=	borgmatic
 PORTVERSION=	1.5.24
+PORTREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Wrapper script for Borg backup software
+WWW=		https://torsion.org/borgmatic/
 
 LICENSE=	GPLv3
 

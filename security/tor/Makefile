@@ -1,12 +1,11 @@
-# Created by: peter.thoenen@yahoo.com
-
 PORTNAME=	tor
-DISTVERSION=	0.4.7.8
+DISTVERSION=	0.4.7.10
 CATEGORIES=	security net
 MASTER_SITES=	TOR
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Anonymizing overlay network for TCP
+WWW=		https://www.torproject.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -22,6 +21,8 @@ CONFIGURE_ENV=	TOR_CPPFLAGS_libevent="-I${LOCALBASE}/include" \
 		TOR_LIBEVENT_LIBS="${TOR_LIBEVENT_LIBS}"
 
 USE_HARDENING=	cfi safestack
+
+USES+=		stack_autoinit:uninitialized
 
 OPTIONS_DEFINE=	MANPAGES DOCS STATIC_TOR TCMALLOC
 OPTIONS_GROUP=	COMPRESSION TRACING

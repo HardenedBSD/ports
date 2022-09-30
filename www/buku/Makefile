@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	buku
 PORTVERSION=	4.7.1
 CATEGORIES=	www python
@@ -7,6 +5,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Powerful command-line bookmark manager
+WWW=		https://github.com/jarun/buku
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

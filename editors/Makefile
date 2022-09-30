@@ -5,9 +5,11 @@
     SUBDIR += abiword-docs
     SUBDIR += aee
     SUBDIR += aewan
+    SUBDIR += amp
     SUBDIR += apel
     SUBDIR += asedit
     SUBDIR += beav
+    SUBDIR += bee-host
     SUBDIR += biew
     SUBDIR += bitedit
     SUBDIR += boiling-egg
@@ -16,7 +18,6 @@
     SUBDIR += calligra
     SUBDIR += calligraplan
     SUBDIR += chexedit
-    SUBDIR += codelite
     SUBDIR += cooledit
     SUBDIR += cpeditor
     SUBDIR += cream
@@ -51,6 +52,7 @@
     SUBDIR += ghostwriter
     SUBDIR += gmanedit
     SUBDIR += gnome-latex
+    SUBDIR += gnome-text-editor
     SUBDIR += gobby
     SUBDIR += gomate
     SUBDIR += gummi
@@ -76,6 +78,7 @@
     SUBDIR += kibi
     SUBDIR += kile
     SUBDIR += komodo-edit
+    SUBDIR += lapce
     SUBDIR += lazarus
     SUBDIR += lazarus-devel
     SUBDIR += lazarus-qt5
@@ -265,9 +268,11 @@
     SUBDIR += vigor
     SUBDIR += vile
     SUBDIR += vim
+    SUBDIR += vim-colorschemes-legacy
     SUBDIR += vscode
     SUBDIR += web-mode
     SUBDIR += with-editor
+    SUBDIR += with-editor-devel
     SUBDIR += wordgrinder
     SUBDIR += wxhexeditor
     SUBDIR += xcoral

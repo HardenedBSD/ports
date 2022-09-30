@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	mimalloc
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.6
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	General-purpose allocator with excellent performance characteristics
+WWW=		https://github.com/microsoft/mimalloc
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

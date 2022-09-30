@@ -1,12 +1,11 @@
-# Created by: Rod Person <rodperson@rodperson.com>
-
 PORTNAME=	fotoxx
-PORTVERSION=	22.18
+PORTVERSION=	22.31
 CATEGORIES=	graphics
 MASTER_SITES=	https://kornelix.net/downloads/downloads/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Application to organize and edit image collections
+WWW=		https://kornelix.net/fotoxx/fotoxx.html
 
 LICENSE=	GPLv3+
 

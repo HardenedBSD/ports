@@ -1,13 +1,12 @@
-# Created by: Aaron LI <aly@aaronly.me>
-
 PORTNAME=	mirrorselect
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.0
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	www ports-mgmt
 
 MAINTAINER=	aly@aaronly.me
 COMMENT=	HTTP service that selects pkg(8) mirrors near to the client
+WWW=		https://github.com/DragonFlyBSD/mirrorselect
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,8 +1,6 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	tumbler
-PORTVERSION=	4.16.0
-PORTREVISION=	19
+PORTVERSION=	4.16.1
+PORTREVISION=	1
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE
 PKGNAMEPREFIX=	xfce4-
@@ -10,6 +8,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Thumbnail service for Xfce desktop
+WWW=		https://git.xfce.org/xfce/tumbler/
 
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi

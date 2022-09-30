@@ -1,11 +1,12 @@
 PORTNAME=	activesupport
-PORTVERSION=	7.0.3
+PORTVERSION=	7.0.3.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	70
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Toolkit of support libraries and Ruby core extensions extracted from the Rails framework
+WWW=		https://github.com/rails/rails/tree/main/activesupport
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

@@ -8,7 +8,7 @@ PORTREVISION=	0
 .else
 # XXX: correct version
 # dns/bind9xx here
-PORTREVISION=	0
+PORTREVISION=	1
 .endif
 CATEGORIES=	dns net
 # XXX: put the ISC master_site
@@ -24,6 +24,7 @@ PKGNAMESUFFIX=	9-devel
 #DISTNAME=	${PORTNAME}-${ISCVERSION}
 
 MAINTAINER=	mat@FreeBSD.org
+WWW=		https://www.isc.org/bind/
 .if defined(BIND_TOOLS_SLAVE)
 COMMENT=	Command line tools from BIND: delv, dig, host, nslookup...
 .else

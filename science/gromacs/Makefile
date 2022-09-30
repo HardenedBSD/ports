@@ -1,12 +1,11 @@
-# Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-
 PORTNAME=	gromacs
-DISTVERSION=	2022.2
+DISTVERSION=	2022.3
 CATEGORIES=	science
 MASTER_SITES=	ftp://ftp.gromacs.org/pub/gromacs/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Compute molecular dynamics
+WWW=		https://www.gromacs.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -26,6 +25,8 @@ bash_CMD=	${SH}
 CMAKE_OFF=	GMX_USE_RDTSCP \
 		USE_PYTHON_SCRIPTS
 CMAKE_ARGS=	-DPython3_EXECUTABLE=${PYTHON_CMD}
+
+TEST_TARGET=	check
 
 OPTIONS_DEFINE=		ATLAS FLOAT LEGACY OPENCL OPENMP SIMD X11
 OPTIONS_SINGLE=		MP

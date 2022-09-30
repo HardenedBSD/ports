@@ -1,5 +1,3 @@
-# Created by: Johannes Dieterich <jmd@FreeBSD.org>
-
 PORTNAME=	gpu-firmware-kmod
 PORTVERSION=	20220511
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Firmware modules for the drm-kmod drivers
+WWW=		https://github.com/freebsd/drm-kmod
 
 USES=		metaport
 

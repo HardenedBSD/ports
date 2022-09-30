@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	1password-client
 DISTVERSION=	1.12.4
 CATEGORIES=	security
@@ -8,6 +6,7 @@ MASTER_SITES=	https://cache.agilebits.com/dist/1P/op/pkg/v${DISTVERSION}/ \
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	1Password CLI client
+WWW=		https://support.1password.com/command-line-getting-started/
 
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386
 

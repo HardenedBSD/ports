@@ -5,12 +5,13 @@ CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Quite Universal Circuit Simulator: GUI for circuit simulation kernels
+WWW=		https://ra3xdh.github.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cmake qt:5
-USE_QT=		core gui printsupport svg widgets buildtools_build linguisttools_build qmake_build
+USE_QT=		core gui printsupport svg widgets buildtools:build linguisttools:build qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ra3xdh

@@ -1,5 +1,3 @@
-# Created by: Evan Sarmiento <esarmiento@wayfair.com>
-
 PORTNAME=	xen-guest-tools
 PORTVERSION=	4.14.0
 PORTREVISION=	0
@@ -9,6 +7,7 @@ DISTNAME=	xen-${PORTVERSION}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Xen tools within FreeBSD domU
+WWW=		https://xenproject.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

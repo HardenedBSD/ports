@@ -1,5 +1,3 @@
-# Created by: vanilla
-
 PORTNAME=	rump
 PORTVERSION=	20170822
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	misc
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Virtualized NetBSD kernel components in userspace
+WWW=		https://www.rumpkernel.org
 
 LICENSE=	BSD2CLAUSE
 
@@ -20,6 +19,9 @@ GH_TAGNAME=	b914579
 GH_TUPLE=	rumpkernel:src-netbsd:82f3a69:netbsd/src
 USE_LDCONFIG=	yes
 USES=		compiler
+
+USE_GCC=	yes:build
+CWARNFLAGS+=	-Wno-error
 
 .include <bsd.port.pre.mk>
 

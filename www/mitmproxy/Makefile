@@ -1,5 +1,3 @@
-# Created by: Hung-Yi Chen <gaod@hychen.org>
-
 PORTNAME=	mitmproxy
 PORTVERSION=	7.0.4
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	www python
 
 MAINTAINER=	gaod@hychen.org
 COMMENT=	SSL-capable man-in-the-middle proxy
+WWW=		https://mitmproxy.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

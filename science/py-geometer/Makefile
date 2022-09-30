@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	geometer
 PORTVERSION=	0.3.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python geometry package based on projective geometry and numpy
+WWW=		https://github.com/jan-mue/geometer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

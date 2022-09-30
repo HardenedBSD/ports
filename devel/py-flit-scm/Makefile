@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	flit-scm
 PORTVERSION=	1.7.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	flit_scm-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEP 518 build backend that uses setuptools_scm to generate a version file
+WWW=		https://gitlab.com/WillDaSilva/flit_scm
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

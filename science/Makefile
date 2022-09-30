@@ -2,9 +2,9 @@
 
     SUBDIR += 2d-rewriter
     SUBDIR += ALPSCore
+    SUBDIR += ChipmunkPhysics
     SUBDIR += InsightToolkit
     SUBDIR += PETSc
-    SUBDIR += R-cran-AMORE
     SUBDIR += R-cran-DCluster
     SUBDIR += R-cran-Epi
     SUBDIR += R-cran-FAdist
@@ -37,6 +37,7 @@
     SUBDIR += bodr
     SUBDIR += buddy
     SUBDIR += cantera
+    SUBDIR += cardioid
     SUBDIR += cdcl
     SUBDIR += cdf
     SUBDIR += cdk
@@ -67,10 +68,13 @@
     SUBDIR += devisor
     SUBDIR += dftbplus
     SUBDIR += dftd4
+    SUBDIR += dimod
+    SUBDIR += dirac
     SUBDIR += dkh
     SUBDIR += dlib-cpp
     SUBDIR += drawxtl
     SUBDIR += dvc
+    SUBDIR += dwave-preprocessing
     SUBDIR += dynare
     SUBDIR += eccodes
     SUBDIR += elk
@@ -109,6 +113,7 @@
     SUBDIR += harminv
     SUBDIR += hdf
     SUBDIR += hdf5
+    SUBDIR += hdf5-110
     SUBDIR += hdf5-18
     SUBDIR += healpix
     SUBDIR += helfem
@@ -122,6 +127,7 @@
     SUBDIR += jstrack
     SUBDIR += kalzium
     SUBDIR += kim-api
+    SUBDIR += kplib
     SUBDIR += kst2
     SUBDIR += lammps
     SUBDIR += lamprop
@@ -165,6 +171,8 @@
     SUBDIR += mcxtrace-comps
     SUBDIR += mdynamix
     SUBDIR += medit
+    SUBDIR += meep
+    SUBDIR += mercantile
     SUBDIR += metaphysicl
     SUBDIR += minc2
     SUBDIR += mmdb2
@@ -186,12 +194,12 @@
     SUBDIR += netcdf-cxx
     SUBDIR += netcdf-fortran
     SUBDIR += nifticlib
+    SUBDIR += nlcglib
     SUBDIR += nwchem
     SUBDIR += nwchem-data
     SUBDIR += octopus
     SUBDIR += openbabel
     SUBDIR += openems
-    SUBDIR += openkim
     SUBDIR += openkim-models
     SUBDIR += openmc
     SUBDIR += openmolcas
@@ -251,6 +259,8 @@
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
+    SUBDIR += py-OpenFermion-Dirac
+    SUBDIR += py-OpenFermion-PySCF
     SUBDIR += py-OpenMC
     SUBDIR += py-PubChemPy
     SUBDIR += py-PyFR
@@ -275,8 +285,21 @@
     SUBDIR += py-cirq-pasqal
     SUBDIR += py-cirq-rigetti
     SUBDIR += py-coards
+    SUBDIR += py-dimod
     SUBDIR += py-dipy
     SUBDIR += py-dlib
+    SUBDIR += py-dwave-cloud-client
+    SUBDIR += py-dwave-greedy
+    SUBDIR += py-dwave-hybrid
+    SUBDIR += py-dwave-inspector
+    SUBDIR += py-dwave-neal
+    SUBDIR += py-dwave-networkx
+    SUBDIR += py-dwave-ocean-sdk
+    SUBDIR += py-dwave-preprocessing
+    SUBDIR += py-dwave-samplers
+    SUBDIR += py-dwave-system
+    SUBDIR += py-dwave-tabu
+    SUBDIR += py-dwavebinarycsp
     SUBDIR += py-eccodes
     SUBDIR += py-esda
     SUBDIR += py-fresnel
@@ -295,6 +318,7 @@
     SUBDIR += py-kim-query
     SUBDIR += py-kinematics
     SUBDIR += py-kliff
+    SUBDIR += py-kpLib
     SUBDIR += py-liac-arff
     SUBDIR += py-libgetar
     SUBDIR += py-libpysal
@@ -312,6 +336,7 @@
     SUBDIR += py-openpiv
     SUBDIR += py-paida
     SUBDIR += py-paramz
+    SUBDIR += py-penaltymodel
     SUBDIR += py-phono3py
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
@@ -325,14 +350,26 @@
     SUBDIR += py-pygmo2
     SUBDIR += py-pyked
     SUBDIR += py-pymatgen
+    SUBDIR += py-pymbd
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
     SUBDIR += py-pyprecice
+    SUBDIR += py-pyqubo
     SUBDIR += py-pysal
     SUBDIR += py-pyscf
     SUBDIR += py-pyteomics
     SUBDIR += py-qcelemental
     SUBDIR += py-qcengine
+    SUBDIR += py-qiskit
+    SUBDIR += py-qiskit-aer
+    SUBDIR += py-qiskit-experiments
+    SUBDIR += py-qiskit-finance
+    SUBDIR += py-qiskit-ibm-experiment
+    SUBDIR += py-qiskit-ibm-provider
+    SUBDIR += py-qiskit-ibmq-provider
+    SUBDIR += py-qiskit-nature
+    SUBDIR += py-qiskit-optimization
+    SUBDIR += py-qiskit-terra
     SUBDIR += py-qspin
     SUBDIR += py-quantities
     SUBDIR += py-rmf
@@ -355,6 +392,7 @@
     SUBDIR += py-thewalrus
     SUBDIR += py-tobler
     SUBDIR += py-trainstation
+    SUBDIR += py-tweedledum
     SUBDIR += py-veusz
     SUBDIR += pybrain
     SUBDIR += pynn
@@ -379,6 +417,7 @@
     SUBDIR += rubygem-ruby-netcdf
     SUBDIR += scidavis
     SUBDIR += segyio
+    SUBDIR += serac
     SUBDIR += shelxle
     SUBDIR += siconos
     SUBDIR += siesta
@@ -393,6 +432,7 @@
     SUBDIR += simlib
     SUBDIR += simple-dftd3
     SUBDIR += simsmith
+    SUBDIR += sirius
     SUBDIR += smoldyn
     SUBDIR += sparta
     SUBDIR += spglib
@@ -405,6 +445,7 @@
     SUBDIR += thermofun
     SUBDIR += tinker
     SUBDIR += trilinos
+    SUBDIR += tweedledum
     SUBDIR += udunits
     SUBDIR += ukrmol+
     SUBDIR += v_sim

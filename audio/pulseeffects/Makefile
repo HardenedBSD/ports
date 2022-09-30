@@ -1,11 +1,12 @@
 PORTNAME=	pulseeffects
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.6.8
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	audio
 
 MAINTAINER=	daniel@shafer.cc
 COMMENT=	Audio effects for Pulseaudio applications
+WWW=		https://github.com/wwmm/pulseeffects
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

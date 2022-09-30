@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	gnucobol
 PORTVERSION=	3.1.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU/gnucobol
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Free/libre COBOL compiler
+WWW=		https://www.gnu.org/software/gnucobol/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi

@@ -1,5 +1,3 @@
-# Created by: martin.dieringer@gmx.de
-
 PORTNAME=	frescobaldi
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.2
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	Music score editor for lilypond
+WWW=		https://www.frescobaldi.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

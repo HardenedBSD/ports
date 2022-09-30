@@ -1,11 +1,15 @@
 PORTNAME=	suricata
-DISTVERSION=	6.0.5
-PORTREVISION=	4
+DISTVERSION=	6.0.6
+PORTREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	https://www.openinfosecfoundation.org/download/
 
+PATCH_SITES=	https://github.com/OISF/${PORTNAME}/commit/
+PATCHFILES=	5dbbc52b066b2047c4bc30be7fd29dbb3febaf96.patch:-p1
+
 MAINTAINER=	franco@opnsense.org
 COMMENT=	High Performance Network IDS, IPS and Security Monitoring engine
+WWW=		https://suricata-ids.org
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

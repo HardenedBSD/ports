@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pip-run
 PORTVERSION=	8.8.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Install packages and run Python with them
+WWW=		https://github.com/jaraco/pip-run
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

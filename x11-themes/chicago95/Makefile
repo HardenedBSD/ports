@@ -2,10 +2,12 @@ PORTNAME=	chicago95
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.1-119
 DISTVERSIONSUFFIX=	-g149a54c
+PORTREVISION=	1
 CATEGORIES=	x11-themes
 
-MAINTAINER=	evgeniy@khramtsov.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Classic Redmond theme
+WWW=		https://github.com/grassmunk/Chicago95
 
 LICENSE=	GPLv3+ MIT
 LICENSE_COMB=	multi

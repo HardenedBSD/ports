@@ -1,5 +1,3 @@
-# Created by: vanilla@
-
 PORTNAME=	plv8
 PORTVERSION=	3.0.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	js
 
 MAINTAINER=	mizhka@FreeBSD.org
 COMMENT=	PL/v8js procedural language for PostgreSQL database
+WWW=		https://plv8.github.io/
 
 LICENSE=	PostgreSQL
 

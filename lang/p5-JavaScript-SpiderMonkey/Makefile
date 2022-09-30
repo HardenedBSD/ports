@@ -1,5 +1,3 @@
-# Created by: kappa@FreeBSD.org.ua
-
 PORTNAME=	JavaScript-SpiderMonkey
 PORTVERSION=	0.25
 CATEGORIES=	lang perl5
@@ -8,6 +6,10 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl interface to Mozilla JavaScript implementation
+WWW=		https://metacpan.org/release/JavaScript-SpiderMonkey
+
+DEPRECATED=	Depends on deprecated SpiderMonkey 1.7
+EXPIRATION_DATE=2022-09-30
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

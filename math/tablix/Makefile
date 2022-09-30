@@ -1,5 +1,3 @@
-# Created by: amir.husaini@gmail.com
-
 PORTNAME=	tablix2
 PORTVERSION=	0.3.5
 PORTREVISION=	8
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.tablix.org/releases/stable/ \
 
 MAINTAINER=	amir.husaini@gmail.com
 COMMENT=	Free software for solving timetabling problems
+WWW=		https://www.tablix.org/
 
 BUILD_DEPENDS=	pvm:net/pvm
 RUN_DEPENDS=	pvm:net/pvm

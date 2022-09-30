@@ -1,5 +1,5 @@
 PORTNAME=	goland
-PORTVERSION=	2022.1.2
+PORTVERSION=	2022.2.3
 CATEGORIES=	devel java
 MASTER_SITES=	https://download-cdn.jetbrains.com/go/
 PKGNAMEPREFIX=	jetbrains-
@@ -7,6 +7,7 @@ DIST_SUBDIR=	jetbrains
 
 MAINTAINER=	dmitry.wagin@ya.ru
 COMMENT=	JetBrains GoLand IDE
+WWW=		https://www.jetbrains.com/go/
 
 LICENSE=	IntelliJ-GoLand
 LICENSE_NAME=	Subscription license agreement for business and organizations
@@ -20,7 +21,7 @@ USES=		cpe python:run shebangfix
 CPE_VENDOR=	jetbrains
 
 USE_JAVA=	yes
-JAVA_VERSION=	11+
+JAVA_VERSION=	17+
 
 SHEBANG_FILES=	bin/restart.py
 

@@ -1,5 +1,3 @@
-# Created by: Mahdi Mokhtari <mokhi64@gmail.com>
-
 PORTNAME=	lttng-ust
 PORTVERSION=	2.9.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://lttng.org/files/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Libraries to instrument and trace user applications
+WWW=		https://github.com/lttng/lttng-ust
 
 LICENSE=		LGPL21 MIT GPLv2
 LICENSE_COMB=		dual

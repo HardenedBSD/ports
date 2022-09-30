@@ -1,5 +1,3 @@
-# Created by: Oliver Lehmann <oliver@FreeBSD.org>
-
 PORTNAME=	mousepad
 PORTVERSION=	0.5.10
 CATEGORIES=	editors xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Simple text editor for the Xfce Desktop
+WWW=		https://git.xfce.org/apps/mousepad/about/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

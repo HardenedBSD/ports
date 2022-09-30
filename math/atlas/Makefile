@@ -1,5 +1,3 @@
-# Created by: Nakata Maho <maho@FreeBSD.org>
-
 PORTNAME=	atlas
 PORTVERSION=	3.8.4
 PORTREVISION=	18
@@ -11,6 +9,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automatically Tuned Linear Algebra Software (ATLAS)
+WWW=		http://math-atlas.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 

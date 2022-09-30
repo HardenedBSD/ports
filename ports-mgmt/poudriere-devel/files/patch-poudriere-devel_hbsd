@@ -1,0 +1,28 @@
+--- src/share/poudriere/common.sh
++++ src/share/poudriere/common.sh
+@@ -952,7 +952,7 @@
+ 	if [ "${PKG_REPRODUCIBLE}" != "yes" ]; then
+ 		pkg_note_add "${pkgname}" built_by "${POUDRIERE_PKGNAME}"
+ 	fi
+-	echo "Host OSVERSION: ${HOST_OSVERSION}"
++	echo "Host OSVERSION: ${HOST_OSVERSION} $(cat /var/db/hbsd-update/version)"
+ 	echo "Jail OSVERSION: ${JAIL_OSVERSION}"
+ 	echo "Job Id: ${MY_JOBID}"
+ 	echo
+@@ -968,6 +968,15 @@
+ 		echo
+ 		echo
+ 	fi
++	if [ `sysctl -n hardening.harden_rtld` = 1 ]; then
++		echo
++		echo
++		echo
++		echo "!!! harden_rtld is not disable, expect build failures. !!!"
++		echo
++		echo
++		echo
++	fi
+ 	echo "---Begin Environment---"
+ 	injail /usr/bin/env
+ 	echo "---End Environment---"
+

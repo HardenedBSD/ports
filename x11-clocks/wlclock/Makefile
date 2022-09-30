@@ -1,11 +1,12 @@
 PORTNAME=	wlclock
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.1
-CATEGORIES=	x11-clocks
+CATEGORIES=	x11-clocks wayland
 MASTER_SITES=	https://git.sr.ht/~leon_plickat/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Digital analog clock for Wayland desktops
+WWW=		https://git.sr.ht/~leon_plickat/wlclock
 
 LICENSE=	GPLv3
 

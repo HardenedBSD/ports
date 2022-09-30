@@ -1,10 +1,12 @@
 PORTNAME=	liggghts
 DISTVERSION=	3.8.0-45
 DISTVERSIONSUFFIX=	-g86544c3f
+PORTREVISION=	1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Discrete element method particle simulation software
+WWW=		https://www.cfdem.com/liggghts-open-source-discrete-element-method-particle-simulation-code
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/../LICENSE
@@ -21,7 +23,7 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 
 USES=		compiler:c++17-lang cmake fortran gl jpeg python qt:5 xorg
 USE_XORG=	ice sm x11 xext xt
-USE_QT=		core declarative gui network opengl sql widgets qmake_build buildtools_build
+USE_QT=		core declarative gui network opengl sql widgets qmake:build buildtools:build
 USE_GL=		gl
 USE_LDCONFIG=	yes
 

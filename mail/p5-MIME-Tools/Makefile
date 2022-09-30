@@ -1,5 +1,3 @@
-# Created by: Eivind Eklund <eivind@FreeBSD.org>
-
 PORTNAME=	MIME-Tools
 PORTVERSION=	5.510
 PORTEPOCH=	2
@@ -11,6 +9,7 @@ DISTNAME=	MIME-tools-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Set of perl5 modules for MIME
+WWW=		https://metacpan.org/release/MIME-tools
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

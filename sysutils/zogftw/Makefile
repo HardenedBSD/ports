@@ -1,5 +1,3 @@
-# Created by: Fabian Keil <fk@fabiankeil.de>
-
 PORTNAME=	zogftw
 PORTVERSION=	0.0.2022.06.25
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-2022-06-25-03982c7
 
 MAINTAINER=	fk@fabiankeil.de
 COMMENT=	Creates redundant backups on encrypted ZFS pools
+WWW=		https://www.fabiankeil.de/gehacktes/zogftw/
 
 RUN_DEPENDS=	mbuffer:misc/mbuffer \
 		sudo:security/sudo

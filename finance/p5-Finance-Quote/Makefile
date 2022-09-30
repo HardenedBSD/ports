@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Finance-Quote
 PORTVERSION=	1.52
 CATEGORIES=	finance perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Get stock and mutual fund quotes from various exchanges
+WWW=		https://metacpan.org/release/Finance-Quote
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	jruby
 PORTVERSION=	9.2.17.0
 DISTVERSIONPREFIX=	bin-
@@ -8,6 +6,7 @@ MASTER_SITES=	http://jruby.org.s3.amazonaws.com/downloads/${PORTVERSION}/
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Implementation of Ruby Interpreter in Pure Java
+WWW=		http://jruby.org/
 
 LICENSE=	EPL GPLv2 LGPL21
 LICENSE_COMB=	dual

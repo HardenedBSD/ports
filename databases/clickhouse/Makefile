@@ -1,5 +1,3 @@
-# Created by: proler@gmail.com
-
 PORTNAME=	clickhouse
 PORTVERSION=	22.1.3.7
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	olevole@olevole.ru
 COMMENT=	Fast open-source OLAP database management system
+WWW=		https://clickhouse.tech/
 
 LICENSE=	APACHE20
 

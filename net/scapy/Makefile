@@ -1,4 +1,3 @@
-# Created by: vanhu <vanhu@netasq.com>
 PORTNAME=	scapy
 PORTVERSION=	2.4.5
 CATEGORIES=	net python
@@ -7,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Powerful interactive packet manipulation program in python
+WWW=		https://scapy.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

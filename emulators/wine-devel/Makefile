@@ -1,16 +1,14 @@
-# Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-
 PORTNAME=	wine
-DISTVERSION=	7.9
+DISTVERSION=	7.17
 PORTEPOCH=	1
 CATEGORIES=	emulators
-MASTER_SITES=	SF/${PORTNAME}/Source \
-		http://mirrors.ibiblio.org/wine/source/7.x/
+MASTER_SITES=	https://dl.winehq.org/wine/source/7.x/
 PKGNAMESUFFIX=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	damjan.jov@gmail.com
 COMMENT=	Microsoft Windows compatibility environment
+WWW=		https://www.winehq.org
 
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual

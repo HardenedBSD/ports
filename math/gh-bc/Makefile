@@ -1,23 +1,22 @@
 PORTNAME=		bc
-PORTVERSION=		5.3.3
+PORTVERSION=		6.0.2
 CATEGORIES=		math lang
+MASTER_SITES=		https://github.com/gavinhoward/bc/releases/download/${PORTVERSION}/
 PKGNAMEPREFIX=		gh-
 
 MAINTAINER=		se@FreeBSD.org
 COMMENT=		GNU compatible bc/dc calculator
+WWW=		https://git.yzena.com/gavin/bc
 
 LICENSE=		BSD2CLAUSE MIT
 LICENSE_COMB=		multi
 LICENSE_FILE=		${WRKSRC}/LICENSE.md
 
-USES=			compiler:c11
-USE_GITHUB=		yes
-GH_ACCOUNT=		gavinhoward
-GH_TAGNAME=		eb0cd870b9
+USES=			compiler:c11 tar:xz
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	configure.sh
-CONFIGURE_ARGS+=	--disable-generated-tests
+CONFIGURE_ARGS+=	--predefined-build-type=BSD --disable-problematic-tests
 
 TEST_TARGET=		test
 
@@ -27,6 +26,8 @@ OPTIONS_DEFAULT=	LIBEDIT
 OPTIONS_RADIO=		HISTORY
 OPTIONS_RADIO_HISTORY=	LIBEDIT READLINE INTERNAL
 INTERNAL_DESC=		Command line editing via private functions
+
+INTERNAL_CONFIGURE_ON=	--enable-internal-history
 
 LIBEDIT_USES=		libedit
 LIBEDIT_CONFIGURE_ON=	--enable-editline

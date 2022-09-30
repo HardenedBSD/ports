@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	afdko
 PORTVERSION=	3.9.1
 CATEGORIES=	x11-fonts python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Adobe Font Development Kit for OpenType
+WWW=		https://github.com/adobe-type-tools/afdko
 
 LICENSE=	APACHE20
 

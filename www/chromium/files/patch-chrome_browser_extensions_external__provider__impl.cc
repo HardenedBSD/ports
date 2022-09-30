@@ -1,4 +1,4 @@
---- chrome/browser/extensions/external_provider_impl.cc.orig	2022-03-25 21:59:56 UTC
+--- chrome/browser/extensions/external_provider_impl.cc.orig	2022-09-24 10:57:32 UTC
 +++ chrome/browser/extensions/external_provider_impl.cc
 @@ -818,7 +818,7 @@ void ExternalProviderImpl::CreateExternalProviders(
    if (!profile->GetPrefs()->GetBoolean(pref_names::kBlockExternalExtensions)) {

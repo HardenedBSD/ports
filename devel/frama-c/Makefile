@@ -1,5 +1,3 @@
-# Created by: b.f. <bf@FreeBSD.org>
-
 PORTNAME=	frama-c
 DISTVERSIONPREFIX=	Phosphorus-
 DISTVERSION=	20170501
@@ -9,6 +7,7 @@ MASTER_SITES=	http://frama-c.com/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extensible platform for source-code analysis of C
+WWW=		https://frama-c.com/index.html
 
 LICENSE=	LGPL21
 

@@ -1,5 +1,3 @@
-# Created by: Gerrit Beine <tux@pinguru.net>
-
 PORTNAME=	mediawiki
 PORTVERSION=	1.37.3
 CATEGORIES=	www
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	137${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Wiki engine used by Wikipedia
+WWW=		https://www.mediawiki.org/
 
 LICENSE=	GPLv2
 

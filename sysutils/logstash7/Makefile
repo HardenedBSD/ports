@@ -1,5 +1,3 @@
-# Created by: Daniel Solsona <daniel@ish.com.au>, Guido Falsi <madpilot@FreeBSD.org>
-
 PORTNAME=	logstash
 PORTVERSION=	7.17.3
 DISTVERSIONSUFFIX=	-darwin-x86_64
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	7
 
 MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Server-side data ingestion and transformation tool
+WWW=		https://www.elastic.co/products/logstash
 
 LICENSE=	APACHE20
 

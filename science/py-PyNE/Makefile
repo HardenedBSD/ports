@@ -1,6 +1,6 @@
 PORTNAME=	PyNE
 DISTVERSION=	0.7.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	science
 MASTER_SITES=	http://raw.githubusercontent.com/pyne/data/master/:decay \
 		http://raw.githubusercontent.com/pyne/data/master/:cram \
@@ -18,6 +18,7 @@ EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	PyNE: The Nuclear Engineering Toolkit
+WWW=		https://pyne.io/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
@@ -26,7 +27,7 @@ PY_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}tables>0:devel/py-tables@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
-BUILD_DEPENDS=	cmake:devel/cmake \
+BUILD_DEPENDS=	cmake:devel/cmake-core \
 		${PY_DEPENDS}
 LIB_DEPENDS=	libhdf5.so:science/hdf5 \
 		libMOAB.so:math/moab \

@@ -1,10 +1,12 @@
 PORTNAME=	pssh
 PORTVERSION=	2.3.4
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security net sysutils
 
 MAINTAINER=	timp87@gmail.com
 COMMENT=	Parallel version of OpenSSH and related tools
+WWW=		https://github.com/lilydjwg/pssh
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

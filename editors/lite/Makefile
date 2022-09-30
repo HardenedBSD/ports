@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	lite
 PORTVERSION=	1.11
 CATEGORIES=	editors
@@ -7,6 +5,7 @@ PKGNAMESUFFIX=	-editor		# PORTNAME alone is too vague
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Lightweight text editor written mostly in Lua
+WWW=		https://github.com/rxi/lite
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES=	a38b89ca26dde1353cf1.patch:-p1

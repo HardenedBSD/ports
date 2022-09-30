@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cffsubr
 PORTVERSION=	0.2.9.post1
 CATEGORIES=	x11-fonts python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Standalone CFF subroutinizer based on the AFDKO tx tool
+WWW=		https://github.com/adobe-type-tools/cffsubr
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,6 +1,6 @@
---- chrome/browser/printing/print_job_worker.cc.orig	2022-05-19 14:06:27 UTC
+--- chrome/browser/printing/print_job_worker.cc.orig	2022-09-24 10:57:32 UTC
 +++ chrome/browser/printing/print_job_worker.cc
-@@ -216,7 +216,7 @@ void PrintJobWorker::UpdatePrintSettings(base::Value::
+@@ -195,7 +195,7 @@ void PrintJobWorker::SetSettings(base::Value::Dict new
      crash_key = std::make_unique<crash_keys::ScopedPrinterInfo>(
          print_backend->GetPrinterDriverInfo(printer_name));
  

@@ -1,10 +1,11 @@
 PORTNAME=	gnutls
-PORTVERSION=	3.7.6
+PORTVERSION=	3.7.7
 CATEGORIES=	security net
 MASTER_SITES=	GNUPG/gnutls/v${PORTVERSION:R}
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	GNU Transport Layer Security library
+WWW=		https://gnutls.org/
 
 LICENSE=	GPLv3 LGPL21
 LICENSE_COMB=	multi

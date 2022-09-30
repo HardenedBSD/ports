@@ -1,10 +1,9 @@
-# Created by: gahr
-
 PORTNAME=	libosmesa
 PORTVERSION=	${MESAVERSION}
 CATEGORIES=	graphics
 
 COMMENT=	Off-Screen Mesa implementation of the OpenGL API
+WWW=		https://www.mesa3d.org/
 
 USES=		xorg
 USE_XORG=	xorgproto

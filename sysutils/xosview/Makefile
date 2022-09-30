@@ -1,5 +1,3 @@
-# Created by: Brian Handy <handy@physics.montana.edu>
-
 PORTNAME=	xosview
 DISTVERSION=	1.23
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	otaciliodearaujo@gmail.com
 COMMENT=	Graphical performance meter
+WWW=		https://www.pogo.org.uk/~mark/xosview/
 
 LICENSE=	BSD4CLAUSE GPLv2
 LICENSE_COMB=	multi

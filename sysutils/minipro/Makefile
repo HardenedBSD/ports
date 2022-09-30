@@ -1,11 +1,10 @@
-# Created by: Hondareyte <lhondareyte@laposte.net>
-
 PORTNAME=	minipro
 PORTVERSION=	0.5
 CATEGORIES=	sysutils
 
 MAINTAINER=	sbruno@freebsd.org
 COMMENT=	CLI for MiniPRO TL866xx chip programmers
+WWW=		https://gitlab.com/DavidGriffith/minipro
 
 LICENSE=	GPLv3
 

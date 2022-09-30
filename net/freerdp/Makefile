@@ -1,8 +1,6 @@
-# Created by: Alexander Logvinov <avl@FreeBSD.org>
-
 PORTNAME=	freerdp
-DISTVERSION=	2.7.0
-CATEGORIES=	net comms
+DISTVERSION=	2.8.0
+CATEGORIES=	net comms wayland
 MASTER_SITES=	https://pub.freerdp.com/releases/ \
 		https://github.com/FreeRDP/FreeRDP/releases/download/${DISTVERSION}/
 
@@ -10,6 +8,7 @@ MASTER_SITES=	https://pub.freerdp.com/releases/ \
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	Free implementation of Remote Desktop Protocol
+WWW=		https://www.freerdp.com/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -55,6 +54,9 @@ OPTIONS_DEFINE_armv7=	NEON
 OPTIONS_DEFINE_amd64=	SSE
 OPTIONS_DEFINE_i386=	SSE
 OPTIONS_DEFAULT_amd64=	SSE
+
+# HBSD: PulseAudio is a nice-to-have
+OPTIONS_DEFAULT+=	PULSEAUDIO
 
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 ALSA_CMAKE_BOOL=	WITH_ALSA

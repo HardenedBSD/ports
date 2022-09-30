@@ -1,11 +1,10 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	libpg_query
 DISTVERSION=	13-2.1.0
 CATEGORIES=	databases devel
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	C library for accessing the PostgreSQL parser outside of the server
+WWW=		https://github.com/lfittl/libpg_query
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

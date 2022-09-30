@@ -1,11 +1,10 @@
-# Created by: Securedog <securedog@users.sourceforge.jp>
-
 PORTNAME=	pkg_replace
 PORTVERSION=	20220304
 CATEGORIES=	ports-mgmt
 
 MAINTAINER=	kdeguchi@sz.tokoha-u.ac.jp
 COMMENT=	Utility for upgrading installed packages
+WWW=		https://portutil.osdn.jp/
 
 LICENSE=	CC0-1.0
 

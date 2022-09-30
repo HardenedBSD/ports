@@ -1,5 +1,3 @@
-# Created by: Mahdi Mokhtari <mokhi64@gmail.com>
-
 PORTNAME=	lttng-tools
 PORTVERSION=	2.9.3
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://lttng.org/files/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Set of tools to control LTTng tracing
+WWW=		https://lttng.org/
 
 LICENSE=		LGPL21 GPLv2
 LICENSE_COMB=		dual

@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	trio
 PORTVERSION=	0.21.0
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Library for async concurrency and I/O
+WWW=		https://pypi.org/project/trio/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

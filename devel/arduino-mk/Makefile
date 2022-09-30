@@ -1,5 +1,3 @@
-# Created by: Craig Leres <leres@FreeBSD.org>
-
 PORTNAME=	arduino-mk
 PORTVERSION=	0.10
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	Build Arduino sketches from the command line
+WWW=		https://www.mjoldfield.com/atelier/2009/02/arduino-cli.html
 
 LICENSE=	LGPL21
 

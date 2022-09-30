@@ -4,6 +4,7 @@ CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	WAI application for static serving
+WWW=		https://www.yesodweb.com/book/web-application-interface
 
 LICENSE=	MIT
 
@@ -103,6 +104,6 @@ USE_CABAL=	HUnit-1.6.2.0 \
 		x509-1.7.6 \
 		zlib-0.6.3.0
 
-EXECUTABLES=	warp
+CABAL_EXECUTABLES=	warp
 
 .include <bsd.port.mk>

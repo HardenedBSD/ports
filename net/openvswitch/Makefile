@@ -1,10 +1,11 @@
 PORTNAME=	openvswitch
-DISTVERSION=	2.17.1
+DISTVERSION=	2.17.2
 CATEGORIES=	net
 MASTER_SITES=	http://openvswitch.org/releases/
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Production quality, multilayer virtual switch
+WWW=		http://openvswitch.org/
 
 LICENSE=	APACHE20
 

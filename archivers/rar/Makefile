@@ -1,5 +1,3 @@
-# Created by: ache
-
 PORTNAME=	rar
 PORTVERSION=	6.12
 PORTEPOCH=	3
@@ -9,6 +7,7 @@ DISTNAME=	rarbsd${ARCH:S|amd64|-x64|:S|i386|-x32|}-${PORTVERSION:R}${PORTVERSION
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	File archiver (binary port)
+WWW=		https://www.rarlab.com/
 
 LICENSE=	RAR
 LICENSE_NAME=	RAR license

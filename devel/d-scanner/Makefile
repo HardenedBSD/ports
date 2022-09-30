@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	d-scanner
 PORTVERSION=	0.7.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Swiss-army knife for D source code
+WWW=		https://github.com/dlang-community/D-Scanner
 
 LICENSE=	BSL
 

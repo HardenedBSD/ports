@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	bsdfan
 PORTVERSION=	g20180112
 CATEGORIES=	sysutils
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Utility to manage fans on Lenovo ThinkPad laptops
+WWW=		https://github.com/claudiozz/bsdfan
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

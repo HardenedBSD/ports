@@ -1,11 +1,12 @@
 PORTNAME=	obake
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ library for the symbolic manipulation of sparse polynomials & co
+WWW=		https://bluescarni.github.io/obake/
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE

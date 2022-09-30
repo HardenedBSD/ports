@@ -1,10 +1,11 @@
 PORTNAME=	domoticz
 PORTVERSION=	2022.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Home Automation System
+WWW=		https://www.domoticz.com
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt

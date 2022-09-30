@@ -1,12 +1,10 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	cbang
-PORTVERSION=	1.6.1
-PORTREVISION=	2
+PORTVERSION=	1.7.0
 CATEGORIES=	devel
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	C! (cbang) is a library of cross-platform C++ utilities
+WWW=		https://cbang.org/
 
 LICENSE=	LGPL21
 
@@ -34,7 +32,7 @@ DEBUG_LIB_DEPENDS=	libbfd.so:devel/libbfd
 
 MAKE_ARGS+=	cc="${CC}"	\
 		cxx="${CXX}"	\
-		cxxstd="c++14"	\
+		cxxstd="c++17"	\
 		ccflags="${CCFLAGS}"	\
 		cxxflags="${CXXFLAGS}"	\
 		libpath="${LIBPATH}"	\
@@ -46,7 +44,7 @@ MAKE_ARGS+=	cc="${CC}"	\
 #		disable_local="zlib bzip2 lz4 sqlite3 expat boost libevent re2 libyaml"
 MAKE_ENV+=	LIBPATH="${LIBPATH}"	\
 		LIBRARY_PATH="${LIBPATH}:${LIBPATH}/mysql"
-LIBVER=		1.3.3
+LIBVER=		1.7.0
 PLIST_SUB=	VER=${LIBVER}
 
 TEST_WRKSRC=	${WRKSRC}/tests
@@ -60,6 +58,7 @@ post-install:
 	cd ${STAGEDIR}${PREFIX}/lib &&	\
 		${LN} -sf libcbang0.so.${LIBVER} libcbang0.so	&&	\
 		${LN} -sf libcbang0.so.${LIBVER} libcbang0.so.1
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libcbang0.so.${LIBVER}
 	# Needed to build CAMotics
 	${INSTALL_DATA} ${WRKSRC}/include/cbang/config.h	\
 		${STAGEDIR}${PREFIX}/include/cbang/
@@ -67,6 +66,7 @@ post-install:
 		${STAGEDIR}${PREFIX}/lib
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} config ${STAGEDIR}${DATADIR}
+	${RM} ${STAGEDIR}${DATADIR}/config/cbang/__init__.py.orig
 
 do-test:
 	(cd ${TEST_WRKSRC} && ${DO_MAKE_TEST} && ./testHarness)

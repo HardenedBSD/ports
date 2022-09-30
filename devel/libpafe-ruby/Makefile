@@ -1,5 +1,3 @@
-# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-
 PORTNAME=	libpafe-ruby
 PORTVERSION=	0.0.8
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	Ruby binding for libpafe
+WWW=		http://homepage3.nifty.com/slokar/pasori/libpafe-ruby.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

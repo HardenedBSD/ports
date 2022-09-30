@@ -1,5 +1,3 @@
-# Created by: David Shane Holden <dpejesh@yahoo.com>
-
 PORTNAME=	kronosnet
 PORTVERSION=	1.24
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	https://kronosnet.org/releases/
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Network abstraction layer designed for high availability
+WWW=		https://kronosnet.org/
 
 LICENSE=	GPLv2
 

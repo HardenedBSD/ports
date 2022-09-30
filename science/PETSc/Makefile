@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	PETSc
 DISTVERSION=	3.16.3
 CATEGORIES=	science devel
@@ -8,11 +6,12 @@ DISTNAME=	${PORTNAME:tl}-${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Suite of data structures and routines from Argonne National Laboratory
+WWW=		https://www.mcs.anl.gov/petsc
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	cmake:devel/cmake
+BUILD_DEPENDS=	cmake:devel/cmake-core
 LIB_DEPENDS=	libmpich.so:net/mpich
 
 USES=		blaslapack fortran gmake python:3.7+ shebangfix xorg

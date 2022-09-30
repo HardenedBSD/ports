@@ -1,14 +1,13 @@
-# Created by: Matthew Seaman
-
 PORTNAME=		barman
 DISTVERSIONPREFIX=	release/
-DISTVERSION=		3.0.0
+DISTVERSION=		3.1.0
 CATEGORIES=		databases
 PKGNAMEPREFIX=		pg
 PKGNAMESUFFIX=		${PYTHON_PKGNAMESUFFIX}
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Backup and recovery manager for PostgreSQL
+WWW=		https://pgbarman.org/
 
 LICENSE=	GPLv3
 

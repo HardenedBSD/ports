@@ -1,12 +1,13 @@
 PORTNAME=	piranha
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.11
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	math
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python binding for Piranha, the computer algebra system
+WWW=		https://github.com/bluescarni/piranha
 
 BROKEN=		does not build: src/real.hpp:811:11: error: expected unqualified-id
 

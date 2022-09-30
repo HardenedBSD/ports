@@ -1,10 +1,11 @@
 PORTNAME=	conan
-DISTVERSION=	1.50.0
+DISTVERSION=	1.52.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C/C++ package manager
+WWW=		https://conan.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

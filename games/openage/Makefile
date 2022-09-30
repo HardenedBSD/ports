@@ -5,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Free engine clone of the Genie Engine
+WWW=		https://openage.sft.mx/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/legal/GPLv3
@@ -33,7 +34,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	SFTtech
 USE_SDL=	image2 sdl2
 USE_GL=		gl glu
-USE_QT=		core declarative gui network buildtools_build qmake_build
+USE_QT=		core declarative gui network buildtools:build qmake:build
 USE_PYTHON=	cython
 USE_LDCONFIG=	yes
 

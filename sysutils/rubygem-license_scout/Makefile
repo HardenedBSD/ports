@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	license_scout
 PORTVERSION=	2.6.7
 CATEGORIES=	sysutils rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Discover license files of a project's dependencies
+WWW=		https://github.com/chef/license_scout
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

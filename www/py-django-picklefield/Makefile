@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	django-picklefield
 PORTVERSION=	3.1
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pickled object field for Django
+WWW=		https://github.com/gintas/django-picklefield
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

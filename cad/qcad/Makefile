@@ -1,7 +1,5 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	qcad
-PORTVERSION=	3.27.6.0
+PORTVERSION=	3.27.6.7
 DISTVERSIONPREFIX=	v
 #PORTREVISION=	1
 CATEGORIES=	cad
@@ -13,6 +11,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	mr@FreeBSD.org
 COMMENT=	Professional CAD system
+WWW=		https://www.ribbonsoft.com/qcad.html
 
 LICENSE=	GPLv3
 
@@ -22,7 +21,7 @@ BUILD_DEPENDS=	bash:shells/bash	\
 USES=		compiler:c++11-lang gl gmake qmake qt:5
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
-USE_QT=		buildtools qmake_build \
+USE_QT=		buildtools qmake:build \
 		designer gui help imageformats network opengl script \
 		scripttools sql svg uitools xml xmlpatterns webkit
 USE_GL=		glu

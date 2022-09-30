@@ -1,12 +1,11 @@
-# Created by: Stefan Lambrev <cheffo@freebsd-bg.org>
-
 PORTNAME=	telegraf
 DISTVERSIONPREFIX=v
-DISTVERSION=	1.23.0
+DISTVERSION=	1.24.1
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Time-series data collection
+WWW=		https://influxdata.com/time-series-platform/telegraf/
 
 LICENSE=	MIT
 

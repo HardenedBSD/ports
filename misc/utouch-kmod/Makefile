@@ -1,11 +1,10 @@
-# Created by: Vladimir Kondratyev <wulf@FreeBSD.org>
-
 PORTNAME=	utouch-kmod
 PORTVERSION=	0.0.4
 CATEGORIES=	misc
 
 MAINTAINER=	wulf@FreeBSD.org
 COMMENT=	Kernel driver for absolute USB HID mouses
+WWW=		https://github.com/wulf7/utouch
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

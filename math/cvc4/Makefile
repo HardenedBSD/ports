@@ -1,6 +1,6 @@
 PORTNAME=	cvc4
 DISTVERSION=	1.7
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	math java
 MASTER_SITES+=	http://www.antlr3.org/download/:antlr3
 DISTFILES+=	antlr-3.4-complete.jar:antlr3
@@ -11,6 +11,7 @@ PATCHFILES+=	fc8907afc08d.patch:-p1 # Install Java bindings
 
 MAINTAINER=	greg@unrelenting.technology
 COMMENT=	Automatic theorem prover for SMT (Satisfiability Modulo Theories)
+WWW=		https://cvc4.cs.stanford.edu/web/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

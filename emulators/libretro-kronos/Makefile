@@ -1,11 +1,10 @@
-# Created by Timothy Beyer <beyert@cs.ucr.edu>
-
 PORTNAME=	libretro-kronos
-PORTVERSION=	0.20210617
+PORTVERSION=	2.1.5.20210601
 CATEGORIES=	emulators games
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Sega Saturn and ST-V emulator forked from uoYabause for libretro
+WWW=		https://fcare.github.io
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/yabause/COPYING
@@ -25,7 +24,7 @@ USE_GL=	gl glew glu
 
 USE_LDCONFIG=	yes
 
-USE_QT=	core opengl buildtools_build qmake_build
+USE_QT=	core opengl buildtools:build qmake:build
 
 USE_SDL=	sdl2
 
@@ -45,16 +44,26 @@ pre-build:
 
 .include <bsd.port.pre.mk>
 
+.if ${CHOSEN_COMPILER_TYPE} == clang
+# clang13 runs out of memory
+LLVM_VER=	12
+BUILD_DEPENDS+=	clang++${LLVM_VER}:devel/llvm${LLVM_VER}
+CC=	${LOCALBASE}/bin/clang${LLVM_VER}
+CXX=	${LOCALBASE}/bin/clang++${LLVM_VER}
+.endif
+
 do-build:
 	cd ${WRKSRC}/yabause/src/libretro && ${DO_MAKE_BUILD}
 
 post-patch:
 .if ${ARCH} != "amd64"
-	@${REINPLACE_CMD} -e "s/HAVE_SSE = 1/HAVE_SSE = 0/" ${WRKSRC}/yabause/src/libretro/Makefile
+	@${REINPLACE_CMD} -e "s/HAVE_SSE = 1/HAVE_SSE = 0/" \
+		${WRKSRC}/yabause/src/libretro/Makefile
 .endif
 
 do-install:
-	${MKDIR} ${STAGEDIR}/${PREFIX}/lib/libretro;
-	${INSTALL_LIB} ${WRKSRC}/yabause/src/libretro/kronos_libretro.so ${STAGEDIR}/${PREFIX}/lib/libretro;
+	@${MKDIR} ${STAGEDIR}/${PREFIX}/lib/libretro;
+	${INSTALL_LIB} ${WRKSRC}/yabause/src/libretro/kronos_libretro.so \
+		${STAGEDIR}/${PREFIX}/lib/libretro;
 
 .include <bsd.port.post.mk>

@@ -1,12 +1,11 @@
-# Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-
 PORTNAME=	ndpi
-PORTVERSION=	4.2.d20220608
+PORTVERSION=	4.4.d20220714
 PORTEPOCH=	1
 CATEGORIES=	net
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	NTOP-maintained superset of the popular OpenDPI library
+WWW=		https://www.ntop.org/products/deep-packet-inspection/ndpi/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -23,7 +22,7 @@ USE_LDCONFIG=	yes
 
 USE_HARDENING=	pie:off
 
-CONFIGURE_ARGS=	--with-pic
+CONFIGURE_ARGS=	--with-pic --with-local-libgcrypt
 CPPFLAGS+=	-I${LOCALBASE}/include/json-c
 LIBS+=		-ljson-c
 MAKE_ENV+=	EXAMPLESDIR="${EXAMPLESDIR_REL}"
@@ -33,7 +32,7 @@ INSTALL_TARGET=	install-strip
 USE_GITHUB=	yes
 GH_ACCOUNT=	ntop
 GH_PROJECT=	nDPI
-GH_TAGNAME=	bb59f2e
+GH_TAGNAME=	dd8953c
 
 PLIST_SUB=	MAJOR_VER=${PORTVERSION:R:R} VER=${PORTVERSION:R}
 

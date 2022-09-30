@@ -1,7 +1,5 @@
-# Created by: Thierry Thomas <thierry@FreeBSD.org>
-
 PORTNAME=	kicad
-PORTVERSION=	6.0.6
+PORTVERSION=	6.0.8
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/libraries/${PORTNAME}-footprints/-/archive/${DISTVERSION}/
 PKGNAMESUFFIX=	-library-footprints
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-footprints-${DISTVERSION}
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Official KiCad Footprint Libraries
+WWW=		https://gitlab.com/kicad/libraries/kicad-footprints
 
 LICENSE=	GPLv2
 

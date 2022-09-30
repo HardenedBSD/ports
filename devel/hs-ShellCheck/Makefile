@@ -3,8 +3,9 @@ DISTVERSION=	0.8.0
 PORTREVISION=	2
 CATEGORIES=	devel haskell
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Shell script analysis tool
+WWW=		https://www.shellcheck.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -51,7 +52,7 @@ USE_CABAL=	Diff-0.4.1 \
 		vector-0.12.3.1_2 \
 		witherable-0.4.2_2
 
-EXECUTABLES=	shellcheck
+CABAL_EXECUTABLES=	shellcheck
 
 OPTIONS_DEFINE=		MANPAGES
 OPTIONS_DEFAULT=	MANPAGES

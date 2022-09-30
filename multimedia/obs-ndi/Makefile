@@ -5,6 +5,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	OBS Studio Plugin: Network Device Interface
+WWW=		https://github.com/Palakis/obs-ndi
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libndi.so:multimedia/libndi
 USES=		cmake compiler:c++11-lang localbase:ldflags qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	Palakis
-USE_QT=		core gui widgets buildtools_build qmake_build
+USE_QT=		core gui widgets buildtools:build qmake:build
 
 BROKEN=		ERROR: NDIlib_v4_load not found in loaded library: https://code.videolan.org/jbk/libndi/-/issues/9, bug#258694
 

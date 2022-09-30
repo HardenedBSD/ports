@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	oauth2
 PORTVERSION=	1.4.10
 CATEGORIES=	net rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	1
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby wrapper for the OAuth 2.0 protocol
+WWW=		https://github.com/oauth-xx/oauth2
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

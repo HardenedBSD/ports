@@ -1,13 +1,12 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	eksctl
 PORTVERSION=	0.94.0
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	LOCAL/danilo
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	CLI for Amazon EKS
+WWW=		https://eksctl.io/
 
 LICENSE=	APACHE20
 

@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	pgbouncer
 PORTVERSION=	1.17.0
 CATEGORIES=	databases
@@ -8,6 +6,7 @@ MASTER_SITES=	https://pgbouncer.github.io/downloads/files/${PORTVERSION}/ \
 
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	Lightweight connection pooler for PostgreSQL
+WWW=		https://pgbouncer.github.io/
 
 LICENSE=	BSD2CLAUSE
 

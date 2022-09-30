@@ -1,7 +1,5 @@
-# Created by: Thierry Thomas <thierry@FreeBSD.org>
-
 PORTNAME=	kicad
-PORTVERSION=	6.0.6
+PORTVERSION=	6.0.8
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/libraries/${PORTNAME}-symbols/-/archive/${DISTVERSION}/
 PKGNAMESUFFIX=	-library-symbols
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-symbols-${DISTVERSION}
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Official KiCad schematic symbol libraries
+WWW=		https://gitlab.com/kicad/libraries/kicad-symbols
 
 LICENSE=	GPLv2
 

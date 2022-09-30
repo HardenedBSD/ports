@@ -1,5 +1,3 @@
-# Created by: Max Khon <fjoe@FreeBSD.org>
-
 PORTNAME=	virtuoso
 PORTVERSION=	7.2.5
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-opensource-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Universal SQL/Application Server
+WWW=		http://virtuoso.openlinksw.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

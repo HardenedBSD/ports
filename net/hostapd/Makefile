@@ -1,5 +1,3 @@
-# Created by: Craig Leres <leres@FreeBSD.org>
-
 PORTNAME=	hostapd
 PORTVERSION=	2.10
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	https://w1.fi/releases/
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS Authenticator
+WWW=		https://w1.fi/hostapd/
 
 LICENSE=	BSD3CLAUSE
 

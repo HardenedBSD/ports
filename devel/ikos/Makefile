@@ -1,11 +1,12 @@
 PORTNAME=	ikos
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Static analyzer for C/C++ based on theory of abstract interpretation
+WWW=		https://github.com/NASA-SW-VnV/ikos
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.pdf

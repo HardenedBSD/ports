@@ -1,5 +1,3 @@
-# Created by: Marcin Jessa <yazzy@yazzy.org>
-
 PORTNAME=	impacket
 PORTVERSION=	0.9.17
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	contato@kanazuchi.com
 COMMENT=	Collection of Python classes providing access to network packets
+WWW=		https://www.coresecurity.com/corelabs-research/open-source-tools/impacket
 
 LICENSE=	APACHE11 ZLIB
 LICENSE_COMB=	multi

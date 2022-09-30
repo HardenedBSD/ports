@@ -15,6 +15,7 @@
     SUBDIR += afsp
     SUBDIR += aften
     SUBDIR += alac
+    SUBDIR += alacenc
     SUBDIR += alienwah
     SUBDIR += alo-lv2
     SUBDIR += alsa-lib
@@ -25,6 +26,7 @@
     SUBDIR += alure
     SUBDIR += amarok
     SUBDIR += amb-plugins
+    SUBDIR += amberol
     SUBDIR += ampache
     SUBDIR += ample
     SUBDIR += amsynth
@@ -35,6 +37,7 @@
     SUBDIR += artyfx-lv2
     SUBDIR += asmix
     SUBDIR += asmixer
+    SUBDIR += asterisk-espeak
     SUBDIR += asterisk-flite
     SUBDIR += asunder
     SUBDIR += atunes
@@ -141,11 +144,12 @@
     SUBDIR += enscribe
     SUBDIR += epos-devel
     SUBDIR += eq10q-lv2
-    SUBDIR += espeak
+    SUBDIR += espeak-ng
     SUBDIR += espressivo-lv2
     SUBDIR += etcd
     SUBDIR += eteroj-lv2
     SUBDIR += etktab
+    SUBDIR += exaile
     SUBDIR += exhale
     SUBDIR += ezstream
     SUBDIR += faac
@@ -223,6 +227,7 @@
     SUBDIR += gmtp
     SUBDIR += gmusicbrowser
     SUBDIR += gnaural
+    SUBDIR += gnome-metronome
     SUBDIR += gnome-music
     SUBDIR += gnome-podcasts
     SUBDIR += gnormalize
@@ -328,8 +333,7 @@
     SUBDIR += julius
     SUBDIR += kapitonov-plugins-pack-lv2
     SUBDIR += kexis
-    SUBDIR += kid3-kf5
-    SUBDIR += kid3-qt5
+    SUBDIR += kid3
     SUBDIR += klystrack
     SUBDIR += kmix
     SUBDIR += komposter
@@ -441,6 +445,7 @@
     SUBDIR += logitechmediaserver-sqlplaylist
     SUBDIR += logitechmediaserver-trackstat
     SUBDIR += lollypop
+    SUBDIR += lpcnet
     SUBDIR += lsp-plugins-lv2
     SUBDIR += lua-mpd
     SUBDIR += luppp
@@ -590,6 +595,7 @@
     SUBDIR += paman
     SUBDIR += pamixer
     SUBDIR += paprefs
+    SUBDIR += patchage
     SUBDIR += pavucontrol
     SUBDIR += pavucontrol-qt
     SUBDIR += pavumeter
@@ -598,7 +604,6 @@
     SUBDIR += pd
     SUBDIR += pear-Text_Spell_Audio
     SUBDIR += penguinsap
-    SUBDIR += phaserotate-lv2
     SUBDIR += pianobar
     SUBDIR += pianobooster
     SUBDIR += pianod2
@@ -708,6 +713,7 @@
     SUBDIR += screcord-lv2
     SUBDIR += sdl2_mixer
     SUBDIR += sdl2_sound
+    SUBDIR += sdl_audiolib
     SUBDIR += sdl_mixer
     SUBDIR += sdl_sound
     SUBDIR += sfizz
@@ -729,6 +735,8 @@
     SUBDIR += somafm-cli
     SUBDIR += sonata
     SUBDIR += sonic-visualiser
+    SUBDIR += sonivox
+    SUBDIR += sonivox-eas
     SUBDIR += sorcer-lv2
     SUBDIR += sound-juicer
     SUBDIR += soundgrab
@@ -752,6 +760,7 @@
     SUBDIR += spiralsynthmodular
     SUBDIR += splay
     SUBDIR += splaytk
+    SUBDIR += spotify-player
     SUBDIR += spotify-qt
     SUBDIR += spotify-tui
     SUBDIR += spotifyd
@@ -791,6 +800,7 @@
     SUBDIR += tetraproc
     SUBDIR += thunar-media-tags-plugin
     SUBDIR += tiatracker
+    SUBDIR += timbre-mill
     SUBDIR += timely-lv2
     SUBDIR += timemachine
     SUBDIR += timidity

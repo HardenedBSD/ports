@@ -1,7 +1,5 @@
-# Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-
 PORTNAME=	log4j2
-PORTVERSION=	2.18.0
+PORTVERSION=	2.19.0
 CATEGORIES=	devel java
 MASTER_SITES=	APACHE/logging/log4j/${PORTVERSION}
 PKGNAMEPREFIX=	apache-
@@ -9,6 +7,7 @@ DISTNAME=	apache-log4j-${PORTVERSION}-bin
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Fast and flexible logging library for Java
+WWW=		https://logging.apache.org/log4j/2.x/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

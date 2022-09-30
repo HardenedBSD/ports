@@ -1,12 +1,11 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	git-credential-gopass
-PORTVERSION=	1.14.3
+PORTVERSION=	1.14.7
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Manage git credentials using gopass
+WWW=		https://github.com/gopasspw/git-credential-gopass
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

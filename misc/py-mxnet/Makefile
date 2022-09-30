@@ -1,10 +1,12 @@
 PORTNAME=	mxnet
 DISTVERSION=	1.9.1
+PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Apache MXNet: Ultra-scalable deep learning framework
+WWW=		https://mxnet.apache.org/
 
 LICENSE=	APACHE20
 

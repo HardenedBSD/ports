@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	s3fs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.91
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	fusefs-
 
 MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	FUSE-based file system backed by Amazon S3
+WWW=		https://github.com/s3fs-fuse/s3fs-fuse
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

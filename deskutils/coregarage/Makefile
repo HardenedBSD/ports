@@ -5,6 +5,7 @@ CATEGORIES=	deskutils
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Settings manager for C Suite
+WWW=		https://gitlab.com/cubocore/coregarage
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -13,7 +14,7 @@ LIB_DEPENDS=	libarchiveqt5.so:archivers/libarchive-qt \
 		libcprime-core.so:deskutils/libcprime
 
 USES=		cmake localbase:ldflags qt:5
-USE_QT=		buildtools_build core gui network qmake_build widgets
+USE_QT=		buildtools:build core gui network qmake:build widgets
 USE_GITLAB=	yes
 
 GL_ACCOUNT=	CuboCore

@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-
 PORTNAME=	enlightenment
 PORTVERSION=	0.25.3
 PORTEPOCH=	2
@@ -9,6 +7,7 @@ DIST_SUBDIR=	enlightenment
 
 MAINTAINER=	enlightenment@FreeBSD.org
 COMMENT=	Artistic and fast X window manager
+WWW=		https://www.enlightenment.org/
 
 LICENSE=	BSD2CLAUSE
 

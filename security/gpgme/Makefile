@@ -1,13 +1,12 @@
-# Created by: teramoto@comm.eng.osaka-u.ac.jp
-
 PORTNAME=	gpgme
-PORTVERSION=	1.17.1
+PORTVERSION=	1.18.0
 PORTREVISION?=	0
 CATEGORIES?=	security
 MASTER_SITES=	GNUPG/gpgme
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT?=	Library to make access to GnuPG easier
+WWW=		https://www.gnupg.org/related_software/gpgme/
 
 LICENSE?=	LGPL21+
 LICENSE_FILE?=	${WRKSRC}/COPYING.LESSER
@@ -68,14 +67,14 @@ NO_TEST=	yes
 .  if ${SLAVEPORT} == "qt5"
 LIB_DEPENDS+=	libgpgmepp.so:security/gpgme-cpp
 USES+=		compiler:c++11-lib pkgconfig qt:5
-USE_QT=	buildtools_build core
+USE_QT=	buildtools:build core
 CONFIGURE_ARGS+=--enable-languages="cpp qt"
 DOCSDIR=	${PORTNAME}${PKGNAMESUFFIX}
 
 OPTIONS_DEFINE+=	DOXYGEN
 DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen \
 			dot:graphics/graphviz
-TEST_USE=		QT=testlib_build
+TEST_USE=		QT=testlib:build
 .  endif
 
 .  if ${SLAVEPORT} == "python"

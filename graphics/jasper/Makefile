@@ -1,12 +1,11 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	jasper
-PORTVERSION=	3.0.5
+PORTVERSION=	3.0.6
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/jasper-software/jasper/releases/download/version-${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Implementation of the codec specified in the JPEG-2000 standard
+WWW=		https://www.ece.uvic.ca/~frodo/jasper/
 
 LICENSE=	JASPER
 LICENSE_NAME=	JasPer License Version 2.0

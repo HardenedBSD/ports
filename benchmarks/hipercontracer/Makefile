@@ -1,12 +1,12 @@
-# Created by: Thomas Dreibholz <dreibh@iem.uni-due.de>
-
 PORTNAME=	hipercontracer
 PORTVERSION=	1.6.0
+PORTREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	https://www.uni-due.de/~be0001/hipercontracer/download/
 
 MAINTAINER=	dreibh@iem.uni-due.de
 COMMENT=	High-Performance Connectivity Tracer (HiPerConTracer)
+WWW=		https://www.uni-due.de/~be0001/hipercontracer/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

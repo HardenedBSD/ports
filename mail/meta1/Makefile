@@ -1,12 +1,13 @@
 PORTNAME=	meta1
-PORTVERSION=	1.1.0a.17.0
+PORTVERSION=	1.1.0a.18.0
 PORTREVISION=	0
 CATEGORIES=	mail
-MASTER_SITES=	http://www.MeTA1.org/download/.alpha/proxy/
-DISTNAME=	${PORTNAME}-1.1.Alpha17.0
+MASTER_SITES=	http://www.MeTA1.org/download/.alpha/baddns/
+DISTNAME=	${PORTNAME}-1.1.Alpha19.0
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Secure and efficient mail gateway
+WWW=		http://www.meta1.org/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

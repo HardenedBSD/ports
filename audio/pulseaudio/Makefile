@@ -1,4 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
 # PORTREVISION bumps of depending ports.
@@ -11,6 +10,7 @@ MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Sound server for UNIX
+WWW=		https://pulseaudio.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LGPL

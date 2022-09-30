@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	check_zpools
 PORTVERSION=	1.0
 CATEGORIES=	net-mgmt
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	nagios-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Nagios plugin that checks zpool state
+WWW=		https://github.com/Napsty/check_zpools
 
 RUN_DEPENDS=	bash:shells/bash
 

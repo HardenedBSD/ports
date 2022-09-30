@@ -1,6 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-#   $MCom: ports/trunk/graphics/gthumb/Makefile 19823 2014-08-20 09:28:14Z gusi $
-
 PORTNAME=	gthumb
 PORTVERSION=	3.12.2
 CATEGORIES=	graphics
@@ -9,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Image viewer and browser for the GNOME environment
+WWW=		https://wiki.gnome.org/Apps/gthumb/
 
 LICENSE=	GPLv2+
 

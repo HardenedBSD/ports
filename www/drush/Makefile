@@ -1,5 +1,3 @@
-# Created by: Thomas Sandford <freebsduser@paradisegreen.co.uk>
-
 PORTNAME=	drush
 DISTVERSION=	8.4.11
 PORTREVISION=	0
@@ -11,6 +9,7 @@ EXTRACT_SUFX=	.phar
 
 MAINTAINER=	me@skylord.ru
 COMMENT=	Drupal command line and scripting interface
+WWW=		https://github.com/drush-ops/drush
 
 LICENSE=	GPLv2+
 

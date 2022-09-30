@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	Text-Bidi
 PORTVERSION=	2.18
 CATEGORIES=	converters perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the libfribidi
+WWW=		https://metacpan.org/release/Text-Bidi
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

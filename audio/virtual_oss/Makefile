@@ -1,5 +1,3 @@
-# Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-
 PORTNAME=	virtual_oss
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.21
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	hselasky@FreeBSD.org
 COMMENT=	Virtual OSS multi device mixer application
+WWW=		https://github.com/hselasky/virtual_oss
 
 LICENSE=	BSD2CLAUSE
 

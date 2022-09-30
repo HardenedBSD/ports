@@ -5,13 +5,14 @@ CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C and C++ unit testing framework for the 21st century
+WWW=		https://github.com/Snaipe/Criterion
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}protobuf>0:devel/py-protobuf@${PY_FLAVOR} \
 		nanopb>0:devel/nanopb \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		protoc:devel/protobuf
 LIB_DEPENDS=	libboxfort.so:devel/boxfort \
 		libffi.so:devel/libffi \

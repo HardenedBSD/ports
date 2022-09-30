@@ -1,13 +1,12 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	actionview
-PORTVERSION=	6.0.5
+PORTVERSION=	6.0.5.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	60
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Rendering framework putting the V in MVC (part of Rails)
+WWW=		https://github.com/rails/rails/tree/main/actionview
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

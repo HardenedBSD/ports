@@ -4,6 +4,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Embedded Qt Lisp
+WWW=		https://gitlab.com/eql/EQL5
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../LICENSE-1.MIT
@@ -13,7 +14,7 @@ LIB_DEPENDS=	libecl.so:lang/ecl
 USES=		gl qmake qt:5
 USE_QT=		core declarative gui help location multimedia network \
 		printsupport sql svg webchannel webengine widgets \
-		buildtools_build uitools_build
+		buildtools:build uitools:build
 USE_GL=		gl
 USE_LDCONFIG=	yes
 

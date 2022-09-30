@@ -1,5 +1,3 @@
-# Created by: mfechner@FreeBSD.org
-
 PORTNAME=	knxd
 PORTVERSION=	0.14.39
 PORTREVISION=	4
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Advanced router/gateway for KNX
+WWW=		https://github.com/knxd/knxd
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,7 +1,5 @@
-# Created by: Hugo Saro <hugo@barafranca.com>
-
 PORTNAME=	haproxy
-DISTVERSION=	2.7-dev1
+DISTVERSION=	2.7-dev2
 CATEGORIES=	net www
 MASTER_SITES=	http://www.haproxy.org/download/2.7/src/devel/
 PKGNAMESUFFIX=	-devel
@@ -9,6 +7,7 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
+WWW=		https://www.haproxy.org
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi

@@ -1,11 +1,12 @@
 PORTNAME=	guile-gnome-platform
 DISTVERSION=	2.16.5
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNU/guile-gnome/${PORTNAME}
 
 MAINTAINER=	andrew@tao11.riddles.org.uk
 COMMENT=	Guile bindings for Gnome libraries
+WWW=		https://www.gnu.org/software/guile-gnome/
 
 LICENSE=	GPLv2+
 
@@ -36,7 +37,8 @@ INSTALL_TARGET=	install-strip
 
 DATADIR=	${PREFIX}/share/guile-gnome-2
 
-INFO=		guile-gnome-glib guile-gnome-gobject
+INFO=		guile-gnome-gconf guile-gnome-glib guile-gnome-gobject \
+		guile-gnome-libgnome guile-gnome-libgnomeui
 
 OPTIONS_DEFINE=	ATK CAIRO CANVAS GLADE GTK2 PANGO
 OPTIONS_DEFAULT=ATK CAIRO CANVAS GLADE GTK2 PANGO

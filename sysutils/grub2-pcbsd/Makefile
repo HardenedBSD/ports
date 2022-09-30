@@ -1,5 +1,3 @@
-# Created by: kmoore@FreeBSD.org
-
 PORTNAME=	grub2-pcbsd
 PORTVERSION=	2.02q
 PORTREVISION=	17
@@ -9,6 +7,7 @@ DISTNAME=	grub-2.02_8
 
 MAINTAINER=	kevlo@FreeBSD.org
 COMMENT=	Multiboot boot loader
+WWW=		https://www.gnu.org/software/grub/
 
 LICENSE=	GPLv3
 

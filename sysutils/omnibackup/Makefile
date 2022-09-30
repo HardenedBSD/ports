@@ -1,11 +1,10 @@
-# Created by: Mohammad S. Babaei <info@babaei.net>
-
 PORTNAME=	omnibackup
 PORTVERSION=	0.2.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	info@babaei.net
 COMMENT=	One Script to back them all up
+WWW=		https://github.com/NuLL3rr0r/omnibackup
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

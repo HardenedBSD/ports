@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	smooth
 PORTVERSION=	0.9.9
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Object-oriented C++ class library
+WWW=		https://www.smooth-project.org/
 
 LICENSE=	ART20
 

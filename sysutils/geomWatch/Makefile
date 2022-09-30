@@ -1,5 +1,3 @@
-# Created by: Boris Kochergin <spawk@acm.poly.edu>
-
 PORTNAME=	geomWatch
 PORTVERSION=	1.3.0
 PORTREVISION=	3
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	spawk@acm.poly.edu
 COMMENT=	Watches for and e-mails admins about GEOM/ZFS state changes
+WWW=		http://acm.poly.edu/wiki/GEOM_Watch
 
 LIB_DEPENDS=	libesmtp.so:mail/libesmtp
 

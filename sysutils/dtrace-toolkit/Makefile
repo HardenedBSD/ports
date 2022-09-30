@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <steven@exit2shell.com>
-
 PORTNAME=	dtrace-toolkit
 PORTVERSION=	1.0
 PORTREVISION=	7
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Collection of useful scripts for DTrace
+WWW=		https://github.com/opendtrace/toolkit
 
 LICENSE=	CDDL
 LICENSE_FILE=	${WRKSRC}/Docs/cddl1.txt

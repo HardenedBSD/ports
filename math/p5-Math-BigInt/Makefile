@@ -1,5 +1,3 @@
-# Created by: tobez
-
 PORTNAME=	Math-BigInt
 PORTVERSION=	1.999837
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Arbitrary size integer math perl package
+WWW=		https://metacpan.org/release/Math-BigInt
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

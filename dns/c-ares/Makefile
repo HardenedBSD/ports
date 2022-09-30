@@ -1,5 +1,3 @@
-# Created by: roam@FreeBSD.org
-
 PORTNAME=	c-ares
 PORTVERSION=	1.18.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ MASTER_SITES=	https://c-ares.org/download/ \
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Asynchronous DNS resolver library
+WWW=		https://c-ares.haxx.se/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

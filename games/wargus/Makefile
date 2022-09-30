@@ -1,13 +1,12 @@
-# Created by: Travis Poppe <tlp@liquidx.org>
-
 PORTNAME=	wargus
-PORTVERSION=	3.2.0
-PORTREVISION=	1
+PORTVERSION=	3.3.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Warcraft 2 mod for the Stratagus game engine
+WWW=		https://stratagus.com/ \
+		https://github.com/Wargus/wargus
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

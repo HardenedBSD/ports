@@ -1,5 +1,3 @@
-# Created by: Peter TKATHENKO <peter@flytrace.com>
-
 PORTNAME=	evisum
 PORTVERSION=	0.6.0
 CATEGORIES=	sysutils enlightenment
@@ -7,6 +5,7 @@ MASTER_SITES=	http://download.enlightenment.org/rel/apps/${PORTNAME}/
 
 MAINTAINER=	enlightenment@FreeBSD.org
 COMMENT=	EFL process monitor and system monitor
+WWW=		https://www.enlightenment.org/
 
 LICENSE=	BSD2CLAUSE
 

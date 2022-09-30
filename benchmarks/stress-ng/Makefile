@@ -1,11 +1,12 @@
 PORTNAME=	stress-ng
 DISTVERSIONPREFIX=	V
-DISTVERSION=	0.14.02
+DISTVERSION=	0.14.05
 PORTREVISION=	0
 CATEGORIES=	benchmarks
 
 MAINTAINER=	pizzamig@FreeBSD.org
 COMMENT=	Stress test benchmarks
+WWW=		http://kernel.ubuntu.com/~cking/stress-ng/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

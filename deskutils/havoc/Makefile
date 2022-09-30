@@ -1,5 +1,3 @@
-# Created by: Emmanuel Vadot <manu@FreeBSD.org>
-
 PORTNAME=	havoc
 PORTVERSION=	0.3.1
 CATEGORIES=	deskutils wayland
@@ -9,6 +7,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	manu@FreeBSD.org
 COMMENT=	Minimal terminal emulator for Wayland
+WWW=		https://github.com/ii8/havoc
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

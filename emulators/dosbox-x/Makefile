@@ -1,10 +1,11 @@
 PORTNAME=	dosbox-x
 DISTVERSIONPREFIX=	${PORTNAME}-v
-DISTVERSION=	0.84.0
+DISTVERSION=	0.84.1
 CATEGORIES=	emulators
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	DOSBox fork
+WWW=		https://dosbox-x.com/
 
 LICENSE=	GPLv2
 

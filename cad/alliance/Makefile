@@ -1,5 +1,3 @@
-# Created by: hrs
-
 PORTNAME=	alliance
 DISTVERSION=	5.1.1
 PORTREVISION=	2
@@ -10,6 +8,7 @@ MASTER_SITES=	ftp://asim.lip6.fr/pub/alliance/distribution/5.0/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Complete set of CAD tools and libraries for VLSI design
+WWW=		https://www-soc.lip6.fr/equipe-cian/logiciels/alliance/
 
 LICENSE=	Alliance
 LICENSE_NAME=	Alliance VLSI Cad System License

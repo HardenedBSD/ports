@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	elasticsearch
 PORTVERSION=	7.17.3
 CATEGORIES=	textproc java devel
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-darwin-x86_64
 
 MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Full-text search engine for Java
+WWW=		https://www.elastic.co/
 
 LICENSE=	APACHE20
 

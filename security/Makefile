@@ -817,7 +817,6 @@
     SUBDIR += pvk
     SUBDIR += pwauth
     SUBDIR += pwman
-    SUBDIR += pwman3
     SUBDIR += pwned-check
     SUBDIR += py-RestrictedPython
     SUBDIR += py-SecretStorage

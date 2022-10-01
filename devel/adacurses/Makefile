@@ -11,9 +11,13 @@ WWW=		https://invisible-island.net/ncurses/ncurses-Ada95.html
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/README
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off retpoline:off
 
 EXPIRATION_DATE=2022-09-30
+=======
+EXPIRATION_DATE=2022-12-31
+>>>>>>> origin/freebsd/main
 
 USES=		ada gmake pkgconfig tar:tgz
 GNU_CONFIGURE=	yes

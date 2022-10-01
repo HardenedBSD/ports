@@ -1790,7 +1790,6 @@
     SUBDIR += py-wikitools
     SUBDIR += py-woob
     SUBDIR += py-woob-qt
-    SUBDIR += py-ws4py
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgidav
     SUBDIR += py-yarl
@@ -2257,7 +2256,6 @@
     SUBDIR += transmission-web
     SUBDIR += transproxy
     SUBDIR += tt-rss
-    SUBDIR += ttf2eot
     SUBDIR += tuifeed
     SUBDIR += tusc
     SUBDIR += tusd

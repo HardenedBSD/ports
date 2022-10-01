@@ -574,7 +574,6 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron17
     SUBDIR += electron18
     SUBDIR += electron19
     SUBDIR += elf
@@ -626,8 +625,6 @@
     SUBDIR += fire-hpp
     SUBDIR += firmware-utils
     SUBDIR += fistgen
-    SUBDIR += flang
-    SUBDIR += flang-clang
     SUBDIR += flatbuffers
     SUBDIR += flatbuffers205
     SUBDIR += flatcc

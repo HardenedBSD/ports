@@ -18,6 +18,8 @@ MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Blazingly fast, full-featured, standards-compliant browser
 WWW=		http://www.opera.com/
 
+BROKEN=	Disabled for security reasons
+
 RUN_DEPENDS=	update-mime-database:misc/shared-mime-info
 
 USES=		cpe desktop-file-utils gnome linux shared-mime-info tar:xz

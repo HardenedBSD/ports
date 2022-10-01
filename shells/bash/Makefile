@@ -24,21 +24,9 @@ WWW=			https://www.gnu.org/software/bash/
 LICENSE=		GPLv3+
 LICENSE_FILE=		${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 # STATIC option requires special hardening treatment, see below.
 USE_HARDENING=		safestack
 
-OPTIONS_DEFINE=		FDESCFS PORTS_READLINE HELP NLS STATIC SYSBASHRC \
-			SYSLOG DOCS
-FDESCFS_DESC=		Enable use of /dev/fd
-HELP_DESC=		Enable builtin help
-PORTS_READLINE_DESC=	libreadline from ports instead of bundled one
-SYSBASHRC_DESC=		Enable system-wide rc files
-
-OPTIONS_DEFAULT=	HELP PORTS_READLINE
-
-=======
->>>>>>> origin/freebsd/main
 USES=			bison cpe iconv makeinfo pathfix localbase
 CPE_VENDOR=		gnu
 GNU_CONFIGURE=		yes

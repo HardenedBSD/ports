@@ -12,13 +12,9 @@ WWW=		https://www.deepspace6.net/projects/ipv6calc.html \
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	cfi safestack
 
-BUILD_DEPENDS=	bash>0:shells/bash
-=======
 BUILD_DEPENDS=	bash:shells/bash
->>>>>>> origin/freebsd/main
 
 USES=		gmake perl5 shebangfix ssl
 

@@ -1,0 +1,20 @@
+--- meson.build
++++ meson.build
+@@ -198,17 +198,6 @@ endif
+ 
+ dep_fnmatch = cc.find_library('fnmatch', required: false)
+ 
+-code = '''#define _GNU_SOURCE 1
+-#include <unistd.h>
+-#include <stdio.h>
+-extern char **environ;
+-void func(void) { printf("%p\n", environ); }
+-'''
+-if cc.compiles(code, args : '-lc', name : 'environ check')
+-  config_h.set10('HAVE_ENVIRON', true)
+-endif
+-
+-
+ add_global_arguments('-DPACKAGE_BIN_DIR="@0@"'.format(dir_bin), language: 'c')
+ add_global_arguments('-DPACKAGE_LIB_DIR="@0@"'.format(dir_lib), language: 'c')
+ add_global_arguments('-DPACKAGE_DATA_DIR="@0@"'.format(join_paths(dir_data, proj)), language: 'c')

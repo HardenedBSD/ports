@@ -35,10 +35,11 @@ USE_LDCONFIG=	yes
 USE_XORG=	x11 xext xft xrender xscrnsaver
 CONFIGURE_ARGS=	--enable-xss \
 		--enable-xft \
-		--enable-shared \
 		--enable-threads \
 		--enable-man-suffix=.${MAN_SUFFIX} \
 		--includedir=${PREFIX}/include/tk${TK_VER}
+
+CONFIGURE_ARGS+=	--disable-shared
 
 CFLAGS+=	-I${TCL_INCLUDEDIR} \
 		-I${LOCALBASE}/include

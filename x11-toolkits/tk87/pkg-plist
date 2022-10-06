@@ -3,7 +3,6 @@ include/tk%%TK_VER%%/tk.h
 include/tk%%TK_VER%%/tkDecls.h
 include/tk%%TK_VER%%/tkPlatDecls.h
 lib/libtkstub%%TK_VER%%.a
-lib/libtk%%TK_VER%%.so
 lib/libtk%%PKGNAMESUFFIX%%.so
 lib/libtk%%PKGNAMESUFFIX%%.so.1
 lib/tk%%TK_VER%%/bgerror.tcl
@@ -141,7 +140,6 @@ lib/tk%%TK_VER%%/obsolete.tcl
 lib/tk%%TK_VER%%/optMenu.tcl
 lib/tk%%TK_VER%%/palette.tcl
 lib/tk%%TK_VER%%/panedwindow.tcl
-lib/tk%%TK_VER%%/pkgIndex.tcl
 lib/tk%%TK_VER%%/safetk.tcl
 lib/tk%%TK_VER%%/scale.tcl
 lib/tk%%TK_VER%%/scrlbar.tcl

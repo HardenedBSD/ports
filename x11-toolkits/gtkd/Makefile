@@ -17,6 +17,9 @@ USES=		gmake zip
 WRKSRC=		${WRKDIR}
 MAKEFILE=	GNUmakefile
 
+USE_HARDENING=	pie:off relro:off
+LDFLAGS+=	-linker=bfd
+
 SSP_UNSAFE=	ldc2 does not support -fstack-protector-strong
 
 post-patch:

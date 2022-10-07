@@ -1,0 +1,48 @@
+--- Makefile
++++ Makefile
+@@ -5,26 +5,22 @@
+ SOURCES   = ${:!find src -name \*.c | sort!}
+ 
+ LIBS      = $(BUILD_DIR)/lib64/libc6.so \
+-            $(BUILD_DIR)/lib64/libc6-debug.so \
+-            $(BUILD_DIR)/lib32/libc6.so \
+-            $(BUILD_DIR)/lib32/libc6-debug.so
++            $(BUILD_DIR)/lib64/libc6-debug.so
+ 
+ CFLAGS    = -std=c99 -Wall -Wextra -Wno-unused-parameter -Wno-incompatible-pointer-types-discards-qualifiers \
+  -shared -fPIC -Wl,-soname,librt.so.1 -Wl,--version-script=src/shim.map -I/usr/local/include
+ 
+ LDFLAGS64 = -lexecinfo -lm -pthread
+-LDFLAGS32 = -lexecinfo -lm -pthread -Wl,-z,notext # "relocation R_386_PC32 cannot be used against symbol _setjmp"
+ 
+ GCC_VER ?= 9
+ 
+ .if exists(/usr/local/lib/gcc${GCC_VER})
+ LIBS += $(BUILD_DIR)/lib64/fakecxxrt.so
+-LIBS += $(BUILD_DIR)/lib32/fakecxxrt.so
+ .endif
+ 
+-all: $(LIBS) lib32 lib64
++all: $(LIBS) lib64
+ 
+-.for b in 32 64
++.for b in 64
+ 
+ lib$(b):
+ 	ln -s $(BUILD_DIR)/lib$(b) lib$(b)
+@@ -79,12 +75,12 @@
+ 	./utils/prototype-check.rb | /compat/linux/bin/gcc -x c -std=c99 --sysroot=/compat/linux -o /dev/null -
+ 
+ clean:
+-.for f in $(LIBS) lib32 lib64
++.for f in $(LIBS) lib64
+ .  if exists($f)
+ 	rm $f
+ .  endif
+ .endfor
+-.for b in 32 64
++.for b in 64
+ .  for f in $(BUILD_DIR)/wrappers$(b).c $(BUILD_DIR)/wrappers$(b).h $(BUILD_DIR)/versions$(b).h $(BUILD_DIR)/lib$(b)/dummy-librt.so
+ .    if exists($f)
+ 	rm $f
+

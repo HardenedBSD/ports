@@ -13,15 +13,9 @@ LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
 
 USES=		cpe localbase:ldflags lua ssl
 CPE_VENDOR=	imapfilter_project
-<<<<<<< HEAD
 
 USE_HARDENING=	pie:off
 
-CPPFLAGS+=	-I${LOCALBASE}/include -I${LUA_INCDIR}
-LDFLAGS+=	-L${LOCALBASE}/lib -L${LUA_LIBDIR}
-
-=======
->>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	lefcha
 

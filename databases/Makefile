@@ -13,6 +13,7 @@
     SUBDIR += akonadi
     SUBDIR += apache-commons-dbutils
     SUBDIR += arrow
+    SUBDIR += arrow-glib
     SUBDIR += ateam_mysql57_ldap_auth
     SUBDIR += ateam_mysql_ldap_auth
     SUBDIR += autobackupmysql
@@ -751,7 +752,6 @@
     SUBDIR += py-aiosqlite
     SUBDIR += py-alembic
     SUBDIR += py-alembic14
-    SUBDIR += py-alembic16
     SUBDIR += py-apache-arrow
     SUBDIR += py-apsw
     SUBDIR += py-asyncmy
@@ -982,6 +982,11 @@
     SUBDIR += rubygem-postgres_ext
     SUBDIR += rubygem-puppetdb_cli
     SUBDIR += rubygem-rbase
+    SUBDIR += rubygem-red-arrow
+    SUBDIR += rubygem-red-arrow-dataset
+    SUBDIR += rubygem-red-gandiva
+    SUBDIR += rubygem-red-parquet
+    SUBDIR += rubygem-red-plasma
     SUBDIR += rubygem-redis
     SUBDIR += rubygem-redis-actionpack
     SUBDIR += rubygem-redis-actionpack-rails5
@@ -989,14 +994,12 @@
     SUBDIR += rubygem-redis-actionpack-rails52
     SUBDIR += rubygem-redis-actionpack-rails60
     SUBDIR += rubygem-redis-actionpack-rails61
-    SUBDIR += rubygem-redis-actionpack52-rails61
     SUBDIR += rubygem-redis-client
     SUBDIR += rubygem-redis-cluster-client
     SUBDIR += rubygem-redis-clustering
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace18
     SUBDIR += rubygem-redis4
-    SUBDIR += rubygem-redis44
     SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3

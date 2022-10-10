@@ -1,5 +1,5 @@
 PORTNAME=	spot
-DISTVERSION=	2.11
+DISTVERSION=	2.11.1
 CATEGORIES=	math
 MASTER_SITES=	http://www.lrde.epita.fr/dload/${PORTNAME}/
 
@@ -14,7 +14,11 @@ USES=		charsetfix compiler:c++17-lang gmake libtool
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
+.if !defined(WITH_PYTHON) # math/py-spot is a separate port but tests don't work there. To test run: make test WITH_PYTHON=yes
 CONFIGURE_ARGS=	--disable-python --disable-static
+.else
+CONFIGURE_ARGS=	--disable-static
+.endif
 
 INSTALL_TARGET=	install-strip
 

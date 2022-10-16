@@ -230,6 +230,7 @@
     SUBDIR += ocaml-dbm
     SUBDIR += ocaml-mysql
     SUBDIR += ocaml-sqlite3
+    SUBDIR += octosql
     SUBDIR += odbc-cpp-wrapper
     SUBDIR += ods2sql
     SUBDIR += opendbviewer

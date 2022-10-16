@@ -18,12 +18,9 @@ RUN_DEPENDS=	git:devel/git
 USES=		cpe gmake go:no_targets
 USE_RC_SUBR=	gitea
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:golang relro:off retpoline:off
 
-=======
 EXTRACT_AFTER_ARGS=	--strip-components 1 # since 1.17.0, archive includes gitea-src-VERSION directory
->>>>>>> origin/freebsd/main
 SUB_FILES+=	app.ini.sample
 SUB_LIST+=	GITUSER=${USERS}
 

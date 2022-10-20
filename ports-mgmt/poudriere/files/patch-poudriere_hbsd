@@ -5,24 +5,8 @@
  	echo "Makefile ident: $(ident -q ${mnt}/${portdir}/Makefile|sed -n '2,2p')"
  	echo "Poudriere version: ${POUDRIERE_VERSION}"
 -	echo "Host OSVERSION: ${HOST_OSVERSION}"
-+	echo "Host OSVERSION: ${HOST_OSVERSION} $(cat /var/db/hbsd-update/version)"
++	echo "Host OSVERSION: ${HOST_OSVERSION} $(cat /var/db/hbsd-update/version 2>/dev/null)"
  	echo "Jail OSVERSION: ${JAIL_OSVERSION}"
  	echo "Job Id: ${MY_JOBID}"
  	echo
-@@ -821,6 +821,15 @@
- 		echo
- 		echo
- 	fi
-+	if [ `sysctl -n hardening.harden_rtld` = 1 ]; then
-+		echo
-+		echo
-+		echo
-+		echo "!!! harden_rtld is not disable, expect build failures. !!!"
-+		echo
-+		echo
-+		echo
-+	fi
- 	echo "---Begin Environment---"
- 	injail /usr/bin/env
- 	echo "---End Environment---"
 

@@ -7,7 +7,8 @@ MAINTAINER=	mandree@FreeBSD.org
 
 LIB_DEPENDS=	liblmdb.so:databases/lmdb
 
-BUILD_DEPENDS=	aclocal-1.16:devel/automake
+BUILD_DEPENDS=	aclocal-1.16:devel/automake \
+		pkg-config:devel/pkgconf
 
 CONFLICTS_INSTALL=	bogofilter-bdb bogofilter-kc bogofilter-sqlite
 

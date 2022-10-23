@@ -1,8 +1,8 @@
-PORTNAME=	octave-forge-ponchon-savarit
-PORTVERSION=	0.1.1
+PORTNAME=	octave-forge-websockets
+PORTVERSION=	0.1.0
 CATEGORIES=	math
-MASTER_SITES=	https://github.com/aumpierre-unb/Ponchon-Savarit-for-GNU-Octave/archive/refs/tags/
-DISTNAME=	v${PORTVERSION}
+MASTER_SITES=	https://github.com/gnu-octave/octave-websockets/archive/
+DISTNAME=	v${DISTVERSIONFULL}
 DIST_SUBDIR=	octave-forge/${PORTNAME}
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -14,14 +14,14 @@ LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING
 
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
-OCTSRC=		Ponchon-Savarit-for-GNU-Octave-${PORTVERSION}
+OCTSRC=		octave-${OCTAVE_PKGNAME}-${PORTVERSION}
 
-WRKSRC=		${WRKDIR}/${OCTSRC}/src
+RUN_DEPENDS+=	${TARBALLS_DIR}/sockets.tar.gz:math/octave-forge-sockets
+
+.include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 do-build:
 	@${DO_NADA}
-
-.include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
 	${RM} ${WRKSRC}/Makefile ${WRKSRC}/configure

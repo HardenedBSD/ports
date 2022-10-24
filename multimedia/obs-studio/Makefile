@@ -58,9 +58,6 @@ USE_GL=		gl
 USE_XORG=	ice sm x11 xcb xcomposite xext xfixes xinerama xrandr
 USE_LDCONFIG=	yes
 
-MPROTECT_DISABLE=	bin/obs
-PAGEEXEC_DISABLE=	bin/obs
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	obsproject
 GH_TUPLE=	obsproject:obs-browser:f1a61c5:obs_browser/plugins/obs-browser \
@@ -69,6 +66,10 @@ GH_TUPLE=	obsproject:obs-browser:f1a61c5:obs_browser/plugins/obs-browser \
 CMAKE_ON=	UNIX_STRUCTURE
 CMAKE_OFF=	ENABLE_PIPEWIRE # beginning with 27.0.1 (PR#4287) the linux-capture plugin optionally requires the piperware library and in this case expects the linux/dma-buf.h header
 CMAKE_ARGS=	-DOBS_VERSION_OVERRIDE:STRING="${PORTVERSION}"
+
+MPROTECT_DISABLE=	bin/obs
+PAGEEXEC_DISABLE=	bin/obs
+CMAKE_ARGS+=	-DDISABLE_V4L2=yes
 
 LDFLAGS+=	-fPIC # pending https://github.com/obsproject/obs-studio/issues/3436
 
@@ -121,5 +122,8 @@ post-install:
 	# https://github.com/obsproject/obs-studio/issues/2647 (only for multimedia/obs-audio-spectralizer, should be removed later)
 	${INSTALL_DATA} ${WRKSRC}/cmake/Modules/ObsHelpers.cmake ${STAGEDIR}${PREFIX}/lib/cmake
 	${INSTALL_DATA} ${WRKSRC}/cmake/external/ObsPluginHelpers.cmake ${STAGEDIR}${PREFIX}/lib/cmake
+
+	#HBSD: Disable the linux-v4l2 plugin because it is broken
+	cd ${WRKDIR} ; ${SED} -i -e '/linux-v4l2/d' ${TMPPLIST}
 
 .include <bsd.port.post.mk>

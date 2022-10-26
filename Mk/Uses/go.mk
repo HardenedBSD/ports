@@ -90,16 +90,9 @@ GO_PKGNAME=	${PORTNAME}
 GO_TARGET?=	${GO_PKGNAME}
 GO_TESTTARGET?=	./...
 
-<<<<<<< HEAD
 GO_BUILDFLAGS+=	-v -trimpath
 .if empty(GO_BUILDFLAGS:M-buildmode*)
 GO_BUILDFLAGS+=-v -buildmode=exe
-=======
-.if !defined(PIE_UNSAFE) && defined(WITH_PIE)
-GO_BUILDFLAGS+= -buildmode=pie
-.else
-GO_BUILDFLAGS+= -buildmode=exe
->>>>>>> origin/freebsd/main
 .endif
 .  if !defined(WITH_DEBUG) && empty(GO_BUILDFLAGS:M-ldflags*)
 GO_BUILDFLAGS+=	-ldflags=-s

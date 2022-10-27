@@ -257,6 +257,7 @@
     SUBDIR += jesred
     SUBDIR += jetty8
     SUBDIR += jetty9
+    SUBDIR += jetty10
     SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter

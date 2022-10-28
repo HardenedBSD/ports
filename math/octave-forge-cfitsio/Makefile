@@ -1,8 +1,9 @@
-PORTNAME=	octave-forge-biosig
-DISTVERSION=	3.0.1
+PORTNAME=	octave-forge-cfitsio
+PORTVERSION=	0.0.4
 CATEGORIES=	math
-MASTER_SITES=	https://pub.ist.ac.at/~schloegl/biosig/prereleases/
-DISTNAME=	biosig4octave-${DISTVERSION}.src
+MASTER_SITES=	SF
+MASTER_SITE_SUBDIR=octave-cfitsio/v${PORTVERSION}
+DISTNAME=	octave-${OCTAVE_PKGNAME}-${PORTVERSION}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
@@ -11,16 +12,18 @@ WWW=		http://octave.sourceforge.net/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING
 
-LIB_DEPENDS+=	libbiosig.so:biology/biosig
+LIB_DEPENDS+=	libcfitsio.so:astro/cfitsio
 
-ALL_TARGET=	# nada
+USES=		autoreconf
 
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
 
-OCTSRC=		${DISTNAME:R}
+OCTSRC=		${DISTNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
+
+GNU_CONFIGURE=	yes
 
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 

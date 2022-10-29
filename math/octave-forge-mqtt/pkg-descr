@@ -3,8 +3,6 @@ which is intended to be a central location for custom scripts, functions and
 extensions for GNU Octave. contains the source for all the functions plus
 build and install scripts.
 
-This is fda.
+This is mqtt.
 
- These functions were developed to support functional data analysis as
-described in Ramsay, J. O. and Silverman, B. W. (2005) Functional Data
- Analysis. New York: Springer.
+ Basic Octave implementation of mqtt toolkit.

@@ -1,29 +1,30 @@
-PORTNAME=	octave-forge-image
-PORTVERSION=	2.14.0
-PORTREVISION=	1
+PORTNAME=	octave-forge-mqtt
+PORTVERSION=	0.0.3
 CATEGORIES=	math
-MASTER_SITES=	SF/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases
-DISTNAME=	${OCTAVE_PKGNAME}-${DISTVERSIONFULL}
+MASTER_SITES=	SF
+MASTER_SITE_SUBDIR=octave-mqtt/v${PORTVERSION}
+DISTNAME=	octave-${OCTAVE_PKGNAME}-${PORTVERSION}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
 WWW=		http://octave.sourceforge.net/
 
-LICENSE=	Many
-LICENSE_NAME=	Many different licenses
+LICENSE=	GPLv3
 LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING
-LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USES=		compiler:c++14-lang
+LIB_DEPENDS+=	libpaho-mqtt3a.so:net/libpaho-mqtt3
+
+USES=		autoreconf
 
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
+
 OCTSRC=		${DISTNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 GNU_CONFIGURE=	yes
-CXXFLAGS+=	-fPIC
+CFLAGS+=	-I${LOCALBASE}/include
 
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 

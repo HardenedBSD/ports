@@ -1,6 +1,6 @@
-PORTNAME=	octave-forge-sqlite
+PORTNAME=	octave-forge-csg-toolkit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.2
+DISTVERSION=	1.2.3
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -10,21 +10,19 @@ WWW=		https://packages.octave.org/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING
 
-USES=		autoreconf pkgconfig
+USES+=		compiler:gcc-c++11-lib
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	gnu-octave
-GH_PROJECT=	octave-sqlite
-
-LIB_DEPENDS+=	libsqlite3.so:databases/sqlite3
-
-GNU_CONFIGURE=	yes
+GH_ACCOUNT=	pr0m1th3as
+GH_PROJECT=	${OCTAVE_PKGNAME}
 
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
 OCTSRC=		${GH_PROJECT}-${DISTVERSION}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
+
+RUN_DEPENDS+=	${TARBALLS_DIR}/io.tar.gz:math/octave-forge-io
 
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 

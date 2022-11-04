@@ -35,6 +35,7 @@ PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		share/pixmaps/net.veloren.veloren.png
 PORTDATA=	*
 
+<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/veloren-voxygen
 PAGEEXEC_DISABLE=	bin/veloren-voxygen
 
@@ -749,6 +750,8 @@ CARGO_CRATES=	ab_glyph-0.2.15 \
 		vek@git+https://github.com/yoanlcq/vek.git?rev=84d5cb65841d46599a986c5477341bea4456be26\#84d5cb65841d46599a986c5477341bea4456be26 \
 		keyboard-keynames@git+https://gitlab.com/Frinksy/keyboard-keynames.git?branch=develop\#1ae010ca032a57dfe0ba01d4346a3b03bde36de0
 
+=======
+>>>>>>> origin/freebsd/main
 # https://gitlab.com/veloren/veloren/issues/264
 CARGO_ENV+=		RUSTC_BOOTSTRAP=1
 # XXX https://github.com/rust-lang/cargo/issues/4101

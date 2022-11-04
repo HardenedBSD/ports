@@ -308,6 +308,7 @@
     SUBDIR += py-dwave-system
     SUBDIR += py-dwave-tabu
     SUBDIR += py-dwavebinarycsp
+    SUBDIR += py-earthpy
     SUBDIR += py-eccodes
     SUBDIR += py-esda
     SUBDIR += py-fresnel
@@ -456,6 +457,7 @@
     SUBDIR += thermofun
     SUBDIR += tinker
     SUBDIR += trilinos
+    SUBDIR += ttk
     SUBDIR += tweedledum
     SUBDIR += udunits
     SUBDIR += ukrmol+

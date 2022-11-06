@@ -1820,6 +1820,7 @@
     SUBDIR += reproxy
     SUBDIR += resin3
     SUBDIR += restbed
+    SUBDIR += restinio
     SUBDIR += retawq
     SUBDIR += rss-bridge
     SUBDIR += rsskit

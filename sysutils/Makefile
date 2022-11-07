@@ -569,6 +569,7 @@
     SUBDIR += ipfs-go-fs-repo-migrations
     SUBDIR += ipget
     SUBDIR += ipmitool
+    SUBDIR += ipmi_exporter
     SUBDIR += ipsc
     SUBDIR += isc-cron
     SUBDIR += isomaster

@@ -1099,6 +1099,7 @@
     SUBDIR += rubygem-omniauth-jwt
     SUBDIR += rubygem-omniauth-multipassword
     SUBDIR += rubygem-omniauth-oauth2-generic
+    SUBDIR += rubygem-omniauth-rails_csrf_protection
     SUBDIR += rubygem-omniauth-saml
     SUBDIR += rubygem-omniauth-shibboleth
     SUBDIR += rubygem-omniauth1

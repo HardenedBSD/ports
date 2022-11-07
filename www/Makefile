@@ -198,7 +198,6 @@
     SUBDIR += gopherus
     SUBDIR += gotty
     SUBDIR += gpx2map
-    SUBDIR += grafana7
     SUBDIR += grafana8
     SUBDIR += grafana9
     SUBDIR += grails

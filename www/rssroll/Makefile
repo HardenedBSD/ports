@@ -11,15 +11,11 @@ LICENSE=	BSD2CLAUSE
 USES=		gnome sqlite:3
 USE_GNOME=	libxml2
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CEZ_VERSION=	1.05
-=======
 FSL_VERSION=	2.14
 CEZ_VERSION=	1.13
 RENDER_VERSION=	1.0
->>>>>>> origin/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	koue
 

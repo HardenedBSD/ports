@@ -25,14 +25,8 @@ WWW=		http://www.kornshell.com/
 
 LICENSE=	EPL
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-BROKEN_aarch64=	Fails to compile: needs sbrk
-BROKEN_riscv64=	Fails to compile: needs sbrk
-
-=======
->>>>>>> origin/freebsd/main
 USES=		compiler:c11
 
 USE_GITHUB=	yes

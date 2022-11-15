@@ -1181,6 +1181,7 @@
     SUBDIR += setaudit
     SUBDIR += sha1collisiondetection
     SUBDIR += sha2wordlist
+    SUBDIR += shibboleth-idp
     SUBDIR += shibboleth-sp
     SUBDIR += sig2dot
     SUBDIR += signify

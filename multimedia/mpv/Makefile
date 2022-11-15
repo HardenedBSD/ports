@@ -5,6 +5,9 @@ PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio wayland
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	b95111dda879.patch:-p1 # https://github.com/mpv-player/mpv/pull/10871
+
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Free and open-source general-purpose video player
 WWW=		https://mpv.io
@@ -27,17 +30,14 @@ USE_HARDENING=	pie:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mpv-player
-MESON_ARGS=	-Dpdf-build=disabled \
-		-Drubberband=disabled \
-		-Dshaderc=disabled \
-		-Dvapoursynth=disabled \
+MESON_ARGS=	-Dshaderc=disabled \
 		-Dlibmpv=true
 
-OPTIONS_DEFINE=		ARCHIVE DOCS LCMS2 MANPAGES MUJS TEST UCHARDET EXAMPLES ZIMG
+OPTIONS_DEFINE=		ARCHIVE DOCS LCMS2 MANPAGES MUJS RUBBERBAND TEST UCHARDET EXAMPLES ZIMG
 OPTIONS_DEFAULT=	ARCHIVE DVDNAV LUAJIT MANPAGES NVDEC OPENGL UCHARDET \
 			V4L VAAPI VDPAU VULKAN WAYLAND X11 YTDLP
 OPTIONS_GROUP=		IN VO AO
-OPTIONS_GROUP_IN=	CDIO DVDNAV LIBBLURAY V4L
+OPTIONS_GROUP_IN=	CDIO DVDNAV LIBBLURAY V4L VAPOURSYNTH
 OPTIONS_GROUP_VO=	CACA NVDEC OPENGL SIXEL VAAPI VDPAU VULKAN WAYLAND X11
 OPTIONS_GROUP_AO=	ALSA JACK OPENAL PIPEWIRE PULSEAUDIO SDL SNDIO
 OPTIONS_RADIO=		YOUTUBE
@@ -52,8 +52,10 @@ LUAJIT_DESC=		Use LuaJIT instead of Lua scripting language support
 MUJS_DESC=		Use MuJS for Javascript language support
 NVDEC_DESC=		NVIDIA decoder with CUDA support
 PIPEWIRE_DESC=		Pipewire sound server support
+RUBBERBAND_DESC=	High quality pitch correction with librubberband
 SIXEL_DESC=		Sixel graphics support
 UCHARDET_DESC=		Guess subtitle encoding via uchardet
+VAPOURSYNTH_DESC=	VapourSynth filter bridge
 VULKAN_DESC=		Vulkan output support
 YTDLP_DESC=		Install yt-dlp (youtube-dl fork)
 YTDL_DESC=		Install youtube-dl
@@ -122,6 +124,9 @@ PIPEWIRE_MESON_ENABLED=		pipewire
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 PULSEAUDIO_MESON_ENABLED=	pulse
 
+RUBBERBAND_LIB_DEPENDS=		librubberband.so:audio/rubberband
+RUBBERBAND_MESON_ENABLED=	rubberband
+
 SDL_USES=			sdl
 SDL_USE=			SDL=sdl2
 SDL_MESON_ENABLED=		sdl2
@@ -142,6 +147,9 @@ V4L_MESON_ENABLED=		dvbin
 
 VAAPI_LIB_DEPENDS=		libva.so:multimedia/libva
 VAAPI_MESON_ENABLED=		vaapi
+
+VAPOURSYNTH_LIB_DEPENDS=	libvapoursynth-script.so:multimedia/vapoursynth
+VAPOURSYNTH_MESON_ENABLED=	vapoursynth
 
 VDPAU_LIB_DEPENDS=		libvdpau.so:multimedia/libvdpau
 VDPAU_MESON_ENABLED=		vdpau

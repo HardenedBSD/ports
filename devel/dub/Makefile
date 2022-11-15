@@ -1,10 +1,5 @@
 PORTNAME=	dub
-<<<<<<< HEAD
-PORTVERSION=	1.14.0
-BROKEN=	outdated and failing construction upstream
-=======
 PORTVERSION=	1.29.0
->>>>>>> origin/freebsd/main
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 

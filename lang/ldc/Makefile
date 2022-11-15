@@ -30,21 +30,14 @@ USES=		ninja cmake:insource pkgconfig
 
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CC=		${LOCALBASE}/bin/clang${LLVM_VERSION}
-CXX=		${LOCALBASE}/bin/clang++${LLVM_VERSION}
-LLVM_CONFIG=	${LOCALBASE}/bin/llvm-config${LLVM_VERSION}
-LDCVER=		${PORTVERSION}
-=======
 CC=		${LOCALBASE}/bin/clang${_LLVM_VER}
 CXX=		${LOCALBASE}/bin/clang++${_LLVM_VER}
 LLVM_CONFIG=	${LOCALBASE}/bin/llvm-config${_LLVM_VER}
 
 _GCC_VER=	11
 _LLVM_VER=	13
->>>>>>> origin/freebsd/main
 
 .include <bsd.port.pre.mk>
 

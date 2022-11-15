@@ -1,6 +1,10 @@
 PORTNAME=	dub
+<<<<<<< HEAD
 PORTVERSION=	1.14.0
 BROKEN=	outdated and failing construction upstream
+=======
+PORTVERSION=	1.29.0
+>>>>>>> origin/freebsd/main
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -23,7 +27,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%PORTVERSION%%|${PORTVERSION}|g' ${WRKSRC}/source/dub/version_.d
 
 do-build:
-	@cd ${WRKSRC} && ${SH} build.sh
+	@cd ${WRKSRC} && ${PREFIX}/bin/ldmd2 -run build.d
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}/${PREFIX}/bin/${PORTNAME}

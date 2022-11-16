@@ -147,6 +147,7 @@
     SUBDIR += bstack
     SUBDIR += btop
     SUBDIR += btsixad
+    SUBDIR += buildah
     SUBDIR += bulk_extractor
     SUBDIR += bupstash
     SUBDIR += burp
@@ -213,7 +214,9 @@
     SUBDIR += conky
     SUBDIR += conky-awesome
     SUBDIR += conman
+    SUBDIR += conmon
     SUBDIR += consolehm
+    SUBDIR += containers-common
     SUBDIR += consolekit2
     SUBDIR += consul
     SUBDIR += consul-alerts
@@ -833,6 +836,7 @@
     SUBDIR += oak
     SUBDIR += obliterate
     SUBDIR += oc
+    SUBDIR += ocijail
     SUBDIR += odo
     SUBDIR += ods2
     SUBDIR += ohmu
@@ -1016,6 +1020,8 @@
     SUBDIR += plconfig
     SUBDIR += pmt
     SUBDIR += pnscan
+    SUBDIR += podman
+    SUBDIR += podman-suite
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt
@@ -1326,6 +1332,7 @@
     SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-qt5
     SUBDIR += signon-ui
+    SUBDIR += skopeo
     SUBDIR += slack
     SUBDIR += sleuthkit
     SUBDIR += slst

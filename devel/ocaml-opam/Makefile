@@ -20,6 +20,9 @@ USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-checks
 
+# https://github.com/ocaml/opam-repository/issues/21472#issuecomment-1239682821
+BUILD_DEPENDS=	llvm-ranlib-devel:devel/llvm-devel
+
 MAKE_JOBS_UNSAFE=	yes
 ALL_TARGET=	cold-lib-ext cold-all
 

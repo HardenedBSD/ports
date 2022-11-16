@@ -4,6 +4,7 @@
     SUBDIR += ALPSCore
     SUBDIR += ChipmunkPhysics
     SUBDIR += InsightToolkit
+    SUBDIR += InsightToolkit501
     SUBDIR += PETSc
     SUBDIR += R-cran-DCluster
     SUBDIR += R-cran-Epi
@@ -431,6 +432,7 @@
     SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
     SUBDIR += scidavis
+    SUBDIR += sciplot
     SUBDIR += segyio
     SUBDIR += serac
     SUBDIR += shelxle

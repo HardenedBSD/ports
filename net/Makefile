@@ -1458,6 +1458,7 @@
     SUBDIR += ssldump
     SUBDIR += sslh
     SUBDIR += ssspl
+    SUBDIR += stc
     SUBDIR += stone
     SUBDIR += storj
     SUBDIR += stund

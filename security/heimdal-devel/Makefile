@@ -1,10 +1,9 @@
 PORTNAME=	heimdal
 PORTVERSION=	${HEIMDAL_COMMIT_DATE}
-PORTREVISION=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	-devel
-HASH=		cfb32a638
-HEIMDAL_COMMIT_DATE=	2022.11.17
+HASH=		8f9c2d115
+HEIMDAL_COMMIT_DATE=	2022.11.18
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Popular BSD-licensed implementation of Kerberos 5
@@ -18,14 +17,15 @@ GH_TAGNAME=	${HASH}
 
 CONFLICTS=	krb5 krb5-*
 
-USES=		cpe gettext-runtime gssapi:bootstrap,heimdal libtool pathfix \
-		pkgconfig python:build readline makeinfo ssl
+USES=		autoreconf:build cpe gettext-runtime gssapi:bootstrap,heimdal \
+		libtool pathfix pkgconfig python:build readline makeinfo ssl
 CPE_VENDOR=	${PORTNAME}_project
 USE_LDCONFIG=	${GSSAPILIBDIR}
 
 # Needs clang-format which is only provided by the port.
 # Else asm1_fails resulting in a command not found error.
-BUILD_DEPENDS=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
+BUILD_DEPENDS=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT} \
+		p5-JSON>0:converters/p5-JSON
 
 LIB_DEPENDS=	liblockfile.so:devel/liblockfile
 
@@ -53,7 +53,8 @@ CONFIGURE_ARGS=	--with-berkeley-db \
 		--with-hdbdir="/var/${PORTNAME}" \
 		--sysconfdir="${PREFIX}/etc" \
 		CLANG_FORMAT="${LOCALBASE}/bin/clang-format${LLVM_DEFAULT}" \
-		--enable-kx509
+		--enable-kx509 \
+		--without-microhttpd
 # XXX --with-readline picks up libreadline even if found in /usr/lib.
 MAKE_ENV=	INSTALL_CATPAGES=no
 INSTALL_TARGET=	install-strip
@@ -64,7 +65,7 @@ INFO=		heimdal hx509
 
 MAKE_JOBS_UNSAFE=	yes
 
-OPTIONS_DEFINE=	IPV6 BDB LMDB SQLITE LDAP PKINIT DIGEST KX509 CRACKLIB
+OPTIONS_DEFINE=	IPV6 BDB LMDB SQLITE LDAP PKINIT DIGEST KX509 CRACKLIB MICROHTTPD
 OPTIONS_DEFAULT=IPV6 BDB                  PKINIT DIGEST KX509
 OPTIONS_SUB=	yes
 
@@ -108,6 +109,10 @@ KX509_CONFIGURE_ENABLE=	kx509
 
 CRACKLIB_DESC=		Use CrackLib for password quality checking
 CRACKLIB_LIB_DEPENDS=	libcrack.so:security/cracklib
+
+MICROHTTPD_CONFIGURE_WITH=	microhttpd
+MICROHTTPD_DESC=		Add microhttpd support
+MICROHTTPD_LIB_DEPENDS=		libmicrohttpd.so:www/libmicrohttpd
 
 .include <bsd.port.options.mk>
 

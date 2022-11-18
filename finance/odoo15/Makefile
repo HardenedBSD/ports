@@ -1,7 +1,9 @@
 PORTNAME=	odoo
-PORTVERSION=	16.0
+PORTVERSION=	15.0
+PORTREVISION=	2
 CATEGORIES=	finance www
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	15
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Suite of web based open source business apps
@@ -10,7 +12,7 @@ WWW=		https://www.odoo.com
 LICENSE=	LGPL3
 
 USE_GITHUB=	yes
-GH_TAGNAME=	0a766557bcf95e0b9fc3363103fce8277b0fa835
+GH_TAGNAME=	02b4e98ebb2c45d9a4af10fe1bc732f048708f85
 
 LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
 		libxslt.so:textproc/libxslt \
@@ -77,11 +79,12 @@ GROUPS=		${USERS}
 USE_RC_SUBR=	${PORTNAME}
 SUB_FILES=	pkg-message
 
-CONFLICTS=	odoo14 odoo15
+CONFLICTS=	odoo14 odoo
 
 ETCDIR=		${PREFIX}/etc/odoo
 
 post-patch:
+	@${REINPLACE_CMD} -i "" -e '25d' ${WRKSRC}/odoo/service/wsgi_server.py
 	@${REINPLACE_CMD} -i "" -e 's|werkzeug.url_quote_plus|werkzeug.urls.url_quote_plus|g' \
 		${WRKSRC}/odoo/addons/base/models/ir_ui_view.py
 	@${REINPLACE_CMD} -i "" -e 's|werkzeug.url_unquote_plus|werkzeug.urls.url_quote_plus|g' \

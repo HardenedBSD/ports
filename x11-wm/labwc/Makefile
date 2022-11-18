@@ -2,13 +2,14 @@ PORTNAME=	labwc
 DISTVERSION=	0.6.0
 CATEGORIES=	x11-wm wayland
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	1e66ba8fd75e.patch:-p1 # https://github.com/labwc/labwc/pull/629
+
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Wayland stacking compositor
 WWW=		https://github.com/labwc/labwc
 
 LICENSE=	GPLv2
-
-BROKEN_FreeBSD_12=	static_assert not visible with -D_POSIX_C_SOURCE=200809L
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 		wayland-protocols>0:graphics/wayland-protocols \
@@ -18,10 +19,9 @@ LIB_DEPENDS=	libwayland-server.so:graphics/wayland \
 		libinput.so:x11/libinput \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		compiler:c11 gnome meson pkgconfig xorg
+USES=		compiler:c11 gnome meson pkgconfig
 USE_GITHUB=	yes
 USE_GNOME=	cairo libxml2 pango
-USE_XORG=	pixman
 PLIST_FILES=	bin/${PORTNAME} \
 		share/wayland-sessions/${PORTNAME}.desktop
 
@@ -58,5 +58,10 @@ post-patch:
 		-e 's,/usr/local,${PREFIX},' \
 		${WRKSRC}/docs/${PORTNAME}-config.5.scd \
 		${WRKSRC}/src/common/dir.c
+# XXX Drop after FreeBSD 12.3 EOL around 2023-03-01
+# https://cgit.freebsd.org/src/commit/?id=773538247007
+	@if [ ${OPSYS} = FreeBSD -a ${OSVERSION} -lt 1203501 ]; then \
+		${REINPLACE_CMD} -e '/_POSIX_C_SOURCE/d' ${WRKSRC}/src/cursor.c; \
+	fi
 
 .include <bsd.port.mk>

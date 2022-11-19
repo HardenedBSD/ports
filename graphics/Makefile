@@ -47,6 +47,7 @@
     SUBDIR += airsaned
     SUBDIR += akira
     SUBDIR += alembic
+    SUBDIR += alizams
     SUBDIR += aloadimage
     SUBDIR += alpng
     SUBDIR += ampasACES-container
@@ -1003,6 +1004,7 @@
     SUBDIR += ristretto
     SUBDIR += rlottie
     SUBDIR += ruby-gd
+    SUBDIR += rubygem-blurhash
     SUBDIR += rubygem-cairo
     SUBDIR += rubygem-captcha
     SUBDIR += rubygem-chunky_png

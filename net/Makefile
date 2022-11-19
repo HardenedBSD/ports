@@ -419,7 +419,6 @@
     SUBDIR += libunp
     SUBDIR += libusipp
     SUBDIR += libusrsctp
-    SUBDIR += libutp
     SUBDIR += libvncserver
     SUBDIR += libwebsockets
     SUBDIR += libyang

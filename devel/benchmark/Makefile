@@ -29,4 +29,6 @@ CXXFLAGS_gcc=	-Wno-stringop-truncation
 
 BINARY_ALIAS=	git=false
 
+PLIST_SUB=	VERSION=${DISTVERSION}
+
 .include <bsd.port.mk>

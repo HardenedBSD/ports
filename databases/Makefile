@@ -886,6 +886,7 @@
     SUBDIR += ruby-tokyocabinet
     SUBDIR += ruby-xapian
     SUBDIR += rubygem-active_model_serializers
+    SUBDIR += rubygem-active_model_serializers61
     SUBDIR += rubygem-active_record_query_trace
     SUBDIR += rubygem-activemodel-serializers-xml
     SUBDIR += rubygem-activemodel4
@@ -928,6 +929,7 @@
     SUBDIR += rubygem-dbf
     SUBDIR += rubygem-dbi
     SUBDIR += rubygem-dbm
+    SUBDIR += rubygem-discard-rails61
     SUBDIR += rubygem-dm-aggregates
     SUBDIR += rubygem-dm-chunked_query
     SUBDIR += rubygem-dm-constraints
@@ -948,6 +950,7 @@
     SUBDIR += rubygem-do_postgres
     SUBDIR += rubygem-do_sqlite3
     SUBDIR += rubygem-em-redis-unified
+    SUBDIR += rubygem-fabrication
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
     SUBDIR += rubygem-flipper-active_record-rails61
@@ -1003,6 +1006,7 @@
     SUBDIR += rubygem-redis-namespace18
     SUBDIR += rubygem-redis4
     SUBDIR += rubygem-sdbm
+    SUBDIR += rubygem-scenic61
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby

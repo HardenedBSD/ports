@@ -22,12 +22,7 @@ USES=		compiler:c++11-lib gmake python:3.6-3.10,build pkgconfig \
 MPROTECT_DISABLE=	bin/node
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE COREPACK
-<<<<<<< HEAD
 OPTIONS_DEFAULT=	COREPACK
-OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
-=======
-OPTIONS_DEFAULT=	DTRACE COREPACK
->>>>>>> origin/freebsd/main
 OPTIONS_SUB=		yes
 
 .if !exists(/usr/sbin/dtrace)

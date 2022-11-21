@@ -16,19 +16,17 @@ BROKEN_aarch64=	fails to link: collect2: error: ld returned 1 exit status
 
 BUILD_DEPENDS=	fig2dev:print/fig2dev
 
-<<<<<<< HEAD
-USE_HARDENING=	pie:off
-=======
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.lip6.fr
 GL_ACCOUNT=	vlsi-eda
 GL_COMMIT=	ebece102e15c110fc79f1da50524c68fd9523f0c
->>>>>>> origin/freebsd/main
 
 USES=		autoreconf:build gmake libtool magick:build motif tar:bz2 xorg
 USE_GCC=	yes
 USE_TEX=	dvipsk:build latex:build
 USE_XORG=	ice sm x11 xext xt
+
+USE_HARDENING=	pie:off
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	ALLIANCE_TOP=${ALLIANCE_TOP} YACC=${YACC}

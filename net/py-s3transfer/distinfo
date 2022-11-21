@@ -1,7 +1,3 @@
-<<<<<<< HEAD
 TIMESTAMP = 1667745972
-=======
-TIMESTAMP = 1657564372
->>>>>>> origin/freebsd/main
 SHA256 (s3transfer-0.6.0.tar.gz) = 2ed07d3866f523cc561bf4a00fc5535827981b117dd7876f036b0c1aca42c947
 SIZE (s3transfer-0.6.0.tar.gz) = 134871

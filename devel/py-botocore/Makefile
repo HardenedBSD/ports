@@ -1,10 +1,6 @@
 PORTNAME=	botocore
-<<<<<<< HEAD
 
 PORTVERSION=	1.29.3
-=======
-PORTVERSION=	1.27.30
->>>>>>> origin/freebsd/main
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}

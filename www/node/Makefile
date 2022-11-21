@@ -15,18 +15,10 @@ BROKEN_SSL=	libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js ${PORTVERSION:R:R}.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
-<<<<<<< HEAD
 LLVM_OBJDUMP_UNSAFE=	yes
-
-USES=		compiler:c++11-lib gmake python:3.6-3.10,build pkgconfig \
-		localbase shebangfix
 
 MPROTECT_DISABLE=	bin/node
 
-OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
-OPTIONS_DEFAULT=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
-OPTIONS_SUB=		yes
-=======
 BUILD_DEPENDS=	brotli>=1.0.9,1:archivers/brotli \
 		c-ares>=1.17.2:dns/c-ares \
 		libnghttp2>=1.45.1:www/libnghttp2 \
@@ -38,7 +30,6 @@ LIB_DEPENDS=	libbrotlidec.so:archivers/brotli \
 		libuv.so:devel/libuv
 
 USES=		compiler:c++11-lib gmake localbase pkgconfig python:3.6-3.10,build shebangfix
->>>>>>> origin/freebsd/main
 
 CONFIGURE_ARGS=	--prefix=${PREFIX:S|^${DESTDIR}||} \
 		--shared-brotli \
@@ -64,7 +55,6 @@ SHEBANG_FILES=	deps/v8/third_party/inspector_protocol/*.py \
 		tools/inspector_protocol/*.py
 
 OPTIONS_DEFINE=	BUNDLED_SSL DOCS DTRACE NLS
-OPTIONS_DEFAULT=DTRACE
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE+=	DTRACE
 .endif

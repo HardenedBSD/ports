@@ -6998,9 +6998,11 @@
     SUBDIR += rubygem-sigdump
     SUBDIR += rubygem-simple-navigation
     SUBDIR += rubygem-simple-navigation-rails50
+    SUBDIR += rubygem-simple-navigation-rails61
     SUBDIR += rubygem-simple_form
     SUBDIR += rubygem-simple_form-rails5
     SUBDIR += rubygem-simple_form-rails50
+    SUBDIR += rubygem-simple_form-rails61
     SUBDIR += rubygem-simplecov
     SUBDIR += rubygem-simplecov_json_formatter
     SUBDIR += rubygem-singleton
@@ -7050,6 +7052,7 @@
     SUBDIR += rubygem-strings
     SUBDIR += rubygem-strings-ansi
     SUBDIR += rubygem-strong_migrations
+    SUBDIR += rubygem-strong_migrations61
     SUBDIR += rubygem-strptime
     SUBDIR += rubygem-strscan
     SUBDIR += rubygem-structured_warnings

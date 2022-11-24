@@ -11,11 +11,17 @@ LICENSE=	BSD2CLAUSE
 
 CONFLICTS_INSTALL=	poudriere poudriere-devel
 
-USE_GITLAB=	yes
-GL_SITE=	https://git.hardenedbsd.org
-GL_ACCOUNT=	hardenedbsd
-GL_PROJECT=	poudriere
-GL_COMMIT=	bbc35d4384509ff6bf512d5209171f0c30291e0a
+USE_GITHUB=	yes
+GH_ACCOUNT=	hardenedbsd
+GH_PROJECT=	poudriere-hbsd
+GH_COMMIT=	bbc35d4384509ff6bf512d5209171f0c30291e0a
+GH_TAGNAME=	${GH_COMMIT}
+
+#USE_GITLAB=	yes
+#GL_SITE=	https://git.hardenedbsd.org
+#GL_ACCOUNT=	hardenedbsd
+#GL_PROJECT=	poudriere
+#GL_COMMIT=	bbc35d4384509ff6bf512d5209171f0c30291e0a
 
 GNU_CONFIGURE=	yes
 ETCDIR=		${PREFIX}/etc/poudriere.d

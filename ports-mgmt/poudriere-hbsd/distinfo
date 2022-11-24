@@ -1,3 +1,3 @@
-TIMESTAMP = 1666185248
-SHA256 (hardenedbsd-poudriere-bbc35d4384509ff6bf512d5209171f0c30291e0a_GL0.tar.gz) = 97dcbf50379c22491d343b04b705c0bc6c543d40370721c391a74e419ba912f0
-SIZE (hardenedbsd-poudriere-bbc35d4384509ff6bf512d5209171f0c30291e0a_GL0.tar.gz) = 4426117
+TIMESTAMP = 1669263185
+SHA256 (hardenedbsd-poudriere-hbsd-3.3.7-bbc35d4384509ff6bf512d5209171f0c30291e0a_GH0.tar.gz) = af0f0b005f550c63ddf1d01a70c8264859782dc9e0cf17fe27dcf5db74ecbdbd
+SIZE (hardenedbsd-poudriere-hbsd-3.3.7-bbc35d4384509ff6bf512d5209171f0c30291e0a_GH0.tar.gz) = 4427324

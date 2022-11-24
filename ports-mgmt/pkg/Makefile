@@ -13,14 +13,17 @@ WWW=		https://github.com/freebsd/pkg
 
 LICENSE=	BSD2CLAUSE
 
-#USE_GITHUB=	yes
-#GH_ACCOUNT=	freebsd
+USE_GITHUB=	yes
+GH_ACCOUNT=	hardenedbsd
 
-USE_GITLAB=	yes
-GL_SITE=	https://git.hardenedbsd.org
-GL_ACCOUNT=	HardenedBSD
-GL_PROJECT=	pkg
-GL_COMMIT=	15320eafc60ef58f684f8475b0d3b05141b92da9
+GH_COMMIT=	15320eafc60ef58f684f8475b0d3b05141b92da9
+GH_TAGNAME=	${GH_COMMIT}
+
+#USE_GITLAB=	yes
+#GL_SITE=	https://git.hardenedbsd.org
+#GL_ACCOUNT=	HardenedBSD
+#GL_PROJECT=	pkg
+#GL_COMMIT=	15320eafc60ef58f684f8475b0d3b05141b92da9
 
 USE_LDCONFIG=	${PREFIX}/lib/compat/pkg
 HAS_CONFIGURE=	yes

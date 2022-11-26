@@ -152,6 +152,7 @@
     SUBDIR += libgridxc
     SUBDIR += libint
     SUBDIR += libint2
+    SUBDIR += libint2-psi4
     SUBDIR += libkml
     SUBDIR += liblinear
     SUBDIR += libmbd
@@ -264,6 +265,7 @@
     SUBDIR += plumed
     SUBDIR += pnetcdf
     SUBDIR += precice
+    SUBDIR += psi4
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
     SUBDIR += py-GPy

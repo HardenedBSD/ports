@@ -516,6 +516,7 @@
     SUBDIR += gstopd
     SUBDIR += gstreamer1-plugins-cdio
     SUBDIR += gtk-imonc
+    SUBDIR += hammer2
     SUBDIR += handlr
     SUBDIR += hardlink
     SUBDIR += hare
@@ -1139,6 +1140,7 @@
     SUBDIR += pydf
     SUBDIR += qchroot
     SUBDIR += qdirstat
+    SUBDIR += qflipper
     SUBDIR += qjail
     SUBDIR += qjail54
     SUBDIR += qlogtools

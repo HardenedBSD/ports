@@ -11,6 +11,8 @@ WWW=		https://github.com/AlizaMedicalImaging/AlizaMS
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_i386=	compilation fails: use of undeclared identifier '_mm_cvtsd_si64', see https://github.com/InsightSoftwareConsortium/ITK/issues/3771
+
 LIB_DEPENDS=	libITKCommon-${ITK_VER}.so:science/InsightToolkit
 TEST_DEPENDS=	googletest>0:devel/googletest
 
@@ -24,7 +26,11 @@ GH_PROJECT=	AlizaMS
 
 CMAKE_ARGS=	-DALIZA_QT_VERSION=5
 
-CXXFLAGS_i386=	-msse2 # to fix this error: always_inline function '_mm_set1_ps' requires target feature 'sse'
+.include <bsd.port.options.mk>
+
+.if ${ARCH} != amd64
+CXXFLAGS+=	-DDISABLE_SIMDMATH # i386 also needs disabling SIND, see https://github.com/InsightSoftwareConsortium/ITK/issues/3771#issuecomment-1328839390
+.endif
 
 .include <../../science/InsightToolkit/Makefile.version>
 .include <bsd.port.mk>

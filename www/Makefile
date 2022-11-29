@@ -247,7 +247,6 @@
     SUBDIR += igal2
     SUBDIR += ikiwiki
     SUBDIR += ilias
-    SUBDIR += ilias6
     SUBDIR += interchange
     SUBDIR += iridium
     SUBDIR += itop
@@ -412,6 +411,7 @@
     SUBDIR += moodle311
     SUBDIR += moodle39
     SUBDIR += moodle40
+    SUBDIR += moodle41
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -788,6 +788,7 @@
     SUBDIR += p5-HTML-ContentExtractor
     SUBDIR += p5-HTML-DOM
     SUBDIR += p5-HTML-Declare
+    SUBDIR += p5-HTML-Defang
     SUBDIR += p5-HTML-Defaultify
     SUBDIR += p5-HTML-Diff
     SUBDIR += p5-HTML-Display
@@ -1368,7 +1369,6 @@
     SUBDIR += persepolis
     SUBDIR += pglogd
     SUBDIR += phalcon
-    SUBDIR += phalcon4
     SUBDIR += php74-opcache
     SUBDIR += php74-session
     SUBDIR += php74-tidy
@@ -2306,7 +2306,6 @@
     SUBDIR += twiki-TwistyPlugin
     SUBDIR += twiki-WysiwygPlugin
     SUBDIR += twms
-    SUBDIR += typo3-10
     SUBDIR += typo3-11
     SUBDIR += uchiwa
     SUBDIR += ufdbguard

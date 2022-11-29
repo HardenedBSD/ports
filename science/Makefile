@@ -28,6 +28,7 @@
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
     SUBDIR += apbs
+    SUBDIR += arbor
     SUBDIR += ascent
     SUBDIR += atompaw
     SUBDIR += avogadro2
@@ -282,6 +283,7 @@
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-access
+    SUBDIR += py-arbor
     SUBDIR += py-asap3
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard

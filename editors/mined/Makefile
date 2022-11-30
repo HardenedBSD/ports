@@ -9,15 +9,9 @@ WWW=		http://towo.net/mined/
 
 LICENSE=	GPLv3
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-OPTIONS_DEFINE=	DOCS
-
-PORTDOCS=	*
-=======
 BUILD_DEPENDS=	${NONEXISTENT}:textproc/UCD:fetch
->>>>>>> upstream/main
 
 USES=		desktop-file-utils gmake ncurses
 BINARY_ALIAS=	make=${GMAKE}

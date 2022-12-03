@@ -542,7 +542,6 @@
     SUBDIR += pear-Structures_DataGrid_DataSource_DB
     SUBDIR += pear-Structures_DataGrid_DataSource_PDO
     SUBDIR += pear-XML_Query2XML
-    SUBDIR += pecl-cassandra
     SUBDIR += pecl-couchbase
     SUBDIR += pecl-leveldb
     SUBDIR += pecl-memcache
@@ -1006,8 +1005,8 @@
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace18
     SUBDIR += rubygem-redis4
-    SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-scenic61
+    SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby

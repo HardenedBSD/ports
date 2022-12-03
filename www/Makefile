@@ -243,6 +243,7 @@
     SUBDIR += httpcore
     SUBDIR += httptunnel
     SUBDIR += httrack
+    SUBDIR += hurl
     SUBDIR += hypermail
     SUBDIR += igal2
     SUBDIR += ikiwiki
@@ -329,6 +330,7 @@
     SUBDIR += mediawiki135
     SUBDIR += mediawiki137
     SUBDIR += mediawiki138
+    SUBDIR += mediawiki139
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -1749,6 +1751,7 @@
     SUBDIR += py-secure-cookie
     SUBDIR += py-selector
     SUBDIR += py-selenium
+    SUBDIR += py-selenium-wire
     SUBDIR += py-semiphemeral
     SUBDIR += py-sentinelhub
     SUBDIR += py-slimit
@@ -2125,8 +2128,8 @@
     SUBDIR += rubygem-robots
     SUBDIR += rubygem-roda
     SUBDIR += rubygem-rqrcode
-    SUBDIR += rubygem-rqrcode2
     SUBDIR += rubygem-rqrcode-rails3
+    SUBDIR += rubygem-rqrcode2
     SUBDIR += rubygem-rqrcode_core
     SUBDIR += rubygem-rss
     SUBDIR += rubygem-rtlit

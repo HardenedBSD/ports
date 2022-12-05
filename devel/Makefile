@@ -3982,7 +3982,6 @@
     SUBDIR += pecl-grpc
     SUBDIR += pecl-hrtime
     SUBDIR += pecl-inotify
-    SUBDIR += pecl-jsmin
     SUBDIR += pecl-json_post
     SUBDIR += pecl-msgpack
     SUBDIR += pecl-mustache
@@ -4117,6 +4116,7 @@
     SUBDIR += py-Jinja2
     SUBDIR += py-Jinja2-doc
     SUBDIR += py-Js2Py
+    SUBDIR += py-PYB11Generator
     SUBDIR += py-PeachPy
     SUBDIR += py-Products.ExternalEditor
     SUBDIR += py-Products.PloneLanguageTool

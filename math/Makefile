@@ -819,7 +819,6 @@
     SUBDIR += pear-Math_BigInteger
     SUBDIR += pear-Math_Combinatorics
     SUBDIR += pecl-bitset
-    SUBDIR += pecl-stats2
     SUBDIR += permlib
     SUBDIR += petanque
     SUBDIR += petiga
@@ -842,6 +841,7 @@
     SUBDIR += ploticus-nox11
     SUBDIR += plplot
     SUBDIR += poly2tri
+    SUBDIR += polyclipper
     SUBDIR += polylib
     SUBDIR += polymake
     SUBDIR += primecount
@@ -1082,6 +1082,7 @@
     SUBDIR += scalapackfx
     SUBDIR += scilab
     SUBDIR += scilab-toolbox-swt
+    SUBDIR += scorec-core
     SUBDIR += scs
     SUBDIR += sdpa
     SUBDIR += secp256k1

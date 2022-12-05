@@ -1,7 +1,7 @@
 PORTNAME=	openfhe
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +10,8 @@ WWW=		https://github.com/openfheorg/openfhe-development
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation fails: error: __int128 is not supported on this target
 
 BUILD_DEPENDS=	autoconf:devel/autoconf # possibly a mistake in the project
 
@@ -30,7 +32,7 @@ CMAKE_TESTING_TARGET=	testall
 
 BINARY_ALIAS=	git=false
 
-OPTIONS_DEFINE=		HEXL NTL
+OPTIONS_DEFINE=		HEXL NTL OPENMP
 OPTIONS_DEFAULT=	NTL
 
 HEXL_DESC=		Buld with Intel hexl
@@ -41,5 +43,12 @@ NTL_DESC=		Build with libntl
 NTL_CMAKE_BOOL=		WITH_NTL
 NTL_LIB_DEPENDS=	libgmp.so:math/gmp \
 			libntl.so:math/ntl
+
+OPENMP_CMAKE_BOOL=	WITH_OPENMP
+.if exists(/usr/include/omp.h)
+OPTIONS_DEFAULT+=	OPENMP
+.else
+OPENMP_BROKEN=		OpenMP isn't enabled on this architecture
+.endif
 
 .include <bsd.port.mk>

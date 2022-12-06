@@ -1,12 +1,19 @@
 PORTNAME=	xgamma
-PORTVERSION=	1.0.6
+PORTVERSION=	1.0.7
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Gamma correction through the X server
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
+=======
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/COPYING
+
+EXTRACT_SUFX=	.tar.xz
+>>>>>>> upstream/main
 USES=		xorg xorg-cat:app
 USE_XORG=	x11 xxf86vm
 

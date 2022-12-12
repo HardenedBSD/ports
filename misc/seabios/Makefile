@@ -15,12 +15,8 @@ ONLY_FOR_ARCHS_REASON=	specific to x86
 
 USES=	gmake python:build
 
-<<<<<<< HEAD
-MAKE_ARGS=	HOSTCC="${CC}" LD="${LD}" PYTHON="${PYTHON_CMD}" OBJDUMP="/usr/local/bin/objdump"
-=======
 MAKE_ARGS=	AS="${AS}" HOSTCC="${CC}" LD="${LD}" OBJCPY="${OBJCPY}" \
 		OBJDUMP="${OBJDUMP}" PYTHON="${PYTHON_CMD}"
->>>>>>> upstream/main
 NO_ARCH=	yes
 USE_GCC=	yes:build
 USE_BINUTILS=	yes

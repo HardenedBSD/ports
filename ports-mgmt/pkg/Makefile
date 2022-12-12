@@ -1,9 +1,5 @@
 PORTNAME=	pkg
-<<<<<<< HEAD
 DISTVERSION=	1.18.3
-=======
-DISTVERSION=	1.19.0
->>>>>>> upstream/main
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 

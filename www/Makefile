@@ -1422,6 +1422,7 @@
     SUBDIR += py-aiohttp_cors
     SUBDIR += py-aioquic
     SUBDIR += py-arxiv
+    SUBDIR += py-asgi-csrf
     SUBDIR += py-asgiref
     SUBDIR += py-autobahn
     SUBDIR += py-azure-common

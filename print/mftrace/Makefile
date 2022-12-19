@@ -23,9 +23,9 @@ RUN_DEPENDS+=	potrace:graphics/potrace
 USE_HARDENING=	pie:off relro:off
 
 # Python3 ready
+USES=		gmake python tex
 USE_TEX=	base texmf
 GNU_CONFIGURE=	yes
-USES=		gmake python
 MAKEFILE=	GNUmakefile
 
 PLIST_FILES=	\

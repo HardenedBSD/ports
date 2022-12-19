@@ -1,7 +1,6 @@
 PORTNAME=	yadifa
-DISTVERSION=	2.5.3
-DISTVERSION=   2.5.4
-DISTVERSIONSUFFIX=     -10442
+DISTVERSION=	2.6.2
+DISTVERSIONSUFFIX=	-10816
 CATEGORIES=	dns
 MASTER_SITES=	https://www.yadifa.eu/sites/default/files/releases/ \
 		https://dns.company/downloads/yadifa/
@@ -20,6 +19,9 @@ USE_HARDENING=	pie:off relro:off
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var
+
+# obsolete in next version, so > 2.6.2
+LDFLAGS+=	-lexecinfo
 
 SUB_LIST+=	GROUPS="${GROUPS}" \
 		USERS="${USERS}"

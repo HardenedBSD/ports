@@ -35,6 +35,7 @@ PURE_LIB_DEPENDS_OFF=	libexpat.so:textproc/expat2 \
 			libmpc.so:math/mpc \
 			libisl.so:devel/isl
 
+PDF_USES=		tex
 PDF_USE=		TEX=base:build,tex:build,dvipsk:build
 PDF_BUILD_DEPENDS=	texi2dvi:print/texinfo
 PYGDB_USES=		python

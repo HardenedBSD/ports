@@ -3,6 +3,11 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	0.19.2beta
 CATEGORIES=	x11-wm wayland
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	62efcc4e1cc1.patch:-p1 # https://github.com/hyprwm/Hyprland/pull/1251
+PATCHFILES+=	34d1def07dd1.patch:-p1 # https://github.com/hyprwm/Hyprland/pull/1252
+PATCHFILES+=	afd5728d26a0.patch:-p1 # https://github.com/hyprwm/Hyprland/pull/1252
+
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Dynamic tiling Wayland compositor that doesn't sacrifice on its looks #'
 WWW=		https://hyprland.org/
@@ -21,7 +26,7 @@ LIB_DEPENDS=	libwayland-server.so:graphics/wayland \
 USES=		compiler:c++11-lib gl gnome meson pkgconfig xorg
 USE_GCC=	yes:build
 USE_GITHUB=	yes
-USE_GL=		egl gl
+USE_GL=		egl opengl
 USE_GNOME=	cairo
 USE_XORG=	pixman
 GH_ACCOUNT=	hyprwm

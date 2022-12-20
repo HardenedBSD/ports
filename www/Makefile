@@ -123,6 +123,7 @@
     SUBDIR += drupal7-wysiwyg
     SUBDIR += drupal8
     SUBDIR += drupal9
+    SUBDIR += drupal10
     SUBDIR += drush
     SUBDIR += dtse
     SUBDIR += dufs
@@ -1421,6 +1422,7 @@
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp_cors
     SUBDIR += py-aioquic
+    SUBDIR += py-aiostream
     SUBDIR += py-arxiv
     SUBDIR += py-asgi-csrf
     SUBDIR += py-asgiref

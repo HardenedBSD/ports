@@ -1,6 +1,5 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20221216
-PORTREVISION=	2
+PORTVERSION=	s20221219
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -12,6 +11,7 @@ EXTRACT_ONLY=	${DISTFILES:N*\:gamedb:C/\:.*//}
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	c17d71240b23.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/9042 mainline-merge
+PATCHFILES+=	b60a93a9363d.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/9480 post-extract
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
@@ -51,7 +51,7 @@ qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	bbb202cee
+GH_TAGNAME=	42d81aab3
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		yuzu-emu:sirit:d7ad93a:sirit/externals/sirit \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
@@ -135,6 +135,12 @@ WEBENGINE_IMPLIES=	GUI
 post-extract:
 	@${CP} ${DISTFILES:M*\:gamedb:C/\:.*//:S,^,${_DISTDIR},} \
 		${WRKSRC}/dist/compatibility_list/
+.if defined(PATCHFILES) && ${PATCHFILES:Mb60a93a9363d*}
+# Pretend to be a regular file for vendor patch to apply as is
+	@${RMDIR} ${WRKSRC}/externals/Vulkan-Headers
+	@${ECHO_CMD} "Subproject commit 2826791bed6a793f164bf534cd859968f13df8a9" \
+		>${WRKSRC}/externals/Vulkan-Headers
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/@GIT_BRANCH@/master/' \

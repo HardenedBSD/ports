@@ -1012,6 +1012,7 @@
     SUBDIR += py-secp256k1
     SUBDIR += py-seriate
     SUBDIR += py-simhash
+    SUBDIR += py-slepc4py
     SUBDIR += py-snuggs
     SUBDIR += py-spectral
     SUBDIR += py-spglm
@@ -1095,6 +1096,7 @@
     SUBDIR += sisl
     SUBDIR += slatec
     SUBDIR += sleef
+    SUBDIR += slepc
     SUBDIR += slgrace
     SUBDIR += slicot
     SUBDIR += snns

@@ -38,6 +38,7 @@
     SUBDIR += bddsolve
     SUBDIR += berkeleygw
     SUBDIR += bodr
+    SUBDIR += bout++
     SUBDIR += buddy
     SUBDIR += cantera
     SUBDIR += cardioid
@@ -296,6 +297,8 @@
     SUBDIR += py-ase
     SUBDIR += py-atomium
     SUBDIR += py-avogadrolibs
+    SUBDIR += py-boutdata
+    SUBDIR += py-boututils
     SUBDIR += py-cdo
     SUBDIR += py-chainer
     SUBDIR += py-chainer-chemistry

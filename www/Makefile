@@ -206,6 +206,7 @@
     SUBDIR += groupoffice
     SUBDIR += grr
     SUBDIR += gstreamer1-plugins-neon
+    SUBDIR += gstreamer1-plugins-srt
     SUBDIR += gtkhtml4
     SUBDIR += guacamole-client
     SUBDIR += guile-www

@@ -39,6 +39,7 @@
     SUBDIR += berkeleygw
     SUBDIR += bodr
     SUBDIR += bout++
+    SUBDIR += bout++-merging-filaments
     SUBDIR += buddy
     SUBDIR += cantera
     SUBDIR += cardioid
@@ -428,6 +429,7 @@
     SUBDIR += py-trainstation
     SUBDIR += py-tweedledum
     SUBDIR += py-veusz
+    SUBDIR += py-xbout
     SUBDIR += pybrain
     SUBDIR += pynn
     SUBDIR += q

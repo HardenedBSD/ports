@@ -867,6 +867,8 @@
     SUBDIR += py-algopy
     SUBDIR += py-altgraph
     SUBDIR += py-amply
+    SUBDIR += py-animatplot
+    SUBDIR += py-animatplot-ng
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-arybo

@@ -477,6 +477,7 @@
     SUBDIR += mathlibtools
     SUBDIR += mathmod
     SUBDIR += mathomatic
+    SUBDIR += mathpresso
     SUBDIR += matio
     SUBDIR += matlab-installer
     SUBDIR += maxima
@@ -825,8 +826,6 @@
     SUBDIR += petanque
     SUBDIR += petiga
     SUBDIR += pffft
-    SUBDIR += php74-bcmath
-    SUBDIR += php74-gmp
     SUBDIR += php80-bcmath
     SUBDIR += php80-gmp
     SUBDIR += php81-bcmath
@@ -1168,6 +1167,7 @@
     SUBDIR += universal
     SUBDIR += unuran
     SUBDIR += vampire
+    SUBDIR += vdt
     SUBDIR += verdict
     SUBDIR += viennacl
     SUBDIR += vinci

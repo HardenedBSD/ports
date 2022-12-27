@@ -4281,6 +4281,7 @@
     SUBDIR += py-babelfish
     SUBDIR += py-babi_grammars
     SUBDIR += py-backcall
+    SUBDIR += py-backoff
     SUBDIR += py-backports
     SUBDIR += py-backports.cached-property
     SUBDIR += py-backports.csv
@@ -4289,6 +4290,7 @@
     SUBDIR += py-banal
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
+    SUBDIR += py-beartype
     SUBDIR += py-beautifultable
     SUBDIR += py-behave
     SUBDIR += py-beniget

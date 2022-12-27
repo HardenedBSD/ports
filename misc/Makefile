@@ -376,7 +376,9 @@
     SUBDIR += py-SoapySDR
     SUBDIR += py-alive-progress
     SUBDIR += py-apache-beam
+    SUBDIR += py-ascii-magic
     SUBDIR += py-boost-histogram
+    SUBDIR += py-censys
     SUBDIR += py-cinder
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored

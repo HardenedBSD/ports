@@ -505,6 +505,7 @@
     SUBDIR += py-flufl.bounce
     SUBDIR += py-fuglu
     SUBDIR += py-imapclient
+    SUBDIR += py-imaplib2
     SUBDIR += py-mail-parser
     SUBDIR += py-mailmanclient
     SUBDIR += py-mailnag
@@ -513,6 +514,7 @@
     SUBDIR += py-milter
     SUBDIR += py-notmuch
     SUBDIR += py-notmuch2
+    SUBDIR += py-offlineimap3
     SUBDIR += py-postfix-mta-sts-resolver
     SUBDIR += py-premailer
     SUBDIR += py-pymailq
@@ -520,6 +522,7 @@
     SUBDIR += py-pyspf
     SUBDIR += py-python-slimta
     SUBDIR += py-pyzmail
+    SUBDIR += py-rfc6555
     SUBDIR += py-spf-engine
     SUBDIR += py-validate_email
     SUBDIR += pymsgauth

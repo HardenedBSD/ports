@@ -383,6 +383,7 @@
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
     SUBDIR += py-crudini
+    SUBDIR += py-detecta
     SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
     SUBDIR += py-emoji
@@ -411,6 +412,7 @@
     SUBDIR += py-orange3-network
     SUBDIR += py-orange3-timeseries
     SUBDIR += py-palettable
+    SUBDIR += py-papermill
     SUBDIR += py-pexpect
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar

@@ -4792,6 +4792,7 @@
     SUBDIR += py-logzero
     SUBDIR += py-louie
     SUBDIR += py-lru-dict
+    SUBDIR += py-lsprotocol
     SUBDIR += py-lunardate
     SUBDIR += py-lxml
     SUBDIR += py-lxml-stubs
@@ -7203,6 +7204,7 @@
     SUBDIR += rubymine
     SUBDIR += rudeconfig
     SUBDIR += rudiments
+    SUBDIR += ruff
     SUBDIR += rust-analyzer
     SUBDIR += rust-bindgen
     SUBDIR += rust-cbindgen

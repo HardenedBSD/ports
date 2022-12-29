@@ -905,6 +905,7 @@
     SUBDIR += py-fenics-ffcx
     SUBDIR += py-fenics-ufl
     SUBDIR += py-flax
+    SUBDIR += py-formulaic
     SUBDIR += py-fpylll
     SUBDIR += py-fraction
     SUBDIR += py-fvcore
@@ -931,6 +932,7 @@
     SUBDIR += py-kiwisolver
     SUBDIR += py-levmar
     SUBDIR += py-libpoly
+    SUBDIR += py-linearmodels
     SUBDIR += py-lmfit
     SUBDIR += py-luminol
     SUBDIR += py-mathics
@@ -979,6 +981,7 @@
     SUBDIR += py-pycosat
     SUBDIR += py-pygsl
     SUBDIR += py-pygslodeiv2
+    SUBDIR += py-pyhdfe
     SUBDIR += py-pyhull
     SUBDIR += py-pymc3
     SUBDIR += py-pynauty

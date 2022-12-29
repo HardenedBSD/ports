@@ -692,6 +692,7 @@
     SUBDIR += ltrace
     SUBDIR += lttng-tools
     SUBDIR += lttng-ust
+    SUBDIR += lua-puremagic
     SUBDIR += luckybackup
     SUBDIR += lxinput
     SUBDIR += lxqt-admin
@@ -831,6 +832,7 @@
     SUBDIR += ntpstat
     SUBDIR += nut
     SUBDIR += nut-devel
+    SUBDIR += nut_exporter
     SUBDIR += nvclock
     SUBDIR += nvimpager
     SUBDIR += nvme-cli

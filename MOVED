@@ -1491,7 +1491,6 @@ audio/libjackasyn|audio/jack|2011-02-11|Has expired: development has ceased; try
 audio/xmms-jackasyn|audio/xmms-jack|2011-02-11|Has expired: development has ceased; try audio/xmms-jack instead
 lang/p5-SQL-Tokenizer|textproc/p5-SQL-Tokenizer|2011-02-13|Moved to a more appropriate category
 misc/wanpipe||2011-02-14|Removed
-devel/root||2011-02-21|Has expired: Port does not build on supported versions of FreeBSD
 net/ztelnet||2011-02-21|Has expired: unfetchable
 print/kaspaliste||2011-02-21|Has expired: yes
 sysutils/perf||2011-02-21|Has expired: Does not build on supported versions of FreeBSD
@@ -17703,3 +17702,15 @@ devel/php74-sysvshm|devel/php80-sysvshm|2022-12-25|Has expired: Security support
 devel/php74-gettext|devel/php80-gettext|2022-12-25|Has expired: Security support ended on 2022-11-22
 devel/php74-readline|devel/php80-readline|2022-12-25|Has expired: Security support ended on 2022-11-22
 audio/ardour6|audio/ardour|2022-12-26|Remove major version from portname as we update from 6.9.0 to 7.2.0
+multimedia/obs-transition-matrix||2022-12-29|Removed: not compatible with obs-studio-28.1.2
+multimedia/obs-websocket||2022-12-29|Removed: included in obs-studio-28.1.2
+multimedia/obs-ndi||2022-12-29|Removed: it depends on a closed commercial library
+multimedia/obs-v4l2sink||2022-12-29|Removed: obs-studio-28.1.2 now contains same functionality
+multimedia/obs-audio-spectralizer|multimedia/obs-waveform|2022-12-29|Removed obsolete port in favor of multimedia/obs-waveform
+www/py-werkzeug21|www/py-werkzeug|2022-12-30|Remove obsoleted port. Use www/py-werkzeug instead
+devel/rubygem-aws-sdk-core3131|devel/rubygem-aws-sdk-core|2022-12-30|Remove obsoleted port. Use devel/rubygem-aws-sdk-core instead
+devel/rubygem-aws-sdk-core3159|devel/rubygem-aws-sdk-core|2022-12-30|Remove obsoleted port. Use devel/rubygem-aws-sdk-core instead
+devel/rubygem-aws-sdk-s31114|devel/rubygem-aws-sdk-s3|2022-12-30|Remove obsoleted port. Use devel/rubygem-aws-sdk-s3 instead
+devel/rubygem-google-protobuf319|devel/rubygem-google-protobuf|2022-12-30|Remove obsoleted port. Use devel/rubygem-google-protobuf instead
+databases/pgpool-II-37|databases/pgpool-II-43|2022-12-30|Has expired: Upstream EOL reaches on 2022-11 use pgpool-II-43
+shells/ksh2020||2022-12-30|Has expired: Upstream ksh2020 branch archived, development continues under new ksh93 project

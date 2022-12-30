@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 TIMESTAMP = 1667745868
 SHA256 (boto-boto3-1.26.3_GH0.tar.gz) = 23c25b30e5fb70940d0c1fc4b6cf5d9dc157128988a3d0a89ca4dec253692090
 SIZE (boto-boto3-1.26.3_GH0.tar.gz) = 552510
+=======
+TIMESTAMP = 1669057977
+SHA256 (boto-boto3-1.26.13_GH0.tar.gz) = cf0aff07c2b96170242fb4b402bef25a21eecf3cc6b3e9edddc545455b6304f4
+SIZE (boto-boto3-1.26.13_GH0.tar.gz) = 565005
+>>>>>>> upstream/main

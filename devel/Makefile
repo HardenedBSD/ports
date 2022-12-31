@@ -322,6 +322,7 @@
     SUBDIR += cargo-generate
     SUBDIR += cask
     SUBDIR += catch
+    SUBDIR += catch2
     SUBDIR += cbang
     SUBDIR += cbrowser
     SUBDIR += cc65
@@ -622,6 +623,7 @@
     SUBDIR += fbthrift
     SUBDIR += fc++
     SUBDIR += fccf
+    SUBDIR += fcppt
     SUBDIR += fhist
     SUBDIR += fifechan
     SUBDIR += fire-hpp
@@ -4847,6 +4849,7 @@
     SUBDIR += py-multitasking
     SUBDIR += py-munch
     SUBDIR += py-murmurhash
+    SUBDIR += py-mutmut
     SUBDIR += py-mygpoclient
     SUBDIR += py-mypy
     SUBDIR += py-mypy-protobuf
@@ -7416,7 +7419,6 @@
     SUBDIR += umbrello
     SUBDIR += umlgraph
     SUBDIR += unibilium
-    SUBDIR += unittest-cpp
     SUBDIR += universal-ctags
     SUBDIR += upnp
     SUBDIR += upp

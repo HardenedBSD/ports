@@ -1775,7 +1775,6 @@
     SUBDIR += py-tuir
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
-    SUBDIR += py-txrequests
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
     SUBDIR += py-urlobject
@@ -2342,7 +2341,6 @@
     SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
     SUBDIR += varnish-nagios
-    SUBDIR += varnish4
     SUBDIR += varnish6
     SUBDIR += varnish7
     SUBDIR += varnish_exporter

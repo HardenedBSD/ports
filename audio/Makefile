@@ -646,6 +646,7 @@
     SUBDIR += py-fmoo-audiotools
     SUBDIR += py-gtts
     SUBDIR += py-hsaudiotag3k
+    SUBDIR += py-librosa
     SUBDIR += py-mpd
     SUBDIR += py-music21
     SUBDIR += py-musicbrainzngs
@@ -663,6 +664,7 @@
     SUBDIR += py-pyradio
     SUBDIR += py-pysndfile
     SUBDIR += py-python-mpd2
+    SUBDIR += py-resampy
     SUBDIR += py-soundcloud
     SUBDIR += py-sounddevice
     SUBDIR += py-soundscrape

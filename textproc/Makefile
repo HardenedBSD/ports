@@ -106,6 +106,7 @@
     SUBDIR += codesearch
     SUBDIR += codespell
     SUBDIR += colordiff
+    SUBDIR += comrak
     SUBDIR += confetti
     SUBDIR += confget
     SUBDIR += consul-template
@@ -174,7 +175,6 @@
     SUBDIR += el-aspell
     SUBDIR += el-hyphen
     SUBDIR += elasticsearch-plugin-head
-    SUBDIR += elasticsearch6
     SUBDIR += elasticsearch7
     SUBDIR += elasticsearch8
     SUBDIR += en-aspell

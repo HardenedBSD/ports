@@ -781,6 +781,7 @@
     SUBDIR += gfold
     SUBDIR += gh
     SUBDIR += ghidra
+    SUBDIR += ghostie
     SUBDIR += ghq
     SUBDIR += ghub
     SUBDIR += ghub-devel
@@ -7278,6 +7279,7 @@
     SUBDIR += smc
     SUBDIR += smooth
     SUBDIR += smv
+    SUBDIR += snazy
     SUBDIR += soapui
     SUBDIR += sobjectizer
     SUBDIR += socket_wrapper
@@ -7395,6 +7397,7 @@
     SUBDIR += tmake
     SUBDIR += tnt
     SUBDIR += tokei
+    SUBDIR += tokio-console
     SUBDIR += toml11
     SUBDIR += tortoisehg
     SUBDIR += tpasm
@@ -7403,12 +7406,14 @@
     SUBDIR += transient-devel
     SUBDIR += transwarp
     SUBDIR += tree-sitter
+    SUBDIR += treefmt
     SUBDIR += treepy.el
     SUBDIR += trellis
     SUBDIR += trio
     SUBDIR += trompeloeil
     SUBDIR += truc
     SUBDIR += tup
+    SUBDIR += twiggy
     SUBDIR += ua_parser-core
     SUBDIR += uclcmd
     SUBDIR += ucommon

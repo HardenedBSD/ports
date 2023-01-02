@@ -1,9 +1,10 @@
 PORTNAME=	obs-studio
 DISTVERSION=	28.1.2
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	multimedia
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	1b8a69557113.patch:-p1 # https://github.com/obsproject/obs-studio/pull/7943
 PATCHFILES+=	e221bf8eedfc.patch:-p1 # https://github.com/obsproject/obs-studio/pull/7989
 PATCHFILES+=	0dcc3a1696c0.patch:-p1 # https://github.com/obsproject/obs-studio/pull/7986
 PATCHFILES+=	2cebc65ad7f8.patch:-p1 # https://github.com/obsproject/obs-studio/pull/7992
@@ -34,7 +35,6 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libsysinfo.so:devel/libsysinfo \
 		libudev.so:devel/libudev-devd \
 		libv4l2.so:multimedia/libv4l \
-		libwayland-client.so:graphics/wayland \
 		libx264.so:multimedia/libx264 \
 		libxcb-ewmh.so:x11/xcb-util-wm \
 		libxcb-image.so:x11/xcb-util-image \
@@ -84,8 +84,8 @@ CMAKE_ARGS+=	-DDISABLE_V4L2=yes
 
 LDFLAGS+=	-fPIC # pending https://github.com/obsproject/obs-studio/issues/3436
 
-OPTIONS_DEFINE=		BROWSER PIPEWIRE VLC VST
-OPTIONS_DEFAULT=	VLC VST
+OPTIONS_DEFINE=		BROWSER PIPEWIRE VLC VST WAYLAND
+OPTIONS_DEFAULT=	PIPEWIRE VLC VST WAYLAND
 OPTIONS_MULTI=		AUDIO
 OPTIONS_MULTI_AUDIO=	JACK PULSEAUDIO SNDIO
 OPTIONS_DEFAULT+=	${OPTIONS_MULTI_AUDIO}
@@ -119,6 +119,10 @@ VLC_LIB_DEPENDS=	libvlc.so:multimedia/vlc
 
 VST_DESC=		Build VST submodule
 VST_CMAKE_BOOL=		BUILD_VST
+
+WAYLAND_CATEGORIES=	wayland
+WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
+WAYLAND_CMAKE_BOOL=	ENABLE_WAYLAND
 
 .include <bsd.port.pre.mk>
 

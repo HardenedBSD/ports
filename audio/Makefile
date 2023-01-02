@@ -481,6 +481,7 @@
     SUBDIR += mixxx
     SUBDIR += mixxx22
     SUBDIR += mkcue
+    SUBDIR += mmtc
     SUBDIR += moc
     SUBDIR += modplug-tools
     SUBDIR += moodbar
@@ -534,6 +535,7 @@
     SUBDIR += ncmpcpp
     SUBDIR += ncpamixer
     SUBDIR += ncspot
+    SUBDIR += netease-music-tui
     SUBDIR += noise-repellent-lv2
     SUBDIR += noise-suppression-for-voice-lv2
     SUBDIR += normalize
@@ -745,6 +747,7 @@
     SUBDIR += solfege
     SUBDIR += somafm-cli
     SUBDIR += sonata
+    SUBDIR += songrec
     SUBDIR += sonic-visualiser
     SUBDIR += sonivox
     SUBDIR += sonivox-eas

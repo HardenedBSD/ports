@@ -319,6 +319,7 @@
     SUBDIR += itstool
     SUBDIR += jade
     SUBDIR += jalingo
+    SUBDIR += jaq
     SUBDIR += jarnal
     SUBDIR += jarowinkler-cpp
     SUBDIR += java2html
@@ -1856,6 +1857,7 @@
     SUBDIR += rxp
     SUBDIR += s5
     SUBDIR += sablotron
+    SUBDIR += sad
     SUBDIR += sansi
     SUBDIR += sarep
     SUBDIR += sary

@@ -1,6 +1,6 @@
 PORTNAME=	blender
 DISTVERSION=	3.4.1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \
@@ -177,9 +177,13 @@ TIFF_CMAKE_BOOL=		WITH_IMAGE_TIFF
 TIFF_LIB_DEPENDS=		libtiff.so:graphics/tiff
 TRACE_CMAKE_BOOL=		WITH_POTRACE
 TRACE_LIB_DEPENDS=		libpotrace.so:graphics/libpotrace
+WAYLAND_CATEGORIES=		wayland
 WAYLAND_CMAKE_BOOL=		WITH_GHOST_WAYLAND
-WAYLAND_LIB_DEPENDS=		libdecor-0.so:x11-toolkits/libdecor \
-				libxkbcommon.so:x11/libxkbcommon
+WAYLAND_USES=			pkgconfig
+WAYLAND_BUILD_DEPENDS=		wayland-protocols>=1.15:graphics/wayland-protocols \
+				wayland>=1.12:graphics/wayland \
+				libdecor>0:x11-toolkits/libdecor
+WAYLAND_LIB_DEPENDS=		libxkbcommon.so:x11/libxkbcommon
 WEBP_CMAKE_BOOL=		WITH_IMAGE_WEBP
 WEBP_LIB_DEPENDS=		libwebp.so:graphics/webp
 XINPUT_CMAKE_BOOL=		WITH_X11_XINPUT

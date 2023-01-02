@@ -76,6 +76,7 @@
     SUBDIR += fpc-postgres
     SUBDIR += fpc-pxlib
     SUBDIR += fpc-sqlite
+    SUBDIR += frece
     SUBDIR += freetds
     SUBDIR += freetds-devel
     SUBDIR += frontbase-jdbc
@@ -89,6 +90,7 @@
     SUBDIR += gnatsweb4
     SUBDIR += go-carbon
     SUBDIR += go-pgweb
+    SUBDIR += gobang
     SUBDIR += gom
     SUBDIR += gqlplus
     SUBDIR += grass7
@@ -192,6 +194,7 @@
     SUBDIR += mongodb44
     SUBDIR += mongodb50
     SUBDIR += mongodb60
+    SUBDIR += movine
     SUBDIR += mroonga
     SUBDIR += mtop
     SUBDIR += mydumper
@@ -860,6 +863,7 @@
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson
+    SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
     SUBDIR += rocksdb-lite

@@ -10,6 +10,7 @@
     SUBDIR += amanda-server
     SUBDIR += ansiweather
     SUBDIR += apparix
+    SUBDIR += arrow-datafusion
     SUBDIR += artikulate
     SUBDIR += asbutton
     SUBDIR += asr-manpages
@@ -23,6 +24,7 @@
     SUBDIR += bibletime
     SUBDIR += biblical-curse
     SUBDIR += binclock
+    SUBDIR += binocle
     SUBDIR += biosfont-demos
     SUBDIR += birthday
     SUBDIR += bogosort
@@ -80,6 +82,7 @@
     SUBDIR += dijo
     SUBDIR += dive
     SUBDIR += dnetc
+    SUBDIR += dotenv-linter
     SUBDIR += dtach
     SUBDIR += dvorak7min
     SUBDIR += dynomite

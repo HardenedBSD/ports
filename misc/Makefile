@@ -239,6 +239,7 @@
     SUBDIR += locale-en_DK
     SUBDIR += localedata
     SUBDIR += logsurfer
+    SUBDIR += lscolors
     SUBDIR += lv
     SUBDIR += lxde-common
     SUBDIR += lxi-tools
@@ -373,6 +374,7 @@
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += posixtestsuite
+    SUBDIR += pqrs
     SUBDIR += proxyper
     SUBDIR += pspresent
     SUBDIR += ptsort
@@ -468,6 +470,7 @@
     SUBDIR += ringtonetools
     SUBDIR += rname
     SUBDIR += rpl
+    SUBDIR += rsclock
     SUBDIR += rtfm
     SUBDIR += rubygem-dotenv
     SUBDIR += rubygem-dotenv-rails-rails4
@@ -586,6 +589,7 @@
     SUBDIR += xtail
     SUBDIR += xtar
     SUBDIR += ytree
+    SUBDIR += zine
     SUBDIR += zoneinfo
 
 .include <bsd.port.subdir.mk>

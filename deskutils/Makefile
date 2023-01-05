@@ -128,6 +128,7 @@
     SUBDIR += itinerary
     SUBDIR += jjclient
     SUBDIR += jlj
+    SUBDIR += jot
     SUBDIR += just
     SUBDIR += kaddressbook
     SUBDIR += kalarm
@@ -253,6 +254,7 @@
     SUBDIR += teapot
     SUBDIR += terminal-image-viewer
     SUBDIR += thinkingrock
+    SUBDIR += thokr
     SUBDIR += timewarrior
     SUBDIR += todo
     SUBDIR += todour

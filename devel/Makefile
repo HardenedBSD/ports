@@ -563,6 +563,7 @@
     SUBDIR += dulwich
     SUBDIR += dupl
     SUBDIR += duplo
+    SUBDIR += dura
     SUBDIR += dwarf2json
     SUBDIR += dwarfdump
     SUBDIR += dwarves
@@ -3806,6 +3807,7 @@
     SUBDIR += pas2dox
     SUBDIR += pasm
     SUBDIR += patch
+    SUBDIR += patsh
     SUBDIR += pcc-libs
     SUBDIR += pcg-cpp
     SUBDIR += pcl
@@ -7417,6 +7419,7 @@
     SUBDIR += transient-devel
     SUBDIR += transwarp
     SUBDIR += tree-sitter
+    SUBDIR += tree-sitter-graph
     SUBDIR += treefmt
     SUBDIR += treepy.el
     SUBDIR += trellis

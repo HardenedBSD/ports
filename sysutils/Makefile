@@ -1036,6 +1036,7 @@
     SUBDIR += pprotectd
     SUBDIR += prips
     SUBDIR += procenv
+    SUBDIR += process-viewer
     SUBDIR += procmap
     SUBDIR += progsreiserfs
     SUBDIR += pslist

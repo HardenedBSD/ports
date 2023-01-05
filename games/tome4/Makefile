@@ -19,13 +19,9 @@ BUILD_DEPENDS=	premake4:devel/premake4
 LIB_DEPENDS=	libvorbisfile.so:audio/libvorbis \
 		libpng.so:graphics/png
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		gl gmake openal:al sdl tar:bzip2 xorg
-=======
 USES=		compiler:c++11-lang gl gmake openal:al sdl tar:bzip2 xorg
->>>>>>> upstream/main
 USE_SDL=	image2 sdl2 ttf2
 USE_GL=		gl glu
 SUB_FILES=	tome4

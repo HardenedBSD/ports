@@ -261,6 +261,7 @@
     SUBDIR += dc3dd
     SUBDIR += dcfldd
     SUBDIR += dd_rescue
+    SUBDIR += ddh
     SUBDIR += ddpt
     SUBDIR += ddrescue
     SUBDIR += debhelper
@@ -1389,6 +1390,7 @@
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += sysvbanner
+    SUBDIR += szyszka
     SUBDIR += tai64nfrac
     SUBDIR += tarsnap
     SUBDIR += tarsnap-gui
@@ -1400,6 +1402,7 @@
     SUBDIR += tdir
     SUBDIR += tealdeer
     SUBDIR += tenshi
+    SUBDIR += tere
     SUBDIR += terraform
     SUBDIR += terraform-docs
     SUBDIR += terraform-provider-gridscale

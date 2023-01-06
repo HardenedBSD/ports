@@ -147,6 +147,7 @@
     SUBDIR += ald
     SUBDIR += allegro
     SUBDIR += allegro5
+    SUBDIR += amber
     SUBDIR += aml
     SUBDIR += ammonite
     SUBDIR += amqp-cpp
@@ -3804,6 +3805,8 @@
     SUBDIR += papi
     SUBDIR += papilio-loader
     SUBDIR += parallel-hashmap
+    SUBDIR += parol
+    SUBDIR += parol-ls
     SUBDIR += pas2dox
     SUBDIR += pasm
     SUBDIR += patch
@@ -7350,6 +7353,7 @@
     SUBDIR += ta-lib
     SUBDIR += tablist
     SUBDIR += tabulate
+    SUBDIR += tagref
     SUBDIR += tailor
     SUBDIR += talloc
     SUBDIR += tarpaulin

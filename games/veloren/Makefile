@@ -35,13 +35,11 @@ PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		share/pixmaps/net.veloren.veloren.png
 PORTDATA=	*
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/veloren-voxygen
 PAGEEXEC_DISABLE=	bin/veloren-voxygen
-=======
+
 # Fixes error "Instruction does not dominate all uses!"
 LTO_UNSAFE=	yes
->>>>>>> upstream/main
 
 # https://gitlab.com/veloren/veloren/issues/264
 CARGO_ENV+=		RUSTC_BOOTSTRAP=1

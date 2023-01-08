@@ -33,14 +33,9 @@ MESON_ARGS=	-Dpam_include=system \
 		-Dlocalstatedir=/var \
 		-Dgtk_doc=false
 
-<<<<<<< HEAD
-INSTALL_TARGET=	install-strip
-
 PAGEEXEC_DISABLE=	lib/polkit-1/polkitd
 MPROTECT_DISABLE=	lib/polkit-1/polkitd
 
-=======
->>>>>>> upstream/main
 OPTIONS_DEFINE=		MANPAGES
 OPTIONS_DEFAULT=	DUKTAPE
 

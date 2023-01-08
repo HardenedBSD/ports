@@ -1,8 +1,8 @@
 PORTNAME=	veloren
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.13.0
-PORTREVISION=	4
-CATEGORIES=	games # wayland: depends on https://gitlab.com/veloren/veloren/-/issues/1567
+DISTVERSION=	0.14.0
+PORTREVISION=	1
+CATEGORIES=	games wayland
 .if !make(makesum)
 MASTER_SITES=	LOCAL/jbeich
 .endif
@@ -24,10 +24,10 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins \
 		${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader
 
-USES=		cargo python:3.4+,build xorg
+USES=		cargo xorg
 USE_XORG=	xcb
 USE_GITLAB=	yes
-GL_COMMIT=	34ae5b9df73f367fa34350337ebba71711f48b86
+GL_COMMIT=	185dccc1cc1498d810de907b26699c85bfd1bac0
 CARGO_ENV=	VELOREN_USERDATA_STRATEGY=system SHADERC_LIB_DIR="${LOCALBASE}/lib"
 PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		bin/${PORTNAME}-voxygen \
@@ -35,8 +35,13 @@ PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		share/pixmaps/net.veloren.veloren.png
 PORTDATA=	*
 
+<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/veloren-voxygen
 PAGEEXEC_DISABLE=	bin/veloren-voxygen
+=======
+# Fixes error "Instruction does not dominate all uses!"
+LTO_UNSAFE=	yes
+>>>>>>> upstream/main
 
 # https://gitlab.com/veloren/veloren/issues/264
 CARGO_ENV+=		RUSTC_BOOTSTRAP=1
@@ -55,9 +60,6 @@ post-patch:
 # Respect PREFIX != /usr/local for system assets
 	@${REINPLACE_CMD} -e 's,/usr/share,${DATADIR:H},' \
 		${WRKSRC}/common/assets/src/lib.rs
-# lang/python3 cannot be used as a dependency
-	@${REINPLACE_CMD} -e 's/"python3"/"${PYTHON_CMD:T}"/' \
-		${WRKSRC}/cargo-crates/xcb-*/build.rs
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*

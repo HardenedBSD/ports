@@ -322,6 +322,7 @@
     SUBDIR += capstone3
     SUBDIR += capstone4
     SUBDIR += capstone5
+    SUBDIR += cargo-bloat
     SUBDIR += cargo-c
     SUBDIR += cargo-generate
     SUBDIR += cask
@@ -623,6 +624,7 @@
     SUBDIR += evemu
     SUBDIR += eventxx
     SUBDIR += exercisix
+    SUBDIR += exomizer
     SUBDIR += f18
     SUBDIR += f77flow
     SUBDIR += fam
@@ -798,6 +800,7 @@
     SUBDIR += gio-sharp
     SUBDIR += git
     SUBDIR += git-absorb
+    SUBDIR += git-branchless
     SUBDIR += git-bug
     SUBDIR += git-cinnabar
     SUBDIR += git-cliff
@@ -4697,6 +4700,7 @@
     SUBDIR += py-iopath
     SUBDIR += py-ipaddr
     SUBDIR += py-ipdb
+    SUBDIR += py-ipydatawidgets
     SUBDIR += py-ipykernel
     SUBDIR += py-ipympl
     SUBDIR += py-ipyparallel
@@ -5461,6 +5465,7 @@
     SUBDIR += py-traceback2
     SUBDIR += py-traitlets
     SUBDIR += py-traits
+    SUBDIR += py-traittypes
     SUBDIR += py-transaction
     SUBDIR += py-transitions
     SUBDIR += py-tree-format
@@ -5568,6 +5573,7 @@
     SUBDIR += py-wsme
     SUBDIR += py-xarray
     SUBDIR += py-xarray-einstats
+    SUBDIR += py-xarray-simlab
     SUBDIR += py-xattr
     SUBDIR += py-xcaplib
     SUBDIR += py-xdg
@@ -5619,6 +5625,7 @@
     SUBDIR += py-z3c.autoinclude
     SUBDIR += py-z3c.batching
     SUBDIR += py-z3c.zcmlhook
+    SUBDIR += py-zarr
     SUBDIR += py-zc.buildout
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig

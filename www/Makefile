@@ -339,6 +339,7 @@
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
+    SUBDIR += microbin
     SUBDIR += middleman
     SUBDIR += midori
     SUBDIR += mimetex

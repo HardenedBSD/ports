@@ -500,6 +500,7 @@
     SUBDIR += ndpi
     SUBDIR += ndproxy
     SUBDIR += neatvnc
+    SUBDIR += nebula
     SUBDIR += nemesis
     SUBDIR += nepenthes
     SUBDIR += net6
@@ -1416,6 +1417,7 @@
     SUBDIR += serviio
     SUBDIR += sflowtool
     SUBDIR += shadowsocks-libev
+    SUBDIR += shadowsocks-rust
     SUBDIR += shelldap
     SUBDIR += shmux
     SUBDIR += sie-nmsg

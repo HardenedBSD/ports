@@ -99,6 +99,7 @@
     SUBDIR += explosions
     SUBDIR += ezc3d
     SUBDIR += far2l
+    SUBDIR += fastscapelib
     SUBDIR += felis
     SUBDIR += figlet
     SUBDIR += figlet-fonts
@@ -398,6 +399,7 @@
     SUBDIR += py-emoji
     SUBDIR += py-ezc3d
     SUBDIR += py-fast-histogram
+    SUBDIR += py-fastscapelib
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy
     SUBDIR += py-gluoncv
@@ -405,11 +407,13 @@
     SUBDIR += py-halo
     SUBDIR += py-histoprint
     SUBDIR += py-huepy
+    SUBDIR += py-ipyfastscape
     SUBDIR += py-kartograph
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
     SUBDIR += py-molequeue
     SUBDIR += py-mxnet
+    SUBDIR += py-numcodecs
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
     SUBDIR += py-openpaperwork-core

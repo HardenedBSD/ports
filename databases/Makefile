@@ -846,6 +846,7 @@
     SUBDIR += py-zodbpickle
     SUBDIR += qdbm
     SUBDIR += qdbm-plus
+    SUBDIR += qdrant
     SUBDIR += qof
     SUBDIR += qt5-sql
     SUBDIR += qt5-sqldrivers-ibase

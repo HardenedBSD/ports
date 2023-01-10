@@ -15,16 +15,11 @@ LIB_DEPENDS=	libImlib2.so:graphics/imlib2
 USES=		autoreconf pkgconfig xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	resurrecting-open-source-projects
-<<<<<<< HEAD
 
 USE_HARDENING=	cfi safestack
 
 CFLAGS+=	-fuse-ld=lld
 
-USES=		autoreconf pkgconfig xorg
-USE_CSTD=	c99
-=======
->>>>>>> upstream/main
 GNU_CONFIGURE=	yes
 USE_XORG=	x11 xext xfixes xcomposite xinerama
 

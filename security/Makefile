@@ -843,6 +843,7 @@
     SUBDIR += py-azure-keyvault-certificates
     SUBDIR += py-azure-keyvault-keys
     SUBDIR += py-azure-keyvault-secrets
+    SUBDIR += py-badkeys
     SUBDIR += py-base58
     SUBDIR += py-bcrypt
     SUBDIR += py-bitbox02

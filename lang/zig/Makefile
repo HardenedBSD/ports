@@ -27,11 +27,7 @@ LIB_DEPENDS=	liblzma.so:archivers/lzma \
 USES=		cmake compiler:c++11-lang localbase:ldflags tar:xz
 CMAKE_ON=	THREADS_PREFER_PTHREAD_FLAG
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=		STATIC DOCS
-=======
 OPTIONS_DEFINE=		DOCS STATIC
->>>>>>> freebsd/main
 OPTIONS_DEFAULT=	DOCS
 
 STATIC_DESC=	sets ZIG_STATIC to avoid 800MiB LLVM runtime dependency

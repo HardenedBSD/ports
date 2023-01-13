@@ -37,30 +37,13 @@ LDAP_DESC=		Build with LDAP support
 MEMCACHED_DESC=		Install memcached
 MYSQL_DESC=		Build with MySQL support
 PGSQL_DESC=		Build with PostgreSQL support
-<<<<<<< HEAD
-MEMCACHED_DESC=		Install memcached
-
-USES=			gmake iconv gnustep
-USE_GNUSTEP=		base build
-USE_LDCONFIG=		${GNUSTEP_LOCAL_LIBRARIES}
-LLD_UNSAFE=		yes # PR 230608
-
-USE_HARDENING=	pie:off
-
-CONFLICTS=		sope2 sope4
-
-SUB_LIST+=		GNUSTEP_LOCAL_TOOLS=${GNUSTEP_LOCAL_TOOLS} \
-			GNUSTEP_MAKEFILES=${GNUSTEP_MAKEFILES}
-
-CONFIGURE_ARGS=		--with-gnustep --disable-debug --disable-strip
-CONFIGURE_ENV+=		CC="${CC}"
-=======
->>>>>>> freebsd/main
 
 LDAP_USE=		OPENLDAP=client
 MEMCACHED_RUN_DEPENDS=	${LOCALBASE}/bin/memcached:databases/memcached
 MYSQL_USES=		mysql
 PGSQL_USES=		pgsql
+
+USE_HARDENING=	pie:off
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/configure

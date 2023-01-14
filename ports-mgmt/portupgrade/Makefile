@@ -21,8 +21,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
 
 DIST_SUBDIR=	${PORTNAME}
-USES=		uidfix
-USE_RUBY=	yes
+USES=		ruby uidfix
 
 USE_HARDENING=	safestack
 

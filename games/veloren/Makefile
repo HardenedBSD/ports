@@ -35,12 +35,10 @@ PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		share/pixmaps/net.veloren.veloren.png
 PORTDATA=	*
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/veloren-voxygen
 PAGEEXEC_DISABLE=	bin/veloren-voxygen
-=======
+
 CONFLICTS_INSTALL=	${PORTNAME}-weekly
->>>>>>> freebsd/main
 
 # Fixes error "Instruction does not dominate all uses!"
 LTO_UNSAFE=	yes

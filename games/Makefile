@@ -1024,6 +1024,7 @@
     SUBDIR += vcmi
     SUBDIR += vectoroids
     SUBDIR += veloren
+    SUBDIR += veloren-weekly
     SUBDIR += violetland
     SUBDIR += viruskiller
     SUBDIR += vitetris

@@ -38,6 +38,8 @@ GH_ACCOUNT=	Airblader
 USE_GNOME=	glib20
 USE_XORG=	xcb
 
+USE_HARDENING=	cfi safestack
+
 MAKE_JOBS_UNSAFE=	yes
 
 CONFLICTS_INSTALL=	i3

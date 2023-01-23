@@ -1429,6 +1429,7 @@
     SUBDIR += skstream
     SUBDIR += sl2tps
     SUBDIR += slackcat
+    SUBDIR += slurm
     SUBDIR += smb4k
     SUBDIR += smbldap-tools
     SUBDIR += smcroute

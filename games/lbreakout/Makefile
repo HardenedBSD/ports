@@ -11,14 +11,10 @@ WWW=		https://sourceforge.net/projects/lgames/files/lbreakout/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USE_SDL=	sdl
-=======
 DEPRECATED=	Abandoned by upsteam, does not support large screen resolutions. Use games/lbreakouthd instead
 
->>>>>>> freebsd/main
 USES=		gmake sdl
 USE_SDL=	sdl
 GNU_CONFIGURE=	yes

@@ -19,18 +19,12 @@ BUILD_DEPENDS+=		cmocka>=0:sysutils/cmocka \
 USES=			cpe libtool localbase:ldflags pkgconfig python:build shebangfix ssl
 USE_RC_SUBR=		openvpn
 
-<<<<<<< HEAD
 USE_HARDENING=		cfi safestack
 
-SHEBANG_FILES=		sample/sample-scripts/verify-cn \
-			sample/sample-scripts/auth-pam.pl \
-			sample/sample-scripts/ucn.pl
-=======
 SHEBANG_FILES=		sample/sample-scripts/auth-pam.pl \
 			sample/sample-scripts/totpauth.py \
 			sample/sample-scripts/ucn.pl \
 			sample/sample-scripts/verify-cn
->>>>>>> freebsd/main
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-strict --with-crypto-library=openssl

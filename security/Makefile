@@ -420,6 +420,7 @@
     SUBDIR += openvpn-auth-radius
     SUBDIR += openvpn-auth-script
     SUBDIR += openvpn-devel
+    SUBDIR += openvpn25
     SUBDIR += opie
     SUBDIR += ophcrack
     SUBDIR += ossec-hids

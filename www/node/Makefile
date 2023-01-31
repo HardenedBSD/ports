@@ -1,13 +1,13 @@
 PORTNAME=	node
 PORTVERSION=	18.12.1
-DISTVERSIONPREFIX=	v
 CATEGORIES=	www
-MASTER_SITES=	https://nodejs.org/dist/v${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	V8 JavaScript for client and server
-WWW=		https://nodejs.org/
+COMMENT=	V8 JavaScript for client and server (meta port)
+WWW=		https://nodejs.org/ \
+		https://github.com/nodejs/node
 
+<<<<<<< HEAD
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
@@ -99,5 +99,8 @@ post-configure:
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/node
+=======
+USES=		metaport nodejs:run
+>>>>>>> freebsd/main
 
 .include <bsd.port.mk>

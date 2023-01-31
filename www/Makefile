@@ -458,6 +458,8 @@
     SUBDIR += node
     SUBDIR += node14
     SUBDIR += node16
+    SUBDIR += node18
+    SUBDIR += node19
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -467,6 +469,7 @@
     SUBDIR += npm-node14
     SUBDIR += npm-node16
     SUBDIR += npm-node18
+    SUBDIR += npm-node19
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += oneshot
@@ -1689,6 +1692,7 @@
     SUBDIR += py-internetarchive
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
+    SUBDIR += py-kiss-headers
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
@@ -1808,6 +1812,7 @@
     SUBDIR += py-woob-qt
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgidav
+    SUBDIR += py-xandikos
     SUBDIR += py-yarl
     SUBDIR += pydio-cells
     SUBDIR += qdecoder
@@ -2001,6 +2006,7 @@
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-json-jwt115
     SUBDIR += rubygem-jwt
+    SUBDIR += rubygem-jwt25
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
     SUBDIR += rubygem-kaminari-actionview-rails5
@@ -2388,7 +2394,6 @@
     SUBDIR += websocketd
     SUBDIR += webstone
     SUBDIR += webstone-ssl
-    SUBDIR += webtrees
     SUBDIR += webtrees20
     SUBDIR += webtrees21
     SUBDIR += wget2
@@ -2419,6 +2424,7 @@
     SUBDIR += yarn-node14
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18
+    SUBDIR += yarn-node19
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

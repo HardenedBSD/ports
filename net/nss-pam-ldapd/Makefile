@@ -12,12 +12,15 @@ WWW=		https://arthurdejong.org/nss-pam-ldapd/
 LICENSE=		LGPL21 LGPL3
 LICENSE_COMB=		dual
 
+<<<<<<< HEAD
 USE_HARDENING=		pie:off relro:off
 
 USES=			cpe
+=======
+USES=			cpe ldap
+>>>>>>> freebsd/main
 CPE_VENDOR=		arthurdejong
 GNU_CONFIGURE=		yes
-USE_OPENLDAP=		yes
 USE_RC_SUBR=		nslcd
 PAM_LDAP_SHMAJOR=	1
 NSS_LDAP_SHMAJOR=	1

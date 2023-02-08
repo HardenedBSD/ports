@@ -1941,10 +1941,6 @@ MAKE_ENV+=	${b}="${${b}}"
 .      endfor
 .    endif
 
-.    if defined(USE_OPENLDAP) || defined(WANT_OPENLDAP_VER)
-.include "${PORTSDIR}/Mk/bsd.ldap.mk"
-.    endif
-
 .    if defined(USE_RC_SUBR)
 SUB_FILES+=	${USE_RC_SUBR}
 .    endif

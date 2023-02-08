@@ -1,3 +1,91 @@
+  <vuln vid="6cc63bf5-a727-4155-8ec4-68b626475e68">
+    <topic>xorg-server -- Security issue in the X server</topic>
+    <affects>
+      <package>
+	<name>xorg-server</name>
+	<name>xephyr</name>
+	<name>xorg-vfbserver</name>
+	<range><lt>21.1.7,1</lt></range>
+      </package>
+      <package>
+	<name>xorg-nestserver</name>
+	<range><lt>21.1.7,2</lt></range>
+      </package>
+      <package>
+	<name>xwayland</name>
+	<range><lt>22.1.8,1</lt></range>
+      </package>
+      <package>
+	<name>xwayland-devel</name>
+	<range><lt>21.0.99.1.386</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The X.org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2023-February/003320.html">
+	  <ul>
+	    <li>CVE-2023-0494/ZDI-CAN-19596: X.Org Server DeepCopyPointerClasses
+	    use-after-free
+
+	    <p>A dangling pointer in DeepCopyPointerClasses can be exploited by
+	    ProcXkbSetDeviceInfo() and ProcXkbGetDeviceInfo() to read/write into
+	    freed memory.</p></li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.x.org/archives/xorg-announce/2023-February/003320.html</url>
+      <cvename>CVE-2023-0494</cvename>
+    </references>
+    <dates>
+      <discovery>2023-02-07</discovery>
+      <entry>2023-02-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b34c1947-a749-11ed-b24b-1c61b4739ac9">
+    <topic>TightVNC -- Muliple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>tightvnc</name>
+	<range><le>1.3.10_6</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MITRE reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8287">
+	  <p>TightVNC code version 1.3.10 contains global buffer overflow in HandleCoRREBBP macro function, which can potentially result code execution. This attack appear to be exploitable via network connectivity.</p>
+	</blockquote>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15678">
+	  <p>TightVNC code version 1.3.10 contains global buffer overflow in HandleCoRREBBP macro function, which can potentially result code execution. This attack appear to be exploitable via network connectivity.</p>
+	</blockquote>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15679">
+	  <p>TightVNC code version 1.3.10 contains heap buffer overflow in InitialiseRFBConnection function, which can potentially result code execution. This attack appear to be exploitable via network connectivity.</p>
+	</blockquote>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15680">
+	  <p>TightVNC code version 1.3.10 contains null pointer dereference in HandleZlibBPP function, which results Denial of System (DoS). This attack appear to be exploitable via network connectivity.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2019-8287</cvename>
+      <cvename>CVE-2019-15678</cvename>
+      <cvename>CVE-2019-15679</cvename>
+      <cvename>CVE-2019-15680</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8287</url>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15678</url>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15679</url>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15680</url>
+    </references>
+    <dates>
+      <discovery>2019-02-12</discovery>
+      <entry>2023-02-08</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="648a432c-a71f-11ed-86e9-d4c9ef517024">
     <topic>OpenSSL -- Multiple vulnerabilities</topic>
     <affects>

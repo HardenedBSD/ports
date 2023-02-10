@@ -53,7 +53,8 @@ SHEBANG_FILES=	deps/v8/third_party/inspector_protocol/*.py \
 		tools/inspector_protocol/*.py
 
 OPTIONS_DEFINE=	BUNDLED_SSL DOCS DTRACE NLS
-OPTIONS_DEFAULT=DTRACE
+# HBSD: DTRACE is broken in HardenedBSD's ports due to llvm
+#OPTIONS_DEFAULT=DTRACE
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE+=	DTRACE
 .endif

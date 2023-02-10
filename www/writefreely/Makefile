@@ -1,7 +1,7 @@
 PORTNAME=	writefreely
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.13.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www textproc
 MASTER_SITES=	https://code.as/core/socks/archive/v1.0.0.tar.gz?dummy=/:core_socks
 DISTFILES=	core-socks-v1.0.0.tar.gz:core_socks
@@ -10,11 +10,7 @@ DIST_SUBDIR=	writeas
 PATCH_SITES=	https://github.com/writefreely/writefreely/commit/
 PATCHFILES=	99d72881cf833326f02d86a8896bbd2b8156327b.diff:-p1
 
- MAINTAINER=	fuz@fuz.su
- COMMENT=	Clean, Markdown-based publishing platform made for writers
- WWW=		https://writefreely.org
-
-MAINTAINER=	fuz@fuz.su
+MAINTAINER=	fuz@FreeBSD.org
 COMMENT=	Clean, Markdown-based publishing platform made for writers
 WWW=		https://writefreely.org
 

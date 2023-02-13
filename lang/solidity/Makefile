@@ -41,6 +41,12 @@ CMAKE_ARGS+=	-DUSE_LD_GOLD=OFF -DTESTS=OFF \
 PLIST_FILES=	bin/solc \
 		bin/yul-phaser
 
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400079
+CXXFLAGS+=	-Wno-unqualified-std-cast-call
+.endif
+
 pre-patch:
 		@${CP} ${FILESDIR}/fmtlib.cmake ${FILESDIR}/jsoncpp.cmake ${WRKSRC}/cmake/
 		@${REINPLACE_CMD} '/EthCcache/d' ${WRKSRC}/CMakeLists.txt

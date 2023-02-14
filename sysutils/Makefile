@@ -646,6 +646,7 @@
     SUBDIR += libcdio-paranoia
     SUBDIR += libchk
     SUBDIR += libcpuid
+    SUBDIR += libdisplay-info
     SUBDIR += libdnf
     SUBDIR += libfvde
     SUBDIR += libg15

@@ -26,18 +26,11 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 python_CMD=	${PREFIX}/bin/python${PYTHON_DISTVERSION:R}
 SHEBANG_FILES=	Lib/*.py Lib/*/*.py Lib/*/*/*.py Lib/*/*/*/*.py
-<<<<<<< HEAD
 
 PAGEEXEC_DISABLE=	bin/python3.7
 MPROTECT_DISABLE=	bin/python3.7
 
-# Duplicate python.mk variables. TODO: Let lang/python?? ports use python.mk bits.
-PYTHON_VER=		${PYTHON_DISTVERSION:R}
-PYTHON_VERSION=		python${PYTHON_VER}
-PYTHON_SUFFIX=		${PYTHON_VER:S/.//g}
-=======
 TRIGGERS=	${PYTHON_VERSION}
->>>>>>> freebsd/main
 
 DISABLED_EXTENSIONS=	_sqlite3 _tkinter _gdbm
 CONFIGURE_ARGS+=	--enable-shared --with-system-ffi --with-system-libmpdec --without-ensurepip

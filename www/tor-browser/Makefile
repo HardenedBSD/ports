@@ -32,6 +32,9 @@ USES=		compiler:c++11-lib libtool \
 		perl5 pkgconfig python:3.4+ shebangfix localbase:ldflags tar:xz
 USE_GECKO=	gecko
 
+MPROTECT_DISABLE=	lib/tor-browser/tor-browser
+MPROTECT_DISABLE+=	lib/tor-browser/plugin-container
+
 SSP_UNSAFE=	yes
 
 SUB_FILES=	torrc-defaults tor-browser.desktop

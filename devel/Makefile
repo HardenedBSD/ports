@@ -170,6 +170,7 @@
     SUBDIR += apitrace
     SUBDIR += app-builder
     SUBDIR += appstream
+    SUBDIR += appstream-compose
     SUBDIR += appstream-glib
     SUBDIR += appstream-qt
     SUBDIR += apr1
@@ -270,6 +271,7 @@
     SUBDIR += bcunit
     SUBDIR += bear
     SUBDIR += benchmark
+    SUBDIR += bencodetools
     SUBDIR += bennugd-core
     SUBDIR += bennugd-modules
     SUBDIR += bfg
@@ -306,6 +308,7 @@
     SUBDIR += bugzilla44
     SUBDIR += bugzilla50
     SUBDIR += build
+    SUBDIR += build2
     SUBDIR += buildkite-agent
     SUBDIR += buildstream
     SUBDIR += bullet

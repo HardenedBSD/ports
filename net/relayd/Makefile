@@ -9,11 +9,9 @@ WWW=		https://github.com/mmatuska/relayd
 
 LICENSE=	ISCL
 
-<<<<<<< HEAD
 USE_HARDENING=  safestack
-=======
+
 BROKEN=		fails to build
->>>>>>> freebsd/main
 
 USES=		ssl uidfix
 USE_GITHUB=	yes

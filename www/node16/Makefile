@@ -24,13 +24,8 @@ LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
 		libnghttp2.so:www/libnghttp2 \
 		libuv.so:devel/libuv
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/node
 
-OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE COREPACK
-OPTIONS_DEFAULT=	COREPACK
-OPTIONS_SUB=		yes
-=======
 USES=		compiler:c++11-lib gmake localbase pkgconfig python:3.6+,build \
 		shebangfix
 
@@ -67,8 +62,7 @@ REINPLACE_ARGS=	-i ''
 PORTSCOUT=	limit:^16\.
 
 OPTIONS_DEFINE=		BUNDLED_SSL COREPACK DOCS DTRACE NLS
-OPTIONS_DEFAULT=	COREPACK DTRACE
->>>>>>> freebsd/main
+OPTIONS_DEFAULT=	COREPACK
 
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE+=	DTRACE

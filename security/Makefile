@@ -1232,6 +1232,7 @@
     SUBDIR += srm
     SUBDIR += ssb
     SUBDIR += ssdeep
+    SUBDIR += ssh-import-id
     SUBDIR += ssh-multiadd
     SUBDIR += ssh-tools
     SUBDIR += ssh-vault

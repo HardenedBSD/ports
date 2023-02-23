@@ -55,6 +55,7 @@ OPENEXR_CMAKE_BOOL=	JPEGXL_ENABLE_OPENEXR
 
 PIXBUF_USES=		gnome
 PIXBUF_USE=		GNOME=gdkpixbuf2
+PIXBUF_CMAKE_BOOL=	JPEGXL_ENABLE_PLUGIN_GDKPIXBUF
 
 PNG_LIB_DEPENDS=	libpng.so:graphics/png
 PNG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_PNG
@@ -62,8 +63,5 @@ PNG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_PNG
 post-patch:
 	@${REINPLACE_CMD} 's,/usr,${LOCALBASE},' \
 		${WRKSRC}/plugins/gdk-pixbuf/jxl.thumbnailer
-
-post-patch-PIXBUF-off:
-	@${REINPLACE_CMD} -i.nopixbuf '/gdk-pixbuf/d' ${WRKSRC}/plugins/CMakeLists.txt
 
 .include <bsd.port.mk>

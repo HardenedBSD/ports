@@ -51,6 +51,10 @@ MOZ_EXPORT+=	MOZ_TELEMETRY_REPORTING="" \
 		MOZ_APP_DISPLAYNAME="Librewolf" \
 		MOZ_APP_NAME="librewolf"
 
+MPROTECT_DISABLE=	lib/librewolf/librewolf
+MPROTECT_DISABLE+=	lib/librewolf/plugin-container
+
+
 MOZ_OPTIONs=	--enable-application=browser \
 		--allow-addon-sideload \
 		--disable-crashreporter \

@@ -26,6 +26,9 @@ USE_QT=		concurrent core dbus declarative gui multimedia network printsupport \
 		script sql sql-sqlite3 svg widgets xmlpatterns \
 		buildtools:build qmake:build
 
+MPROTECT_DISABLE=	bin/otter-browser
+PAGEEXEC_DISABLE=	bin/otter-browser
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	OtterBrowser
 # GH_TAGNAME=	22de58d  # For intermediate versions only

@@ -44,11 +44,7 @@ MAKE_ENV+=	ac_cv_func_sbrk=0
 
 CONFLICTS=	libbfd
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=	NLS STATIC
-=======
 OPTIONS_DEFINE=	NLS RELRO
->>>>>>> freebsd/main
 OPTIONS_SUB=	yes
 
 RELRO_DESC=	Enable relocation memory corruption mitigation (-z relro) by default

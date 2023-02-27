@@ -95,6 +95,7 @@
     SUBDIR += cg3
     SUBDIR += cgrep
     SUBDIR += chkascii
+    SUBDIR += choose
     SUBDIR += chpp
     SUBDIR += cl-meta
     SUBDIR += cl-meta-sbcl
@@ -503,6 +504,7 @@
     SUBDIR += nuspell
     SUBDIR += nux
     SUBDIR += ny-aspell
+    SUBDIR += obsidian
     SUBDIR += ocaml-csv
     SUBDIR += ocaml-expat
     SUBDIR += ocaml-text

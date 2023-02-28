@@ -1433,6 +1433,7 @@
     SUBDIR += tmpwatch
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
+    SUBDIR += tmux-xpanes
     SUBDIR += tmux23
     SUBDIR += topgrade
     SUBDIR += topless

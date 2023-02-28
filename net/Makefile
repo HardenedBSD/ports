@@ -1601,6 +1601,7 @@
     SUBDIR += x11vnc
     SUBDIR += x2goclient
     SUBDIR += x2goclient-cli
+    SUBDIR += xapsd
     SUBDIR += xisp
     SUBDIR += xmlrpc-c
     SUBDIR += xmlrpc-epi

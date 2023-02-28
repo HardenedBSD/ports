@@ -1155,6 +1155,7 @@
     SUBDIR += libburn
     SUBDIR += libcbor
     SUBDIR += libccid
+    SUBDIR += libcdada
     SUBDIR += libcdb
     SUBDIR += libcds
     SUBDIR += libcfu
@@ -6711,7 +6712,6 @@
     SUBDIR += rubygem-google-apis-monitoring_v3
     SUBDIR += rubygem-google-apis-pubsub_v1
     SUBDIR += rubygem-google-apis-serviceusage_v1
-    SUBDIR += rubygem-google-apis-serviceusage_v1_041
     SUBDIR += rubygem-google-apis-sqladmin_v1beta4
     SUBDIR += rubygem-google-apis-sqladmin_v1beta4_041
     SUBDIR += rubygem-google-apis-storage_v1

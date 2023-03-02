@@ -212,13 +212,11 @@ CONFIGURE_ARGS+=	--with-extra-ldflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFA
 .else
 MAKE_ENV+=	USE_CLANG=true
 .if ${COMPILER_VERSION} >= 130
-LLVM_VER=	12
-BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
-CC=		${LOCALBASE}/bin/clang${LLVM_VER}
-CXX=		${LOCALBASE}/bin/clang++${LLVM_VER}
+LLVM_VER=	15
+# HBSD: llvm15 enables a lot of sanity checks that prevent openjdk11 from
+# building
+CONFIGURE_ARGS+=	--disable-warnings-as-errors
 .endif
-
-CONFIGURE_ARGS+=	--with-extra-ldflags="-Wno-error=unused-command-line-argument"
 .endif
 
 .if ${ARCH} == aarch64 || ${ARCH:Marmv*} || ${ARCH:Mpowerpc64*}

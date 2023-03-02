@@ -1027,7 +1027,6 @@
     SUBDIR += vavoom-extras
     SUBDIR += vcmi
     SUBDIR += vectoroids
-    SUBDIR += veloren
     SUBDIR += veloren-weekly
     SUBDIR += violetland
     SUBDIR += viruskiller

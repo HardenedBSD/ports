@@ -32,9 +32,8 @@ USE_QT=		concurrent core dbus declarative gui multimedia network \
 		graphicaleffects:run \
 		buildtools:build linguist:build qmake:build
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/nheko
-=======
+
 OPTIONS_DEFINE=	VOIP
 OPTIONS_DEFAULT=
 
@@ -43,7 +42,6 @@ VOIP_CMAKE_BOOL=	VOIP
 VOIP_USES=	gstreamer gettext-runtime xorg gnome
 VOIP_USE=	gstreamer=bad,dtls,srtp xorg=xcb gnome=glib20
 VOIP_LIB_DEPENDS=	libnice.so:net-im/libnice
->>>>>>> freebsd/main
 
 # There is one external dependency: lmdb++
 #  - lmdb++ is a single header file, it just needs to be included

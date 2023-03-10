@@ -25,6 +25,8 @@ USES=		compiler:c11 cpe desktop-file-utils iconv jpeg \
 USE_LDCONFIG=	yes
 SHEBANG_FILES=	*.py TOOLS/*.py
 
+MPROTECT_DISABLE=	bin/mpv
+
 USE_HARDENING=	pie:off
 
 USE_GITHUB=	yes

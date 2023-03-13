@@ -293,6 +293,7 @@
     SUBDIR += libnitrokey
     SUBDIR += libntlm
     SUBDIR += libomemo
+    SUBDIR += libomemo-c
     SUBDIR += liboqs
     SUBDIR += libotr
     SUBDIR += libotr3

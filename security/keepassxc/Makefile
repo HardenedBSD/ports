@@ -20,6 +20,7 @@ LIB_DEPENDS=	libargon2.so:security/libargon2 \
 		libqrencode.so:graphics/libqrencode \
 		libbotan-2.so:security/botan2
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 PAGEEXEC_DISABLE=	bin/keepassxc
@@ -27,6 +28,15 @@ MPROTECT_DISABLE=	bin/keepassxc
 
 USES=		cmake compiler:c++17-lang desktop-file-utils pkgconfig qt:5 \
 		readline shared-mime-info tar:xz xorg
+=======
+USES=		cmake desktop-file-utils pkgconfig qt:5 readline \
+		shared-mime-info tar:xz xorg
+.if !exists(/usr/include/omp.h)
+USES+=		compiler:gcc-c++11-lib
+.else
+USES+=		compiler:c++17-lang
+.endif
+>>>>>>> freebsd/main
 USE_QT=		concurrent core dbus gui network svg widgets buildtools:build \
 		linguisttools:build qmake:build testlib:build x11extras
 USE_XORG=	x11

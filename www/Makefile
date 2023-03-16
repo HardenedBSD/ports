@@ -2360,6 +2360,7 @@
     SUBDIR += unit-php
     SUBDIR += unit-python
     SUBDIR += unit-ruby
+    SUBDIR += unitc
     SUBDIR += uwebsockets
     SUBDIR += uwsgi
     SUBDIR += uwsgitop

@@ -522,7 +522,6 @@
     SUBDIR += netselect
     SUBDIR += netstrain
     SUBDIR += netwib
-    SUBDIR += nfs-ganesha-kmod
     SUBDIR += nfsshell
     SUBDIR += nfstrace
     SUBDIR += ng_mikrotik_eoip

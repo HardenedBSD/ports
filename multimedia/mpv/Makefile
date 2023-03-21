@@ -32,7 +32,8 @@ USE_HARDENING=	pie:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mpv-player
-MESON_ARGS=	-Dshaderc=disabled \
+MESON_ARGS=	--auto-features=auto \
+		-Dshaderc=disabled \
 		-Dlibmpv=true
 
 OPTIONS_DEFINE=		ARCHIVE DOCS LCMS2 MANPAGES MUJS RUBBERBAND TEST UCHARDET EXAMPLES ZIMG

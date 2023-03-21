@@ -481,7 +481,6 @@
     SUBDIR += gdu
     SUBDIR += genimage
     SUBDIR += genisoimage
-    SUBDIR += geomWatch
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
@@ -568,7 +567,6 @@
     SUBDIR += intel-pcm
     SUBDIR += intel-undervolt
     SUBDIR += inxi
-    SUBDIR += ioc
     SUBDIR += iocage
     SUBDIR += iocage-devel
     SUBDIR += iocell
@@ -601,7 +599,6 @@
     SUBDIR += jdupes
     SUBDIR += jest
     SUBDIR += jkill
-    SUBDIR += jobd
     SUBDIR += jps
     SUBDIR += jruls
     SUBDIR += jstest-gtk

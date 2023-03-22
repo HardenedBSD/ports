@@ -358,7 +358,6 @@
     SUBDIR += equinix-metal-cli
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
-    SUBDIR += etcupdate
     SUBDIR += ethname
     SUBDIR += evhz
     SUBDIR += evisum

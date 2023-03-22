@@ -411,11 +411,11 @@
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
     SUBDIR += openssl
-    SUBDIR += openssl30
-    SUBDIR += openssl31
     SUBDIR += openssl-agent
     SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
+    SUBDIR += openssl30
+    SUBDIR += openssl31
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas
     SUBDIR += openvpn
@@ -1137,6 +1137,7 @@
     SUBDIR += rubygem-pundit61
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
+    SUBDIR += rubygem-rack-oauth21
     SUBDIR += rubygem-razorback-scriptNugget
     SUBDIR += rubygem-rbnacl
     SUBDIR += rubygem-rbnacl-libsodium

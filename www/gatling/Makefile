@@ -17,14 +17,8 @@ BUILD_DEPENDS=	libowfat>=0.32:devel/libowfat
 USES=		compiler:c++11-lang gmake localbase:ldflags ssl tar:xz
 USE_RC_SUBR=	gatling
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CFLAGS+=	-I${LOCALBASE}/include/libowfat -I${OPENSSLINC} -I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -L${OPENSSLLIB}
-
-=======
->>>>>>> freebsd/main
 MAKEFILE=	GNUmakefile
 
 CFLAGS+=	-I${LOCALBASE}/include/libowfat -I${OPENSSLINC}

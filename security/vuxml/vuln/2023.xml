@@ -1,3 +1,217 @@
+  <vuln vid="1ba034fb-ca38-11ed-b242-d4c9ef517024">
+    <topic>OpenSSL -- Excessive Resource Usage Verifying X.509 Policy Constraints</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>1.1.1t,1_1</lt></range>
+      </package>
+      <package>
+	<name>openssl30</name>
+	<range><lt>3.0.8_1</lt></range>
+      </package>
+      <package>
+	<name>openssl31</name>
+	<range><lt>3.1.0_1</lt></range>
+      </package>
+      <package>
+	<name>openssl-quic</name>
+	<range><lt>3.0.8_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20230322.txt">
+	  <p>Severity: Low</p>
+	  <p>A security vulnerability has been identified in all supported versions
+	    of OpenSSL related to the verification of X.509 certificate chains
+	    that include policy constraints.  Attackers may be able to exploit this
+	    vulnerability by creating a malicious certificate chain that triggers
+	    exponential use of computational resources, leading to a denial-of-service
+	    (DoS) attack on affected systems.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0464</cvename>
+      <url>https://www.openssl.org/news/secadv/20230322.txt</url>
+    </references>
+    <dates>
+      <discovery>2023-03-23</discovery>
+      <entry>2023-03-24</entry>
+      <modified>2023-03-24</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="2fdb053c-ca25-11ed-9d7e-080027f5fec9">
+    <topic>rack -- possible denial of service vulnerability in header parsing</topic>
+    <affects>
+      <package>
+	<name>rubygem-rack</name>
+	<range><lt>3.0.6.1,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack22</name>
+	<range><lt>2.2.6.6,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack16</name>
+	<range><lt>1.6.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ooooooo_q reports:</p>
+	<blockquote cite="https://discuss.rubyonrails.org/t/cve-2023-27539-possible-denial-of-service-vulnerability-in-racks-header-parsing/82466">
+	  <p>
+	    Carefully crafted input can cause header parsing in Rack
+	    to take an unexpected amount of time, possibly resulting
+	    in a denial of service attack vector. Any applications
+	    that parse headers using Rack (virtually all Rails
+	    applications) are impacted.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-27539</cvename>
+      <url>https://discuss.rubyonrails.org/t/cve-2023-27539-possible-denial-of-service-vulnerability-in-racks-header-parsing/82466</url>
+    </references>
+    <dates>
+      <discovery>2023-03-13</discovery>
+      <entry>2023-03-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="dec6b8e9-c9fe-11ed-bb39-901b0e9408dc">
+    <topic>dino -- Insufficient message sender validation in Dino</topic>
+    <affects>
+      <package>
+	<name>dino</name>
+	<range><lt>0.4.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dino team reports:</p>
+	<blockquote cite="https://dino.im/security/cve-2023-28686/">
+	  <p>Dino before 0.2.3, 0.3.x before 0.3.2, and 0.4.x before 0.4.2 allows
+	attackers to modify the personal bookmark store via a crafted
+	message.  The attacker can change the display of group chats or
+	force a victim to join a group chat; the victim may then be tricked
+	into disclosing sensitive information.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-28686</cvename>
+      <url>https://dino.im/security/cve-2023-28686/</url>
+    </references>
+    <dates>
+      <discovery>2023-03-23</discovery>
+      <entry>2023-03-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="38f213b6-8f3d-4067-91ef-bf14de7ba518">
+    <topic>libXpm -- Issues handling XPM files</topic>
+    <affects>
+      <package>
+	<name>libXpm</name>
+	<range><lt>3.5.15</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The X.Org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2023-January/003312.html">
+	  <ol>
+	    <li>CVE-2022-46285: Infinite loop on unclosed comments
+
+	    <p>When reading XPM images from a file with libXpm 3.5.14 or older, if a
+	    comment in the file is not closed (i.e. a C-style comment starts with
+	    "/*" and is missing the closing "*/"), the ParseComment() function will
+	    loop forever calling getc() to try to read the rest of the comment,
+	    failing to notice that it has returned EOF, which may cause a denial of
+	    service to the calling program.</p>
+
+	    <p>This issue was found by Marco Ivaldi of the Humanativa Group's HN Security team.</p>
+
+	    <p>The fix is provided in
+	    https://gitlab.freedesktop.org/xorg/lib/libxpm/-/commit/a3a7c6dcc3b629d7650148</p></li>
+
+	    <li>CVE-2022-44617: Runaway loop on width of 0 and enormous height
+
+	    <p>When reading XPM images from a file with libXpm 3.5.14 or older, if a
+	    image has a width of 0 and a very large height, the ParsePixels() function
+	    will loop over the entire height calling getc() and ungetc() repeatedly,
+	    or in some circumstances, may loop seemingly forever, which may cause a denial
+	    of service to the calling program when given a small crafted XPM file to parse.</p>
+
+	    <p>This issue was found by Martin Ettl.</p>
+
+	    <p>The fix is provided in
+	    https://gitlab.freedesktop.org/xorg/lib/libxpm/-/commit/f80fa6ae47ad4a5beacb28
+	    and
+	    https://gitlab.freedesktop.org/xorg/lib/libxpm/-/commit/c5ab17bcc34914c0b0707d</p></li>
+
+	    <li>CVE-2022-4883: compression commands depend on $PATH
+
+	    <p>By default, on all platforms except MinGW, libXpm will detect if a filename
+	    ends in .Z or .gz, and will when reading such a file fork off an uncompress
+	    or gunzip command to read from via a pipe, and when writing such a file will
+	    fork off a compress or gzip command to write to via a pipe.</p>
+
+	    <p>In libXpm 3.5.14 or older these are run via execlp(), relying on $PATH
+	    to find the commands.  If libXpm is called from a program running with
+	    raised privileges, such as via setuid, then a malicious user could set
+	    $PATH to include programs of their choosing to be run with those privileges.</p>
+
+	    <p>This issue was found by Alan Coopersmith of the Oracle Solaris team.</p></li>
+	  </ol>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.x.org/archives/xorg-announce/2023-January/003312.html</url>
+      <cvename>CVE-2022-46285</cvename>
+      <cvename>CVE-2022-44617</cvename>
+      <cvename>CVE-2022-4883</cvename>
+    </references>
+    <dates>
+      <discovery>2023-01-17</discovery>
+      <entry>2023-03-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1b15a554-c981-11ed-bb39-901b0e9408dc">
+    <topic>tailscale -- security vulnerability in Tailscale SSH</topic>
+    <affects>
+      <package>
+	<name>tailscale</name>
+	<range><lt>1.38.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tailscale team reports:</p>
+	<blockquote cite="https://tailscale.com/security-bulletins/#ts-2023-003">
+	  <p>A vulnerability identified in the implementation of Tailscale SSH in FreeBSD
+	  allowed commands to be run with a higher privilege group ID than that specified
+	  by Tailscale SSH access rules.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-28436</cvename>
+      <url>https://tailscale.com/security-bulletins/#ts-2023-003</url>
+    </references>
+    <dates>
+      <discovery>2023-03-22</discovery>
+      <entry>2023-03-23</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="c8b334e0-6e83-4575-81d1-f9d5803ceb07">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>
@@ -398,7 +612,6 @@
       <cvename>CVE-2023-27902</cvename>
       <cvename>CVE-2023-27903</cvename>
       <cvename>CVE-2023-27904</cvename>
-      <cvename></cvename>
       <url>https://www.jenkins.io/security/advisory/2023-03-08/</url>
     </references>
     <dates>
@@ -521,7 +734,7 @@
       </package>
       <package>
 	<name>rubygem-rack22</name>
-	<range><lt>2.2.6.6,3</lt></range>
+	<range><lt>2.2.6.3,3</lt></range>
       </package>
       <package>
 	<name>rubygem-rack16</name>

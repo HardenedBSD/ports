@@ -14,7 +14,7 @@ PORTVERSION=	1.0.4
 CATEGORIES=	shells
 
 MAINTAINER=	cy@FreeBSD.org
-COMMENT=	Development branch of AT&T KornShell 93
+COMMENT=	ksh93u+m is the renewed development of ksh93 based on AT&T ksh93u+m (stable)
 WWW=		http://www.kornshell.com/
 
 LICENSE=	EPL
@@ -34,7 +34,7 @@ USE_HARDENING=	pie:off
 #		arcane build failures due to already installed ksh/ksh93 in
 #		$PATH.
 KSH_CONFLICTS=		pdksh
-KSH93_CONFLICTS=	ksh2020 ksh93 ast-ksh ksh-devel
+KSH93_CONFLICTS=	ksh93 ast-ksh ksh-devel
 
 OPTIONS_DEFAULT=	KSH93 EXAMPLES
 OPTIONS_DEFINE=		EXAMPLES STATIC

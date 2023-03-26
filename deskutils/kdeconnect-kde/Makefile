@@ -30,6 +30,7 @@ USE_QT=		concurrent core dbus declarative gui multimedia network \
 		buildtools:build qmake:build
 USE_XORG=	ice sm x11 xext xtst
 USE_LDCONFIG=	${QT_QMLDIR}/org/kde/kdeconnect
+MPROTECT_DISABLE=	bin/kdeconnect-app
 
 OPTIONS_DEFINE=	DOCS
 

@@ -4133,6 +4133,7 @@
     SUBDIR += pth-hard
     SUBDIR += pthreadpool
     SUBDIR += pthsem
+    SUBDIR += ptl
     SUBDIR += ptlib
     SUBDIR += ptmalloc
     SUBDIR += ptmalloc2
@@ -4663,6 +4664,7 @@
     SUBDIR += py-google-pasta
     SUBDIR += py-google-re2
     SUBDIR += py-googleapis-common-protos
+    SUBDIR += py-gpep517
     SUBDIR += py-gpxpy
     SUBDIR += py-grab
     SUBDIR += py-graphene

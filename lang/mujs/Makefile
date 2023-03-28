@@ -1,5 +1,6 @@
 PORTNAME=	mujs
 DISTVERSION=	1.3.3
+PORTREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -19,6 +20,8 @@ USE_HARDENING=	pie:off
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ccxvii
+
+LDFLAGS=	-Wl,-soname=libmujs.so
 
 ALL_TARGET=	build/release/mujs \
 		build/release/libmujs.so \

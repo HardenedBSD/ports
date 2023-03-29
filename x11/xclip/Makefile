@@ -11,12 +11,9 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		autoreconf gmake iconv xorg
-<<<<<<< HEAD
 
 USE_HARDENING=	cfi safestack
 
-=======
->>>>>>> freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	astrand
 USE_XORG=	x11 xmu

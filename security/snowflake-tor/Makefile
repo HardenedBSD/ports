@@ -26,10 +26,6 @@ TPO_SNOWFLAKE=	7b77001eaa90e09d41172a2b170dabd3f1922b4a
 USE_HARDENING=	pie:golang
 
 GO_MODULE=      git.torproject.org/pluggable-transports/snowflake.git/v2
-<<<<<<< HEAD
-=======
-GO_BUILDFLAGS=  -ldflags '${STRIP} -w -extldflags "-static"'
->>>>>>> freebsd/main
 GO_PKGNAME=	${GO_MODULE}
 GO_TARGET=	./broker ./client ./proxy ./server
 

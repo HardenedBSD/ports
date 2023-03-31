@@ -464,7 +464,6 @@
     SUBDIR += micro_proxy
     SUBDIR += microsocks
     SUBDIR += minidlna
-    SUBDIR += minisapserver
     SUBDIR += minissdpd
     SUBDIR += miniupnpc
     SUBDIR += miniupnpd
@@ -1399,6 +1398,7 @@
     SUBDIR += rubygem-whois
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
+    SUBDIR += rustdesk-server
     SUBDIR += ryu
     SUBDIR += s5cmd
     SUBDIR += sacc
@@ -1514,7 +1514,6 @@
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
     SUBDIR += tigervnc-viewer-java
-    SUBDIR += tightvnc
     SUBDIR += timed
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities

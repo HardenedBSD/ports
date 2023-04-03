@@ -1284,7 +1284,6 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
-    SUBDIR += rubygem-gitlab-omniauth-openid-connect
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable

@@ -19,7 +19,4 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	royhills
 
-x-post-install:
-	${RM} ${STAGEDIR}${PREFIX}/bin/get-iab
-
 .include <bsd.port.mk>

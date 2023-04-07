@@ -28,6 +28,7 @@ PORTDOCS=	html
 USE_HARDENING=	pie:off relro:off
 
 MPROTECT_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
+PAGEEXEC_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
 SEGVGUARD_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
 
 OPTIONS_DEFINE=		DOCS MANPAGES MPI

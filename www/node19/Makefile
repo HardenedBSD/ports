@@ -29,6 +29,8 @@ LIB_DEPENDS=	libbrotlidec.so:archivers/brotli \
 
 USES=		compiler:c++11-lib gmake localbase pkgconfig python:3.6+,build shebangfix
 
+MPROTECT_DISABLE=	bin/node
+
 CONFIGURE_ARGS=	--prefix=${PREFIX:S|^${DESTDIR}||} \
 		--shared-brotli \
 		--shared-cares \

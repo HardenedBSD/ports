@@ -12,13 +12,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libdnet.so:net/libdnet
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		gmake readline ssl
-=======
 USES=		gmake ncurses readline ssl
->>>>>>> freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	hrs-allbsd
 USE_RC_SUBR=	sendd

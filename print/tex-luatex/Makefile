@@ -12,15 +12,10 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	tex@FreeBSD.org
 COMMENT=	Extended version of pdfTeX using Lua
 
-<<<<<<< HEAD
-CONFIGURE_ENV="CFLAGS=-fPIC -fPIE -O2 -fcommon" "CXXFLAGS=-fPIC -fPIE -O2 -fcommon"
+CONFIGURE_ENV+=	"CFLAGS=-fPIC -fPIE -O2 -fcommon" "CXXFLAGS=-fPIC -fPIE -O2 -fcommon"
 
-LIB_DEPENDS=	libpng.so:graphics/png \
-		libmpfr.so:math/mpfr \
-=======
 LIB_DEPENDS=	libmpfr.so:math/mpfr \
 		libpng.so:graphics/png \
->>>>>>> freebsd/main
 		libzzip.so:devel/zziplib
 
 USES=		gnome libtool localbase pkgconfig tar:xz tex xorg

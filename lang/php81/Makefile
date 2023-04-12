@@ -616,6 +616,10 @@ USES+=			pkgconfig
 
 .include <bsd.port.pre.mk>
 
+.if ${ARCH} == aarch64 && ${PHP_MODNAME} == "opcache"
+CONFIGURE_ARGS+=--disable-opcache-jit
+.endif
+
 .if ${PHP_MODNAME} == "sqlite3" || ${PHP_MODNAME} == "zlib"
 post-extract:
 	@${MV} ${WRKSRC}/config0.m4 ${WRKSRC}/config.m4

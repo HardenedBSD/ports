@@ -22,15 +22,9 @@ USES=		autoreconf gettext-runtime gnome localbase makeinfo \
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	GNUFreetalk
-
-=======
 LIBS=		-largp
->>>>>>> freebsd/main
 INFO=		freetalk
 
 post-patch:

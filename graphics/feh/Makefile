@@ -14,15 +14,9 @@ LIB_DEPENDS=	libImlib2.so:graphics/imlib2 \
 		libpng.so:graphics/png
 TEST_DEPENDS=	p5-Test-Command>=0:devel/p5-Test-Command
 
-<<<<<<< HEAD
 USE_HARDENING=	cfi safestack
 
-USES=		compiler:c++11-lang cpe desktop-file-utils gmake localbase:ldflags \
-		tar:bzip2 xorg
-USE_XORG=	x11 xt xinerama
-=======
 USES=		cpe desktop-file-utils gmake localbase:ldflags tar:bzip2 xorg
->>>>>>> freebsd/main
 CPE_VENDOR=	feh_project
 USE_XORG=	x11 xinerama xt
 

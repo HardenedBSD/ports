@@ -1010,7 +1010,7 @@ LC_ALL=		C
 # tree we are and thus can't go relative.  They can, of course, be overridden
 # by individual Makefiles or local system make configuration.
 _LIST_OF_WITH_FEATURES=	debug lto ssp
-_DEFAULT_WITH_FEATURES=	ssp
+_DEFAULT_WITH_FEATURES=	lto ssp
 PORTSDIR?=		/usr/ports
 LOCALBASE?=		/usr/local
 LINUXBASE?=		/compat/linux

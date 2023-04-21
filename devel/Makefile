@@ -4170,6 +4170,7 @@
     SUBDIR += py-aioapns
     SUBDIR += py-aiocontextvars
     SUBDIR += py-aiofiles
+    SUBDIR += py-aiohttp-apispec
     SUBDIR += py-aioice
     SUBDIR += py-aioitertools
     SUBDIR += py-aiologger
@@ -4539,6 +4540,7 @@
     SUBDIR += py-dodgy
     SUBDIR += py-dogpile.cache
     SUBDIR += py-doit
+    SUBDIR += py-donut-shellcode
     SUBDIR += py-dotted
     SUBDIR += py-dotty-dict
     SUBDIR += py-dpcontracts
@@ -5438,6 +5440,7 @@
     SUBDIR += py-saneyaml
     SUBDIR += py-sarge
     SUBDIR += py-sarif-om
+    SUBDIR += py-scantree
     SUBDIR += py-schedule
     SUBDIR += py-scheduler
     SUBDIR += py-schema

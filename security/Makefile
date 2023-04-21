@@ -842,6 +842,7 @@
     SUBDIR += py-acme
     SUBDIR += py-acme-tiny
     SUBDIR += py-ailment
+    SUBDIR += py-aiohttp-security
     SUBDIR += py-angr
     SUBDIR += py-argon2-cffi
     SUBDIR += py-argon2-cffi-bindings
@@ -890,6 +891,7 @@
     SUBDIR += py-dfdatetime
     SUBDIR += py-dfvfs
     SUBDIR += py-dfwinreg
+    SUBDIR += py-dirhash
     SUBDIR += py-django-auth-kerberos
     SUBDIR += py-docker-pycreds
     SUBDIR += py-ecdsa

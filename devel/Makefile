@@ -5467,6 +5467,7 @@
     SUBDIR += py-setuptools_git_ls_files
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
+    SUBDIR += py-setuptools_scm7
     SUBDIR += py-setuptools_scm_git_archive
     SUBDIR += py-sexpdata
     SUBDIR += py-sgmllib3k
@@ -7615,6 +7616,7 @@
     SUBDIR += ultragetopt
     SUBDIR += umbrello
     SUBDIR += umlgraph
+    SUBDIR += undead
     SUBDIR += unibilium
     SUBDIR += universal-ctags
     SUBDIR += upnp

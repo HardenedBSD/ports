@@ -183,6 +183,7 @@
     SUBDIR += geneweb
     SUBDIR += geolizer
     SUBDIR += get_flash_videos
+    SUBDIR += ghostunnel
     SUBDIR += gist
     SUBDIR += gitea
     SUBDIR += gitlab-ce
@@ -1422,6 +1423,7 @@
     SUBDIR += py-adblock
     SUBDIR += py-aioh2
     SUBDIR += py-aiohttp
+    SUBDIR += py-aiohttp-jinja2
     SUBDIR += py-aiohttp-middlewares
     SUBDIR += py-aiohttp-oauthlib
     SUBDIR += py-aiohttp-session
@@ -1758,7 +1760,6 @@
     SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
-    SUBDIR += py-requests-futures0
     SUBDIR += py-requests-gssapi
     SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib

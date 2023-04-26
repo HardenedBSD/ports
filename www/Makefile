@@ -1825,6 +1825,7 @@
     SUBDIR += py-wcag-contrast-ratio
     SUBDIR += py-webargs
     SUBDIR += py-webassets
+    SUBDIR += py-webdriver_manager
     SUBDIR += py-webob
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit

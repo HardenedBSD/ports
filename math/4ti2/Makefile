@@ -17,14 +17,12 @@ USES=		autoreconf compiler:c++11-lang gmake libtool
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
-=======
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-static --enable-shared --with-glpk=${LOCALBASE} --with-gmp=${LOCALBASE}
 
 INSTALL_TARGET=	install-strip
->>>>>>> freebsd/main
 
 TEST_TARGET=	check # tests fail to run: https://github.com/4ti2/4ti2/issues/26
 

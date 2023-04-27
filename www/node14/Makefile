@@ -13,12 +13,10 @@ WWW=		https://nodejs.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/node
-=======
+
 DEPRECATED=	Consider using www/node16 or later as Upstream EOL on 2023-04-30
 EXPIRATION_DATE=	2023-05-26
->>>>>>> freebsd/main
 
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 

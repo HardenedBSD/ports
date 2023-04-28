@@ -324,6 +324,7 @@ LIBBLURAY_CONFIGURE_ENABLE=	libbluray
 # libplacebo
 LIBPLACEBO_LIB_DEPENDS=	libplacebo.so:graphics/libplacebo
 LIBPLACEBO_CONFIGURE_ENABLE=	libplacebo
+LIBPLACEBO_IMPLIES=	VULKAN
 
 # librsvg
 LIBRSVG2_USES=			gnome
@@ -492,8 +493,8 @@ SVTAV1_CONFIGURE_ON=	--enable-libsvtav1
 # svt-hevc
 SVTHEVC_LIB_DEPENDS=	libSvtHevcEnc.so:multimedia/svt-hevc
 SVTHEVC_CONFIGURE_ON=	--enable-libsvthevc
-SVTHEVC_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-HEVC/raw/v1.5.0-3-g86b58f77/ffmpeg_plugin/:svthevc
-SVTHEVC_PATCHFILES=	0001-lavc-svt_hevc-add-libsvt-hevc-encoder-wrapper.patch:-p1:svthevc \
+SVTHEVC_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-HEVC/raw/v1.5.1-12-g6cca5b93/ffmpeg_plugin/:svthevc
+SVTHEVC_PATCHFILES=	master-0001-lavc-svt_hevc-add-libsvt-hevc-encoder-wrapper.patch:-p1:svthevc \
 			0002-doc-Add-libsvt_hevc-encoder-docs.patch:-p1:svthevc
 .if make(makesum)
 .MAKEFLAGS:		WITH+=SVTHEVC
@@ -502,7 +503,7 @@ SVTHEVC_PATCHFILES=	0001-lavc-svt_hevc-add-libsvt-hevc-encoder-wrapper.patch:-p1
 # svt-vp9
 SVTVP9_LIB_DEPENDS=	libSvtVp9Enc.so:multimedia/svt-vp9
 SVTVP9_CONFIGURE_ON=	--enable-libsvtvp9
-SVTVP9_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-VP9/raw/v0.3.0-4-gabd5c59/ffmpeg_plugin/:svtvp9
+SVTVP9_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-VP9/raw/v0.3.0-17-g15bd454/ffmpeg_plugin/:svtvp9
 SVTVP9_PATCHFILES=	master-0001-Add-ability-for-ffmpeg-to-run-svt-vp9.patch:-p1:svtvp9
 .if make(makesum)
 .MAKEFLAGS:		WITH+=SVTVP9
@@ -630,6 +631,7 @@ INSTALL_TARGET=	install-progs install-doc install-data \
 DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 MAKE_ENV+=	V=1
+CFLAGS_i386=	-Wno-error=int-conversion
 LDFLAGS_aarch64=-Wl,-z,notext
 LDFLAGS_armv6=	-Wl,-z,notext
 LDFLAGS_armv7=	-Wl,-z,notext

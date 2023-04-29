@@ -58,6 +58,7 @@ USE_GNOME=	glib20
 USE_GL=		gl
 USE_XORG=	ice sm x11 xcb xcomposite xext xfixes xinerama xrandr
 USE_LDCONFIG=	yes
+CFLAGS+=	-Wno-int-conversion
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	obsproject

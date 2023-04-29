@@ -15,7 +15,7 @@ BROKEN_mips64=		fails to build: conflicting types for 'restrict'
 USE_GITHUB=	yes
 GH_ACCOUNT=	fluent
 
-USES=		cmake:noninja gmake bison
+USES=		bison cmake:noninja gmake localbase:ldflags
 
 USE_HARDENING=	pie:off
 
@@ -23,9 +23,8 @@ OPTIONS_DEFINE=		SSL PGSQL
 OPTIONS_DEFAULT=	SSL
 
 LIB_DEPENDS=		libyaml.so:textproc/libyaml
-LDFLAGS+=		-lexecinfo -L${LOCALBASE}/lib
+LDFLAGS+=		-lexecinfo
 CMAKE_ARGS=		-DFLB_DEBUG=Off -DFLB_TRACE=Off -DFLB_LUAJIT=Off
-CFLAGS+=		-I${LOCALBASE}/include
 
 SSL_USES=		ssl
 SSL_CMAKE_ON=		-DFLB_TLS=On
@@ -49,6 +48,10 @@ LDFLAGS+=	-latomic
 USES+=		compiler:gcc-c++11-lib
 .else
 USES+=		compiler:c11
+.endif
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400079
+CFLAGS+=	-Wno-error=int-conversion
 .endif
 
 post-install:

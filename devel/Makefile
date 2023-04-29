@@ -929,6 +929,7 @@
     SUBDIR += gtranslator
     SUBDIR += guichan
     SUBDIR += guile-lib
+    SUBDIR += gum
     SUBDIR += gumbo
     SUBDIR += gvfs
     SUBDIR += gvp
@@ -4563,6 +4564,7 @@
     SUBDIR += py-eggtestinfo
     SUBDIR += py-ejson
     SUBDIR += py-enlighten
+    SUBDIR += py-entrypoint2
     SUBDIR += py-entrypoints
     SUBDIR += py-enum-compat
     SUBDIR += py-envier
@@ -5652,6 +5654,7 @@
     SUBDIR += py-venusian
     SUBDIR += py-verboselogs
     SUBDIR += py-versioneer
+    SUBDIR += py-versioningit
     SUBDIR += py-versiontools
     SUBDIR += py-verspec
     SUBDIR += py-vine

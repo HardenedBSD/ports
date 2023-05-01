@@ -18,16 +18,12 @@ BROKEN_SSL=	openssl30 openssl31
 BROKEN_SSL_REASON=	Uses OpenSSL 3.0.0 deprecated BIO_s_file_internal
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CONFIGURE_ARGS+=--enable-audio \
-=======
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=--disable-lua \
 		--disable-sasl \
 		--enable-audio \
->>>>>>> freebsd/main
 		--enable-ipv6 \
 		--enable-exceptions \
 		--enable-oss \

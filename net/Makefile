@@ -1143,6 +1143,7 @@
     SUBDIR += py-socketio-client
     SUBDIR += py-socksio
     SUBDIR += py-softlayer
+    SUBDIR += py-speedometer
     SUBDIR += py-speedtest-cli
     SUBDIR += py-sshtunnel
     SUBDIR += py-sshuttle

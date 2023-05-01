@@ -4422,6 +4422,7 @@
     SUBDIR += py-cliapp
     SUBDIR += py-click
     SUBDIR += py-click-completion
+    SUBDIR += py-click-creds
     SUBDIR += py-click-default-group
     SUBDIR += py-click-default-group-wheel
     SUBDIR += py-click-log
@@ -4665,6 +4666,7 @@
     SUBDIR += py-gelidum
     SUBDIR += py-genson
     SUBDIR += py-genty
+    SUBDIR += py-geocoder
     SUBDIR += py-geojson
     SUBDIR += py-get-reader
     SUBDIR += py-gevent
@@ -5207,6 +5209,7 @@
     SUBDIR += py-pyinotify
     SUBDIR += py-pyinquirer
     SUBDIR += py-pyinstaller
+    SUBDIR += py-pyintelowl
     SUBDIR += py-pyjq
     SUBDIR += py-pyjsparser
     SUBDIR += py-pylama
@@ -5393,6 +5396,7 @@
     SUBDIR += py-rapidfuzz
     SUBDIR += py-rapidfuzz-capi
     SUBDIR += py-rapidfuzz2
+    SUBDIR += py-ratelim
     SUBDIR += py-ratelimiter
     SUBDIR += py-rauth
     SUBDIR += py-raven
@@ -5571,6 +5575,7 @@
     SUBDIR += py-timelib
     SUBDIR += py-timeout-decorator
     SUBDIR += py-tinyarray
+    SUBDIR += py-tinynetrc
     SUBDIR += py-tinyrpc
     SUBDIR += py-tipper
     SUBDIR += py-tokenize-rt
@@ -7726,8 +7731,6 @@
     SUBDIR += zfp
     SUBDIR += zls
     SUBDIR += zookeeper
-    SUBDIR += zpu-binutils
-    SUBDIR += zpu-gcc
     SUBDIR += zthread
     SUBDIR += zycore-c
     SUBDIR += zydis

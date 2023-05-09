@@ -19,12 +19,7 @@ USE_HARDENING=	safestack
 USES=		tar:tgz
 NO_WRKSUBDIR=	yes
 
-<<<<<<< HEAD
-CFLAGS+=	-D${OPSYS:tu}
-=======
 CFLAGS+=	-D${OPSYS:tu} -Wno-int-conversion
-LDFLAGS+=	-static
->>>>>>> freebsd/main
 
 PORTDOCS=	README
 PLIST_FILES=	bin/netcat man/man1/netcat.1.gz

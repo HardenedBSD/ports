@@ -28,13 +28,9 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libpugixml.so:textproc/pugixml
 RUN_DEPENDS=	liberation-fonts-ttf>=0:x11-fonts/liberation-fonts-ttf
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		compiler:c++14-lang gl gmake jpeg localbase pkgconfig \
-=======
 USES=		compiler:c++14-lang gl gmake jpeg localbase lua:54 pkgconfig \
->>>>>>> freebsd/main
 		python:3.9,build qt:5 sdl shebangfix sqlite:3 xorg
 
 USE_GITHUB=	yes

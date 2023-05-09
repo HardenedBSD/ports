@@ -10,7 +10,7 @@ PATCH_SITES=	GENTOO
 PATCHFILES=	nc-v6-20000918.patch.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Simple utility which reads and writes data across network connections
 WWW=		http://nc110.sourceforge.net/
 
@@ -19,7 +19,12 @@ USE_HARDENING=	safestack
 USES=		tar:tgz
 NO_WRKSUBDIR=	yes
 
+<<<<<<< HEAD
 CFLAGS+=	-D${OPSYS:tu}
+=======
+CFLAGS+=	-D${OPSYS:tu} -Wno-int-conversion
+LDFLAGS+=	-static
+>>>>>>> freebsd/main
 
 PORTDOCS=	README
 PLIST_FILES=	bin/netcat man/man1/netcat.1.gz

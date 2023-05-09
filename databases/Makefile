@@ -657,6 +657,7 @@
     SUBDIR += postgresql-odbc
     SUBDIR += postgresql-ogr_fdw
     SUBDIR += postgresql-orafce
+    SUBDIR += postgresql-pgaudit
     SUBDIR += postgresql-plproxy
     SUBDIR += postgresql-plv8js
     SUBDIR += postgresql-prefix

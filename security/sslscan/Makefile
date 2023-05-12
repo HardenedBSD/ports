@@ -11,14 +11,10 @@ WWW=		https://github.com/rbsec/sslscan/
 
 LICENSE=	GPLv3
 
-<<<<<<< HEAD
 USE_HARDENING=	cfi safestack
 
-USES=		gmake
-=======
 USES=		gmake perl5
 USE_PERL5=	build
->>>>>>> freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	rbsec
 OPENSSL_VERSION=	3.1.0

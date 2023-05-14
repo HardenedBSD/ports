@@ -1,4 +1,4 @@
-PORTNAME=	scratch
+PORTNAME=	scratch-game
 PORTVERSION=	1.4.0.7
 CATEGORIES=	games
 MASTER_SITES=	https://download.scratch.mit.edu/

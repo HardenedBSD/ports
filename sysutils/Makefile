@@ -53,6 +53,7 @@
     SUBDIR += apcpwr
     SUBDIR += apcupsd
     SUBDIR += appjail
+    SUBDIR += appjail-devel
     SUBDIR += apt-mirror-devel
     SUBDIR += aptly
     SUBDIR += arc_summary
@@ -1305,7 +1306,6 @@
     SUBDIR += rubygem-winrm-elevated
     SUBDIR += rubygem-winrm-fs
     SUBDIR += rubygem-yell
-    SUBDIR += rundeck2
     SUBDIR += rundeck3
     SUBDIR += runiq
     SUBDIR += runit

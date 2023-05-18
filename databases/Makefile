@@ -967,6 +967,7 @@
     SUBDIR += rubygem-memcache-client
     SUBDIR += rubygem-mysql
     SUBDIR += rubygem-mysql2
+    SUBDIR += rubygem-neighbor
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-pg

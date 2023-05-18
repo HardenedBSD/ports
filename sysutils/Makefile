@@ -1035,6 +1035,7 @@
     SUBDIR += plasma5-powerdevil
     SUBDIR += plasma5-systemsettings
     SUBDIR += plconfig
+    SUBDIR += plocate
     SUBDIR += pmt
     SUBDIR += pnscan
     SUBDIR += podman

@@ -91,7 +91,15 @@ CONFIGURE_ARGS_COMMON=	--prefix=${INTERIM_PREFIX} \
 			--disable-nls \
 			--enable-initfini-array
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
+=======
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=       -Wno-error=int-conversion
+.endif
+>>>>>>> freebsd/main
 
 pre-patch:
 	@${ECHO_MSG} "===> Apply distribution patches..."
@@ -211,4 +219,4 @@ do-install:
 		${STAGEDIR}${DOCSDIR}/slau${DOC_VERSION}.pdf
 	${INSTALL_DATA} ${FILESDIR}/watchdog.txt ${STAGEDIR}${DOCSDIR}/watchdog.txt
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

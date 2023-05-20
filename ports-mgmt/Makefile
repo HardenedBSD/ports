@@ -77,6 +77,7 @@
     SUBDIR += rc-subr-jail
     SUBDIR += reprise
     SUBDIR += sccache-overlay
+    SUBDIR += submodules2tuple
     SUBDIR += synth
     SUBDIR += wanted-ports
 

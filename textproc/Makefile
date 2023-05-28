@@ -517,7 +517,6 @@
     SUBDIR += openjade
     SUBDIR += opensearch
     SUBDIR += opensearch-dashboards
-    SUBDIR += opensearch-dashboards13
     SUBDIR += opensearch13
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
@@ -587,6 +586,7 @@
     SUBDIR += p5-HTML-RewriteAttributes
     SUBDIR += p5-HTML-SBC
     SUBDIR += p5-HTML-SuperForm
+    SUBDIR += p5-HTML-T5
     SUBDIR += p5-HTML-TagFilter
     SUBDIR += p5-HTML-Tidy
     SUBDIR += p5-HTML-Tidy5
@@ -1655,7 +1655,6 @@
     SUBDIR += ro-hunspell
     SUBDIR += ro-hyphen
     SUBDIR += ro-mythes
-    SUBDIR += rtf2html
     SUBDIR += rtfreader
     SUBDIR += ruby-escape
     SUBDIR += ruby-format
@@ -1709,8 +1708,10 @@
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
     SUBDIR += rubygem-docdiff
+    SUBDIR += rubygem-elastic-transport
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
+    SUBDIR += rubygem-elasticsearch-api7
     SUBDIR += rubygem-elasticsearch-api713
     SUBDIR += rubygem-elasticsearch-dsl
     SUBDIR += rubygem-elasticsearch-model
@@ -1720,6 +1721,7 @@
     SUBDIR += rubygem-elasticsearch-transport
     SUBDIR += rubygem-elasticsearch-transport713
     SUBDIR += rubygem-elasticsearch-xpack
+    SUBDIR += rubygem-elasticsearch7
     SUBDIR += rubygem-elasticsearch713
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils
@@ -1776,7 +1778,6 @@
     SUBDIR += rubygem-liquid4
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
-    SUBDIR += rubygem-loofah219
     SUBDIR += rubygem-loofah220
     SUBDIR += rubygem-loofah221
     SUBDIR += rubygem-ltsv

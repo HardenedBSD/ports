@@ -170,6 +170,7 @@
     SUBDIR += gef
     SUBDIR += gibson
     SUBDIR += git-credential-gopass
+    SUBDIR += git-credential-oauth
     SUBDIR += git-crypt
     SUBDIR += git-remote-gcrypt
     SUBDIR += git-secret

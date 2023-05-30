@@ -417,6 +417,7 @@
     SUBDIR += wapanel
     SUBDIR += way-displays
     SUBDIR += waybar
+    SUBDIR += wayidle
     SUBDIR += wayland-logout
     SUBDIR += waylock
     SUBDIR += wayout

@@ -4,13 +4,8 @@
  
  .PHONY: compiler cold
  compiler:
-<<<<<<< HEAD
--	env MAKE=$(MAKE) BOOTSTRAP_EXTRA_OPTS= BOOTSTRAP_OPT_TARGET=opt.opt BOOTSTRAP_ROOT=.. BOOTSTRAP_DIR=bootstrap ./shell/bootstrap-ocaml.sh $(OCAML_PORT)
-+	env RANLIB=llvm-ranlib-devel CC="$(CC)" MAKE=$(MAKE) BOOTSTRAP_EXTRA_OPTS= BOOTSTRAP_OPT_TARGET=opt.opt BOOTSTRAP_ROOT=.. BOOTSTRAP_DIR=bootstrap ./shell/bootstrap-ocaml.sh $(OCAML_PORT)
-=======
 -	env MAKE=$(MAKE) BOOTSTRAP_EXTRA_OPTS= BOOTSTRAP_TARGETS=world.opt BOOTSTRAP_ROOT=.. BOOTSTRAP_DIR=bootstrap ./shell/bootstrap-ocaml.sh $(OCAML_PORT)
-+	env CC="$(CC)" MAKE=$(MAKE) BOOTSTRAP_EXTRA_OPTS= BOOTSTRAP_TARGETS=world.opt BOOTSTRAP_ROOT=.. BOOTSTRAP_DIR=bootstrap ./shell/bootstrap-ocaml.sh $(OCAML_PORT)
->>>>>>> freebsd/main
++	env RANLIB=llvm-ranlib-devel CC="$(CC)" MAKE=$(MAKE) BOOTSTRAP_EXTRA_OPTS= BOOTSTRAP_TARGETS=world.opt BOOTSTRAP_ROOT=.. BOOTSTRAP_DIR=bootstrap ./shell/bootstrap-ocaml.sh $(OCAML_PORT)
  
  src_ext/secondary/ocaml/bin/ocaml:
  	env MAKE=$(MAKE) BOOTSTRAP_EXTRA_OPTS="--disable-ocamldoc --disable-debug-runtime --disable-debugger" BOOTSTRAP_TARGETS="world opt" BOOTSTRAP_ROOT=../.. BOOTSTRAP_DIR=src_ext/secondary ./shell/bootstrap-ocaml.sh $(OCAML_PORT)

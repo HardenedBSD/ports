@@ -2307,7 +2307,6 @@
     SUBDIR += trafficserver
     SUBDIR += transmission-web
     SUBDIR += transproxy
-    SUBDIR += trurl
     SUBDIR += tt-rss
     SUBDIR += tuifeed
     SUBDIR += tusc

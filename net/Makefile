@@ -1454,6 +1454,7 @@
     SUBDIR += smm++
     SUBDIR += sngrep
     SUBDIR += sniffit
+    SUBDIR += sniffnet
     SUBDIR += sniproxy
     SUBDIR += sntop
     SUBDIR += sobby

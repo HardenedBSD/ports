@@ -7597,3 +7597,17 @@ net-mgmt/zabbix62-proxy|net-mgmt/zabbix64-proxy|2023-05-31|Has expired: Will rea
 net-mgmt/zabbix62-server|net-mgmt/zabbix64-server|2023-05-31|Has expired: Will reach end of life on 2023-05-31
 mail/esmtp||2023-05-31|Has expired: Upstream announced that this project is no longer being maintained. See https://esmtp.sourceforge.net/links.html for alternatives
 ftp/ftpmirror||2023-05-31|Has expired: Abandonware
+net-p2p/zetacoin||2023-06-01|Has expired: Broken for nearly a year
+net-p2p/zetacoin-daemon||2023-06-01|Has expired: Broken for nearly a year
+net-p2p/zetacoin-utils||2023-06-01|Has expired: Broken for nearly a year
+sysutils/puppet6|sysutils/puppet7|2023-06-01|Has expired: Puppet 6 has reached EOL
+sysutils/puppetserver6|sysutils/puppetserver7|2023-06-01|Has expired: Puppet 6 has reached EOL
+databases/puppetdb6|databases/puppetdb7|2023-06-01|Has expired: Puppet 6 has reached EOL
+databases/puppetdb-terminus6|databases/puppetdb-terminus7|2023-06-01|Has expired: Puppet 6 has reached EOL
+sysutils/boxbackup-devel||2023-06-01|Has expired: Requires upstream EOL OpenSSL 1.0.X
+www/webstone-ssl||2023-06-01|Has expired: Requires upstream EOL OpenSSL 1.0.X
+sysutils/bareos18-client|sysutils/bareos19-client|2023-06-01|Has expired: Upstream EOL reached on 2020-02-03
+sysutils/bareos18-server|sysutils/bareos19-server|2023-06-01|Has expired: Upstream EOL reached on 2020-02-03
+sysutils/bareos18-traymonitor|sysutils/bareos19-traymonitor|2023-06-01|Has expired: Upstream EOL reached on 2020-02-03
+net-mgmt/nagircbot||2023-06-01|Has expired: Broken for more than a year and fails to build on all supported release
+mail/spamdyke||2023-06-01|Has expired: Broken for more than a year and last upstream release was in 2015

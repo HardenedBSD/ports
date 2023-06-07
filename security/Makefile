@@ -266,6 +266,7 @@
     SUBDIR += krb5-118
     SUBDIR += krb5-119
     SUBDIR += krb5-120
+    SUBDIR += krb5-121
     SUBDIR += krb5-appl
     SUBDIR += krb5-devel
     SUBDIR += kstart
@@ -1128,7 +1129,6 @@
     SUBDIR += rubygem-omniauth-bitbucket
     SUBDIR += rubygem-omniauth-cas
     SUBDIR += rubygem-omniauth-cas3
-    SUBDIR += rubygem-omniauth-cas3-oauth2
     SUBDIR += rubygem-omniauth-dingtalk-oauth2
     SUBDIR += rubygem-omniauth-gitlab
     SUBDIR += rubygem-omniauth-jwt

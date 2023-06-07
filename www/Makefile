@@ -2106,7 +2106,6 @@
     SUBDIR += rubygem-rack-timeout
     SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rack22
-    SUBDIR += rubygem-rack227
     SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rackup
     SUBDIR += rubygem-rails-settings-cached

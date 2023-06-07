@@ -4,7 +4,7 @@ PORTREVISION=	6
 CATEGORIES=	math devel
 MASTER_SITES=	SF/${PORTNAME}/Spar/${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Modular math parser
 WWW=		http://spar.sourceforge.net/
 
@@ -15,9 +15,18 @@ USES=		dos2unix libtool ncurses readline
 DOS2UNIX_FILES=	lib/randist/rand.c
 USE_CSTD=	gnu89
 USE_LDCONFIG=	yes
+
 GNU_CONFIGURE=	yes
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
+=======
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=int-conversion
+.endif
+>>>>>>> freebsd/main
 
 post-patch:
 	@${REINPLACE_CMD} -e "s,-ldl,,g" \
@@ -28,4 +37,4 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/spar/*.so
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

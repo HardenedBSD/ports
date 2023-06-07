@@ -44,15 +44,13 @@ KSHVERSION=	2014-12-24
 
 STATIC_MAKE_ENV=	LDFLAGS+=-static
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
-=======
+
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
 CFLAGS+=	-Wno-error=int-conversion
 .endif
->>>>>>> freebsd/main
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|SF_FLAGS|SFIO_FLAGS|g' ${WRKSRC}/src/lib/libast/include/sfio*.h ${WRKSRC}/src/lib/libast/sfio/*.c

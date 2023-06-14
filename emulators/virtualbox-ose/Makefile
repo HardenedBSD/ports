@@ -123,10 +123,6 @@ OPTIONS_DEFAULT+=	PYTHON
 CONFLICTS_INSTALL+=	virtualbox-ose
 .endif
 
-.if ${ARCH} == "amd64"
-_ELF32!=	kldstat -q -m elf32 && echo yes || echo no
-.endif
-
 .if ${PORT_OPTIONS:MDEBUG}
 KMK_BUILDTYPE=	debug
 KMK_FLAGS+=	BUILD_TYPE=debug
@@ -196,14 +192,7 @@ PLIST_SUB+=	SDK=""
 PLIST_SUB+=	SDK="@comment "
 .endif
 
-.if ${ARCH} == i386
-KMK_ARCH=	freebsd.x86
-PLIST_SUB+=	I386=""
-.else
 KMK_ARCH=	freebsd.${ARCH}
-PLIST_SUB+=	I386="@comment "
-.endif
-
 PLIST_SUB+=	ARCH="${KMK_ARCH}"
 
 KMK_BUILDDIR=	${WRKSRC}/out/${KMK_ARCH}/${KMK_BUILDTYPE}
@@ -254,6 +243,7 @@ PLIST_SUB+=	PYTHON_PYCDIR=/ \
 CONFIGURE_ARGS+=	--with-openssl-dir="${OPENSSLBASE}"
 .endif
 
+<<<<<<< HEAD
 pre-everything::
 .if ${ARCH} == "amd64"
 .if ${_ELF32} != yes
@@ -265,6 +255,8 @@ pre-everything::
 .endif
 .endif
 
+=======
+>>>>>>> freebsd/main
 post-patch:
 	@${ECHO_CMD} 'VBOX_PATH_APP_PRIVATE_ARCH = ${VBOX_DIR}' > \
 	    ${WRKSRC}/LocalConfig.kmk

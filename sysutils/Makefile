@@ -279,6 +279,7 @@
     SUBDIR += devcpu-data-amd
     SUBDIR += devcpu-data-intel
     SUBDIR += devctl-jail-kmod
+    SUBDIR += devedeng
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
@@ -833,6 +834,7 @@
     SUBDIR += nomad
     SUBDIR += nomad-pot-driver
     SUBDIR += npadmin
+    SUBDIR += npmount
     SUBDIR += nq
     SUBDIR += nrg2iso
     SUBDIR += nss_ndb
@@ -1010,6 +1012,8 @@
     SUBDIR += php81-posix
     SUBDIR += php82-fileinfo
     SUBDIR += php82-posix
+    SUBDIR += php83-fileinfo
+    SUBDIR += php83-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -1315,6 +1319,7 @@
     SUBDIR += safe-rm
     SUBDIR += safecat
     SUBDIR += safecopy
+    SUBDIR += sake
     SUBDIR += samdruckerclientshell
     SUBDIR += samefile
     SUBDIR += samesame
@@ -1325,6 +1330,7 @@
     SUBDIR += savelogs
     SUBDIR += scalpel
     SUBDIR += scan_ffs
+    SUBDIR += scanbd
     SUBDIR += scanbuttond
     SUBDIR += scanmem
     SUBDIR += scct

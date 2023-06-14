@@ -26,6 +26,7 @@
     SUBDIR += amfora
     SUBDIR += amphetadesk
     SUBDIR += analog
+    SUBDIR += angie
     SUBDIR += anyremote2html
     SUBDIR += apache-mode.el
     SUBDIR += apache24
@@ -392,6 +393,7 @@
     SUBDIR += mod_php80
     SUBDIR += mod_php81
     SUBDIR += mod_php82
+    SUBDIR += mod_php83
     SUBDIR += mod_proctitle
     SUBDIR += mod_qos
     SUBDIR += mod_realdoc
@@ -1389,6 +1391,9 @@
     SUBDIR += php82-opcache
     SUBDIR += php82-session
     SUBDIR += php82-tidy
+    SUBDIR += php83-opcache
+    SUBDIR += php83-session
+    SUBDIR += php83-tidy
     SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpfpmtop

@@ -800,6 +800,8 @@
     SUBDIR += php81-sodium
     SUBDIR += php82-filter
     SUBDIR += php82-sodium
+    SUBDIR += php83-filter
+    SUBDIR += php83-sodium
     SUBDIR += picocrypt
     SUBDIR += picosha2
     SUBDIR += pidgin-encryption
@@ -878,6 +880,7 @@
     SUBDIR += py-certbot-dns-rfc2136
     SUBDIR += py-certbot-dns-route53
     SUBDIR += py-certbot-dns-sakuracloud
+    SUBDIR += py-certbot-dns-standalone
     SUBDIR += py-certbot-nginx
     SUBDIR += py-certifi
     SUBDIR += py-certstream
@@ -1012,7 +1015,6 @@
     SUBDIR += py-scrypt
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
-    SUBDIR += py-sequoia
     SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
@@ -1217,6 +1219,7 @@
     SUBDIR += secure_delete
     SUBDIR += sedutil
     SUBDIR += sequoia
+    SUBDIR += sequoia-sq
     SUBDIR += setaudit
     SUBDIR += sha1collisiondetection
     SUBDIR += sha2wordlist

@@ -339,18 +339,11 @@ BINARY_ALIAS=	sed=gsed
 BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
 .endif
 
-<<<<<<< HEAD
 .if ${OSVERSION} < 1400000
 # HBSD: OpenJDK is broken in 14-CURRENT.
 OPTIONS_DEFAULT+=	JAVA
 .endif
 
-.if ${ARCH:Mpowerpc*}
-EXTRA_PATCHES+=	${FILESDIR}/powerpc64
-.endif
-
-=======
->>>>>>> freebsd/main
 .if ${ARCH} == powerpc || ${ARCH} == powerpcspe || ${ARCH} == powerpc64
 CONFIGURE_ARGS+=	--disable-skia
 .endif

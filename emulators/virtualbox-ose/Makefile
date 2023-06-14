@@ -243,20 +243,6 @@ PLIST_SUB+=	PYTHON_PYCDIR=/ \
 CONFIGURE_ARGS+=	--with-openssl-dir="${OPENSSLBASE}"
 .endif
 
-<<<<<<< HEAD
-pre-everything::
-.if ${ARCH} == "amd64"
-.if ${_ELF32} != yes
-	@${ECHO_MSG} 'Requires 32-bit runtime support in kernel.'
-	@${ECHO_MSG} 'Rebuild kernel with "options COMPAT_FREEBSD32" and reboot.'
-.elif !exists(/usr/lib32/libc.so)
-	@${ECHO_MSG} 'Requires 32-bit libraries installed under /usr/lib32.'
-	@${ECHO_MSG} 'Do: cd /usr/src; make build32 install32; service ldconfig restart'
-.endif
-.endif
-
-=======
->>>>>>> freebsd/main
 post-patch:
 	@${ECHO_CMD} 'VBOX_PATH_APP_PRIVATE_ARCH = ${VBOX_DIR}' > \
 	    ${WRKSRC}/LocalConfig.kmk

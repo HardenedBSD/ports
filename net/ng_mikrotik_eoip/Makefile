@@ -10,10 +10,13 @@ WWW=		http://imax.in.ua/ng_mikrotik_eoip/
 
 LICENSE=	BSD2CLAUSE
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 BROKEN=		compilation fails due to a C error: id = *((unsigned int *)id; error: cast to 'unsigned int *' from smaller integer type 'uint16_t'
 
+=======
+>>>>>>> freebsd/main
 USES=		kmod uidfix
 
 OPTIONS_DEFINE=	PTABLE

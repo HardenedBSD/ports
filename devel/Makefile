@@ -4480,6 +4480,7 @@
     SUBDIR += py-confusable_homoglyphs
     SUBDIR += py-confuse
     SUBDIR += py-connection_pool
+    SUBDIR += py-cons
     SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-construct-classes
@@ -4595,6 +4596,7 @@
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
     SUBDIR += py-etils
+    SUBDIR += py-etuples
     SUBDIR += py-evdev
     SUBDIR += py-eventlib
     SUBDIR += py-ewah-bool-utils
@@ -4948,6 +4950,7 @@
     SUBDIR += py-microversion-parse
     SUBDIR += py-milc
     SUBDIR += py-mime
+    SUBDIR += py-miniKanren
     SUBDIR += py-minidump
     SUBDIR += py-minimongo
     SUBDIR += py-minio

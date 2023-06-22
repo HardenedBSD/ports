@@ -9,14 +9,9 @@ WWW=		https://gitlab.freedesktop.org/xorg/app/xcalc
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-RUN_DEPENDS=	font-misc-misc>=1.1.2:x11-fonts/font-misc-misc \
-		font-adobe-100dpi>=1.0.3:x11-fonts/font-adobe-100dpi \
-=======
 RUN_DEPENDS=	font-adobe-100dpi>=1.0.3:x11-fonts/font-adobe-100dpi \
->>>>>>> freebsd/main
 		font-alias>=1.0.3:x11-fonts/font-alias \
 		font-misc-misc>=1.1.2:x11-fonts/font-misc-misc \
 		xbitmaps>=1.1.0:x11/xbitmaps

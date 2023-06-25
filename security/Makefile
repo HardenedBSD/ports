@@ -1364,6 +1364,7 @@
     SUBDIR += zaproxy
     SUBDIR += zeek
     SUBDIR += zeronet
+    SUBDIR += zlint
     SUBDIR += zzuf
 
 .include <bsd.port.subdir.mk>

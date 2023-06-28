@@ -101,6 +101,8 @@ OPTIONS_DEFINE=	REH
 OPTIONS_DEFAULT=# none
 REH_DESC=	Build remote extension host
 
+USE_HARDENING=	relro:off
+
 ELECTRON_DIR=	${.CURDIR}/../../devel/electron22
 .include	"${ELECTRON_DIR}/Makefile.version"
 

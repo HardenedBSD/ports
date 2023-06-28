@@ -460,6 +460,7 @@
     SUBDIR += cpputest
     SUBDIR += cproto
     SUBDIR += cpu_features
+    SUBDIR += cpu_rec_rs
     SUBDIR += cquery
     SUBDIR += cram
     SUBDIR += crc32c
@@ -602,6 +603,7 @@
     SUBDIR += electron22
     SUBDIR += electron23
     SUBDIR += electron24
+    SUBDIR += electron25
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat

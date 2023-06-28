@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 .if defined(PYTHONTOOLS)
 RUN_DEPENDS=	frr-reload:net/frr7
 
-USES=	python:run,3.6+ shebangfix
+USES=	python:run shebangfix
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/frr|${ETCDIR}|g' \
@@ -46,7 +46,7 @@ LIB_DEPENDS=	libjson-c.so:devel/json-c \
 USE_HARDENING=	safestack
 
 USES=		autoreconf bison compiler:c++11-lang gmake pkgconfig libtool \
-		makeinfo python:build,3.6+ readline shebangfix
+		makeinfo python:build readline shebangfix
 
 BINARY_ALIAS=	python=${PYTHON_VERSION}
 

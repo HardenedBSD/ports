@@ -12,12 +12,8 @@ WWW=		https://packages.python.org/mahotas/
 BUILD_DEPENDS=	${PYNUMPY}
 LIB_DEPENDS=	libfreeimage.so:graphics/freeimage
 
-<<<<<<< HEAD
-USES=		python:3.7+
-=======
 USE_GCC=	yes
 USES=		python
->>>>>>> freebsd/main
 USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

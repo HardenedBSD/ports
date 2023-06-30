@@ -22,9 +22,8 @@ RUN_DEPENDS=	${CRAN_DEPENDS}
 
 USES=		cran:auto-plist,compiles
 
-<<<<<<< HEAD
 USE_HARDENING=  pie:off
-=======
+
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -32,6 +31,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|PKG_CPPFLAGS=|PKG_CPPFLAGS=-Wno-error=enum-constexpr-conversion |g' \
 		${WRKSRC}/src/Makevars
 .endif
->>>>>>> freebsd/main
 
 .include <bsd.port.mk>

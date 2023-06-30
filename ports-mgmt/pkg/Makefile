@@ -1,5 +1,5 @@
 PORTNAME=	pkg
-DISTVERSION=	1.19
+DISTVERSION=	1.19.2
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 
@@ -9,10 +9,11 @@ WWW=		https://github.com/freebsd/pkg
 
 LICENSE=	BSD2CLAUSE
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	HardenedBSD
-GH_PROJECT=	pkg
-GH_TAGNAME=	290398f86d67098d4caffbf7a6d903598953699a
+USE_GITLAB=	yes
+GL_SITE=	https://git.hardenedbsd.org
+GL_ACCOUNT=	HardenedBSD
+GL_PROJECT=	pkg
+GL_COMMIT=	9a546cfc4bb552a13e235f3c81940cc809ddc56e
 
 USE_LDCONFIG=	${PREFIX}/lib/compat/pkg
 HAS_CONFIGURE=	yes

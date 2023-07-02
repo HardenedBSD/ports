@@ -658,6 +658,7 @@
     SUBDIR += openfst
     SUBDIR += openlibm
     SUBDIR += openmesh
+    SUBDIR += openscop
     SUBDIR += opensolaris-libm
     SUBDIR += openturns
     SUBDIR += optpp
@@ -930,7 +931,6 @@
     SUBDIR += py-fvcore
     SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
-    SUBDIR += py-gmpy
     SUBDIR += py-gmpy2
     SUBDIR += py-grandalf
     SUBDIR += py-graphillion

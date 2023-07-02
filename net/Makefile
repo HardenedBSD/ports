@@ -1051,6 +1051,7 @@
     SUBDIR += py-duet
     SUBDIR += py-dugong
     SUBDIR += py-ec2-cli-tools
+    SUBDIR += py-ephemeral-port-reserve
     SUBDIR += py-errbot
     SUBDIR += py-eventlet
     SUBDIR += py-gdown

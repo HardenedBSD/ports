@@ -30,6 +30,8 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 USES=		compiler:c++17-lang cpe python:build scons
 USE_RC_SUBR=	mongod
 
+CFLAGS+=	-D_HAS_AUTO_PTR_ETC=0
+
 PORTSCOUT=	limit:^4\.4\.
 
 MPROTECT_DISABLE+=	bin/mongo

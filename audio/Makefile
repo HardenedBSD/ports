@@ -364,7 +364,6 @@
     SUBDIR += libgig
     SUBDIR += libgme
     SUBDIR += libgpod
-    SUBDIR += libgroove
     SUBDIR += libid3tag
     SUBDIR += libinstpatch
     SUBDIR += libkcddb
@@ -626,7 +625,6 @@
     SUBDIR += pulseaudio-module-sndio
     SUBDIR += pulseaudio-module-xrdp
     SUBDIR += pulseaudio-qt
-    SUBDIR += pulseeffects
     SUBDIR += py-SoundFile
     SUBDIR += py-al
     SUBDIR += py-apetag
@@ -645,6 +643,7 @@
     SUBDIR += py-musicbrainzngs
     SUBDIR += py-mutagen
     SUBDIR += py-opuslib
+    SUBDIR += py-playsound
     SUBDIR += py-pocketsphinx
     SUBDIR += py-pulsectl
     SUBDIR += py-pyacoustid

@@ -279,7 +279,6 @@
     SUBDIR += kineto
     SUBDIR += kiwix-tools
     SUBDIR += kohana
-    SUBDIR += kristall
     SUBDIR += lagrange
     SUBDIR += larbin
     SUBDIR += libapreq2
@@ -336,6 +335,7 @@
     SUBDIR += mediawiki135
     SUBDIR += mediawiki138
     SUBDIR += mediawiki139
+    SUBDIR += mediawiki140
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -1450,6 +1450,8 @@
     SUBDIR += py-bottle
     SUBDIR += py-bottle-cork
     SUBDIR += py-branca
+    SUBDIR += py-bravado
+    SUBDIR += py-bravado-core
     SUBDIR += py-cachecontrol
     SUBDIR += py-cachelib
     SUBDIR += py-caldav
@@ -2380,7 +2382,6 @@
     SUBDIR += varnish7
     SUBDIR += varnish_exporter
     SUBDIR += vaultwarden-web_vault
-    SUBDIR += vdr-plugin-live
     SUBDIR += vdradmin-am
     SUBDIR += vertx
     SUBDIR += vger

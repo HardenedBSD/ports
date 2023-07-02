@@ -83,6 +83,7 @@
     SUBDIR += b2sum
     SUBDIR += b3sum
     SUBDIR += b43-fwcutter
+    SUBDIR += backdown
     SUBDIR += backuppc
     SUBDIR += backuppc-devel
     SUBDIR += backuppc4
@@ -183,11 +184,9 @@
     SUBDIR += cfengine-devel
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
-    SUBDIR += cfengine-masterfiles318
     SUBDIR += cfengine-masterfiles320
     SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine-masterfiles322
-    SUBDIR += cfengine318
     SUBDIR += cfengine320
     SUBDIR += cfengine321
     SUBDIR += cfengine322

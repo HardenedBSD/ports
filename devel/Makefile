@@ -343,8 +343,6 @@
     SUBDIR += cbrowser
     SUBDIR += cc65
     SUBDIR += ccache
-    SUBDIR += ccache-memcached
-    SUBDIR += ccache-memcached-static
     SUBDIR += ccache-static
     SUBDIR += ccache4
     SUBDIR += cccc
@@ -598,8 +596,6 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron19
-    SUBDIR += electron21
     SUBDIR += electron22
     SUBDIR += electron23
     SUBDIR += electron24
@@ -899,7 +895,6 @@
     SUBDIR += golangci-lint
     SUBDIR += golint
     SUBDIR += google-cloud-cpp
-    SUBDIR += google-cloud-cpp117
     SUBDIR += google-perftools
     SUBDIR += google-styleguide
     SUBDIR += googletest
@@ -1203,7 +1198,6 @@
     SUBDIR += libdispatch
     SUBDIR += libdistance
     SUBDIR += libdlmalloc
-    SUBDIR += libdlna
     SUBDIR += libdnsres
     SUBDIR += libdombey
     SUBDIR += libdparse
@@ -1456,7 +1450,6 @@
     SUBDIR += libzvbi
     SUBDIR += lightning
     SUBDIR += linenoise-ng
-    SUBDIR += linux-c7-dbus-glib
     SUBDIR += linux-c7-dbus-libs
     SUBDIR += linux-c7-devtools
     SUBDIR += linux-c7-elfutils-libelf
@@ -1618,6 +1611,7 @@
     SUBDIR += mutagen
     SUBDIR += myrepos
     SUBDIR += nana
+    SUBDIR += nano-signal-slot
     SUBDIR += nanopb
     SUBDIR += nant
     SUBDIR += nasm
@@ -4514,6 +4508,7 @@
     SUBDIR += py-curio
     SUBDIR += py-cursive
     SUBDIR += py-curtsies
+    SUBDIR += py-custodian
     SUBDIR += py-cvss
     SUBDIR += py-cwcwidth
     SUBDIR += py-cxx

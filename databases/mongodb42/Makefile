@@ -46,6 +46,8 @@ PAGEEXEC_DISABLE+=	bin/mongo
 PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
+CFLAGS+=	-D_HAS_AUTO_PTR_ETC=0
+
 CONFLICTS_INSTALL=	mongodb[0-9][0-9] # etc/mongodb.conf.sample
 
 OPTIONS_DEFINE=	LTO SASL SSL

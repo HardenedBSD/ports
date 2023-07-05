@@ -447,6 +447,7 @@
     SUBDIR += cpan-upload-http
     SUBDIR += cpp-hocon
     SUBDIR += cpp-netlib
+    SUBDIR += cpp-utilities
     SUBDIR += cpp2py
     SUBDIR += cppcheck
     SUBDIR += cppi
@@ -1677,7 +1678,7 @@
     SUBDIR += ocaml-result
     SUBDIR += ocaml-sdl
     SUBDIR += ocaml-sem
-    SUBDIR += ocaml-sexplib
+    SUBDIR += ocaml-sexplib0
     SUBDIR += ocaml-topkg
     SUBDIR += ocaml-type_conv
     SUBDIR += ocaml-uchar
@@ -5908,6 +5909,7 @@
     SUBDIR += qt6-tools
     SUBDIR += qt6-translations
     SUBDIR += qtcreator
+    SUBDIR += qtutilities
     SUBDIR += quantum
     SUBDIR += quickcheck++
     SUBDIR += quickcpplib

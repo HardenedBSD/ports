@@ -487,6 +487,7 @@
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
+    SUBDIR += gh-md-toc
     SUBDIR += gigolo
     SUBDIR += gitwatch
     SUBDIR += gkfreq

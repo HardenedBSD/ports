@@ -1,8 +1,12 @@
 PORTNAME=	kitty
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.28.1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11 wayland
+
+PATCH_SITES=	https://github.com/kovidgoyal/${PORTNAME}/commit/
+PATCHFILES+=	95d15648fa37.patch:-p1 # https://github.com/kovidgoyal/kitty/issues/6422
+PATCHFILES+=	7d2dc252f149.patch:-p1 # https://github.com/kovidgoyal/kitty/issues/6422
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Cross-platform, fast, featureful, GPU-based terminal emulator
@@ -93,10 +97,9 @@ EXTRA_PATCHES=	${PATCHDIR}/extra-patch-kitty_data-types.h
 .endif
 
 # For librsync, we need to set header and library path
-# --ignore-compiler-warnings is for https://github.com/kovidgoyal/kitty/issues/6422
 do-build:
 	(cd ${WRKSRC} && \
-	        ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} setup.py linux-package --ignore-compiler-warnings --update-check-interval 0 --extra-include-dirs ${LOCALBASE}/include/ --extra-library-dirs ${LOCALBASE}/lib)
+	        ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} setup.py linux-package --update-check-interval 0 --extra-include-dirs ${LOCALBASE}/include/ --extra-library-dirs ${LOCALBASE}/lib)
 	${FIND} ${INSTALL_WRKSRC} -name __pycache__ -type d -exec ${RM} -r -- {} +
 
 do-install:

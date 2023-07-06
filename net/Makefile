@@ -1039,6 +1039,7 @@
     SUBDIR += py-aiohttp-socks
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
+    SUBDIR += py-anonfile
     SUBDIR += py-avahi
     SUBDIR += py-bonsai
     SUBDIR += py-cepa

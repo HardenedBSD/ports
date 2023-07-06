@@ -26,9 +26,13 @@ TARGETARCH=	${FLAVOR}
 USES=		compiler:c++11-lang cpe gmake iconv libtool makeinfo tar:xz
 CPE_VENDOR=	gnu
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 CXXFLAGS+=	-std=c++11
+=======
+USE_CXXSTD=	c++11
+>>>>>>> freebsd/main
 
 PLIST_SUB=	OPSYS=${OPSYS:tl} \
 		SUFFIX=${SUFFIX} \

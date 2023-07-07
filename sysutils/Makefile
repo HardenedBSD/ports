@@ -377,6 +377,7 @@
     SUBDIR += faketty
     SUBDIR += fand
     SUBDIR += fanout
+    SUBDIR += fastfetch
     SUBDIR += fatback
     SUBDIR += fcode-utils
     SUBDIR += fconfig

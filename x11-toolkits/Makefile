@@ -187,6 +187,7 @@
     SUBDIR += qt6-quicktimeline
     SUBDIR += qt6-shadertools
     SUBDIR += qt6-virtualkeyboard
+    SUBDIR += qt6pas
     SUBDIR += qtermwidget
     SUBDIR += qwt5-qt5
     SUBDIR += qwt6

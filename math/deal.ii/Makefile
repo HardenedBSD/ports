@@ -25,15 +25,8 @@ LIB_DEPENDS=	libboost_serialization.so:devel/boost-libs \
 USES=		blaslapack cmake:testing compiler:c++17-lang localbase:ldflags xorg
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	${PORTNAME:tl:S/.//}
-GH_PROJECT=	${PORTNAME:tl:S/.//}
-
-=======
->>>>>>> freebsd/main
 CMAKE_OFF=	DEAL_II_ALLOW_BUNDLED DEAL_II_COMPONENT_EXAMPLES \
 		DEAL_II_WITH_P4EST DEAL_II_WITH_TRILINOS DEAL_II_WITH_UMFPACK \
 		DEAL_II_WITH_NANOFLANN DEAL_II_WITH_MUPARSER DEAL_II_WITH_ASSIMP \

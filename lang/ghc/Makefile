@@ -15,13 +15,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=		aarch64 amd64 i386
 
-<<<<<<< HEAD
 USE_HARDENING=		pie:off
 CONFIGURE_ARGS+=	--enable-dtrace=0
 MPROTECT_DISABLE=	lib/ghc-${GHC_VERSION}/bin/ghc
-=======
+
 BUILD_DEPENDS=		${LOCALBASE}/lib/libgmp.so:math/gmp
->>>>>>> freebsd/main
 
 USES=			autoreconf compiler:c11 gmake \
 			ncurses perl5 python:build shebangfix \

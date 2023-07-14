@@ -20,16 +20,10 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 RUN_DEPENDS=	bash:shells/bash \
 		psselect:print/psutils
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-GNU_CONFIGURE=	yes
-USES=		ghostscript:run jpeg libtool:build localbase:ldflags \
-		pkgconfig shebangfix tar:bzip2 xorg
-=======
 USES=		autoreconf desktop-file-utils gmake jpeg libtool:build \
 		localbase:ldflags pkgconfig shebangfix tar:bzip2 xorg
->>>>>>> freebsd/main
 USE_XORG=	ice sm x11 xext xft xmu xpm xt
 
 SHEBANG_FILES=	share/bin/imgmerge share/bin/xpaint_ocr

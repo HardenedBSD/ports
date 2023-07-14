@@ -1,6 +1,6 @@
 PORTNAME=	nginx
 PORTVERSION=	1.24.0
-PORTREVISION?=	6
+PORTREVISION?=	8
 PORTEPOCH=	3
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
@@ -253,7 +253,8 @@ CONFIGURE_ARGS+=	--with-ld-opt="-L ${LOCALBASE}/lib -lpcre"
 LIB_DEPENDS+=		libpcre.so:devel/pcre
 .endif
 
-.if empty(PORT_OPTIONS:MNJS_XML)
+.if ${PORT_OPTIONS:MNJS} && empty(PORT_OPTIONS:MNJS_XML)
+CONFIGURE_ENV+=		NJS_LIBXSLT=NO
 NJS_CONFIGURE_ARGS=	--no-libxml2
 .endif
 
@@ -266,6 +267,11 @@ pre-everything::
 	@${ECHO_MSG} "This port install Passenger module only"
 .endif
 	@${ECHO_MSG}
+
+post-extract-NAXSI-on:
+	@${MKDIR} ${WRKDIR}/naxsi-${NAXSI_NGINX_VER}
+	@${MV} ${WRKDIR}/naxsi_rules ${WRKDIR}/naxsi_src \
+		${WRKDIR}/naxsi-${NAXSI_NGINX_VER}
 
 pre-patch-HTTPV3-on:
 	@${MV} ${WRKSRC}/README ${WRKSRC}/README.1st
@@ -307,6 +313,10 @@ post-patch-HTTP_ZIP-on:
 
 post-patch-ICONV-on:
 	@${REINPLACE_CMD} 's!%%PREFIX%%!${LOCALBASE}!g' ${WRKSRC_iconv}/config
+
+post-patch-NAXSI-on:
+	@${REINPLACE_CMD} 's!MSIZE!TOK_MSIZE!g' \
+		${WRKSRC_naxsi}/naxsi_src/libinjection/src/libinjection_sqli.c
 
 post-patch-PASSENGER-on:
 	@${REINPLACE_CMD} \
@@ -371,7 +381,7 @@ do-install-LINK-on:
 
 do-install-NAXSI-on:
 	${INSTALL_DATA} \
-	${WRKDIR}/naxsi-${NAXSI_NGINX_VER}/naxsi_config/naxsi_core.rules \
+	${WRKDIR}/naxsi-${NAXSI_NGINX_VER}/naxsi_rules/naxsi_core.rules \
 	${STAGEDIR}${ETCDIR}
 .endif
 

@@ -330,9 +330,9 @@
     SUBDIR += caliper
     SUBDIR += capnproto
     SUBDIR += capnproto080
+    SUBDIR += capstone
     SUBDIR += capstone3
     SUBDIR += capstone4
-    SUBDIR += capstone5
     SUBDIR += cargo-bloat
     SUBDIR += cargo-c
     SUBDIR += cargo-generate
@@ -4448,6 +4448,7 @@
     SUBDIR += py-click-creds
     SUBDIR += py-click-default-group
     SUBDIR += py-click-default-group-wheel
+    SUBDIR += py-click-help-colors
     SUBDIR += py-click-log
     SUBDIR += py-click-option-group
     SUBDIR += py-click-plugins

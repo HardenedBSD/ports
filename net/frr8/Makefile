@@ -1,7 +1,6 @@
 PORTNAME=	frr
-PORTVERSION=	8.5
+PORTVERSION=	8.5.2
 DISTVERSIONPREFIX=	frr-
-PORTREVISION=	1
 CATEGORIES=	net
 .if defined(PYTHONTOOLS)
 PKGNAMESUFFIX=	8-pythontools
@@ -20,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 .if defined(PYTHONTOOLS)
 RUN_DEPENDS=	frr-reload:net/frr8
 
-USES=	python:run,3.6+ shebangfix
+USES=	python:run shebangfix
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/frr|${ETCDIR}|g' \
@@ -43,7 +42,7 @@ LIB_DEPENDS=	libjson-c.so:devel/json-c \
 		libpcre2-8.so:devel/pcre2
 
 USES=		autoreconf bison compiler:c++11-lang gmake pkgconfig libtool \
-		makeinfo python:build,3.6+ readline shebangfix
+		makeinfo python:build readline shebangfix
 
 BINARY_ALIAS=	python=${PYTHON_VERSION}
 
@@ -93,7 +92,7 @@ GROUPS=	frr frrvty
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-# PIM compile but doesn't work on FreeBSD
+# PIMD and PBRD compile but doesn't work on FreeBSD
 CONFIGURE_ARGS=	--enable-user=frr \
 		--enable-group=frr \
 		--enable-vty-group=frrvty \
@@ -104,6 +103,7 @@ CONFIGURE_ARGS=	--enable-user=frr \
 		--disable-pathd \
 		--disable-ospfclient \
 		--disable-pimd \
+		--disable-pbrd \
 		--with-vtysh-pager=cat
 
 MANPAGES_BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}sphinx>=0,1:textproc/py-sphinx@${PY_FLAVOR}

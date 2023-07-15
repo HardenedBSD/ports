@@ -1,8 +1,13 @@
 PORTNAME=	waybar
-DISTVERSION=	0.9.17
-PORTREVISION=	1
+DISTVERSION=	0.9.19
+PORTREVISION=	2
 CATEGORIES=	x11 wayland
 PKGNAMESUFFIX=	${FLAVOR:N${FLAVORS:[1]}:C/.+/-${FLAVOR}/}
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	1fb2b8efd5a1.patch:-p1 # https://github.com/Alexays/Waybar/pull/2284
+PATCHFILES+=	e2bfa5e019f6.patch:-p1 # https://github.com/Alexays/Waybar/pull/2286
+PATCHFILES+=	d774de6c4622.patch:-p1 # https://github.com/Alexays/Waybar/pull/2293
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Highly customizable Wayland bar for Sway and wlroots-based compositors
@@ -20,7 +25,7 @@ LIB_DEPENDS=	libdate-tz.so:devel/date \
 		libxkbregistry.so:x11/libxkbcommon
 TEST_DEPENDS=	catch>0:devel/catch
 
-FLAVORS=	default hyprland nopulse
+FLAVORS=	default hyprland hyprland_nopulse nopulse
 CONFLICTS_INSTALL=	${PORTNAME}*
 
 USES=		compiler:c++17-lang gnome meson pkgconfig
@@ -33,7 +38,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 		etc/xdg/${PORTNAME}/config \
 		etc/xdg/${PORTNAME}/style.css
 
-.if ${FLAVOR:U} == hyprland
+.if ${FLAVOR:U:Mhyprland*}
 # https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/40
 MESON_ARGS+=	-Dexperimental=true
 .endif
@@ -44,11 +49,15 @@ CONFIGURE_ENV+=	PKG_CONFIG_PATH="${WRKDIR}"
 SUB_FILES+=	date.pc
 .endif
 
-OPTIONS_DEFINE=	DBUS EVDEV GLS ICONSFONT JACK MANPAGES MPD MPRIS PULSEAUDIO SNDIO UDEV UPOWER
-OPTIONS_DEFAULT=DBUS EVDEV GLS ICONSFONT JACK MANPAGES MPD MPRIS PULSEAUDIO SNDIO UDEV UPOWER
-.if ${FLAVOR:U} == nopulse
-OPTIONS_EXCLUDE=PULSEAUDIO
+OPTIONS_DEFINE=		CAVA DBUS EVDEV GLS ICONSFONT JACK MANPAGES MPD MPRIS PULSEAUDIO SNDIO UDEV UPOWER
+OPTIONS_DEFAULT=	CAVA DBUS EVDEV GLS ICONSFONT JACK MANPAGES MPD MPRIS PULSEAUDIO SNDIO UDEV UPOWER
+OPTIONS_EXCLUDE+=	CAVA # https://github.com/karlstav/cava/issues/487
+.if ${FLAVOR:U:M*nopulse}
+OPTIONS_EXCLUDE+=	PULSEAUDIO
 .endif
+
+CAVA_LIB_DEPENDS=	libcava.so:audio/cava
+CAVA_MESON_ENABLED=	cava
 
 DBUS_LIB_DEPENDS=	libdbusmenu-gtk3.so:devel/libdbusmenu
 DBUS_MESON_ENABLED=	dbusmenu-gtk
@@ -79,8 +88,10 @@ MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
 			man/man5/${PORTNAME}-cpu.5.gz \
 			man/man5/${PORTNAME}-custom.5.gz \
 			man/man5/${PORTNAME}-disk.5.gz \
+			man/man5/${PORTNAME}-dwl-tags.5.gz \
 			man/man5/${PORTNAME}-gamemode.5.gz \
 			man/man5/${PORTNAME}-idle-inhibitor.5.gz \
+			man/man5/${PORTNAME}-image.5.gz \
 			man/man5/${PORTNAME}-inhibitor.5.gz \
 			man/man5/${PORTNAME}-keyboard-state.5.gz \
 			man/man5/${PORTNAME}-memory.5.gz \
@@ -88,6 +99,7 @@ MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
 			man/man5/${PORTNAME}-mpris.5.gz \
 			man/man5/${PORTNAME}-network.5.gz \
 			man/man5/${PORTNAME}-pulseaudio.5.gz \
+			man/man5/${PORTNAME}-river-layout.5.gz \
 			man/man5/${PORTNAME}-river-mode.5.gz \
 			man/man5/${PORTNAME}-river-tags.5.gz \
 			man/man5/${PORTNAME}-river-window.5.gz \
@@ -101,6 +113,7 @@ MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
 			man/man5/${PORTNAME}-temperature.5.gz \
 			man/man5/${PORTNAME}-tray.5.gz \
 			man/man5/${PORTNAME}-upower.5.gz \
+			man/man5/${PORTNAME}-wireplumber.5.gz \
 			man/man5/${PORTNAME}-wlr-taskbar.5.gz \
 			man/man5/${PORTNAME}-wlr-workspaces.5.gz \
 			man/man5/${PORTNAME}.5.gz \
@@ -138,13 +151,15 @@ post-patch:
 # Temporarily use ConsoleKit2 like sysutils/gnome-settings-daemon
 	@${REINPLACE_CMD} -e 's,/login1,/ConsoleKit/Manager,' \
 		-e 's,login1\([".]\),ConsoleKit\1,g' \
+		${WRKSRC}/src/modules/backlight.cpp \
 		${WRKSRC}/src/modules/gamemode.cpp \
 		${WRKSRC}/src/modules/inhibitor.cpp \
-		${WRKSRC}/src/modules/upower/upower.cpp
+		${WRKSRC}/src/modules/upower/upower.cpp \
+		${WRKSRC}/src/util/prepare_for_sleep.cpp
 # Respect PREFIX for icons
 	@${REINPLACE_CMD} 's,/usr/share,${DATADIR:H},' \
 		${WRKSRC}/src/modules/wlr/taskbar.cpp
-.if ${FLAVOR:U} == hyprland
+.if ${FLAVOR:U:Mhyprland*}
 # Use hyprctl to switch workspaces
 	@${REINPLACE_CMD} 's/zext_workspace_handle_v1_activate(workspace_handle_);/const std::string command = "hyprctl dispatch workspace " + name_;\n\tsystem(command.c_str());/g' \
 		${WRKSRC}/src/modules/wlr/workspace_manager.cpp

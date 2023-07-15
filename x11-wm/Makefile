@@ -14,6 +14,7 @@
     SUBDIR += bspwm
     SUBDIR += bspwm-devel
     SUBDIR += cage
+    SUBDIR += cage-devel
     SUBDIR += cagebreak
     SUBDIR += chamfer
     SUBDIR += compiz
@@ -32,6 +33,7 @@
     SUBDIR += e16-docs
     SUBDIR += echinus
     SUBDIR += emerald
+    SUBDIR += emwm
     SUBDIR += enlightenment
     SUBDIR += epplets
     SUBDIR += euclid-wm
@@ -47,7 +49,6 @@
     SUBDIR += hikari
     SUBDIR += hs-xmonad
     SUBDIR += hyprland
-    SUBDIR += hyprland-devel
     SUBDIR += i3
     SUBDIR += icewm
     SUBDIR += ittywm
@@ -78,7 +79,6 @@
     SUBDIR += obpager
     SUBDIR += openbox
     SUBDIR += oroborus
-    SUBDIR += pager
     SUBDIR += peksystray
     SUBDIR += pekwm
     SUBDIR += phluid
@@ -95,6 +95,7 @@
     SUBDIR += rubygem-uh-layout
     SUBDIR += rubygem-uh-wm
     SUBDIR += sawfish
+    SUBDIR += sawfish-pager
     SUBDIR += sdorfehs
     SUBDIR += selectwm
     SUBDIR += skippy-xd

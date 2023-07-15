@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/lib/libowfat.a:${LIBOWFAT_PORT}
 USE_HARDENING=	pie:off relro:off
 
 SNAPSHOT=	20170319
-USES=		tar:bzip2 gmake ssl
+USES=		tar:bzip2 gmake localbase ssl
 WRKSRC=		${WRKDIR}/${PORTNAME}
 CFLAGS+=	-DATTRIBS=512
 SBINFILES=	acl addindex bindrequest dumpacls dumpidx idx2ldif parse \

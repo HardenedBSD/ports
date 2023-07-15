@@ -43,8 +43,8 @@ MAKE_ARGS+=	pch=off
 
 .include <bsd.port.options.mk>
 
-.if ${OSVERSION} > 1400000
-USES+=	llvm:build
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400000
+USES+=	llvm:16,build
 CC=	${_LLVM_MK_PREFIX}/bin/clang
 CPP=	${_LLVM_MK_PREFIX}/bin/clang-cpp
 CXX=	${_LLVM_MK_PREFIX}/bin/clang++

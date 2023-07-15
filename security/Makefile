@@ -62,6 +62,7 @@
     SUBDIR += bzrtp
     SUBDIR += ca_root_nss
     SUBDIR += caesarcipher
+    SUBDIR += caldera
     SUBDIR += calife
     SUBDIR += cardpeek
     SUBDIR += cargo-audit
@@ -139,7 +140,6 @@
     SUBDIR += easy-rsa
     SUBDIR += enchive
     SUBDIR += eschalot
-    SUBDIR += esteidfirefoxplugin
     SUBDIR += expiretable
     SUBDIR += f-prot
     SUBDIR += fakebo
@@ -170,6 +170,7 @@
     SUBDIR += gef
     SUBDIR += gibson
     SUBDIR += git-credential-gopass
+    SUBDIR += git-credential-oauth
     SUBDIR += git-crypt
     SUBDIR += git-remote-gcrypt
     SUBDIR += git-secret
@@ -196,7 +197,8 @@
     SUBDIR += gpgdir
     SUBDIR += gpgme
     SUBDIR += gpgme-cpp
-    SUBDIR += gpgme-qt5
+    SUBDIR += gpgme-qt
+    SUBDIR += gpgme-qt-headers
     SUBDIR += gsa
     SUBDIR += gsad
     SUBDIR += gsasl
@@ -238,6 +240,7 @@
     SUBDIR += ipsec-tools
     SUBDIR += ipv6toolkit
     SUBDIR += isal-kmod
+    SUBDIR += ismtp
     SUBDIR += isnprober
     SUBDIR += john
     SUBDIR += kbfsd
@@ -248,7 +251,6 @@
     SUBDIR += keepassxc
     SUBDIR += keybase
     SUBDIR += keychain
-    SUBDIR += keynote
     SUBDIR += keyprint
     SUBDIR += keysmith
     SUBDIR += kf5-kdesu
@@ -262,9 +264,9 @@
     SUBDIR += kpkpass
     SUBDIR += kpmenu
     SUBDIR += krb5
-    SUBDIR += krb5-118
     SUBDIR += krb5-119
     SUBDIR += krb5-120
+    SUBDIR += krb5-121
     SUBDIR += krb5-appl
     SUBDIR += krb5-devel
     SUBDIR += kstart
@@ -417,7 +419,6 @@
     SUBDIR += openssl-unsafe
     SUBDIR += openssl30
     SUBDIR += openssl31
-    SUBDIR += openssl_tpm_engine
     SUBDIR += openvas
     SUBDIR += openvpn
     SUBDIR += openvpn-admin
@@ -673,7 +674,6 @@
     SUBDIR += p5-Net-OpenID-JanRain
     SUBDIR += p5-Net-OpenID-Server
     SUBDIR += p5-Net-Radius-Server
-    SUBDIR += p5-Net-SAML
     SUBDIR += p5-Net-SAML2
     SUBDIR += p5-Net-SSH-AuthorizedKeysFile
     SUBDIR += p5-Net-SSL-ExpireDate
@@ -685,8 +685,6 @@
     SUBDIR += p5-Nmap-Scanner
     SUBDIR += p5-OpenCA-CRL
     SUBDIR += p5-OpenCA-CRR
-    SUBDIR += p5-OpenCA-OpenSSL
-    SUBDIR += p5-OpenCA-PKCS7
     SUBDIR += p5-OpenCA-REQ
     SUBDIR += p5-OpenCA-X509
     SUBDIR += p5-PBKDF2-Tiny
@@ -799,6 +797,8 @@
     SUBDIR += php81-sodium
     SUBDIR += php82-filter
     SUBDIR += php82-sodium
+    SUBDIR += php83-filter
+    SUBDIR += php83-sodium
     SUBDIR += picocrypt
     SUBDIR += picosha2
     SUBDIR += pidgin-encryption
@@ -877,8 +877,10 @@
     SUBDIR += py-certbot-dns-rfc2136
     SUBDIR += py-certbot-dns-route53
     SUBDIR += py-certbot-dns-sakuracloud
+    SUBDIR += py-certbot-dns-standalone
     SUBDIR += py-certbot-nginx
     SUBDIR += py-certifi
+    SUBDIR += py-certomancer
     SUBDIR += py-certstream
     SUBDIR += py-ckcc-protocol
     SUBDIR += py-coincurve
@@ -900,6 +902,7 @@
     SUBDIR += py-fail2ban
     SUBDIR += py-fido2
     SUBDIR += py-first-server
+    SUBDIR += py-flask-bcrypt
     SUBDIR += py-flask-httpauth
     SUBDIR += py-flask-kerberos
     SUBDIR += py-flask-saml
@@ -915,6 +918,15 @@
     SUBDIR += py-gvm-tools
     SUBDIR += py-hkdf
     SUBDIR += py-htpasswd
+    SUBDIR += py-httpx-auth
+    SUBDIR += py-iris-check-module
+    SUBDIR += py-iris-client
+    SUBDIR += py-iris-evtx-module
+    SUBDIR += py-iris-intelowl-module
+    SUBDIR += py-iris-misp-module
+    SUBDIR += py-iris-module-interface
+    SUBDIR += py-iris-vt-module
+    SUBDIR += py-iris-webhooks-module
     SUBDIR += py-itsdangerous
     SUBDIR += py-josepy
     SUBDIR += py-keepkey
@@ -931,6 +943,7 @@
     SUBDIR += py-msoffcrypto-tool
     SUBDIR += py-muacrypt
     SUBDIR += py-nassl
+    SUBDIR += py-netbox-secrets
     SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
     SUBDIR += py-noiseprotocol
@@ -1001,7 +1014,6 @@
     SUBDIR += py-scrypt
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
-    SUBDIR += py-sequoia
     SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
@@ -1077,10 +1089,8 @@
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-doorkeeper-rails61
-    SUBDIR += rubygem-doorkeeper562
     SUBDIR += rubygem-duo_api
     SUBDIR += rubygem-ed25519
-    SUBDIR += rubygem-ed2551912
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth
@@ -1119,8 +1129,6 @@
     SUBDIR += rubygem-omniauth-atlassian-oauth2
     SUBDIR += rubygem-omniauth-bitbucket
     SUBDIR += rubygem-omniauth-cas
-    SUBDIR += rubygem-omniauth-cas3
-    SUBDIR += rubygem-omniauth-cas3-oauth2
     SUBDIR += rubygem-omniauth-dingtalk-oauth2
     SUBDIR += rubygem-omniauth-gitlab
     SUBDIR += rubygem-omniauth-jwt
@@ -1130,6 +1138,7 @@
     SUBDIR += rubygem-omniauth-saml
     SUBDIR += rubygem-omniauth-saml1
     SUBDIR += rubygem-omniauth-shibboleth
+    SUBDIR += rubygem-omniauth-shibboleth-redux
     SUBDIR += rubygem-omniauth1
     SUBDIR += rubygem-openssl
     SUBDIR += rubygem-openssl-ccm
@@ -1209,6 +1218,7 @@
     SUBDIR += secure_delete
     SUBDIR += sedutil
     SUBDIR += sequoia
+    SUBDIR += sequoia-sq
     SUBDIR += setaudit
     SUBDIR += sha1collisiondetection
     SUBDIR += sha2wordlist
@@ -1257,6 +1267,7 @@
     SUBDIR += sslscan
     SUBDIR += sslsplit
     SUBDIR += sssd
+    SUBDIR += sssd-devel
     SUBDIR += ssss
     SUBDIR += sst
     SUBDIR += starttls
@@ -1286,6 +1297,7 @@
     SUBDIR += tinc-devel
     SUBDIR += tinyca
     SUBDIR += tls-check
+    SUBDIR += tlsc
     SUBDIR += tor
     SUBDIR += tor-devel
     SUBDIR += totp-cli
@@ -1294,6 +1306,7 @@
     SUBDIR += tpm2-abrmd
     SUBDIR += tpm2-tools
     SUBDIR += tpm2-tss
+    SUBDIR += transcrypt
     SUBDIR += trezord
     SUBDIR += tripwire
     SUBDIR += trousers
@@ -1322,6 +1335,7 @@
     SUBDIR += wazuh-manager
     SUBDIR += wazuh-server
     SUBDIR += webfwlog
+    SUBDIR += webtunnel-tor
     SUBDIR += weggli
     SUBDIR += whatweb
     SUBDIR += wipe
@@ -1351,7 +1365,7 @@
     SUBDIR += zaproxy
     SUBDIR += zeek
     SUBDIR += zeronet
-    SUBDIR += zxid
+    SUBDIR += zlint
     SUBDIR += zzuf
 
 .include <bsd.port.subdir.mk>

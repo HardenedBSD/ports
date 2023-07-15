@@ -1,6 +1,5 @@
 PORTNAME=	hplip
-PORTVERSION=	3.22.10
-PORTREVISION=	1
+PORTVERSION=	3.23.5
 CATEGORIES=	print
 MASTER_SITES=	SF
 
@@ -21,7 +20,7 @@ RUN_DEPENDS=	cups-filters>=0:print/cups-filters \
 
 USE_HARDENING=	pie:off
 
-USES=		dos2unix jpeg libtool localbase pkgconfig python:3.6+ \
+USES=		dos2unix jpeg libtool localbase pkgconfig python \
 		shebangfix
 USE_LDCONFIG=	yes
 

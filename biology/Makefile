@@ -15,6 +15,7 @@
     SUBDIR += bcftools
     SUBDIR += bedtools
     SUBDIR += bfc
+    SUBDIR += bifrost
     SUBDIR += bio-mocha
     SUBDIR += bioawk
     SUBDIR += biococoa
@@ -32,6 +33,7 @@
     SUBDIR += cd-hit
     SUBDIR += cdbfasta
     SUBDIR += checkm
+    SUBDIR += chip-seq
     SUBDIR += clustal-omega
     SUBDIR += clustalw
     SUBDIR += cufflinks
@@ -95,6 +97,7 @@
     SUBDIR += linux-foldingathome
     SUBDIR += mafft
     SUBDIR += mapm3
+    SUBDIR += mashmap
     SUBDIR += megahit
     SUBDIR += metaeuk
     SUBDIR += migrate

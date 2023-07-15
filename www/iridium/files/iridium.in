@@ -16,4 +16,4 @@ EOMSG
 	exit 1
 fi
 ulimit -c 0
-exec %%PREFIX%%/share/iridium/iridium ${1+"$@"}
+exec %%PREFIX%%/share/iridium/iridium --js-flags=--jitless ${1+"$@"}

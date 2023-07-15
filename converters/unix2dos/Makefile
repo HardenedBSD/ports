@@ -1,5 +1,6 @@
 PORTNAME=	unix2dos
 PORTVERSION=	1.3
+PORTREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	LOCAL/ehaupt
 
@@ -11,6 +12,8 @@ USE_HARDENING=	safestack
 PLIST_FILES=	bin/dos2unix bin/unix2dos \
 		man/man1/unix2dos.1.gz man/man1/dos2unix.1.gz
 NO_WRKSUBDIR=	yes
+
+CONFLICTS_INSTALL=	dos2unix
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unix2dos ${STAGEDIR}${PREFIX}/bin/unix2dos

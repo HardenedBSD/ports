@@ -1,10 +1,6 @@
 PORTNAME=	obs-studio
-DISTVERSION=	29.0.2
+DISTVERSION=	29.1.3
 CATEGORIES=	multimedia
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	2cebc65ad7f8.patch:-p1 # https://github.com/obsproject/obs-studio/pull/7992
-PATCHFILES+=	90c476983ce9.patch:-p1 # https://github.com/obsproject/obs-studio/pull/7992
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open source streaming/recording software
@@ -40,6 +36,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb-util.so:x11/xcb-util \
 		libxkbcommon.so:x11/libxkbcommon \
+		libuuid.so:misc/e2fsprogs-libuuid \
 		libva.so:multimedia/libva \
 		${LIB_DEPENDS_${ARCH}}
 LIB_DEPENDS_amd64=	libluajit-5.1.so:lang/luajit
@@ -49,13 +46,14 @@ LIB_DEPENDS_powerpc=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_powerpc64=	libluajit-5.1.so:lang/luajit-openresty
 LIB_DEPENDS_powerpc64le=	libluajit-5.1.so:lang/luajit-openresty
 
-USES=		cmake compiler:c++17-lang desktop-file-utils gl gnome lua pkgconfig python:3.4+ \
+USES=		cmake compiler:c++17-lang desktop-file-utils gl gnome lua pkgconfig python \
 		qt:6 xorg
 USE_QT=		base svg tools:build
 USE_GNOME=	glib20
 USE_GL=		gl
 USE_XORG=	ice sm x11 xcb xcomposite xext xfixes xinerama xrandr
 USE_LDCONFIG=	yes
+CFLAGS+=	-Wno-int-conversion
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	obsproject

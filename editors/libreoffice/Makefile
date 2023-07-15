@@ -1,4 +1,4 @@
-PORTREVISION=	2
+PORTREVISION=	1
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -119,7 +119,7 @@ SHEBANG_GLOB=	*.py
 GNU_CONFIGURE=	yes
 USES=		autoreconf:build bison compiler:c++17-lang cpe desktop-file-utils \
 		gettext gl gmake gnome jpeg ldap localbase:ldflags perl5 pkgconfig \
-		python:3.8+ shebangfix shared-mime-info ssl tar:xz xorg
+		python shebangfix shared-mime-info ssl tar:xz xorg
 USE_GL=		gl glew glu
 USE_GNOME=	cairo glib20 libxml2 libxslt
 USE_PERL5=	build
@@ -342,10 +342,6 @@ BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
 .if ${OSVERSION} < 1400000
 # HBSD: OpenJDK is broken in 14-CURRENT.
 OPTIONS_DEFAULT+=	JAVA
-.endif
-
-.if ${ARCH:Mpowerpc*}
-EXTRA_PATCHES+=	${FILESDIR}/powerpc64
 .endif
 
 .if ${ARCH} == powerpc || ${ARCH} == powerpcspe || ${ARCH} == powerpc64

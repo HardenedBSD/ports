@@ -12,8 +12,6 @@ LICENSE=	BSD2CLAUSE
 
 USE_HARDENING=	pie:off relro:off
 
-BROKEN=		compilation fails due to a C error: id = *((unsigned int *)id; error: cast to 'unsigned int *' from smaller integer type 'uint16_t'
-
 USES=		kmod uidfix
 
 OPTIONS_DEFINE=	PTABLE

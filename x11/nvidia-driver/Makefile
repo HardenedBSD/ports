@@ -12,7 +12,7 @@
 # ``make DISTVERSION=xxx.yy.zz -DNO_CHECKSUM'' should typically work.
 
 PORTNAME?=	nvidia-driver
-DISTVERSION?=	525.105.17
+DISTVERSION?=	535.54.03
 # Always try to set PORTREVISION as it can be overridden by the slave ports
 PORTREVISION?=	0
 CATEGORIES=	x11
@@ -68,11 +68,13 @@ SUB_FILES+=	nvidia.conf
 SUB_FILES+=	pkg-deinstall pkg-install
 .endif
 SUB_PATCHES=	extra-patch-src-Makefile \
-		extra-patch-src-nv-freebsd.h \
-		extra-patch-src-nvidia_subr.c
+		extra-patch-src-nv-freebsd.h
 .if ${NVVERSION} < 510.03901
 SUB_PATCHES+=	extra-patch-src-nvidia_dev.c \
 		extra-patch-src-nvidia_pci.c
+.endif
+.if ${NVVERSION} < 530.03002
+SUB_PATCHES+=	extra-patch-src-nvidia_subr.c
 .endif
 
 DOCSDIR=	${PREFIX}/share/doc/NVIDIA_GLX-1.0
@@ -139,7 +141,8 @@ PLIST_SUB+=	LIBGLDIR=${LIBGLDIR} LIBGLMAP="@comment "
 PLIST_SUB+=	LIBGLDIR="@comment " LIBGLMAP=""
 .endif
 
-.if ${NVVERSION} >= 515.08601
+# Not part of the pkg-plist because DISTVERSION is not on PLIST_SUB
+.if ${NVVERSION} >= 515.04304
 PLIST_FILES+=	lib/libnvidia-wayland-client.so.${DISTVERSION}
 .endif
 
@@ -178,10 +181,12 @@ post-patch: .SILENT
 		${WRKSRC}/src/nvidia-modeset/nvidia-modeset-freebsd.c
 .endif
 # KPI of kmem_alloc_contig(),kmem_free() changed in FreeBSD src r338143,r338318
+.if ${NVVERSION} < 530.03002
 	${REINPLACE_CMD} \
 	    -e 's/kmem_alloc_contig(kmem_arena, /kmem_alloc_contig(/' \
 	    -e 's/kmem_free(kmem_arena, /kmem_free(/' \
 		${WRKSRC}/src/${NVSRC}/nvidia_subr.c
+.endif
 # Pull the right header after FreeBSD src r347984
 .if ${OSVERSION} >= 1300029 && ${NVVERSION} >= 358.009
 	${REINPLACE_CMD} -e '/^#include/s:lock\.h:mutex.h:' \
@@ -258,13 +263,18 @@ post-patch: .SILENT
 		${WRKSRC}/src/${NVSRC}/nvidia_pci.c
 .endif
 # Catch up with pmap_unmapdev() and kmem_*() changes in 14-CURRENT
-.if ${OSVERSION} >= 1400070
+.if ${OSVERSION} >= 1400070 && ${NVVERSION} < 530.03002
 	${REINPLACE_CMD} -e '/pmap_unmapdev/s,(vm_offset_t),,' \
 		${WRKSRC}/src/${NVSRC}/nvidia_os.c
 	${REINPLACE_CMD} -e '/vm_offset_t virtual_address/s,vm_offset_t ,char *,' \
 		${WRKSRC}/src/${NVSRC}/nv-freebsd.h
 	${REINPLACE_CMD} -e '/vm_offset_t address;/s,vm_offset_t ,void *,' \
 		${WRKSRC}/src/${NVSRC}/nvidia_subr.c
+.endif
+# Fix a K&R prototype
+.if ${NVVERSION:R} >= 390
+	${REINPLACE_CMD} -e '/nvlink_allocLock/s,(),(void),' \
+		${WRKSRC}/src/${NVSRC}/nvlink_freebsd.c
 .endif
 # Finally, process OPTIONS
 .if ${PORT_OPTIONS:MFREEBSD_AGP}

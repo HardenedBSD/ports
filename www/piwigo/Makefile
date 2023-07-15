@@ -1,6 +1,6 @@
 PORTNAME=	piwigo
-DISTVERSION=	13.6.0
-PORTREVISION=	1
+DISTVERSION=	13.8.0
+PORTREVISION=	0
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 CATEGORIES=	www
 MASTER_SITES=	https://piwigo.org/download/dlcounter.php?code=${PORTVERSION}&/
@@ -13,8 +13,8 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/COPYING
 
 USES=		cpe php:web,flavors zip
-USE_PHP=	ctype dom exif filter gd iconv mbstring mysqli \
-		pdo session simplexml sodium tokenizer \
+USE_PHP=	ctype dom exif filter gd hash iconv json mbstring mysqli \
+		openssl pcre pdo session simplexml sodium spl tokenizer \
 		xml zip zlib
 # sodium is needed for randomisation stuff (prefferred option),
 # 	could be replaced by mcrypt

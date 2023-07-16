@@ -1451,6 +1451,7 @@
     SUBDIR += libzookeeper
     SUBDIR += libzvbi
     SUBDIR += lightning
+    SUBDIR += linenoise
     SUBDIR += linenoise-ng
     SUBDIR += linux-c7-dbus-libs
     SUBDIR += linux-c7-devtools
@@ -1552,6 +1553,7 @@
     SUBDIR += m17n-lib
     SUBDIR += m4
     SUBDIR += mage
+    SUBDIR += magic_enum
     SUBDIR += magit
     SUBDIR += magit-devel
     SUBDIR += make++

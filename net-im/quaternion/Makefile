@@ -24,11 +24,9 @@ USE_QT=		core dbus declarative gui multimedia network \
 		quickcontrols quickcontrols2 sql widgets \
 		buildtools:build linguist:build qmake:build
 
-<<<<<<< HEAD
-MPROTECT_DISABLE=	bin/quaternion
-=======
 CMAKE_OFF=	BUILD_WITH_QT6
->>>>>>> freebsd/main
+
+MPROTECT_DISABLE=	bin/quaternion
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	quotient-im

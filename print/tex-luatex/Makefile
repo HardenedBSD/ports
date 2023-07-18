@@ -13,17 +13,13 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	tex@FreeBSD.org
 COMMENT=	Extended version of pdfTeX using Lua
 
-<<<<<<< HEAD
 CONFIGURE_ENV+=	"CFLAGS=-fPIC -fPIE -O2 -fcommon" "CXXFLAGS=-fPIC -fPIE -O2 -fcommon"
 
-LIB_DEPENDS=	libmpfr.so:math/mpfr \
-=======
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libgmp.so:math/gmp \
 		libgraphite2.so:graphics/graphite2 \
 		libharfbuzz.so:print/harfbuzz \
 		libmpfr.so:math/mpfr \
->>>>>>> freebsd/main
 		libpng.so:graphics/png \
 		libTECkit.so:textproc/teckit \
 		libzzip.so:devel/zziplib

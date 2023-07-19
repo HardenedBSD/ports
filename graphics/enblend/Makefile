@@ -22,7 +22,7 @@ LIB_DEPENDS=	liblcms2.so:graphics/lcms2 \
 		libpng.so:graphics/png
 
 USES=		compiler:features gmake jpeg localbase pkgconfig
-
+USE_CXXSTD=	c++14
 GNU_CONFIGURE=	yes
 
 LLD_UNSAFE=	yes

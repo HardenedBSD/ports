@@ -887,6 +887,7 @@
     SUBDIR += py-coincurve
     SUBDIR += py-cpe
     SUBDIR += py-cryptography
+    SUBDIR += py-cryptography-legacy
     SUBDIR += py-cryptography-vectors
     SUBDIR += py-ctypescrypto
     SUBDIR += py-cybox

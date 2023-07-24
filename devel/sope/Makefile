@@ -43,7 +43,15 @@ MEMCACHED_RUN_DEPENDS=	${LOCALBASE}/bin/memcached:databases/memcached
 MYSQL_USES=		mysql
 PGSQL_USES=		pgsql
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
+=======
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+CPPFLAGS+=	-Wno-error=incompatible-function-pointer-types
+.endif
+>>>>>>> freebsd/main
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/configure

@@ -8,12 +8,10 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Spam detector using Bayesian analysis of word counts
 WWW=		http://spamprobe.sourceforge.net/
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
-=======
+
 USES=	localbase:ldflags
 USE_CXXSTD=	c++14
->>>>>>> freebsd/main
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-default-8bit

@@ -12,15 +12,10 @@ WWW=		http://sam.zoy.org/projects/elk/
 LIB_DEPENDS=	libgdbm.so:databases/gdbm \
 		libXaw.so:x11-toolkits/libXaw
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		libtool motif tar:bzip2
-GNU_CONFIGURE=	yes
-=======
 USES=		libtool localbase:ldflags motif tar:bzip2 xorg
 USE_CXXSTD=	c++14
->>>>>>> freebsd/main
 USE_LDCONFIG=	yes
 USE_XORG=	ice sm x11 xext xmu xt
 

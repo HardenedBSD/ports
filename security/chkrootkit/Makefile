@@ -12,13 +12,8 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 USES=		cpe
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-OPTIONS_DEFINE=	DOCS
-
-=======
->>>>>>> internal/freebsd/main
 SCRIPT_FILES=	chkrootkit
 PROG_FILES=	chklastlog \
 		chkwtmp \

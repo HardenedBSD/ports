@@ -1046,6 +1046,7 @@
     SUBDIR += widelands
     SUBDIR += wipeclean
     SUBDIR += wizznic
+    SUBDIR += wmeyes
     SUBDIR += wmpuzzle
     SUBDIR += wmqstat
     SUBDIR += wmtictactoe

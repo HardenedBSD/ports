@@ -16,13 +16,9 @@ LIB_DEPENDS=	libminiupnpc.so:net/miniupnpc \
 
 CONFLICTS=	socks5
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		libtool localbase
-=======
 USES=		autoreconf libtool localbase
->>>>>>> internal/freebsd/main
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-socks-conf=${PREFIX}/etc/socks.conf \
 		--with-sockd-conf=${PREFIX}/etc/sockd.conf

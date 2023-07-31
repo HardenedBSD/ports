@@ -30,11 +30,6 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 USES=		compiler:c++17-lang cpe python:build scons
 USE_RC_SUBR=	mongod
 
-<<<<<<< HEAD
-CFLAGS+=	-D_HAS_AUTO_PTR_ETC=0
-
-PORTSCOUT=	limit:^4\.4\.
-
 MPROTECT_DISABLE+=	bin/mongo
 MPROTECT_DISABLE+=	bin/mongod
 MPROTECT_DISABLE+=	bin/mongos
@@ -43,15 +38,6 @@ PAGEEXEC_DISABLE+=	bin/mongo
 PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
-CONFLICTS_INSTALL=	mongodb[0-9][0-9] # etc/mongodb.conf.sample
-
-OPTIONS_DEFINE=	LTO SASL SSL
-OPTIONS_DEFAULT=LTO SASL SSL
-OPTIONS_EXCLUDE_aarch64=	${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
-OPTIONS_EXCLUDE_aarch64_14=	LTO # Does not work with llvm12 on aarch64.
-
-=======
->>>>>>> internal/freebsd/main
 MAKE_ARGS=	--use-system-zlib \
 		--use-system-pcre \
 		--use-system-snappy \

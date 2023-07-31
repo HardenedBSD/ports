@@ -4560,6 +4560,7 @@
     SUBDIR += py-deprecat
     SUBDIR += py-deprecated
     SUBDIR += py-deprecation
+    SUBDIR += py-deptry
     SUBDIR += py-devtools
     SUBDIR += py-dexml2
     SUBDIR += py-diazo
@@ -4858,6 +4859,7 @@
     SUBDIR += py-jsonschema-spec
     SUBDIR += py-jsonschema-specifications
     SUBDIR += py-jsonschema3
+    SUBDIR += py-jsonschema417
     SUBDIR += py-jsonsir
     SUBDIR += py-jupyter-client
     SUBDIR += py-jupyter-core

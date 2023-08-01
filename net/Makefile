@@ -1471,6 +1471,7 @@
     SUBDIR += socketpipe
     SUBDIR += socketw
     SUBDIR += sofia-sip
+    SUBDIR += speedtest
     SUBDIR += speedtest-go
     SUBDIR += spiritvnc
     SUBDIR += spoofer

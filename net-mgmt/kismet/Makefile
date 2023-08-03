@@ -15,17 +15,8 @@ USES=		gmake localbase:ldflags tar:xz
 USE_CXXSTD=	c++14
 
 GNU_CONFIGURE=	yes
-<<<<<<< HEAD
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 USE_HARDENING=	safestack
-
-OPTIONS_DEFINE=		PCRE PLUGINS SETUID DOCS EXAMPLES
-OPTIONS_DEFAULT=	PCRE PLUGINS SETUID
-SETUID_DESC=		Use privilege separation
-=======
->>>>>>> internal/freebsd/main
 
 WRKSRC=	${WRKDIR}/${DISTNAME:S/a$$//}
 

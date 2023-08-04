@@ -26,15 +26,10 @@ GH_ACCOUNT=	linbox-team
 USES=		autoreconf blaslapack:openblas compiler:c++11-lang gmake	\
 		libtool localbase pkgconfig shebangfix
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-SHEBANG_FILES=	benchmarks/perfpublisher.sh examples/test.sh	\
-		linbox-auto-install.sh linbox-config.in tests/jenkins-maker.sh	\
-=======
 SHEBANG_FILES=	benchmarks/perfpublisher.sh linbox-auto-install.sh	\
 		linbox-config.in tests/jenkins-maker.sh	\
->>>>>>> internal/freebsd/main
 		tests/perfpublisher.sh tests/test_leak.sh
 
 OPTIONS_DEFINE=		DOXYGEN

@@ -11,13 +11,9 @@ WWW=		http://kludge3d.sourceforge.net/
 LIB_DEPENDS=	lib3ds.so:graphics/lib3ds \
 		libgtkglext-x11-1.0.so:x11-toolkits/gtkglext
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		compiler:c++11-lang gl gmake gnome pkgconfig python
-=======
 USES=		compiler:c++11-lang gl gmake gnome localbase:ldflags pkgconfig python
->>>>>>> internal/freebsd/main
 USE_GL=		gl
 USE_GNOME=	gtk20
 

@@ -1081,6 +1081,7 @@
     SUBDIR += py-maxminddb
     SUBDIR += py-miniupnpc
     SUBDIR += py-mpi4py
+    SUBDIR += py-mpi4py-mpich
     SUBDIR += py-msrplib
     SUBDIR += py-ndg-httpsclient
     SUBDIR += py-netaddr

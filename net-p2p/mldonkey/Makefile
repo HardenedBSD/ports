@@ -15,11 +15,15 @@ CONFLICTS=	mldonkey{-{core,gui},}-devel
 BUILD_DEPENDS=	${LOCALBASE}/lib/ocaml/nums.cma:math/ocaml-num
 
 USES=		compiler:c++11-lang cpe gmake iconv pkgconfig tar:bzip2
+USE_CXXSTD=	c++14
 USE_OCAML=	yes
 USE_OCAML_CAMLP4=yes
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
+=======
+>>>>>>> internal/freebsd/main
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	ac_cv_lib_charset_locale_charset=no
 ALL_TARGET=	opt
@@ -36,6 +40,7 @@ OPTIONS_DEFINE=	GD DOCS EXAMPLES
 OPTIONS_DEFAULT=CORE GD GUI
 OPTIONS_MULTI=	CLIENT
 OPTIONS_MULTI_CLIENT=CORE GUI
+
 CORE_DESC=	Client 'core' support
 
 .include <bsd.port.options.mk>

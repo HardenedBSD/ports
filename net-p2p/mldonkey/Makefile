@@ -19,11 +19,8 @@ USE_CXXSTD=	c++14
 USE_OCAML=	yes
 USE_OCAML_CAMLP4=yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-=======
->>>>>>> internal/freebsd/main
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	ac_cv_lib_charset_locale_charset=no
 ALL_TARGET=	opt

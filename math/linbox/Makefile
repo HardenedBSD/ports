@@ -31,6 +31,7 @@ USE_HARDENING=	pie:off
 SHEBANG_FILES=	benchmarks/perfpublisher.sh linbox-auto-install.sh	\
 		linbox-config.in tests/jenkins-maker.sh	\
 		tests/perfpublisher.sh tests/test_leak.sh
+USE_CXXSTD=	c++14
 
 OPTIONS_DEFINE=		DOXYGEN
 OPTIONS_RADIO=		SIZE

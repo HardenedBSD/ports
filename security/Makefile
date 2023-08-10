@@ -171,11 +171,8 @@
     SUBDIR += fwlogwatch
     SUBDIR += gcr
     SUBDIR += gef
-<<<<<<< HEAD
     SUBDIR += gibson
-=======
     SUBDIR += git-credential-azure
->>>>>>> internal/freebsd/main
     SUBDIR += git-credential-gopass
     SUBDIR += git-credential-oauth
     SUBDIR += git-crypt

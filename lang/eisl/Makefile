@@ -1,6 +1,6 @@
 PORTNAME=	eisl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.30
+DISTVERSION=	3.40
 CATEGORIES=	lang devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -29,7 +29,7 @@ LDFLAGS+=	-lncursesw
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64 || ${ARCH} == riscv64
+.if ${ARCH} == riscv64
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-makefile
 .endif
 

@@ -1,17 +1,14 @@
 PORTNAME=	mono
-PORTVERSION=	5.10.1.57
-PORTREVISION=	5
+PORTVERSION=	${MONO_DEFAULT}
 CATEGORIES=	lang
-MASTER_SITES=	https://download.mono-project.com/sources/mono/
-DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Open source implementation of .NET Development Framework
+COMMENT=	Meta-port for the default version of the Mono framework
 WWW=		https://www.mono-project.com/
 
-LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
+RUN_DEPENDS=	mono${MONO_DEFAULT}>0:lang/mono${MONO_DEFAULT}
 
+<<<<<<< HEAD
 MPROTECT_DISABLE+=	bin/mono
 MPROTECT_DISABLE+=	bin/mono-sgen
 MPROTECT_DISABLE+=	bin/mono-boehm
@@ -114,5 +111,8 @@ post-configure:
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/mono
+=======
+USES=		metaport
+>>>>>>> internal/freebsd/main
 
 .include <bsd.port.mk>

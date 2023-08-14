@@ -1,5 +1,6 @@
 PORTNAME=	keepassxc
 DISTVERSION=	2.7.5
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/keepassxreboot/keepassxc/releases/download/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src
@@ -20,6 +21,7 @@ LIB_DEPENDS=	libargon2.so:security/libargon2 \
 		libqrencode.so:graphics/libqrencode \
 		libbotan-2.so:security/botan2
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 PAGEEXEC_DISABLE=	bin/keepassxc
@@ -32,6 +34,10 @@ USES+=		compiler:gcc-c++11-lib
 .else
 USES+=		compiler:c++17-lang
 .endif
+=======
+USES=		cmake compiler:c++17-lang desktop-file-utils pkgconfig qt:5 \
+		readline shared-mime-info tar:xz xorg
+>>>>>>> internal/freebsd/main
 USE_QT=		concurrent core dbus gui network svg widgets buildtools:build \
 		linguisttools:build qmake:build testlib:build x11extras
 USE_XORG=	x11

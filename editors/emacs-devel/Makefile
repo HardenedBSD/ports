@@ -12,12 +12,8 @@ COMMENT_nox=	(No X flavor)
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-BUILD_DEPENDS=	texinfo>=6.5,1:print/texinfo
-=======
->>>>>>> internal/freebsd/main
 LIB_DEPENDS=	libgmp.so:math/gmp
 
 FLAVORS=		full nox

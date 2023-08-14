@@ -32,12 +32,9 @@ LDFLAGS+=	-Wl,--as-needed # brotlicommon, OPENEXR/PNG deps
 OPTIONS_DEFINE=	GIF JPEG LTO MANPAGES OPENEXR PIXBUF PNG
 OPTIONS_DEFAULT=GIF JPEG LTO MANPAGES OPENEXR PIXBUF PNG
 OPTIONS_EXCLUDE_i386=	LTO # ConvolutionWithTranspose(): JXL_CHECK: out->xsize() == in.ysize()
-<<<<<<< HEAD
 OPTIONS_EXCLUDE_amd64=	LTO # CMAKE_CXX_COMPILER_RANLIB-NOTFOUND: not found
 OPTIONS_EXCLUDE_aarch64=	LTO # CMAKE_CXX_COMPILER_RANLIB-NOTFOUND: not found
 OPTIONS_EXCLUDE_powerpc64=	${"${/usr/bin/ld:L:tA}"==/usr/bin/ld.lld:?LTO:} # https://github.com/llvm/llvm-project/issues/46697
-=======
->>>>>>> internal/freebsd/main
 OPTIONS_EXCLUDE_riscv64=	LTO # bug 262871
 OPTIONS_SUB=	yes
 

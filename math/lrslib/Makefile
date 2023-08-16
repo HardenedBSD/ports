@@ -1,7 +1,9 @@
 PORTNAME=	lrslib
-PORTVERSION=	071a
+PORTVERSION=	7.2
+PORTEPOCH=	1
 CATEGORIES=	math
 MASTER_SITES=	http://cgm.cs.mcgill.ca/~avis/C/lrslib/archive/
+DISTNAME=	${PORTNAME}-0${PORTVERSION:S/.//}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Reverse search algorithm for vertex enumeration/convex hull problems
@@ -28,7 +30,11 @@ MAKE_ARGS=	CFLAGS="${CFLAGS}" INCLUDEDIR=${LOCALBASE}/include LIBDIR=${LOCALBASE
 
 LDFLAGS+=	-lthr
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
+=======
+BINARY_ALIAS=	gcc=${CC}
+>>>>>>> internal/freebsd/main
 
 post-install:
 	@cd ${STAGEDIR}${PREFIX} && ${STRIP_CMD} bin/* lib/*.so

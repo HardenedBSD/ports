@@ -30,11 +30,9 @@ MAKE_ARGS=	CFLAGS="${CFLAGS}" INCLUDEDIR=${LOCALBASE}/include LIBDIR=${LOCALBASE
 
 LDFLAGS+=	-lthr
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
-=======
+
 BINARY_ALIAS=	gcc=${CC}
->>>>>>> internal/freebsd/main
 
 post-install:
 	@cd ${STAGEDIR}${PREFIX} && ${STRIP_CMD} bin/* lib/*.so

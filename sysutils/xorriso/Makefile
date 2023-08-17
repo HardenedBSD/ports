@@ -14,15 +14,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libburn.so:devel/libburn \
 		libisofs.so:devel/libisofs
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		gmake iconv libtool libedit pathfix pkgconfig readline shebangfix
-=======
 USES=		gmake iconv libedit libtool pathfix pkgconfig readline \
 		shebangfix
 USE_LDCONFIG=	yes
->>>>>>> internal/freebsd/main
 SHEBANG_FILES=	frontend/xorriso-tcltk
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip

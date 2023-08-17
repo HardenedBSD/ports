@@ -2399,6 +2399,7 @@
     SUBDIR += vdradmin-am
     SUBDIR += vertx
     SUBDIR += vger
+    SUBDIR += vigil
     SUBDIR += vimb
     SUBDIR += visitors
     SUBDIR += volta

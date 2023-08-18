@@ -99,6 +99,10 @@ USE_HARDENING=	pie:off
 CFLAGS+=       -Wno-error=int-conversion
 .endif
 
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+USE_GCC=	yes:build
+.endif
+
 pre-patch:
 	@${ECHO_MSG} "===> Apply distribution patches..."
 	@${ECHO_MSG} "====> Patch gcc"

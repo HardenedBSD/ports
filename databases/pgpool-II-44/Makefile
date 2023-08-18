@@ -1,18 +1,15 @@
 PORTNAME=	pgpool-II
-PORTVERSION=	4.0.24
+PORTVERSION=	4.4.4
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
-PKGNAMESUFFIX=	40
+PKGNAMESUFFIX=	-44
 
-MAINTAINER=	tz@FreeBSD.org
-COMMENT=	Connection pool server for PostgreSQL
+MAINTAINER=	bofh@FreeBSD.org
+COMMENT=	Connection pool server for PostgreSQL (4.4.X branch)
 WWW=		https://pgpool.net/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-DEPRECATED=	Upstream EOL reaches on 2023-12-31
-EXPIRATION_DATE=	2023-12-31
 
 USES=		gmake libtool pgsql:11+
 USE_LDCONFIG=	yes
@@ -20,9 +17,9 @@ USE_RC_SUBR=	pgpool
 
 GNU_CONFIGURE=	yes
 
-CONFLICTS_INSTALL=	pgpool-II-[0-9][0-9] pgpool-II[0-9][0-9] # etc/pcp.conf.sample
+CONFLICTS_INSTALL=	pgpool-II-[0-9][0-9] pgpool-II[0-9][0-9] # etc/escalation.sh.sample etc/failover.sh.sample etc/pcp.conf.sample
 
-PORTSCOUT=	limit:^4.0.[0-9]*
+PORTSCOUT=	limit:^4.4.[0-9]*
 
 PORTDOCS=	*
 
@@ -39,15 +36,9 @@ PAM_CONFIGURE_ON=	--with-pam
 SSL_USES=		ssl
 SSL_CONFIGURE_WITH=	openssl
 
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
-CFLAGS+=	-Wno-error=int-conversion
-.endif
-
 post-install:
 	@${MKDIR} ${STAGEDIR}/var/run/pgpool
-	${INSTALL_LIB} ${WRKSRC}/src/libs/pcp/.libs/libpcp.so.1.0.0 ${STAGEDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/src/libs/pcp/.libs/libpcp.so.2.0.0 ${STAGEDIR}${PREFIX}/lib
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

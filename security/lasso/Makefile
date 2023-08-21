@@ -15,13 +15,9 @@ LIB_DEPENDS=	libltdl.so:devel/libltdl \
 		libxmlsec1-openssl.so:security/xmlsec1
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		cpe gnome libtool pkgconfig python ssl
-=======
 USES=		cpe gmake gnome libtool pathfix pkgconfig python ssl
->>>>>>> internal/freebsd/main
 CPE_VENDOR=	entrouvert
 USE_GNOME=	glib20 libxml2 libxslt
 USE_LDCONFIG=	yes

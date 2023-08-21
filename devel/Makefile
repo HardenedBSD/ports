@@ -4215,6 +4215,7 @@
     SUBDIR += py-aiorwlock
     SUBDIR += py-aiosignal
     SUBDIR += py-airtable-python-wrapper
+    SUBDIR += py-all-repos
     SUBDIR += py-amalgamate
     SUBDIR += py-aniso8601
     SUBDIR += py-aniso86016
@@ -4502,6 +4503,7 @@
     SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-construct-classes
+    SUBDIR += py-contextlib-chdir
     SUBDIR += py-contextlib2
     SUBDIR += py-convertdate
     SUBDIR += py-cookiecutter
@@ -4829,7 +4831,6 @@
     SUBDIR += py-itertree
     SUBDIR += py-itypes
     SUBDIR += py-janus
-    SUBDIR += py-jaraco
     SUBDIR += py-jaraco.classes
     SUBDIR += py-jaraco.collections
     SUBDIR += py-jaraco.context
@@ -5280,6 +5281,7 @@
     SUBDIR += py-pyintelowl
     SUBDIR += py-pyjq
     SUBDIR += py-pyjsparser
+    SUBDIR += py-pykdtree
     SUBDIR += py-pylama
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
@@ -7150,6 +7152,7 @@
     SUBDIR += rubygem-powerpack
     SUBDIR += rubygem-pp
     SUBDIR += rubygem-pqueue
+    SUBDIR += rubygem-prettier_print
     SUBDIR += rubygem-prettyprint
     SUBDIR += rubygem-profile
     SUBDIR += rubygem-progressbar
@@ -7267,6 +7270,7 @@
     SUBDIR += rubygem-ruby-filemagic
     SUBDIR += rubygem-ruby-fogbugz
     SUBDIR += rubygem-ruby-libvirt
+    SUBDIR += rubygem-ruby-lsp
     SUBDIR += rubygem-ruby-macho
     SUBDIR += rubygem-ruby-magic
     SUBDIR += rubygem-ruby-ole
@@ -7276,6 +7280,7 @@
     SUBDIR += rubygem-ruby2_keywords
     SUBDIR += rubygem-ruby2ruby
     SUBDIR += rubygem-ruby_dep
+    SUBDIR += rubygem-ruby_memcheck
     SUBDIR += rubygem-ruby_parser
     SUBDIR += rubygem-rubygems-mirror
     SUBDIR += rubygem-rubygems-tasks
@@ -7345,6 +7350,7 @@
     SUBDIR += rubygem-snowplow-tracker
     SUBDIR += rubygem-soap4r
     SUBDIR += rubygem-solve
+    SUBDIR += rubygem-sorbet-runtime
     SUBDIR += rubygem-sorted_set
     SUBDIR += rubygem-spring
     SUBDIR += rubygem-spring-watcher-listen
@@ -7394,6 +7400,7 @@
     SUBDIR += rubygem-swagger-blocks
     SUBDIR += rubygem-sync
     SUBDIR += rubygem-syntax_suggest
+    SUBDIR += rubygem-syntax_tree
     SUBDIR += rubygem-sysinfo
     SUBDIR += rubygem-syslog
     SUBDIR += rubygem-systemu

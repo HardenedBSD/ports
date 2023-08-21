@@ -16,9 +16,14 @@ BROKEN_powerpc=		Does not compile on ${ARCH}: error Unknown CPU architecture
 BROKEN_powerpc64=	Does not compile on ${ARCH}: error Unknown CPU architecture
 BROKEN_sparc64=		Does not compile on ${ARCH}
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 USES=		compiler:c++14-lang pkgconfig:both tar:xz
+=======
+USES=		compiler:c++14-lang dos2unix pkgconfig:both tar:xz
+DOS2UNIX_FILES=	uppsrc/Core/config.h
+>>>>>>> internal/freebsd/main
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

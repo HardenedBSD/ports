@@ -1063,7 +1063,6 @@
     SUBDIR += usql
     SUBDIR += vfront
     SUBDIR += virtualpg
-    SUBDIR += virtuoso
     SUBDIR += vsqlite
     SUBDIR += webdis
     SUBDIR += wfb2sql

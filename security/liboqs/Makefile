@@ -10,7 +10,7 @@ WWW=		https://openquantumsafe.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest4>0:devel/py-pytest4@${PY_FLAVOR} \
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR} \
 		bash:shells/bash
 
@@ -25,7 +25,7 @@ SHEBANG_GLOB=	*.sh
 CMAKE_ON=	BUILD_SHARED_LIBS OQS_DIST_BUILD \
 		OQS_PERMIT_UNSUPPORTED_ARCHITECTURE # trying to build on i386, powerpc, armv6, riscv64
 
-CMAKE_TESTING_TARGET=	run_tests # tests fail to run, see https://github.com/open-quantum-safe/liboqs/issues/1534
+CMAKE_TESTING_TARGET=	run_tests
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 

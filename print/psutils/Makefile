@@ -12,14 +12,12 @@ MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Utilities for manipulating PostScript documents
 WWW=		http://gershwin.ens.fr/vdaniel/Doc-Locale/Outils-Gnu-Linux/PsUtils/
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
-=======
+
 LICENSE=	PSUTILS
 LICENSE_NAME=	PS Utilities License
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
->>>>>>> internal/freebsd/main
 
 LIB_DEPENDS=	libpaper.so:print/libpaper
 

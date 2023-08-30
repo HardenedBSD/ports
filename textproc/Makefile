@@ -487,6 +487,7 @@
     SUBDIR += ml-aspell
     SUBDIR += ml1
     SUBDIR += mn-aspell
+    SUBDIR += moar
     SUBDIR += modlogan
     SUBDIR += mp_doccer
     SUBDIR += mr-aspell
@@ -1665,6 +1666,7 @@
     SUBDIR += resume
     SUBDIR += resume-extensions
     SUBDIR += rfcdiff
+    SUBDIR += riffdiff
     SUBDIR += ripgrep
     SUBDIR += ripgrep-all
     SUBDIR += ripole

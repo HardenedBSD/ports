@@ -15,11 +15,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BROKEN_armv6=		fails to compile: call to min is ambiguous
 BROKEN_armv7=		fails to compile: call to min is ambiguous
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
-=======
+
 RUN_DEPENDS=	fig2dev:print/transfig
->>>>>>> internal/freebsd/main
 
 USES=		cpe desktop-file-utils gmake guile:1.8,alias iconv \
 		localbase pkgconfig python shared-mime-info shebangfix \

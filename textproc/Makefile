@@ -1370,6 +1370,7 @@
     SUBDIR += py-googletrans
     SUBDIR += py-grako
     SUBDIR += py-grapheme
+    SUBDIR += py-griffe
     SUBDIR += py-guess-language
     SUBDIR += py-hashids
     SUBDIR += py-hexdump
@@ -1409,6 +1410,7 @@
     SUBDIR += py-m2r
     SUBDIR += py-mako
     SUBDIR += py-markdown
+    SUBDIR += py-markdown-callouts
     SUBDIR += py-markdown-include
     SUBDIR += py-markdown-it-py
     SUBDIR += py-markdown2
@@ -1435,6 +1437,9 @@
     SUBDIR += py-mkdocs-redirects
     SUBDIR += py-mkdocs-simple-hooks
     SUBDIR += py-mkdocstrings
+    SUBDIR += py-mkdocstrings-crystal
+    SUBDIR += py-mkdocstrings-python
+    SUBDIR += py-mkdocstrings-python-legacy
     SUBDIR += py-morse3
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser

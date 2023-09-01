@@ -136,6 +136,9 @@
     SUBDIR += bksh
     SUBDIR += bkt
     SUBDIR += blisp
+    SUBDIR += bmd
+    SUBDIR += bmd-plugin-avahi
+    SUBDIR += bmd-plugin-hookcmd
     SUBDIR += boot-extract
     SUBDIR += bottom
     SUBDIR += bpytop

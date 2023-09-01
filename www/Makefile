@@ -184,6 +184,7 @@
     SUBDIR += fusionpbx
     SUBDIR += g-cows
     SUBDIR += g-gcl
+    SUBDIR += galene
     SUBDIR += gallery-dl
     SUBDIR += gallery2
     SUBDIR += garage

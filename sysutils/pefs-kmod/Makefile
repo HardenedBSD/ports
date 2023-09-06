@@ -10,12 +10,9 @@ WWW=		https://wiki.freebsd.org/PEFS
 
 LICENSE=	BSD2CLAUSE
 
-<<<<<<< HEAD
 # PEFS works only with kernel-nodebug in HardenedBSD
 RUN_DEPENDS=	kernel-nodebug:hardenedbsd/kernel-nodebug
 
-=======
->>>>>>> internal/freebsd/main
 ONLY_FOR_ARCHS=		amd64 armv6 i386
 ONLY_FOR_ARCHS_REASON=	untested on any other arch
 

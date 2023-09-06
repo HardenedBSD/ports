@@ -1573,6 +1573,7 @@
     SUBDIR += mate-common
     SUBDIR += maven
     SUBDIR += maven-wrapper
+    SUBDIR += maven39
     SUBDIR += maven363
     SUBDIR += mcpp
     SUBDIR += mdb
@@ -1715,6 +1716,7 @@
     SUBDIR += opendht
     SUBDIR += opengrok
     SUBDIR += openocd
+    SUBDIR += opentelemetry-cpp
     SUBDIR += openwince-include
     SUBDIR += orc
     SUBDIR += orcania

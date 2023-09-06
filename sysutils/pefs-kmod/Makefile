@@ -1,5 +1,5 @@
 PORTNAME=	pefs
-DISTVERSION=	g20221012
+DISTVERSION=	g20230906
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-kmod
@@ -10,9 +10,12 @@ WWW=		https://wiki.freebsd.org/PEFS
 
 LICENSE=	BSD2CLAUSE
 
+<<<<<<< HEAD
 # PEFS works only with kernel-nodebug in HardenedBSD
 RUN_DEPENDS=	kernel-nodebug:hardenedbsd/kernel-nodebug
 
+=======
+>>>>>>> internal/freebsd/main
 ONLY_FOR_ARCHS=		amd64 armv6 i386
 ONLY_FOR_ARCHS_REASON=	untested on any other arch
 
@@ -20,7 +23,7 @@ USES=		kmod uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd-pefs
 GH_PROJECT=	pefs
-GH_TAGNAME=	aa7f151
+GH_TAGNAME=	4d6f95a
 
 MAKE_ENV=	BINDIR="${PREFIX}/sbin" MANDIR="${MANPREFIX}/man/man"
 MAKE_JOBS_UNSAFE=yes

@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=--verbose \
 		--without-opencl \
 		--without-osmesa \
 		--without-pcap \
+		--without-pcsclite \
 		--with-pthread \
 		--without-pulse \
 		--without-sane \

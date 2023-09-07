@@ -1,3 +1,112 @@
+  <vuln vid="924cb116-4d35-11ee-8e38-002590c1f29c">
+    <topic>FreeBSD -- Wi-Fi encryption bypass</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>13.2</ge><lt>13.2_3</lt></range>
+	<range><ge>12.4</ge><lt>12.4_5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>The net80211 subsystem would fallback to the multicast key for unicast
+	traffic in the event the unicast key was removed.  This would result in
+	buffered unicast traffic being exposed to any stations with access to the
+	multicast key.</p>
+	<h1>Impact:</h1>
+	<p>As described in the "Framing Frames: Bypassing Wi-Fi Encryption by
+	Manipulating Transmit Queues" paper, an attacker can induce an access point
+	to buffer frames for a client, deauthenticate the client (causing the unicast
+	key to be removed from the access point), and subsequent flushing of the
+	buffered frames now encrypted with the multicast key.  This would give the
+	attacker access to the data.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-47522</cvename>
+      <freebsdsa>SA-23:11.wifi</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2023-09-06</discovery>
+      <entry>2023-09-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d35373ae-4d34-11ee-8e38-002590c1f29c">
+    <topic>FreeBSD -- pf incorrectly handles multiple IPv6 fragment headers</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>13.2</ge><lt>13.2_3</lt></range>
+	<range><ge>12.4</ge><lt>12.4_5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>With a 'scrub fragment reassemble' rule, a packet containing multiple IPv6
+	fragment headers would be reassembled, and then immediately processed.  That
+	is, a packet with multiple fragment extension headers would not be recognized
+	as the correct ultimate payload. Instead a packet with multiple IPv6 fragment
+	headers would unexpectedly be interpreted as a fragmented packet, rather than
+	as whatever the real payload is.</p>
+	<h1>Impact:</h1>
+	<p>IPv6 fragments may bypass firewall rules written on the assumption all
+	fragments have been reassembled and, as a result, be forwarded or processed
+	by the host.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-4809</cvename>
+      <freebsdsa>SA-23:10.pf</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2023-09-06</discovery>
+      <entry>2023-09-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6c72b13f-4d1d-11ee-a7f1-080027f5fec9">
+    <topic>redis -- Possible bypassing ACL configuration</topic>
+    <affects>
+      <package>
+	<name>redis</name>
+	<range><ge>7.0.0</ge><lt>7.0.13</lt></range>
+	<range><ge>7.2.0</ge><lt>7.2.1</lt></range>
+      </package>
+      <package>
+	<name>redis-devel</name>
+	<range><lt>7.2.0.20230831</lt></range>
+      </package>
+      <package>
+	<name>redis70</name>
+	<range><ge>7.0.0</ge><lt>7.0.13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>yangbodong22011 reports:</p>
+	<blockquote cite="https://github.com/redis/redis/security/advisories/GHSA-q4jr-5p56-4xwc">
+	  <p>
+	    Redis does not correctly identify keys accessed by SORT_RO
+	    and, as a result, may grant users executing this command
+	    access to keys that are not explicitly authorized by the
+	    ACL configuration.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-41053</cvename>
+      <url>https://github.com/redis/redis/security/advisories/GHSA-q4jr-5p56-4xwc</url>
+    </references>
+    <dates>
+      <discovery>2023-09-06</discovery>
+      <entry>2023-09-07</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="df0a2fd1-4c92-11ee-8290-a8a1599412c6">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>

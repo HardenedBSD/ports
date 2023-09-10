@@ -1292,6 +1292,7 @@
     SUBDIR += libisofs
     SUBDIR += libixp
     SUBDIR += libjitterentropy
+    SUBDIR += libjodycode
     SUBDIR += libk8055
     SUBDIR += libkiwix
     SUBDIR += libklel
@@ -1571,6 +1572,7 @@
     SUBDIR += marl
     SUBDIR += massif-visualizer
     SUBDIR += mate-common
+    SUBDIR += matreshka
     SUBDIR += maven
     SUBDIR += maven-wrapper
     SUBDIR += maven39
@@ -4595,6 +4597,8 @@
     SUBDIR += py-distributed
     SUBDIR += py-dj41-django-rq
     SUBDIR += py-dj41-graphene-django
+    SUBDIR += py-dj42-django-rq
+    SUBDIR += py-dj42-graphene-django
     SUBDIR += py-django-rq
     SUBDIR += py-dockerpty
     SUBDIR += py-docopt
@@ -5614,6 +5618,7 @@
     SUBDIR += py-streamparse
     SUBDIR += py-strenum
     SUBDIR += py-strict-rfc3339
+    SUBDIR += py-strictyaml
     SUBDIR += py-stringbrewer
     SUBDIR += py-stringcase
     SUBDIR += py-structlog

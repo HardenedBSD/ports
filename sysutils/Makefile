@@ -88,10 +88,10 @@
     SUBDIR += backuppc-devel
     SUBDIR += backuppc4
     SUBDIR += backupuser
+    SUBDIR += bacula-libs3
     SUBDIR += bacula11-client
     SUBDIR += bacula11-client-static
     SUBDIR += bacula11-docs
-    SUBDIR += bacula11-libs3
     SUBDIR += bacula11-server
     SUBDIR += bacula13-client
     SUBDIR += bacula13-client-static
@@ -1086,6 +1086,7 @@
     SUBDIR += py-croniter
     SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
+    SUBDIR += py-director
     SUBDIR += py-dirsync
     SUBDIR += py-distro
     SUBDIR += py-dlipower

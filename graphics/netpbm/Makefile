@@ -18,18 +18,9 @@ LIB_DEPENDS=	libjasper.so:graphics/jasper \
 		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-# The port follows the advanced release series.  Upstream does not
-# create tarballs for them, so we have to roll our own.  See
-# http://netpbm.sourceforge.net/getting_netpbm.php.  To checkout the
-# sources yourself see the netpbm-version-check and netpbm-fetch
-# targets below.
-USES=		cpe ghostscript:test gmake perl5 shebangfix tar:xz
-=======
 USES=		cpe gmake jpeg perl5 shebangfix tar:xz
->>>>>>> internal/freebsd/main
 USE_LDCONFIG=	yes
 CPE_VENDOR=	netpbm_project
 

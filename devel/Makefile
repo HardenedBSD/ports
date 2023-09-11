@@ -1575,8 +1575,8 @@
     SUBDIR += matreshka
     SUBDIR += maven
     SUBDIR += maven-wrapper
-    SUBDIR += maven39
     SUBDIR += maven363
+    SUBDIR += maven39
     SUBDIR += mcpp
     SUBDIR += mdb
     SUBDIR += mdds
@@ -4576,6 +4576,7 @@
     SUBDIR += py-debtcollector
     SUBDIR += py-debugpy
     SUBDIR += py-debugtools
+    SUBDIR += py-decopatch
     SUBDIR += py-decorator
     SUBDIR += py-decoratortools
     SUBDIR += py-deepdiff
@@ -4665,6 +4666,7 @@
     SUBDIR += py-find-libpython
     SUBDIR += py-findlibs
     SUBDIR += py-findpython
+    SUBDIR += py-fire
     SUBDIR += py-first
     SUBDIR += py-fixtures
     SUBDIR += py-flake8
@@ -5225,6 +5227,7 @@
     SUBDIR += py-prompt-toolkit2
     SUBDIR += py-property-cached
     SUBDIR += py-proselint
+    SUBDIR += py-prospector
     SUBDIR += py-proto-plus
     SUBDIR += py-protobuf
     SUBDIR += py-protobuf-compiler
@@ -5296,6 +5299,7 @@
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylint-django
+    SUBDIR += py-pylint-flask
     SUBDIR += py-pylint-plugin-utils
     SUBDIR += py-pylint-venv
     SUBDIR += py-pylru
@@ -5327,6 +5331,7 @@
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyright
     SUBDIR += py-pyro
+    SUBDIR += py-pyroma
     SUBDIR += py-pyrsistent
     SUBDIR += py-pyscaffold
     SUBDIR += py-pysdl2
@@ -5345,6 +5350,7 @@
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-canonical-data
     SUBDIR += py-pytest-capturelog
+    SUBDIR += py-pytest-cases
     SUBDIR += py-pytest-checkdocs
     SUBDIR += py-pytest-console-scripts
     SUBDIR += py-pytest-cov
@@ -5559,6 +5565,7 @@
     SUBDIR += py-serializable
     SUBDIR += py-serpent
     SUBDIR += py-session-info
+    SUBDIR += py-setoptconf
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools
     SUBDIR += py-setuptools-declarative-requirements
@@ -6680,7 +6687,6 @@
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
-    SUBDIR += rubygem-cucumber-tag-expressions4
     SUBDIR += rubygem-cucumber-wire
     SUBDIR += rubygem-curses
     SUBDIR += rubygem-cyoi
@@ -7290,6 +7296,7 @@
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-semver2
     SUBDIR += rubygem-semver_dialects
+    SUBDIR += rubygem-semver_dialects12
     SUBDIR += rubygem-semverse
     SUBDIR += rubygem-sentry-rails
     SUBDIR += rubygem-sentry-raven

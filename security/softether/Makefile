@@ -12,10 +12,13 @@ WWW=		https://www.softether.org
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 BROKEN_FreeBSD_14=	fails to compile undefined symbol: RSA_generate_key
 
+=======
+>>>>>>> internal/freebsd/main
 ONLY_FOR_ARCHS=	aarch64 amd64 armv7 i386 powerpc powerpc64 powerpc64le riscv64
 
 USES=		dos2unix gmake iconv:wchar_t localbase:ldflags ncurses \

@@ -1075,6 +1075,7 @@
     SUBDIR += py-ldap
     SUBDIR += py-ldap0
     SUBDIR += py-ldap3
+    SUBDIR += py-ldapdomaindump
     SUBDIR += py-ldappool
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet

@@ -4215,6 +4215,7 @@
     SUBDIR += py-addict
     SUBDIR += py-aenum
     SUBDIR += py-aioapns
+    SUBDIR += py-aiobotocore
     SUBDIR += py-aiocontextvars
     SUBDIR += py-aiofiles
     SUBDIR += py-aiohttp-apispec
@@ -4260,6 +4261,7 @@
     SUBDIR += py-asn1crypto
     SUBDIR += py-aspectlib
     SUBDIR += py-aspy.yaml
+    SUBDIR += py-assertpy
     SUBDIR += py-ast-decompiler
     SUBDIR += py-asteval
     SUBDIR += py-astor
@@ -4727,6 +4729,7 @@
     SUBDIR += py-game_sdl2
     SUBDIR += py-gapic-generator
     SUBDIR += py-gast
+    SUBDIR += py-gcsfs
     SUBDIR += py-gelidum
     SUBDIR += py-genson
     SUBDIR += py-genty
@@ -5270,6 +5273,8 @@
     SUBDIR += py-pydantic
     SUBDIR += py-pydantic-core
     SUBDIR += py-pydantic-extra-types
+    SUBDIR += py-pydantic-vault
+    SUBDIR += py-pydantic-yaml
     SUBDIR += py-pydantic2
     SUBDIR += py-pydash
     SUBDIR += py-pydecor
@@ -5549,6 +5554,7 @@
     SUBDIR += py-rush
     SUBDIR += py-rx
     SUBDIR += py-rx1
+    SUBDIR += py-s3fs
     SUBDIR += py-saneyaml
     SUBDIR += py-sarge
     SUBDIR += py-sarif-om

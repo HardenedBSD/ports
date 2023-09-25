@@ -1303,7 +1303,7 @@
     SUBDIR += rubygem-winrm-fs
     SUBDIR += rubygem-yell
     SUBDIR += runas
-    SUBDIR += rundeck3
+    SUBDIR += rundeck
     SUBDIR += runiq
     SUBDIR += runit
     SUBDIR += runit-faster

@@ -18,8 +18,7 @@
 # MAX_FILES_qt5_webengine=4096 to /usr/local/etc/poudriere.conf
 
 PORTNAME=	webengine
-DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	6
+DISTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
 CATEGORIES=	www
 PKGNAMEPREFIX=	qt5-
 
@@ -49,7 +48,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libwebp.so:graphics/webp
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
-QT5_VERSION=	5.15.8
+QT5_VERSION=	${_KDE_webengine_VERSION}
 
 # Add extra-patch-no-mempcpy-nasm only when there's no mempcpy() in base.
 # Nested variable expansion avoids executing the test when not needed for
@@ -58,10 +57,13 @@ QT5_VERSION=	5.15.8
 EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
 		|| ${TRUE}!}" == "":?${PATCHDIR}/extra-patch-no-mempcpy-nasm:}
 
+<<<<<<< HEAD
 WRKSRC=		${WRKDIR}/qtwebengine-everywhere-src-${DISTVERSION}
 
 MPROTECT_DISABLE=	libexec/qt5/QtWebEngineProcess
 
+=======
+>>>>>>> internal/freebsd/main
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO SNDIO
 OPTIONS_DEFAULT=	ALSA
@@ -169,5 +171,12 @@ pre-configure:
 		fontconfig freetype harfbuzz-ng libdrm libevent libpng libwebp libxml libxslt openh264 opus || ${FALSE}
 # Rerun syncqt.pl -- otherwise the resulting package misses some forwarding headers.
 	cd ${WRKSRC} && ${QT_BINDIR}/syncqt.pl -version ${QT5_VERSION}
+
+# Fix version mismatches for CMake
+post-build:
+.for module in Pdf PdfWidgets WebEngine WebEngineCore WebEngineWidgets
+	@${REINPLACE_CMD} -e '/${QT5_VERSION} $${_Qt5${module}_FIND_VERSION_EXACT}/s|${QT5_VERSION}|'"$$(${MAKE} -C ../../devel/qt5-core -VQT5_VERSION)"'|' \
+		${BUILD_WRKSRC}/lib/cmake/Qt5${module}/Qt5${module}Config.cmake
+.endfor
 
 .include <bsd.port.post.mk>

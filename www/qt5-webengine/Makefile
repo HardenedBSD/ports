@@ -57,13 +57,8 @@ QT5_VERSION=	${_KDE_webengine_VERSION}
 EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
 		|| ${TRUE}!}" == "":?${PATCHDIR}/extra-patch-no-mempcpy-nasm:}
 
-<<<<<<< HEAD
-WRKSRC=		${WRKDIR}/qtwebengine-everywhere-src-${DISTVERSION}
-
 MPROTECT_DISABLE=	libexec/qt5/QtWebEngineProcess
 
-=======
->>>>>>> internal/freebsd/main
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO SNDIO
 OPTIONS_DEFAULT=	ALSA

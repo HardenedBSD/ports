@@ -43,13 +43,9 @@ MAKE_ARGS+=	pch=off
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && (${OSVERSION} >= 1500000 || \
-	(${OSVERSION} >= 1400000 && ${OSVERSION} < 1400097))
-USES+=	llvm:build
+# HBSD: We require at least llvm 16 to build devel/boost-libs
+USES+=	llvm:16,build
 CHOSEN_COMPILER_TYPE=	clang
-.else
-USES+=	compiler:c++17-lang
-.endif
 
 post-patch:
 .if defined(USE_BINUTILS)

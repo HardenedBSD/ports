@@ -388,7 +388,6 @@
     SUBDIR += libe-book
     SUBDIR += libebml
     SUBDIR += libepubgen
-    SUBDIR += libextractor
     SUBDIR += libexttextcat
     SUBDIR += libfo
     SUBDIR += libfolia
@@ -1285,7 +1284,6 @@
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
-    SUBDIR += popup
     SUBDIR += popup-stacks
     SUBDIR += ppower4
     SUBDIR += print-n-times
@@ -1303,6 +1301,7 @@
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
+    SUBDIR += py-ansi2html
     SUBDIR += py-anyascii
     SUBDIR += py-arabic-reshaper
     SUBDIR += py-asciinema
@@ -1659,7 +1658,6 @@
     SUBDIR += rand
     SUBDIR += randlm
     SUBDIR += rapidxml
-    SUBDIR += raptor
     SUBDIR += raptor2
     SUBDIR += rasqal
     SUBDIR += re-flex
@@ -2117,7 +2115,6 @@
     SUBDIR += xwindiff
     SUBDIR += y2l
     SUBDIR += yali
-    SUBDIR += yamcha
     SUBDIR += yaml-mode.el
     SUBDIR += yaml.el
     SUBDIR += yamlfmt

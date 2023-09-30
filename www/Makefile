@@ -61,7 +61,6 @@
     SUBDIR += aria2
     SUBDIR += asql
     SUBDIR += authelia
-    SUBDIR += awffull
     SUBDIR += awstats
     SUBDIR += axis2
     SUBDIR += bacula-web
@@ -71,7 +70,6 @@
     SUBDIR += badwolf
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bareos19-webui
     SUBDIR += bareos20-webui
     SUBDIR += bareos21-webui
     SUBDIR += beehive
@@ -138,7 +136,6 @@
     SUBDIR += deno
     SUBDIR += devd
     SUBDIR += dfileserver
-    SUBDIR += dhttpd
     SUBDIR += dillo2
     SUBDIR += dojo
     SUBDIR += dokuwiki
@@ -152,7 +149,6 @@
     SUBDIR += drupal10
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
-    SUBDIR += drupal8
     SUBDIR += drupal9
     SUBDIR += drush
     SUBDIR += dtse
@@ -186,7 +182,6 @@
     SUBDIR += flat-frog
     SUBDIR += flexget
     SUBDIR += flickcurl
-    SUBDIR += fnord
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += fpc-fastcgi
@@ -231,7 +226,6 @@
     SUBDIR += gopherus
     SUBDIR += gotty
     SUBDIR += gpx2map
-    SUBDIR += grafana8
     SUBDIR += grafana9
     SUBDIR += grails
     SUBDIR += gregarius
@@ -360,7 +354,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki135
-    SUBDIR += mediawiki138
     SUBDIR += mediawiki139
     SUBDIR += mediawiki140
     SUBDIR += mergelog
@@ -1436,14 +1429,12 @@
     SUBDIR += pmwiki
     SUBDIR += pnews
     SUBDIR += podcastamatic
-    SUBDIR += polipo
     SUBDIR += pomerium
     SUBDIR += pound
     SUBDIR += privatebin
     SUBDIR += privoxy
     SUBDIR += protovis
     SUBDIR += proxygen
-    SUBDIR += pserv
     SUBDIR += publicfile
     SUBDIR += punbb
     SUBDIR += py-Pituophis

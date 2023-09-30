@@ -106,9 +106,6 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos19-client
-    SUBDIR += bareos19-server
-    SUBDIR += bareos19-traymonitor
     SUBDIR += bareos20-client
     SUBDIR += bareos20-server
     SUBDIR += bareos20-traymonitor
@@ -602,7 +599,6 @@
     SUBDIR += ipsc
     SUBDIR += isc-cron
     SUBDIR += isomaster
-    SUBDIR += istatserver
     SUBDIR += istio
     SUBDIR += jadm
     SUBDIR += jail-primer
@@ -699,7 +695,6 @@
     SUBDIR += loganalyzer
     SUBDIR += logrotate
     SUBDIR += logstalgia
-    SUBDIR += logstash-forwarder
     SUBDIR += logstash7
     SUBDIR += logstash8
     SUBDIR += logtool

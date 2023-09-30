@@ -182,6 +182,7 @@
     SUBDIR += flat-frog
     SUBDIR += flexget
     SUBDIR += flickcurl
+    SUBDIR += foreign-cdm
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += fpc-fastcgi

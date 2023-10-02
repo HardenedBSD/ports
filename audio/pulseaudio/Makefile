@@ -4,7 +4,7 @@
 
 PORTNAME=	pulseaudio
 DISTVERSION=	16.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 
@@ -28,6 +28,8 @@ USES=		compiler:c11 cpe gettext-tools gmake gnome iconv localbase:ldflags \
 
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
+
+LDFLAGS+=	-Wl,--undefined-version
 
 SHEBANG_FILES=	shell-completion/bash/pactl \
 		src/utils/pa-info \

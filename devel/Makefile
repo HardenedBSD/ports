@@ -155,6 +155,7 @@
     SUBDIR += aifad
     SUBDIR += aixlog
     SUBDIR += ald
+    SUBDIR += alire
     SUBDIR += allegro
     SUBDIR += allegro5
     SUBDIR += amber
@@ -5299,6 +5300,7 @@
     SUBDIR += py-pyjsparser
     SUBDIR += py-pykdtree
     SUBDIR += py-pylama
+    SUBDIR += py-pyleri
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylint-django
@@ -5497,6 +5499,7 @@
     SUBDIR += py-rebulk
     SUBDIR += py-recordclass
     SUBDIR += py-recurring-ical-events
+    SUBDIR += py-red-black-tree-mod
     SUBDIR += py-rednose
     SUBDIR += py-reedsolo
     SUBDIR += py-referencing
@@ -5575,6 +5578,7 @@
     SUBDIR += py-setuptools-declarative-requirements
     SUBDIR += py-setuptools-gettext
     SUBDIR += py-setuptools-git
+    SUBDIR += py-setuptools-git-versioning
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
     SUBDIR += py-setuptools44

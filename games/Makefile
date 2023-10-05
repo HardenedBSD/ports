@@ -967,6 +967,7 @@
     SUBDIR += textmaze
     SUBDIR += thegrind
     SUBDIR += tileworld
+    SUBDIR += tinycols
     SUBDIR += tkmoo
     SUBDIR += tmatrix
     SUBDIR += tomatoes

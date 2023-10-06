@@ -1004,6 +1004,7 @@
     SUBDIR += ignition-tools
     SUBDIR += ikos
     SUBDIR += imake
+    SUBDIR += immer
     SUBDIR += imtui
     SUBDIR += inastemp
     SUBDIR += include-what-you-use
@@ -1120,6 +1121,7 @@
     SUBDIR += kyra
     SUBDIR += kyua
     SUBDIR += lab
+    SUBDIR += lager
     SUBDIR += lasi
     SUBDIR += lattice-ice40-examples-hx1k
     SUBDIR += lattice-ice40-examples-hx8k
@@ -7862,6 +7864,7 @@
     SUBDIR += zls
     SUBDIR += zookeeper
     SUBDIR += zthread
+    SUBDIR += zug
     SUBDIR += zycore-c
     SUBDIR += zydis
     SUBDIR += zziplib

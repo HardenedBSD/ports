@@ -12,7 +12,7 @@
 # frr.conf in place of one file for each dameon)
 #  frr_vtysh_boot="YES"
 # Selecting limited set of daemons to run
-#  frr_daemons="zebra babeld bfdd bgpd eigrpd fabricd isisd ospfd ospf6d ripd ripngd staticd"
+#  frr_daemons="zebra mgmtd babeld bfdd bgpd eigrpd fabricd isisd ospfd ospf6d ripd ripngd staticd"
 # Global tuning
 #  frr_flags=""
 # Per daemon tuning may be done with daemon_name_flags
@@ -44,7 +44,7 @@ command_args="-d"
 load_rc_config $name
 : ${frr_enable:="NO"}
 : ${frr_flags:=""}
-: ${frr_daemons:="zebra babeld bfdd bgpd eigrpd fabricd isisd ospfd ospf6d ripd ripngd staticd"}
+: ${frr_daemons:="zebra mgmtd babeld bfdd bgpd eigrpd fabricd isisd ospfd ospf6d ripd ripngd staticd"}
 : ${frr_vtysh_boot:="NO"}
 : ${frr_wait_for:=""}
 : ${frr_wait_seconds:="90"}
@@ -96,6 +96,9 @@ do_cmd()
 		daemon="vtysh"
 		daemon_flags=""
 		command=%%PREFIX%%/bin/${daemon}
+		if ! [ -f %%ETCDIR%%/vtysh.conf ]; then
+			touch %%ETCDIR%%/vtysh.conf
+		fi
 		check_config
 	fi
 	for daemon in ${frr_daemons}; do

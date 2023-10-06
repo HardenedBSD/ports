@@ -29,12 +29,9 @@ USES=		compiler:c11 cpe gettext-tools gmake gnome iconv localbase:ldflags \
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
-=======
 # Some symbols in the linker version script map-file are only defined when
 # building the mainloop-glib shared library. Suppress errors with lld >= 17 due
 # to these undefined symbols.
->>>>>>> internal/freebsd/main
 LDFLAGS+=	-Wl,--undefined-version
 
 SHEBANG_FILES=	shell-completion/bash/pactl \

@@ -604,6 +604,7 @@
     SUBDIR += electron22
     SUBDIR += electron24
     SUBDIR += electron25
+    SUBDIR += electron26
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -844,7 +845,6 @@
     SUBDIR += gitg
     SUBDIR += github-backup-utils
     SUBDIR += gitinspector
-    SUBDIR += gitlab-metrics-exporter
     SUBDIR += gitlab-runner
     SUBDIR += gitlab-shell
     SUBDIR += gitleaks
@@ -6184,7 +6184,6 @@
     SUBDIR += rubygem-aws-sdk-controltower
     SUBDIR += rubygem-aws-sdk-core
     SUBDIR += rubygem-aws-sdk-core2
-    SUBDIR += rubygem-aws-sdk-core3175
     SUBDIR += rubygem-aws-sdk-costandusagereportservice
     SUBDIR += rubygem-aws-sdk-costexplorer
     SUBDIR += rubygem-aws-sdk-customerprofiles
@@ -6393,7 +6392,6 @@
     SUBDIR += rubygem-aws-sdk-route53resolver
     SUBDIR += rubygem-aws-sdk-s3
     SUBDIR += rubygem-aws-sdk-s31121
-    SUBDIR += rubygem-aws-sdk-s31126
     SUBDIR += rubygem-aws-sdk-s3control
     SUBDIR += rubygem-aws-sdk-s3outposts
     SUBDIR += rubygem-aws-sdk-sagemaker
@@ -6875,9 +6873,7 @@
     SUBDIR += rubygem-gitlab-experiment
     SUBDIR += rubygem-gitlab-labkit
     SUBDIR += rubygem-gitlab-license
-    SUBDIR += rubygem-gitlab-license_finder
     SUBDIR += rubygem-gitlab-pygments.rb
-    SUBDIR += rubygem-gitlab-sidekiq-fetcher
     SUBDIR += rubygem-gitlab_chronic_duration
     SUBDIR += rubygem-gitlab_git
     SUBDIR += rubygem-gitlab_meta
@@ -7427,7 +7423,6 @@
     SUBDIR += rubygem-test-unit
     SUBDIR += rubygem-thor
     SUBDIR += rubygem-thor0
-    SUBDIR += rubygem-thor10
     SUBDIR += rubygem-thread_safe
     SUBDIR += rubygem-thrift
     SUBDIR += rubygem-thwait

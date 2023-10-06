@@ -11,16 +11,12 @@ WWW=		https://krita.org
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=   bin/krita
 
-BUILD_DEPENDS=	libheif>=1.12.0:graphics/libheif
-=======
 BUILD_DEPENDS=	boost-libs>=1.65:devel/boost-libs \
 		immer>=0:devel/immer \
 		lager>=0:devel/lager \
 		zug>=0:devel/zug
->>>>>>> internal/freebsd/main
 BUILD_DEPENDS+=	${BUILD_DEPENDS_${ARCH}}
 BUILD_DEPENDS_aarch64=	xsimd>=8.1:devel/xsimd
 BUILD_DEPENDS_amd64=	xsimd>=8.1:devel/xsimd

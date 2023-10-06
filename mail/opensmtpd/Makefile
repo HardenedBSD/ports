@@ -15,14 +15,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libevent.so:devel/libevent
 
-<<<<<<< HEAD
 USE_HARDENING=	cfi safestack
 CFI_OVERRIDE=	-fno-sanitize=cfi-icall
 
-OPTIONS_DEFINE=	CA_BUNDLE MAILERCONF PAM TABLE_DB
-=======
 OPTIONS_DEFINE=	MAILERCONF PAM TABLE_DB
->>>>>>> internal/freebsd/main
 
 OPTIONS_DEFAULT=	PAM TABLE_DB
 

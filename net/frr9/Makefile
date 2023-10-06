@@ -42,23 +42,14 @@ LIB_DEPENDS=	libcares.so:dns/c-ares \
 		libprotobuf-c.so:devel/protobuf-c \
 		libyang.so.2:net/libyang2
 
-<<<<<<< HEAD:net/frr7/Makefile
-LIB_DEPENDS=	libjson-c.so:devel/json-c \
-		libyang.so:net/libyang \
-		libpcre.so:devel/pcre \
-		libcares.so:dns/c-ares
 
 # FRR uses shared libraries as plugins, but
 # does not fail with safestack as no port depends
 # on these internal library plugins:
 USE_HARDENING=	safestack
 
-USES=		autoreconf bison compiler:c++11-lang gmake pkgconfig libtool \
-		makeinfo python:build readline shebangfix
-=======
 USES=		autoreconf bison compiler:c++11-lang gmake libtool makeinfo \
 		pkgconfig python:build readline shebangfix
->>>>>>> internal/freebsd/main:net/frr9/Makefile
 
 BINARY_ALIAS=	python=${PYTHON_VERSION}
 

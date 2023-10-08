@@ -628,7 +628,6 @@
     SUBDIR += minetest
     SUBDIR += minetest_game
     SUBDIR += minetestmapper
-    SUBDIR += minilens
     SUBDIR += mirrormagic
     SUBDIR += miscom
     SUBDIR += mkhexgrid
@@ -954,7 +953,6 @@
     SUBDIR += taisei
     SUBDIR += tali
     SUBDIR += tanglet
-    SUBDIR += tanks-of-freedom
     SUBDIR += tbclock
     SUBDIR += tecnoballz
     SUBDIR += teeworlds

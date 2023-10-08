@@ -330,6 +330,7 @@
     SUBDIR += links1
     SUBDIR += linux-c7-qtwebkit
     SUBDIR += linux-opera
+    SUBDIR += linux-widevine-cdm
     SUBDIR += litmus
     SUBDIR += ljdeps
     SUBDIR += llhttp
@@ -1481,6 +1482,7 @@
     SUBDIR += py-cinemagoer
     SUBDIR += py-cookies
     SUBDIR += py-crossplane
+    SUBDIR += py-css-html-js-minify
     SUBDIR += py-css-parser
     SUBDIR += py-csscompressor
     SUBDIR += py-cssmin

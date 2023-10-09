@@ -441,6 +441,7 @@
     SUBDIR += monolith
     SUBDIR += moodle41
     SUBDIR += moodle42
+    SUBDIR += moodle43
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort

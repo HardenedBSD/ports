@@ -1,5 +1,6 @@
 PORTNAME=	sphinx-multiversion
 DISTVERSION=	0.2.4
+PORTREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,6 +15,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=2.1:textproc/py-sphinx@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
+
+CONFLICTS_INSTALL=	sphinx-multiversion-zrepl
 
 NO_ARCH=	yes
 

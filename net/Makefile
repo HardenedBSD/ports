@@ -578,7 +578,6 @@
     SUBDIR += openldap26-server
     SUBDIR += openmdns
     SUBDIR += openmpi
-    SUBDIR += openmpi3
     SUBDIR += openntpd
     SUBDIR += openpgm
     SUBDIR += openradius

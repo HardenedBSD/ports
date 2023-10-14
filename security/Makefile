@@ -421,7 +421,7 @@
     SUBDIR += openssl-agent
     SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
-    SUBDIR += openssl30
+    SUBDIR += openssl111
     SUBDIR += openssl31
     SUBDIR += openssl32
     SUBDIR += openvas

@@ -1,6 +1,6 @@
 PORTNAME=	wine-proton
-DISTVERSION=	7.0-5
-PORTREVISION=	2
+DISTVERSION=	8.0-3
+PORTREVISION=	0
 CATEGORIES=	emulators
 
 MAINTAINER=	iwtcex@gmail.com
@@ -22,7 +22,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libgnutls.so:security/gnutls \
 		libvulkan.so:graphics/vulkan-loader
 
-USES=		autoreconf bison desktop-file-utils gettext-runtime gl gmake gnome gstreamer localbase openal pkgconfig python:build sdl shebangfix tar:xz xorg
+USES=		autoreconf bison desktop-file-utils gl gmake gnome gstreamer localbase pkgconfig python:build sdl shebangfix tar:xz xorg
 USE_GCC=	yes
 PIE_UNSAFE=	yes
 
@@ -34,7 +34,7 @@ MPROTECT_DISABLE=	bin/wine64.bin
 USE_GITHUB=	yes
 GH_ACCOUNT=	ValveSoftware
 GH_PROJECT=	wine
-GH_TAGNAME=	492470267af486cb24ad0deaa028168eb94618a4
+GH_TAGNAME=	8a8ec5f86d8ab1e1d4c6bc88dda016b5e8cf479e
 
 USE_GL=		gl
 USE_GNOME=	glib20
@@ -56,7 +56,6 @@ CONFIGURE_ARGS=	--verbose \
 		--with-freetype \
 		--with-gnutls \
 		--with-gstreamer \
-		--with-openal \
 		--with-opengl \
 		--with-oss \
 		--with-sdl \
@@ -80,20 +79,19 @@ CONFIGURE_ARGS=	--verbose \
 		--without-gssapi \
 		--without-inotify \
 		--without-krb5 \
-		--without-ldap \
 		--without-netapi \
 		--without-opencl \
 		--without-osmesa \
+		--without-pcsclite \
 		--without-sane \
 		--without-udev \
 		--without-unwind \
 		--without-usb \
-		--without-v4l2 \
-		--without-vkd3d
+		--without-v4l2
 
-CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex" JXRLIB_CFLAGS="-I${LOCALBASE}/include/jxrlib"
+CONFIGURE_ENV=	CPPBIN="false" CPPFLAGS="" FLEX="${LOCALBASE}/bin/flex" JXRLIB_CFLAGS="-I${LOCALBASE}/include/jxrlib"
 
-CFLAGS+=	-D__NR_futex="-1"
+CFLAGS+=	-D__NR_futex="-1" -Werror=implicit-function-declaration
 
 BINARY_ALIAS+=	clang=${LOCALBASE}/bin/clang${_LLVM_VERSION} \
 		lld-link=${LOCALBASE}/bin/lld-link${_LLVM_VERSION}

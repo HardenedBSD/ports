@@ -9,16 +9,12 @@ WWW=		https://github.com/KlaraSystems/freebsd-relayd
 
 LICENSE=	ISCL
 
-<<<<<<< HEAD
-USE_HARDENING=  safestack
-
-USES=		ssl uidfix
-=======
 LIB_DEPENDS=	libpfctl.so:net/libpfctl
 
 USES=		localbase:ldflags ssl uidfix
->>>>>>> internal/freebsd/main
 USE_RC_SUBR=	relayd
+
+USE_HARDENING=  safestack
 
 HAS_CONFIGURE=	yes
 

@@ -900,6 +900,7 @@
     SUBDIR += rubygem-activerecord-jdbc-adapter
     SUBDIR += rubygem-activerecord-jdbcmysql-adapter
     SUBDIR += rubygem-activerecord-session_store
+    SUBDIR += rubygem-activerecord-trilogy-adapter
     SUBDIR += rubygem-activerecord4
     SUBDIR += rubygem-activerecord5
     SUBDIR += rubygem-activerecord50
@@ -1015,6 +1016,7 @@
     SUBDIR += rubygem-state_machines-activerecord
     SUBDIR += rubygem-state_machines-activerecord08
     SUBDIR += rubygem-tarantool
+    SUBDIR += rubygem-trilogy
     SUBDIR += sequeler
     SUBDIR += sfcgal
     SUBDIR += sharedance
@@ -1060,6 +1062,7 @@
     SUBDIR += tinycdb
     SUBDIR += tokyocabinet
     SUBDIR += tokyotyrant
+    SUBDIR += trilogy
     SUBDIR += tsearch_extras
     SUBDIR += tuning-primer
     SUBDIR += twemproxy

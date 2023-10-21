@@ -4573,6 +4573,7 @@
     SUBDIR += py-dateutil
     SUBDIR += py-dateutils
     SUBDIR += py-datrie
+    SUBDIR += py-dbt-extractor
     SUBDIR += py-dbus
     SUBDIR += py-ddsketch
     SUBDIR += py-ddt
@@ -4793,6 +4794,7 @@
     SUBDIR += py-hgtools
     SUBDIR += py-hidraw
     SUBDIR += py-holidays
+    SUBDIR += py-hologram
     SUBDIR += py-homebase
     SUBDIR += py-http-prompt
     SUBDIR += py-humanize
@@ -5700,6 +5702,7 @@
     SUBDIR += py-transaction
     SUBDIR += py-transitions
     SUBDIR += py-tree-format
+    SUBDIR += py-tree-sitter
     SUBDIR += py-treelib
     SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers

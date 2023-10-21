@@ -35,21 +35,10 @@ CONFIGURE_SCRIPT=	../${SRCDIR:C/${WRKDIR}//}/configure
 
 SSP_UNSAFE=	yes
 
-<<<<<<< HEAD
 LLVM_AR_UNSAFE=         yes
 LLD_UNSAFE=             yes
 NO_UNUSED_ARGUMENTS_CHECK=	yes
 
-ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 sparc64
-USE_LDCONFIG=	yes
-USES=		bison cpe iconv gmake libtool makeinfo perl5 tar:bzip2
-CPE_VENDOR=	gnu
-USE_PERL5=	build
-
-GCC_TARG=	${PKGNAMEPREFIX:S/-$//}
-
-=======
->>>>>>> internal/freebsd/main
 PATCH_WRKSRC=	${SRCDIR}
 
 BINARIES=	c++ cpp g++ gcc gcov gfortran

@@ -32,13 +32,8 @@ CONFIGURE_ENV=	ac_cv_func_inotify_init=no
 
 INSTALL_TARGET=	install-strip
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-CPPFLAGS+=	-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib
-=======
->>>>>>> internal/freebsd/main
 LDFLAGS+=	-Wl,--add-needed
 
 LLD_UNSAFE=	yes

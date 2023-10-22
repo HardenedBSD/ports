@@ -757,7 +757,10 @@
     SUBDIR += py-couchdb
     SUBDIR += py-databases
     SUBDIR += py-dbf
+    SUBDIR += py-dbt-core
+    SUBDIR += py-dbt-duckdb
     SUBDIR += py-dbt-semantic-interfaces
+    SUBDIR += py-dbt-snowflake
     SUBDIR += py-dbutils
     SUBDIR += py-duckdb
     SUBDIR += py-fakeredis
@@ -826,6 +829,7 @@
     SUBDIR += py-redis3
     SUBDIR += py-redis4
     SUBDIR += py-rrdtool
+    SUBDIR += py-schemachange
     SUBDIR += py-sispy
     SUBDIR += py-snowflake-connector-python
     SUBDIR += py-south

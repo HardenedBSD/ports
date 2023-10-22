@@ -216,6 +216,7 @@
     SUBDIR += arpc
     SUBDIR += art
     SUBDIR += artifactory
+    SUBDIR += asfml
     SUBDIR += asl
     SUBDIR += asmjit
     SUBDIR += asmutils
@@ -475,6 +476,7 @@
     SUBDIR += criterion
     SUBDIR += cscope
     SUBDIR += cscout
+    SUBDIR += csfml
     SUBDIR += csmith
     SUBDIR += csoap
     SUBDIR += cssc
@@ -4999,6 +5001,7 @@
     SUBDIR += py-mime
     SUBDIR += py-miniKanren
     SUBDIR += py-minidump
+    SUBDIR += py-minimal-snowplow-tracker
     SUBDIR += py-minimongo
     SUBDIR += py-minio
     SUBDIR += py-mock

@@ -23,8 +23,6 @@ USES=		cpe tar:xz
 # Give a hint of where libperl.so can be found.
 USE_LDCONFIG=	${PREFIX}/${_ARCH_LIB}/CORE
 
-LLD_UNSAFE=	yes
-
 TEST_TARGET=	test_harness
 TEST_ENV=	${MAKE_ENV} \
 		LD_LIBRARY_PATH=${WRKSRC} \

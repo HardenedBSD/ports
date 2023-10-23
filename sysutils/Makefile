@@ -386,6 +386,7 @@
     SUBDIR += fanout
     SUBDIR += fastfetch
     SUBDIR += fatback
+    SUBDIR += fclones
     SUBDIR += fcode-utils
     SUBDIR += fconfig
     SUBDIR += fcron

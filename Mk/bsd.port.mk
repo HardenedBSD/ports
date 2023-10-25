@@ -4522,6 +4522,7 @@ describe-json:
 	${ECHO_CMD} \"pkgname\":\"${PKGNAME}\", ;\
 	${ECHO_CMD} \"pkgnamesuffix\":\"${PKGNAMESUFFIX}\", ;\
 	${ECHO_CMD} \"pkgorigin\":\"${PKGORIGIN}\", ;\
+	${ECHO_CMD} \"comment\":\"${COMMENT:Q:S/"/\\\"/g:S/\\\\*/*/g:S/\\\'/'/g}\", ;\
 	${ECHO_CMD} \"pkg_depends\":\"${PKG_DEPENDS}\", ;\
 	${ECHO_CMD} \"portepoch\":\"${PORTEPOCH}\", ;\
 	${ECHO_CMD} \"portname\":\"${PORTNAME}\", ;\

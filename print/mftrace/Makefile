@@ -19,11 +19,14 @@ BUILD_DEPENDS+=	potrace:graphics/potrace
 RUN_DEPENDS+=	potrace:graphics/potrace
 .endif
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 # Python3 ready
+=======
+>>>>>>> internal/freebsd/main
 USES=		gmake python tex
-USE_TEX=	base # texmf
+USE_TEX=	base
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
 

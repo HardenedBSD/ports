@@ -1,8 +1,8 @@
 PORTNAME=	binocle
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.1
-PORTREVISION=	2
-CATEGORIES=	misc
+PORTREVISION=	6
+CATEGORIES=	misc wayland
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Graphical tool to visualize binary data

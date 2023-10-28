@@ -1,6 +1,5 @@
 PORTNAME=	pplpy
-PORTVERSION=	0.8.7
-PORTREVISION=	4
+PORTVERSION=	0.8.9
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,6 +25,8 @@ TEST_DEPENDS=	py.test:devel/py-pytest@${PY_FLAVOR}
 
 USES=		compiler:c++11-lang localbase python
 USE_PYTHON=	cython distutils
+
+CFLAGS+=	-std=c++14
 
 .if !defined(WITH_DEBUG)
 LDFLAGS+=	-s

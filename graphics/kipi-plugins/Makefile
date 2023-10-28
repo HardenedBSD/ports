@@ -19,16 +19,12 @@ USE_QT=		concurrent core dbus gui network printsupport widgets xml xmlpatterns \
 		buildtools:build qmake:build
 USE_XORG=	x11
 
-OPTIONS_DEFINE=		DOCS MEDIAWIKI KVKONTAKTE
+OPTIONS_DEFINE=		DOCS MEDIAWIKI
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 OPTIONS_SUB=		yes
 
 MEDIAWIKI_DESC=		MediaWiki Plugin
 MEDIAWIKI_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_KF5MediaWiki
 MEDIAWIKI_LIB_DEPENDS=	libKF5MediaWiki.so:net/libmediawiki
-
-KVKONTAKTE_DESC=	vk.com Plugin
-KVKONTAKTE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_KF5Vkontakte
-KVKONTAKTE_LIB_DEPENDS=	libKF5Vkontakte.so:net/libkvkontakte
 
 .include <bsd.port.mk>

@@ -25,6 +25,7 @@ upgrade Document Server to a new version and all your changes will be lost.
     # psql -U postgres -c "CREATE DATABASE onlyoffice;"
     # psql -U postgres -c "CREATE USER onlyoffice WITH password 'onlyoffice';"
     # psql -U postgres -c "GRANT ALL privileges ON DATABASE onlyoffice TO onlyoffice;"
+    # psql -U postgres -c "ALTER DATABASE onlyoffice OWNER to onlyoffice;"
     # psql -hlocalhost -Uonlyoffice -d onlyoffice -f %%WWWDIR%%/documentserver/server/schema/postgresql/createdb.sql
 
     Optionally in case of a jail with local IP:
@@ -62,7 +63,10 @@ files = %%ETCDIR%%/documentserver/supervisor/*.conf
 6. Follow the following doc If you want to use Onlyoffice with Nextcloud:
   - https://api.onlyoffice.com/editors/nextcloud
 
-7. Enjoy.
+7. Install OnlyOffice plugins (you'll need internet):
+  # /usr/local/bin/documentserver-pluginsmanager.sh --update=/usr/local/www/onlyoffice/documentserver/sdkjs-plugins/plugin-list-default.json
+
+8. Enjoy.
 EOM
 }
 { type: upgrade

@@ -11,7 +11,11 @@ WWW=		http://www.worldforge.org/dev/eng/libraries/skstream/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+DEPRECATED=	There has been no release for most of the Worldforge libraries in the past 10 years.
+EXPIRATION_DATE=2023-12-31
+
 USES=		libtool pathfix pkgconfig compiler:c++11-lib gmake
+USE_CXXSTD=	c++14
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
@@ -19,12 +23,6 @@ CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
 CXXFLAGS_clang=	-Wno-c++11-narrowing
 
 OPTIONS_DEFINE=	DOCS
-
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
-CXXFLAGS+=  -Dregister=
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's| install-docdataDATA | |g'  ${WRKSRC}/Makefile.in

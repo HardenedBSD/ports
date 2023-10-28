@@ -1,5 +1,5 @@
 PORTNAME=	geoalchemy2
-PORTVERSION=	0.14.0
+PORTVERSION=	0.14.1
 CATEGORIES=	databases geography python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,7 +7,8 @@ DISTNAME=	GeoAlchemy2-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Using SQLAlchemy with Spatial Databases
-WWW=		https://github.com/geoalchemy/geoalchemy2
+WWW=		https://geoalchemy-2.readthedocs.io/en/stable/ \
+		https://github.com/geoalchemy/geoalchemy2
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING.rst

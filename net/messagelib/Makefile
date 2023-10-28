@@ -20,7 +20,7 @@ USES=		cmake compiler:c++11-lib cpe gettext grantlee:5 kde:5 qca \
 CPE_VENDOR=	kde
 USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
 		coreaddons guiaddons i18n iconthemes imap itemmodels itemviews jobwidgets \
-		kdewebkit kio notifications service solid sonnet syntaxhighlighting \
+		kio ktextaddons notifications service solid sonnet syntaxhighlighting \
 		textwidgets wallet widgetsaddons windowsystem xmlgui \
 		ecm:build
 # pim components

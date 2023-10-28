@@ -1,5 +1,5 @@
 PORTNAME=	weechat
-DISTVERSION=	4.0.1
+PORTVERSION=	4.1.1
 CATEGORIES=	irc
 MASTER_SITES=	https://weechat.org/files/src/
 
@@ -13,8 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS+=	libcurl.so:ftp/curl \
 		libgcrypt.so:security/libgcrypt \
 		libgnutls.so:security/gnutls \
-		libgpg-error.so:security/libgpg-error \
-		libzstd.so:archivers/zstd
+		libgpg-error.so:security/libgpg-error
 
 USES=		cmake cpe libtool ncurses pkgconfig tar:xz
 USE_LDCONFIG=	yes
@@ -23,10 +22,9 @@ USE_HARDENING=	safestack
 
 CMAKE_ARGS=	-DLIBDATADIR=${LOCALBASE}/libdata
 
-OPTIONS_DEFINE=		BACKTRACE DOCS CA_BUNDLE HEADLESS ICON ICONV \
-			MANPAGES NLS
-OPTIONS_DEFAULT=	ASPELL BACKTRACE CA_BUNDLE CHARSET HEADLESS \
-			ICON LUA MANPAGES NLS PERL PYTHON RUBY TCL TYPING
+OPTIONS_DEFINE=		BACKTRACE DOCS HEADLESS ICON ICONV MANPAGES NLS ZSTD
+OPTIONS_DEFAULT=	ASPELL BACKTRACE CHARSET HEADLESS ICON LUA MANPAGES \
+			NLS PERL PYTHON RUBY TCL TYPING ZSTD
 OPTIONS_SUB=		yes
 
 OPTIONS_GROUP=		PLUGINS
@@ -34,7 +32,6 @@ OPTIONS_GROUP_PLUGINS=	ASPELL CHARSET GUILE JAVASCRIPT LUA PERL PHP PYTHON \
 			RUBY TCL TYPING
 
 BACKTRACE_DESC=		Provide crash backtraces
-CA_BUNDLE_DESC=		Include CA bundle for certificate verification
 CHARSET_DESC=		Charset plugin (implies ICONV)
 GUILE_DESC=		Guile script support
 HEADLESS_DESC=		Build headless weechat as well
@@ -45,24 +42,22 @@ PYTHON_DESC=		Python script support
 RUBY_DESC=		Ruby script support
 TYPING_DESC=		Typing status plugin
 
-.for _opt in ${OPTIONS_GROUP_PLUGINS} BACKTRACE HEADLESS ICONV GNUTLS NLS
+.for _opt in ${OPTIONS_GROUP_PLUGINS} BACKTRACE HEADLESS ICONV GNUTLS NLS ZSTD
 ${_opt}_CMAKE_BOOL=	ENABLE_${_opt}
 .endfor
 
 ASPELL_CMAKE_BOOL=	ENABLE_SPELL
 ASPELL_LIB_DEPENDS=	libaspell.so:textproc/aspell
-CA_BUNDLE_RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 CHARSET_IMPLIES=	ICONV
 DOCS_CMAKE_BOOL=	ENABLE_DOC ENABLE_DOC_INCOMPLETE
 DOCS_BUILD_DEPENDS=	${LOCALBASE}/bin/asciidoctor:textproc/rubygem-asciidoctor
-GUILE_LIB_DEPENDS=	libguile-2.2.so:lang/guile2
+GUILE_USES=		guile:2.2,conflicts
 ICONV_USES=		iconv
 JAVASCRIPT_LIB_DEPENDS=	libv8.so:lang/v8
 LUA_USES=		lua pkgconfig
 MANPAGES_CMAKE_BOOL=	ENABLE_MAN
 MANPAGES_CMAKE_ON=	-DMANDIR=${MANPREFIX}/man
 MANPAGES_BUILD_DEPENDS=	${LOCALBASE}/bin/asciidoctor:textproc/rubygem-asciidoctor
-NLS_BROKEN_OFF=		NLS option error: "ld: error: undefined symbol: libintl_bindtextdomain"
 NLS_USES=		gettext
 PERL_USES=		perl5
 PHP_USES=		php:build,embed
@@ -71,6 +66,7 @@ RUBY_USES=		ruby
 TCL_CMAKE_ON=		-DTCL_VERSION:STRING="${TCL_VER}" \
 			-DTCL_TCLSH:PATH="${TCLSH}"
 TCL_USES=		tcl
+ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 .include <bsd.port.pre.mk>
 

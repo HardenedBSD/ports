@@ -39,6 +39,7 @@
     SUBDIR += csharp-mode.el
     SUBDIR += cython
     SUBDIR += cython-devel
+    SUBDIR += cython3
     SUBDIR += dhall
     SUBDIR += dlang-tools
     SUBDIR += duktape
@@ -51,6 +52,7 @@
     SUBDIR += elk
     SUBDIR += elm
     SUBDIR += emacs-lisp-intro
+    SUBDIR += emilua
     SUBDIR += erlang
     SUBDIR += erlang-doc
     SUBDIR += erlang-java
@@ -121,17 +123,19 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go-devel
-    SUBDIR += go118
     SUBDIR += go119
     SUBDIR += go120
+    SUBDIR += go121
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gravity
     SUBDIR += groovy
     SUBDIR += gscheme
     SUBDIR += guile
+    SUBDIR += guile-aclocal
     SUBDIR += guile1
     SUBDIR += guile2
+    SUBDIR += guile3
     SUBDIR += halide
     SUBDIR += harec
     SUBDIR += haskell-mode.el
@@ -214,6 +218,7 @@
     SUBDIR += nickle
     SUBDIR += nim
     SUBDIR += njs
+    SUBDIR += nll
     SUBDIR += nqc
     SUBDIR += nwcc
     SUBDIR += nx
@@ -222,7 +227,6 @@
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-camlidl
     SUBDIR += ocaml-nox11
-    SUBDIR += onyx
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opensycl
@@ -261,7 +265,6 @@
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
-    SUBDIR += perl5.32
     SUBDIR += perl5.34
     SUBDIR += perl5.36
     SUBDIR += perl5.38
@@ -316,6 +319,7 @@
     SUBDIR += rexx-regutil
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
+    SUBDIR += rizin
     SUBDIR += ruby30
     SUBDIR += ruby31
     SUBDIR += ruby32
@@ -326,6 +330,7 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
+    SUBDIR += s7
     SUBDIR += sagittarius-scheme
     SUBDIR += sather-specification
     SUBDIR += sather-tutorial
@@ -343,8 +348,6 @@
     SUBDIR += sketchy
     SUBDIR += slib
     SUBDIR += slib-guile
-    SUBDIR += slib-guile1
-    SUBDIR += slib-guile2
     SUBDIR += slisp
     SUBDIR += smalltalk
     SUBDIR += smlnj

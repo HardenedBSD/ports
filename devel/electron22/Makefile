@@ -20,6 +20,9 @@ LICENSE=	BSD3CLAUSE LGPL21 MPL11 MIT
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
 
+DEPRECATED=	Depends on EOL NodeJS 16
+EXPIRATION_DATE=	2023-10-30
+
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 
 FETCH_DEPENDS=	yarn-node16>0:www/yarn-node16
@@ -221,7 +224,7 @@ REACTIVEOBJC_VER=		74ab5baccc6f7202c8ac69a8d1e152c29dc1ea76
 # See ${WRKSRC}/electron/DEPS for MANTLE_VER
 MANTLE_VER=			78d3966b3c331292ea29ec38661b25df0a245948
 
-YARN_TIMESTAMP=	1688599700
+YARN_TIMESTAMP=	1696924632
 
 .include "Makefile.version"
 .include <bsd.port.pre.mk> # required for COMPILER_VERSION
@@ -282,6 +285,8 @@ pre-fetch:
 		${MTREE_CMD} -cbnSp yarn-offline-cache | ${MTREE_CMD} -C | ${SED} \
 			-e 's:time=[0-9.]*:time=${YARN_TIMESTAMP}.000000000:' \
 			-e 's:\([gu]id\)=[0-9]*:\1=0:g' \
+			-e 's:mode=\([0-9]\)7[0-9][0-9]:mode=\1755:' \
+			-e 's:mode=\([0-9]\)6[0-9][0-9]:mode=\1644:' \
 			-e 's:flags=.*:flags=none:' \
 			-e 's:^\.:./yarn-offline-cache:' > yarn-offline-cache.mtree; \
 		${TAR} cJf ${DISTDIR}/${DIST_SUBDIR}/electron-yarn-cache-${ELECTRON_VER}${EXTRACT_SUFX} \

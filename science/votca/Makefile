@@ -1,6 +1,7 @@
 PORTNAME=	votca
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2022.1
+PORTREVISION=	1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -42,6 +43,8 @@ SHEBANG_FILES=	csg/scripts/csg_call.in csg/scripts/csg_inverse.in \
 		xtp/scripts/xtp_update_mapfile.in xtp/scripts/xtp_basisset.in xtp/share/benchmark/xtp_benchmark.in xtp/scripts/xtp_autogen_mapping.in \
 		xtp/scripts/xtp_modify_jobfile.in \
 		xtp/scripts/xtp_qmmm2qm.in
+
+CXXFLAGS+=	-DBOOST_TIMER_ENABLE_DEPRECATED
 
 CMAKE_ON=	BUILD_XTP
 CMAKE_ARGS=	-DLOCALBASE=${LOCALBASE} -DPython_EXECUTABLE=${PYTHON_CMD}

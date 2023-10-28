@@ -1,6 +1,7 @@
 PORTNAME=	octave-forge-pythonic
-DISTVERSION=	0.0.1+
-PORTREVISION=	2
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.1.3
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -15,9 +16,8 @@ BUILD_DEPENDS=	gsed:textproc/gsed
 USES=		octave python
 
 USE_GITLAB=	yes
-GL_ACCOUNT=	mtmiller
+GL_ACCOUNT=	gnu-octave
 GL_PROJECT=	octave-pythonic
-GL_TAGNAME=	3dbe9a06c1dec1a138f398b951e18044a00e063d
 
 OCTAVE_SRC=		${GL_PROJECT}-${GL_TAGNAME}
 

@@ -26,7 +26,6 @@ SHEBANG_FILES=	scripts/*.pl
 
 HAS_CONFIGURE=	yes
 
-CFLAGS_powerpc=		-DAIM
 CFLAGS_powerpcspe=	-DBOOKE
 
 OPTIONS_DEFINE_powerpc64=	AIM BOOKE

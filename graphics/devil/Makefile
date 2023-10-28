@@ -1,18 +1,20 @@
 PORTNAME=	devil
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.8.0
-PORTREVISION=	2
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Cross-platform image library
-WWW=		http://openil.sourceforge.net/
+WWW=		https://openil.sourceforge.net/ \
+		https://github.com/DentonW/DevIL
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake pkgconfig
+USE_CXXSTD=	c++14
 USE_GITHUB=	yes
 GH_ACCOUNT=	DentonW
 GH_PROJECT=	DevIL
@@ -61,12 +63,6 @@ SQUISH_CMAKE_BOOL=	IL_USE_DXTC_SQUISH
 #NVTT_LIB_DEPENDS=	libnvtt.so:graphics/nvidia-texture-tools
 #NVTT_CMAKE_BOOL=	IL_USE_DXTC_NVIDIA
 CMAKE_ARGS+=		-DIL_USE_DXTC_NVIDIA=0
-
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
-CXXFLAGS+=  -Dregister=
-.endif
 
 post-install-DOCS-on:
 	cd ${WRKSRC}/DevIL-docs && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/

@@ -1,3 +1,5 @@
-TIMESTAMP = 1672934732
-SHA256 (KDE/Qt/6.4.2/qtdeclarative-everywhere-src-6.4.2.tar.xz) = a4bdd983de4e9cbca0f85b767dbdd8598711554e370a06da8f509ded4430f5bd
-SIZE (KDE/Qt/6.4.2/qtdeclarative-everywhere-src-6.4.2.tar.xz) = 30564432
+TIMESTAMP = 1696084357
+SHA256 (KDE/Qt/6.5.3/qtdeclarative-everywhere-src-6.5.3.tar.xz) = 404dd6d2d206bb882ecd6622f0c708c9d6bd724a4d83776e13c49761c159d215
+SIZE (KDE/Qt/6.5.3/qtdeclarative-everywhere-src-6.5.3.tar.xz) = 34140352
+SHA256 (KDE/Qt/6.5.3/54059d0dffd1966c8a442b3675eb979c32c16cbe.patch) = 0098db03a5dae2c27b647a2107917a154645fe312bab8b064c08054fb12a71d3
+SIZE (KDE/Qt/6.5.3/54059d0dffd1966c8a442b3675eb979c32c16cbe.patch) = 1280

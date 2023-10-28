@@ -15,6 +15,9 @@ LICENSE_NAME=	Open-Source PyMOL Copyright
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+DEPRECATED=	Depends on deprecated devel/py-qt5-pyqt
+EXPIRATION_DATE=	2023-11-28
+
 BUILD_DEPENDS=	${PYNUMPY} \
 		${LOCALBASE}/include/glm/glm.hpp:math/glm \
 		${LOCALBASE}/include/mmtf.hpp:science/mmtf-cpp
@@ -38,6 +41,11 @@ GH_PROJECT=	${PORTNAME}-open-source
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}chempy # chempy port is unrelated, see https://github.com/schrodinger/pymol-open-source/issues/100
 
 CXXFLAGS+=	-DMSGPACK_NO_BOOST # in line with MSGPACK_USE_BOOST=OFF in devel/msgpack-cxx
+
+.if !exists(/usr/include/omp.h)
+PYDISTUTILS_CONFIGUREARGS+=	--use-openmp=no
+PYDISTUTILS_BUILDARGS+=		--use-openmp=no
+.endif
 
 OPTIONS_SINGLE=		GUI
 OPTIONS_SINGLE_GUI=	QT5 TK

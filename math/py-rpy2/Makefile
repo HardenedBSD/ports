@@ -1,12 +1,13 @@
 PORTNAME=	rpy2
-PORTVERSION=	3.5.13
+PORTVERSION=	3.5.14
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python interface to the R Programming Language
-WWW=		https://rpy2.bitbucket.io/
+WWW=		https://rpy2.github.io/ \
+		https://github.com/rpy2/rpy2
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/gpl-2.0.txt

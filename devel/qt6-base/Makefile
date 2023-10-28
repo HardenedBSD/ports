@@ -1,6 +1,5 @@
 PORTNAME=	base
 DISTVERSION=	${QT6_VERSION}
-PORTREVISION=	2
 CATEGORIES=	devel
 PKGNAMEPREFIX=	qt6-
 
@@ -57,11 +56,13 @@ LIB_DEPENDS=	\
 		libzstd.so:archivers/zstd
 
 USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 pkgconfig python \
-		qt-dist:6 shebangfix
+		qt-dist:6 shebangfix ssl
 USE_GL=		egl opengl
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 pango
+CMAKE_ARGS=	-DOPENSSL_ROOT_DIR="${OPENSSLBASE}"
 CMAKE_ON=	QT_AVOID_CMAKE_ARCHIVING_API \
-		QT_FIND_ALL_PACKAGES_ALWAYS
+		QT_FIND_ALL_PACKAGES_ALWAYS \
+		QT_FEATURE_openssl_linked
 CMAKE_OFF=	QT_FEATURE_eglfs \
 		QT_FEATURE_gssapi
 # sql drivers are handled in the qt6-base-sqldriver port
@@ -74,7 +75,8 @@ SHEBANG_FILES=	${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
 		${WRKSRC}/mkspecs/features/uikit/devices.py \
 		${WRKSRC}/mkspecs/features/data/mac/objc_namespace.sh \
 		${WRKSRC}/util/android/android_emulator_launcher.sh \
-		${WRKSRC}/util/testrunner/qt-testrunner.py
+		${WRKSRC}/util/testrunner/qt-testrunner.py \
+		${WRKSRC}/util/testrunner/sanitizer-testrunner.py
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
 # zstd from base fails to compress files during the build (error 11: unsupported argument)
@@ -99,10 +101,22 @@ X11_LIB_DEPENDS=	libxcb-cursor.so:x11/xcb-util-cursor \
 
 .include <bsd.port.pre.mk>
 
+# LibreSSL does not currently support BIO_ADDR in DTLSv1_listen()
+.if ${SSL_DEFAULT:Mlibressl*}
+CMAKE_OFF+=	QT_FEATURE_dtls
+PLIST_SUB+=	DTLS="@comment "
+.else
+PLIST_SUB+=	DTLS=""
+.endif
+
 .if ${ARCH} == "armv6" || ${ARCH} == "armv7"
 BUILD_DEPENDS+=	as:devel/binutils
 CMAKE_ARGS+=	-DCMAKE_ASM_FLAGS=-no-integrated-as
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%OPENSSLLIB%%|${OPENSSLLIB}|g' \
+		${WRKSRC}/src/plugins/tls/openssl/qsslsocket_openssl_symbols.cpp
 
 # TODO: do this cleaner -- somewhere cmake/qmake still creates empty directories
 # for the cmake files in INSTALL_PREFIX/lib/cmake

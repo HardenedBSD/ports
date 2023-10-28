@@ -69,6 +69,7 @@
     SUBDIR += R-cran-ini
     SUBDIR += R-cran-iterators
     SUBDIR += R-cran-itertools
+    SUBDIR += R-cran-kit
     SUBDIR += R-cran-later
     SUBDIR += R-cran-lifecycle
     SUBDIR += R-cran-lintr
@@ -123,6 +124,7 @@
     SUBDIR += R-cran-sfsmisc
     SUBDIR += R-cran-sourcetools
     SUBDIR += R-cran-sys
+    SUBDIR += R-cran-testit
     SUBDIR += R-cran-testthat
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
@@ -154,6 +156,7 @@
     SUBDIR += aifad
     SUBDIR += aixlog
     SUBDIR += ald
+    SUBDIR += alire
     SUBDIR += allegro
     SUBDIR += allegro5
     SUBDIR += amber
@@ -213,6 +216,7 @@
     SUBDIR += arpc
     SUBDIR += art
     SUBDIR += artifactory
+    SUBDIR += asfml
     SUBDIR += asl
     SUBDIR += asmjit
     SUBDIR += asmutils
@@ -264,6 +268,7 @@
     SUBDIR += b2
     SUBDIR += babelflow
     SUBDIR += babeltrace
+    SUBDIR += bacnet-stack
     SUBDIR += bacon
     SUBDIR += bam
     SUBDIR += bashdb
@@ -293,6 +298,7 @@
     SUBDIR += blame
     SUBDIR += blitz
     SUBDIR += bloaty
+    SUBDIR += bloomberg-bde
     SUBDIR += blueprint-compiler
     SUBDIR += bmake
     SUBDIR += bmkdep
@@ -321,6 +327,7 @@
     SUBDIR += buildstream
     SUBDIR += bullet
     SUBDIR += bunyan
+    SUBDIR += busd
     SUBDIR += busybee
     SUBDIR += byacc
     SUBDIR += byaccj
@@ -330,11 +337,12 @@
     SUBDIR += caliper
     SUBDIR += capnproto
     SUBDIR += capnproto080
-    SUBDIR += capstone3
+    SUBDIR += capslock
+    SUBDIR += capstone
     SUBDIR += capstone4
-    SUBDIR += capstone5
     SUBDIR += cargo-bloat
     SUBDIR += cargo-c
+    SUBDIR += cargo-depgraph
     SUBDIR += cargo-generate
     SUBDIR += cask
     SUBDIR += catch
@@ -469,6 +477,7 @@
     SUBDIR += criterion
     SUBDIR += cscope
     SUBDIR += cscout
+    SUBDIR += csfml
     SUBDIR += csmith
     SUBDIR += csoap
     SUBDIR += cssc
@@ -551,7 +560,6 @@
     SUBDIR += dia2code
     SUBDIR += dia2code+
     SUBDIR += ding-libs
-    SUBDIR += directfb
     SUBDIR += dispy
     SUBDIR += distcc
     SUBDIR += distel
@@ -599,9 +607,9 @@
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += electron22
-    SUBDIR += electron23
     SUBDIR += electron24
     SUBDIR += electron25
+    SUBDIR += electron26
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -725,6 +733,7 @@
     SUBDIR += fungw
     SUBDIR += fuzzylite
     SUBDIR += fxdiv
+    SUBDIR += g-golf
     SUBDIR += g-wrap
     SUBDIR += ga
     SUBDIR += gaa
@@ -841,7 +850,6 @@
     SUBDIR += gitg
     SUBDIR += github-backup-utils
     SUBDIR += gitinspector
-    SUBDIR += gitlab-metrics-exporter
     SUBDIR += gitlab-runner
     SUBDIR += gitlab-shell
     SUBDIR += gitleaks
@@ -889,7 +897,6 @@
     SUBDIR += gocritic
     SUBDIR += godot
     SUBDIR += godot-tools
-    SUBDIR += godot2
     SUBDIR += godot35
     SUBDIR += godot35-tools
     SUBDIR += goffice
@@ -951,7 +958,6 @@
     SUBDIR += hexd
     SUBDIR += hgreviewboard
     SUBDIR += hgsvn
-    SUBDIR += hhdate
     SUBDIR += highlighterkit
     SUBDIR += highway
     SUBDIR += hoel
@@ -1002,6 +1008,7 @@
     SUBDIR += ignition-tools
     SUBDIR += ikos
     SUBDIR += imake
+    SUBDIR += immer
     SUBDIR += imtui
     SUBDIR += inastemp
     SUBDIR += include-what-you-use
@@ -1037,6 +1044,7 @@
     SUBDIR += jetbrains-goland
     SUBDIR += jetbrains-phpstorm
     SUBDIR += jetbrains-pty4j
+    SUBDIR += jetbrains-sqlite
     SUBDIR += jetbrains-webstorm
     SUBDIR += jgoodies-looks
     SUBDIR += jiic
@@ -1049,6 +1057,7 @@
     SUBDIR += jsmin
     SUBDIR += json-c
     SUBDIR += json-dto
+    SUBDIR += json-fortran
     SUBDIR += json-glib
     SUBDIR += jsoncpp
     SUBDIR += jsonnet
@@ -1116,6 +1125,7 @@
     SUBDIR += kyra
     SUBDIR += kyua
     SUBDIR += lab
+    SUBDIR += lager
     SUBDIR += lasi
     SUBDIR += lattice-ice40-examples-hx1k
     SUBDIR += lattice-ice40-examples-hx8k
@@ -1127,6 +1137,7 @@
     SUBDIR += lefthook
     SUBDIR += leiningen
     SUBDIR += lemon
+    SUBDIR += lets
     SUBDIR += level-zero
     SUBDIR += lfcbase
     SUBDIR += lfcxml
@@ -1286,6 +1297,7 @@
     SUBDIR += libisofs
     SUBDIR += libixp
     SUBDIR += libjitterentropy
+    SUBDIR += libjodycode
     SUBDIR += libk8055
     SUBDIR += libkiwix
     SUBDIR += libklel
@@ -1399,7 +1411,6 @@
     SUBDIR += libsysinfo
     SUBDIR += libtai
     SUBDIR += libtap
-    SUBDIR += libtar
     SUBDIR += libtecla
     SUBDIR += libtermkey
     SUBDIR += libtextstyle
@@ -1441,19 +1452,23 @@
     SUBDIR += libvshadow
     SUBDIR += libvslvm
     SUBDIR += libvterm
+    SUBDIR += libwasmtime
     SUBDIR += libwfut
     SUBDIR += libx86
     SUBDIR += libxalloc
     SUBDIR += libxo
     SUBDIR += libxs
     SUBDIR += libxtend
+    SUBDIR += libzakalwe
     SUBDIR += libzim
     SUBDIR += libzookeeper
     SUBDIR += libzvbi
     SUBDIR += lightning
+    SUBDIR += linenoise
     SUBDIR += linenoise-ng
     SUBDIR += linux-c7-dbus-libs
     SUBDIR += linux-c7-devtools
+    SUBDIR += linux-c7-devtoolset
     SUBDIR += linux-c7-elfutils-libelf
     SUBDIR += linux-c7-elfutils-libs
     SUBDIR += linux-c7-icu
@@ -1492,6 +1507,7 @@
     SUBDIR += llvm14
     SUBDIR += llvm15
     SUBDIR += llvm16
+    SUBDIR += llvm17
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
@@ -1516,13 +1532,13 @@
     SUBDIR += love5
     SUBDIR += lpc21isp
     SUBDIR += lrmi
+    SUBDIR += lua-Penlight
     SUBDIR += lua-argparse
     SUBDIR += lua-bitlib
     SUBDIR += lua-bitop
     SUBDIR += lua-cjson
     SUBDIR += lua-cqueues
     SUBDIR += lua-gettext
-    SUBDIR += lua-language-server
     SUBDIR += lua-lgi
     SUBDIR += lua-libevent
     SUBDIR += lua-lpeg
@@ -1552,6 +1568,7 @@
     SUBDIR += m17n-lib
     SUBDIR += m4
     SUBDIR += mage
+    SUBDIR += magic_enum
     SUBDIR += magit
     SUBDIR += magit-devel
     SUBDIR += make++
@@ -1561,9 +1578,11 @@
     SUBDIR += marl
     SUBDIR += massif-visualizer
     SUBDIR += mate-common
+    SUBDIR += matreshka
     SUBDIR += maven
     SUBDIR += maven-wrapper
     SUBDIR += maven363
+    SUBDIR += maven39
     SUBDIR += mcpp
     SUBDIR += mdb
     SUBDIR += mdds
@@ -1648,6 +1667,7 @@
     SUBDIR += obby
     SUBDIR += objconv
     SUBDIR += objecthash
+    SUBDIR += objfw
     SUBDIR += ocaml-annexlib
     SUBDIR += ocaml-calendar
     SUBDIR += ocaml-camljava
@@ -1705,6 +1725,8 @@
     SUBDIR += opendht
     SUBDIR += opengrok
     SUBDIR += openocd
+    SUBDIR += opentelemetry-cpp
+    SUBDIR += opentelemetry-proto
     SUBDIR += openwince-include
     SUBDIR += orc
     SUBDIR += orcania
@@ -1716,6 +1738,7 @@
     SUBDIR += ossp-val
     SUBDIR += ossp-var
     SUBDIR += ossp-xds
+    SUBDIR += outcome
     SUBDIR += p4
     SUBDIR += p4.el
     SUBDIR += p4api
@@ -1769,6 +1792,7 @@
     SUBDIR += p5-AnyEvent
     SUBDIR += p5-AnyEvent-AIO
     SUBDIR += p5-AnyEvent-Connection
+    SUBDIR += p5-AnyEvent-Connector
     SUBDIR += p5-AnyEvent-DBI
     SUBDIR += p5-AnyEvent-DBI-Abstract
     SUBDIR += p5-AnyEvent-DBus
@@ -2111,6 +2135,7 @@
     SUBDIR += p5-Data-DumpXML
     SUBDIR += p5-Data-Dumper
     SUBDIR += p5-Data-Dumper-Concise
+    SUBDIR += p5-Data-Dumper-Interp
     SUBDIR += p5-Data-Dumper-Perltidy
     SUBDIR += p5-Data-Dumper-Simple
     SUBDIR += p5-Data-Flow
@@ -2837,6 +2862,7 @@
     SUBDIR += p5-Module-Build-Pluggable
     SUBDIR += p5-Module-Build-Pluggable-CPANfile
     SUBDIR += p5-Module-Build-Pluggable-ReadmeMarkdownFromPod
+    SUBDIR += p5-Module-Build-Prereqs-FromCPANfile
     SUBDIR += p5-Module-Build-Tiny
     SUBDIR += p5-Module-Build-Using-PkgConfig
     SUBDIR += p5-Module-Build-WithXSpp
@@ -2982,6 +3008,7 @@
     SUBDIR += p5-MooseX-Singleton
     SUBDIR += p5-MooseX-Storage
     SUBDIR += p5-MooseX-StrictConstructor
+    SUBDIR += p5-MooseX-Test-Role
     SUBDIR += p5-MooseX-TraitFor-Meta-Class-BetterAnonClassNames
     SUBDIR += p5-MooseX-Traits
     SUBDIR += p5-MooseX-Traits-Pluggable
@@ -4010,7 +4037,6 @@
     SUBDIR += pear-channel-ezc
     SUBDIR += pear-channel-geshi
     SUBDIR += pear-channel-horde
-    SUBDIR += pear-channel-htmlpurifier.org
     SUBDIR += pear-channel-openpear
     SUBDIR += pear-channel-pdepend
     SUBDIR += pear-channel-phing
@@ -4025,7 +4051,6 @@
     SUBDIR += pear-ezc_Base
     SUBDIR += pear-ezc_ConsoleTools
     SUBDIR += pear-geshi
-    SUBDIR += pear-htmlpurifier
     SUBDIR += pear-pdepend-staticReflection
     SUBDIR += pear-phing
     SUBDIR += pecl-APCu
@@ -4035,6 +4060,7 @@
     SUBDIR += pecl-eio
     SUBDIR += pecl-ev
     SUBDIR += pecl-event
+    SUBDIR += pecl-excimer
     SUBDIR += pecl-expect
     SUBDIR += pecl-grpc
     SUBDIR += pecl-inotify
@@ -4063,7 +4089,6 @@
     SUBDIR += phasar
     SUBDIR += php-Psr_Log
     SUBDIR += php-composer
-    SUBDIR += php-composer2
     SUBDIR += php-geshi
     SUBDIR += php-ice37
     SUBDIR += php-libawl
@@ -4130,7 +4155,6 @@
     SUBDIR += please
     SUBDIR += pmccabe
     SUBDIR += pmd
-    SUBDIR += pmdk
     SUBDIR += poco
     SUBDIR += popt
     SUBDIR += poser
@@ -4173,6 +4197,7 @@
     SUBDIR += py-Jinja2
     SUBDIR += py-Jinja2-doc
     SUBDIR += py-Js2Py
+    SUBDIR += py-Levenshtein
     SUBDIR += py-PYB11Generator
     SUBDIR += py-PeachPy
     SUBDIR += py-Products.ExternalEditor
@@ -4190,6 +4215,7 @@
     SUBDIR += py-addict
     SUBDIR += py-aenum
     SUBDIR += py-aioapns
+    SUBDIR += py-aiobotocore
     SUBDIR += py-aiocontextvars
     SUBDIR += py-aiofiles
     SUBDIR += py-aiohttp-apispec
@@ -4201,6 +4227,7 @@
     SUBDIR += py-aiorwlock
     SUBDIR += py-aiosignal
     SUBDIR += py-airtable-python-wrapper
+    SUBDIR += py-all-repos
     SUBDIR += py-amalgamate
     SUBDIR += py-aniso8601
     SUBDIR += py-aniso86016
@@ -4210,6 +4237,7 @@
     SUBDIR += py-antlr4-python3-runtime
     SUBDIR += py-anyconfig
     SUBDIR += py-anyio
+    SUBDIR += py-anyio3
     SUBDIR += py-anyjson
     SUBDIR += py-anytree
     SUBDIR += py-apache_conf_parser
@@ -4226,6 +4254,7 @@
     SUBDIR += py-argparse
     SUBDIR += py-args
     SUBDIR += py-arpeggio
+    SUBDIR += py-array-api-compat
     SUBDIR += py-arrow
     SUBDIR += py-asciimatics
     SUBDIR += py-asgi-lifespan
@@ -4233,6 +4262,7 @@
     SUBDIR += py-asn1crypto
     SUBDIR += py-aspectlib
     SUBDIR += py-aspy.yaml
+    SUBDIR += py-assertpy
     SUBDIR += py-ast-decompiler
     SUBDIR += py-asteval
     SUBDIR += py-astor
@@ -4398,6 +4428,7 @@
     SUBDIR += py-buildbot-worker
     SUBDIR += py-buildbot-www
     SUBDIR += py-bullet3
+    SUBDIR += py-bump2version
     SUBDIR += py-bytecode
     SUBDIR += py-cabby
     SUBDIR += py-cached-property
@@ -4427,6 +4458,7 @@
     SUBDIR += py-cfgv
     SUBDIR += py-cfn-lint
     SUBDIR += py-cftime
+    SUBDIR += py-chai
     SUBDIR += py-chainmap
     SUBDIR += py-characteristic
     SUBDIR += py-check-jsonschema
@@ -4448,6 +4480,7 @@
     SUBDIR += py-click-creds
     SUBDIR += py-click-default-group
     SUBDIR += py-click-default-group-wheel
+    SUBDIR += py-click-help-colors
     SUBDIR += py-click-log
     SUBDIR += py-click-option-group
     SUBDIR += py-click-plugins
@@ -4486,6 +4519,7 @@
     SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-construct-classes
+    SUBDIR += py-contextlib-chdir
     SUBDIR += py-contextlib2
     SUBDIR += py-convertdate
     SUBDIR += py-cookiecutter
@@ -4517,6 +4551,7 @@
     SUBDIR += py-cwcwidth
     SUBDIR += py-cxx
     SUBDIR += py-cycler
+    SUBDIR += py-cykhash
     SUBDIR += py-cymbal
     SUBDIR += py-cymem
     SUBDIR += py-cysignals
@@ -4531,6 +4566,7 @@
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dask
     SUBDIR += py-dask-histogram
+    SUBDIR += py-dataclass-array
     SUBDIR += py-dataclasses-json
     SUBDIR += py-datadog
     SUBDIR += py-datapackage
@@ -4540,6 +4576,7 @@
     SUBDIR += py-dateutil
     SUBDIR += py-dateutils
     SUBDIR += py-datrie
+    SUBDIR += py-dbt-extractor
     SUBDIR += py-dbus
     SUBDIR += py-ddsketch
     SUBDIR += py-ddt
@@ -4547,6 +4584,7 @@
     SUBDIR += py-debtcollector
     SUBDIR += py-debugpy
     SUBDIR += py-debugtools
+    SUBDIR += py-decopatch
     SUBDIR += py-decorator
     SUBDIR += py-decoratortools
     SUBDIR += py-deepdiff
@@ -4556,6 +4594,7 @@
     SUBDIR += py-deprecat
     SUBDIR += py-deprecated
     SUBDIR += py-deprecation
+    SUBDIR += py-deptry
     SUBDIR += py-devtools
     SUBDIR += py-dexml2
     SUBDIR += py-diazo
@@ -4567,6 +4606,8 @@
     SUBDIR += py-distributed
     SUBDIR += py-dj41-django-rq
     SUBDIR += py-dj41-graphene-django
+    SUBDIR += py-dj42-django-rq
+    SUBDIR += py-dj42-graphene-django
     SUBDIR += py-django-rq
     SUBDIR += py-dockerpty
     SUBDIR += py-docopt
@@ -4633,8 +4674,8 @@
     SUBDIR += py-find-libpython
     SUBDIR += py-findlibs
     SUBDIR += py-findpython
+    SUBDIR += py-fire
     SUBDIR += py-first
-    SUBDIR += py-five.globalrequest
     SUBDIR += py-fixtures
     SUBDIR += py-flake8
     SUBDIR += py-flake8-black
@@ -4690,6 +4731,7 @@
     SUBDIR += py-game_sdl2
     SUBDIR += py-gapic-generator
     SUBDIR += py-gast
+    SUBDIR += py-gcsfs
     SUBDIR += py-gelidum
     SUBDIR += py-genson
     SUBDIR += py-genty
@@ -4716,7 +4758,6 @@
     SUBDIR += py-google-pasta
     SUBDIR += py-google-re2
     SUBDIR += py-googleapis-common-protos
-    SUBDIR += py-gpep517
     SUBDIR += py-gpxpy
     SUBDIR += py-grab
     SUBDIR += py-graphene
@@ -4756,6 +4797,7 @@
     SUBDIR += py-hgtools
     SUBDIR += py-hidraw
     SUBDIR += py-holidays
+    SUBDIR += py-hologram
     SUBDIR += py-homebase
     SUBDIR += py-http-prompt
     SUBDIR += py-humanize
@@ -4810,7 +4852,6 @@
     SUBDIR += py-itertree
     SUBDIR += py-itypes
     SUBDIR += py-janus
-    SUBDIR += py-jaraco
     SUBDIR += py-jaraco.classes
     SUBDIR += py-jaraco.collections
     SUBDIR += py-jaraco.context
@@ -4818,6 +4859,7 @@
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
     SUBDIR += py-jaraco.logging
+    SUBDIR += py-jaraco.stream
     SUBDIR += py-jaraco.text
     SUBDIR += py-jaraco.timing
     SUBDIR += py-jaraco.util
@@ -4851,11 +4893,14 @@
     SUBDIR += py-jsonref
     SUBDIR += py-jsonrpclib-pelix
     SUBDIR += py-jsonschema
+    SUBDIR += py-jsonschema-path
     SUBDIR += py-jsonschema-spec
     SUBDIR += py-jsonschema-specifications
     SUBDIR += py-jsonschema3
+    SUBDIR += py-jsonschema417
     SUBDIR += py-jsonsir
     SUBDIR += py-jupyter-client
+    SUBDIR += py-jupyter-collaboration
     SUBDIR += py-jupyter-core
     SUBDIR += py-jupyter-events
     SUBDIR += py-jupyter-kernel-test
@@ -4865,7 +4910,6 @@
     SUBDIR += py-jupyter-server-fileid
     SUBDIR += py-jupyter-server-mathjax
     SUBDIR += py-jupyter-server-terminals
-    SUBDIR += py-jupyter-server-ydoc
     SUBDIR += py-jupyter-telemetry
     SUBDIR += py-jupyter-ydoc
     SUBDIR += py-jupyter_console
@@ -4904,6 +4948,7 @@
     SUBDIR += py-libversion
     SUBDIR += py-libvirt
     SUBDIR += py-libzfs
+    SUBDIR += py-lief
     SUBDIR += py-line-profiler
     SUBDIR += py-linear-tsv
     SUBDIR += py-linecache2
@@ -4941,6 +4986,7 @@
     SUBDIR += py-marrow.util
     SUBDIR += py-marshmallow
     SUBDIR += py-marshmallow-enum
+    SUBDIR += py-mashumaro
     SUBDIR += py-matrix-angular-sdk
     SUBDIR += py-matrix-common
     SUBDIR += py-maturin
@@ -4957,6 +5003,7 @@
     SUBDIR += py-mime
     SUBDIR += py-miniKanren
     SUBDIR += py-minidump
+    SUBDIR += py-minimal-snowplow-tracker
     SUBDIR += py-minimongo
     SUBDIR += py-minio
     SUBDIR += py-mock
@@ -5081,7 +5128,6 @@
     SUBDIR += py-ovsdbapp
     SUBDIR += py-p4python
     SUBDIR += py-packaging
-    SUBDIR += py-packaging21
     SUBDIR += py-parallax
     SUBDIR += py-param
     SUBDIR += py-parameterized
@@ -5193,6 +5239,7 @@
     SUBDIR += py-prompt-toolkit2
     SUBDIR += py-property-cached
     SUBDIR += py-proselint
+    SUBDIR += py-prospector
     SUBDIR += py-proto-plus
     SUBDIR += py-protobuf
     SUBDIR += py-protobuf-compiler
@@ -5210,9 +5257,11 @@
     SUBDIR += py-py3nvml
     SUBDIR += py-pyTooling
     SUBDIR += py-py_interface
+    SUBDIR += py-pyaml-env
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
     SUBDIR += py-pybind11
+    SUBDIR += py-pybind11210
     SUBDIR += py-pybix
     SUBDIR += py-pycadf
     SUBDIR += py-pycalendar
@@ -5220,6 +5269,7 @@
     SUBDIR += py-pycapsicum
     SUBDIR += py-pycerberus
     SUBDIR += py-pycmd
+    SUBDIR += py-pycocotools
     SUBDIR += py-pycodeexport
     SUBDIR += py-pycodestyle
     SUBDIR += py-pycognito
@@ -5229,6 +5279,8 @@
     SUBDIR += py-pydantic
     SUBDIR += py-pydantic-core
     SUBDIR += py-pydantic-extra-types
+    SUBDIR += py-pydantic-vault
+    SUBDIR += py-pydantic-yaml
     SUBDIR += py-pydantic2
     SUBDIR += py-pydash
     SUBDIR += py-pydecor
@@ -5257,10 +5309,13 @@
     SUBDIR += py-pyintelowl
     SUBDIR += py-pyjq
     SUBDIR += py-pyjsparser
+    SUBDIR += py-pykdtree
     SUBDIR += py-pylama
+    SUBDIR += py-pyleri
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylint-django
+    SUBDIR += py-pylint-flask
     SUBDIR += py-pylint-plugin-utils
     SUBDIR += py-pylint-venv
     SUBDIR += py-pylru
@@ -5292,6 +5347,7 @@
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyright
     SUBDIR += py-pyro
+    SUBDIR += py-pyroma
     SUBDIR += py-pyrsistent
     SUBDIR += py-pyscaffold
     SUBDIR += py-pysdl2
@@ -5310,6 +5366,7 @@
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-canonical-data
     SUBDIR += py-pytest-capturelog
+    SUBDIR += py-pytest-cases
     SUBDIR += py-pytest-checkdocs
     SUBDIR += py-pytest-console-scripts
     SUBDIR += py-pytest-cov
@@ -5324,7 +5381,7 @@
     SUBDIR += py-pytest-flakes
     SUBDIR += py-pytest-flask
     SUBDIR += py-pytest-forked
-    SUBDIR += py-pytest-freezegun
+    SUBDIR += py-pytest-freezer
     SUBDIR += py-pytest-helpers-namespace
     SUBDIR += py-pytest-html
     SUBDIR += py-pytest-httpbin
@@ -5375,7 +5432,6 @@
     SUBDIR += py-pytest4-cache
     SUBDIR += py-pytest4-cov
     SUBDIR += py-pytest4-flakes
-    SUBDIR += py-python-Levenshtein
     SUBDIR += py-python-application
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-dbusmock
@@ -5437,13 +5493,13 @@
     SUBDIR += py-qt6-sip
     SUBDIR += py-qtbuilder
     SUBDIR += py-qtconsole
+    SUBDIR += py-querystring-parser
     SUBDIR += py-questionary
     SUBDIR += py-qutip
     SUBDIR += py-qutip-qip
     SUBDIR += py-ramlfications
     SUBDIR += py-rapidfuzz
     SUBDIR += py-rapidfuzz-capi
-    SUBDIR += py-rapidfuzz2
     SUBDIR += py-ratelim
     SUBDIR += py-ratelimiter
     SUBDIR += py-rauth
@@ -5454,9 +5510,11 @@
     SUBDIR += py-rebulk
     SUBDIR += py-recordclass
     SUBDIR += py-recurring-ical-events
+    SUBDIR += py-red-black-tree-mod
     SUBDIR += py-rednose
     SUBDIR += py-reedsolo
     SUBDIR += py-referencing
+    SUBDIR += py-regress
     SUBDIR += py-remote-pdb
     SUBDIR += py-repoze.lru
     SUBDIR += py-repoze.sphinx.autointerface
@@ -5476,7 +5534,6 @@
     SUBDIR += py-responses
     SUBDIR += py-retry2
     SUBDIR += py-retrying
-    SUBDIR += py-retype
     SUBDIR += py-rfc3339
     SUBDIR += py-rfc3339-validator
     SUBDIR += py-rfc3986-validator
@@ -5505,6 +5562,7 @@
     SUBDIR += py-rush
     SUBDIR += py-rx
     SUBDIR += py-rx1
+    SUBDIR += py-s3fs
     SUBDIR += py-saneyaml
     SUBDIR += py-sarge
     SUBDIR += py-sarif-om
@@ -5525,11 +5583,13 @@
     SUBDIR += py-serializable
     SUBDIR += py-serpent
     SUBDIR += py-session-info
+    SUBDIR += py-setoptconf
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools
     SUBDIR += py-setuptools-declarative-requirements
     SUBDIR += py-setuptools-gettext
     SUBDIR += py-setuptools-git
+    SUBDIR += py-setuptools-git-versioning
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
     SUBDIR += py-setuptools44
@@ -5546,6 +5606,7 @@
     SUBDIR += py-shellingham
     SUBDIR += py-shtab
     SUBDIR += py-signalr-client-aio
+    SUBDIR += py-simple-parsing
     SUBDIR += py-simple-term-menu
     SUBDIR += py-simpleeval
     SUBDIR += py-simplegeneric
@@ -5583,6 +5644,7 @@
     SUBDIR += py-streamparse
     SUBDIR += py-strenum
     SUBDIR += py-strict-rfc3339
+    SUBDIR += py-strictyaml
     SUBDIR += py-stringbrewer
     SUBDIR += py-stringcase
     SUBDIR += py-structlog
@@ -5645,6 +5707,7 @@
     SUBDIR += py-transaction
     SUBDIR += py-transitions
     SUBDIR += py-tree-format
+    SUBDIR += py-tree-sitter
     SUBDIR += py-treelib
     SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
@@ -5658,7 +5721,6 @@
     SUBDIR += py-txaio
     SUBDIR += py-txi2p-tahoe
     SUBDIR += py-typechecks
-    SUBDIR += py-typed-ast
     SUBDIR += py-typeguard
     SUBDIR += py-typer
     SUBDIR += py-types-Flask
@@ -5717,6 +5779,7 @@
     SUBDIR += py-venusian
     SUBDIR += py-verboselogs
     SUBDIR += py-versioneer
+    SUBDIR += py-versioneer-518
     SUBDIR += py-versioningit
     SUBDIR += py-versiontools
     SUBDIR += py-verspec
@@ -5809,50 +5872,20 @@
     SUBDIR += py-yg.lockfile
     SUBDIR += py-ypy-websocket
     SUBDIR += py-yunomi
-    SUBDIR += py-z3c.autoinclude
-    SUBDIR += py-z3c.batching
-    SUBDIR += py-z3c.zcmlhook
     SUBDIR += py-zarr
-    SUBDIR += py-zc.buildout
+    SUBDIR += py-zc.lockfile
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
     SUBDIR += py-zfp
     SUBDIR += py-zict
     SUBDIR += py-zipp
-    SUBDIR += py-zope.app.basicskin
-    SUBDIR += py-zope.app.renderer
-    SUBDIR += py-zope.app.schema
-    SUBDIR += py-zope.broken
-    SUBDIR += py-zope.browser
-    SUBDIR += py-zope.browserresource
-    SUBDIR += py-zope.cachedescriptors
     SUBDIR += py-zope.component
     SUBDIR += py-zope.configuration
-    SUBDIR += py-zope.contentprovider
-    SUBDIR += py-zope.contenttype
-    SUBDIR += py-zope.copy
-    SUBDIR += py-zope.datetime
-    SUBDIR += py-zope.deferredimport
     SUBDIR += py-zope.deprecation
-    SUBDIR += py-zope.dottedname
     SUBDIR += py-zope.event
-    SUBDIR += py-zope.exceptions
-    SUBDIR += py-zope.filerepresentation
-    SUBDIR += py-zope.generations
-    SUBDIR += py-zope.globalrequest
-    SUBDIR += py-zope.i18n
     SUBDIR += py-zope.interface
-    SUBDIR += py-zope.lifecycleevent
-    SUBDIR += py-zope.location
-    SUBDIR += py-zope.processlifetime
-    SUBDIR += py-zope.publisher
     SUBDIR += py-zope.schema
-    SUBDIR += py-zope.sequencesort
-    SUBDIR += py-zope.size
-    SUBDIR += py-zope.tales
     SUBDIR += py-zope.testbrowser
-    SUBDIR += py-zope.testing
-    SUBDIR += py-zope.traversing
     SUBDIR += py3c
     SUBDIR += pybind11
     SUBDIR += pybind11-json
@@ -5860,6 +5893,7 @@
     SUBDIR += pycanberra
     SUBDIR += pycharm-ce
     SUBDIR += pycharm-pro
+    SUBDIR += pycomposefile
     SUBDIR += pycos
     SUBDIR += pycount
     SUBDIR += pydbus-common
@@ -5868,6 +5902,7 @@
     SUBDIR += pyenv
     SUBDIR += pygobject3-common
     SUBDIR += pylint
+    SUBDIR += pymsteams
     SUBDIR += pyobfuscate
     SUBDIR += pyotherside-qt5
     SUBDIR += pyside2
@@ -5916,6 +5951,7 @@
     SUBDIR += qt6-5compat
     SUBDIR += qt6-base
     SUBDIR += qt6-languageserver
+    SUBDIR += qt6-location
     SUBDIR += qt6-positioning
     SUBDIR += qt6-remoteobjects
     SUBDIR += qt6-scxml
@@ -6102,6 +6138,8 @@
     SUBDIR += rubygem-aws-sdk-backupgateway
     SUBDIR += rubygem-aws-sdk-backupstorage
     SUBDIR += rubygem-aws-sdk-batch
+    SUBDIR += rubygem-aws-sdk-bedrock
+    SUBDIR += rubygem-aws-sdk-bedrockruntime
     SUBDIR += rubygem-aws-sdk-billingconductor
     SUBDIR += rubygem-aws-sdk-braket
     SUBDIR += rubygem-aws-sdk-budgets
@@ -6156,7 +6194,6 @@
     SUBDIR += rubygem-aws-sdk-controltower
     SUBDIR += rubygem-aws-sdk-core
     SUBDIR += rubygem-aws-sdk-core2
-    SUBDIR += rubygem-aws-sdk-core3175
     SUBDIR += rubygem-aws-sdk-costandusagereportservice
     SUBDIR += rubygem-aws-sdk-costexplorer
     SUBDIR += rubygem-aws-sdk-customerprofiles
@@ -6164,6 +6201,7 @@
     SUBDIR += rubygem-aws-sdk-dataexchange
     SUBDIR += rubygem-aws-sdk-datapipeline
     SUBDIR += rubygem-aws-sdk-datasync
+    SUBDIR += rubygem-aws-sdk-datazone
     SUBDIR += rubygem-aws-sdk-dax
     SUBDIR += rubygem-aws-sdk-detective
     SUBDIR += rubygem-aws-sdk-devicefarm
@@ -6194,6 +6232,7 @@
     SUBDIR += rubygem-aws-sdk-emr
     SUBDIR += rubygem-aws-sdk-emrcontainers
     SUBDIR += rubygem-aws-sdk-emrserverless
+    SUBDIR += rubygem-aws-sdk-entityresolution
     SUBDIR += rubygem-aws-sdk-eventbridge
     SUBDIR += rubygem-aws-sdk-finspace
     SUBDIR += rubygem-aws-sdk-finspacedata
@@ -6278,6 +6317,7 @@
     SUBDIR += rubygem-aws-sdk-macie2
     SUBDIR += rubygem-aws-sdk-mainframemodernization
     SUBDIR += rubygem-aws-sdk-managedblockchain
+    SUBDIR += rubygem-aws-sdk-managedblockchainquery
     SUBDIR += rubygem-aws-sdk-managedgrafana
     SUBDIR += rubygem-aws-sdk-marketplacecatalog
     SUBDIR += rubygem-aws-sdk-marketplacecommerceanalytics
@@ -6292,6 +6332,7 @@
     SUBDIR += rubygem-aws-sdk-mediastore
     SUBDIR += rubygem-aws-sdk-mediastoredata
     SUBDIR += rubygem-aws-sdk-mediatailor
+    SUBDIR += rubygem-aws-sdk-medicalimaging
     SUBDIR += rubygem-aws-sdk-memorydb
     SUBDIR += rubygem-aws-sdk-mgn
     SUBDIR += rubygem-aws-sdk-migrationhub
@@ -6304,6 +6345,7 @@
     SUBDIR += rubygem-aws-sdk-mturk
     SUBDIR += rubygem-aws-sdk-mwaa
     SUBDIR += rubygem-aws-sdk-neptune
+    SUBDIR += rubygem-aws-sdk-neptunedata
     SUBDIR += rubygem-aws-sdk-networkfirewall
     SUBDIR += rubygem-aws-sdk-networkmanager
     SUBDIR += rubygem-aws-sdk-nimblestudio
@@ -6319,6 +6361,7 @@
     SUBDIR += rubygem-aws-sdk-panorama
     SUBDIR += rubygem-aws-sdk-paymentcryptography
     SUBDIR += rubygem-aws-sdk-paymentcryptographydata
+    SUBDIR += rubygem-aws-sdk-pcaconnectorad
     SUBDIR += rubygem-aws-sdk-personalize
     SUBDIR += rubygem-aws-sdk-personalizeevents
     SUBDIR += rubygem-aws-sdk-personalizeruntime
@@ -6360,7 +6403,6 @@
     SUBDIR += rubygem-aws-sdk-route53resolver
     SUBDIR += rubygem-aws-sdk-s3
     SUBDIR += rubygem-aws-sdk-s31121
-    SUBDIR += rubygem-aws-sdk-s31126
     SUBDIR += rubygem-aws-sdk-s3control
     SUBDIR += rubygem-aws-sdk-s3outposts
     SUBDIR += rubygem-aws-sdk-sagemaker
@@ -6579,6 +6621,7 @@
     SUBDIR += rubygem-bacon
     SUBDIR += rubygem-baf
     SUBDIR += rubygem-batch-loader
+    SUBDIR += rubygem-bcp47_spec
     SUBDIR += rubygem-benelux
     SUBDIR += rubygem-better_html-rails61
     SUBDIR += rubygem-bin_utils
@@ -6665,12 +6708,10 @@
     SUBDIR += rubygem-cucumber-ci-environment
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-cucumber-expressions
-    SUBDIR += rubygem-cucumber-cucumber-expressions15
     SUBDIR += rubygem-cucumber-messages
-    SUBDIR += rubygem-cucumber-messages18
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
-    SUBDIR += rubygem-cucumber-tag-expressions4
+    SUBDIR += rubygem-cucumber-tag-expressions5
     SUBDIR += rubygem-cucumber-wire
     SUBDIR += rubygem-curses
     SUBDIR += rubygem-cyoi
@@ -6678,6 +6719,7 @@
     SUBDIR += rubygem-daemons
     SUBDIR += rubygem-danger
     SUBDIR += rubygem-danger-gitlab
+    SUBDIR += rubygem-datadog-ci
     SUBDIR += rubygem-date
     SUBDIR += rubygem-ddmemoize
     SUBDIR += rubygem-ddmetrics
@@ -6709,6 +6751,7 @@
     SUBDIR += rubygem-devise-rails60
     SUBDIR += rubygem-devise-rails61
     SUBDIR += rubygem-devise-rails70
+    SUBDIR += rubygem-devise48-rails70
     SUBDIR += rubygem-did_you_mean
     SUBDIR += rubygem-dig_rb
     SUBDIR += rubygem-directory_watcher
@@ -6717,6 +6760,7 @@
     SUBDIR += rubygem-docile
     SUBDIR += rubygem-docopt
     SUBDIR += rubygem-drb
+    SUBDIR += rubygem-dry-cli
     SUBDIR += rubygem-dry-configurable
     SUBDIR += rubygem-dry-container
     SUBDIR += rubygem-dry-core
@@ -6764,6 +6808,7 @@
     SUBDIR += rubygem-fastri
     SUBDIR += rubygem-fattr
     SUBDIR += rubygem-fcntl
+    SUBDIR += rubygem-ffaker
     SUBDIR += rubygem-ffi
     SUBDIR += rubygem-ffi-compiler
     SUBDIR += rubygem-ffi-libarchive
@@ -6780,8 +6825,10 @@
     SUBDIR += rubygem-flipper
     SUBDIR += rubygem-flipper-active_support_cache_store
     SUBDIR += rubygem-flipper-active_support_cache_store-rails61
+    SUBDIR += rubygem-flipper-active_support_cache_store-rails70
     SUBDIR += rubygem-flipper-ui
     SUBDIR += rubygem-flipper025
+    SUBDIR += rubygem-flipper026
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-core
@@ -6820,11 +6867,13 @@
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
     SUBDIR += rubygem-gettext_i18n_rails
+    SUBDIR += rubygem-gettext_i18n_rails111
     SUBDIR += rubygem-gettext_i18n_rails18
     SUBDIR += rubygem-gettext_i18n_rails_js-rails5
     SUBDIR += rubygem-gettext_i18n_rails_js-rails50
     SUBDIR += rubygem-gettext_i18n_rails_js-rails52
     SUBDIR += rubygem-gettext_i18n_rails_js-rails61
+    SUBDIR += rubygem-gettext_i18n_rails_js-rails70
     SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
     SUBDIR += rubygem-gio2
@@ -6837,9 +6886,7 @@
     SUBDIR += rubygem-gitlab-experiment
     SUBDIR += rubygem-gitlab-labkit
     SUBDIR += rubygem-gitlab-license
-    SUBDIR += rubygem-gitlab-license_finder
     SUBDIR += rubygem-gitlab-pygments.rb
-    SUBDIR += rubygem-gitlab-sidekiq-fetcher
     SUBDIR += rubygem-gitlab_chronic_duration
     SUBDIR += rubygem-gitlab_git
     SUBDIR += rubygem-gitlab_meta
@@ -6878,7 +6925,6 @@
     SUBDIR += rubygem-google-iam-credentials-v1
     SUBDIR += rubygem-google-iam-v1
     SUBDIR += rubygem-google-protobuf
-    SUBDIR += rubygem-google-protobuf323
     SUBDIR += rubygem-googleapis-common-protos
     SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
@@ -6888,6 +6934,7 @@
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape-swagger-entity
+    SUBDIR += rubygem-grape17
     SUBDIR += rubygem-grape_logging
     SUBDIR += rubygem-graphiql-rails
     SUBDIR += rubygem-graphlient
@@ -6905,6 +6952,7 @@
     SUBDIR += rubygem-hashie-forbidden_attributes
     SUBDIR += rubygem-hashie4
     SUBDIR += rubygem-health_check
+    SUBDIR += rubygem-health_check-rails70
     SUBDIR += rubygem-heapy
     SUBDIR += rubygem-highline
     SUBDIR += rubygem-highline1
@@ -7042,7 +7090,6 @@
     SUBDIR += rubygem-murmurhash3
     SUBDIR += rubygem-mustache
     SUBDIR += rubygem-mustache-sinatra
-    SUBDIR += rubygem-mustache0
     SUBDIR += rubygem-mustermann
     SUBDIR += rubygem-mustermann-grape
     SUBDIR += rubygem-mutex_m
@@ -7077,6 +7124,12 @@
     SUBDIR += rubygem-open3
     SUBDIR += rubygem-open3_backport
     SUBDIR += rubygem-open4
+    SUBDIR += rubygem-opentelemetry-api
+    SUBDIR += rubygem-opentelemetry-common
+    SUBDIR += rubygem-opentelemetry-instrumentation-base
+    SUBDIR += rubygem-opentelemetry-registry
+    SUBDIR += rubygem-opentelemetry-sdk
+    SUBDIR += rubygem-opentelemetry-semantic_conventions
     SUBDIR += rubygem-opentracing
     SUBDIR += rubygem-opt_parse_validator
     SUBDIR += rubygem-optimist
@@ -7105,6 +7158,7 @@
     SUBDIR += rubygem-peek-rails52
     SUBDIR += rubygem-peek-rails60
     SUBDIR += rubygem-peek-rails61
+    SUBDIR += rubygem-peek-rails70
     SUBDIR += rubygem-peek-rblineprof-rails52
     SUBDIR += rubygem-peek-redis-rails52
     SUBDIR += rubygem-pkg-config
@@ -7121,6 +7175,7 @@
     SUBDIR += rubygem-powerpack
     SUBDIR += rubygem-pp
     SUBDIR += rubygem-pqueue
+    SUBDIR += rubygem-prettier_print
     SUBDIR += rubygem-prettyprint
     SUBDIR += rubygem-profile
     SUBDIR += rubygem-progressbar
@@ -7238,6 +7293,7 @@
     SUBDIR += rubygem-ruby-filemagic
     SUBDIR += rubygem-ruby-fogbugz
     SUBDIR += rubygem-ruby-libvirt
+    SUBDIR += rubygem-ruby-lsp
     SUBDIR += rubygem-ruby-macho
     SUBDIR += rubygem-ruby-magic
     SUBDIR += rubygem-ruby-ole
@@ -7247,6 +7303,7 @@
     SUBDIR += rubygem-ruby2_keywords
     SUBDIR += rubygem-ruby2ruby
     SUBDIR += rubygem-ruby_dep
+    SUBDIR += rubygem-ruby_memcheck
     SUBDIR += rubygem-ruby_parser
     SUBDIR += rubygem-rubygems-mirror
     SUBDIR += rubygem-rubygems-tasks
@@ -7269,6 +7326,7 @@
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-semver2
     SUBDIR += rubygem-semver_dialects
+    SUBDIR += rubygem-semver_dialects12
     SUBDIR += rubygem-semverse
     SUBDIR += rubygem-sentry-rails
     SUBDIR += rubygem-sentry-raven
@@ -7316,6 +7374,7 @@
     SUBDIR += rubygem-snowplow-tracker
     SUBDIR += rubygem-soap4r
     SUBDIR += rubygem-solve
+    SUBDIR += rubygem-sorbet-runtime
     SUBDIR += rubygem-sorted_set
     SUBDIR += rubygem-spring
     SUBDIR += rubygem-spring-watcher-listen
@@ -7361,10 +7420,12 @@
     SUBDIR += rubygem-sugar-high
     SUBDIR += rubygem-sumbur
     SUBDIR += rubygem-sundawg_country_codes
+    SUBDIR += rubygem-sus
     SUBDIR += rubygem-svn2git
     SUBDIR += rubygem-swagger-blocks
     SUBDIR += rubygem-sync
     SUBDIR += rubygem-syntax_suggest
+    SUBDIR += rubygem-syntax_tree
     SUBDIR += rubygem-sysinfo
     SUBDIR += rubygem-syslog
     SUBDIR += rubygem-systemu
@@ -7380,7 +7441,6 @@
     SUBDIR += rubygem-test-unit
     SUBDIR += rubygem-thor
     SUBDIR += rubygem-thor0
-    SUBDIR += rubygem-thor10
     SUBDIR += rubygem-thread_safe
     SUBDIR += rubygem-thrift
     SUBDIR += rubygem-thwait
@@ -7450,7 +7510,10 @@
     SUBDIR += rubygem-version_gem
     SUBDIR += rubygem-versionomy
     SUBDIR += rubygem-view_component-rails61
+    SUBDIR += rubygem-view_component-rails70
     SUBDIR += rubygem-virtus
+    SUBDIR += rubygem-vite_rails-rails70
+    SUBDIR += rubygem-vite_ruby
     SUBDIR += rubygem-warbler
     SUBDIR += rubygem-warden
     SUBDIR += rubygem-warning
@@ -7506,6 +7569,7 @@
     SUBDIR += sbt
     SUBDIR += scalatest
     SUBDIR += scandoc
+    SUBDIR += scc
     SUBDIR += sccache
     SUBDIR += sccs
     SUBDIR += schilybase
@@ -7519,8 +7583,10 @@
     SUBDIR += sdl_console
     SUBDIR += sdlmm
     SUBDIR += sdlskk
+    SUBDIR += sdsl-lite
     SUBDIR += sdts++
     SUBDIR += sedsed
+    SUBDIR += seer-gdb
     SUBDIR += selene
     SUBDIR += sentry-cli
     SUBDIR += serd
@@ -7563,6 +7629,7 @@
     SUBDIR += smooth
     SUBDIR += smv
     SUBDIR += snazy
+    SUBDIR += snitch
     SUBDIR += soapui
     SUBDIR += sobjectizer
     SUBDIR += socket_wrapper
@@ -7718,6 +7785,7 @@
     SUBDIR += undead
     SUBDIR += unibilium
     SUBDIR += universal-ctags
+    SUBDIR += unordered-dense
     SUBDIR += upnp
     SUBDIR += upp
     SUBDIR += upslug
@@ -7748,6 +7816,7 @@
     SUBDIR += wasi-libc
     SUBDIR += wasi-libcxx
     SUBDIR += wasm3
+    SUBDIR += wasmer
     SUBDIR += websocketpp
     SUBDIR += websvn
     SUBDIR += wf-config
@@ -7760,6 +7829,7 @@
     SUBDIR += xbyak
     SUBDIR += xc3sprog
     SUBDIR += xcscope.el
+    SUBDIR += xdg-dbus-proxy
     SUBDIR += xdg-user-dirs
     SUBDIR += xdg-utils
     SUBDIR += xdgpaths
@@ -7794,6 +7864,7 @@
     SUBDIR += yder
     SUBDIR += youcompleteme
     SUBDIR += yuck
+    SUBDIR += yyjson
     SUBDIR += z80-asm
     SUBDIR += z80asm
     SUBDIR += z80ex
@@ -7803,9 +7874,11 @@
     SUBDIR += zapcc
     SUBDIR += zeal
     SUBDIR += zfp
+    SUBDIR += zix
     SUBDIR += zls
     SUBDIR += zookeeper
     SUBDIR += zthread
+    SUBDIR += zug
     SUBDIR += zycore-c
     SUBDIR += zydis
     SUBDIR += zziplib

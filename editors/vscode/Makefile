@@ -1,5 +1,6 @@
 PORTNAME=	vscode
-DISTVERSION=	1.80.0
+DISTVERSION=	1.83.1
+PORTREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:yarn_cache
 DISTFILES=	yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache \
@@ -28,7 +29,9 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libsndio.so:audio/sndio \
 		libdbus-1.so:devel/dbus \
 		libicuuc.so:devel/icu \
+		libepoll-shim.so:devel/libepoll-shim \
 		libevent.so:devel/libevent \
+		libffi.so:devel/libffi \
 		libinotify.so:devel/libinotify \
 		libnotify.so:devel/libnotify \
 		libpci.so:devel/libpci \
@@ -40,11 +43,13 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libpng.so:graphics/png \
 		libwayland-client.so:graphics/wayland \
 		libwebp.so:graphics/webp \
+		libdav1d.so:multimedia/dav1d \
 		libvpx.so:multimedia/libvpx \
 		libopenh264.so:multimedia/openh264 \
 		libcups.so:print/cups \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
+		libkrb5.so.3:security/krb5 \
 		libsecret-1.so:security/libsecret \
 		libnss3.so:security/nss \
 		libexpat.so:textproc/expat2 \
@@ -65,7 +70,7 @@ MPROTECT_DISABLE=	share/code-oss/code-oss
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	660393deaaa6d1996740ff4880f1bad43768c814
+SOURCE_COMMIT_HASH=	f1b07bd25dfad64b0167beb15359ae573aecd2cc
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -76,8 +81,8 @@ USE_GNOME=	atk cairo pango gdkpixbuf2 gtk30 libxml2 libxslt
 
 USE_LDCONFIG=	${DATADIR}
 
-# Keep NODE_VER in sync with www/node16 DISTVERSION
-NODE_VER=	16.20.1
+# Keep NODE_VER in sync with www/node18 DISTVERSION
+NODE_VER=	18.18.0
 NODE_VER_MAJOR=	${NODE_VER:C/\..*$//}
 
 SHEBANG_REGEX=	./(extensions|resources|scripts|src)/.*\.sh$$
@@ -102,7 +107,7 @@ REH_DESC=	Build remote extension host
 
 USE_HARDENING=	relro:off
 
-ELECTRON_DIR=	${.CURDIR}/../../devel/electron22
+ELECTRON_DIR=	${.CURDIR}/../../devel/electron25
 .include	"${ELECTRON_DIR}/Makefile.version"
 
 ELECTRON_DOWNLOAD_URL=	https://github.com/electron/electron/releases/download/v${ELECTRON_VER}

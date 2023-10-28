@@ -1,6 +1,5 @@
 PORTNAME=	root
-DISTVERSION=	6.28.04
-PORTREVISION=	1
+DISTVERSION=	6.28.06
 CATEGORIES=	devel science math parallel python
 MASTER_SITES=	https://root.cern/download/
 DISTFILES=	${PORTNAME}_v${DISTVERSION}.source${EXTRACT_SUFX}
@@ -12,8 +11,9 @@ WWW=		https://root.cern/
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LGPL2_1.txt
 
-BUILD_DEPENDS=	bash:shells/bash \
-		nlohmann-json>=3:devel/nlohmann-json
+BUILD_AND_RUN_DEPENDS=	bash:shells/bash \
+			nlohmann-json>=3:devel/nlohmann-json
+BUILD_DEPENDS=	${BUILD_AND_RUN_DEPENDS}
 LIB_DEPENDS=	libcfitsio.so:astro/cfitsio \
 		libcurl.so:ftp/curl \
 		libfftw3.so:math/fftw3 \
@@ -30,6 +30,7 @@ LIB_DEPENDS=	libcfitsio.so:astro/cfitsio \
 		libXrdCl.so:databases/xrootd \
 		libxxhash.so:devel/xxhash \
 		libzstd.so:archivers/zstd
+RUN_DEPENDS=	${BUILD_AND_RUN_DEPENDS}
 
 USES=		cmake compiler:c++17-lang desktop-file-utils \
 		gettext-runtime gnome iconv jpeg shebangfix ssl

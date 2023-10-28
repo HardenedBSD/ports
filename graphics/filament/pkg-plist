@@ -98,6 +98,7 @@ include/gltfio/MaterialProvider.h
 include/gltfio/NodeManager.h
 include/gltfio/ResourceLoader.h
 include/gltfio/TextureProvider.h
+include/gltfio/TrsTransformManager.h
 include/gltfio/materials/uberarchive.h
 include/gltfio/math.h
 include/ibl/Cubemap.h
@@ -182,7 +183,6 @@ lib/libdracodec.a
 lib/libfilabridge.a
 lib/libfilaflat.a
 lib/libfilamat.a
-lib/libfilamat_lite.a
 lib/libfilament-iblprefilter.a
 lib/libfilament.a
 lib/libfilameshio.a

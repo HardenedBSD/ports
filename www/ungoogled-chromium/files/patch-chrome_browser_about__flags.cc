@@ -1,6 +1,6 @@
---- chrome/browser/about_flags.cc.orig	2023-06-16 11:04:37 UTC
+--- chrome/browser/about_flags.cc.orig	2023-10-13 13:20:35 UTC
 +++ chrome/browser/about_flags.cc
-@@ -223,7 +223,7 @@
+@@ -226,7 +226,7 @@
  #include "ui/ui_features.h"
  #include "url/url_features.h"
  
@@ -9,7 +9,7 @@
  #include "base/allocator/buildflags.h"
  #endif
  
-@@ -316,7 +316,7 @@
+@@ -325,7 +325,7 @@
  #include "device/vr/public/cpp/features.h"
  #endif
  
@@ -18,7 +18,16 @@
  #include "ui/ozone/buildflags.h"
  #include "ui/ozone/public/ozone_switches.h"
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)
-@@ -422,7 +422,7 @@ const FeatureEntry::FeatureVariation kDXGIWaitableSwap
+@@ -339,7 +339,7 @@
+ #include "chrome/browser/win/titlebar_config.h"
+ #endif
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/enterprise/profile_management/profile_management_features.h"
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
+ 
+@@ -439,7 +439,7 @@ const FeatureEntry::FeatureVariation kDXGIWaitableSwap
      {"Max 3 Frames", &kDXGIWaitableSwapChain3Frames, 1, nullptr}};
  #endif
  
@@ -27,16 +36,16 @@
  const FeatureEntry::Choice kOzonePlatformHintRuntimeChoices[] = {
      {flag_descriptions::kOzonePlatformHintChoiceDefault, "", ""},
      {flag_descriptions::kOzonePlatformHintChoiceAuto,
-@@ -1449,7 +1449,7 @@ const FeatureEntry::FeatureVariation kChromeRefresh202
+@@ -1476,7 +1476,7 @@ const FeatureEntry::FeatureVariation kChromeRefresh202
       std::size(kChromeRefresh2023Level1), nullptr}};
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
- const FeatureEntry::FeatureParam
-     kOmniboxDocumentProviderCapLowQualitySuggestionsTo1[] = {
-         {"DocumentProviderMaxLowQualitySuggestions", "1"},
-@@ -4759,13 +4759,13 @@ const FeatureEntry kFeatureEntries[] = {
+ const FeatureEntry::FeatureParam kShortcutBoostSearchAndUrl1414[] = {
+     {"ShortcutBoostSearchScore", "1414"},
+     {"ShortcutBoostUrlScore", "1414"}};
+@@ -5048,13 +5048,13 @@ const FeatureEntry kFeatureEntries[] = {
       FEATURE_VALUE_TYPE(features::kWebShare)},
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
@@ -52,8 +61,8 @@
      {"skip-undecryptable-passwords",
       flag_descriptions::kSkipUndecryptablePasswordsName,
       flag_descriptions::kSkipUndecryptablePasswordsDescription,
-@@ -5042,7 +5042,7 @@ const FeatureEntry kFeatureEntries[] = {
-      FEATURE_VALUE_TYPE(feed::kDiscoFeedEndpoint)},
+@@ -5356,7 +5356,7 @@ const FeatureEntry kFeatureEntries[] = {
+      FEATURE_VALUE_TYPE(feed::kFeedSportsCard)},
  #endif  // BUILDFLAG(IS_ANDROID)
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_FUCHSIA)
@@ -61,16 +70,16 @@
      {"following-feed-sidepanel", flag_descriptions::kFollowingFeedSidepanelName,
       flag_descriptions::kFollowingFeedSidepanelDescription, kOsDesktop,
       FEATURE_VALUE_TYPE(feed::kWebUiFeed)},
-@@ -5692,7 +5692,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -6034,7 +6034,7 @@ const FeatureEntry kFeatureEntries[] = {
       kOsAll, FEATURE_VALUE_TYPE(omnibox::kUseExistingAutocompleteClient)},
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
-     {"omnibox-experimental-keyword-mode",
-      flag_descriptions::kOmniboxExperimentalKeywordModeName,
-      flag_descriptions::kOmniboxExperimentalKeywordModeDescription, kOsDesktop,
-@@ -6476,7 +6476,7 @@ const FeatureEntry kFeatureEntries[] = {
+     {"omnibox-actions-ui-simplification",
+      flag_descriptions::kOmniboxActionsUISimplificationName,
+      flag_descriptions::kOmniboxActionsUISimplificationDescription, kOsDesktop,
+@@ -6862,7 +6862,7 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kParallelDownloadingDescription, kOsAll,
       FEATURE_VALUE_TYPE(download::features::kParallelDownloading)},
  
@@ -79,16 +88,16 @@
      {"enable-async-dns", flag_descriptions::kAsyncDnsName,
       flag_descriptions::kAsyncDnsDescription, kOsWin | kOsLinux,
       FEATURE_VALUE_TYPE(features::kAsyncDns)},
-@@ -7349,7 +7349,7 @@ const FeatureEntry kFeatureEntries[] = {
- #endif  // BUILDFLAG(IS_CHROMEOS)
+@@ -7857,7 +7857,7 @@ const FeatureEntry kFeatureEntries[] = {
+      FEATURE_VALUE_TYPE(supervised_user::kEnableProtoApiForClassifyUrl)},
+ #endif  // BUILDFLAG(ENABLE_SUPERVISED_USERS)
  
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
-     {"global-media-controls-modern-ui",
-      flag_descriptions::kGlobalMediaControlsModernUIName,
-      flag_descriptions::kGlobalMediaControlsModernUIDescription,
-@@ -8124,7 +8124,7 @@ const FeatureEntry kFeatureEntries[] = {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+     {"enable-network-service-sandbox",
+      flag_descriptions::kEnableNetworkServiceSandboxName,
+      flag_descriptions::kEnableNetworkServiceSandboxDescription,
+@@ -8562,7 +8562,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -97,8 +106,8 @@
      {"quick-commands", flag_descriptions::kQuickCommandsName,
       flag_descriptions::kQuickCommandsDescription, kOsDesktop,
       FEATURE_VALUE_TYPE(features::kQuickCommands)},
-@@ -8369,7 +8369,7 @@ const FeatureEntry kFeatureEntries[] = {
-      FEATURE_VALUE_TYPE(ash::features::kWallpaperPerDesk)},
+@@ -8853,7 +8853,7 @@ const FeatureEntry kFeatureEntries[] = {
+      FEATURE_VALUE_TYPE(ash::features::kWallpaperRefreshRevamp)},
  #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
@@ -106,7 +115,7 @@
      {"enable-get-all-screens-media", flag_descriptions::kGetAllScreensMediaName,
       flag_descriptions::kGetAllScreensMediaDescription,
       kOsCrOS | kOsLacros | kOsLinux,
-@@ -8430,7 +8430,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -8909,7 +8909,7 @@ const FeatureEntry kFeatureEntries[] = {
  
  #if BUILDFLAG(IS_WIN) ||                                      \
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || \
@@ -115,7 +124,7 @@
      {
          "ui-debug-tools",
          flag_descriptions::kUIDebugToolsName,
-@@ -9007,7 +9007,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -9452,7 +9452,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -124,7 +133,7 @@
      {"document-picture-in-picture-api",
       flag_descriptions::kDocumentPictureInPictureApiName,
       flag_descriptions::kDocumentPictureInPictureApiDescription,
-@@ -9705,7 +9705,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -10069,7 +10069,7 @@ const FeatureEntry kFeatureEntries[] = {
       flag_descriptions::kWebUIOmniboxPopupDescription, kOsDesktop,
       FEATURE_VALUE_TYPE(omnibox::kWebUIOmniboxPopup)},
  
@@ -133,7 +142,7 @@
      {"webui-system-font", flag_descriptions::kWebUiSystemFontName,
       flag_descriptions::kWebUiSystemFontDescription, kOsAll,
       FEATURE_VALUE_TYPE(features::kWebUiSystemFont)},
-@@ -9906,7 +9906,7 @@ const FeatureEntry kFeatureEntries[] = {
+@@ -10272,7 +10272,7 @@ const FeatureEntry kFeatureEntries[] = {
  #endif
  
  #if BUILDFLAG(IS_WIN) || (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) || \
@@ -142,3 +151,21 @@
      {"data-retention-policies-disable-sync-types-needed",
       flag_descriptions::kDataRetentionPoliciesDisableSyncTypesNeededName,
       flag_descriptions::kDataRetentionPoliciesDisableSyncTypesNeededDescription,
+@@ -10666,7 +10666,7 @@ const FeatureEntry kFeatureEntries[] = {
+      FEATURE_VALUE_TYPE(features::kProcessPerSiteUpToMainFrameThreshold)},
+ 
+ #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+     {"camera-mic-preview", flag_descriptions::kCameraMicPreviewName,
+      flag_descriptions::kCameraMicPreviewDescription,
+      static_cast<unsigned short>(kOsMac | kOsWin | kOsLinux | kOsFuchsia),
+@@ -10843,7 +10843,7 @@ const FeatureEntry kFeatureEntries[] = {
+      flag_descriptions::kDigestAuthEnableSecureAlgorithmsDescription, kOsAll,
+      FEATURE_VALUE_TYPE(net::features::kDigestAuthEnableSecureAlgorithms)},
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+     {"third-party-profile-management",
+      flag_descriptions::kThirdPartyProfileManagementName,
+      flag_descriptions::kThirdPartyProfileManagementDescription,

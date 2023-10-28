@@ -1,7 +1,7 @@
---- base/base_switches.h.orig	2022-10-05 07:34:01 UTC
+--- base/base_switches.h.orig	2023-10-21 11:51:27 UTC
 +++ base/base_switches.h
-@@ -60,7 +60,7 @@ extern const char kEnableIdleTracing[];
- extern const char kForceFieldTrialParams[];
+@@ -62,7 +62,7 @@ extern const char kPackageVersionName[];
+ extern const char kPackageVersionCode[];
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

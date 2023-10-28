@@ -141,7 +141,6 @@
     SUBDIR += dtcpclient
     SUBDIR += dual-dhclient
     SUBDIR += dual-dhclient-daemon
-    SUBDIR += easysoap
     SUBDIR += ecal
     SUBDIR += echoping
     SUBDIR += empty
@@ -173,10 +172,10 @@
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
     SUBDIR += frp
-    SUBDIR += frr7
-    SUBDIR += frr7-pythontools
     SUBDIR += frr8
     SUBDIR += frr8-pythontools
+    SUBDIR += frr9
+    SUBDIR += frr9-pythontools
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -414,6 +413,7 @@
     SUBDIR += libpcapnav
     SUBDIR += libpfctl
     SUBDIR += libproxy
+    SUBDIR += libproxy-duktape
     SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
     SUBDIR += libproxy-pacrunner
@@ -465,6 +465,7 @@
     SUBDIR += mediastreamer
     SUBDIR += megacmd
     SUBDIR += megatools
+    SUBDIR += mercury
     SUBDIR += messagelib
     SUBDIR += mgen
     SUBDIR += micro_inetd
@@ -550,6 +551,7 @@
     SUBDIR += ntopng
     SUBDIR += ntp
     SUBDIR += ntpa
+    SUBDIR += ntpd-rs
     SUBDIR += ntpsec
     SUBDIR += ntraceroute
     SUBDIR += nusoap
@@ -570,15 +572,12 @@
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
     SUBDIR += openbgpd7
-    SUBDIR += openldap24-client
-    SUBDIR += openldap24-server
     SUBDIR += openldap25-client
     SUBDIR += openldap25-server
     SUBDIR += openldap26-client
     SUBDIR += openldap26-server
     SUBDIR += openmdns
     SUBDIR += openmpi
-    SUBDIR += openmpi3
     SUBDIR += openntpd
     SUBDIR += openpgm
     SUBDIR += openradius
@@ -931,7 +930,6 @@
     SUBDIR += p5-ldap2pw
     SUBDIR += p5-perl-ldap
     SUBDIR += p5-srv2pf
-    SUBDIR += pacemaker1
     SUBDIR += pacemaker2
     SUBDIR += packetdrill
     SUBDIR += packter-agent
@@ -1040,6 +1038,7 @@
     SUBDIR += py-amqplib
     SUBDIR += py-anonfile
     SUBDIR += py-avahi
+    SUBDIR += py-blobfile
     SUBDIR += py-bonsai
     SUBDIR += py-cepa
     SUBDIR += py-cjdns
@@ -1072,6 +1071,7 @@
     SUBDIR += py-ldap
     SUBDIR += py-ldap0
     SUBDIR += py-ldap3
+    SUBDIR += py-ldapdomaindump
     SUBDIR += py-ldappool
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
@@ -1080,6 +1080,7 @@
     SUBDIR += py-maxminddb
     SUBDIR += py-miniupnpc
     SUBDIR += py-mpi4py
+    SUBDIR += py-mpi4py-mpich
     SUBDIR += py-msrplib
     SUBDIR += py-ndg-httpsclient
     SUBDIR += py-netaddr
@@ -1115,7 +1116,6 @@
     SUBDIR += py-pystun
     SUBDIR += py-python-barbicanclient
     SUBDIR += py-python-bitcoinrpc
-    SUBDIR += py-python-ceilometerclient
     SUBDIR += py-python-cinderclient
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
@@ -1160,6 +1160,7 @@
     SUBDIR += py-suds
     SUBDIR += py-tacacs_plus
     SUBDIR += py-terminado
+    SUBDIR += py-tiny-proxy
     SUBDIR += py-tofu
     SUBDIR += py-transip
     SUBDIR += py-trio
@@ -1222,6 +1223,7 @@
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
+    SUBDIR += rosenpass
     SUBDIR += rospo
     SUBDIR += routinator
     SUBDIR += rp-pppoe
@@ -1332,6 +1334,7 @@
     SUBDIR += rubygem-mqtt
     SUBDIR += rubygem-nats-pure
     SUBDIR += rubygem-net-ldap
+    SUBDIR += rubygem-net-ldap017
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
@@ -1346,7 +1349,7 @@
     SUBDIR += rubygem-oauth21
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octokit4
-    SUBDIR += rubygem-octokit5
+    SUBDIR += rubygem-octokit6
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
     SUBDIR += rubygem-omniauth-authentiq
@@ -1413,6 +1416,7 @@
     SUBDIR += rubygem-uri-redis
     SUBDIR += rubygem-uri_template
     SUBDIR += rubygem-whois
+    SUBDIR += rubygem-x
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += rustdesk-server
@@ -1471,6 +1475,7 @@
     SUBDIR += socketpipe
     SUBDIR += socketw
     SUBDIR += sofia-sip
+    SUBDIR += speedtest
     SUBDIR += speedtest-go
     SUBDIR += spiritvnc
     SUBDIR += spoofer
@@ -1615,6 +1620,7 @@
     SUBDIR += wlvncc
     SUBDIR += wmnd
     SUBDIR += wmnet
+    SUBDIR += wmnetload
     SUBDIR += wmping
     SUBDIR += wmwave
     SUBDIR += wmwifi

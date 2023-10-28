@@ -1,5 +1,6 @@
 PORTNAME=	podofo
 PORTVERSION=	0.10.1
+PORTREVISION=	3
 CATEGORIES=	graphics print
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -11,7 +12,7 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	fast_float>=0:math/fast_float \
-		hhdate>=0:devel/hhdate \
+		date>=0:devel/date \
 		libfmt>=0:devel/libfmt \
 		utf8cpp>=0:devel/utf8cpp
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
@@ -24,7 +25,7 @@ USE_GNOME=	libxml2
 CFLAGS+=	-I${LOCALBASE}/include/fast_float
 CMAKE_ARGS=	-DFONTCONFIG_LIBRARIES=${LOCALBASE}/lib/libfontconfig.so \
 		-DOPENSSL_INCLUDE_DIR=${OPENSSLINC} \
-		-DOPENSSL_LIBRARIES=${OPENSSLDIR}
+		-DOPENSSL_LIBRARIES=${OPENSSLLIB}
 CMAKE_OFF=	PODOFO_BUILD_EXAMPLES PODOFO_BUILD_LIB_ONLY PODOFO_BUILD_STATIC PODOFO_BUILD_TEST PODOFO_BUILD_TOOLS
 CMAKE_TESTING_ON=	PODOFO_BUILD_TEST
 USE_LDCONFIG=	yes

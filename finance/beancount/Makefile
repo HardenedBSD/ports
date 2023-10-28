@@ -1,9 +1,9 @@
 PORTNAME=	beancount
-PORTVERSION=	2.3.5
+PORTVERSION=	2.3.6
 CATEGORIES=	finance
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	nivit@FreeBSD.org
+MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	Double-Entry Accounting from Text Files
 WWW=		https://github.com/beancount/beancount
 

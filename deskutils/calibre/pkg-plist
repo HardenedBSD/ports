@@ -669,6 +669,7 @@ lib/calibre/calibre/gui2/actions/embed.py
 lib/calibre/calibre/gui2/actions/fetch_news.py
 lib/calibre/calibre/gui2/actions/fts.py
 lib/calibre/calibre/gui2/actions/help.py
+lib/calibre/calibre/gui2/actions/layout_actions.py
 lib/calibre/calibre/gui2/actions/manage_categories.py
 lib/calibre/calibre/gui2/actions/mark_books.py
 lib/calibre/calibre/gui2/actions/match_books.py
@@ -807,6 +808,7 @@ lib/calibre/calibre/gui2/dialogs/confirm_merge.py
 lib/calibre/calibre/gui2/dialogs/conversion_error.py
 lib/calibre/calibre/gui2/dialogs/conversion_error_ui.py
 lib/calibre/calibre/gui2/dialogs/custom_recipes.py
+lib/calibre/calibre/gui2/dialogs/data_files_manager.py
 lib/calibre/calibre/gui2/dialogs/delete_matching_from_device.py
 lib/calibre/calibre/gui2/dialogs/delete_matching_from_device_ui.py
 lib/calibre/calibre/gui2/dialogs/device_category_editor.py
@@ -1537,6 +1539,7 @@ lib/calibre/tinycss/version.py
 %%DATADIR%%/dictionaries/es-ES/es-ES.aff
 %%DATADIR%%/dictionaries/es-ES/es-ES.dic
 %%DATADIR%%/dictionaries/es-ES/locales
+%%DATADIR%%/dictionaries/online-catalog.json
 %%DATADIR%%/ebook-convert-complete.calibre_msgpack
 %%DATADIR%%/editor-functions.json
 %%DATADIR%%/editor-help/css.json
@@ -1682,6 +1685,7 @@ lib/calibre/tinycss/version.py
 %%DATADIR%%/images/insert-link.png
 %%DATADIR%%/images/jobs.png
 %%DATADIR%%/images/keyboard-prefs.png
+%%DATADIR%%/images/layout.png
 %%DATADIR%%/images/languages.png
 %%DATADIR%%/images/library.png
 %%DATADIR%%/images/list_remove.png

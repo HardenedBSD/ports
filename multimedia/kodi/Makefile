@@ -1,7 +1,11 @@
 PORTNAME=	kodi
 DISTVERSION=	20.2
+PORTREVISION=	4
 CATEGORIES=	multimedia java
 # do not forget to fix devel/kodi-platform when updating kodi
+
+PATCH_SITES=	https://github.com/xbmc/xbmc/commit/
+PATCHFILES=	58a24d4e6165e838d102e807a003db0d9c186de7.patch:-p1
 
 MAINTAINER=	yzrh@noema.org
 COMMENT=	Award winning media center application
@@ -114,7 +118,6 @@ GL_DESC=	OpenGL
 GLES_DESC=	OpenGL ES
 
 GBM_DESC=	GBM support
-PIPEWIRE_DESC=	PipeWire support
 
 SSE2_DESC=	Use SSE2 optimized routines
 SSE3_DESC=	Use SSE3 optimized routines

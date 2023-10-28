@@ -1,7 +1,7 @@
 PORTNAME=	libsemigroups
 PORTVERSION=	1.3.7
 DISTVERSIONPREFIX=	v
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	math
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-fmt --with-external-fmt=yes	\
 		--with-external-eigen
 USE_LDCONFIG=	yes
+INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 
 .include <bsd.port.pre.mk>

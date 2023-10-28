@@ -1,6 +1,6 @@
---- content/gpu/gpu_main.cc.orig	2023-04-22 17:45:15 UTC
+--- content/gpu/gpu_main.cc.orig	2023-08-28 20:17:35 UTC
 +++ content/gpu/gpu_main.cc
-@@ -89,7 +89,7 @@
+@@ -90,7 +90,7 @@
  #include "sandbox/win/src/sandbox.h"
  #endif
  
@@ -9,7 +9,7 @@
  #include "content/gpu/gpu_sandbox_hook_linux.h"
  #include "sandbox/policy/linux/sandbox_linux.h"
  #include "sandbox/policy/sandbox_type.h"
-@@ -110,7 +110,7 @@ namespace content {
+@@ -112,7 +112,7 @@ namespace content {
  
  namespace {
  
@@ -18,7 +18,7 @@
  bool StartSandboxLinux(gpu::GpuWatchdogThread*,
                         const gpu::GPUInfo*,
                         const gpu::GpuPreferences&);
-@@ -172,7 +172,7 @@ class ContentSandboxHelper : public gpu::GpuSandboxHel
+@@ -177,7 +177,7 @@ class ContentSandboxHelper : public gpu::GpuSandboxHel
    bool EnsureSandboxInitialized(gpu::GpuWatchdogThread* watchdog_thread,
                                  const gpu::GPUInfo* gpu_info,
                                  const gpu::GpuPreferences& gpu_prefs) override {
@@ -27,7 +27,7 @@
      return StartSandboxLinux(watchdog_thread, gpu_info, gpu_prefs);
  #elif BUILDFLAG(IS_WIN)
      return StartSandboxWindows(sandbox_info_);
-@@ -270,7 +270,7 @@ int GpuMain(MainFunctionParams parameters) {
+@@ -287,7 +287,7 @@ int GpuMain(MainFunctionParams parameters) {
            std::make_unique<base::SingleThreadTaskExecutor>(
                gpu_preferences.message_pump_type);
      }
@@ -36,7 +36,7 @@
  #error "Unsupported Linux platform."
  #elif BUILDFLAG(IS_MAC)
      // Cross-process CoreAnimation requires a CFRunLoop to function at all, and
-@@ -405,7 +405,7 @@ int GpuMain(MainFunctionParams parameters) {
+@@ -422,7 +422,7 @@ int GpuMain(MainFunctionParams parameters) {
  
  namespace {
  
@@ -45,3 +45,12 @@
  bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdog_thread,
                         const gpu::GPUInfo* gpu_info,
                         const gpu::GpuPreferences& gpu_prefs) {
+@@ -462,7 +462,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdo
+   sandbox_options.accelerated_video_encode_enabled =
+       !gpu_prefs.disable_accelerated_video_encode;
+ 
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // Video decoding of many video streams can use thousands of FDs as well as
+   // Exo clients like Lacros.
+   // See https://crbug.com/1417237

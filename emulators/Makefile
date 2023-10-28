@@ -95,6 +95,7 @@
     SUBDIR += nestopia
     SUBDIR += o2em
     SUBDIR += ods2reader
+    SUBDIR += open-simh
     SUBDIR += open-vm-tools
     SUBDIR += openmsx
     SUBDIR += p5-Acme-6502
@@ -172,6 +173,7 @@
     SUBDIR += wine-mono
     SUBDIR += wine-mono-devel
     SUBDIR += wine-proton
+    SUBDIR += wine7
     SUBDIR += winetricks
     SUBDIR += x16-emulator
     SUBDIR += x16-rom

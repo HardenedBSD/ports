@@ -1,6 +1,6 @@
 PORTNAME=	ghostscript
 PORTVERSION=	9.56.1
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	print
 MASTER_SITES=	https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${PORTVERSION:S/.//g}/
 PKGNAMESUFFIX=	9-agpl-base
@@ -11,6 +11,9 @@ WWW=		https://ghostscript.com/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Obsolete and unsupported upstream, consider using print/ghostscipt10
+EXPIRATION_DATE=	2023-12-31
 
 BUILD_DEPENDS=	jbig2dec>=0.17:graphics/jbig2dec
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \

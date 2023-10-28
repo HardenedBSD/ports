@@ -13,6 +13,8 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN=		does not build: scons: _defines() missing 2 required positional arguments:
+DEPRECATED=	Deprecated upstream, consider migrating to audio/mixxx
+EXPIRATION_DATE=2023-11-30
 
 BUILD_DEPENDS=	lv2>=1.14.0:audio/lv2
 LIB_DEPENDS=	libchromaprint.so:audio/chromaprint \
@@ -24,7 +26,6 @@ LIB_DEPENDS=	libchromaprint.so:audio/chromaprint \
 		libmodplug.so:audio/libmodplug \
 		libportaudio.so:audio/portaudio \
 		libSoundTouch.so:audio/soundtouch \
-		libebur128.so:audio/ebur128 \
 		librubberband.so:audio/rubberband \
 		libsndfile.so:audio/libsndfile \
 		libvamp-sdk.so:audio/vamp-plugin-sdk \
@@ -34,7 +35,7 @@ LIB_DEPENDS=	libchromaprint.so:audio/chromaprint \
 		libprotobuf.so:devel/protobuf \
 		liblilv-0.so:audio/lilv
 
-USES=		compiler:c++11-lang gl iconv qt:5 pkgconfig scons xorg
+USES=		compiler:c++11-lang ebur128 gl iconv qt:5 pkgconfig scons xorg
 USE_XORG=	x11
 USE_GL=		gl glu
 USE_GITHUB=	yes

@@ -1,5 +1,5 @@
 PORTNAME=		sope
-PORTVERSION=		5.8.3
+PORTVERSION=		5.9.0
 CATEGORIES=		devel gnustep
 MASTER_SITES=		https://packages.sogo.nu/sources/
 DISTNAME=		SOPE-${PORTVERSION}
@@ -44,6 +44,12 @@ MYSQL_USES=		mysql
 PGSQL_USES=		pgsql
 
 USE_HARDENING=	pie:off
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+CPPFLAGS+=	-Wno-error=incompatible-function-pointer-types
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/configure

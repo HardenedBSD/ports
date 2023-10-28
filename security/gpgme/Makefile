@@ -1,5 +1,5 @@
 PORTNAME=	gpgme
-PORTVERSION=	1.21.0
+PORTVERSION=	1.23.1
 PORTREVISION?=	0
 CATEGORIES?=	security
 MASTER_SITES=	GNUPG/gpgme
@@ -69,6 +69,7 @@ NO_TEST=	yes
 CONFIGURE_ARGS+=--enable-languages=""
 ALL_TARGET=	all-am
 INSTALL_TARGET=	install-data
+NO_ARCH=	yes
 NO_TEST=	yes
 .  endif
 
@@ -81,6 +82,8 @@ FLAVOR?=		${FLAVORS:[1]}
 qt5_PKGNAMESUFFIX=	-qt5
 qt6_PKGNAMESUFFIX=	-qt6
 
+QT_STR=		Qt${FLAVOR:S/qt//}
+
 .    if ${FLAVOR:U} == "qt5"
 USES+=		compiler:c++11-lib pkgconfig qt:5
 USE_QT=		buildtools:build core
@@ -88,9 +91,11 @@ TEST_USE=	QT=testlib:build
 PLIST_SUB=	QT_SUFFIX="" qt_SUFFIX=""
 .    else
 USES+=		compiler:c++17-lang pkgconfig qt:6
-USE_QT=		base
 USE_CXXSTD=	c++17
-PLIST_SUB=	QT_SUFFIX="Qt6" qt_SUFFIX="qt6"
+USE_LOCALE=	C.UTF-8
+USE_QT=		base
+CXXFLAGS+=	-fPIC
+PLIST_SUB=	QT_SUFFIX="${QT_STR}" qt_SUFFIX="${FLAVOR}"
 .    endif
 
 CONFIGURE_ARGS+=--enable-languages="cpp ${FLAVOR}"
@@ -103,8 +108,8 @@ DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen \
 
 .  if ${SLAVEPORT} == "python"
 BUILD_DEPENDS+=	swig:devel/swig \
-		${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
+		${PY_SETUPTOOLS}
+RUN_DEPENDS+=	${PY_SETUPTOOLS}
 USES+=		python
 USE_PYTHON=	flavors
 CONFIGURE_ARGS+=--enable-languages="python"
@@ -116,6 +121,8 @@ PLIST_SUB+=	VERSION=${PORTVERSION}
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|mno-direct-extern-access|fno-direct-access-external-data|g' \
+		${WRKSRC}/configure
 .if defined(SLAVEPORT)
 	@${FIND} ${BUILD_WRKSRC} -name "Makefile.in" -type f | ${XARGS} \
 	${REINPLACE_CMD} -e 's|../../../src/libgpgme.la|-lgpgme|g'

@@ -28,6 +28,7 @@
     SUBDIR += abstreet
     SUBDIR += abuse_sdl
     SUBDIR += ace-of-penguins
+    SUBDIR += adom
     SUBDIR += adonthell
     SUBDIR += adonthell-wastesedge
     SUBDIR += aestats
@@ -142,7 +143,6 @@
     SUBDIR += caph
     SUBDIR += cardpics
     SUBDIR += cataclysm-dda
-    SUBDIR += cataclysm-dda-tiles
     SUBDIR += catesc
     SUBDIR += cave9
     SUBDIR += cavezofphear
@@ -156,7 +156,6 @@
     SUBDIR += chromono
     SUBDIR += circuslinux
     SUBDIR += cmatrix
-    SUBDIR += cockatrice
     SUBDIR += coffeebreak
     SUBDIR += colobot
     SUBDIR += colorcode
@@ -629,7 +628,6 @@
     SUBDIR += minetest
     SUBDIR += minetest_game
     SUBDIR += minetestmapper
-    SUBDIR += minilens
     SUBDIR += mirrormagic
     SUBDIR += miscom
     SUBDIR += mkhexgrid
@@ -638,6 +636,7 @@
     SUBDIR += moon-buggy
     SUBDIR += moonlander
     SUBDIR += moonlight-embedded
+    SUBDIR += moonlight-qt
     SUBDIR += moria
     SUBDIR += motogt
     SUBDIR += mrboom
@@ -648,7 +647,6 @@
     SUBDIR += mvdsv
     SUBDIR += nInvaders
     SUBDIR += naev
-    SUBDIR += naev-data
     SUBDIR += narcissu2
     SUBDIR += nazghul
     SUBDIR += nbsdgames
@@ -956,7 +954,6 @@
     SUBDIR += taisei
     SUBDIR += tali
     SUBDIR += tanglet
-    SUBDIR += tanks-of-freedom
     SUBDIR += tbclock
     SUBDIR += tecnoballz
     SUBDIR += teeworlds
@@ -969,6 +966,7 @@
     SUBDIR += textmaze
     SUBDIR += thegrind
     SUBDIR += tileworld
+    SUBDIR += tinycols
     SUBDIR += tkmoo
     SUBDIR += tmatrix
     SUBDIR += tomatoes
@@ -1041,12 +1039,12 @@
     SUBDIR += wargus
     SUBDIR += warmux
     SUBDIR += warzone2100
-    SUBDIR += weebsay
     SUBDIR += wesnoth
     SUBDIR += whichwayisup
     SUBDIR += widelands
     SUBDIR += wipeclean
     SUBDIR += wizznic
+    SUBDIR += wmeyes
     SUBDIR += wmpuzzle
     SUBDIR += wmqstat
     SUBDIR += wmtictactoe

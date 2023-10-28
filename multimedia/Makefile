@@ -1,11 +1,11 @@
     COMMENT = Multimedia software
 
     SUBDIR += Bento4
-    SUBDIR += QtAV
     SUBDIR += ab-av1
     SUBDIR += ab25
     SUBDIR += acidrip
     SUBDIR += aegisub
+    SUBDIR += alass
     SUBDIR += aom
     SUBDIR += aravis
     SUBDIR += arcan
@@ -63,6 +63,7 @@
     SUBDIR += ffmpegthumbnailer
     SUBDIR += ffms2
     SUBDIR += ffnvcodec-headers
+    SUBDIR += ffsubsync
     SUBDIR += filebot
     SUBDIR += flvmeta
     SUBDIR += flvstreamer
@@ -197,6 +198,7 @@
     SUBDIR += libva-intel-driver
     SUBDIR += libva-intel-hybrid-driver
     SUBDIR += libva-intel-media-driver
+    SUBDIR += libva-nvidia-driver
     SUBDIR += libva-utils
     SUBDIR += libva-vdpau-driver
     SUBDIR += libvdpau
@@ -260,6 +262,7 @@
     SUBDIR += obs-studio
     SUBDIR += obs-text-pthread
     SUBDIR += obs-waveform
+    SUBDIR += obuparse
     SUBDIR += oggvideotools
     SUBDIR += ogmrip
     SUBDIR += ogmtools
@@ -317,6 +320,7 @@
     SUBDIR += py-pymediainfo
     SUBDIR += py-pysubs2
     SUBDIR += py-soco
+    SUBDIR += py-srt
     SUBDIR += py-subliminal
     SUBDIR += py-tartube
     SUBDIR += py-tvnamer
@@ -355,7 +359,6 @@
     SUBDIR += snapcast
     SUBDIR += spook
     SUBDIR += streamlink
-    SUBDIR += subsync
     SUBDIR += subtitlecomposer
     SUBDIR += subtitleoffsetmodifier
     SUBDIR += subtools

@@ -22,4 +22,6 @@ NO_ARCH=	yes
 
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}dj22-django-crispy-forms
 
+PORTSCOUT=	skipv:2.1
+
 .include <bsd.port.mk>

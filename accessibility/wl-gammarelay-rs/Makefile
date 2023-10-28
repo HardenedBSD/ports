@@ -1,6 +1,6 @@
 PORTNAME=	wl-gammarelay-rs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.1
+DISTVERSION=	0.3.2
 PORTREVISION=	1
 CATEGORIES=	accessibility wayland
 

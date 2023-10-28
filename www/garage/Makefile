@@ -1,5 +1,6 @@
 PORTNAME=	garage
-DISTVERSION=	0.8.2
+DISTVERSION=	0.8.4
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://git.deuxfleurs.fr/Deuxfleurs/${PORTNAME}/archive/v${PORTVERSION}.tar.gz?dummy=/
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
@@ -12,13 +13,18 @@ LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	protoc:devel/protobuf
-LIB_DEPENDS=	libsodium.so:security/libsodium
+LIB_DEPENDS=	libsodium.so:security/libsodium \
+		libzstd.so:archivers/zstd
 
 USES=		cargo pkgconfig
 CARGO_ENV+=	SODIUM_USE_PKG_CONFIG=1
 CARGO_INSTALL_PATH=	src/garage
 SUB_FILES=	pkg-message
-WRKSRC=		${WRKDIR}/${PORTNAME}
+USE_RC_SUBR=	garage
+CARGO_VENDOR_DIR=	${WRKDIR}/cargo-crates
+
+post-extract:
+	${MV} -v ${WRKDIR}/${PORTNAME} ${WRKSRC}
 
 post-patch:
 	${GREP} -F -Rl /etc/garage ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \

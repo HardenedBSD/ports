@@ -1,8 +1,8 @@
---- pyproject.toml.orig	2023-05-09 16:38:29 UTC
+--- pyproject.toml.orig	2023-09-26 15:01:12 UTC
 +++ pyproject.toml
-@@ -209,17 +209,6 @@ importlib_metadata = { version = ">=1.4", python = "<3
- # This is the most recent version of Pydantic with available on common distros.
- pydantic = ">=1.7.4"
+@@ -215,17 +215,6 @@ packaging = ">=16.1"
+ # We are currently incompatible with >=2.0.0: (https://github.com/matrix-org/synapse/issues/15858)
+ pydantic = "^1.7.4"
  
 -# This is for building the rust components during "poetry install", which
 -# currently ignores the `build-system.requires` directive (c.f.

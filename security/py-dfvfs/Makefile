@@ -34,7 +34,6 @@ RUN_DEPENDS=	libbde>=a:devel/libbde \
 		libvsgpt>=e:devel/libvsgpt \
 		libvshadow>=0:devel/libvshadow \
 		libvslvm>=e:devel/libvslvm \
-		${PYTHON_PKGNAMEPREFIX}cryptography>=0:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dfdatetime>=0:security/py-dfdatetime@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dtfabric>=0:devel/py-dtfabric@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytsk>=0:sysutils/py-pytsk@${PY_FLAVOR} \
@@ -44,7 +43,7 @@ RUN_DEPENDS=	libbde>=a:devel/libbde \
 
 USES=		python
 USE_LOCALE=	en_US.UTF-8
-USE_PYTHON=	distutils autoplist concurrent
+USE_PYTHON=	autoplist concurrent cryptography distutils
 DO_MAKE_TEST=	${SETENV} ${TEST_ENV} ${PYTHON_CMD}
 TEST_TARGET=	run_tests.py
 

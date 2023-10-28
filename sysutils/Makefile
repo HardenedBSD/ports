@@ -88,6 +88,8 @@
     SUBDIR += backuppc-devel
     SUBDIR += backuppc4
     SUBDIR += backupuser
+    SUBDIR += bacnet-stack-apps
+    SUBDIR += bacula-libs3
     SUBDIR += bacula11-client
     SUBDIR += bacula11-client-static
     SUBDIR += bacula11-docs
@@ -105,9 +107,6 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos19-client
-    SUBDIR += bareos19-server
-    SUBDIR += bareos19-traymonitor
     SUBDIR += bareos20-client
     SUBDIR += bareos20-server
     SUBDIR += bareos20-traymonitor
@@ -135,6 +134,9 @@
     SUBDIR += bksh
     SUBDIR += bkt
     SUBDIR += blisp
+    SUBDIR += bmd
+    SUBDIR += bmd-plugin-avahi
+    SUBDIR += bmd-plugin-hookcmd
     SUBDIR += boot-extract
     SUBDIR += bottom
     SUBDIR += bpytop
@@ -163,6 +165,7 @@
     SUBDIR += bvm
     SUBDIR += byobu
     SUBDIR += calamares
+    SUBDIR += catatonit
     SUBDIR += catfish
     SUBDIR += catsit
     SUBDIR += cbsd
@@ -182,8 +185,10 @@
     SUBDIR += cdrtools
     SUBDIR += cfengine
     SUBDIR += cfengine-devel
+    SUBDIR += cfengine-lts
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
+    SUBDIR += cfengine-masterfiles-lts
     SUBDIR += cfengine-masterfiles320
     SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine-masterfiles322
@@ -235,6 +240,10 @@
     SUBDIR += coreos-ct
     SUBDIR += coreutils
     SUBDIR += cpdup
+    SUBDIR += cpu-microcode
+    SUBDIR += cpu-microcode-amd
+    SUBDIR += cpu-microcode-intel
+    SUBDIR += cpu-microcode-rc
     SUBDIR += cpu-x
     SUBDIR += cpuburn
     SUBDIR += cpufetch
@@ -277,8 +286,6 @@
     SUBDIR += desktop-installer
     SUBDIR += detox
     SUBDIR += devcpu-data
-    SUBDIR += devcpu-data-amd
-    SUBDIR += devcpu-data-intel
     SUBDIR += devctl-jail-kmod
     SUBDIR += devd-mount
     SUBDIR += devedeng
@@ -370,6 +377,7 @@
     SUBDIR += exa
     SUBDIR += exfat-utils
     SUBDIR += extipl
+    SUBDIR += eza
     SUBDIR += ezjail
     SUBDIR += f2
     SUBDIR += f3
@@ -380,6 +388,7 @@
     SUBDIR += fanout
     SUBDIR += fastfetch
     SUBDIR += fatback
+    SUBDIR += fclones
     SUBDIR += fcode-utils
     SUBDIR += fconfig
     SUBDIR += fcron
@@ -568,6 +577,7 @@
     SUBDIR += imgurbash2
     SUBDIR += immortal
     SUBDIR += incron
+    SUBDIR += initool
     SUBDIR += inotify-tools
     SUBDIR += installwatch
     SUBDIR += intel-epct
@@ -594,7 +604,6 @@
     SUBDIR += ipsc
     SUBDIR += isc-cron
     SUBDIR += isomaster
-    SUBDIR += istatserver
     SUBDIR += istio
     SUBDIR += jadm
     SUBDIR += jail-primer
@@ -667,9 +676,11 @@
     SUBDIR += libretto-config
     SUBDIR += libsunacl
     SUBDIR += libsysstat
+    SUBDIR += libtpms
     SUBDIR += libtree
     SUBDIR += libudisks
     SUBDIR += liburcu
+    SUBDIR += limine
     SUBDIR += lineak-defaultplugin
     SUBDIR += lineak-xosdplugin
     SUBDIR += lineakd
@@ -682,7 +693,6 @@
     SUBDIR += linux-rkbin
     SUBDIR += linuxfdisk
     SUBDIR += lizardfs
-    SUBDIR += llama
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
@@ -690,7 +700,6 @@
     SUBDIR += loganalyzer
     SUBDIR += logrotate
     SUBDIR += logstalgia
-    SUBDIR += logstash-forwarder
     SUBDIR += logstash7
     SUBDIR += logstash8
     SUBDIR += logtool
@@ -790,7 +799,6 @@
     SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += mstflint
-    SUBDIR += mstflint-lite
     SUBDIR += msyslog
     SUBDIR += mtm
     SUBDIR += mtpfs
@@ -800,7 +808,6 @@
     SUBDIR += munin-contrib
     SUBDIR += munin-master
     SUBDIR += munin-node
-    SUBDIR += muse
     SUBDIR += mxkill
     SUBDIR += mybashburn
     SUBDIR += myrescue
@@ -815,7 +822,6 @@
     SUBDIR += nerdctl
     SUBDIR += netevent
     SUBDIR += nfcutils
-    SUBDIR += nfs-over-tls
     SUBDIR += nitrogen
     SUBDIR += nix
     SUBDIR += nmrpflash
@@ -1044,6 +1050,7 @@
     SUBDIR += procenv
     SUBDIR += process-viewer
     SUBDIR += procmap
+    SUBDIR += procs
     SUBDIR += progsreiserfs
     SUBDIR += pslist
     SUBDIR += psmisc
@@ -1079,6 +1086,7 @@
     SUBDIR += py-croniter
     SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
+    SUBDIR += py-director
     SUBDIR += py-dirsync
     SUBDIR += py-distro
     SUBDIR += py-dlipower
@@ -1194,7 +1202,6 @@
     SUBDIR += rovclock
     SUBDIR += rpi-firmware
     SUBDIR += rset
-    SUBDIR += rsfetch
     SUBDIR += rshim-user-space
     SUBDIR += rsnapshot
     SUBDIR += rsyncbackup
@@ -1294,7 +1301,8 @@
     SUBDIR += rubygem-winrm-elevated
     SUBDIR += rubygem-winrm-fs
     SUBDIR += rubygem-yell
-    SUBDIR += rundeck3
+    SUBDIR += runas
+    SUBDIR += rundeck
     SUBDIR += runiq
     SUBDIR += runit
     SUBDIR += runit-faster
@@ -1302,6 +1310,7 @@
     SUBDIR += runwhen
     SUBDIR += rush
     SUBDIR += rust-coreutils
+    SUBDIR += rust-findutils
     SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6
@@ -1349,6 +1358,7 @@
     SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-qt5
     SUBDIR += signon-ui
+    SUBDIR += sispmctl
     SUBDIR += skopeo
     SUBDIR += slack
     SUBDIR += sleuthkit
@@ -1390,9 +1400,11 @@
     SUBDIR += swapmon
     SUBDIR += swapusage
     SUBDIR += sweeper
+    SUBDIR += swtpm
     SUBDIR += symlinks
     SUBDIR += symon
     SUBDIR += synergy
+    SUBDIR += syngesture
     SUBDIR += sysctlbyname-improved-kmod
     SUBDIR += sysctlinfo-kmod
     SUBDIR += sysgather
@@ -1400,7 +1412,6 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslogger
-    SUBDIR += sysrc
     SUBDIR += sysvbanner
     SUBDIR += szyszka
     SUBDIR += tai64nfrac
@@ -1424,6 +1435,7 @@
     SUBDIR += testdisk
     SUBDIR += tflint
     SUBDIR += thefish
+    SUBDIR += tiempo
     SUBDIR += timelimit
     SUBDIR += timemon
     SUBDIR += tiramisu
@@ -1577,6 +1589,7 @@
     SUBDIR += vttest
     SUBDIR += vzvol
     SUBDIR += wait_on
+    SUBDIR += walk
     SUBDIR += watchfolder
     SUBDIR += watchman
     SUBDIR += watchmen
@@ -1606,6 +1619,7 @@
     SUBDIR += xbatt
     SUBDIR += xbattbar
     SUBDIR += xcdroast
+    SUBDIR += xcp
     SUBDIR += xcpustate
     SUBDIR += xdu
     SUBDIR += xe

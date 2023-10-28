@@ -1,6 +1,6 @@
---- chrome/common/chrome_switches.h.orig	2023-04-22 17:45:15 UTC
+--- chrome/common/chrome_switches.h.orig	2023-10-21 11:51:27 UTC
 +++ chrome/common/chrome_switches.h
-@@ -266,12 +266,12 @@ extern const char kAllowNaClSocketAPI[];
+@@ -269,12 +269,12 @@ extern const char kAllowNaClSocketAPI[];
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -14,4 +14,4 @@
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  extern const char kListApps[];
  extern const char kProfileBaseName[];
- #endif
+ extern const char kProfileManagementAttributes[];

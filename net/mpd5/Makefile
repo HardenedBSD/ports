@@ -1,6 +1,6 @@
 PORTNAME=	mpd
 DISTVERSION=	5.9
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Mpd5/Mpd-${PORTVERSION}
 PKGNAMESUFFIX=	5
@@ -12,7 +12,7 @@ WWW=		https://sourceforge.net/projects/mpd/
 
 LICENSE=	BSD3CLAUSE
 
-USES=		cpe ssl
+USES=		cpe
 
 CPE_VENDOR=	mpd_project
 

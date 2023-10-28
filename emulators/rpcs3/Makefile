@@ -1,7 +1,7 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.28-15346 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-gc0280b43f2
+DISTVERSION=	0.0.29-15709 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g3c93509471
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -12,8 +12,6 @@ LICENSE=	APACHE20 ISCL GPLv2 MIT ZLIB
 LICENSE_COMB=	multi
 LICENSE_FILE_ISCL=	${WRKSRC_cubeb}/LICENSE
 LICENSE_FILE_ZLIB=	${WRKSRC_asmjit}/LICENSE.md
-
-FLAVORS=	qt5 qt6
 
 BUILD_DEPENDS=	flatc:devel/flatbuffers
 LIB_DEPENDS=	libxxhash.so:devel/xxhash \
@@ -30,7 +28,7 @@ GH_ACCOUNT=	RPCS3
 GH_TUPLE=	RPCS3:hidapi:hidapi-0.14.0-2-g8b43a97:hidapi/3rdparty/hidapi/hidapi \
 		RPCS3:soundtouch:2.3.1-16-g83cfba6:soundtouch/3rdparty/SoundTouch/soundtouch \
 		asmjit:asmjit:c598476:asmjit/3rdparty/asmjit/asmjit \
-		jbeder:yaml-cpp:yaml-cpp-0.7.0-1-g0b67821:yamlcpp/3rdparty/yaml-cpp/yaml-cpp \
+		jbeder:yaml-cpp:0.8.0-11-g456c68f:yamlcpp/3rdparty/yaml-cpp/yaml-cpp \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-187-g85a1ed2:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
 		KhronosGroup:SPIRV-Tools:v2022.4:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
 		KhronosGroup:glslang:11.11.0-2-g10423ec6:glslang/3rdparty/glslang/glslang \
@@ -39,35 +37,15 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.14.0-2-g8b43a97:hidapi/3rdparty/hidapi/hidapi \
 		wolfSSL:wolfssl:v5.6.3-stable:wolfssl/3rdparty/wolfssl/wolfssl
 
 USES=		cmake elfctl gl iconv:wchar_t llvm:min=16,lib localbase:ldflags \
-		openal:soft pkgconfig python:build qt:5 xorg
+		openal:soft pkgconfig python:build qt:6 xorg
 USE_GL=		gl glew
-USE_QT=		qmake:build buildtools:build core concurrent dbus gui multimedia svg widgets
+USE_QT=		base multimedia svg
 USE_XORG=	x11
 CMAKE_ON=	CMAKE_SKIP_RPATH ${CURL FFMPEG FLATBUFFERS LIBPNG PUGIXML XXHASH:L:S/^/USE_SYSTEM_/}
 CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS USE_PRECOMPILED_HEADERS
 LDFLAGS+=	-Wl,--as-needed # GLU
 ELF_FEATURES=	+wxneeded:bin/${PORTNAME}
-
-.if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
-PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6
-PATCHFILES+=	c0d4bbc84a03.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
-PKGNAMESUFFIX=	-${FLAVOR}
-USES:=		${USES:S/qt:5/qt:6/}
-USE_QT=		base multimedia svg
-
-CONFLICTS_INSTALL=	${PORTNAME}
-
-post-patch:	${FLAVOR}-post-patch
-${FLAVOR}-post-patch:
-# patch(1) doesn't support renames unlike git-apply(1)
-	@${MV}  ${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_surface.cpp \
-		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_sink.cpp
-	@${MV}  ${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_surface.h \
-		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_sink.h
-.else
-CONFLICTS_INSTALL=	${PORTNAME}-qt6
-.endif
 
 OPTIONS_DEFINE=	ALSA EVDEV FAUDIO PULSEAUDIO JACK SDL SNDIO VULKAN
 OPTIONS_DEFAULT=EVDEV FAUDIO PULSEAUDIO JACK SDL SNDIO VULKAN
@@ -104,7 +82,7 @@ VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 VULKAN_CMAKE_BOOL=	USE_VULKAN
 
 # XXX Unbundle audio/rtmidi
-GH_TUPLE+=		thestk:rtmidi:5.0.0:rtmidi/3rdparty/rtmidi/rtmidi
+GH_TUPLE+=		thestk:rtmidi:6.0.0:rtmidi/3rdparty/rtmidi/rtmidi
 ALSA_LIB_DEPENDS+=	libasound.so:audio/alsa-lib
 ALSA_CMAKE_BOOL+= 	RTMIDI_API_ALSA
 JACK_LIB_DEPENDS+=	libjack.so:audio/jack
@@ -115,5 +93,14 @@ post-patch:
 		 -e '/GIT_FULL_BRANCH/s/local_build/${GH_ACCOUNT}\/${GH_PROJECT}\/master/' \
 		-e '/GIT_VERSION/s/local_build/${GH_TAGNAME:C/[^-]*-//}/' \
 		${WRKSRC}/${PORTNAME}/git-version.cmake
+
+# XXX Drop after FreeBSD 13.2 EOL around 2024-05-01
+.if !exists(/usr/include/c++/v1/__ranges/as_rvalue_view.h)
+PATH:=		${LLVM_PREFIX}/bin:${PATH} # XXX _CMAKE_TOOLCHAIN_SUFFIX vs. devel/llvm*
+CC=		clang${LLVM_VERSION}
+CXX=		clang++${LLVM_VERSION}
+CPP=		clang-cpp${LLVM_VERSION}
+CONFIGURE_ENV+=	CC="${CC}" CXX="${CXX}" CPP="${CPP}"
+.endif
 
 .include <bsd.port.mk>

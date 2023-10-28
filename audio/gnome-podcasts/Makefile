@@ -1,5 +1,6 @@
 PORTNAME=	podcasts
-DISTVERSION=	0.6.0
+DISTVERSION=	0.6.1
+PORTREVISION=	1
 CATEGORIES=	audio
 PKGNAMEPREFIX=	gnome-
 
@@ -28,7 +29,8 @@ GLIB_SCHEMAS=	org.gnome.Podcasts.gschema.xml
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc
+.if ${ARCH} == i386 || ${ARCH} == powerpc
+# https://github.com/rust-lang/rust/issues/85598
 LTO_UNSAFE=	yes
 .endif
 

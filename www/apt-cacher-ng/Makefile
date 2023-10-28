@@ -1,9 +1,8 @@
 PORTNAME=	apt-cacher-ng
-PORTVERSION=	3.2
-PORTREVISION=	2
+PORTVERSION=	3.2.1
 CATEGORIES=	www
 MASTER_SITES=	DEBIAN_POOL/apt-cacher-ng
-DISTFILES=	${PORTNAME}_${PORTVERSION}.orig${EXTRACT_SUFX}
+DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	keve@keve.hu
 COMMENT=	Specialized http/s proxy for caching software distribution sites
@@ -25,22 +24,22 @@ CMAKE_ARGS=	-DLIBDIR:PATH=${DATADIR} \
 SUB_FILES=	backends_debian backends_freebsd backends_ubuntu \
 		freebsd_mirrors pkg-message
 
+WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
 OPTIONS_DEFINE=	DOCS SSL FUSE
 OPTIONS_DEFAULT=	SSL
 OPTIONS_SUB=	yes
 
+FUSE_DESC=	FUSE support for interfacing with the proxy via acngfs
 SSL_DESC=	SSL support to allow proxying https sites
 
-SSL_CMAKE_BOOL=	USE_SSL
+FUSE_USES=		fuse pkgconfig
+FUSE_CMAKE_BOOL=	USE_FUSE
 SSL_USES=	ssl
+SSL_CMAKE_BOOL=	USE_SSL
 SSL_CMAKE_ON=	-Dopenssl_FOUND=1 \
 		-Dopenssl_CFLAGS="-I ${OPENSSLINC}" \
 		-Dopenssl_LDFLAGS="-L ${OPENSSLLIB} -lssl -lcrypto"
-
-FUSE_DESC=	FUSE support for interfacing with the proxy via acngfs
-
-FUSE_CMAKE_BOOL=	USE_FUSE
-FUSE_USES=		fuse pkgconfig
 
 post-install:
 	${MV} ${STAGEDIR}${ETCDIR}/acng.conf ${STAGEDIR}${ETCDIR}/acng.conf.sample

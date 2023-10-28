@@ -1,12 +1,13 @@
 PORTNAME=	semver
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python helper for Semantic Versioning
-WWW=		https://github.com/python-semver/python-semver
+WWW=		https://python-semver.readthedocs.io/en/latest/ \
+		https://github.com/python-semver/python-semver
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

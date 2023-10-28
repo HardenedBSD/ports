@@ -1,7 +1,7 @@
---- base/base_switches.cc.orig	2022-10-05 07:34:01 UTC
+--- base/base_switches.cc.orig	2023-10-21 11:51:27 UTC
 +++ base/base_switches.cc
-@@ -170,7 +170,7 @@ const char kForceFieldTrialParams[] = "force-fieldtria
- 
+@@ -180,7 +180,7 @@ const char kPackageVersionName[] = "package-version-na
+ const char kPackageVersionCode[] = "package-version-code";
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

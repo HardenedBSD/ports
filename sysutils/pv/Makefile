@@ -1,5 +1,5 @@
 PORTNAME=	pv
-PORTVERSION=	1.6.20
+PORTVERSION=	1.7.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ivarch.com/programs/sources/
 
@@ -20,7 +20,7 @@ USE_HARDENING=	safestack
 
 PLIST_FILES=	bin/pv man/man1/pv.1.gz
 
-PORTDOCS=	README INSTALL NEWS PACKAGE TODO VERSION release-checklist
+PORTDOCS=	README.md INSTALL NEWS.md TODO.md
 
 OPTIONS_DEFINE=	DOCS NLS LFS
 OPTIONS_DEFAULT=	LFS
@@ -29,7 +29,7 @@ NLS_CONFIGURE_OFF=	--disable-nls
 LFS_CONFIGURE_ENABLE=	lfs
 
 post-patch:
-	@${CP} ${WRKSRC}/README ${WRKSRC}/doc
+	@${CP} ${WRKSRC}/README.md ${WRKSRC}/doc
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pv

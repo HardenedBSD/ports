@@ -30,6 +30,7 @@ CONFIGURE_ARGS=	--with-db-include=${BDB_INCLUDE_DIR} \
 		--with-db-lib=${BDB_LIB_DIR}
 ALL_TARGET=	all rdoc
 INSTALL_TARGET=	site-install
+WITH_BDB6_PERMITTED=	yes
 
 DOCS=		Changes README.en bdb.rd docs/*.rd
 DOCSDIR=	${RUBY_MODDOCDIR}
@@ -43,7 +44,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
 CONFIGURE_ARGS+=	--with-cflags="-Wno-error=incompatible-function-pointer-types"
 .endif
 

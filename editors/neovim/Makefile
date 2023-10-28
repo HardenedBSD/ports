@@ -1,6 +1,6 @@
 PORTNAME=	neovim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.1
+DISTVERSION=	0.9.4
 CATEGORIES=	editors
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -13,7 +13,7 @@ BUILD_DEPENDS=	gperf:devel/gperf \
 		${LUA_MODLIBDIR}/bit.so:devel/lua-bitop@${LUA_FLAVOR} \
 		${LUA_MODLIBDIR}/lpeg.so:devel/lua-lpeg@${LUA_FLAVOR}
 LIB_DEPENDS=	libluv.so:devel/luv \
-		libmsgpackc.so:devel/msgpack-c \
+		libmsgpack-c.so:devel/msgpack-c \
 		libtermkey.so:devel/libtermkey \
 		libtree-sitter.so:devel/tree-sitter \
 		libunibilium.so:devel/unibilium \
@@ -44,12 +44,6 @@ PYNVIM_DESC=	Enable support for plugins written in python
 NLS_CMAKE_BOOL=		ENABLE_LIBINTL
 PYNVIM_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pynvim>=0.3.0:editors/py-pynvim@${PY_FLAVOR}
 PYNVIM_USES=		python:run
-
-.include <bsd.port.options.mk>
-
-.if ${ARCH} == powerpc64
-USES+=		compiler:gcc-c++11-lib
-.endif
 
 post-patch-NLS-off:
 	${REINPLACE_CMD} -e '/add_subdirectory(po)/d' ${WRKSRC}/src/nvim/CMakeLists.txt

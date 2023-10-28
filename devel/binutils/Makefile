@@ -3,7 +3,8 @@ DISTVERSION=	2.40
 PORTREVISION=	4
 PORTEPOCH?=	1
 CATEGORIES?=	devel
-MASTER_SITES=	SOURCEWARE/binutils/releases
+MASTER_SITES=	GNU \
+		SOURCEWARE/binutils/releases
 
 MAINTAINER?=	cy@FreeBSD.org
 COMMENT?=	GNU binary tools
@@ -38,6 +39,10 @@ CONFIGURE_ARGS+=	--disable-werror \
 			--enable-default-compressed-debug-sections-algorithm=zstd
 MAKE_ARGS+=	LIBDL="" V=1
 MAKE_ENV+=	ac_cv_func_sbrk=0
+
+# Some versioned symbols in libctf are undefined when libctf-nobfd.so is linked.
+# Suppress errors with lld >= 17 due to these undefined symbols.
+LDFLAGS+=	-Wl,--undefined-version
 
 # Tests will always fail because --compress-debug-sections is always set to
 # zlib-gabi regardless of the compression setting by ./configure.

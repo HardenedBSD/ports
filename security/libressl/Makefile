@@ -1,5 +1,6 @@
 PORTNAME=	libressl
 PORTVERSION=	3.7.3
+PORTREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	OPENBSD/LibreSSL
 
@@ -26,8 +27,7 @@ NC_DESC=	Install TLS-enabled netcat
 
 CONFLICTS_INSTALL=		libressl-devel
 libtls_CONFLICTS_INSTALL=	libretls
-default_CONFLICTS_INSTALL=	openssl \
-				openssl3[01]
+default_CONFLICTS_INSTALL=	openssl openssl111 openssl3[12] openssl-quictls
 
 .if ${FLAVOR:U} == default
 OPTIONS_EXCLUDE=	LIBTLS
@@ -63,6 +63,8 @@ post-patch-MAN3-off:
 
 post-install:
 	${RM} -r ${STAGEDIR}/${PREFIX}/etc/ssl/cert.pem
+	${RMDIR} ${STAGEDIR}${PREFIX}/etc/ssl/certs
+	${LN} -s /etc/ssl/certs ${STAGEDIR}${PREFIX}/etc/ssl/certs
 
 post-stage-MAN3-on:
 	(cd ${STAGEDIR}${MANPREFIX}; ${FIND} man/man3 -not -type d | \

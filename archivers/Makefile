@@ -78,6 +78,7 @@
     SUBDIR += lua-lzlib
     SUBDIR += lua-zlib
     SUBDIR += lxqt-archiver
+    SUBDIR += lz4json
     SUBDIR += lzfse
     SUBDIR += lzip
     SUBDIR += lziprecover
@@ -191,6 +192,7 @@
     SUBDIR += py-bz2file
     SUBDIR += py-compressed-rtf
     SUBDIR += py-cramjam
+    SUBDIR += py-laszip
     SUBDIR += py-libarchive-c
     SUBDIR += py-lz4
     SUBDIR += py-lzma

@@ -18,7 +18,8 @@ BROKEN_sparc64=		Does not compile on ${ARCH}
 
 USE_HARDENING=	pie:off
 
-USES=		compiler:c++14-lang pkgconfig:both tar:xz
+USES=		compiler:c++14-lang dos2unix pkgconfig:both tar:xz
+DOS2UNIX_FILES=	uppsrc/Core/config.h
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

@@ -36,6 +36,7 @@
     SUBDIR += code2000
     SUBDIR += comfortaa-ttf
     SUBDIR += comic-neue
+    SUBDIR += commit-mono
     SUBDIR += consolamono-ttf
     SUBDIR += courier-prime
     SUBDIR += cozette
@@ -128,7 +129,7 @@
     SUBDIR += genyo
     SUBDIR += genyog
     SUBDIR += gnu-unifont
-    SUBDIR += gnu-unifont-ttf
+    SUBDIR += gnu-unifont-otf
     SUBDIR += gofont-ttf
     SUBDIR += gohufont
     SUBDIR += google-fonts
@@ -145,6 +146,7 @@
     SUBDIR += jetbrains-mono
     SUBDIR += jf-openhuninn
     SUBDIR += jmk-x11-fonts
+    SUBDIR += juliamono
     SUBDIR += junction
     SUBDIR += junicode
     SUBDIR += kaputa
@@ -244,6 +246,7 @@
     SUBDIR += py-glyphsLib
     SUBDIR += py-opentype-sanitizer
     SUBDIR += py-opentypespec
+    SUBDIR += py-shaperglot
     SUBDIR += py-ufo2ft
     SUBDIR += py-ufoLib
     SUBDIR += py-ufolint
@@ -254,9 +257,9 @@
     SUBDIR += sgifonts
     SUBDIR += sharefonts
     SUBDIR += showfont
+    SUBDIR += source-code-pro-ttf
     SUBDIR += source-sans-ttf
-    SUBDIR += sourcecodepro-ttf
-    SUBDIR += sourceserifpro-ttf
+    SUBDIR += source-serif-ttf
     SUBDIR += spleen
     SUBDIR += steps-mono
     SUBDIR += stix-fonts

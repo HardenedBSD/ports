@@ -1,5 +1,5 @@
 PORTNAME=	smoldyn
-DISTVERSION=	2.71
+DISTVERSION=	2.72
 CATEGORIES=	science
 MASTER_SITES=	https://www.smoldyn.org/
 
@@ -31,7 +31,7 @@ OPTIONS_SUB=		yes
 PYTHON_CMAKE_BOOL=	OPTION_PYTHON
 PYTHON_USES=		python
 PYTHON_CMAKE_ON=	-DPython3_EXECUTABLE=${PYTHON_CMD}
-PYTHON_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
+PYTHON_BUILD_DEPENDS=	${PY_SETUPTOOLS}
 PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}biosimulators-utils>0:biology/py-biosimulators-utils@${PY_FLAVOR}
 PYTHON_BROKEN=		pending biology/py-biosimulators-utils completion
 

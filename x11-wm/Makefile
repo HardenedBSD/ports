@@ -14,7 +14,6 @@
     SUBDIR += bspwm
     SUBDIR += bspwm-devel
     SUBDIR += cage
-    SUBDIR += cage-devel
     SUBDIR += cagebreak
     SUBDIR += chamfer
     SUBDIR += compiz
@@ -34,6 +33,7 @@
     SUBDIR += echinus
     SUBDIR += emerald
     SUBDIR += emwm
+    SUBDIR += emwm-utils
     SUBDIR += enlightenment
     SUBDIR += epplets
     SUBDIR += euclid-wm
@@ -42,6 +42,7 @@
     SUBDIR += fluxbox
     SUBDIR += fluxter
     SUBDIR += flwm
+    SUBDIR += fswm
     SUBDIR += fvwm2
     SUBDIR += fvwm3
     SUBDIR += gamescope
@@ -68,6 +69,7 @@
     SUBDIR += lxqt-panel
     SUBDIR += lxqt-session
     SUBDIR += lxsession
+    SUBDIR += magpie
     SUBDIR += marco
     SUBDIR += mcwm
     SUBDIR += metacity

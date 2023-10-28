@@ -1,6 +1,7 @@
 PORTNAME=	argc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7.0
+DISTVERSION=	1.11.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,32 +18,28 @@ USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	sigoden
 
-CARGO_CRATES=	ahash-0.7.6 \
-		aho-corasick-0.7.20 \
-		aho-corasick-1.0.2 \
-		anstyle-1.0.1 \
-		anyhow-1.0.71 \
-		assert_cmd-2.0.11 \
+CARGO_CRATES=	aho-corasick-1.1.2 \
+		anstyle-1.0.4 \
+		anyhow-1.0.75 \
+		assert_cmd-2.0.12 \
 		assert_fs-1.0.13 \
 		autocfg-1.1.0 \
-		base64-0.21.2 \
+		base64-0.21.4 \
 		bitflags-1.3.2 \
-		bstr-1.5.0 \
-		cc-1.0.79 \
+		bitflags-2.4.0 \
+		bstr-1.7.0 \
 		cfg-if-1.0.0 \
 		console-0.15.7 \
 		convert_case-0.6.0 \
-		ctrlc-3.4.0 \
 		difflib-0.4.0 \
 		dirs-5.0.1 \
 		dirs-sys-0.4.1 \
 		doc-comment-0.3.3 \
-		either-1.8.1 \
+		either-1.9.0 \
 		encode_unicode-0.3.6 \
-		equivalent-1.0.0 \
-		errno-0.3.1 \
-		errno-dragonfly-0.1.2 \
-		fastrand-1.9.0 \
+		equivalent-1.0.1 \
+		errno-0.3.5 \
+		fastrand-2.0.1 \
 		float-cmp-0.9.0 \
 		fnv-1.0.7 \
 		futures-0.3.28 \
@@ -56,100 +53,97 @@ CARGO_CRATES=	ahash-0.7.6 \
 		futures-timer-3.0.2 \
 		futures-util-0.3.28 \
 		getrandom-0.2.10 \
-		globset-0.4.10 \
+		glob-0.3.1 \
+		globset-0.4.13 \
 		globwalk-0.8.1 \
-		hashbrown-0.12.3 \
-		hashbrown-0.14.0 \
-		hermit-abi-0.3.1 \
+		hashbrown-0.14.1 \
+		hermit-abi-0.3.3 \
+		home-0.5.5 \
 		ignore-0.4.20 \
-		indexmap-2.0.0 \
-		insta-1.30.0 \
-		instant-0.1.12 \
-		io-lifetimes-1.0.11 \
-		itertools-0.10.5 \
-		itoa-1.0.7 \
+		indexmap-2.0.2 \
+		insta-1.34.0 \
+		itertools-0.11.0 \
+		itoa-1.0.9 \
 		lazy_static-1.4.0 \
-		libc-0.2.147 \
+		libc-0.2.149 \
 		linked-hash-map-0.5.6 \
-		linux-raw-sys-0.3.8 \
-		log-0.4.19 \
-		memchr-2.5.0 \
+		linux-raw-sys-0.4.10 \
+		log-0.4.20 \
+		memchr-2.6.4 \
 		minimal-lexical-0.2.1 \
-		nix-0.26.2 \
+		natord-1.0.9 \
 		nom-7.1.3 \
 		normalize-line-endings-0.3.0 \
-		num-traits-0.2.15 \
+		num-traits-0.2.17 \
 		num_cpus-1.16.0 \
 		once_cell-1.18.0 \
 		option-ext-0.2.0 \
-		pin-project-lite-0.2.10 \
+		pin-project-lite-0.2.13 \
 		pin-utils-0.1.0 \
-		predicates-3.0.3 \
+		predicates-3.0.4 \
 		predicates-core-1.0.6 \
 		predicates-tree-1.0.9 \
-		proc-macro2-1.0.63 \
-		quote-1.0.29 \
+		proc-macro2-1.0.69 \
+		quote-1.0.33 \
 		redox_syscall-0.2.16 \
 		redox_syscall-0.3.5 \
 		redox_users-0.4.3 \
-		regex-1.8.4 \
-		regex-automata-0.1.10 \
-		regex-syntax-0.7.2 \
-		rstest-0.17.0 \
-		rstest_macros-0.17.0 \
+		regex-1.10.0 \
+		regex-automata-0.4.1 \
+		regex-syntax-0.8.1 \
+		relative-path-1.9.0 \
+		rstest-0.18.2 \
+		rstest_macros-0.18.2 \
 		rustc_version-0.4.0 \
-		rustix-0.37.22 \
-		ryu-1.0.13 \
+		rustix-0.38.18 \
+		ryu-1.0.15 \
 		same-file-1.0.6 \
-		semver-1.0.17 \
-		serde-1.0.165 \
-		serde_derive-1.0.165 \
-		serde_json-1.0.99 \
+		semver-1.0.20 \
+		serde-1.0.188 \
+		serde_derive-1.0.188 \
+		serde_json-1.0.107 \
 		shell-words-1.1.0 \
-		similar-2.2.1 \
-		slab-0.4.8 \
-		smawk-0.3.1 \
-		static_assertions-1.1.0 \
-		syn-1.0.109 \
-		syn-2.0.23 \
-		tempfile-3.6.0 \
+		similar-2.3.0 \
+		slab-0.4.9 \
+		smawk-0.3.2 \
+		syn-2.0.38 \
+		tempfile-3.8.0 \
 		termtree-0.4.1 \
 		textwrap-0.16.0 \
-		thiserror-1.0.40 \
-		thiserror-impl-1.0.40 \
+		thiserror-1.0.49 \
+		thiserror-impl-1.0.49 \
 		thread_local-1.1.7 \
 		threadpool-1.8.1 \
-		unicode-ident-1.0.9 \
-		unicode-linebreak-0.1.4 \
+		unicode-ident-1.0.12 \
+		unicode-linebreak-0.1.5 \
 		unicode-segmentation-1.10.1 \
-		unicode-width-0.1.10 \
-		version_check-0.9.4 \
+		unicode-width-0.1.11 \
 		wait-timeout-0.2.0 \
-		walkdir-2.3.3 \
+		walkdir-2.4.0 \
 		wasi-0.11.0+wasi-snapshot-preview1 \
-		which-4.4.0 \
+		which-4.4.2 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
-		winapi-util-0.1.5 \
+		winapi-util-0.1.6 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
 		windows-sys-0.45.0 \
 		windows-sys-0.48.0 \
 		windows-targets-0.42.2 \
-		windows-targets-0.48.1 \
+		windows-targets-0.48.5 \
 		windows_aarch64_gnullvm-0.42.2 \
-		windows_aarch64_gnullvm-0.48.0 \
+		windows_aarch64_gnullvm-0.48.5 \
 		windows_aarch64_msvc-0.42.2 \
-		windows_aarch64_msvc-0.48.0 \
+		windows_aarch64_msvc-0.48.5 \
 		windows_i686_gnu-0.42.2 \
-		windows_i686_gnu-0.48.0 \
+		windows_i686_gnu-0.48.5 \
 		windows_i686_msvc-0.42.2 \
-		windows_i686_msvc-0.48.0 \
+		windows_i686_msvc-0.48.5 \
 		windows_x86_64_gnu-0.42.2 \
-		windows_x86_64_gnu-0.48.0 \
+		windows_x86_64_gnu-0.48.5 \
 		windows_x86_64_gnullvm-0.42.2 \
-		windows_x86_64_gnullvm-0.48.0 \
+		windows_x86_64_gnullvm-0.48.5 \
 		windows_x86_64_msvc-0.42.2 \
-		windows_x86_64_msvc-0.48.0 \
+		windows_x86_64_msvc-0.48.5 \
 		yaml-rust-0.4.5
 
 PLIST_FILES=	bin/${PORTNAME}

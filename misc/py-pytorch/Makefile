@@ -1,7 +1,6 @@
 PORTNAME=	pytorch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.0
-PORTREVISION=	2
+DISTVERSION=	2.1.0
 CATEGORIES=	misc # machine-learning
 MASTER_SITES=	https://github.com/pytorch/pytorch/releases/download/v${DISTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -38,7 +37,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}filelock>0:sysutils/py-filelock@${PY_FLAVOR}
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>0:devel/py-typing-extensions@${PY_FLAVOR}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dill>0:devel/py-dill@${PY_FLAVOR} # optional dependency
 
-USES=		compiler:c++14-lang localbase:ldflags python
+USES=		compiler:c++17-lang localbase:ldflags python
 USE_PYTHON=	distutils autoplist
 
 MAKE_ENV=	USE_NINJA=no # ninja breaks for some reason
@@ -51,11 +50,16 @@ BINARY_ALIAS=	make=${GMAKE}
 
 POST_PLIST=	fix-plist
 
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+USES+=	llvm:max=15
+.endif
+
 post-install: # strip binaries
 	@${STRIP_CMD} \
 		${STAGEDIR}${PYTHON_SITELIBDIR}/torch/bin/torch_shm_manager \
 		${STAGEDIR}${PYTHON_SITELIBDIR}/torch/_C${PYTHON_EXT_SUFFIX}.so \
-		${STAGEDIR}${PYTHON_SITELIBDIR}/torch/_C_flatbuffer${PYTHON_EXT_SUFFIX}.so \
 		${STAGEDIR}${PYTHON_SITELIBDIR}/functorch/_C${PYTHON_EXT_SUFFIX}.so \
 		${STAGEDIR}${PYTHON_SITELIBDIR}/torch/lib/lib*.so
 

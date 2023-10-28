@@ -1,7 +1,7 @@
 PORTNAME=	cmake
 # Remember to update devel/cmake-doc and devel/cmake-gui as well.
 DISTVERSION=	${_CMAKE_VERSION}
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-core
 
@@ -38,6 +38,10 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--no-system-nghttp2 \
 		--parallel=${MAKE_JOBS_NUMBER} \
 		--init="${WRKSRC}/InitialCache.cmake"
+
+# Quick fix to enable build with non-base SSL (PR: 274512)
+CFLAGS+=	-I${OPENSSLINC}
+LDFLAGS+=	-L${OPENSSLLIB}
 
 OPTIONS_DEFINE=	DOCS CPACK
 OPTIONS_DEFAULT=	CPACK

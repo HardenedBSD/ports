@@ -1,5 +1,6 @@
 PORTNAME=	libglvnd
 DISTVERSION=	1.6.0
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	x11@FreeBSD.org
@@ -27,14 +28,12 @@ X11_MESON_ENABLED=	x11 glx
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64le
-BUILD_DEPENDS=	as:devel/binutils
-CFLAGS+=	-no-integrated-as
-.elif ${ARCH} == powerpc64
-BUILD_DEPENDS=	as:devel/binutils
-CFLAGS+=	-no-integrated-as -O0
-.elif ${ARCH} == powerpc || ${ARCH} == riscv64
+.if ${ARCH} == powerpc || ${ARCH} == riscv64
 MESON_ARGS+=	-Dasm=disabled
+.endif
+
+.if ${ARCH} == powerpc
+MESON_ARGS+=	-Dtls=false
 .endif
 
 # Lots of software expects gl.pc even when it can build with EGL only

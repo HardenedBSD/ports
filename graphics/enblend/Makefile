@@ -1,6 +1,6 @@
 PORTNAME=	enblend
 PORTVERSION=	4.2
-PORTREVISION=	21
+PORTREVISION=	23
 CATEGORIES=	graphics
 MASTER_SITES=	SF/enblend/enblend-enfuse/enblend-enfuse-${PORTVERSION}
 DISTNAME=	enblend-enfuse-${PORTVERSION}
@@ -22,7 +22,7 @@ LIB_DEPENDS=	liblcms2.so:graphics/lcms2 \
 		libpng.so:graphics/png
 
 USES=		compiler:features gmake jpeg localbase pkgconfig
-
+USE_CXXSTD=	c++14
 GNU_CONFIGURE=	yes
 
 LLD_UNSAFE=	yes

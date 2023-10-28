@@ -1,6 +1,6 @@
---- third_party/angle/src/libANGLE/Display.cpp.orig	2023-05-31 08:12:17 UTC
+--- third_party/angle/src/libANGLE/Display.cpp.orig	2023-10-11 18:22:24 UTC
 +++ third_party/angle/src/libANGLE/Display.cpp
-@@ -57,7 +57,7 @@
+@@ -60,7 +60,7 @@
  #        include "libANGLE/renderer/gl/cgl/DisplayCGL.h"
  #    elif ANGLE_ENABLE_EAGL
  #        include "libANGLE/renderer/gl/eagl/DisplayEAGL.h"
@@ -9,7 +9,7 @@
  #        include "libANGLE/renderer/gl/egl/DisplayEGL.h"
  #        if defined(ANGLE_USE_X11)
  #            include "libANGLE/renderer/gl/glx/DisplayGLX.h"
-@@ -352,7 +352,7 @@ rx::DisplayImpl *CreateDisplayFromAttribs(EGLAttrib di
+@@ -411,7 +411,7 @@ rx::DisplayImpl *CreateDisplayFromAttribs(EGLAttrib di
              impl = new rx::DisplayEAGL(state);
              break;
  
@@ -18,16 +18,16 @@
  #        if defined(ANGLE_USE_GBM)
              if (platformType == 0)
              {
-@@ -393,7 +393,7 @@ rx::DisplayImpl *CreateDisplayFromAttribs(EGLAttrib di
+@@ -457,7 +457,7 @@ rx::DisplayImpl *CreateDisplayFromAttribs(EGLAttrib di
  #if defined(ANGLE_ENABLE_OPENGL)
  #    if defined(ANGLE_PLATFORM_WINDOWS)
              impl = new rx::DisplayWGL(state);
 -#    elif defined(ANGLE_PLATFORM_LINUX)
 +#    elif defined(ANGLE_PLATFORM_LINUX) || defined(ANGLE_PLATFORM_BSD)
  #        if defined(ANGLE_USE_GBM)
-             if (platformType == 0 ||
-                 platformType == EGL_PLATFORM_VULKAN_DISPLAY_MODE_HEADLESS_ANGLE)
-@@ -442,7 +442,7 @@ rx::DisplayImpl *CreateDisplayFromAttribs(EGLAttrib di
+             if (platformType == 0)
+             {
+@@ -508,7 +508,7 @@ rx::DisplayImpl *CreateDisplayFromAttribs(EGLAttrib di
                  impl = rx::CreateVulkanWin32Display(state);
              }
              break;
@@ -36,7 +36,7 @@
  #        if defined(ANGLE_USE_GBM)
              if (platformType == EGL_PLATFORM_GBM_KHR && rx::IsVulkanGbmDisplayAvailable())
              {
-@@ -2050,7 +2050,7 @@ static ClientExtensions GenerateClientExtensions()
+@@ -2148,7 +2148,7 @@ static ClientExtensions GenerateClientExtensions()
      extensions.x11Visual = true;
  #endif
  

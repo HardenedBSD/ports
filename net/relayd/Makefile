@@ -1,5 +1,5 @@
 PORTNAME=	relayd
-DISTVERSION=	7.3.2023.05.09-p2
+DISTVERSION=	7.3.2023.05.09-p5
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/KlaraSystems/freebsd-relayd/releases/download/${DISTVERSION}/
 
@@ -9,12 +9,16 @@ WWW=		https://github.com/KlaraSystems/freebsd-relayd
 
 LICENSE=	ISCL
 
-USE_HARDENING=  safestack
+LIB_DEPENDS=	libpfctl.so:net/libpfctl
 
-USES=		ssl uidfix
+USES=		localbase:ldflags ssl uidfix
 USE_RC_SUBR=	relayd
 
+USE_HARDENING=  safestack
+
 HAS_CONFIGURE=	yes
+
+LDFLAGS+=	-lpfctl
 
 USERS=		_relayd
 GROUPS=		_relayd

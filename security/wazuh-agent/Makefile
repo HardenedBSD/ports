@@ -1,8 +1,8 @@
 PORTNAME=	wazuh
-DISTVERSION=	4.4.4
+DISTVERSION=	4.5.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
-MASTER_SITES=	https://packages.wazuh.com/deps/20/libraries/sources/:wazuh_sources
+MASTER_SITES=	https://packages.wazuh.com/deps/22/libraries/sources/:wazuh_sources
 PKGNAMESUFFIX=	-agent
 DISTFILES=	${EXTERNAL_DISTFILES}
 DIST_SUBDIR=	${PORTNAME}-${DISTVERSION}
@@ -44,7 +44,8 @@ EXTERNAL_DISTFILES=	cJSON.tar.gz:wazuh_sources \
 			libarchive.tar.gz:wazuh_sources \
 			popt.tar.gz:wazuh_sources
 
-OPTIONS_DEFINE=	INOTIFY PRELUDE ZEROMQ
+OPTIONS_DEFAULT=	INOTIFY
+OPTIONS_DEFINE=		INOTIFY PRELUDE ZEROMQ
 
 INOTIFY_LIB_DEPENDS=	libinotify.so:devel/libinotify
 PRELUDE_LIB_DEPENDS=	libprelude.so:security/libprelude

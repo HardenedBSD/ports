@@ -1,5 +1,5 @@
 PORTNAME=	openssl
-DISTVERSION=	3.1.1
+PORTVERSION=	3.1.4
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.openssl.org/source/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/openssl/source/
@@ -12,7 +12,9 @@ WWW=		https://www.openssl.org/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl30 openssl-quictls
+#EXPIRATION_DATE=	2025-03-14
+
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl32 openssl-quictls
 
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	config
@@ -40,7 +42,7 @@ OPTIONS_GROUP_PROTOCOLS=NEXTPROTONEG SCTP SSL3 TLS1 TLS1_1 TLS1_2
 OPTIONS_DEFINE=	ASYNC CRYPTODEV CT KTLS MAN3 RFC3779 SHARED ZLIB
 
 OPTIONS_DEFAULT=ASM ASYNC CT DES EC FIPS GOST KTLS MAN3 MD4 NEXTPROTONEG \
-		RC2 RC4 RMD160 SCTP SHARED SSE2 THREADS TLS1 TLS1_1 TLS1_2
+		RFC3779	RC2 RC4 RMD160 SCTP SHARED SSE2 THREADS TLS1 TLS1_1 TLS1_2
 
 OPTIONS_EXCLUDE=${${OSVERSION} < 1300042:?KTLS:} \
 		${${OSVERSION} > 1300000:?CRYPTODEV:}
@@ -63,7 +65,7 @@ CRYPTODEV_DESC=	/dev/crypto support
 CT_DESC=	Certificate Transparency Support
 DES_DESC=	(Triple) Data Encryption Standard
 EC_DESC=	Optimize NIST elliptic curves
-FIPS_DESC=	Build FIPS provider (Note: NOT yet FIPS validated)
+FIPS_DESC=	Build FIPS provider
 GOST_DESC=	GOST (Russian standard)
 HASHES_DESC=	Hash Function Support
 I386_DESC=	i386 (instead of i486+)

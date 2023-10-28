@@ -9,6 +9,8 @@ WWW=		https://github.com/felt/tippecanoe
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
+BROKEN_FreeBSD_14=	fails to compile: static_assert failed due to requirement
+
 LIB_DEPENDS=	libsqlite3.so:databases/sqlite3
 BUILD_DEPENDS=	bash:shells/bash
 
@@ -25,7 +27,7 @@ PLIST_FILES=	bin/tile-join bin/tippecanoe bin/tippecanoe-decode \
 
 # Suppress a clang-16 error on 32-bit arch:
 #  non-constant-expression cannot be narrowed from type 'uint64_t'
-.if ${ARCH} == i386
+.if ${ARCH} == i386 || ${ARCH:Marmv?} != ""
 CXXFLAGS+=	-Wno-narrowing
 .endif
 

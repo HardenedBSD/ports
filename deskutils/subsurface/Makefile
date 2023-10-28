@@ -1,7 +1,7 @@
 PORTNAME=	subsurface
 DISTVERSIONPREFIX=v
 DISTVERSION=	5.0.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 
 MAINTAINER=	romain@FreeBSD.org
@@ -10,6 +10,9 @@ WWW=		https://subsurface-divelog.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=		Depends on deprecated www/qt5-webkit
+EXPIRATION_DATE=	2023-11-26
 
 LIB_DEPENDS=	libdivecomputer.so:comms/libdc \
 		libzip.so:archivers/libzip \

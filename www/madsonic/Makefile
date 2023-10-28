@@ -9,6 +9,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Madsonic streaming media server
 WWW=		https://www.madsonic.org
 
+DEPRECATED=	Depends on www/jetty8 which has been listed as end of life since 2015
+EXPIRATION_DATE=2023-11-30
+
 LICENSE=	GPLv3
 
 RUN_DEPENDS+=	${JAVALIBDIR}/servlet-api.jar:www/servlet-api \
@@ -44,7 +47,6 @@ FLAC_DESC=			Depend on FLAC for transcoding
 JETTY8_DESC=			Use Jetty 8.x
 LAME_DESC=			Depend on LAME for MP3 transcoding
 MPC_DESC=			Depend on mpcdec for MPC transcoding
-TOMCAT85_DESC=			Use Tomcat 8.5.x
 TRANSCODING_DESC=		Transcoding support
 VORBIS_DESC=			Depend on oggenc/oggdec for Vorbis transcoding
 XMP_DESC=			Depend on XMP for module file transcoding

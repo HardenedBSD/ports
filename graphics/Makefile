@@ -80,7 +80,6 @@
     SUBDIR += blend2d
     SUBDIR += blender
     SUBDIR += blender-doc
-    SUBDIR += blender-lts29
     SUBDIR += bmeps
     SUBDIR += bmp2html
     SUBDIR += bonzomatic
@@ -426,6 +425,7 @@
     SUBDIR += kqtquickcharts
     SUBDIR += kquickimageeditor
     SUBDIR += krita
+    SUBDIR += krita-gmic-plugin
     SUBDIR += ksanecore
     SUBDIR += kseexpr
     SUBDIR += ksnip
@@ -521,6 +521,7 @@
     SUBDIR += libwmf
     SUBDIR += libwmf-nox11
     SUBDIR += libwpg03
+    SUBDIR += libxisf
     SUBDIR += libyuv
     SUBDIR += libzmf
     SUBDIR += lightzone
@@ -592,6 +593,9 @@
     SUBDIR += npretty
     SUBDIR += nsxiv
     SUBDIR += nurbs++
+    SUBDIR += nvidia-drm-510-kmod
+    SUBDIR += nvidia-drm-515-kmod
+    SUBDIR += nvidia-drm-kmod
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-cairo
     SUBDIR += ocaml-images
@@ -609,6 +613,7 @@
     SUBDIR += opencv
     SUBDIR += opendx
     SUBDIR += openexr
+    SUBDIR += openexr-website-docs
     SUBDIR += openfx-arena
     SUBDIR += openfx-misc
     SUBDIR += opengl-man
@@ -762,7 +767,6 @@
     SUBDIR += pear-Image_GraphViz
     SUBDIR += pear-Image_Transform
     SUBDIR += pecl-imagick
-    SUBDIR += pecl-imagick-im7
     SUBDIR += pecl-qrencode
     SUBDIR += pecl-vips
     SUBDIR += pencil2d
@@ -823,7 +827,6 @@
     SUBDIR += poppler-utils
     SUBDIR += potrace
     SUBDIR += povray-meta
-    SUBDIR += povray36
     SUBDIR += povray37
     SUBDIR += povray38
     SUBDIR += ppmcaption
@@ -886,10 +889,12 @@
     SUBDIR += py-h3
     SUBDIR += py-haishoku
     SUBDIR += py-hiplot
+    SUBDIR += py-hsluv
     SUBDIR += py-imageio
     SUBDIR += py-imageio-ffmpeg
     SUBDIR += py-imagesize
     SUBDIR += py-img2pdf
+    SUBDIR += py-imutils
     SUBDIR += py-leather
     SUBDIR += py-lerc
     SUBDIR += py-mapclassify
@@ -913,6 +918,7 @@
     SUBDIR += py-photocollage
     SUBDIR += py-piexif
     SUBDIR += py-pillow
+    SUBDIR += py-pillow-heif
     SUBDIR += py-pivy
     SUBDIR += py-plotly
     SUBDIR += py-png
@@ -949,6 +955,7 @@
     SUBDIR += py-pyx
     SUBDIR += py-qpageview
     SUBDIR += py-qrencode
+    SUBDIR += py-qt6-3d
     SUBDIR += py-railroad-diagrams
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
@@ -994,6 +1001,7 @@
     SUBDIR += qt6-3d
     SUBDIR += qt6-imageformats
     SUBDIR += qt6-lottie
+    SUBDIR += qt6-quickeffectmaker
     SUBDIR += qt6-svg
     SUBDIR += qt6-wayland
     SUBDIR += qtawesome
@@ -1131,7 +1139,6 @@
     SUBDIR += tgif
     SUBDIR += tif22pnm
     SUBDIR += tiff
-    SUBDIR += tiffgt
     SUBDIR += tifmerge
     SUBDIR += tikzit
     SUBDIR += tiled
@@ -1157,6 +1164,7 @@
     SUBDIR += vapoursynth-waifu2x-w2xc
     SUBDIR += variety
     SUBDIR += vcg
+    SUBDIR += vhs
     SUBDIR += viewnior
     SUBDIR += vigra
     SUBDIR += vips

@@ -14,8 +14,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_HARDENING=	safestack
 
-ONLY_FOR_ARCHS=	aarch64 amd64 armv7 i386 powerpc powerpc64 powerpc64le riscv64
-
 USES=		dos2unix gmake iconv:wchar_t localbase:ldflags ncurses \
 		readline ssl
 USE_RC_SUBR=	softether_bridge softether_client \
@@ -43,6 +41,10 @@ WRKSRC=		${WRKDIR}/v${DISTVERSION}
 ALL_TARGET=	build
 
 .include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=incompatible-function-pointer-types
+.endif
 
 post-patch:
 	# SoftEther scatters logs, config files and PID files in PREFIX/libexec

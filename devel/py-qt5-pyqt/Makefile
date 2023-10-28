@@ -1,6 +1,5 @@
 PORTNAME=	pyqt
 PORTVERSION=	${PYQT_VERSION}
-PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITES_PYQT}
 PKGNAMEPREFIX=	${PYQT_PY_RELNAME}-
@@ -12,6 +11,9 @@ WWW=		https://riverbankcomputing.com/software/pyqt
 
 PYQT_DIST=	yes
 
+DEPRECATED=		Depends on deprecated www/qt5-webkit
+EXPIRATION_DATE=	2023-11-26
+
 LIB_DEPENDS=	libqscintilla2_qt5.so:devel/qscintilla2-qt5 \
 		libdbus-1.so:devel/dbus
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dbus>1:devel/py-dbus@${PY_FLAVOR} \
@@ -19,7 +21,8 @@ BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dbus>1:devel/py-dbus@${PY_FLAVOR} \
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dbus>1:devel/py-dbus@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ply>0:devel/py-ply@${PY_FLAVOR}
 
-USES=		pkgconfig python pyqt:5 qt:5
+USES=		gl pkgconfig python pyqt:5 qt:5
+USE_GL=		gl
 USE_PYTHON=	concurrent flavors py3kplist
 USE_PYQT=	qtbuilder sip pysip
 USE_QT=		connectivity core dbus declarative designer gui help imageformats location \

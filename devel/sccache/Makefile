@@ -1,7 +1,7 @@
 PORTNAME=	sccache
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.3
-PORTREVISION=	0
+DISTVERSION=	0.5.4
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	devel
 
@@ -17,24 +17,33 @@ ONLY_FOR_ARCHS_REASON=	ring crate not ported to other architectures
 
 USES=		cargo ssl
 
-LIB_DEPENDS+=libzstd.so:archivers/zstd
+LIB_DEPENDS+=	libzstd.so:archivers/zstd
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mozilla
 
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=		DOCS
 OPTIONS_DEFAULT=	DOCS
 
-PLIST_FILES=	bin/sccache
-PORTDOCS=	README.md
+PLIST_FILES=	bin/sccache \
+		bin/sccache-dist
+PORTDOCS=	README.md docs/Architecture.md docs/Azure.md docs/Caching.md \
+		docs/Configuration.md docs/Distributed.md \
+		docs/DistributedFreeBSD.md docs/DistributedQuickstart.md \
+		docs/GHA.md docs/Gcs.md docs/Jenkins.md docs/Local.md \
+		docs/Memcached.md docs/Redis.md docs/Releasing.md \
+		docs/ResponseFiles.md docs/Rust.md docs/S3.md docs/Webdav.md
+SUB_FILES=	pkg-message
 
-CARGO_FEATURES=	all
+CARGO_FEATURES=	dist-client,dist-server
 CARGO_CRATES=	addr2line-0.19.0 \
 		adler-1.0.2 \
 		aho-corasick-0.7.20 \
+		android-tzdata-0.1.1 \
 		android_system_properties-0.1.5 \
 		anstyle-0.3.5 \
-		anyhow-1.0.70 \
+		anstyle-1.0.0 \
+		anyhow-1.0.71 \
 		ar-0.9.0 \
 		arc-swap-1.5.1 \
 		arrayref-0.3.6 \
@@ -45,7 +54,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		async-compat-0.2.1 \
 		async-trait-0.1.68 \
 		autocfg-1.1.0 \
-		backon-0.4.0 \
+		backon-0.4.1 \
 		backtrace-0.3.67 \
 		base64-0.13.1 \
 		base64-0.21.0 \
@@ -64,7 +73,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		cc-1.0.79 \
 		cfg-if-0.1.10 \
 		cfg-if-1.0.0 \
-		chrono-0.4.24 \
+		chrono-0.4.26 \
 		chunked_transfer-1.4.0 \
 		clap-4.1.11 \
 		clap_derive-4.1.9 \
@@ -85,7 +94,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		daemonize-0.5.0 \
 		dashmap-5.4.0 \
 		data-encoding-2.3.3 \
-		der-0.6.1 \
+		der-0.7.6 \
 		difflib-0.4.0 \
 		digest-0.10.6 \
 		directories-5.0.0 \
@@ -105,10 +114,11 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		enum-as-inner-0.5.1 \
 		env_logger-0.10.0 \
 		errno-0.2.8 \
+		errno-0.3.1 \
 		errno-dragonfly-0.1.2 \
 		error-chain-0.12.4 \
-		fastrand-1.8.0 \
-		filetime-0.2.20 \
+		fastrand-1.9.0 \
+		filetime-0.2.21 \
 		flagset-0.4.3 \
 		flate2-1.0.26 \
 		float-cmp-0.9.0 \
@@ -147,7 +157,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		httpdate-1.0.2 \
 		humantime-2.1.0 \
 		hyper-0.14.25 \
-		hyper-rustls-0.23.1 \
+		hyper-rustls-0.24.0 \
 		hyper-tls-0.5.0 \
 		iana-time-zone-0.1.47 \
 		idna-0.2.3 \
@@ -158,7 +168,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		io-lifetimes-1.0.3 \
 		ipconfig-0.3.1 \
 		ipnet-2.5.1 \
-		is-terminal-0.4.5 \
+		is-terminal-0.4.7 \
 		itertools-0.10.5 \
 		itoa-1.0.4 \
 		jobserver-0.1.26 \
@@ -171,8 +181,9 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		linked-hash-map-0.5.6 \
 		linux-raw-sys-0.0.46 \
 		linux-raw-sys-0.1.3 \
+		linux-raw-sys-0.3.8 \
 		lock_api-0.4.9 \
-		log-0.4.17 \
+		log-0.4.19 \
 		lru-cache-0.1.2 \
 		match_cfg-0.1.0 \
 		matches-0.1.10 \
@@ -201,60 +212,62 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		number_prefix-0.4.0 \
 		object-0.30.3 \
 		once_cell-1.17.1 \
-		opendal-0.34.0 \
-		openssl-0.10.49 \
+		opendal-0.39.0 \
+		openssl-0.10.55 \
 		openssl-macros-0.1.0 \
 		openssl-probe-0.1.5 \
-		openssl-sys-0.9.84 \
+		openssl-sys-0.9.90 \
 		ordered-multimap-0.6.0 \
 		os_str_bytes-6.4.1 \
 		parking_lot-0.12.1 \
 		parking_lot_core-0.9.4 \
 		pem-1.1.0 \
-		pem-rfc7468-0.6.0 \
+		pem-rfc7468-0.7.0 \
 		percent-encoding-2.2.0 \
 		pin-project-1.0.12 \
 		pin-project-internal-1.0.12 \
 		pin-project-lite-0.2.9 \
 		pin-utils-0.1.0 \
-		pkcs1-0.4.1 \
-		pkcs8-0.9.0 \
+		pkcs1-0.7.5 \
+		pkcs8-0.10.2 \
 		pkg-config-0.3.26 \
 		ppv-lite86-0.2.17 \
-		predicates-3.0.2 \
+		predicates-3.0.3 \
 		predicates-core-1.0.6 \
 		predicates-tree-1.0.7 \
 		proc-macro-error-1.0.4 \
 		proc-macro-error-attr-1.0.4 \
 		proc-macro-hack-0.5.20+deprecated \
-		proc-macro2-1.0.56 \
+		proc-macro2-1.0.63 \
 		quick-error-1.2.3 \
-		quick-xml-0.27.1 \
-		quick-xml-0.28.1 \
+		quick-xml-0.29.0 \
 		quote-1.0.26 \
 		rand-0.8.5 \
 		rand_chacha-0.3.1 \
 		rand_core-0.6.4 \
-		redis-0.22.1 \
+		redis-0.23.3 \
 		redox_syscall-0.2.16 \
 		redox_users-0.4.3 \
 		regex-1.7.3 \
 		regex-automata-0.1.10 \
 		regex-syntax-0.6.29 \
-		reqsign-0.10.1 \
-		reqwest-0.11.16 \
+		reqsign-0.14.1 \
+		reqwest-0.11.18 \
 		resolv-conf-0.7.0 \
 		retry-2.0.0 \
 		ring-0.16.20 \
 		rouille-3.6.1 \
-		rsa-0.8.2 \
+		rsa-0.9.2 \
 		rust-ini-0.19.0 \
 		rustc-demangle-0.1.23 \
 		rustix-0.35.13 \
 		rustix-0.36.4 \
+		rustix-0.37.7 \
 		rustls-0.20.7 \
+		rustls-0.21.7 \
 		rustls-native-certs-0.6.2 \
 		rustls-pemfile-1.0.1 \
+		rustls-webpki-0.101.4 \
 		ryu-1.0.11 \
 		safemem-0.3.3 \
 		same-file-1.0.6 \
@@ -263,7 +276,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		sct-0.7.0 \
 		security-framework-2.7.0 \
 		security-framework-sys-2.6.1 \
-		semver-1.0.16 \
+		semver-1.0.17 \
 		serde-1.0.159 \
 		serde_derive-1.0.159 \
 		serde_json-1.0.94 \
@@ -283,7 +296,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		socket2-0.4.9 \
 		spin-0.5.2 \
 		spin-0.9.4 \
-		spki-0.6.0 \
+		spki-0.7.2 \
 		static_assertions-1.1.0 \
 		stringmatch-0.3.3 \
 		strip-ansi-escapes-0.1.1 \
@@ -311,10 +324,12 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		tiny_http-0.12.0 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.0 \
-		tokio-1.28.0 \
+		tokio-1.28.2 \
 		tokio-macros-2.1.0 \
 		tokio-native-tls-0.3.0 \
+		tokio-retry-0.3.0 \
 		tokio-rustls-0.23.4 \
+		tokio-rustls-0.24.0 \
 		tokio-serde-0.8.0 \
 		tokio-util-0.7.7 \
 		toml-0.7.3 \
@@ -339,7 +354,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		url-2.3.1 \
 		urlparse-0.7.3 \
 		utf8parse-0.2.0 \
-		uuid-1.3.1 \
+		uuid-1.3.3 \
 		vcpkg-0.2.15 \
 		version-compare-0.1.1 \
 		version_check-0.9.4 \
@@ -401,9 +416,12 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		zstd-sys-2.0.7+zstd.1.5.4
 
 do-install-DOCS-on:
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/docs
+.for f in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}/${f}
+.endfor
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/sccache
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/sccache-dist
 .include <bsd.port.mk>

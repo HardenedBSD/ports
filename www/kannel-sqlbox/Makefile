@@ -3,7 +3,7 @@ PORTVERSION=	1.0.1
 PORTREVISION=	9
 CATEGORIES=	www
 
-MAINTAINER=	dbaio@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 # Co-maintainer: Alberto Mijares <amijaresp@gmail.com> (PR/173889)
 COMMENT=	Add-on module for www/kannel (svn rev.55)
 WWW=		https://redmine.kannel.org/projects/kannel-sq-lbox
@@ -12,6 +12,9 @@ LICENSE=	The_Kannel_Software_License
 LICENSE_NAME=	The Kannel Software License, Version 1.0
 LICENSE_FILE=	${WRKSRC}/KannelLICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
+DEPRECATED=	Depends on EOL MySQL 5.7 (www/kannel)
+EXPIRATION_DATE=	2023-11-30
 
 BUILD_DEPENDS=	${LOCALBASE}/include/kannel/gw-config.h:www/kannel
 RUN_DEPENDS=	${LOCALBASE}/sbin/bearerbox:www/kannel

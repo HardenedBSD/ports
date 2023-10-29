@@ -73,6 +73,8 @@
     SUBDIR += ficl
     SUBDIR += fpc
     SUBDIR += fpc-base
+    SUBDIR += fpc-devel
+    SUBDIR += fpc-devel-source
     SUBDIR += fpc-docs
     SUBDIR += fpc-lua
     SUBDIR += fpc-pastojs

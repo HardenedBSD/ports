@@ -493,6 +493,7 @@
     SUBDIR += npm-node20
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
+    SUBDIR += offpunk
     SUBDIR += oneshot
     SUBDIR += onionbalance
     SUBDIR += onionshare

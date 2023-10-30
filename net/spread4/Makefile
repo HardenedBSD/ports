@@ -8,13 +8,10 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Spread Group Communication System, a network toolkit
 WWW=		http://www.spread.org/
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-=======
 DEPRECATED=	BROKEN on all supported versions after the EOL of 12
 EXPIRATION_DATE=	2023-12-31
->>>>>>> internal/freebsd/main
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: yyin
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: yyin
 

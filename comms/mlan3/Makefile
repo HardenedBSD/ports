@@ -11,8 +11,13 @@ WWW=		http://www.maximintegrated.com/en/products/comms/ibutton.html
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/license.txt
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
+=======
+DEPRECATED=	BROKEN on all supported versions for more than 2 years after the EOL of 12
+EXPIRATION_DATE=	2023-12-31
+>>>>>>> internal/freebsd/main
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: VERBOSE
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: VERBOSE
 

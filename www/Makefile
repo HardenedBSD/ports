@@ -247,7 +247,7 @@
     SUBDIR += hedgedoc
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor
-    SUBDIR += homer
+    SUBDIR += homer-web
     SUBDIR += hotcrp
     SUBDIR += hs-DAV
     SUBDIR += hs-gitit
@@ -483,6 +483,7 @@
     SUBDIR += node16
     SUBDIR += node18
     SUBDIR += node20
+    SUBDIR += node21
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -1959,6 +1960,7 @@
     SUBDIR += rubygem-browser
     SUBDIR += rubygem-cal-heatmap-rails
     SUBDIR += rubygem-carrierwave
+    SUBDIR += rubygem-carrierwave1
     SUBDIR += rubygem-cgi
     SUBDIR += rubygem-cgi_multipart_eof_fix
     SUBDIR += rubygem-chosen-rails

@@ -1909,7 +1909,6 @@
     SUBDIR += reddsaver
     SUBDIR += redmine50
     SUBDIR += rejik
-    SUBDIR += remark42
     SUBDIR += reportmagic
     SUBDIR += repos-style
     SUBDIR += reproxy
@@ -2316,7 +2315,6 @@
     SUBDIR += serf
     SUBDIR += servlet-api
     SUBDIR += sfeed
-    SUBDIR += sfnt2woff
     SUBDIR += shellinabox
     SUBDIR += shiori
     SUBDIR += silicon

@@ -493,6 +493,7 @@
     SUBDIR += npm-node16
     SUBDIR += npm-node18
     SUBDIR += npm-node20
+    SUBDIR += npm-node21
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += offpunk
@@ -2520,6 +2521,7 @@
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18
     SUBDIR += yarn-node20
+    SUBDIR += yarn-node21
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

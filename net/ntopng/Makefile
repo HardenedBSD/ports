@@ -24,13 +24,9 @@ LIB_DEPENDS=	librrd.so:databases/rrdtool \
 		libhiredis.so:databases/hiredis
 BUILD_DEPENDS=	bash:shells/bash
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		autoreconf compiler:c++11-lang cpe gmake ldap libtool localbase \
-=======
 USES=		autoreconf compiler:c++11-lang cpe gmake libtool localbase \
->>>>>>> internal/freebsd/main
 		lua:54 mysql pathfix pkgconfig shebangfix sqlite ssl
 
 SUB_FILES=	ntopng-geoip2update.sh pkg-deinstall pkg-message

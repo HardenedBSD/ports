@@ -8,11 +8,9 @@ WWW=		https://github.com/grembo/pftop/
 
 LICENSE=	BSD2CLAUSE
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
-=======
+
 LIB_DEPENDS=	libpfctl.so:net/libpfctl
->>>>>>> internal/freebsd/main
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	grembo

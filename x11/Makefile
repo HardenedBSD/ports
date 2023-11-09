@@ -618,6 +618,7 @@
     SUBDIR += xvmcinfo
     SUBDIR += xvt
     SUBDIR += xwatchwin
+    SUBDIR += xwaylandvideobridge
     SUBDIR += xwd
     SUBDIR += xwininfo
     SUBDIR += xwinwrap

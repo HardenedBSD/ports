@@ -1,5 +1,5 @@
 PORTNAME=	pftop
-PORTVERSION=	0.9
+PORTVERSION=	0.10
 CATEGORIES=	sysutils net
 
 MAINTAINER=	grembo@FreeBSD.org
@@ -12,11 +12,9 @@ USE_HARDENING=	safestack
 
 LIB_DEPENDS=	libpfctl.so:net/libpfctl
 
+USES=		localbase
 USE_GITHUB=	yes
 GH_ACCOUNT=	grembo
-
-CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lpfctl
 
 OPTIONS_DEFINE=	ALTQ
 
@@ -37,11 +35,5 @@ MAKE_ENV+=	__MAKE_CONF=/dev/null
 
 PLIST_FILES=	man/man8/pftop.8.gz \
 		sbin/pftop
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pftop \
-		${STAGEDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/pftop.8 \
-		${STAGEDIR}${MANPREFIX}/man/man8
 
 .include <bsd.port.mk>

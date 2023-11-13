@@ -1,6 +1,6 @@
 PORTNAME=	opera
 PORTVERSION=	${OPERA_VER}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www linux
 MASTER_SITES=	ftp://ftp.opera.com/pub/opera/linux/${OPERA_VER:S/.//}/ \
 		ftp://ftp.sunet.se/pub/www/clients/Opera/linux/${OPERA_VER:S/.//}/ \
@@ -21,6 +21,9 @@ WWW=		http://www.opera.com/
 BROKEN=	Disabled for security reasons
 
 RUN_DEPENDS=	update-mime-database:misc/shared-mime-info
+
+DEPRECATED=	outdated and unsupported version
+EXPIRATION_DATE=2023-11-31
 
 USES=		cpe desktop-file-utils gnome linux shared-mime-info tar:xz
 USE_LINUX=	gtk2 sqlite3 xorglibs

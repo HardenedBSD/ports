@@ -26,15 +26,8 @@ USES=		llvm:lib,run ninja cmake:insource pkgconfig
 
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CC=		${LOCALBASE}/bin/clang${_LLVM_VER}
-CXX=		${LOCALBASE}/bin/clang++${_LLVM_VER}
-LLVM_CONFIG=	${LOCALBASE}/bin/llvm-config${_LLVM_VER}
-
-=======
->>>>>>> internal/freebsd/main
 _GCC_VER=	11
 
 CFLAGS+=	-fPIC

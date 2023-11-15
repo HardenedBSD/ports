@@ -25,13 +25,10 @@ USES=		llvm:lib,run ninja cmake:insource pkgconfig
 
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 _GCC_VER=	11
 
-=======
->>>>>>> internal/freebsd/main
 CFLAGS+=	-fPIC
 
 CMAKE_ARGS+=	-DLDC_INSTALL_PREFIX="${PREFIX}" \

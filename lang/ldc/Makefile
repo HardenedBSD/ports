@@ -15,8 +15,7 @@ LICENSE=	BSD3CLAUSE
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	The bootstrap compiler is provided only for x86_64
 
-LIB_DEPENDS=	libconfig.so:devel/libconfig \
-		libgphobos.so:lang/gcc${_GCC_VER}
+LIB_DEPENDS=	libconfig.so:devel/libconfig
 
 USES=		llvm:lib,run ninja cmake:insource pkgconfig
 
@@ -26,10 +25,13 @@ USES=		llvm:lib,run ninja cmake:insource pkgconfig
 
 USE_LDCONFIG=	yes
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 _GCC_VER=	11
 
+=======
+>>>>>>> internal/freebsd/main
 CFLAGS+=	-fPIC
 
 CMAKE_ARGS+=	-DLDC_INSTALL_PREFIX="${PREFIX}" \

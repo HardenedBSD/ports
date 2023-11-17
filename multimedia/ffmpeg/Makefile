@@ -57,14 +57,12 @@ OPTIONS_DEFAULT_i386=	NVENC
 # i386 is too register-starved for LTO (PR257124)
 OPTIONS_EXCLUDE_i386=	LTO
 
-<<<<<<< HEAD
 OPTIONS_DEFAULT+=	SMB
-=======
+
 .if !exists(${.CURDIR:H:H}/multimedia/libaribcaption)
 # https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/b6138633cdf2
 OPTIONS_EXCLUDE+=	ARIBCAPTION
 .endif
->>>>>>> internal/freebsd/main
 
 .if !exists(${.CURDIR:H:H}/multimedia/davs2)
 # https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/5985a1bf7233

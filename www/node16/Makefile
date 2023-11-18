@@ -65,24 +65,8 @@ CONFLICTS_INSTALL=	node[0-9][0-9]
 REINPLACE_ARGS=	-i ''
 PORTSCOUT=	limit:^16\.
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=		BUNDLED_SSL COREPACK DOCS DTRACE NLS
-OPTIONS_DEFAULT=	COREPACK
-
-.if !exists(/usr/sbin/dtrace)
-OPTIONS_EXCLUDE+=	DTRACE
-.endif
-
-OPTIONS_EXCLUDE_aarch64=	DTRACE
-# dt_modtext:/usr/src/cddl/contrib/opensolaris/lib/libdtrace/common/dt_link.c(820): arm not implemented
-OPTIONS_EXCLUDE_armv6=	DTRACE
-OPTIONS_EXCLUDE_armv7=	DTRACE
-OPTIONS_EXCLUDE_powerpc64=	DTRACE
-OPTIONS_EXCLUDE_powerpc64le=	DTRACE
-=======
 OPTIONS_DEFINE=		BUNDLED_SSL COREPACK DOCS NLS
 OPTIONS_DEFAULT=	COREPACK
->>>>>>> internal/freebsd/main
 
 OPTIONS_SUB=	yes
 

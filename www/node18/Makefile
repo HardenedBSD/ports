@@ -56,21 +56,7 @@ SHEBANG_FILES=	deps/v8/third_party/inspector_protocol/*.py \
 		tools/*.py \
 		tools/inspector_protocol/*.py
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=	BUNDLED_SSL DOCS DTRACE NLS
-# HBSD: DTRACE is broken in HardenedBSD's ports due to llvm
-#OPTIONS_DEFAULT=DTRACE
-.if !exists(/usr/sbin/dtrace)
-OPTIONS_EXCLUDE+=	DTRACE
-.endif
-OPTIONS_EXCLUDE_aarch64=	DTRACE
-OPTIONS_EXCLUDE_armv6=		DTRACE
-OPTIONS_EXCLUDE_armv7=		DTRACE
-OPTIONS_EXCLUDE_powerpc64=	DTRACE
-OPTIONS_EXCLUDE_powerpc64le=	DTRACE
-=======
 OPTIONS_DEFINE=	BUNDLED_SSL DOCS NLS
->>>>>>> internal/freebsd/main
 OPTIONS_SUB=	yes
 BUNDLED_SSL_DESC=	Use bundled OpenSSL implementation from node.js
 

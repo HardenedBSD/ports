@@ -12,7 +12,7 @@ USE_HARDENING=	safestack
 
 LIB_DEPENDS=	libpfctl.so:net/libpfctl
 
-USES=		localbase
+USES=		localbase uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	grembo
 
@@ -35,11 +35,5 @@ MAKE_ENV+=	__MAKE_CONF=/dev/null
 
 PLIST_FILES=	man/man8/pftop.8.gz \
 		sbin/pftop
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pftop \
-		${STAGEDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/pftop.8 \
-		${STAGEDIR}${MANPREFIX}/man/man8
 
 .include <bsd.port.mk>

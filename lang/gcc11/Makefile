@@ -13,7 +13,7 @@ LICENSE_COMB=	multi
 
 USE_HARDENING=  pie:off relro:off retpoline:off
 
-USE_GCC=	10
+USE_GCC=	10:build
 
 ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
 

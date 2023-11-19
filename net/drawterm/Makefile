@@ -16,16 +16,10 @@ GH_ACCOUNT=	9front
 GH_TAGNAME=	c4ea4d299aa1bbbcc972c04adf06c18245ce7674
 USE_XORG=	x11 xt
 
-<<<<<<< HEAD
 USE_HARDENING=	cfi safestack
 
-PLIST_FILES=	bin/drawterm
-PORTDOCS=	LICENSE README
-WRKSRC=		${WRKDIR}/${PORTNAME}
-=======
 PLIST_FILES=	bin/drawterm \
 		share/man/man1/drawterm.1.gz
->>>>>>> internal/freebsd/main
 
 MAKE_ARGS=	CONF=${OPSYS:tl}
 

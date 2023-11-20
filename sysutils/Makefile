@@ -860,6 +860,7 @@
     SUBDIR += opensbi
     SUBDIR += openseachest
     SUBDIR += openshift-install
+    SUBDIR += opentofu
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod

@@ -1,17 +1,9 @@
-PORTNAME=	compiler-rt
+# must sync with devel/llvm13
 DISTVERSION=	13.0.1
-CATEGORIES=	devel lang
-MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
-		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}/${RCDIR}
-PKGNAMEPREFIX=	wasi-
-PKGNAMESUFFIX=	${LLVM_SUFFIX}
-DISTNAME=	llvm-project-${DISTVERSION}.src
-DISTFILES=	llvm-project-${DISTVERSION}.src${EXTRACT_SUFX}
 
-MAINTAINER=	vishwin@FreeBSD.org
-COMMENT=	Clang builtins library for WebAssembly System Interface
-WWW=		https://llvm.org/
+MASTERDIR=	${.CURDIR}/../wasi-compiler-rt
 
+<<<<<<< HEAD
 LICENSE=	LLVM2
 LICENSE_FILE=	${WRKSRC}/llvm/LICENSE.TXT
 LICENSE_NAME=	Apache License 2.0 with LLVM Exceptions
@@ -60,3 +52,6 @@ post-build:
 	${LOCALBASE}/bin/llvm-ranlib${LLVM_SUFFIX} ${CONFIGURE_WRKSRC}/lib/wasi/*.a
 
 .include <bsd.port.mk>
+=======
+.include "${MASTERDIR}/Makefile"
+>>>>>>> internal/freebsd/main

@@ -31,6 +31,8 @@ LLVM_SUFFIX=	${LLVM_RELEASE:C/\.[0-9]\.[0-9]$//}
 DISTINFO_FILE=	${PORTSDIR}/${LLVM_PORT}/distinfo
 NO_ARCH=	yes
 
+SSP_UNSAFE=	yes
+
 CC=		${LOCALBASE}/bin/clang${LLVM_VERSION}
 CXX=		${LOCALBASE}/bin/clang++${LLVM_VERSION}
 WASI_SYSROOT=	${LOCALBASE}/share/wasi-sysroot

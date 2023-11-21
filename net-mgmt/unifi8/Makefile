@@ -1,6 +1,5 @@
-PORTNAME=	unifi7
-PORTVERSION=	7.5.187
-PORTREVISION=	1
+PORTNAME=	unifi8
+PORTVERSION=	8.0.7
 CATEGORIES=	net-mgmt java
 MASTER_SITES=	http://dl.ubnt.com/unifi/%SUBDIR%/:unifi \
 		https://repo1.maven.org/maven2/%SUBDIR%/:jax
@@ -12,7 +11,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 EXTRACT_ONLY=	unifi_sysvinit_all.deb
 
 MAINTAINER=	otis@FreeBSD.org
-COMMENT=	UniFi Controller v7
+COMMENT=	UniFi Controller v8
 WWW=		https://help.ui.com/hc/en-us/categories/200320654-UniFi-Wireless
 
 RUN_DEPENDS=	snappyjava>0:archivers/snappy-java
@@ -31,7 +30,7 @@ JAVA_VERSION=	17
 JAVA_RUN=	jre
 USE_RC_SUBR=	unifi
 
-CONFLICTS_INSTALL=	unifi8
+CONFLICTS_INSTALL=	unifi7
 
 EXTRACT_CMD=	${AR}
 EXTRACT_BEFORE_ARGS=	-p

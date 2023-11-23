@@ -4,6 +4,9 @@ DISTVERSION=	0.37.0
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	f4cc236a641e.patch:-p1 # https://github.com/mpv-player/mpv/pull/12941
+
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Free and open-source general-purpose video player
 WWW=		https://mpv.io
@@ -14,7 +17,8 @@ LICENSE_FILE_GPLv2+ =	${WRKSRC}/LICENSE.GPL
 LICENSE_FILE_LGPL21+ =	${WRKSRC}/LICENSE.LGPL
 
 BUILD_DEPENDS=	ffmpeg>=4.0.2,1:multimedia/ffmpeg
-LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
+LIB_DEPENDS=	libplacebo.so:graphics/libplacebo \
+		libavcodec.so:multimedia/ffmpeg \
 		libass.so:multimedia/libass
 
 USES=		compiler:c11 cpe desktop-file-utils iconv jpeg \
@@ -152,8 +156,7 @@ VDPAU_MESON_ENABLED=		vdpau
 VDPAU_IMPLIES=			X11
 
 VULKAN_BUILD_DEPENDS=		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
-VULKAN_LIB_DEPENDS=		libplacebo.so:graphics/libplacebo \
-				libvulkan.so:graphics/vulkan-loader
+VULKAN_LIB_DEPENDS=		libvulkan.so:graphics/vulkan-loader
 VULKAN_MESON_ENABLED=		vulkan
 
 WAYLAND_CATEGORIES=		wayland

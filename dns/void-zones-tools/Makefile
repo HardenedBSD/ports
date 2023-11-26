@@ -1,12 +1,5 @@
 PORTNAME=	void-zones-tools
-<<<<<<< HEAD
 PORTVERSION=	2.0
-=======
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.2-18
-DISTVERSIONSUFFIX=	-g204634a
-PORTREVISION=	1
->>>>>>> internal/freebsd/main
 CATEGORIES=	dns
 
 MAINTAINER=	shawn.webb@hardenedbsd.org

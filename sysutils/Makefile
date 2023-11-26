@@ -859,7 +859,6 @@
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
-    SUBDIR += openshift-install
     SUBDIR += opentofu
     SUBDIR += openupsd
     SUBDIR += openzfs
@@ -1647,6 +1646,7 @@
     SUBDIR += xin
     SUBDIR += xjobs
     SUBDIR += xmbmon
+    SUBDIR += xnvme
     SUBDIR += xorriso
     SUBDIR += xosview
     SUBDIR += xpipe

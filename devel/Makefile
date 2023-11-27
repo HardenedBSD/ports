@@ -4398,7 +4398,6 @@
     SUBDIR += py-cabby
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
-    SUBDIR += py-cachetools3
     SUBDIR += py-cacheyou
     SUBDIR += py-cachy
     SUBDIR += py-cadquery-pywrap
@@ -4574,6 +4573,7 @@
     SUBDIR += py-dj42-django-rq
     SUBDIR += py-dj42-graphene-django
     SUBDIR += py-django-rq
+    SUBDIR += py-docformatter
     SUBDIR += py-dockerpty
     SUBDIR += py-docopt
     SUBDIR += py-doctest-ignore-unicode
@@ -4841,6 +4841,7 @@
     SUBDIR += py-jitterentropy
     SUBDIR += py-jmespath
     SUBDIR += py-joblib
+    SUBDIR += py-johnnydep
     SUBDIR += py-jsbeautifier
     SUBDIR += py-jschema-to-python
     SUBDIR += py-jsmin
@@ -5093,6 +5094,7 @@
     SUBDIR += py-overrides
     SUBDIR += py-ovs
     SUBDIR += py-ovsdbapp
+    SUBDIR += py-oyaml
     SUBDIR += py-p4python
     SUBDIR += py-packaging
     SUBDIR += py-parallax
@@ -5729,6 +5731,7 @@
     SUBDIR += py-unittest2
     SUBDIR += py-unittest2pytest
     SUBDIR += py-unpaddedbase64
+    SUBDIR += py-untokenize
     SUBDIR += py-update_checker
     SUBDIR += py-urlimport
     SUBDIR += py-urwid
@@ -5778,6 +5781,7 @@
     SUBDIR += py-whichcraft
     SUBDIR += py-whistle
     SUBDIR += py-widgetsnbextension
+    SUBDIR += py-wimpy
     SUBDIR += py-wlc
     SUBDIR += py-woops
     SUBDIR += py-wrapt
@@ -5797,6 +5801,7 @@
     SUBDIR += py-xdoctest
     SUBDIR += py-xerox
     SUBDIR += py-xmltodict
+    SUBDIR += py-xsdata
     SUBDIR += py-xstatic
     SUBDIR += py-xstatic-angular
     SUBDIR += py-xstatic-angular-bootstrap
@@ -6687,6 +6692,7 @@
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-messages22
+    SUBDIR += rubygem-cucumber-messages23
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
     SUBDIR += rubygem-cucumber-tag-expressions5
@@ -7076,6 +7082,7 @@
     SUBDIR += rubygem-mustache-sinatra
     SUBDIR += rubygem-mustermann
     SUBDIR += rubygem-mustermann-grape
+    SUBDIR += rubygem-mustermann-grape10
     SUBDIR += rubygem-mutex_m
     SUBDIR += rubygem-mutter
     SUBDIR += rubygem-nakayoshi_fork
@@ -7111,6 +7118,7 @@
     SUBDIR += rubygem-opentelemetry-api
     SUBDIR += rubygem-opentelemetry-common
     SUBDIR += rubygem-opentelemetry-instrumentation-base
+    SUBDIR += rubygem-opentelemetry-instrumentation-rack
     SUBDIR += rubygem-opentelemetry-registry
     SUBDIR += rubygem-opentelemetry-sdk
     SUBDIR += rubygem-opentelemetry-semantic_conventions
@@ -7215,7 +7223,6 @@
     SUBDIR += rubygem-rbtrace
     SUBDIR += rubygem-rbtree
     SUBDIR += rubygem-rdoc
-    SUBDIR += rubygem-rdoc63
     SUBDIR += rubygem-re2
     SUBDIR += rubygem-react-rails
     SUBDIR += rubygem-react-rails-rails5

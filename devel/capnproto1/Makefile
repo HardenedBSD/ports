@@ -1,17 +1,18 @@
 PORTNAME=	capnproto
-PORTVERSION=	0.8.0
+PORTVERSION=	1.0.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
-PKGNAMESUFFIX=	080
+PKGNAMESUFFIX=	1
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Serialization/RPC system
-WWW=		https://capnproto.org/
+WWW=		https://capnproto.org/ \
+		https://github.com/capnproto/capnproto
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-USES=		autoreconf compiler:c++14-lang cpe gmake libtool ssl
+USES=		autoreconf compiler:c++14-lang cpe gmake libtool pathfix ssl
 
 CONFIGURE_ARGS=	ac_cv_lib_ssl_OPENSSL_init_ssl=yes
 GNU_CONFIGURE=	yes
@@ -24,9 +25,9 @@ WRKSRC_SUBDIR=	c++
 
 USE_GITHUB=	yes
 
-CONFLICTS_INSTALL=	capnproto
+CONFLICTS_INSTALL=	capnproto capnproto080
 
-# databases/tiledb requires capnproto 0.8.0
+# databases/tiledb requires capnproto 1.0.1
 PORTSCOUT=	ignore:1
 
 .include <bsd.port.mk>

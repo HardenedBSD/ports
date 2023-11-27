@@ -336,7 +336,7 @@
     SUBDIR += calibrator
     SUBDIR += caliper
     SUBDIR += capnproto
-    SUBDIR += capnproto080
+    SUBDIR += capnproto1
     SUBDIR += capslock
     SUBDIR += capstone
     SUBDIR += capstone4
@@ -6127,6 +6127,7 @@
     SUBDIR += rubygem-aws-sdk-clouddirectory
     SUBDIR += rubygem-aws-sdk-cloudformation
     SUBDIR += rubygem-aws-sdk-cloudfront
+    SUBDIR += rubygem-aws-sdk-cloudfrontkeyvaluestore
     SUBDIR += rubygem-aws-sdk-cloudhsm
     SUBDIR += rubygem-aws-sdk-cloudhsmv2
     SUBDIR += rubygem-aws-sdk-cloudsearch
@@ -6234,6 +6235,7 @@
     SUBDIR += rubygem-aws-sdk-importexport
     SUBDIR += rubygem-aws-sdk-inspector
     SUBDIR += rubygem-aws-sdk-inspector2
+    SUBDIR += rubygem-aws-sdk-inspectorscan
     SUBDIR += rubygem-aws-sdk-internetmonitor
     SUBDIR += rubygem-aws-sdk-iot
     SUBDIR += rubygem-aws-sdk-iot1clickdevicesservice
@@ -6426,6 +6428,7 @@
     SUBDIR += rubygem-aws-sdk-transcribestreamingservice
     SUBDIR += rubygem-aws-sdk-transfer
     SUBDIR += rubygem-aws-sdk-translate
+    SUBDIR += rubygem-aws-sdk-trustedadvisor
     SUBDIR += rubygem-aws-sdk-verifiedpermissions
     SUBDIR += rubygem-aws-sdk-voiceid
     SUBDIR += rubygem-aws-sdk-vpclattice

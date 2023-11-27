@@ -146,6 +146,7 @@
     SUBDIR += easy-rsa
     SUBDIR += enchive
     SUBDIR += eschalot
+    SUBDIR += evilginx2
     SUBDIR += expiretable
     SUBDIR += f-prot
     SUBDIR += fakebo

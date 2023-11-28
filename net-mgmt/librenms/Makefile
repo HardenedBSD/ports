@@ -1,5 +1,5 @@
 PORTNAME=	librenms
-PORTVERSION=	23.10.0
+PORTVERSION=	23.11.0
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	LOCAL/dvl:vendor
@@ -11,12 +11,8 @@ WWW=		https://www.librenms.org
 
 LICENSE=	GPLv3
 
-IGNORE_WITH_PHP=	82
-
 # perhaps we also need python-memcache python-mysqldb
-RUN_DEPENDS+=	${LOCALBASE}/share/pear/Net/IPv4.php:net/pear-Net_IPv4@${PHP_FLAVOR} \
-		${LOCALBASE}/share/pear/Net/IPv6.php:net/pear-Net_IPv6@${PHP_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pymysql>0:databases/py-pymysql@${PY_FLAVOR} \
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pymysql>0:databases/py-pymysql@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-dotenv>0:www/py-python-dotenv@${PY_FLAVOR} \
 		bash:shells/bash \
 		dot:graphics/graphviz \
@@ -26,9 +22,10 @@ RUN_DEPENDS+=	${LOCALBASE}/share/pear/Net/IPv4.php:net/pear-Net_IPv4@${PHP_FLAVO
 
 USES=		cpe php python shebangfix
 USE_GITHUB=	yes
-USE_PHP=	ctype curl dom fileinfo filter gd hash json ldap mbstring \
-		mysqli openssl pdo pdo_mysql phar posix session simplexml snmp \
-		sockets tokenizer xml xmlwriter zip
+# php hash/json/openssl extension is required but it's statically linked in default php
+USE_PHP=	ctype curl dom fileinfo filter gd iconv ldap mbstring mysqli \
+		pdo pdo_mysql phar posix session simplexml snmp sockets \
+		tokenizer xml xmlwriter zip zlib
 USE_RC_SUBR=	librenms
 
 SHEBANG_FILES=	../${PORTNAME}-vendor-${PORTVERSION}/paragonie/random_compat/build-phar.sh \
@@ -130,7 +127,7 @@ _SCRIPT_FILES=		daily.sh lnms
 # _RELEASE_TIMESTAMP is used for a patch inside the vendor code
 # it represents the release date via: git show --pretty='%H|%ct' -s 1.42.01
 # It sits here so you remember to update it with each release
-_RELEASE_TIMESTAMP=	1698378456
+_RELEASE_TIMESTAMP=	1700189861
 _ROOT_DIRS=		LibreNMS app bootstrap config database doc html \
 			includes lang licenses mibs misc resources routes \
 			scripts tests
@@ -179,6 +176,9 @@ do-install:
 .for f in ${_SCRIPT_FILES}
 	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${STAGEDIR}/${WWWDIR}
 .endfor
+# avoid: Error: lnms file is owned by root, it should be owned and ran by a non-privileged user
+	${ECHO_CMD} "@(www,wheel,0555) www/${PORTNAME}/lnms" >> ${TMPPLIST}
+
 	${MKDIR} ${STAGEDIR}/${WWWDIR}/vendor
 	(cd ${WRKDIR}/${PORTNAME}-vendor-${PORTVERSION} && ${COPYTREE_SHARE} . ${STAGEDIR}/${WWWDIR}/vendor)
 
@@ -220,7 +220,7 @@ do-install-EXAMPLES-on:
 post-install:
 	${FIND} -s ${STAGEDIR}${WWWDIR} -type f '(' -name '*.orig' -or -name '*.bak' -or -name '.gitignore' ')' -delete
 	${FIND} -s ${STAGEDIR}${WWWDIR} -not -type d | ${SORT} | \
-		${SED} -e 's#^${STAGEDIR}${PREFIX}/##' >> ${TMPPLIST}
+		${SED} -e 's#^${STAGEDIR}${PREFIX}/##' | grep -v www/librenms/lnms >> ${TMPPLIST}
 
 # we do this file separately because it needs a different chmod/chown
 # it will eventually contains secrets

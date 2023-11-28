@@ -5,7 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PostScript calendar program
-WWW=		http://pcal.sourceforge.net/
+WWW=		https://pcal.sourceforge.net/
 
 USE_HARDENING=	pie:off
 

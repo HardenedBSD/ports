@@ -19,6 +19,7 @@ LIB_DEPENDS=	libjasper.so:graphics/jasper \
 		libharfbuzz.so:print/harfbuzz \
 		libicudata.so:devel/icu \
 		libjbig.so:graphics/jbigkit \
+		libmng.so:graphics/libmng \
 		libpcre.so:devel/pcre \
 		libpcre2-16.so:devel/pcre2 \
 		libpng16.so:graphics/png \

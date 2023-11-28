@@ -1,5 +1,6 @@
 PORTNAME=	openssl
 PORTVERSION=	3.0.12
+PORTREVISION=	1
 CATEGORIES=	security devel
 PKGNAMESUFFIX=	-quictls
 
@@ -134,6 +135,8 @@ SSL3_CONFIGURE_ON+=	enable-ssl3-method
 ZLIB_CONFIGURE_ON=	zlib-dynamic
 
 SHLIBS=			lib/engines-${OPENSSL_SHLIBVER}/loader_attic.so
+
+PORTSCOUT=		limit=^3\.0\.
 
 .include <bsd.port.pre.mk>
 .if ${PREFIX} == /usr

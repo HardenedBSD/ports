@@ -1,3 +1,824 @@
+  <vuln vid="388e6557-8c80-11ee-9ee3-84a93843eb75">
+    <topic>MariaDB -- Denial-of-Service vulnerability</topic>
+    <affects>
+      <package>
+	<name>mariadb105-server</name>
+	<range><lt>10.5.23</lt></range>
+      </package>
+      <package>
+	<name>mariadb106-server</name>
+	<range><lt>10.6.16</lt></range>
+      </package>
+      <package>
+	<name>mariadb1011-server</name>
+	<range><lt>10.11.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The MariaDB project reports:</p>
+	<blockquote cite="https://mariadb.com/kb/en/mariadb-10-11-6-release-notes/">
+	  <p>Easily exploitable vulnerability allows high privileged attacker
+	    with network access via multiple protocols to compromise MySQL
+	    Server. Successful attacks of this vulnerability can result in
+	    unauthorized ability to cause a hang or frequently repeatable crash
+	    (complete DOS) of MySQL Server.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-22084</cvename>
+      <url>https://mariadb.com/kb/en/mariadb-10-11-6-release-notes/</url>
+      <url>https://mariadb.com/kb/en/mariadb-10-6-16-release-notes/</url>
+      <url>https://mariadb.com/kb/en/mariadb-10-5-23-release-notes/</url>
+    </references>
+    <dates>
+      <discovery>2023-11-13</discovery>
+      <entry>2023-11-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a62c0c50-8aa0-11ee-ac0d-00e0670f2660">
+    <topic>strongSwan -- vulnerability in charon-tkm</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><ge>5.3.0</ge><lt>5.9.11_3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>strongSwan reports:</p>
+	<blockquote cite="https://www.strongswan.org/blog/2023/11/20/strongswan-vulnerability-(cve-2023-41913).html">
+	  <p>A vulnerability in charon-tkm related to processing
+	     DH public values was discovered in strongSwan
+	     that can result in a buffer overflow and potentially
+	     remote code execution. All versions since
+	     5.3.0 are affected.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-41913</cvename>
+      <url>https://www.strongswan.org/blog/2023/11/20/strongswan-vulnerability-(cve-2023-41913).html</url>
+    </references>
+    <dates>
+      <discovery>2023-11-20</discovery>
+      <entry>2023-11-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="147353a3-c33b-46d1-b751-e72c0d7f29df">
+    <topic>electron{25,26} -- use after free in Garbage Collection</topic>
+    <affects>
+      <package>
+	<name>electron25</name>
+	<range><lt>25.9.6</lt></range>
+      </package>
+      <package>
+	<name>electron26</name>
+	<range><lt>26.6.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v25.9.6">
+	  <p>This update fixes the following vulnerability:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-5997.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5997</cvename>
+      <url>https://github.com/advisories/GHSA-fggx-frxq-cpx8</url>
+    </references>
+    <dates>
+      <discovery>2023-11-22</discovery>
+      <entry>2023-11-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0da4db89-84bf-11ee-8290-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>119.0.6045.159</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>119.0.6045.159</lt></range>
+      </package>
+      <package>
+       <name>qt5-webengine</name>
+       <range><lt>5.15.16.p5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop_14.html">
+	 <p>This update includes 4 security fixes:</p>
+	 <ul>
+	    <li>[1497997] High CVE-2023-5997: Use after free in Garbage Collection. Reported by Anonymous on 2023-10-31</li>
+	    <li>[1499298] High CVE-2023-6112: Use after free in Navigation. Reported by Sergei Glazunov of Google Project Zero on 2023-11-04</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5997</cvename>
+      <cvename>CVE-2023-6112</cvename>
+      <url>https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop_14.html</url>
+    </references>
+    <dates>
+      <discovery>2023-11-14</discovery>
+      <entry>2023-11-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a30f1a12-117f-4dac-a1d0-d65eaf084953">
+    <topic>electron{25,26} -- use after free in WebAudio</topic>
+    <affects>
+      <package>
+	<name>electron25</name>
+	<range><lt>25.9.5</lt></range>
+      </package>
+      <package>
+	<name>electron26</name>
+	<range><lt>26.6.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v25.9.5">
+	  <p>This update fixes the following vulnerability:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-5996.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5996</cvename>
+      <url>https://github.com/advisories/GHSA-q3gq-rg4m-vgrp</url>
+    </references>
+    <dates>
+      <discovery>2023-11-15</discovery>
+      <entry>2023-11-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2fe004f5-83fd-11ee-9f5d-31909fb2f495">
+    <topic>openvpn -- 2.6.0...2.6.6 --fragment option division by zero crash, and TLS data leak</topic>
+    <affects>
+      <package>
+	<name>openvpn</name>
+	<range><ge>2.6.0</ge><lt>2.6.7_1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenVPN community project team reports:</p>
+	<blockquote cite="https://github.com/OpenVPN/openvpn/blob/v2.6.7/Changes.rst#overview-of-changes-in-267">
+		<p>CVE-2023-46849 OpenVPN versions between 2.6.0 and 2.6.6 incorrectly restore "--fragment" configuration in some circumstances, leading to a division by zero when "--fragment" is used. On platforms where division by zero is fatal, this will cause an OpenVPN crash.
+		<br />
+Reported by Niccolo Belli and WIPocket (Github #400, #417).
+	</p>
+	<p>CVE-2023-46850 OpenVPN versions between 2.6.0 and 2.6.6 incorrectly use a send buffer after it has been free()d in some circumstances, causing some free()d memory to be sent to the peer. All configurations using TLS (e.g. not using --secret) are affected by this issue. (found while tracking down CVE-2023-46849 / Github #400, #417)</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-46849</cvename>
+      <cvename>CVE-2023-46850</cvename>
+      <url>https://github.com/OpenVPN/openvpn/blob/v2.6.7/Changes.rst#overview-of-changes-in-267</url>
+    </references>
+    <dates>
+      <discovery>2023-08-29</discovery>
+      <entry>2023-11-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7cc003cb-83b9-11ee-957d-b42e991fc52e">
+    <topic>typo3 -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>typo3-11</name>
+	<name>typo3-12</name>
+	<range><lt>11.5.33</lt></range>
+	<range><lt>12.4.33</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/TYPO3/typo3/commit/535dfbdc54fd5362e0bc08d911db44eac7f64019">
+	<p>Weak Authentication in Session Handling in typo3/cms-core:
+	In typo3 installations there are always
+	at least two different sites.  Eg.  first.example.org and
+	second.example.com.  In affected versions a session cookie
+	generated for the first site can be reused on the second site
+	without requiring additional authentication.  This
+	vulnerability has been addressed in versions 8.7.55, 9.5.44,
+	10.4.41, 11.5.33, and 12.4.8.  Users are advised to upgrade.
+	There are no known workarounds for this vulnerability.</p>
+	<p>Information Disclosure in Install Tool in typo3/cms-install:
+	In affected versions the login screen of the standalone
+	install tool discloses the full path of the transient data
+	directory (e.g.  /var/www/html/var/transient/).  This applies
+	to composer-based scenarios only - classic non-composer
+	installations are not affected.  This issue has been addressed
+	in version 12.4.8.  Users are advised to upgrade.  There are
+	no known workarounds for this vulnerability.
+	</p>
+	<p>By-passing Cross-Site Scripting Protection in HTML Sanitizer:
+	In affected versions DOM processing instructions are not
+	handled correctly.  This allows bypassing the cross-site
+	scripting mechanism of typo3/html-sanitizer.  This
+	vulnerability has been addressed in versions 1.5.3 and 2.1.4.
+	Users are advised to upgrade.  There are no known workarounds
+	for this vulnerability.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-47125</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-47125</url>
+      <cvename>CVE-2023-47126</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-47126</url>
+      <cvename>CVE-2023-47127</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-47127</url>
+    </references>
+    <dates>
+      <discovery>2023-11-14</discovery>
+      <entry>2023-11-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="31f45d06-7f0e-11ee-94b4-6cc21735f730">
+    <topic>postgresql-server -- Memory disclosure in aggregate function calls</topic>
+    <affects>
+      <package>
+	<name>postgresql-server</name>
+	<range><lt>16.1</lt></range>
+	<range><lt>15.5</lt></range>
+	<range><lt>14.10</lt></range>
+	<range><lt>13.13</lt></range>
+	<range><lt>12.17</lt></range>
+	<range><lt>11.22</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL Project reports:</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2023-5868/">
+	  <p>
+	    Certain aggregate function calls receiving "unknown"-type
+	    arguments could disclose bytes of server memory from the end of
+	    the "unknown"-type value to the next zero byte. One typically
+	    gets an "unknown"-type value via a string literal having no type
+	    designation. We have not confirmed or ruled out viability of
+	    attacks that arrange for presence of notable, confidential
+	    information in disclosed bytes.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5868</cvename>
+      <url>https://www.postgresql.org/support/security/CVE-2023-5868/</url>
+    </references>
+    <dates>
+      <discovery>2023-11-09</discovery>
+      <entry>2023-11-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0f445859-7f0e-11ee-94b4-6cc21735f730">
+    <topic>postgresql-server -- Buffer overrun from integer overflow in array modification</topic>
+    <affects>
+      <package>
+	<name>postgresql-server</name>
+	<range><lt>16.1</lt></range>
+	<range><lt>15.5</lt></range>
+	<range><lt>14.10</lt></range>
+	<range><lt>13.13</lt></range>
+	<range><lt>12.17</lt></range>
+	<range><lt>11.22</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL Project reports:</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2023-5869/">
+	  <p>
+	    While modifying certain SQL array values, missing
+	    overflow checks let authenticated database users write
+	    arbitrary bytes to a memory area that facilitates
+	    arbitrary code execution. Missing overflow checks also
+	    let authenticated database users read a wide area of
+	    server memory. The CVE-2021-32027 fix covered some
+	    attacks of this description, but it missed others.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5869</cvename>
+      <url>https://www.postgresql.org/support/security/CVE-2023-5869/</url>
+    </references>
+    <dates>
+      <discovery>2023-11-09</discovery>
+      <entry>2023-11-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bbb18fcb-7f0d-11ee-94b4-6cc21735f730">
+    <topic>postgresql-server -- Role pg_cancel_backend can signal certain superuser processes</topic>
+    <affects>
+      <package>
+	<name>postgresql-server</name>
+	<range><lt>16.1</lt></range>
+	<range><lt>15.5</lt></range>
+	<range><lt>14.10</lt></range>
+	<range><lt>13.13</lt></range>
+	<range><lt>12.17</lt></range>
+	<range><lt>11.22</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL Project reports:</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2023-5870/">
+	  <p>
+	    Documentation says the pg_cancel_backend role cannot
+	    signal "a backend owned by a superuser". On the
+	    contrary, it can signal background workers, including
+	    the logical replication launcher. It can signal
+	    autovacuum workers and the autovacuum launcher.
+	    Signaling autovacuum workers and those two launchers
+	    provides no meaningful exploit, so exploiting this
+	    vulnerability requires a non-core extension with a
+	    less-resilient background worker. For example, a
+	    non-core background worker that does not auto-restart
+	    would experience a denial of service with respect to
+	    that particular background worker.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5870</cvename>
+      <url>https://www.postgresql.org/support/security/CVE-2023-5870/</url>
+    </references>
+    <dates>
+      <discovery>2023-11-09</discovery>
+      <entry>2023-11-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5558dded-a870-4fbe-8b0a-ba198db47007">
+    <topic>electron{25,26} -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron25</name>
+	<range><lt>25.9.4</lt></range>
+      </package>
+      <package>
+	<name>electron26</name>
+	<range><lt>26.5.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v25.9.4">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-5849.</li>
+	    <li>Security: backported fix for CVE-2023-5482.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5849</cvename>
+      <url>https://github.com/advisories/GHSA-7cjp-92p9-vr97</url>
+      <cvename>CVE-2023-5482</cvename>
+      <url>https://github.com/advisories/GHSA-pq78-6h8h-rcf4</url>
+    </references>
+    <dates>
+      <discovery>2023-11-08</discovery>
+      <entry>2023-11-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4ade0c4d-7e83-11ee-9a8c-00155d01f201">
+    <topic>libsndfile_project -- Integer overflow in dataend calculation</topic>
+    <affects>
+      <package>
+	<name>libsndfile</name>
+	<range><lt>1.2.2_1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cve@mitre.org reports:</p>
+	<blockquote cite="https://github.com/libsndfile/libsndfile/issues/789">
+	  <p>Multiple signed integers overflow in function au_read_header in
+	src/au.c and in functions mat4_open and mat4_read_header in src/mat4.c
+	in Libsndfile, allows an attacker to cause Denial of Service or
+	other unspecified impacts.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2022-33065</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2022-33065</url>
+    </references>
+    <dates>
+      <discovery>2023-07-18</discovery>
+      <entry>2023-11-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="77fc311d-7e62-11ee-8290-a8a1599412c6">
+    <topic>chromium -- security update</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>119.0.6045.123</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>119.0.6045.123</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html">
+	 <p>This update includes 1 security fix:</p>
+	 <ul>
+	    <li>[1497859] High CVE-2023-5996: Use after free in WebAudio. Reported by Huang Xilin of Ant Group Light-Year Security Lab via Tianfu Cup 2023 on 2023-10-30</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5996</cvename>
+      <url>https://chromereleases.googleblog.com/2023/11/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2023-11-07</discovery>
+      <entry>2023-11-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a5956603-7e4f-11ee-9df6-84a93843eb75">
+    <topic>OpenSSL -- DoS in DH generation</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>3.0.12_1,1</lt></range>
+      </package>
+      <package>
+	<name>openssl111</name>
+	<range><lt>1.1.1w_1</lt></range>
+      </package>
+      <package>
+	<name>openssl31</name>
+	<range><lt>3.1.4_1</lt></range>
+      </package>
+      <package>
+	<name>openssl-quictls</name>
+	<range><lt>3.0.12_1</lt></range>
+      </package>
+      <package>
+	<name>openssl31-quictls</name>
+	<range><lt>3.1.4_1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20231106.txt">
+	  <p>Excessive time spent in DH check / generation with large Q
+	    parameter value (low).
+	    Generating excessively long X9.42 DH keys or checking
+	    excessively long X9.42 DH keys or parameters may be very slow.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5678</cvename>
+      <url>https://www.openssl.org/news/secadv/20231106.txt</url>
+    </references>
+    <dates>
+      <discovery>2023-11-08</discovery>
+      <entry>2023-11-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f4464e49-7e04-11ee-8e38-002590c1f29c">
+    <topic>FreeBSD -- Incorrect libcap_net limitation list manipulation</topic>
+    <affects>
+      <package>
+	<name>FreeBSD</name>
+	<range><ge>13.2</ge><lt>13.2_5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>Casper services allow limiting operations that a process can
+	perform.  Each service maintains a specific list of permitted
+	operations.  Certain operations can be further restricted, such as
+	specifying which domain names can be resolved.  During the verification
+	of limits, the service must ensure that the new set of constraints
+	is a subset of the previous one.  In the case of the cap_net service,
+	the currently limited set of domain names was fetched incorrectly.</p>
+	<h1>Impact:</h1>
+	<p>In certain scenarios, if only a list of resolvable domain names
+	was specified without setting any other limitations, the application
+	could submit a new list of domains including include entries not
+	previously in the list.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5978</cvename>
+      <freebsdsa>SA-23:16.cap_net</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2023-11-08</discovery>
+      <entry>2023-11-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5afcc9a4-7e04-11ee-8e38-002590c1f29c">
+    <topic>FreeBSD -- libc stdio buffer overflow</topic>
+    <affects>
+      <package>
+	<name>FreeBSD</name>
+	<range><ge>13.2</ge><lt>13.2_5</lt></range>
+	<range><ge>12.4</ge><lt>12.4_7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>For line-buffered streams the __sflush() function did not
+	correctly update the FILE object's write space member when the
+	write(2) system call returns an error.</p>
+	<h1>Impact:</h1>
+	<p>Depending on the nature of an application that calls libc's
+	stdio functions and the presence of errors returned from the write(2)
+	system call (or an overridden stdio write routine) a heap buffer
+	overfly may occur.  Such overflows may lead to data corruption or
+	the execution of arbitrary code at the privilege level of the calling
+	program.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5941</cvename>
+      <freebsdsa>SA-23:15.stdio</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2023-11-08</discovery>
+      <entry>2023-11-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a1a1f81c-7c13-11ee-bcf1-f8b156b6dcc8">
+    <topic>vorbistools -- heap buffer overflow in oggenc</topic>
+    <affects>
+      <package>
+	<name>vorbis-tools</name>
+	<range><lt>1.4.2_4,3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Frank-Z7 reports:</p>
+	<blockquote cite="https://github.com/xiph/vorbis-tools/issues/41">
+	  <p>Heap buffer overflow when vorbis-tools/oggenc converts
+	    WAV files to Ogg files.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-43361</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-43361</url>
+    </references>
+    <dates>
+      <discovery>2023-09-16</discovery>
+      <entry>2023-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fe7ac70a-792b-11ee-bf9a-a04a5edf46d9">
+    <topic>PptiPNG -- Global-buffer-overflow</topic>
+    <affects>
+      <package>
+	<name>optipng</name>
+	<range><lt>0.7.7_1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Frank-Z7 reports:</p>
+	<blockquote cite="https://github.com/Frank-Z7/z-vulnerabilitys/blob/main/optipng-global-buffer-overflow1/optipng-global-buffer-overflow1.md">
+	  <p>Running optipng with the "-zm 3 -zc 1 -zw 256 -snip -out"
+	    configuration options enabled raises a global-buffer-overflow bug,
+	    which could allow a remote attacker to conduct a denial-of-service
+	    attack or other unspecified effect on a crafted file.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-43907</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-43907</url>
+    </references>
+    <dates>
+      <discovery>2023-09-30</discovery>
+      <entry>2023-11-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a1e27775-7a61-11ee-8290-a8a1599412c6">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>119.0.6045.105</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>119.0.6045.105</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_31.html">
+	 <p>This update includes 15 security fixes:</p>
+	 <ul>
+	    <li>[1492698] High CVE-2023-5480: Inappropriate implementation in Payments. Reported by Vsevolod Kokorin (Slonser) of Solidlab on 2023-10-14</li>
+	    <li>[1492381] High CVE-2023-5482: Insufficient data validation in USB. Reported by DarkNavy on 2023-10-13</li>
+	    <li>[1492384] High CVE-2023-5849: Integer overflow in USB. Reported by DarkNavy on 2023-10-13</li>
+	    <li>[1281972] Medium CVE-2023-5850: Incorrect security UI in Downloads. Reported by Mohit Raj (shadow2639) on 2021-12-22</li>
+	    <li>[1473957] Medium CVE-2023-5851: Inappropriate implementation in Downloads. Reported by Shaheen Fazim on 2023-08-18</li>
+	    <li>[1480852] Medium CVE-2023-5852: Use after free in Printing. Reported by [pwn2car] on 2023-09-10</li>
+	    <li>[1456876] Medium CVE-2023-5853: Incorrect security UI in Downloads. Reported by Hafiizh on 2023-06-22</li>
+	    <li>[1488267] Medium CVE-2023-5854: Use after free in Profiles. Reported by Dohyun Lee (@l33d0hyun) of SSD-Disclosure Labs &amp; DNSLab, Korea Univ on 2023-10-01</li>
+	    <li>[1492396] Medium CVE-2023-5855: Use after free in Reading Mode. Reported by ChaobinZhang on 2023-10-13</li>
+	    <li>[1493380] Medium CVE-2023-5856: Use after free in Side Panel. Reported by Weipeng Jiang (@Krace) of VRI on 2023-10-17</li>
+	    <li>[1493435] Medium CVE-2023-5857: Inappropriate implementation in Downloads. Reported by Will Dormann on 2023-10-18</li>
+	    <li>[1457704] Low CVE-2023-5858: Inappropriate implementation in WebApp Provider. Reported by Axel Chong on 2023-06-24</li>
+	    <li>[1482045] Low CVE-2023-5859: Incorrect security UI in Picture In Picture. Reported by Junsung Lee on 2023-09-13</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5480</cvename>
+      <cvename>CVE-2023-5482</cvename>
+      <cvename>CVE-2023-5849</cvename>
+      <cvename>CVE-2023-5850</cvename>
+      <cvename>CVE-2023-5851</cvename>
+      <cvename>CVE-2023-5852</cvename>
+      <cvename>CVE-2023-5853</cvename>
+      <cvename>CVE-2023-5854</cvename>
+      <cvename>CVE-2023-5855</cvename>
+      <cvename>CVE-2023-5856</cvename>
+      <cvename>CVE-2023-5857</cvename>
+      <cvename>CVE-2023-5858</cvename>
+      <cvename>CVE-2023-5859</cvename>
+      <url>https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop_31.html</url>
+    </references>
+    <dates>
+      <discovery>2023-10-31</discovery>
+      <entry>2023-11-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4f370c80-79ce-11ee-be8e-589cfc0f81b0">
+    <topic>phpmyfaq -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpmyfaq-php80</name>
+	<name>phpmyfaq-php81</name>
+	<name>phpmyfaq-php82</name>
+	<name>phpmyfaq-php83</name>
+	<range><lt>3.2.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>phpmyfaq developers report:</p>
+	<blockquote cite="https://www.phpmyfaq.de/security/advisory-2023-10-27">
+	  <p>XSS</p>
+	  <p>Insufficient session expiration</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5863</cvename>
+      <cvename>CVE-2023-5865</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-5863</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-5865</url>
+      <url>https://huntr.com/bounties/fbfd4e84-61fb-4063-8f11-15877b8c1f6f/</url>
+      <url>https://huntr.com/bounties/4c4b7395-d9fd-4ca0-98d7-2e20c1249aff/</url>
+    </references>
+    <dates>
+      <discovery>2023-10-31</discovery>
+      <entry>2023-11-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d2505ec7-78ea-11ee-9131-6f01853956d5">
+    <topic>open-vm-tools -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>open-vm-tools</name>
+	<range><lt>12.3.5</lt></range>
+      </package>
+      <package>
+	<name>open-vm-tools-nox11</name>
+	<range><lt>12.3.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>VMware reports:</p>
+	<blockquote cite="https://www.vmware.com/security/advisories/VMSA-2023-0024.html">
+	  <p>This update includes 2 security fixes:</p>
+	  <ul>
+	     <li>High CVE-2023-34058: SAML token signature bypass vulnerability</li>
+	     <li>High CVE-2023-34059: File descriptor hijack vulnerability in the vmware-user-suid-wrapper</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-34058</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-34058</url>
+      <cvename>CVE-2023-34059</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-34059</url>
+    </references>
+    <dates>
+      <discovery>2023-10-26</discovery>
+      <entry>2023-11-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a612c25f-788a-11ee-8d57-001b217b3468">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>16.5.0</ge><lt>16.5.1</lt></range>
+	<range><ge>16.4.0</ge><lt>16.4.2</lt></range>
+	<range><ge>11.6.0</ge><lt>16.3.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/10/31/security-release-gitlab-16-5-1-16-4-2-16-3-6-released/">
+	  <p>Disclosure of CI/CD variables using Custom project templates</p>
+	  <p>GitLab omnibus DoS crash via OOM with CI Catalogs</p>
+	  <p>Parsing gitlab-ci.yml with large string via timeout input leads to Denial of Service</p>
+	  <p>DoS - Blocking FIFO files in Tar archives</p>
+	  <p>Titles exposed by service-desk template</p>
+	  <p>Approval on protected environments can be bypassed</p>
+	  <p>Version information disclosure when super_sidebar_logged_out feature flag is enabled</p>
+	  <p>Add abuse detection for search syntax filter pipes</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-3399</cvename>
+      <cvename>CVE-2023-5825</cvename>
+      <cvename>CVE-2023-3909</cvename>
+      <cvename>CVE-2023-3246</cvename>
+      <cvename>CVE-2023-5600</cvename>
+      <cvename>CVE-2023-4700</cvename>
+      <cvename>CVE-2023-5831</cvename>
+      <url>https://about.gitlab.com/releases/2023/10/31/security-release-gitlab-16-5-1-16-4-2-16-3-6-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-10-31</discovery>
+      <entry>2023-11-01</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="386a14bb-1a21-41c6-a2cf-08d79213379b">
     <topic>zeek -- potential DoS vulnerabilities</topic>
     <affects>
@@ -744,6 +1565,10 @@
       <package>
 	<name>curl</name>
 	<range><gt>7.69.0</gt><lt>8.4.0</lt></range>
+      </package>
+      <package>
+        <name>cmake-core</name>
+        <range><lt>3.27.8</lt></range>
       </package>
     </affects>
     <description>

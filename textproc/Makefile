@@ -203,6 +203,7 @@
     SUBDIR += extract_url
     SUBDIR += ezxml
     SUBDIR += fa-aspell
+    SUBDIR += fblog
     SUBDIR += fcitx-m17n
     SUBDIR += fcitx-qt5
     SUBDIR += fcitx-table-other
@@ -228,8 +229,6 @@
     SUBDIR += foiltex
     SUBDIR += fop
     SUBDIR += fox-xml
-    SUBDIR += fpc-aspell
-    SUBDIR += fpc-libxml2
     SUBDIR += freexl
     SUBDIR += fuzzysearchdatabase
     SUBDIR += fy-aspell
@@ -355,7 +354,6 @@
     SUBDIR += kf5-kcodecs
     SUBDIR += kf5-sonnet
     SUBDIR += kf5-syntax-highlighting
-    SUBDIR += kibana7
     SUBDIR += kibana8
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
@@ -443,6 +441,7 @@
     SUBDIR += linuxdoc
     SUBDIR += linuxdoc-tools
     SUBDIR += localize
+    SUBDIR += logseq
     SUBDIR += lookatme
     SUBDIR += loook
     SUBDIR += lowdown
@@ -804,6 +803,7 @@
     SUBDIR += p5-Spreadsheet-ParseExcel
     SUBDIR += p5-Spreadsheet-ParseXLSX
     SUBDIR += p5-Spreadsheet-Read
+    SUBDIR += p5-Spreadsheet-ReadGnumeric
     SUBDIR += p5-Spreadsheet-ReadSXC
     SUBDIR += p5-Spreadsheet-WriteExcel
     SUBDIR += p5-Spreadsheet-WriteExcel-FromXML
@@ -1421,6 +1421,7 @@
     SUBDIR += py-markups
     SUBDIR += py-markupsafe
     SUBDIR += py-mathics-pygments
+    SUBDIR += py-mdformat
     SUBDIR += py-mdit-py-plugins
     SUBDIR += py-mdurl
     SUBDIR += py-merge3
@@ -1493,7 +1494,6 @@
     SUBDIR += py-pyexcel-xlsx
     SUBDIR += py-pygccxml
     SUBDIR += py-pygments
-    SUBDIR += py-pygments-25
     SUBDIR += py-pygtail
     SUBDIR += py-pyhamcrest
     SUBDIR += py-pyjade
@@ -1705,6 +1705,7 @@
     SUBDIR += rubygem-actiontext60
     SUBDIR += rubygem-actiontext61
     SUBDIR += rubygem-actiontext70
+    SUBDIR += rubygem-actiontext71
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
@@ -1814,6 +1815,7 @@
     SUBDIR += rubygem-liquid4
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
+    SUBDIR += rubygem-loofah221
     SUBDIR += rubygem-ltsv
     SUBDIR += rubygem-markaby
     SUBDIR += rubygem-mdl
@@ -1844,6 +1846,7 @@
     SUBDIR += rubygem-rails-dom-testing-rails60
     SUBDIR += rubygem-rails-dom-testing-rails61
     SUBDIR += rubygem-rails-dom-testing-rails70
+    SUBDIR += rubygem-rails-dom-testing-rails71
     SUBDIR += rubygem-rails-dom-testing1
     SUBDIR += rubygem-rails-html-sanitizer
     SUBDIR += rubygem-rak
@@ -1862,6 +1865,7 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge3
+    SUBDIR += rubygem-rouge41
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1919,7 +1923,6 @@
     SUBDIR += rubygem-ya2yaml
     SUBDIR += rubygem-yard
     SUBDIR += rubygem-yard-chef
-    SUBDIR += rubygem-yarp
     SUBDIR += rubygem-zmq
     SUBDIR += rw-aspell
     SUBDIR += rxp

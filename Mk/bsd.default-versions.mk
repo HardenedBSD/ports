@@ -50,8 +50,12 @@ EBUR128_DEFAULT?=	legacy
 FIREBIRD_DEFAULT?=	3.0
 # Possible values: gfortran
 FORTRAN_DEFAULT?=	gfortran
-# Possible values: 3.2.2
+# Possible values: 3.2.2, 3.3.1
+.  if !defined(WANT_FPC_DEVEL)
 FPC_DEFAULT?=		3.2.2
+.  else
+FPC_DEFAULT?=		3.3.1
+.  endif
 # Possible values: 8 (last to support powerpcspe), 9, 10, 11, 12
 # (Any other version is completely unsupported and not meant for general use.)
 .  if ${ARCH} == "powerpcspe"
@@ -73,13 +77,13 @@ GUILE_DEFAULT?=		2.2
 # Format:	     version[-flavor]
 # Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
-# Possible values: 8, 11, 17, 18
+# Possible values: 8, 11, 17, 18, 19, 20, 21
 JAVA_DEFAULT?=		8
-# Possible values: 2.2.6, 2.3.0
+# Possible values: 2.2.6, 3.0.0
 .  if !defined(WANT_LAZARUS_DEVEL)
 LAZARUS_DEFAULT?=	2.2.6
 .  else
-LAZARUS_DEFAULT?=	2.3.0
+LAZARUS_DEFAULT?=	3.0.0
 .  endif
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
@@ -105,7 +109,7 @@ MONO_DEFAULT?=		5.20
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 16, 18, 20, current, lts (Note: current = 20 and lts = 18)
+# Possible value: 16, 18, 20, 21, current, lts (Note: current = 21 and lts = 20)
 NODEJS_DEFAULT?=	lts
 # Possible value: 25, 26
 OPENLDAP_DEFAULT?=	26
@@ -127,7 +131,7 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 # Possible values: 11, 12, 13, 14, 15, 16
 PGSQL_DEFAULT?=		15
 # Possible values: 8.0, 8.1, 8.2, 8.3
-PHP_DEFAULT?=		8.1
+PHP_DEFAULT?=		8.2
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
 PYCRYPTOGRAPHY_DEFAULT?=	rust

@@ -74,7 +74,6 @@
     SUBDIR += c3270
     SUBDIR += calendarsupport
     SUBDIR += ccxstream
-    SUBDIR += ceph14
     SUBDIR += cf
     SUBDIR += charm
     SUBDIR += chrony
@@ -131,6 +130,7 @@
     SUBDIR += downzemall
     SUBDIR += dpdk
     SUBDIR += dpdk-20.11
+    SUBDIR += dpdk-22.11
     SUBDIR += dpinger
     SUBDIR += drawterm
     SUBDIR += drive
@@ -159,9 +159,6 @@
     SUBDIR += flower
     SUBDIR += foreman-proxy
     SUBDIR += fort
-    SUBDIR += fpc-ldap
-    SUBDIR += fpc-libenet
-    SUBDIR += fpc-pcap
     SUBDIR += fping
     SUBDIR += freebsd-telnetd
     SUBDIR += freebsd-uucp
@@ -572,6 +569,7 @@
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
     SUBDIR += openbgpd7
+    SUBDIR += openbgpd8
     SUBDIR += openldap25-client
     SUBDIR += openldap25-server
     SUBDIR += openldap26-client
@@ -1068,7 +1066,6 @@
     SUBDIR += py-iptools
     SUBDIR += py-kafka-python
     SUBDIR += py-kombu
-    SUBDIR += py-ldap
     SUBDIR += py-ldap0
     SUBDIR += py-ldap3
     SUBDIR += py-ldapdomaindump
@@ -1121,6 +1118,7 @@
     SUBDIR += py-python-glanceclient
     SUBDIR += py-python-heatclient
     SUBDIR += py-python-keystoneclient
+    SUBDIR += py-python-ldap
     SUBDIR += py-python-neutronclient
     SUBDIR += py-python-novaclient
     SUBDIR += py-python-openstackclient
@@ -1188,6 +1186,7 @@
     SUBDIR += qrcp
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth
+    SUBDIR += qt6-coap
     SUBDIR += qt6-networkauth
     SUBDIR += quagga
     SUBDIR += quiche
@@ -1220,6 +1219,7 @@
     SUBDIR += remotebox
     SUBDIR += remotedesk
     SUBDIR += repeater
+    SUBDIR += revsocks
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
@@ -1231,6 +1231,7 @@
     SUBDIR += rscsi
     SUBDIR += rsplib
     SUBDIR += rssguard
+    SUBDIR += rsyn
     SUBDIR += rsync
     SUBDIR += rsync-bpc
     SUBDIR += rtg
@@ -1240,6 +1241,7 @@
     SUBDIR += rubygem-activestorage60
     SUBDIR += rubygem-activestorage61
     SUBDIR += rubygem-activestorage70
+    SUBDIR += rubygem-activestorage71
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
@@ -1318,6 +1320,7 @@
     SUBDIR += rubygem-google-cloud-spanner-admin-instance-v1
     SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
+    SUBDIR += rubygem-google-cloud-storage144
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http-parser
@@ -1554,6 +1557,7 @@
     SUBDIR += trafshow3
     SUBDIR += trickle
     SUBDIR += trippy
+    SUBDIR += ts-warp
     SUBDIR += tsclient
     SUBDIR += tsctp
     SUBDIR += tsocks

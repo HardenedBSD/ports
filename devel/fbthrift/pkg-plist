@@ -436,6 +436,7 @@ include/thrift/lib/cpp2/server/ExecutorToThreadManagerAdaptor.h
 include/thrift/lib/cpp2/server/IOUringUtil.h
 include/thrift/lib/cpp2/server/IOWorkerContext.h
 include/thrift/lib/cpp2/server/IResourcePoolAcceptor.h
+include/thrift/lib/cpp2/server/InterceptorData.h
 include/thrift/lib/cpp2/server/InternalPriorityRequestPile.h
 include/thrift/lib/cpp2/server/LoggingEvent.h
 include/thrift/lib/cpp2/server/LoggingEventHelper.h
@@ -456,6 +457,7 @@ include/thrift/lib/cpp2/server/ResourcePool.h
 include/thrift/lib/cpp2/server/ResourcePoolHandle.h
 include/thrift/lib/cpp2/server/ResourcePoolSet.h
 include/thrift/lib/cpp2/server/RoundRobinRequestPile.h
+include/thrift/lib/cpp2/server/SecurityServerInterface.h
 include/thrift/lib/cpp2/server/ServerAttribute.h
 include/thrift/lib/cpp2/server/ServerConfigs.h
 include/thrift/lib/cpp2/server/ServerFlags.h

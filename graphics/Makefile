@@ -143,6 +143,7 @@
     SUBDIR += djvulibre
     SUBDIR += dmtx-utils
     SUBDIR += drawing
+    SUBDIR += drawio
     SUBDIR += drawpile
     SUBDIR += drm-510-kmod
     SUBDIR += drm-515-kmod
@@ -201,19 +202,6 @@
     SUBDIR += fortytwo
     SUBDIR += fotoxx
     SUBDIR += founts
-    SUBDIR += fpc-cairo
-    SUBDIR += fpc-graph
-    SUBDIR += fpc-hermes
-    SUBDIR += fpc-imagemagick
-    SUBDIR += fpc-libgd
-    SUBDIR += fpc-libpng
-    SUBDIR += fpc-ncurses
-    SUBDIR += fpc-opengl
-    SUBDIR += fpc-pasjpeg
-    SUBDIR += fpc-proj4
-    SUBDIR += fpc-rsvg
-    SUBDIR += fpc-svgalib
-    SUBDIR += fpc-vcl-compat
     SUBDIR += fracplanet
     SUBDIR += fractgen
     SUBDIR += fraqtive
@@ -342,6 +330,7 @@
     SUBDIR += guilib
     SUBDIR += gwenview
     SUBDIR += h3
+    SUBDIR += halftone
     SUBDIR += hdr_tools
     SUBDIR += heimer
     SUBDIR += hiptext

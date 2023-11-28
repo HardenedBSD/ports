@@ -1,6 +1,7 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER:S/-beta./.b/}
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v24.4.0/:chromium \
 		https://commondatastorage.googleapis.com/chromium-nodejs/:chromium_node \
@@ -19,6 +20,9 @@ WWW=		https://electronjs.org/
 LICENSE=	BSD3CLAUSE LGPL21 MPL11 MIT
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
+
+DEPRECATED=	Upstream EOL reached on 2023-10-10
+EXPIRATION_DATE=	2023-12-03
 
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 

@@ -1,5 +1,5 @@
 PORTNAME=	wine
-DISTVERSION=	8.18
+DISTVERSION=	8.21
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/8.x/
@@ -14,7 +14,6 @@ LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64 i386
-BROKEN_i386=	fails to build: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=271201\#c6
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex llvm${_LLVM_VERSION}>=0:devel/llvm${_LLVM_VERSION}
 
@@ -40,7 +39,6 @@ CONFIGURE_ARGS+=--verbose \
 		--without-gettext --without-gettextpo \
 		--without-gphoto \
 		--without-gssapi \
-		--without-gstreamer \
 		--without-inotify \
 		--without-krb5 \
 		--with-mingw CROSSCC="clang" CROSSCFLAGS="-isystem ${FILESDIR}/clang" \
@@ -84,7 +82,8 @@ GECKO_DESC=	Bundle Gecko MSI package for Wine
 MONO_DESC=	Bundle Mono MSI package for Wine
 
 ALSA_CONFIGURE_WITH=	alsa
-ALSA_USES=		gstreamer
+ALSA_USES=		gnome gstreamer
+ALSA_USE=		GNOME=glib20
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 ALSA_RUN_DEPENDS=	alsa-plugins>0:audio/alsa-plugins
 
@@ -101,7 +100,8 @@ GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 MONO_RUN_DEPENDS=	wine-mono-devel>0:emulators/wine-mono-devel
 
 OSS_CONFIGURE_WITH=	oss
-OSS_USES=		gstreamer
+OSS_USES=		gnome gstreamer
+OSS_USE=		GNOME=glib20
 
 V4L_CONFIGURE_WITH=	v4l2
 V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
@@ -151,6 +151,7 @@ post-patch:
 	${REINPLACE_CMD} '/Exec/s|wine|wine64|g' ${WRKSRC}/loader/wine.desktop
 
 .else
+EXTRA_PATCHES+=	files/extra-patch-tools-winebuild-res32
 PLIST_SUB+=		WINE32="" WINE64="@comment " WINEARCH="i386"
 .endif
 

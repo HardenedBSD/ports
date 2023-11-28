@@ -1,6 +1,5 @@
 PORTNAME=	nut
 PORTVERSION=	${NUT_COMMIT_DATE}
-PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 # MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
@@ -19,8 +18,8 @@ CONFLICTS=	nut-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	networkupstools
-GH_TAGNAME=	5dc797025
-NUT_COMMIT_DATE=	2023.10.07
+GH_TAGNAME=	4aeb199eb
+NUT_COMMIT_DATE=	2023.11.24
 
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
@@ -82,9 +81,10 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/nut \
 		--with-python=${PYTHON_CMD} \
 		--without-python2 \
 		--with-python3=${PYTHON_CMD} \
+		--without-nut_monitor \
 		--with-ltdl --with-nut-scanner
 
-CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -lpthread
+CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -pthread
 LIB_DEPENDS+=	libltdl.so:devel/libltdl
 
 # XXX Remove this when copying this port to sysutils/nut. The GA version

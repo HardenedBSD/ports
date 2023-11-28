@@ -226,6 +226,7 @@
     SUBDIR += conky-awesome
     SUBDIR += conman
     SUBDIR += conmon
+    SUBDIR += conserve
     SUBDIR += consolehm
     SUBDIR += consolekit2
     SUBDIR += consul
@@ -412,6 +413,7 @@
     SUBDIR += flasher
     SUBDIR += flashrom
     SUBDIR += flexbackup
+    SUBDIR += flipperbit
     SUBDIR += flock
     SUBDIR += flog
     SUBDIR += flowgger
@@ -421,10 +423,6 @@
     SUBDIR += foremost
     SUBDIR += fortunelock
     SUBDIR += fpart
-    SUBDIR += fpc-syslog
-    SUBDIR += fpc-users
-    SUBDIR += fpc-utmp
-    SUBDIR += fpc-uuid
     SUBDIR += frand
     SUBDIR += freebsd-snapshot
     SUBDIR += freecolor
@@ -861,7 +859,7 @@
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
-    SUBDIR += openshift-install
+    SUBDIR += opentofu
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
@@ -875,6 +873,7 @@
     SUBDIR += p5-BSD-getloadavg
     SUBDIR += p5-BackupPC-XS
     SUBDIR += p5-Brackup
+    SUBDIR += p5-Command-Runner
     SUBDIR += p5-Device-RAID-Poller
     SUBDIR += p5-Dir-Purge
     SUBDIR += p5-File-BackupCopy
@@ -1415,6 +1414,7 @@
     SUBDIR += sysvbanner
     SUBDIR += szyszka
     SUBDIR += tai64nfrac
+    SUBDIR += tailspin
     SUBDIR += tarsnap
     SUBDIR += tarsnap-gui
     SUBDIR += tarsnap-periodic
@@ -1478,6 +1478,7 @@
     SUBDIR += u-boot-bananapi
     SUBDIR += u-boot-bananapim2
     SUBDIR += u-boot-beaglebone
+    SUBDIR += u-boot-bhyve-arm64
     SUBDIR += u-boot-chip
     SUBDIR += u-boot-clearfog
     SUBDIR += u-boot-cubieboard
@@ -1645,6 +1646,7 @@
     SUBDIR += xin
     SUBDIR += xjobs
     SUBDIR += xmbmon
+    SUBDIR += xnvme
     SUBDIR += xorriso
     SUBDIR += xosview
     SUBDIR += xpipe

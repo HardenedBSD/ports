@@ -1,12 +1,13 @@
 PORTNAME=	golly
 DISTVERSION=	4.2
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-src
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Conway's Game of Life and other cellular automata
-WWW=		http://golly.sourceforge.net/
+WWW=		https://golly.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/../docs/License.html

@@ -1,19 +1,23 @@
 PORTNAME=	mailsync
 PORTVERSION=	5.2.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Keeps collection of mailboxes synchronized
-WWW=		http://mailsync.sourceforge.net/
+WWW=		https://mailsync.sourceforge.net/
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libc-client4.so:mail/cclient
+DEPRECATED=	Depends on outdated mail/cclient
+EXPIRATION_DATE=	2023-12-16
+
+LIB_DEPENDS=	libc-client.so:mail/panda-cclient
 
 USES=		autoreconf gmake ssl
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-c-client=${LOCALBASE} \
 		--with-openssl=${OPENSSLBASE}

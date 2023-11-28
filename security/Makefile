@@ -146,6 +146,7 @@
     SUBDIR += easy-rsa
     SUBDIR += enchive
     SUBDIR += eschalot
+    SUBDIR += evilginx2
     SUBDIR += expiretable
     SUBDIR += f-prot
     SUBDIR += fakebo
@@ -159,8 +160,6 @@
     SUBDIR += fizz
     SUBDIR += fl0p
     SUBDIR += flawfinder
-    SUBDIR += fpc-gnutls
-    SUBDIR += fpc-openssl
     SUBDIR += fprint_demo
     SUBDIR += fprintd
     SUBDIR += fragroute
@@ -426,6 +425,7 @@
     SUBDIR += openssl-unsafe
     SUBDIR += openssl111
     SUBDIR += openssl31
+    SUBDIR += openssl31-quictls
     SUBDIR += openssl32
     SUBDIR += openvas
     SUBDIR += openvpn
@@ -947,6 +947,7 @@
     SUBDIR += py-keyrings.alt
     SUBDIR += py-krb5
     SUBDIR += py-libnacl
+    SUBDIR += py-liboqs-python
     SUBDIR += py-m2crypto
     SUBDIR += py-maec
     SUBDIR += py-merkletools
@@ -962,6 +963,7 @@
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
+    SUBDIR += py-omemo-dr
     SUBDIR += py-onlykey
     SUBDIR += py-openssl
     SUBDIR += py-oscrypto
@@ -1094,7 +1096,6 @@
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor-rails61
     SUBDIR += rubygem-devise-two-factor-rails70
-    SUBDIR += rubygem-devise-two-factor40-rails70
     SUBDIR += rubygem-devise-two-factor41-rails70
     SUBDIR += rubygem-devise_pam_authenticatable2
     SUBDIR += rubygem-devise_pam_authenticatable2-rails61

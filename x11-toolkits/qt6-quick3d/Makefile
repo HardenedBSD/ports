@@ -8,7 +8,8 @@ COMMENT=	Provides a high-level API for creating 3D content or UIs based on Qt Qu
 WWW=		https://qt-project.org
 
 BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
-LIB_DEPENDS=	libdouble-conversion.so:devel/double-conversion \
+LIB_DEPENDS=	libassimp.so:multimedia/assimp \
+		libdouble-conversion.so:devel/double-conversion \
 		libexpat.so:textproc/expat2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
@@ -28,7 +29,5 @@ USE_GNOME=	glib20
 USE_QT=		base declarative quicktimeline shadertools
 USE_XORG=	x11 xau xcb xdmcp
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
-
-INSTALL_TARGET=	install
 
 .include <bsd.port.mk>

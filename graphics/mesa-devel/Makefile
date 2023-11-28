@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	23.3-branchpoint-6
-DISTVERSIONSUFFIX=	-g8cfb46e27df
+DISTVERSION=	23.3-branchpoint-389
+DISTVERSIONSUFFIX=	-ge51acb65acf
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -153,13 +153,6 @@ X11_MESON_OFF=		-Dglx=disabled -Dxlib-lease=disabled
 ZSTD_DESC=		Use ZSTD for shader cache
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 ZSTD_MESON_ENABLED=	zstd
-
-.include <bsd.port.options.mk>
-
-# Ignore Mk/bsd.default-versions.mk but respect make.conf(5)
-.if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*}
-LLVM_DEFAULT=	15 # chase mesa-dri
-.endif
 
 post-patch:
 # Extract (snapshot) version from the port instead of empty string

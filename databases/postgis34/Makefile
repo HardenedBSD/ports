@@ -1,5 +1,5 @@
 PORTNAME=	postgis
-DISTVERSION=	3.4.0
+DISTVERSION=	3.4.1
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 PKGNAMESUFFIX=	34
@@ -48,7 +48,8 @@ JSON_CONFIGURE_WITH=		json
 JSON_LIB_DEPENDS=		libjson-c.so:devel/json-c
 LOADERGUI_CONFIGURE_WITH=	gui
 LOADERGUI_LIB_DEPENDS=		libprotobuf-c.so:devel/protobuf-c
-LOADERGUI_USE=			GNOME=desktop-file-utils gtk20
+LOADERGUI_USE=			GNOME=gtk20
+LOADERGUI_USES=			desktop-file-utils
 NLS_CONFIGURE_WITH=		nls
 NLS_USES=			gettext
 PROTOBUF_CONFIGURE_WITH=	protobuf

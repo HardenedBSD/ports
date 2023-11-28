@@ -35,6 +35,7 @@
     SUBDIR += coffeescript
     SUBDIR += colm
     SUBDIR += cparser
+    SUBDIR += crumb
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
     SUBDIR += cython
@@ -72,19 +73,10 @@
     SUBDIR += ferite
     SUBDIR += ficl
     SUBDIR += fpc
-    SUBDIR += fpc-base
+    SUBDIR += fpc-devel
+    SUBDIR += fpc-devel-source
     SUBDIR += fpc-docs
-    SUBDIR += fpc-lua
-    SUBDIR += fpc-pastojs
-    SUBDIR += fpc-rexx
-    SUBDIR += fpc-rtl-console
-    SUBDIR += fpc-rtl-extra
-    SUBDIR += fpc-rtl-generics
-    SUBDIR += fpc-rtl-objpas
-    SUBDIR += fpc-rtl-unicode
     SUBDIR += fpc-source
-    SUBDIR += fpc-units
-    SUBDIR += fpc-utils
     SUBDIR += frawk
     SUBDIR += fsharp
     SUBDIR += fth
@@ -146,6 +138,7 @@
     SUBDIR += hs-unlambda
     SUBDIR += huc
     SUBDIR += icc
+    SUBDIR += inko
     SUBDIR += intel-compute-runtime
     SUBDIR += intercal
     SUBDIR += io
@@ -220,6 +213,7 @@
     SUBDIR += njs
     SUBDIR += nll
     SUBDIR += nqc
+    SUBDIR += numbat
     SUBDIR += nwcc
     SUBDIR += nx
     SUBDIR += nyan

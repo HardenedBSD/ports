@@ -6,10 +6,13 @@ MASTER_SITES=	SF \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extremely portable perl-based make utility
-WWW=		http://tmake.sourceforge.net/
+WWW=		https://tmake.sourceforge.net/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Last release in 2004 and dead upstream, superseded by qmake
+EXPIRATION_DATE=2023-12-31
 
 USES=		perl5 shebangfix zip
 

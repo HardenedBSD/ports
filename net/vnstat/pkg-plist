@@ -2,7 +2,7 @@ bin/vnstat
 %%GUI%%bin/vnstati
 @sample etc/vnstat.conf.sample
 sbin/vnstatd
-share/man/man1/vnstat.1.gz
-%%GUI%%share/man/man1/vnstati.1.gz
-share/man/man5/vnstat.conf.5.gz
-share/man/man8/vnstatd.8.gz
+man/man1/vnstat.1.gz
+%%GUI%%man/man1/vnstati.1.gz
+man/man5/vnstat.conf.5.gz
+man/man8/vnstatd.8.gz

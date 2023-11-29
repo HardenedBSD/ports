@@ -6382,7 +6382,6 @@
     SUBDIR += rubygem-aws-sdk-route53recoveryreadiness
     SUBDIR += rubygem-aws-sdk-route53resolver
     SUBDIR += rubygem-aws-sdk-s3
-    SUBDIR += rubygem-aws-sdk-s31121
     SUBDIR += rubygem-aws-sdk-s3control
     SUBDIR += rubygem-aws-sdk-s3outposts
     SUBDIR += rubygem-aws-sdk-sagemaker
@@ -6736,7 +6735,6 @@
     SUBDIR += rubygem-devise-rails60
     SUBDIR += rubygem-devise-rails61
     SUBDIR += rubygem-devise-rails70
-    SUBDIR += rubygem-devise48-rails70
     SUBDIR += rubygem-did_you_mean
     SUBDIR += rubygem-dig_rb
     SUBDIR += rubygem-directory_watcher

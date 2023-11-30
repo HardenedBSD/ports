@@ -19,10 +19,14 @@ WWW=			https://www.gnu.org/software/bash/
 LICENSE=		GPLv3+
 LICENSE_FILE=		${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 # STATIC option requires special hardening treatment, see below.
 USE_HARDENING=		safestack
 
 USES=			bison cpe iconv makeinfo pathfix localbase
+=======
+USES=			bison cpe iconv localbase pathfix
+>>>>>>> internal/freebsd/main
 CPE_VENDOR=		gnu
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-bash-malloc \

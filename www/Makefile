@@ -276,8 +276,6 @@
     SUBDIR += jericho-html
     SUBDIR += jesred
     SUBDIR += jetty10
-    SUBDIR += jetty8
-    SUBDIR += jetty9
     SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
@@ -325,7 +323,6 @@
     SUBDIR += links
     SUBDIR += links1
     SUBDIR += linux-c7-qtwebkit
-    SUBDIR += linux-opera
     SUBDIR += linux-widevine-cdm
     SUBDIR += litmus
     SUBDIR += ljdeps
@@ -343,7 +340,6 @@
     SUBDIR += lynx
     SUBDIR += lynx-current
     SUBDIR += lzr
-    SUBDIR += madsonic
     SUBDIR += man2web
     SUBDIR += manpageblog
     SUBDIR += mathjax
@@ -440,7 +436,6 @@
     SUBDIR += moodle42
     SUBDIR += moodle43
     SUBDIR += morty
-    SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
     SUBDIR += mybb
@@ -2449,7 +2444,6 @@
     SUBDIR += varnish-libvmod-querystring
     SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
-    SUBDIR += varnish-nagios
     SUBDIR += varnish6
     SUBDIR += varnish7
     SUBDIR += varnish_exporter

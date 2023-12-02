@@ -260,6 +260,7 @@
     SUBDIR += keyprint
     SUBDIR += keysmith
     SUBDIR += kf5-kdesu
+    SUBDIR += kf6-kdesu
     SUBDIR += kgpg
     SUBDIR += kickpass
     SUBDIR += klee
@@ -1318,7 +1319,6 @@
     SUBDIR += tls-check
     SUBDIR += tlsc
     SUBDIR += tor
-    SUBDIR += tor-devel
     SUBDIR += totp-cli
     SUBDIR += tpm-quote-tools
     SUBDIR += tpm-tools

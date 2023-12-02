@@ -533,7 +533,6 @@
     SUBDIR += gstat-rs
     SUBDIR += gstopd
     SUBDIR += gstreamer1-plugins-cdio
-    SUBDIR += gtk-imonc
     SUBDIR += hammer2
     SUBDIR += handlr
     SUBDIR += hardlink
@@ -637,6 +636,9 @@
     SUBDIR += keyd
     SUBDIR += kf5-baloo
     SUBDIR += kf5-kwallet
+    SUBDIR += kf6-baloo
+    SUBDIR += kf6-kuserfeedback
+    SUBDIR += kf6-kwallet
     SUBDIR += kfloppy
     SUBDIR += khelpcenter
     SUBDIR += kiconvtool
@@ -1037,6 +1039,7 @@
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt
+    SUBDIR += polkit-qt-1-devel
     SUBDIR += pot
     SUBDIR += potnet
     SUBDIR += poweralertd

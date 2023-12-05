@@ -26,12 +26,7 @@ USE_KDE=	ecm
 USE_QT=		base declarative positioning webchannel webengine
 USE_XORG=	ice sm x11 xcb xext
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/zeal
 PAGEEXEC_DISABLE=	bin/zeal
 
-GH_ACCOUNT=	zealdocs
-
-=======
->>>>>>> internal/freebsd/main
 .include <bsd.port.mk>

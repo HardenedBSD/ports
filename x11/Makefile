@@ -411,6 +411,7 @@
     SUBDIR += swayimg
     SUBDIR += swaylock
     SUBDIR += swaylock-effects
+    SUBDIR += swaylock-plugin
     SUBDIR += swaync
     SUBDIR += swayr
     SUBDIR += swayrbar

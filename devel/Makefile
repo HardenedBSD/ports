@@ -344,6 +344,7 @@
     SUBDIR += cargo-c
     SUBDIR += cargo-depgraph
     SUBDIR += cargo-generate
+    SUBDIR += cargo-leptos
     SUBDIR += cargo-mutants
     SUBDIR += cask
     SUBDIR += catch
@@ -6863,7 +6864,6 @@
     SUBDIR += rubygem-fog-json
     SUBDIR += rubygem-font-awesome-rails
     SUBDIR += rubygem-font-awesome-rails-rails5
-    SUBDIR += rubygem-font-awesome-rails-rails50
     SUBDIR += rubygem-font-awesome-rails-rails52
     SUBDIR += rubygem-font-awesome-rails-rails60
     SUBDIR += rubygem-foreigner

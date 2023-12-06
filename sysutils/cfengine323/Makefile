@@ -1,11 +1,14 @@
 PORTNAME=	cfengine
-PORTVERSION=	3.20.0
+DISTVERSION=	3.23.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://s3.amazonaws.com/cfengine-package-repos/tarballs/
+DISTNAME=	${PORTNAME}-community-${DISTVERSION}
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Systems administration tool for networks
 WWW=		https://cfengine.com/
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
 LICENSE=	GPLv3
 
@@ -13,11 +16,8 @@ CPE_VENDOR=	gnu
 
 CONFLICTS=	cfengine cfengine3[0-9] cfengine3[0-9][0-9]
 .if !defined(MASTERDIR)
-PKGNAMESUFFIX=	320
+PKGNAMESUFFIX=	323
 .endif
-
-DEPRECATED=	No longer supported by upstream
-EXPIRATION_DATE=	2024-03-01
 
 FETCH_BEFORE_ARGS=	-o ${DISTDIR}/${DISTFILES}
 

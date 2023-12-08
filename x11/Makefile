@@ -382,6 +382,7 @@
     SUBDIR += setlayout
     SUBDIR += setxkbmap
     SUBDIR += sfwbar
+    SUBDIR += shaderbg
     SUBDIR += shikane
     SUBDIR += shotman
     SUBDIR += showkeys
@@ -477,6 +478,7 @@
     SUBDIR += wob
     SUBDIR += wofi
     SUBDIR += workrave
+    SUBDIR += wscreensaver
     SUBDIR += wshowkeys
     SUBDIR += wtype
     SUBDIR += wvkbd
@@ -565,6 +567,7 @@
     SUBDIR += xkbctrl
     SUBDIR += xkbevd
     SUBDIR += xkbind
+    SUBDIR += xkblayout-state
     SUBDIR += xkbprint
     SUBDIR += xkbset
     SUBDIR += xkbutils

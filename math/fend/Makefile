@@ -1,124 +1,113 @@
-PORTNAME=	convco
+PORTNAME=	fend
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.0
-CATEGORIES=	devel
+DISTVERSION=	1.3.3-2
+DISTVERSIONSUFFIX=	-g2d731f1
+CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
-COMMENT=	Conventional commit CLI
-WWW=		https://github.com/convco/convco
+COMMENT=	Arbitrary-precision unit-aware calculator
+WWW=		https://printfn.github.io/fend
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 USES=		cargo
-USE_GITHUB=	yes
 
-CARGO_CRATES=	addr2line-0.21.0 \
-		adler-1.0.2 \
-		aho-corasick-1.1.2 \
-		anstream-0.6.5 \
-		anstyle-1.0.4 \
-		anstyle-parse-0.2.3 \
-		anstyle-query-1.0.2 \
-		anstyle-wincon-3.0.2 \
-		anyhow-1.0.75 \
-		backtrace-0.3.69 \
+USE_GITHUB=	yes
+GH_ACCOUNT=	printfn
+
+CARGO_CRATES=	base64-0.21.5 \
 		bitflags-1.3.2 \
 		bitflags-2.4.1 \
-		block-buffer-0.10.4 \
+		bumpalo-3.14.0 \
 		cc-1.0.83 \
 		cfg-if-1.0.0 \
-		clap-4.4.11 \
-		clap_builder-4.4.11 \
-		clap_complete-4.4.4 \
-		clap_derive-4.4.7 \
-		clap_lex-0.6.0 \
-		cmake-0.1.50 \
-		colorchoice-1.0.0 \
+		clipboard-win-5.0.0 \
 		console-0.15.7 \
-		cpufeatures-0.2.11 \
-		crypto-common-0.1.6 \
+		core-foundation-0.9.4 \
+		core-foundation-sys-0.8.6 \
 		ctrlc-3.4.1 \
-		deranged-0.3.10 \
-		dialoguer-0.11.0 \
-		digest-0.10.7 \
 		encode_unicode-0.3.6 \
+		endian-type-0.1.2 \
 		equivalent-1.0.1 \
 		errno-0.3.8 \
+		error-code-3.0.0 \
 		fastrand-2.0.1 \
+		fd-lock-4.0.1 \
+		foreign-types-0.3.2 \
+		foreign-types-shared-0.1.1 \
 		form_urlencoded-1.2.1 \
-		generic-array-0.14.7 \
-		gimli-0.28.1 \
-		git2-0.18.1 \
-		handlebars-4.5.0 \
+		getrandom-0.2.11 \
 		hashbrown-0.14.3 \
-		heck-0.4.1 \
+		home-0.5.5 \
 		idna-0.5.0 \
 		indexmap-2.1.0 \
-		itoa-1.0.9 \
-		jobserver-0.1.27 \
+		instant-0.1.12 \
+		js-sys-0.3.66 \
 		lazy_static-1.4.0 \
 		libc-0.2.150 \
-		libgit2-sys-0.16.1+1.7.1 \
-		libssh2-sys-0.3.0 \
-		libz-sys-1.1.12 \
 		linux-raw-sys-0.4.12 \
 		log-0.4.20 \
 		memchr-2.6.4 \
-		miniz_oxide-0.7.1 \
+		native-tls-0.2.11 \
+		nibble_vec-0.1.0 \
 		nix-0.27.1 \
-		object-0.32.1 \
 		once_cell-1.19.0 \
+		openssl-0.10.61 \
+		openssl-macros-0.1.1 \
+		openssl-probe-0.1.5 \
 		openssl-sys-0.9.97 \
 		percent-encoding-2.3.1 \
-		pest-2.7.5 \
-		pest_derive-2.7.5 \
-		pest_generator-2.7.5 \
-		pest_meta-2.7.5 \
 		pkg-config-0.3.27 \
-		powerfmt-0.2.0 \
+		ppv-lite86-0.2.17 \
 		proc-macro2-1.0.70 \
 		quote-1.0.33 \
+		radix_trie-0.2.1 \
+		rand-0.8.5 \
+		rand_chacha-0.3.1 \
+		rand_core-0.6.4 \
 		redox_syscall-0.4.1 \
-		regex-1.10.2 \
-		regex-automata-0.4.3 \
-		regex-syntax-0.8.2 \
-		rustc-demangle-0.1.23 \
+		ring-0.17.7 \
 		rustix-0.38.27 \
-		ryu-1.0.15 \
-		same-file-1.0.6 \
-		semver-1.0.20 \
+		rustls-0.21.9 \
+		rustls-webpki-0.101.7 \
+		rustyline-13.0.0 \
+		schannel-0.1.22 \
+		sct-0.7.1 \
+		security-framework-2.9.2 \
+		security-framework-sys-2.9.1 \
 		serde-1.0.193 \
 		serde_derive-1.0.193 \
-		serde_json-1.0.108 \
-		serde_yaml-0.9.27 \
-		sha2-0.10.8 \
-		shell-words-1.1.0 \
-		strsim-0.10.0 \
+		serde_spanned-0.6.4 \
+		smallvec-1.11.2 \
+		spin-0.9.8 \
 		syn-2.0.39 \
 		tempfile-3.8.1 \
-		thiserror-1.0.50 \
-		thiserror-impl-1.0.50 \
-		time-0.3.30 \
-		time-core-0.1.2 \
-		time-macros-0.2.15 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
-		typenum-1.17.0 \
-		ucd-trie-0.1.6 \
+		toml-0.8.8 \
+		toml_datetime-0.6.5 \
+		toml_edit-0.21.0 \
 		unicode-bidi-0.3.14 \
 		unicode-ident-1.0.12 \
 		unicode-normalization-0.1.22 \
+		unicode-segmentation-1.10.1 \
 		unicode-width-0.1.11 \
-		unsafe-libyaml-0.2.9 \
+		untrusted-0.9.0 \
+		ureq-2.9.1 \
 		url-2.5.0 \
 		utf8parse-0.2.1 \
 		vcpkg-0.2.15 \
-		version_check-0.9.4 \
-		walkdir-2.4.0 \
+		wasi-0.11.0+wasi-snapshot-preview1 \
+		wasm-bindgen-0.2.89 \
+		wasm-bindgen-backend-0.2.89 \
+		wasm-bindgen-macro-0.2.89 \
+		wasm-bindgen-macro-support-0.2.89 \
+		wasm-bindgen-shared-0.2.89 \
+		web-sys-0.3.66 \
+		webpki-roots-0.25.3 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
-		winapi-util-0.1.6 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
 		windows-sys-0.45.0 \
 		windows-sys-0.48.0 \
@@ -147,14 +136,17 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		windows_x86_64_msvc-0.42.2 \
 		windows_x86_64_msvc-0.48.5 \
 		windows_x86_64_msvc-0.52.0 \
-		zeroize-1.7.0
+		winnow-0.5.26
 
 OPENSSLINC=	/usr/include
 OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+do-install:
+	# workaround for error: found a virtual manifest at `xx` instead of a package manifest
+	${INSTALL_PROGRAM} \
+		${WRKDIR}/target/*/release/${PORTNAME} \
+		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>

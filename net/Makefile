@@ -1455,6 +1455,7 @@
     SUBDIR += shmux
     SUBDIR += sie-nmsg
     SUBDIR += simpleproxy
+    SUBDIR += sing-box
     SUBDIR += siproxd
     SUBDIR += sipsak
     SUBDIR += skstream

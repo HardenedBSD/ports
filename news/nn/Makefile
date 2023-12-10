@@ -1,6 +1,6 @@
 PORTNAME=	nn
 PORTVERSION=	6.7.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.nndev.org/pub/nn-${PORTVERSION:R}/
 
@@ -8,11 +8,14 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Menu based USENET newsreader
 WWW=		http://www.nndev.org/
 
+<<<<<<< HEAD
 BROKEN_aarch64=	Fails to link: missing sbrk
 BROKEN_riscv64=	Fails to link: missing sbrk
 
 USE_HARDENING=	pie:off
 
+=======
+>>>>>>> internal/freebsd/main
 SUB_FILES=	pkg-message
 
 USES=		tar:Z

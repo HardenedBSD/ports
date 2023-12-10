@@ -1,5 +1,6 @@
 PORTNAME=	gitlab-workhorse
-PORTVERSION=	16.5.1
+PORTVERSION=	16.6.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
@@ -10,7 +11,7 @@ WWW=		https://gitlab.com/gitlab-org/gitlab-workhorse
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-BUILD_DEPENDS=	git>=2.39.2:devel/git
+BUILD_DEPENDS=	git>=2.42.0:devel/git
 RUN_DEPENDS=	p5-Image-ExifTool>=0:graphics/p5-Image-ExifTool
 
 USES=		gmake go:modules,no_targets

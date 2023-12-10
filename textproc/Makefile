@@ -78,7 +78,6 @@
     SUBDIR += bib2html
     SUBDIR += bibclean
     SUBDIR += bibtex2html
-    SUBDIR += bibtool
     SUBDIR += bibutils
     SUBDIR += biodiff
     SUBDIR += bn-aspell
@@ -354,6 +353,9 @@
     SUBDIR += kf5-kcodecs
     SUBDIR += kf5-sonnet
     SUBDIR += kf5-syntax-highlighting
+    SUBDIR += kf6-kcodecs
+    SUBDIR += kf6-sonnet
+    SUBDIR += kf6-syntax-highlighting
     SUBDIR += kibana8
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
@@ -1865,7 +1867,6 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge3
-    SUBDIR += rubygem-rouge41
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt

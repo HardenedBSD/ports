@@ -1,6 +1,7 @@
 PORTNAME=	mesa
-DISTVERSION=	23.3-branchpoint-389
-DISTVERSIONSUFFIX=	-ge51acb65acf
+DISTVERSION=	23.3-branchpoint-2122
+DISTVERSIONSUFFIX=	-gd157cd7442a
+PORTREVISION=	1
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -45,7 +46,7 @@ MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dvalgrind=disabled \
 		-Dglvnd=true \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
-		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc \
+		-Dvideo-codecs=all \
 		${NULL}
 LDFLAGS+=	-Wl,--undefined-version # https://gitlab.freedesktop.org/mesa/mesa/-/issues/8003
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
@@ -122,9 +123,7 @@ OPENCL_MESON_TRUE=	gallium-rusticl
 OPENCL_MESON_ON=	-Dgallium-opencl=icd
 OPENCL_MESON_OFF=	-Dgallium-opencl=disabled
 OPENCL_VARS=		LLVM_USES=llvm:15,lib,noexport # chase libclc + rust (LTO)
-.if ${MACHINE_ARCH} != aarch64 # XXX missing in ONLY_FOR_ARCHS
 OPENCL_VARS+=		COINST_RUN_DEPENDS+=clover>0:lang/clover # ICD
-.endif
 OPENCL_IMPLIES=		LLVM ${"${PORT_OPTIONS:Miris}":?iris:radeonsi} # any from OPTIONS_GROUP_GALLIUM
 
 VAAPI_DESC=		Hardware encoding/decoding (only r600, radeonsi)

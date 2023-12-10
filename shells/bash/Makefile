@@ -22,7 +22,7 @@ LICENSE_FILE=		${WRKSRC}/COPYING
 # STATIC option requires special hardening treatment, see below.
 USE_HARDENING=		safestack
 
-USES=			bison cpe iconv makeinfo pathfix localbase
+USES=			bison cpe iconv localbase pathfix
 CPE_VENDOR=		gnu
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-bash-malloc \

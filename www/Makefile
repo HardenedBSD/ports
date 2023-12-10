@@ -276,8 +276,6 @@
     SUBDIR += jericho-html
     SUBDIR += jesred
     SUBDIR += jetty10
-    SUBDIR += jetty8
-    SUBDIR += jetty9
     SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
@@ -325,7 +323,6 @@
     SUBDIR += links
     SUBDIR += links1
     SUBDIR += linux-c7-qtwebkit
-    SUBDIR += linux-opera
     SUBDIR += linux-widevine-cdm
     SUBDIR += litmus
     SUBDIR += ljdeps
@@ -343,7 +340,6 @@
     SUBDIR += lynx
     SUBDIR += lynx-current
     SUBDIR += lzr
-    SUBDIR += madsonic
     SUBDIR += man2web
     SUBDIR += manpageblog
     SUBDIR += mathjax
@@ -440,7 +436,6 @@
     SUBDIR += moodle42
     SUBDIR += moodle43
     SUBDIR += morty
-    SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
     SUBDIR += mybb
@@ -1429,6 +1424,7 @@
     SUBDIR += phpvirtualbox-legacy
     SUBDIR += piwigo
     SUBDIR += plasma5-plasma-browser-integration
+    SUBDIR += plasma6-plasma-browser-integration
     SUBDIR += pmwiki
     SUBDIR += pnews
     SUBDIR += podcastamatic
@@ -1631,6 +1627,7 @@
     SUBDIR += py-django32
     SUBDIR += py-django41
     SUBDIR += py-django42
+    SUBDIR += py-django50
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
@@ -1638,6 +1635,7 @@
     SUBDIR += py-djangorestframework-csv
     SUBDIR += py-djangorestframework-filters
     SUBDIR += py-djangorestframework-xml
+    SUBDIR += py-djangosaml2
     SUBDIR += py-draftjs-exporter
     SUBDIR += py-drf-spectacular
     SUBDIR += py-drf-spectacular-sidecar
@@ -2347,6 +2345,7 @@
     SUBDIR += suphp
     SUBDIR += surf
     SUBDIR += swiggle
+    SUBDIR += sws
     SUBDIR += tcexam
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
@@ -2448,7 +2447,6 @@
     SUBDIR += varnish-libvmod-querystring
     SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
-    SUBDIR += varnish-nagios
     SUBDIR += varnish6
     SUBDIR += varnish7
     SUBDIR += varnish_exporter
@@ -2502,7 +2500,6 @@
     SUBDIR += wuzz
     SUBDIR += wwwoffle
     SUBDIR += xapian-omega
-    SUBDIR += xapian-omega12
     SUBDIR += xcaddy
     SUBDIR += xfce4-smartbookmark-plugin
     SUBDIR += xh

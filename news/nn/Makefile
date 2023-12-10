@@ -8,14 +8,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Menu based USENET newsreader
 WWW=		http://www.nndev.org/
 
-<<<<<<< HEAD
-BROKEN_aarch64=	Fails to link: missing sbrk
-BROKEN_riscv64=	Fails to link: missing sbrk
-
 USE_HARDENING=	pie:off
 
-=======
->>>>>>> internal/freebsd/main
 SUB_FILES=	pkg-message
 
 USES=		tar:Z

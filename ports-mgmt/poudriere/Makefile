@@ -1,6 +1,5 @@
 PORTNAME=	poudriere
-DISTVERSION=	3.3.7
-PORTREVISION=	4
+DISTVERSION=	3.4.0
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	LOCAL/bdrewery/${PORTNAME}/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
@@ -47,13 +46,16 @@ PLIST_SUB+=	RM="@comment "
 .endif
 
 post-patch:
-	${CP} -f ${WRKSRC}/src/bin/poudriere ${WRKSRC}/poudriere
 	${REINPLACE_CMD} \
 	    -e "s,^\(POUDRIERE_VERSION\)=.*,\1='${PKGVERSION}'," \
+<<<<<<< HEAD
 	    ${WRKSRC}/poudriere
 	${REINPLACE_CMD} '/.PHONY: poudriere/d' ${WRKSRC}/Makefile.*
 	${REINPLACE_CMD} '/linuxelf:linux/d' \
 	    ${WRKSRC}/src/share/poudriere/common.sh
+=======
+	    ${WRKSRC}/src/bin/poudriere.in
+>>>>>>> internal/freebsd/main
 
 post-install:
 	${LN} -fs ${LOCALBASE}/share/freebsd/MANIFESTS \

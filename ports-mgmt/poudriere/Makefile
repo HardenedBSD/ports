@@ -48,14 +48,7 @@ PLIST_SUB+=	RM="@comment "
 post-patch:
 	${REINPLACE_CMD} \
 	    -e "s,^\(POUDRIERE_VERSION\)=.*,\1='${PKGVERSION}'," \
-<<<<<<< HEAD
-	    ${WRKSRC}/poudriere
-	${REINPLACE_CMD} '/.PHONY: poudriere/d' ${WRKSRC}/Makefile.*
-	${REINPLACE_CMD} '/linuxelf:linux/d' \
-	    ${WRKSRC}/src/share/poudriere/common.sh
-=======
 	    ${WRKSRC}/src/bin/poudriere.in
->>>>>>> internal/freebsd/main
 
 post-install:
 	${LN} -fs ${LOCALBASE}/share/freebsd/MANIFESTS \

@@ -966,6 +966,10 @@
     SUBDIR += rubygem-globalid-rails61
     SUBDIR += rubygem-globalid-rails70
     SUBDIR += rubygem-globalid-rails71
+    SUBDIR += rubygem-google-cloud-datastore
+    SUBDIR += rubygem-google-cloud-datastore-v1
+    SUBDIR += rubygem-google-cloud-firestore
+    SUBDIR += rubygem-google-cloud-firestore-v1
     SUBDIR += rubygem-her
     SUBDIR += rubygem-hiredis
     SUBDIR += rubygem-influxdb

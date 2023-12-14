@@ -1,5 +1,5 @@
 PORTNAME=	poudriere
-DISTVERSION=	3.3.7
+DISTVERSION=	3.4
 PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 PKGNAMESUFFIX=	-hbsd
@@ -22,7 +22,7 @@ USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=	hardenedbsd
 GL_PROJECT=	poudriere
-GL_COMMIT=	83ccf0e5a04ff0dbf18abdf69541d3c31098a6ee
+GL_COMMIT=	9d44cd9f0c4e032fab2d58f5cbe3460f94aca8a8
 
 GNU_CONFIGURE=	yes
 ETCDIR=		${PREFIX}/etc/poudriere.d
@@ -51,13 +51,9 @@ PLIST_SUB+=	RM="@comment "
 .endif
 
 post-patch:
-	${CP} -f ${WRKSRC}/src/bin/poudriere ${WRKSRC}/poudriere
 	${REINPLACE_CMD} \
 	    -e "s,^\(POUDRIERE_VERSION\)=.*,\1='${PKGVERSION}'," \
-	    ${WRKSRC}/poudriere
-	${REINPLACE_CMD} '/.PHONY: poudriere/d' ${WRKSRC}/Makefile.*
-	${REINPLACE_CMD} '/linuxelf:linux/d' \
-	    ${WRKSRC}/src/share/poudriere/common.sh
+	    ${WRKSRC}/src/bin/poudriere.in
 
 post-install-BASH-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/bash-completion/completions/

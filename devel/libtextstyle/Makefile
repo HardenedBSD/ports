@@ -3,7 +3,7 @@
 # discretion.
 
 PORTNAME=	libtextstyle
-PORTREVISION=	0
+PORTREVISION=	1
 
 COMMENT=	Text styling library
 WWW=		https://www.gnu.org/software/gettext/libtextstyle/manual/

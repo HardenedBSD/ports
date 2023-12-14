@@ -1,7 +1,8 @@
 PORTNAME=	vite_ruby
-PORTVERSION=	3.5.0
+PORTVERSION=	3.3.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	33
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Use Vite in Ruby and bring joy to your JavaScript experience

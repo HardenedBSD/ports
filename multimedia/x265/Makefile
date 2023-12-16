@@ -15,13 +15,9 @@ LICENSE_FILE=	${WRKSRC:H}/COPYING
 
 USES=		cmake compiler:c++14-lang cpe pathfix dos2unix
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CPE_VENDOR=		multicorewareinc
-=======
 CPE_VENDOR=	multicorewareinc
->>>>>>> internal/freebsd/main
 
 BB_TAG=		Release_${DISTVERSION}
 

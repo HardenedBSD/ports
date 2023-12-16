@@ -1,5 +1,6 @@
 PORTNAME=	jq
 DISTVERSION=	1.7.1
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/jqlang/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 
@@ -12,14 +13,14 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cpe gmake libtool
 CPE_VENDOR=	${PORTNAME}_project
-USE_CSTD=	gnu99
 USE_LDCONFIG=	yes
+
+USE_HARDENING=	cfi safestack
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-maintainer-mode \
 		--docdir="${DOCSDIR}"
 
-INSTALL_TARGET=	install-strip
 TEST_TARGET=	check # 3 tests fail, see https://github.com/jqlang/jq/issues/2885
 
 PORTDOCS=	*

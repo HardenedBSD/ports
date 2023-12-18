@@ -19,11 +19,9 @@ USES=		compiler gmake xorg
 USE_CXXSTD=	c++14
 USE_XORG=	x11 xext
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
-=======
+
 MAKE_ARGS=	CDEFS="${CXXFLAGS}"
->>>>>>> internal/freebsd/main
 
 CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
 CXXFLAGS_clang=	-Wno-c++11-narrowing

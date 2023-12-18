@@ -2508,7 +2508,6 @@
     SUBDIR += xoops
     SUBDIR += xsp
     SUBDIR += yabb
-    SUBDIR += yanopaste
     SUBDIR += yarn
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18

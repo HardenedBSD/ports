@@ -877,6 +877,7 @@
     SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
+    SUBDIR += rqlite
     SUBDIR += rrdman
     SUBDIR += rrdmerge
     SUBDIR += rrdtool

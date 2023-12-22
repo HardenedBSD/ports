@@ -1,7 +1,6 @@
 PORTNAME=	gitea
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.21.0
-PORTREVISION=	1
+DISTVERSION=	1.21.3
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/go-gitea/gitea/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/ \
 		https://dl.gitea.io/gitea/${DISTVERSION}/
@@ -22,7 +21,7 @@ USE_RC_SUBR=	gitea
 USE_HARDENING=	pie:golang relro:off retpoline:off
 
 EXTRACT_AFTER_ARGS=	--strip-components 1 # since 1.17.0, archive includes gitea-src-VERSION directory
-SUB_FILES+=	app.ini.sample
+SUB_FILES+=	app.ini.sample pkg-message
 SUB_LIST+=	GITUSER=${USERS}
 
 NO_WRKSUBDIR=	yes

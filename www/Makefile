@@ -1884,7 +1884,7 @@
     SUBDIR += py-xandikos
     SUBDIR += py-xyzservices
     SUBDIR += py-yarl
-    SUBDIR += py-yt-dlp-devel
+    SUBDIR += py-yt-dlp
     SUBDIR += pydio-cells
     SUBDIR += qdecoder
     SUBDIR += qhttpengine

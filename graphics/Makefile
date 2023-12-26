@@ -843,6 +843,7 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-actdiag
+    SUBDIR += py-albumentations
     SUBDIR += py-altair
     SUBDIR += py-asciitree
     SUBDIR += py-beziers
@@ -954,6 +955,7 @@
     SUBDIR += py-qpageview
     SUBDIR += py-qrencode
     SUBDIR += py-qt6-3d
+    SUBDIR += py-qudida
     SUBDIR += py-railroad-diagrams
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats

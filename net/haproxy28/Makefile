@@ -1,7 +1,9 @@
 PORTNAME=	haproxy
-DISTVERSION=	2.9.1
+DISTVERSION=	2.8.5
+PORTREVISION=	3
 CATEGORIES=	net www
-MASTER_SITES=	http://www.haproxy.org/download/2.9/src/
+PKGNAMESUFFIX=	28
+MASTER_SITES=	http://www.haproxy.org/download/2.8/src/
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
@@ -18,7 +20,7 @@ USE_RC_SUBR=	haproxy
 
 default_CONFLICTS_INSTALL=	haproxy-lua
 lua_CONFLICTS_INSTALL=		haproxy
-lua_PKGNAMESUFFIX=		-lua
+lua_PKGNAMESUFFIX=		28-lua
 
 CONFLICTS_INSTALL=	haproxy-devel haproxy17 haproxy18 haproxy20 haproxy22 haproxy23 haproxy24 haproxy25 haproxy26 haproxy27
 

@@ -32,11 +32,6 @@ USE_HARDENING=	pie:off
 
 CMAKE_ARGS=	-DMANDIR:STRING=share/man
 
-OPTIONS_DEFINE=		WEBKIT
-WEBKIT_DESC=		Use obsolete qt5-webkit to build Browser Plugin
-WEBKIT_USE=		QT=webkit
-WEBKIT_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Qt5WebKit
-
 PLIST_SUB=	VER=5.0
 
 .include <bsd.port.mk>

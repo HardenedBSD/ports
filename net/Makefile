@@ -130,7 +130,6 @@
     SUBDIR += downzemall
     SUBDIR += dpdk
     SUBDIR += dpdk-20.11
-    SUBDIR += dpdk-22.11
     SUBDIR += dpinger
     SUBDIR += drawterm
     SUBDIR += drive
@@ -244,6 +243,7 @@
     SUBDIR += haproxy25
     SUBDIR += haproxy26
     SUBDIR += haproxy27
+    SUBDIR += haproxy28
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster

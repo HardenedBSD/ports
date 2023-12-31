@@ -36,11 +36,7 @@ READLINE_CONFIGURE_ENABLE=	pcre2test-libreadline
 
 .include <bsd.port.options.mk>
 
-<<<<<<< HEAD
-.if ${ARCH} != "sparc64" && ${ARCH:Mmips64*} == "" && ${ARCH:Mriscv64*} == "" && ${PORT_OPTIONS:MJIT}
-=======
 .if ${ARCH:Mmips64*} == "" && ${ARCH:Mriscv64*} == ""
->>>>>>> internal/freebsd/main
 CONFIGURE_ARGS+=	--enable-jit
 .else
 CONFIGURE_ARGS+=	--disable-jit

@@ -53,18 +53,8 @@ PLIST_SUB=	SHLIB_MAJOR=${PORTVERSION:R} \
 
 CONFLICTS_INSTALL=	grpc[0-9][0-9][0-9]
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-.include <bsd.port.pre.mk>
-
-# Skip openssl.pc while using OpenSSL from base system on older FreeBSD versions which does not skip this file
-.if ${SSL_DEFAULT} == base && !exists(/usr/libdata/pkgconfig/openssl.pc)
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-openssl
-.endif
-
-=======
->>>>>>> internal/freebsd/main
 post-patch:
 # Clean up bundled libraries
 	@${RM} -r ${WRKSRC}/third_party/abseil-cpp/

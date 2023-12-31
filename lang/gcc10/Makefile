@@ -11,17 +11,13 @@ WWW=		https://gcc.gnu.org
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
-<<<<<<< HEAD
 USE_HARDENING=  pie:off relro:off retpoline:off
 
 BINARY_ALIAS= objdump=/usr/local/bin/objdump
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
 
-ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
-=======
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
->>>>>>> internal/freebsd/main
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \

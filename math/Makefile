@@ -844,8 +844,6 @@
     SUBDIR += petanque
     SUBDIR += petiga
     SUBDIR += pffft
-    SUBDIR += php80-bcmath
-    SUBDIR += php80-gmp
     SUBDIR += php81-bcmath
     SUBDIR += php81-gmp
     SUBDIR += php82-bcmath
@@ -1177,6 +1175,7 @@
     SUBDIR += suitesparse-cxsparse
     SUBDIR += suitesparse-graphblas
     SUBDIR += suitesparse-klu
+    SUBDIR += suitesparse-lagraph
     SUBDIR += suitesparse-ldl
     SUBDIR += suitesparse-mongoose
     SUBDIR += suitesparse-rbio
@@ -1229,7 +1228,6 @@
     SUBDIR += vtk9
     SUBDIR += wavelib
     SUBDIR += wcalc
-    SUBDIR += wfmath
     SUBDIR += wxmaxima
     SUBDIR += xblas
     SUBDIR += xfce4-calculator-plugin

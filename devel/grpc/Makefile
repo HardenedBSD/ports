@@ -53,6 +53,7 @@ PLIST_SUB=	SHLIB_MAJOR=${PORTVERSION:R} \
 
 CONFLICTS_INSTALL=	grpc[0-9][0-9][0-9]
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 .include <bsd.port.pre.mk>
@@ -62,6 +63,8 @@ USE_HARDENING=	pie:off relro:off
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-openssl
 .endif
 
+=======
+>>>>>>> internal/freebsd/main
 post-patch:
 # Clean up bundled libraries
 	@${RM} -r ${WRKSRC}/third_party/abseil-cpp/
@@ -75,4 +78,4 @@ post-patch:
 	@${RM} -r ${WRKSRC}/third_party/xxhash/
 	@${RM} -r ${WRKSRC}/third_party/zlib/
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

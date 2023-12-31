@@ -13,6 +13,7 @@ WWW=		https://www.mono-project.com/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+<<<<<<< HEAD
 MPROTECT_DISABLE+=	bin/mono
 MPROTECT_DISABLE+=	bin/mono-sgen
 MPROTECT_DISABLE+=	bin/mono-boehm
@@ -25,6 +26,9 @@ DISALLOW_MAP32BIT+=	bin/mono-boehm
 
 
 NOT_FOR_ARCHS=	riscv64 riscv64sf sparc64
+=======
+NOT_FOR_ARCHS=	riscv64 riscv64sf
+>>>>>>> internal/freebsd/main
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash \

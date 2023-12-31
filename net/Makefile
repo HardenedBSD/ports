@@ -33,7 +33,6 @@
     SUBDIR += aslookup
     SUBDIR += asterisk-chan_sccp
     SUBDIR += asterisk-g72x
-    SUBDIR += asterisk16
     SUBDIR += asterisk18
     SUBDIR += astron
     SUBDIR += avahi
@@ -285,7 +284,6 @@
     SUBDIR += ipgrab
     SUBDIR += ipinfo-cli
     SUBDIR += ipsumdump
-    SUBDIR += ipsvd
     SUBDIR += ipxe
     SUBDIR += irrd
     SUBDIR += isboot-kmod
@@ -641,7 +639,6 @@
     SUBDIR += p5-MaxMind-DB-Common
     SUBDIR += p5-MaxMind-DB-Reader
     SUBDIR += p5-MaxMind-DB-Reader-XS
-    SUBDIR += p5-MaxMind-DB-Writer
     SUBDIR += p5-Mojo-RabbitMQ-Client
     SUBDIR += p5-Net
     SUBDIR += p5-Net-ACME2
@@ -992,9 +989,6 @@
     SUBDIR += pecl-smbclient
     SUBDIR += pecl-xmlrpc
     SUBDIR += pen
-    SUBDIR += php80-ldap
-    SUBDIR += php80-soap
-    SUBDIR += php80-sockets
     SUBDIR += php81-ldap
     SUBDIR += php81-soap
     SUBDIR += php81-sockets
@@ -1192,7 +1186,6 @@
     SUBDIR += qt6-networkauth
     SUBDIR += quagga
     SUBDIR += quiche
-    SUBDIR += quiterss
     SUBDIR += quoted
     SUBDIR += rabbiteer
     SUBDIR += rabbitmq
@@ -1228,7 +1221,6 @@
     SUBDIR += rosenpass
     SUBDIR += rospo
     SUBDIR += routinator
-    SUBDIR += rp-pppoe
     SUBDIR += rpki-client
     SUBDIR += rscsi
     SUBDIR += rsplib
@@ -1468,7 +1460,6 @@
     SUBDIR += sing-box
     SUBDIR += siproxd
     SUBDIR += sipsak
-    SUBDIR += skstream
     SUBDIR += sl2tps
     SUBDIR += slackcat
     SUBDIR += slurm
@@ -1495,7 +1486,6 @@
     SUBDIR += spoofer
     SUBDIR += spread
     SUBDIR += spread-j
-    SUBDIR += spread4
     SUBDIR += sqtop
     SUBDIR += srelay
     SUBDIR += ss5
@@ -1547,7 +1537,6 @@
     SUBDIR += tdetect
     SUBDIR += termshark
     SUBDIR += tftpgrab
-    SUBDIR += thcrut
     SUBDIR += throttled
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
@@ -1625,9 +1614,7 @@
     SUBDIR += wifibox
     SUBDIR += wifibox-alpine
     SUBDIR += wifibox-core
-    SUBDIR += wireguard
     SUBDIR += wireguard-go
-    SUBDIR += wireguard-kmod
     SUBDIR += wireguard-tools
     SUBDIR += wireproxy
     SUBDIR += wireshark
@@ -1639,7 +1626,6 @@
     SUBDIR += wmping
     SUBDIR += wmwave
     SUBDIR += wmwifi
-    SUBDIR += wmwlmon
     SUBDIR += wol
     SUBDIR += wpa_supplicant_gui
     SUBDIR += wping

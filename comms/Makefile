@@ -94,12 +94,10 @@
     SUBDIR += mbelib
     SUBDIR += mgetty+sendfax
     SUBDIR += minicom
-    SUBDIR += mlan3
     SUBDIR += morse
     SUBDIR += multimon-ng
     SUBDIR += nanovna-saver
     SUBDIR += nasawash
-    SUBDIR += ncid
     SUBDIR += nec2c
     SUBDIR += nmealib
     SUBDIR += obexapp
@@ -167,7 +165,6 @@
     SUBDIR += scmxx
     SUBDIR += scrcpy
     SUBDIR += sdr++
-    SUBDIR += sdr-wspr
     SUBDIR += ser2net
     SUBDIR += serialoverip
     SUBDIR += sigdigger
@@ -201,7 +198,6 @@
     SUBDIR += trustedqsl
     SUBDIR += twpsk
     SUBDIR += uarduno
-    SUBDIR += uartlirc
     SUBDIR += uhd
     SUBDIR += uird
     SUBDIR += ujprog

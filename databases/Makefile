@@ -15,7 +15,6 @@
     SUBDIR += apache-commons-dbutils
     SUBDIR += arrow
     SUBDIR += arrow-glib
-    SUBDIR += ateam_mysql57_ldap_auth
     SUBDIR += autobackupmysql
     SUBDIR += automysqlbackup
     SUBDIR += bbdb
@@ -194,10 +193,7 @@
     SUBDIR += mysql-connector-j
     SUBDIR += mysql-connector-java51
     SUBDIR += mysql-connector-odbc-80
-    SUBDIR += mysql-udf
     SUBDIR += mysql2pgsql
-    SUBDIR += mysql57-client
-    SUBDIR += mysql57-server
     SUBDIR += mysql80-client
     SUBDIR += mysql80-server
     SUBDIR += mysql81-client
@@ -208,7 +204,6 @@
     SUBDIR += mysqlsla
     SUBDIR += mysqltcl
     SUBDIR += mysqltuner
-    SUBDIR += mysqlwsrep57-server
     SUBDIR += mytop
     SUBDIR += nagios-check_mongodb
     SUBDIR += nagios-check_postgres_replication
@@ -567,7 +562,6 @@
     SUBDIR += pglogical
     SUBDIR += pgmetrics
     SUBDIR += pgmodeler
-    SUBDIR += pgpool-II-40
     SUBDIR += pgpool-II-41
     SUBDIR += pgpool-II-42
     SUBDIR += pgpool-II-43
@@ -582,18 +576,6 @@
     SUBDIR += pguri
     SUBDIR += php-tarantool
     SUBDIR += php-xapian
-    SUBDIR += php80-dba
-    SUBDIR += php80-mysqli
-    SUBDIR += php80-odbc
-    SUBDIR += php80-pdo
-    SUBDIR += php80-pdo_dblib
-    SUBDIR += php80-pdo_firebird
-    SUBDIR += php80-pdo_mysql
-    SUBDIR += php80-pdo_odbc
-    SUBDIR += php80-pdo_pgsql
-    SUBDIR += php80-pdo_sqlite
-    SUBDIR += php80-pgsql
-    SUBDIR += php80-sqlite3
     SUBDIR += php81-dba
     SUBDIR += php81-mysqli
     SUBDIR += php81-odbc
@@ -664,14 +646,6 @@
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-wal2json
     SUBDIR += postgresql-zhparser
-    SUBDIR += postgresql11-client
-    SUBDIR += postgresql11-contrib
-    SUBDIR += postgresql11-docs
-    SUBDIR += postgresql11-pgtcl
-    SUBDIR += postgresql11-plperl
-    SUBDIR += postgresql11-plpython
-    SUBDIR += postgresql11-pltcl
-    SUBDIR += postgresql11-server
     SUBDIR += postgresql12-client
     SUBDIR += postgresql12-contrib
     SUBDIR += postgresql12-docs
@@ -1054,6 +1028,7 @@
     SUBDIR += sqliteodbc
     SUBDIR += sqlitestudio
     SUBDIR += sqlrelay
+    SUBDIR += sqlx-cli
     SUBDIR += sqsh
     SUBDIR += squirrel-sql
     SUBDIR += symphytum

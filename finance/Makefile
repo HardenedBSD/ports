@@ -125,10 +125,15 @@
     SUBDIR += py-python-bitcoinlib
     SUBDIR += py-python-obelisk
     SUBDIR += py-quantecon
+    SUBDIR += py-stocksera
     SUBDIR += py-stripe
     SUBDIR += py-ta-lib
     SUBDIR += py-technical
+    SUBDIR += py-thepassiveinvestor
+    SUBDIR += py-tradingview-ta
+    SUBDIR += py-valinvest
     SUBDIR += py-vatnumber
+    SUBDIR += py-yahooquery
     SUBDIR += py-yfinance
     SUBDIR += py-ystockquote
     SUBDIR += qtbitcointrader

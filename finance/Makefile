@@ -121,9 +121,12 @@
     SUBDIR += py-pandas-ta
     SUBDIR += py-pycoin
     SUBDIR += py-pycoingecko
+    SUBDIR += py-pythclient
     SUBDIR += py-python-binance
     SUBDIR += py-python-bitcoinlib
+    SUBDIR += py-python-coinmarketcap
     SUBDIR += py-python-obelisk
+    SUBDIR += py-pytrends
     SUBDIR += py-quantecon
     SUBDIR += py-stocksera
     SUBDIR += py-stripe

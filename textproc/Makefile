@@ -1298,6 +1298,8 @@
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
     SUBDIR += py-ansi2html
+    SUBDIR += py-ansicolors
+    SUBDIR += py-ansiwrap
     SUBDIR += py-anyascii
     SUBDIR += py-arabic-reshaper
     SUBDIR += py-asciinema
@@ -1606,6 +1608,7 @@
     SUBDIR += py-textract
     SUBDIR += py-texttable
     SUBDIR += py-textual
+    SUBDIR += py-textwrap3
     SUBDIR += py-three-merge
     SUBDIR += py-tiktoken
     SUBDIR += py-tinycss
@@ -1662,6 +1665,7 @@
     SUBDIR += randlm
     SUBDIR += rapidxml
     SUBDIR += raptor2
+    SUBDIR += rarian
     SUBDIR += rasqal
     SUBDIR += re-flex
     SUBDIR += re_graph

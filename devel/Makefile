@@ -960,6 +960,7 @@
     SUBDIR += hwloc
     SUBDIR += hwloc2
     SUBDIR += hyperscan
+    SUBDIR += hyprlang
     SUBDIR += ice
     SUBDIR += ice37
     SUBDIR += icestorm
@@ -7793,6 +7794,7 @@
     SUBDIR += tokei
     SUBDIR += tokio-console
     SUBDIR += toml11
+    SUBDIR += tomlplusplus
     SUBDIR += tortoisehg
     SUBDIR += tpasm
     SUBDIR += tradcpp

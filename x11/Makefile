@@ -628,6 +628,7 @@
     SUBDIR += xskyroot
     SUBDIR += xsm
     SUBDIR += xsnow
+    SUBDIR += xss-lock
     SUBDIR += xssstate
     SUBDIR += xstarroll
     SUBDIR += xstdcmap

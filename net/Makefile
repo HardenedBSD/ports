@@ -1036,6 +1036,7 @@
     SUBDIR += py-avahi
     SUBDIR += py-blobfile
     SUBDIR += py-bonsai
+    SUBDIR += py-casttube
     SUBDIR += py-cepa
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape

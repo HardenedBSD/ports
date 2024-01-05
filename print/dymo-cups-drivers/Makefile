@@ -13,14 +13,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libcupsimage.so:print/cups
 
-<<<<<<< HEAD
-USES=	localbase:ldflags
-
 USE_HARDENING=	pie:off
 
-=======
 USES=		localbase:ldflags
->>>>>>> internal/freebsd/main
 GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/dymo-cups-drivers-1.4.0.5

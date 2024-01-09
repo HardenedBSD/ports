@@ -1,0 +1,15 @@
+--- libivykis.posix.ver.orig	2024-01-09 17:42:43 UTC
++++ libivykis.posix.ver
+@@ -32,12 +32,6 @@ global:
+ 	iv_fd_pump_pump;
+ 	iv_fd_pump_is_done;
+ 
+-	# iv_inotify
+-	iv_inotify_register;
+-	iv_inotify_unregister;
+-	iv_inotify_watch_register;
+-	iv_inotify_watch_unregister;
+-
+ 	# iv_main
+ 	iv_init;
+ 	iv_inited;

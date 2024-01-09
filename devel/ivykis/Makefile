@@ -1,6 +1,7 @@
 PORTNAME=	ivykis
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.42.4
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	algernon@madhouse-project.org

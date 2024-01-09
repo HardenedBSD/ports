@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	4.4.26
+DISTVERSION=	4.4.27
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -30,6 +30,7 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 USES=		compiler:c++17-lang cpe python:build scons
 USE_RC_SUBR=	mongod
 
+<<<<<<< HEAD
 MPROTECT_DISABLE+=	bin/mongo
 MPROTECT_DISABLE+=	bin/mongod
 MPROTECT_DISABLE+=	bin/mongos
@@ -38,11 +39,15 @@ PAGEEXEC_DISABLE+=	bin/mongo
 PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
+=======
+# --module= disables "enterprise" module from src/mongo/db/modules/
+>>>>>>> internal/freebsd/main
 MAKE_ARGS=	--use-system-zlib \
 		--use-system-pcre \
 		--use-system-snappy \
 		--libc++ \
 		--cxx-std=17 \
+		--modules= \
 		--runtime-hardening=on \
 		-j ${MAKE_JOBS_NUMBER} \
 		--disable-warnings-as-errors \

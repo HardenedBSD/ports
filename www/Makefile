@@ -146,6 +146,7 @@
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += dot-http
+    SUBDIR += dpp
     SUBDIR += drill
     SUBDIR += drupal10
     SUBDIR += drupal7

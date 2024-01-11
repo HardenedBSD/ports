@@ -1,5 +1,5 @@
 PORTNAME=	pidgin
-PORTREVISION=	2
+PORTREVISION=	3
 
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Pidgin multi-protocol messaging client (GTK UI)
@@ -34,6 +34,6 @@ post-install-PERL-on:
 		${STAGEDIR}${PREFIX}/lib/pidgin/perl/auto/Pidgin/.packlist
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/pidgin.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/pidgin.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include "${MASTERDIR}/Makefile"

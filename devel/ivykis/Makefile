@@ -20,4 +20,7 @@ GH_ACCOUNT=	buytenh
 
 INSTALL_TARGET=	install-strip
 
+post-patch:
+	${REINPLACE_CMD} -e '/iv_inotify/d' ${WRKSRC}/libivykis.posix.ver
+
 .include <bsd.port.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	pdfcrack
 PORTVERSION=	0.16
+PORTREVISION=	1
 CATEGORIES=	security print
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -10,9 +11,13 @@ WWW=		https://sourceforge.net/projects/pdfcrack/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 PLIST_FILES=	bin/pdfcrack bin/pdfreader man/man1/pdfcrack.1.gz
+=======
+PLIST_FILES=	bin/pdfcrack bin/pdfreader share/man/man1/pdfcrack.1.gz
+>>>>>>> internal/freebsd/main
 ALL_TARGET=	pdfcrack pdfreader
 
 post-patch:
@@ -24,7 +29,7 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM} ${PLIST_FILES:Mbin/*:S,bin/,${WRKSRC}/,g} \
 		${STAGEDIR}${PREFIX}/bin/
-	${INSTALL_MAN} ${PLIST_FILES:Mman/*:S,man/man1/,${WRKSRC}/,g}	\
-		${STAGEDIR}${MAN1PREFIX}/man/man1/
+	${INSTALL_MAN} ${PLIST_FILES:Mshare/man/*:S,share/man/man1/,${WRKSRC}/,g}	\
+		${STAGEDIR}${PREFIX}/share/man/man1/
 
 .include <bsd.port.mk>

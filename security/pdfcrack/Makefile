@@ -11,13 +11,9 @@ WWW=		https://sourceforge.net/projects/pdfcrack/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-PLIST_FILES=	bin/pdfcrack bin/pdfreader man/man1/pdfcrack.1.gz
-=======
 PLIST_FILES=	bin/pdfcrack bin/pdfreader share/man/man1/pdfcrack.1.gz
->>>>>>> internal/freebsd/main
 ALL_TARGET=	pdfcrack pdfreader
 
 post-patch:

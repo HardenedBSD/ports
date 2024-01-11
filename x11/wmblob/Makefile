@@ -15,13 +15,9 @@ USE_XORG=	xpm
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-PLIST_FILES=	bin/wmblob man/man1/wmblob.1.gz
-=======
 PLIST_FILES=	bin/wmblob share/man/man1/wmblob.1.gz
->>>>>>> internal/freebsd/main
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/wmblob ${STAGEDIR}${PREFIX}/bin

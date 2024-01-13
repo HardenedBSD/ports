@@ -1,7 +1,8 @@
 PORTNAME=	xwayland
 DISTVERSIONPREFIX=	xorg-server-
-DISTVERSION=	21.0.99.1-643
-DISTVERSIONSUFFIX=	-ge6a94d4f9
+DISTVERSION=	21.0.99.1-644
+DISTVERSIONSUFFIX=	-gcad42fcb0
+PORTREVISION=	1
 CATEGORIES=	x11-servers
 PKGNAMESUFFIX=	-devel
 
@@ -48,8 +49,8 @@ MESON_ARGS=	-D${PORTNAME}=true \
 PLIST_FILES=	bin/Xwayland \
 		"@comment lib/xorg/protocol.txt" \
 		libdata/pkgconfig/xwayland.pc \
-		"@comment man/man1/Xserver.1.gz" \
-		man/man1/Xwayland.1.gz \
+		"@comment share/man/man1/Xserver.1.gz" \
+		share/man/man1/Xwayland.1.gz \
 		share/applications/org.freedesktop.Xwayland.desktop
 
 # Keep in sync with xorg-server

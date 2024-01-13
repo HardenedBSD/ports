@@ -4,11 +4,7 @@
 
 PORTNAME=	pulseaudio
 DISTVERSION=	16.1
-<<<<<<< HEAD
-PORTREVISION=	3
-=======
-PORTREVISION=	2
->>>>>>> internal/freebsd/main
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 

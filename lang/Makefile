@@ -6,6 +6,7 @@
     SUBDIR += angelscript
     SUBDIR += antimony
     SUBDIR += apache-commons-jelly
+    SUBDIR += asm-lsp
     SUBDIR += asn1c
     SUBDIR += atlast
     SUBDIR += awka
@@ -102,6 +103,7 @@
     SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
+    SUBDIR += gluon
     SUBDIR += gnat12
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64

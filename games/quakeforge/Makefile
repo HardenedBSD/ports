@@ -20,7 +20,7 @@ USE_HARDENING=	pie:off
 
 USES=		bison compiler:c11 gmake libtool localbase python:run shebangfix tar:bzip2
 SHEBANG_FILES=	tools/qfcc/source/qfpreqcc
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	Z_CFLAGS=" " Z_LIBS="-lz"
 CONFIGURE_ARGS=	--disable-alsa \
 		--disable-debug \

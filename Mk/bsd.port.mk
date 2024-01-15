@@ -1494,13 +1494,7 @@ USES+=mysql:${USE_MYSQL}
 .include "${PORTSDIR}/Mk/bsd.wx.mk"
 .    endif
 
-.    if !defined(UID)
-.      if defined(.MAKE.UID)
-UID=	${.MAKE.UID}
-.      else
-UID!=	${ID} -u
-.      endif
-.    endif
+UID?=	${.MAKE.UID}
 
 DESTDIRNAME?=	DESTDIR
 

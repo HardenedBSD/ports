@@ -18,13 +18,9 @@ LIB_DEPENDS=	libpcap.so.1:net/libpcap
 
 USES=		cpe gmake
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-GNU_CONFIGURE=	yes
-=======
 HAS_CONFIGURE=	yes
->>>>>>> internal/freebsd/main
 
 PLIST_FILES=	sbin/tcpdump \
 		share/man/man1/tcpdump.1.gz

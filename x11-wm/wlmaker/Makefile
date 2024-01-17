@@ -23,12 +23,14 @@ LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
 		libwayland-server.so:graphics/wayland \
 		libwlroots.so:x11-toolkits/wlroots \
 		libxkbcommon.so:x11/libxkbcommon
+RUN_DEPENDS=	foot:x11/foot
 
 USES=		cmake compiler:c11 gnome pkgconfig
 USE_GITHUB=	yes
 USE_GNOME=	cairo
 GH_ACCOUNT=	phkaeser
 GH_TUPLE=	phkaeser:libbase:c215f7d:libbase/submodules/libbase
+CFLAGS+=	-ffile-prefix-map="${WRKSRC}"=
 LDFLAGS+=	-Wl,--as-needed # https://github.com/phkaeser/wlmaker/issues/12
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/wlmclock \

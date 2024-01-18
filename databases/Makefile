@@ -1033,6 +1033,7 @@
     SUBDIR += sqlx-cli
     SUBDIR += sqsh
     SUBDIR += squirrel-sql
+    SUBDIR += surrealdb
     SUBDIR += symphytum
     SUBDIR += tarantool
     SUBDIR += tarantool-c

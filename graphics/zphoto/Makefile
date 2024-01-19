@@ -11,17 +11,13 @@ WWW=		http://namazu.org/~satoru/zphoto/
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		alias gmake localbase perl5
-=======
 LIB_DEPENDS=	libImlib2.so:graphics/imlib2 \
 		libming.so:graphics/ming \
 		libpopt.so:devel/popt
 
 USES=		alias gmake localbase perl5 pkgconfig
->>>>>>> internal/freebsd/main
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-avifile

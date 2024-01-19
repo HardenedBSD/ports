@@ -1011,11 +1011,7 @@ LC_ALL=		C
 # These need to be absolute since we don't know how deep in the ports
 # tree we are and thus can't go relative.  They can, of course, be overridden
 # by individual Makefiles or local system make configuration.
-<<<<<<< HEAD
-_LIST_OF_WITH_FEATURES=	debug lto ssp
-=======
-_LIST_OF_WITH_FEATURES=	bind_now debug lto pie relro sanitize ssp
->>>>>>> internal/freebsd/main
+_LIST_OF_WITH_FEATURES=	debug lto sanitize ssp
 _DEFAULT_WITH_FEATURES=	ssp
 PORTSDIR?=		/usr/ports
 LOCALBASE?=		/usr/local

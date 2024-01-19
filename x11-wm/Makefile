@@ -42,7 +42,6 @@
     SUBDIR += fbcmd
     SUBDIR += fluxbox
     SUBDIR += fluxter
-    SUBDIR += flwm
     SUBDIR += fswm
     SUBDIR += fvwm2
     SUBDIR += fvwm3
@@ -54,7 +53,6 @@
     SUBDIR += i3
     SUBDIR += icewm
     SUBDIR += ittywm
-    SUBDIR += jewel
     SUBDIR += jwm
     SUBDIR += kickshaw
     SUBDIR += korgwm

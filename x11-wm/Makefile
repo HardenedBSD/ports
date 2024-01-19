@@ -60,12 +60,10 @@
     SUBDIR += korgwm
     SUBDIR += kwinft
     SUBDIR += labwc
-    SUBDIR += larswm
     SUBDIR += leftwm
     SUBDIR += libcompizconfig
     SUBDIR += libdockapp
     SUBDIR += libwraster
-    SUBDIR += lwm
     SUBDIR += lxappearance-obconf
     SUBDIR += lxqt
     SUBDIR += lxqt-panel
@@ -86,7 +84,6 @@
     SUBDIR += oroborus
     SUBDIR += peksystray
     SUBDIR += pekwm
-    SUBDIR += phluid
     SUBDIR += phoc
     SUBDIR += picom
     SUBDIR += piewm
@@ -96,7 +93,6 @@
     SUBDIR += plasma6-kwin
     SUBDIR += pwm
     SUBDIR += qtile
-    SUBDIR += ratmen
     SUBDIR += ratpoison
     SUBDIR += river
     SUBDIR += rubygem-uh-layout
@@ -114,7 +110,6 @@
     SUBDIR += swayfx
     SUBDIR += tinywm
     SUBDIR += transset
-    SUBDIR += treewm
     SUBDIR += twm
     SUBDIR += vtwm
     SUBDIR += wayfire

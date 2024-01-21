@@ -10,13 +10,9 @@ WWW=		https://www.han.de/~werner/ytree.html
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		ncurses readline
-=======
 USES=		localbase ncurses readline
->>>>>>> internal/freebsd/main
 ALL_TARGET=	ytree
 LDFLAGS+=	-lreadline
 

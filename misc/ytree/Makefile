@@ -10,11 +10,14 @@ WWW=		https://www.han.de/~werner/ytree.html
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 USES=		ncurses readline
+=======
+USES=		localbase ncurses readline
+>>>>>>> internal/freebsd/main
 ALL_TARGET=	ytree
-CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-lreadline
 
 OPTIONS_DEFINE=	DOCS
@@ -22,7 +25,7 @@ OPTIONS_DEFINE=	DOCS
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ytree ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/ytree.conf ${STAGEDIR}${PREFIX}/etc/ytree.conf.sample
-	${INSTALL_MAN} ${WRKSRC}/ytree.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/ytree.1 ${STAGEDIR}${MANPREFIX}/share/man/man1
 
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/ytree

@@ -4,18 +4,16 @@ PORTREVISION=	1
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	MySQL driver for DBI-for-Ruby
-WWW=		http://ruby-dbi.sourceforge.net
+WWW=		https://github.com/dinoex/ruby-dbi
 
 LICENSE=	BSD3CLAUSE
-
-DEPRECATED=	Upstream vaporized and does not work with latest MySQL
-EXPIRATION_DATE=	2024-02-18
 
 RUN_DEPENDS=	rubygem-dbi>=0:databases/rubygem-dbi \
 		rubygem-mysql>=0:databases/rubygem-mysql
 
 USES=		gem
+IGNORE_WITH_MYSQL=	80 81
 
 .include <bsd.port.mk>

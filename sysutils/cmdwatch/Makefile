@@ -1,6 +1,6 @@
 PORTNAME=	cmdwatch
 PORTVERSION=	0.2.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.chruetertee.ch/files/download/
 
@@ -12,6 +12,10 @@ LICENSE=	GPLv2+
 USE_HARDENING=	pie:off
 
 USES=		ncurses
-PLIST_FILES=	bin/cmdwatch man/man1/cmdwatch.1.gz
+PLIST_FILES=	bin/cmdwatch share/man/man1/cmdwatch.1.gz
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|man/man|share/man/man|g' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

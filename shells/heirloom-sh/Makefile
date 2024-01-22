@@ -18,10 +18,9 @@ USE_HARDENING=	pie:off
 USES=		tar:bzip2
 
 MAKEFILE=	makefile
-MANPREFIX=	${PREFIX}/heirloom/share
 MAKE_ARGS=	ROOT=${STAGEDIR} \
 		SV3BIN=${PREFIX}/heirloom/bin \
-		MANDIR=${MANPREFIX}/man \
+		MANDIR=${PREFIX}/heirloom/share/man \
 		UCBINST=${INSTALL}
 SUB_FILES=	${PORTNAME}.conf
 PLIST_FILES=	"@shell heirloom/bin/sh" \

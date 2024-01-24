@@ -15,13 +15,9 @@ GH_ACCOUNT=	lpsantil
 GH_TAGNAME=	31b719e
 USE_GITHUB=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-PLIST_FILES=	bin/ucpp man/man1/ucpp.1.gz
-=======
 PLIST_FILES=	bin/ucpp share/man/man1/ucpp.1.gz
->>>>>>> internal/freebsd/main
 USES=		gmake
 
 do-install:

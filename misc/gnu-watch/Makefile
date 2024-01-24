@@ -1,6 +1,7 @@
 PORTNAME=	watch
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.3.17
+PORTREVISION=	1
 CATEGORIES=	misc
 PKGNAMEPREFIX=	gnu-
 
@@ -24,7 +25,7 @@ GNU_CONFIGURE=	yes
 ALL_TARGET=	watch
 
 PLIST_FILES=	bin/${PKGBASE} \
-		man/man1/gnu-watch.1.gz
+		share/man/man1/gnu-watch.1.gz
 
 OPTIONS_DEFINE=		NLS UNICODE
 OPTIONS_DEFAULT=	UNICODE
@@ -41,6 +42,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin/${PKGBASE}
 	${INSTALL_MAN} ${WRKSRC}/watch.1 \
-		${STAGEDIR}${MANPREFIX}/man/man1/${PKGBASE}.1
+		${STAGEDIR}${PREFIX}/share/man/man1/${PKGBASE}.1
 
 .include <bsd.port.mk>

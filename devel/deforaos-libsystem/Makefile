@@ -1,11 +1,12 @@
 PORTNAME=	libsystem
 PORTVERSION=	0.4.3
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/System/src/libSystem/
 PKGNAMEPREFIX=	deforaos-
 DISTNAME=	libSystem-${PORTVERSION}
 
-MAINTAINER=	olivier@FreeBSD.org
+MAINTAINER=	khorben@defora.org
 COMMENT=	DeforaOS core system library
 WWW=		https://www.defora.org/
 
@@ -17,7 +18,6 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${OPENSSLINC}
 LDFLAGS+=	-L${OPENSSLLIB}
 MAKE_ARGS+=	PREFIX=${PREFIX}
-MAKE_ENV+=	MANDIR=${STAGEDIR}${MANPREFIX}/man
 
 MAKE_JOBS_UNSAFE=	yes
 

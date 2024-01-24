@@ -20,7 +20,7 @@ USE_HARDENING=	pie:off
 
 USES=		bison compiler:c11 gmake libtool localbase python:run shebangfix tar:bzip2
 SHEBANG_FILES=	tools/qfcc/source/qfpreqcc
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	Z_CFLAGS=" " Z_LIBS="-lz"
 CONFIGURE_ARGS=	--disable-alsa \
 		--disable-debug \
@@ -104,7 +104,7 @@ post-build-CLIENTS-on:
 .endfor
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/man/quakeforge.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/quakeforge.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 post-install-CLIENTS-on:
 	@(cd ${WRKDIR} && ${COPYTREE_SHARE} icons \

@@ -1,11 +1,12 @@
 PORTNAME=	locker
 PORTVERSION=	0.4.2
+PORTREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Locker/
 PKGNAMEPREFIX=	deforaos-
 DISTNAME=	Locker-${PORTVERSION}
 
-MAINTAINER=	olivier@FreeBSD.org
+MAINTAINER=	khorben@defora.org
 COMMENT=	DeforaOS desktop screensaver
 WWW=		https://www.defora.org/
 
@@ -23,7 +24,7 @@ USE_GNOME=	gtk30 cairo gdkpixbuf2
 USE_XORG=	x11 xext
 MAKE_ARGS+=	PREFIX=${PREFIX}
 MAKE_ARGS+=	LDFLAGS=${LDFLAGS:Q}
-MAKE_ENV+=	MANDIR=${STAGEDIR}${MANPREFIX}/man
+MAKE_ENV+=	MANDIR=${STAGEDIR}${PREFIX}/share/man
 LDFLAGS+=	-lXext
 
 OPTIONS_DEFINE=	DOCS NLS

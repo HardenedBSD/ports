@@ -1,6 +1,6 @@
 PORTNAME=	taucs
 PORTVERSION=	2.2
-PORTREVISION=	24
+PORTREVISION=	25
 CATEGORIES=	math
 MASTER_SITES=	http://www.tau.ac.il/~stoledo/taucs/${PORTVERSION}/ \
 		LOCAL/bf
@@ -27,6 +27,8 @@ HAS_CONFIGURE=	yes
 
 OPTIONS_DEFINE=	DOCS
 
+PICFLAG?=	-fpic
+
 .include <bsd.port.options.mk>
 
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -35,12 +37,6 @@ MAKE_ENV+=	LIBBLAS="${BLASLIB}" LIBLAPACK="${LAPACKLIB}" LIBMETIS="${LIBMETIS}"
 
 BINS?=		direct iter taucs_run
 TESTS?=		complex stack timer linsolve memory
-
-.if ${ARCH} == "sparc64"
-PICFLAG?=	-fPIC
-.else
-PICFLAG?=	-fpic
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/succedd/succeed/' \

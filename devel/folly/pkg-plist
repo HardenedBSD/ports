@@ -149,6 +149,7 @@ include/folly/container/HeterogeneousAccess.h
 include/folly/container/IntrusiveHeap.h
 include/folly/container/Iterator.h
 include/folly/container/Merge.h
+include/folly/container/Reserve.h
 include/folly/container/SparseByteSet.h
 include/folly/container/View.h
 include/folly/container/WeightedEvictingCacheMap.h
@@ -161,7 +162,10 @@ include/folly/container/detail/F14Policy.h
 include/folly/container/detail/F14SetFallback.h
 include/folly/container/detail/F14Table.h
 include/folly/container/detail/Util.h
+include/folly/container/detail/tape_detail.h
 include/folly/container/heap_vector_types.h
+include/folly/container/range_traits.h
+include/folly/container/tape.h
 include/folly/container/test/F14TestUtil.h
 include/folly/container/test/TrackingTypes.h
 include/folly/detail/AsyncTrace.h
@@ -413,6 +417,7 @@ include/folly/experimental/io/IoUringBackend.h
 include/folly/experimental/io/IoUringEvent.h
 include/folly/experimental/io/IoUringEventBaseLocal.h
 include/folly/experimental/io/Liburing.h
+include/folly/experimental/io/MuxIOThreadPoolExecutor.h
 include/folly/experimental/io/SimpleAsyncIO.h
 include/folly/experimental/observer/CoreCachedObserver.h
 include/folly/experimental/observer/HazptrObserver.h
@@ -429,8 +434,9 @@ include/folly/experimental/observer/WithJitter.h
 include/folly/experimental/observer/detail/Core.h
 include/folly/experimental/observer/detail/GraphCycleDetector.h
 include/folly/experimental/observer/detail/ObserverManager.h
+include/folly/experimental/settings/Immutables.h
 include/folly/experimental/settings/Settings.h
-include/folly/experimental/settings/SettingsMetadata.h
+include/folly/experimental/settings/Types.h
 include/folly/experimental/settings/detail/SettingsImpl.h
 include/folly/experimental/symbolizer/Dwarf.h
 include/folly/experimental/symbolizer/DwarfImpl.h
@@ -449,6 +455,8 @@ include/folly/experimental/symbolizer/Symbolizer.h
 include/folly/experimental/symbolizer/detail/Debug.h
 include/folly/ext/test_ext.h
 include/folly/external/farmhash/farmhash.h
+include/folly/external/fast-crc32/avx512_crc32c_v8s3x4.h
+include/folly/external/fast-crc32/sse_crc32c_v8s3x3.h
 include/folly/fibers/AddTasks-inl.h
 include/folly/fibers/AddTasks.h
 include/folly/fibers/AtomicBatchDispatcher-inl.h

@@ -1,7 +1,7 @@
 PORTNAME=	inspircd
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.16.1
-PORTREVISION=	2
+DISTVERSION=	3.17.0
+PORTREVISION=	1
 CATEGORIES=	irc
 
 MAINTAINER=	driesm@FreeBSD.org
@@ -26,7 +26,7 @@ CONFIGURE_ARGS=	--binary-dir=${PREFIX}/bin \
 		--distribution-label=${OPSYS}-${PORTVERSION} \
 		--gid=nobody \
 		--log-dir=${_INSPIRCD_LOGDIR} \
-		--manual-dir=${MANPREFIX}/man/man1 \
+		--manual-dir=${PREFIX}/share/man/man1 \
 		--module-dir=${PREFIX}/libexec/${PORTNAME}/modules \
 		--prefix=${PREFIX}/libexec/${PORTNAME} \
 		--runtime-dir=${_INSPIRCD_RUNDIR} \

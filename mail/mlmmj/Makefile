@@ -1,5 +1,5 @@
 PORTNAME=	mlmmj
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.4
 CATEGORIES=	mail
 MASTER_SITES=	https://codeberg.org/mlmmj/mlmmj/releases/download/RELEASE_${PORTVERSION:S/./_/g}/
 
@@ -14,6 +14,7 @@ USES=		cpe gmake iconv shebangfix tar:xz pkgconfig
 SHEBANG_FILES=	contrib/web/perl-user/mlmmj.cgi
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-receive-strip
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 CPPFLAGS+=	-I${ICONV_INCLUDE_PATH}
 LDFLAGS+=	${ICONV_LIB_PATH}
@@ -26,7 +27,8 @@ PERL_RUN_DEPENDS=	p5-URI>0:net/p5-URI \
 			p5-HTML-Parser>0:www/p5-HTML-Parser
 PHP_USES=		php:web
 
-BUILD_DEPENDS=		devel/kyua
+BUILD_DEPENDS=		kyua:devel/kyua \
+			atf-sh:devel/atf
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

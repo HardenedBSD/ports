@@ -1,5 +1,6 @@
 PORTNAME=	json-yaml
 DISTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	ik@sjmulder.nl
@@ -17,11 +18,11 @@ GH_ACCOUNT=	sjmulder
 
 USE_HARDENING=	pie:off
 
-MAKE_ARGS+=	MANPREFIX=${PREFIX}/man CFLAGS=-I${PREFIX}/include\ -L${PREFIX}/lib
+MAKE_ARGS+=	MANPREFIX=${PREFIX}/share/man CFLAGS=-I${PREFIX}/include\ -L${PREFIX}/lib
 
 PLIST_FILES=	bin/json-yaml \
 		bin/yaml-json \
-		man/man1/json-yaml.1.gz \
-		man/man1/yaml-json.1.gz
+		share/man/man1/json-yaml.1.gz \
+		share/man/man1/yaml-json.1.gz
 
 .include <bsd.port.mk>

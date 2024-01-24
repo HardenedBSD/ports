@@ -1,5 +1,5 @@
 PORTNAME=	rspamd
-PORTVERSION=	3.7.3
+PORTVERSION=	3.7.5
 PORTREVISION=	1
 CATEGORIES=	mail
 
@@ -30,7 +30,6 @@ CMAKE_ARGS+=	-DBUILD_PORT=yes \
 		-DDBDIR=/var/db/rspamd \
 		-DLIBDIR=${PREFIX}/lib/rspamd \
 		-DLOGDIR=/var/log/rspamd \
-		-DMANDIR=${MANPREFIX}/man \
 		-DRUNDIR=/var/run/rspamd
 
 CONFLICTS_INSTALL=	rspamd-devel

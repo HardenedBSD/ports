@@ -163,7 +163,6 @@
     SUBDIR += libssm
     SUBDIR += libsvm
     SUBDIR += libsvm-python
-    SUBDIR += libtensorflow1
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
@@ -442,6 +441,7 @@
     SUBDIR += py-thewalrus
     SUBDIR += py-tobler
     SUBDIR += py-trainstation
+    SUBDIR += py-trx-python
     SUBDIR += py-tweedledum
     SUBDIR += py-vedo
     SUBDIR += py-veusz

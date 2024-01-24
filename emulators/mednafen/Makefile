@@ -16,8 +16,6 @@ LIB_DEPENDS=	libcdio.so:sysutils/libcdio \
 		libsndfile.so:audio/libsndfile \
 		libvorbis.so:audio/libvorbis
 
-BROKEN_sparc64=		fails to compile due to internal compiler error
-
 USE_HARDENING=	pie:off relro:off
 
 GNU_CONFIGURE=	yes

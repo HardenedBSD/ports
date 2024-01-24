@@ -1,6 +1,7 @@
 PORTNAME=	hyprland
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.33.1
+DISTVERSION=	0.34.0
+PORTREVISION=	2
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -10,13 +11,11 @@ WWW=		https://hyprland.org/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_FreeBSD_12=	libc++ too old
-
 BUILD_DEPENDS=	cmake:devel/cmake-core \
 		evdev-proto>0:devel/evdev-proto \
-		wayland-protocols>=1.25:graphics/wayland-protocols \
-		wlroots>=0.17.0<0.18.0:x11-toolkits/wlroots
-LIB_DEPENDS=	libdrm.so:graphics/libdrm \
+		wayland-protocols>=1.25:graphics/wayland-protocols
+LIB_DEPENDS=	libtomlplusplus.so:devel/tomlplusplus \
+		libdrm.so:graphics/libdrm \
 		libwayland-server.so:graphics/wayland \
 		libwlroots.so:x11-toolkits/wlroots \
 		libinput.so:x11/libinput \
@@ -46,12 +45,19 @@ X11_MESON_ENABLED=	xwayland
 
 post-patch:
 # Extract (snapshot) version from the port instead of meson.build
-	@${REINPLACE_CMD} -i .nogit -e "/GIT_BRANCH/s/run_command.*/'main'/" \
-		-e "/GIT_COMMIT_HASH/s/run_command.*/'${DISTVERSIONFULL}'/" \
-		-e "/GIT_COMMIT_MESSAGE/d" \
-		-e "/GIT_DIRTY/s/run_command.*/'portbld'/" \
+	@${REINPLACE_CMD} -i .nogit \
 		-e "/version.*jq/s/run_command.*/'${DISTVERSIONFULL}',/" \
 		${WRKSRC}/meson.build
+	@${REINPLACE_CMD} -i .nogit \
+		-e '/^HASH/s/=.*/=${DISTVERSIONFULL:C/.*-g//}/' \
+		-e '/^BRANCH/s/=.*/=main/' \
+		-e '/^MESSAGE/s/=.*/="?"/' \
+		-e "/^DATE/s/=.*/=\"$$(date -ur $$(${AWK} \
+			'/TIMESTAMP/ { print $$3 }' ${DISTINFO_FILE}))\"/" \
+		-e '/^DIRTY/s/=.*/=portbld/' \
+		-e '/^TAG/s/=.*/=${DISTVERSIONFULL}/' \
+		${WRKSRC}/scripts/generateVersion.sh
+
 # Respect PREFIX for wallpapers
 	@${REINPLACE_CMD} 's,/usr/share,${DATADIR:H},' \
 		${WRKSRC}/src/render/OpenGL.cpp

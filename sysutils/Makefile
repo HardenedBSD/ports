@@ -22,7 +22,6 @@
     SUBDIR += acpica-tools
     SUBDIR += acts
     SUBDIR += adtool
-    SUBDIR += afbinit
     SUBDIR += afflib
     SUBDIR += afio
     SUBDIR += agedu
@@ -114,6 +113,9 @@
     SUBDIR += bareos21-client
     SUBDIR += bareos21-server
     SUBDIR += bareos21-traymonitor
+    SUBDIR += bareos22-client
+    SUBDIR += bareos22-server
+    SUBDIR += bareos22-traymonitor
     SUBDIR += barrier
     SUBDIR += bashtop
     SUBDIR += bastille
@@ -289,7 +291,6 @@
     SUBDIR += deltup
     SUBDIR += desktop-installer
     SUBDIR += detox
-    SUBDIR += devcpu-data
     SUBDIR += devctl-jail-kmod
     SUBDIR += devd-mount
     SUBDIR += devedeng
@@ -372,7 +373,6 @@
     SUBDIR += epazote
     SUBDIR += equinix-metal-cli
     SUBDIR += erdtree
-    SUBDIR += etc_os-release
     SUBDIR += etcmerge
     SUBDIR += ethname
     SUBDIR += evhz
@@ -399,7 +399,6 @@
     SUBDIR += fd
     SUBDIR += fdupes
     SUBDIR += fetchlog
-    SUBDIR += ffs2recov
     SUBDIR += file
     SUBDIR += filedupe
     SUBDIR += filelight
@@ -573,7 +572,6 @@
     SUBDIR += i2c-tools
     SUBDIR += i7z
     SUBDIR += iat
-    SUBDIR += iichid
     SUBDIR += imgurbash2
     SUBDIR += immortal
     SUBDIR += incron
@@ -642,7 +640,6 @@
     SUBDIR += kf6-baloo
     SUBDIR += kf6-kuserfeedback
     SUBDIR += kf6-kwallet
-    SUBDIR += kfloppy
     SUBDIR += khelpcenter
     SUBDIR += kiconvtool
     SUBDIR += kio-fuse
@@ -718,7 +715,6 @@
     SUBDIR += lsyncd
     SUBDIR += ltfs
     SUBDIR += ltrace
-    SUBDIR += lttng-tools
     SUBDIR += lttng-ust
     SUBDIR += lua-puremagic
     SUBDIR += luckybackup
@@ -764,6 +760,7 @@
     SUBDIR += minipot
     SUBDIR += minipro
     SUBDIR += minirsyslogd
+    SUBDIR += mise
     SUBDIR += mixer
     SUBDIR += mkdesktop
     SUBDIR += mkfwimage
@@ -868,6 +865,7 @@
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
+    SUBDIR += orch
     SUBDIR += osinfo-db-tools
     SUBDIR += p5-App-Regather
     SUBDIR += p5-App-RunCron
@@ -1006,8 +1004,6 @@
     SUBDIR += pfstat
     SUBDIR += pftables
     SUBDIR += pftop
-    SUBDIR += php80-fileinfo
-    SUBDIR += php80-posix
     SUBDIR += php81-fileinfo
     SUBDIR += php81-posix
     SUBDIR += php82-fileinfo
@@ -1202,6 +1198,7 @@
     SUBDIR += rename
     SUBDIR += renameutils
     SUBDIR += reoback
+    SUBDIR += reproduce
     SUBDIR += reptyr
     SUBDIR += respond
     SUBDIR += rest-server
@@ -1225,7 +1222,6 @@
     SUBDIR += rsyslog8
     SUBDIR += rtsx-kmod
     SUBDIR += rtty
-    SUBDIR += rtx
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bolt
     SUBDIR += rubygem-bosh-gen
@@ -1367,8 +1363,8 @@
     SUBDIR += siegfried
     SUBDIR += signon-kwallet-extension
     SUBDIR += signon-plugin-oauth2
-    SUBDIR += signon-qt5
     SUBDIR += signon-ui
+    SUBDIR += signond
     SUBDIR += sispmctl
     SUBDIR += skopeo
     SUBDIR += slack
@@ -1544,6 +1540,7 @@
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-sopine-spi
+    SUBDIR += u-boot-starfive-visionfive2
     SUBDIR += u-boot-tools
     SUBDIR += u-boot-wandboard
     SUBDIR += ua
@@ -1595,6 +1592,7 @@
     SUBDIR += vm-bhyve
     SUBDIR += vm-bhyve-devel
     SUBDIR += vmdktool
+    SUBDIR += vmstated
     SUBDIR += vmtouch
     SUBDIR += vobcopy
     SUBDIR += volman

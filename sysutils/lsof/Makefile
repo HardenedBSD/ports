@@ -2,7 +2,7 @@
 #       to commit it.  I (ler) don't have access to all the ARCH's
 
 PORTNAME=	lsof
-DISTVERSION=	4.99.0
+DISTVERSION=	4.99.3
 PORTREVISION=	1
 PORTEPOCH=	8
 CATEGORIES=	sysutils
@@ -59,7 +59,7 @@ IGNORE+=	requires kernel sources
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lsof ${STAGEDIR}${PREFIX}/sbin
 	(cd ${WRKSRC} && /usr/bin/soelim Lsof.8 > ${WRKSRC}/lsof.8)
-	${INSTALL_MAN} ${WRKSRC}/lsof.8 ${STAGEDIR}${MAN8PREFIX}/man/man8/lsof.8
+	${INSTALL_MAN} ${WRKSRC}/lsof.8 ${STAGEDIR}${PREFIX}/share/man/man8/lsof.8
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/lsof
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${STAGEDIR}${PREFIX}/share/lsof
 	@${CHMOD} 0444 ${STAGEDIR}${PREFIX}/share/lsof/00*

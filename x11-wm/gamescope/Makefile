@@ -1,11 +1,12 @@
 PORTNAME=	gamescope
 DISTVERSION=	3.13.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-wm wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	a618ea074660.patch:-p1 # https://github.com/ValveSoftware/gamescope/issues/120
 PATCHFILES+=	4a067fb4ebe2.patch:-p1 # https://github.com/ValveSoftware/gamescope/pull/678
+PATCHFILES+=	243582c0c762.patch:-p1 # https://github.com/ValveSoftware/gamescope/pull/1057
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	SteamOS session compositing window manager
@@ -19,8 +20,7 @@ BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 		vulkan-headers>0:graphics/vulkan-headers \
 		wayland-protocols>=1.17:graphics/wayland-protocols \
 		glm>0:math/glm \
-		hwdata>0:misc/hwdata \
-		wlroots>=0.17.0<0.18.0:x11-toolkits/wlroots
+		hwdata>0:misc/hwdata
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 		libliftoff.so:graphics/libliftoff \
 		libvulkan.so:graphics/vulkan-loader \

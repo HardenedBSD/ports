@@ -16,7 +16,7 @@ USE_HARDENING=  pie:off relro:off retpoline:off
 
 USE_GCC=	11:build
 
-ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
@@ -83,7 +83,7 @@ EXTRACT_CMD=    ${SETENV} LC_ALL=en_US.UTF-8 /usr/bin/bsdtar
 .if ${ARCH} == amd64
 CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 
-.elif defined(PPC_ABI) && ${PPC_ABI} == ELFv2
+.elif ${ARCH} == powerpc64
 CONFIGURE_ARGS+=	--with-abi=elfv2
 .endif
 

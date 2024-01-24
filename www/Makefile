@@ -72,6 +72,7 @@
     SUBDIR += bareos-webui
     SUBDIR += bareos20-webui
     SUBDIR += bareos21-webui
+    SUBDIR += bareos22-webui
     SUBDIR += beehive
     SUBDIR += bkmrkconv
     SUBDIR += bluefish
@@ -146,11 +147,11 @@
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += dot-http
+    SUBDIR += dpp
     SUBDIR += drill
     SUBDIR += drupal10
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
-    SUBDIR += drupal9
     SUBDIR += drush
     SUBDIR += dtse
     SUBDIR += dufs
@@ -222,6 +223,7 @@
     SUBDIR += gopherus
     SUBDIR += gotty
     SUBDIR += gpx2map
+    SUBDIR += grafana
     SUBDIR += grafana9
     SUBDIR += grails
     SUBDIR += gregarius
@@ -287,7 +289,6 @@
     SUBDIR += kannel-sqlbox
     SUBDIR += kcgi
     SUBDIR += kdsoap
-    SUBDIR += kf5-kdewebkit
     SUBDIR += kf5-khtml
     SUBDIR += kf5-kjs
     SUBDIR += kf5-kjsembed
@@ -352,6 +353,7 @@
     SUBDIR += mediawiki135
     SUBDIR += mediawiki139
     SUBDIR += mediawiki140
+    SUBDIR += mediawiki141
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -408,7 +410,6 @@
     SUBDIR += mod_mono
     SUBDIR += mod_mpm_itk
     SUBDIR += mod_perl2
-    SUBDIR += mod_php80
     SUBDIR += mod_php81
     SUBDIR += mod_php82
     SUBDIR += mod_php83
@@ -431,7 +432,6 @@
     SUBDIR += moinmoin
     SUBDIR += moinmoincli
     SUBDIR += mongoose
-    SUBDIR += mongrel2
     SUBDIR += monolith
     SUBDIR += moodle41
     SUBDIR += moodle42
@@ -1025,6 +1025,7 @@
     SUBDIR += p5-MediaWiki-API
     SUBDIR += p5-Mobile-UserAgent
     SUBDIR += p5-ModPerl-VersionUtil
+    SUBDIR += p5-Mojo-DOM58
     SUBDIR += p5-Mojo-IOLoop-Delay
     SUBDIR += p5-Mojo-IOLoop-ForkCall
     SUBDIR += p5-Mojo-Server-FastCGI
@@ -1401,9 +1402,7 @@
     SUBDIR += persepolis
     SUBDIR += pglogd
     SUBDIR += phalcon
-    SUBDIR += php80-opcache
-    SUBDIR += php80-session
-    SUBDIR += php80-tidy
+    SUBDIR += php-google-api-php-client
     SUBDIR += php81-opcache
     SUBDIR += php81-session
     SUBDIR += php81-tidy
@@ -1490,23 +1489,6 @@
     SUBDIR += py-cssutils
     SUBDIR += py-daphne
     SUBDIR += py-dj-database-url
-    SUBDIR += py-dj41-django-auth-ldap
-    SUBDIR += py-dj41-django-cors-headers
-    SUBDIR += py-dj41-django-debug-toolbar
-    SUBDIR += py-dj41-django-filter
-    SUBDIR += py-dj41-django-graphiql-debug-toolbar
-    SUBDIR += py-dj41-django-js-asset
-    SUBDIR += py-dj41-django-mptt
-    SUBDIR += py-dj41-django-prometheus
-    SUBDIR += py-dj41-django-redis
-    SUBDIR += py-dj41-django-rich
-    SUBDIR += py-dj41-django-tables2
-    SUBDIR += py-dj41-django-taggit
-    SUBDIR += py-dj41-django-timezone-field
-    SUBDIR += py-dj41-djangorestframework
-    SUBDIR += py-dj41-drf-spectacular
-    SUBDIR += py-dj41-drf-spectacular-sidecar
-    SUBDIR += py-dj41-drf-yasg
     SUBDIR += py-dj42-django-auth-ldap
     SUBDIR += py-dj42-django-cors-headers
     SUBDIR += py-dj42-django-debug-toolbar
@@ -1568,6 +1550,7 @@
     SUBDIR += py-django-hierarkey
     SUBDIR += py-django-hijack
     SUBDIR += py-django-htmlmin
+    SUBDIR += py-django-htmx
     SUBDIR += py-django-i18nfield
     SUBDIR += py-django-jquery-js
     SUBDIR += py-django-js-asset
@@ -1626,7 +1609,6 @@
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django32
-    SUBDIR += py-django41
     SUBDIR += py-django42
     SUBDIR += py-django50
     SUBDIR += py-django_compressor
@@ -1649,6 +1631,7 @@
     SUBDIR += py-fastapi
     SUBDIR += py-fastapi-users
     SUBDIR += py-feedgenerator
+    SUBDIR += py-flasgger
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
     SUBDIR += py-flask-api
@@ -1663,6 +1646,7 @@
     SUBDIR += py-flask-cors
     SUBDIR += py-flask-flatpages
     SUBDIR += py-flask-json
+    SUBDIR += py-flask-jwt
     SUBDIR += py-flask-jwt-extended
     SUBDIR += py-flask-limiter
     SUBDIR += py-flask-login
@@ -1737,7 +1721,6 @@
     SUBDIR += py-httpx-gssapi
     SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
-    SUBDIR += py-httpx013
     SUBDIR += py-hypercorn
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperlink
@@ -1757,6 +1740,7 @@
     SUBDIR += py-multidict
     SUBDIR += py-mwoauth
     SUBDIR += py-nevow
+    SUBDIR += py-nh3
     SUBDIR += py-notebook
     SUBDIR += py-onetimepass
     SUBDIR += py-openbrokerapi
@@ -1789,6 +1773,7 @@
     SUBDIR += py-python-multipart
     SUBDIR += py-pyweblib
     SUBDIR += py-pywikibot
+    SUBDIR += py-pywry
     SUBDIR += py-qt5-webengine
     SUBDIR += py-qt6-webengine
     SUBDIR += py-quilt3
@@ -1882,13 +1867,13 @@
     SUBDIR += py-xandikos
     SUBDIR += py-xyzservices
     SUBDIR += py-yarl
+    SUBDIR += py-yt-dlp
     SUBDIR += pydio-cells
     SUBDIR += qdecoder
     SUBDIR += qhttpengine
     SUBDIR += qt5-webchannel
     SUBDIR += qt5-webengine
     SUBDIR += qt5-webglplugin
-    SUBDIR += qt5-webkit
     SUBDIR += qt5-websockets
     SUBDIR += qt5-websockets-qml
     SUBDIR += qt5-webview
@@ -2329,6 +2314,7 @@
     SUBDIR += sogo2-activesync
     SUBDIR += spawn-fcgi
     SUBDIR += spreadlogd
+    SUBDIR += sqlpage
     SUBDIR += sqstat
     SUBDIR += squid
     SUBDIR += squid-langpack
@@ -2378,7 +2364,11 @@
     SUBDIR += tomcat9
     SUBDIR += tomee
     SUBDIR += tor-browser
-    SUBDIR += trac-devel
+    SUBDIR += trac
+    SUBDIR += trac-accountmanager
+    SUBDIR += trac-markdownmacro
+    SUBDIR += trac-spamfilter
+    SUBDIR += trac-tocmacro
     SUBDIR += trafficserver
     SUBDIR += transproxy
     SUBDIR += trunk
@@ -2448,7 +2438,6 @@
     SUBDIR += varnish-libvmod-querystring
     SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
-    SUBDIR += varnish6
     SUBDIR += varnish7
     SUBDIR += varnish_exporter
     SUBDIR += vaultwarden-web_vault
@@ -2508,7 +2497,6 @@
     SUBDIR += xoops
     SUBDIR += xsp
     SUBDIR += yabb
-    SUBDIR += yanopaste
     SUBDIR += yarn
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18

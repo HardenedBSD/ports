@@ -1,11 +1,12 @@
 PORTNAME=	phone
 PORTVERSION=	0.6.2
+PORTREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Phone/
 PKGNAMEPREFIX=	deforaos-
 DISTNAME=	Phone-${PORTVERSION}
 
-MAINTAINER=	olivier@FreeBSD.org
+MAINTAINER=	khorben@defora.org
 COMMENT=	DeforaOS telephony application
 WWW=		https://www.defora.org/
 
@@ -21,7 +22,6 @@ USES=		desktop-file-utils gnome pkgconfig ssl
 USE_XORG=	x11
 USE_GNOME=	gtk30 cairo gdkpixbuf2
 MAKE_ARGS+=	PREFIX=${PREFIX}
-MAKE_ENV+=	MANDIR=${STAGEDIR}${MANPREFIX}/man
 
 OPTIONS_DEFINE=	DOCS NLS
 OPTIONS_SUB=	yes

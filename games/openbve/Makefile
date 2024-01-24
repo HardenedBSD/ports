@@ -1,5 +1,6 @@
 PORTNAME=	${GH_PROJECT:tl}
-PORTVERSION=	1.9.2.4
+PORTVERSION=	1.9.2.5
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -20,6 +21,7 @@ USE_SDL=	sdl2
 MAKEFILE=	makefile
 ALL_TARGET=	all-${WITH_DEBUG:?debug:release}
 
+# Generated with `make makenuget'
 NUGET_DEPENDS=	CS-Script.lib=3.30.3 \
 		DotNetZip=1.16.0 \
 		LibUsbDotNet=2.2.29 \
@@ -77,7 +79,7 @@ do-install:
 		"$$@"\n' > ${STAGEDIR}${PREFIX}/bin/${script}
 	${CHMOD} +x ${STAGEDIR}${PREFIX}/bin/${script}
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/debian/*.6 ${STAGEDIR}${MANPREFIX}/man/man6
+	${INSTALL_MAN} ${WRKSRC}/debian/*.6 ${STAGEDIR}${PREFIX}/share/man/man6
 	${INSTALL_DATA} ${WRKSRC}/debian/openbve.desktop \
 		${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/debian/openbve.png \

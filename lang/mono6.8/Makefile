@@ -24,7 +24,7 @@ DISALLOW_MAP32BIT+=	bin/mono-sgen
 DISALLOW_MAP32BIT+=	bin/mono-boehm
 
 
-NOT_FOR_ARCHS=	riscv64 riscv64sf sparc64
+NOT_FOR_ARCHS=	riscv64 riscv64sf
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash \

@@ -1,8 +1,8 @@
 PORTNAME=	wazuh
-DISTVERSION=	4.6.0
+DISTVERSION=	4.7.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
-MASTER_SITES=	https://packages.wazuh.com/deps/22/libraries/sources/:wazuh_sources
+MASTER_SITES=	https://packages.wazuh.com/deps/24/libraries/sources/:wazuh_sources
 PKGNAMESUFFIX=	-agent
 DISTFILES=	${EXTERNAL_DISTFILES}
 DIST_SUBDIR=	${PORTNAME}-${DISTVERSION}
@@ -21,9 +21,14 @@ LIB_DEPENDS=	libnghttp2.so:www/libnghttp2
 USES=		cpe gmake perl5 readline shebangfix sqlite:3 uidfix
 
 USE_GITHUB=	yes
+GH_TUPLE=	alonsobsd:wazuh-freebsd:${WAZUH_EXTRAFILE_TAGNAME}:wazuh
+
 USE_RC_SUBR=	${PORTNAME}${PKGNAMESUFFIX}
 
 MAKE_ARGS+=	TARGET=agent
+
+WAZUH_EXTRAFILE=	alonsobsd-${PORTNAME}-freebsd-${WAZUH_EXTRAFILE_TAGNAME}_GH0${EXTRACT_SUFX}
+WAZUH_EXTRAFILE_TAGNAME=cd0051b
 
 EXTERNAL_DISTFILES=	cJSON.tar.gz:wazuh_sources \
 			curl.tar.gz:wazuh_sources \
@@ -92,9 +97,12 @@ post-extract:
 .for FILE in ${EXTERNAL_DISTFILES}
 	@cd ${WRKSRC}/src/external && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/${FILE:S/:wazuh_sources//} ${EXTRACT_AFTER_ARGS}
 .endfor
+	@${MKDIR} ${WRKSRC}/ruleset/sca/freebsd
+	@cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/${WAZUH_EXTRAFILE} ${EXTRACT_AFTER_ARGS}
+	@${MV} ${WRKDIR}/${PORTNAME}-freebsd-${WAZUH_EXTRAFILE_TAGNAME} ${WRKDIR}/wazuh-freebsd
+	@cd ${WRKDIR}/wazuh-freebsd/var/ossec/ruleset/sca && ${CP} *.yml ${WRKSRC}/ruleset/sca/freebsd/
 
 post-patch:
-	${REINPLACE_CMD} -e 's|HOST_NAME_MAX|_POSIX_HOST_NAME_MAX|g' ${WRKSRC}/src/wazuh_modules/wm_database.c
 	${REINPLACE_CMD} -e 's|CC=|CC?=|g' -e 's|AR=|AR?=|g' ${WRKSRC}/src/external/bzip2/Makefile
 
 do-build:
@@ -124,7 +132,7 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/etc/internal_options.conf ${STAGEDIR}${WAZUHPREFIX}/etc
 	${INSTALL_DATA} ${WRKSRC}/src/wazuh_modules/syscollector/norm_config.json ${STAGEDIR}${WAZUHPREFIX}/queue/syscollector
-	${INSTALL_DATA} ${WRKSRC}/etc/local_internal_options.conf ${STAGEDIR}${WAZUHPREFIX}/etc/local_internal_options.conf
+	${INSTALL_DATA} ${WRKSRC}/etc/local_internal_options.conf ${STAGEDIR}${WAZUHPREFIX}/etc/local_internal_options.conf.sample
 
 	${INSTALL_DATA} /dev/null ${STAGEDIR}${WAZUHPREFIX}/etc/client.keys.sample
 	${INSTALL_DATA} ${WRKSRC}/etc/wpk_root.pem ${STAGEDIR}${WAZUHPREFIX}/etc/

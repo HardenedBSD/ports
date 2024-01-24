@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	4.4.26
+DISTVERSION=	4.4.27
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -38,11 +38,13 @@ PAGEEXEC_DISABLE+=	bin/mongo
 PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
+# --module= disables "enterprise" module from src/mongo/db/modules/
 MAKE_ARGS=	--use-system-zlib \
 		--use-system-pcre \
 		--use-system-snappy \
 		--libc++ \
 		--cxx-std=17 \
+		--modules= \
 		--runtime-hardening=on \
 		-j ${MAKE_JOBS_NUMBER} \
 		--disable-warnings-as-errors \

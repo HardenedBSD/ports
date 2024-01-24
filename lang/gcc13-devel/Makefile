@@ -1,6 +1,5 @@
 PORTNAME=	gcc
-PORTVERSION=	13.2.1.s20231209
-PORTREVISION=	1
+PORTVERSION=	13.2.1.s20240120
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -15,7 +14,7 @@ LICENSE_COMB=	multi
 
 USE_HARDENING=  pie:off relro:off retpoline:off
 
-ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
@@ -78,12 +77,8 @@ CXXFLAGS:=	${CFLAGS:S/mcpu=g/mcpu=G/}
 .if ${ARCH} == amd64
 CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 
-.elif defined(PPC_ABI) && ${PPC_ABI} == ELFv2
+.elif ${ARCH} == powerpc64
 CONFIGURE_ARGS+=	--with-abi=elfv2
-USE_GCC=	yes
-
-.elif ${ARCH} == powerpc64le
-USE_GCC=	yes
 .endif
 
 LANGUAGES:=	c,c++,objc,fortran,jit

@@ -1,5 +1,6 @@
 PORTNAME=	aide
 PORTVERSION=	0.18.6
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/aide/aide/releases/download/v${PORTVERSION}/
 
@@ -16,11 +17,11 @@ USE_HARDENING=	pie:off relro:off
 USES=		bison gmake localbase pkgconfig:build
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX= ${PREFIX}/share
 CONFIGURE_ARGS+=--with-mhash \
 		--with-zlib \
 		--with-posix-acl \
 		--with-e2fsattrs \
-		--mandir=${MANPREFIX}/man \
 		--with-config_file=${PREFIX}/etc/aide.conf
 CONFIGURE_ENV=	YACC="bison -y" \
 		POSIX_ACL_CFLAGS="-I/usr/include/sys" \

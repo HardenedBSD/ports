@@ -1,6 +1,7 @@
 PORTNAME=		bash
-PATCHLEVEL=		21
+PATCHLEVEL=		26
 PORTVERSION=		5.2.${PATCHLEVEL:S/^0//g}
+PORTREVISION=		1
 CATEGORIES=		shells
 MASTER_SITES=		GNU
 DISTNAME=		${PORTNAME}-${PORTVERSION:R}
@@ -25,6 +26,7 @@ USE_HARDENING=		safestack
 USES=			bison cpe iconv localbase pathfix
 CPE_VENDOR=		gnu
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS+=	--without-bash-malloc \
 			--disable-rpath \
 			--enable-disabled-builtins \

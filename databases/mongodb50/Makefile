@@ -37,7 +37,6 @@ USE_RC_SUBR=	mongod
 SHEBANG_FILES=	buildscripts/scons.py
 python_OLD_CMD=	@python_interpreter@
 
-<<<<<<< HEAD
 MPROTECT_DISABLE+=	bin/mongo
 MPROTECT_DISABLE+=	bin/mongod
 MPROTECT_DISABLE+=	bin/mongos
@@ -46,9 +45,7 @@ PAGEEXEC_DISABLE+=	bin/mongo
 PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
-=======
 # --modules= disables "enterprise" module from src/mongo/db/modules/
->>>>>>> internal/freebsd/main
 MAKE_ARGS=	--cxx-std=17 \
 		--disable-warnings-as-errors \
 		--libc++ \

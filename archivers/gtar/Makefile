@@ -12,13 +12,8 @@ WWW=		https://www.gnu.org/software/tar/
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
-INFO=		tar
-
 USE_HARDENING=	safestack
 
-=======
->>>>>>> internal/freebsd/main
 USES=		charsetfix cpe iconv:${STATIC_ARGS} localbase tar:xz
 CPE_VENDOR=	gnu
 GNU_CONFIGURE=	yes

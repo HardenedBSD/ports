@@ -1,6 +1,11 @@
 PORTNAME=	jq
+<<<<<<< HEAD
 DISTVERSION=	1.7.1
 PORTREVISION=	1
+=======
+DISTVERSION=	1.7
+PORTREVISION=	3
+>>>>>>> internal/freebsd/main
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/jqlang/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 
@@ -18,6 +23,7 @@ USE_LDCONFIG=	yes
 USE_HARDENING=	cfi safestack
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-maintainer-mode \
 		--docdir="${DOCSDIR}"
 

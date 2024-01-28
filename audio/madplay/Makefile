@@ -1,6 +1,6 @@
 PORTNAME=	madplay
 PORTVERSION=	0.15.2b
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	audio
 MASTER_SITES=	SF/mad/${PORTNAME}/${PORTVERSION} \
 		ftp://ftp.mars.org/pub/mpeg/
@@ -20,6 +20,7 @@ USES=		localbase
 USE_HARDENING=	pie:off
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--without-esd
 LDFLAGS+=	-lz
 ALL_TARGET=	all madtime

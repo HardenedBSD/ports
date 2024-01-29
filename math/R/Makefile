@@ -1,6 +1,6 @@
 PORTNAME=	R
 DISTVERSION=	4.3.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math lang
 MASTER_SITES=	CRAN/src/base/R-${PORTVERSION:C|\..*||}
 
@@ -34,6 +34,7 @@ USE_PERL5=	build
 USE_HARDENING=	pie:off relro:off
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-java \
 		--enable-R-shlib \
 		--with-readline \

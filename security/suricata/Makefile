@@ -1,6 +1,6 @@
 PORTNAME=	suricata
 DISTVERSION=	7.0.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	https://www.openinfosecfoundation.org/download/
 
@@ -30,6 +30,7 @@ USE_RC_SUBR=	${PORTNAME}
 USE_HARDENING=	pie:configure
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS+=	--disable-gccmarch-native \
 			--enable-bundled-htp \
 			--enable-gccprotect

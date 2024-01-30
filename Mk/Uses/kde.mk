@@ -104,7 +104,7 @@ KDE_PLASMA6_VERSION?=		5.92.0
 KDE_PLASMA6_BRANCH?=		unstable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS5_VERSION?=	5.113.0
+KDE_FRAMEWORKS5_VERSION?=	5.114.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
 # Next KDE Frameworks (Qt6 based)
@@ -197,6 +197,7 @@ DOCSDIR=		${PREFIX}/share/doc
 PORTDOCS?=		HTML/*
 USE_KDE+=		doctools:build
 .        endif
+KDE_MAN_PREFIX?=	${KDE_PREFIX}/share/man
 # Further pass along a SHLIB_VER PLIST_SUB
 PLIST_SUB+=		KDE_APPLICATIONS_SHLIB_VER=${KDE_APPLICATIONS_SHLIB_VER} \
 			KDE_APPLICATIONS_VERSION_SHORT="${KDE_APPLICATIONS_VERSION:R:R}"
@@ -205,6 +206,7 @@ DIST_SUBDIR?=		KDE/release-service/${KDE_APPLICATIONS_VERSION}
 PORTVERSION?=		${KDE_PLASMA_VERSION}
 PKGNAMEPREFIX?=		plasma${_KDE_VERSION}-
 MASTER_SITES?=		KDE/${KDE_PLASMA_BRANCH}/plasma/${KDE_PLASMA_VERSION}
+KDE_MAN_PREFIX?=	${KDE_PREFIX}/share/man
 DIST_SUBDIR?=		KDE/plasma/${KDE_PLASMA_VERSION}
 .        if ${_KDE_VERSION:M6}
 DESCR=			${.CURDIR:H:H}/x11/plasma6-plasma/pkg-descr
@@ -229,6 +231,7 @@ DIST_SUBDIR?=		KDE/frameworks/${KDE_FRAMEWORKS_VERSION}
 .        if ${_KDE_VERSION:M6}
 DESCR=			${.CURDIR:H:H}/x11/kf6-frameworks/pkg-descr
 .        endif
+KDE_MAN_PREFIX?=	${KDE_PREFIX}/share/man
 .      else
 IGNORE?=		unknown CATEGORY value '${_KDE_CATEGORY}' #'
 .      endif

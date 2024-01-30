@@ -30,12 +30,9 @@ LIB_DEPENDS=	libbrotlidec.so:archivers/brotli \
 
 USES=		compiler:c++11-lib gmake localbase pkgconfig python:build shebangfix tar:xz
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/node
 
-=======
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
->>>>>>> internal/freebsd/main
 CONFIGURE_ARGS=	--prefix=${PREFIX:S|^${DESTDIR}||} \
 		--shared-brotli \
 		--shared-cares \

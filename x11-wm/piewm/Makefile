@@ -1,6 +1,6 @@
 PORTNAME=	piewm
 PORTVERSION=	1.04
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11-wm
 MASTER_SITES=	https://ftp.openbsd.org/pub/OpenBSD/distfiles/
 

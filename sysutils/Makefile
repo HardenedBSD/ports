@@ -1670,6 +1670,7 @@
     SUBDIR += yadf
     SUBDIR += yadm
     SUBDIR += yank
+    SUBDIR += yazi
     SUBDIR += z
     SUBDIR += zap
     SUBDIR += zbackup

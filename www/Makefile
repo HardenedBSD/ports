@@ -139,6 +139,7 @@
     SUBDIR += devd
     SUBDIR += dezoomify-rs
     SUBDIR += dillo2
+    SUBDIR += dmarcts-report-viewer
     SUBDIR += dojo
     SUBDIR += dokuwiki
     SUBDIR += dolibarr

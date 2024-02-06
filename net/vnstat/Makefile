@@ -15,15 +15,12 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		localbase sqlite
 
 GNU_CONFIGURE=	yes
-<<<<<<< HEAD
 
 USE_HARDENING=	cfi safestack
 
-=======
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 INSTALL_TARGET=	install-exec install-man
->>>>>>> internal/freebsd/main
 USE_RC_SUBR=	vnstat
 
 USERS=		vnstat

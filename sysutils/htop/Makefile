@@ -9,15 +9,10 @@ WWW=		https://htop.dev/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		autoreconf compiler:c11 cpe libtool localbase ncurses pkgconfig \
-		python:build shebangfix
-=======
 USES=		autoreconf compiler:c11 cpe desktop-file-utils libtool localbase \
 		ncurses pkgconfig python:build shebangfix
->>>>>>> internal/freebsd/main
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	htop-dev

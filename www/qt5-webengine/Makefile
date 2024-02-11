@@ -19,7 +19,7 @@
 
 PORTNAME=	webengine
 DISTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	www
 PKGNAMEPREFIX=	qt5-
 
@@ -52,6 +52,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 DISTINFO_FILE=	${.CURDIR}/distinfo
 QT5_VERSION=	${_KDE_webengine_VERSION}
 
+<<<<<<< HEAD
 # Add extra-patch-no-mempcpy-nasm only when there's no mempcpy() in base.
 # Nested variable expansion avoids executing the test when not needed for
 # expanding EXTRA_PATCHES.
@@ -61,6 +62,8 @@ EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
 
 MPROTECT_DISABLE=	libexec/qt5/QtWebEngineProcess
 
+=======
+>>>>>>> internal/freebsd/main
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO SNDIO
 OPTIONS_DEFAULT=	ALSA

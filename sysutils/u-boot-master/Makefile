@@ -30,6 +30,9 @@ BUILD_DEPENDS+=	e2fsprogs-libuuid>=0:misc/e2fsprogs-libuuid \
 USES=		bison gmake python:build pkgconfig shebangfix tar:bz2
 BINARY_ALIAS=	bison=${LOCALBASE}/bin/bison dtc=${LOCALBASE}/bin/dtc sed=gsed python3=${PYTHON_CMD}
 
+USE_HARDENING=	retpoline:off
+NO_UNUSED_ARGUMENTS_CHECK=	yes
+
 SHEBANG_FILES=	tools/binman/binman
 SSP_UNSAFE=	yes
 UBOOT_DIR=	share/u-boot/${PORTNAME}${PKGNAMESUFFIX}

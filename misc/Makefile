@@ -426,6 +426,7 @@
     SUBDIR += py-hist
     SUBDIR += py-histoprint
     SUBDIR += py-huepy
+    SUBDIR += py-huggingface-hub
     SUBDIR += py-icoextract
     SUBDIR += py-instructor
     SUBDIR += py-ipyfastscape
@@ -434,6 +435,7 @@
     SUBDIR += py-lazrs
     SUBDIR += py-lightgbm
     SUBDIR += py-lightning-utilities
+    SUBDIR += py-litellm
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
     SUBDIR += py-mmcv

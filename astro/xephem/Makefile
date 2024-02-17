@@ -21,12 +21,9 @@ SHEBANG_GLOB=	*.pl
 
 MAKE_ARGS=	CC=${CC}
 LDFLAGS+=	-lfontconfig
-<<<<<<< HEAD
 
 USE_HARDENING=  pie:off
 
-=======
->>>>>>> internal/freebsd/main
 WRKSRC_SUBDIR=	GUI/xephem
 
 post-patch:

@@ -579,6 +579,7 @@
     SUBDIR += openldap26-server
     SUBDIR += openmdns
     SUBDIR += openmpi
+    SUBDIR += openmpi4
     SUBDIR += openntpd
     SUBDIR += openpgm
     SUBDIR += openradius
@@ -1117,6 +1118,7 @@
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
     SUBDIR += py-python-heatclient
+    SUBDIR += py-python-ipware
     SUBDIR += py-python-keystoneclient
     SUBDIR += py-python-ldap
     SUBDIR += py-python-neutronclient

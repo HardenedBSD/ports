@@ -4832,6 +4832,8 @@
     SUBDIR += py-iniconfig
     SUBDIR += py-inifile
     SUBDIR += py-iniparse
+    SUBDIR += py-inotify-simple
+    SUBDIR += py-inotifyrecursive
     SUBDIR += py-installer
     SUBDIR += py-intbitset
     SUBDIR += py-intelhex
@@ -5157,6 +5159,7 @@
     SUBDIR += py-pathos
     SUBDIR += py-pathspec
     SUBDIR += py-pathtools
+    SUBDIR += py-pathvalidate
     SUBDIR += py-paver
     SUBDIR += py-pbr
     SUBDIR += py-pcodedmp
@@ -5405,6 +5408,7 @@
     SUBDIR += py-pytest-html
     SUBDIR += py-pytest-httpbin
     SUBDIR += py-pytest-httpserver
+    SUBDIR += py-pytest-httpx
     SUBDIR += py-pytest-isort
     SUBDIR += py-pytest-jupyter
     SUBDIR += py-pytest-lazy-fixture

@@ -1,9 +1,6 @@
 PORTNAME=	jq
 DISTVERSION=	1.7.1
-<<<<<<< HEAD
 PORTREVISION=	2
-=======
->>>>>>> internal/freebsd/main
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/jqlang/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 

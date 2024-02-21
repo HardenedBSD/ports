@@ -14,6 +14,7 @@ USE_HARDENING=	safestack
 USES=		autoreconf
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes

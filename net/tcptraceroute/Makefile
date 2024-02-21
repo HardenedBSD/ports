@@ -1,7 +1,7 @@
 PORTNAME=	tcptraceroute
 PORTVERSION=	1.5beta7
-PORTREVISION=	1
 DISTVERSIONPREFIX=	tcptraceroute-
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -18,12 +18,13 @@ USE_HARDENING=	safestack
 USES=		gmake localbase
 
 GNU_CONFIGURE=	yes
-
-OPTIONS_DEFINE=	DOCS
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 GH_ACCOUNT=	mct
 USE_GITHUB=	yes
 
 PORTSCOUT=	ignore:1
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>

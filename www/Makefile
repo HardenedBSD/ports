@@ -49,6 +49,7 @@
     SUBDIR += angie-module-rtmp
     SUBDIR += angie-module-set-misc
     SUBDIR += angie-module-subs
+    SUBDIR += angie-module-testcookie
     SUBDIR += angie-module-upload
     SUBDIR += angie-module-vod
     SUBDIR += angie-module-xslt
@@ -2172,6 +2173,7 @@
     SUBDIR += rubygem-rack-protection
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-protection2
+    SUBDIR += rubygem-rack-protection3
     SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-session
     SUBDIR += rubygem-rack-ssl

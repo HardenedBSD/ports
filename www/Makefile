@@ -145,6 +145,7 @@
     SUBDIR += dolibarr
     SUBDIR += dolibarr16
     SUBDIR += dolibarr17
+    SUBDIR += dolibarr18
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += dot-http

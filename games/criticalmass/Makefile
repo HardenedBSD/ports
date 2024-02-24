@@ -1,6 +1,6 @@
 PORTNAME=	criticalmass
 PORTVERSION=	1.5.0
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Critical%20Mass/${PORTVERSION}-RC
@@ -22,6 +22,7 @@ USE_GL=		gl
 USE_SDL=	image mixer sdl
 USE_CXXSTD=	gnu++98
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-optimize
 
 USE_HARDENING=	pie:off relro:off
@@ -30,7 +31,7 @@ CONFLICTS=	shaaft
 
 PLIST_FILES=	bin/Packer \
 		bin/critter \
-		man/man6/critter.6.gz \
+		share/man/man6/critter.6.gz \
 		share/Critical_Mass/resource.dat
 PLIST_DIRS=	share/Critical_Mass
 

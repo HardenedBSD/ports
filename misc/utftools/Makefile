@@ -1,6 +1,6 @@
 PORTNAME=	utftools
 PORTVERSION=	1.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://www.cs.yorku.ca/pub/wily/misc/
 
@@ -19,6 +19,9 @@ USE_HARDENING=	pie:off
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${LOCALBASE}/lib --includedir=${LOCALBASE}/include
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|man$$|share/man|' ${WRKSRC}/Makefile.in
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*

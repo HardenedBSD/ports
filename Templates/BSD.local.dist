@@ -659,6 +659,8 @@
             ..
             cat3
             ..
+            cat4
+            ..
             cat5
             ..
             cat7
@@ -699,6 +701,9 @@
             ..
             mann
             ..
+            ru.KOI8-R
+                man1
+                ..
         ..
         misc
         ..

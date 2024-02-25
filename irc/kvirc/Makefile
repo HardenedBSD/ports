@@ -1,7 +1,7 @@
 PORTNAME=	KVIrc
 DISTVERSION=	5.0.0-102
 DISTVERSIONSUFFIX=	-geb3fdd6b1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	irc kde
 
 MAINTAINER=	kde@FreeBSD.org
@@ -28,9 +28,13 @@ USE_XORG=	ice sm x11 xext xrender xscrnsaver
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 CMAKE_ARGS=	-DMANDIR:STRING=share/man
+=======
+CMAKE_ARGS=	-DMANDIR_PREFIX:STRING=share/man
+>>>>>>> internal/freebsd/main
 
 PLIST_SUB=	VER=5.0
 

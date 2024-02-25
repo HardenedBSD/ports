@@ -1,6 +1,6 @@
 PORTNAME=	pipenightdreams
 PORTVERSION=	0.10.0
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	games
 MASTER_SITES=	https://www.libsdl.org/projects/pipenightdreams/packages/
 
@@ -16,6 +16,7 @@ USE_HARDENING=	pie:off
 USES=		gmake sdl
 USE_SDL=	image sdl
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 

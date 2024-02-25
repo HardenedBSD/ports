@@ -25,11 +25,8 @@ USE_GL=		gl glut
 USE_LDCONFIG=	yes
 USE_XORG=	x11 xcursor xext xinerama xrandr
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CPE_VENDOR=	artifex
-=======
 MAKE_ARGS=	build=release \
 		mandir=${PREFIX}/share/man \
 		prefix=${PREFIX} \
@@ -38,7 +35,6 @@ MAKE_ARGS=	build=release \
 		XCFLAGS+="-I${WRKSRC}/include/mupdf -fPIC" \
 		XLIBS+="-L${LOCALBASE}/lib -L${WRKSRC}/build/release"
 ALL_TARGET=	all extra-libs
->>>>>>> internal/freebsd/main
 
 # pkg-config to avoid the conflict with openjpeg15
 CFLAGS+=	`pkg-config --cflags libopenjp2` -fPIC

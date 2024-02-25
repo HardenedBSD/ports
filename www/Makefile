@@ -191,6 +191,7 @@
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
+    SUBDIR += freenginx
     SUBDIR += fswiki
     SUBDIR += fusionpbx
     SUBDIR += g-cows

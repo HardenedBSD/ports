@@ -1,7 +1,7 @@
 PORTNAME=	shadowsocks-libev
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.3.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	xiaoding+freebsd@xiaoding.org
@@ -21,6 +21,7 @@ USE_HARDENING=	pie:off
 
 USES=		autoreconf compiler:c11 gmake libtool:keepla pathfix
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--enable-shared
 USE_GITHUB=	yes
 GH_ACCOUNT=	shadowsocks

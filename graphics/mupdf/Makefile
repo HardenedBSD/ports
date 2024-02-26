@@ -25,8 +25,6 @@ USE_GL=		gl glut
 USE_LDCONFIG=	yes
 USE_XORG=	x11 xcursor xext xinerama xrandr
 
-USE_HARDENING=	pie:off
-
 MAKE_ARGS=	build=release \
 		mandir=${PREFIX}/share/man \
 		prefix=${PREFIX} \

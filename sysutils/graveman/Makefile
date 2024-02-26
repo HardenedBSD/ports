@@ -1,6 +1,6 @@
 PORTNAME=	graveman
 DISTVERSION=	0.3.12-5
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	sysutils
 MASTER_SITES=	http://graveman.tuxfamily.org/sources/
 
@@ -15,6 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_HARDENING=	pie:off
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USES=		gettext gmake gnome pathfix pkgconfig tar:bzip2
 USE_GNOME=	libglade2 intlhack gnomeprefix
 CPPFLAGS+=	-I${LOCALBASE}/include

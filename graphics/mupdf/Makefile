@@ -19,6 +19,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libjbig2dec.so:graphics/jbig2dec \
 		libopenjp2.so:graphics/openjpeg
 
+USE_HARDENING=	safestack
+
 USES=		compiler:c++11-lang cpe gl gmake jpeg pkgconfig xorg
 CPE_VENDOR=	artifex
 USE_GL=		gl glut

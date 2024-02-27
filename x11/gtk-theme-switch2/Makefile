@@ -12,12 +12,8 @@ USES=		gmake gnome pkgconfig xorg
 USE_XORG=	x11
 USE_GNOME=	gtk20
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-PLIST_FILES=	bin/switch2 man/man1/switch2.1.gz
-=======
 PLIST_FILES=	bin/switch2 share/man/man1/switch2.1.gz
->>>>>>> internal/freebsd/main
 
 .include <bsd.port.mk>

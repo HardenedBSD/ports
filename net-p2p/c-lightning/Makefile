@@ -33,14 +33,8 @@ ALL_TARGET=	default
 SHEBANG_FILES=	plugins/clnrest/clnrest.py \
 		tools/reckless
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-EXTRA_PATCHES_aarch64=	${FILESDIR}/extra-patch-external_libwally-core_src_ccan_ccan_base64_base64.c
-EXTRA_PATCHES=	${EXTRA_PATCHES_${ARCH}}
-
-=======
->>>>>>> internal/freebsd/main
 OPTIONS_DEFINE=		CLNRESTDEPS COMPATIBILITY DEBUG
 OPTIONS_MULTI=		STORAGE
 OPTIONS_MULTI_STORAGE=	POSTGRESQL SQLITE

@@ -97,7 +97,6 @@
     SUBDIR += cgi-lib
     SUBDIR += cgi-lib.pl
     SUBDIR += cgicc
-    SUBDIR += cgichk
     SUBDIR += cgiwrap
     SUBDIR += checkbot
     SUBDIR += chems
@@ -472,7 +471,6 @@
     SUBDIR += nginx-prometheus-exporter
     SUBDIR += nginx-ultimate-bad-bot-blocker
     SUBDIR += nginx-vts-exporter
-    SUBDIR += nibbleblog
     SUBDIR += nift
     SUBDIR += node
     SUBDIR += node16
@@ -1417,7 +1415,6 @@
     SUBDIR += php83-opcache
     SUBDIR += php83-session
     SUBDIR += php83-tidy
-    SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpfpmtop
     SUBDIR += phpgroupware

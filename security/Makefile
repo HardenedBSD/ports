@@ -755,11 +755,7 @@
     SUBDIR += paperkey
     SUBDIR += passh
     SUBDIR += passivedns
-<<<<<<< HEAD
     SUBDIR += paxtest
-    SUBDIR += pbc
-=======
->>>>>>> internal/freebsd/main
     SUBDIR += pcsc-tools
     SUBDIR += pdfcrack
     SUBDIR += pear-Auth

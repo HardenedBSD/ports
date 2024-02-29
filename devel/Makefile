@@ -2636,6 +2636,7 @@
     SUBDIR += p5-Hash-NoRef
     SUBDIR += p5-Hash-Objectify
     SUBDIR += p5-Hash-Ordered
+    SUBDIR += p5-Hash-SharedMem
     SUBDIR += p5-Hash-Slice
     SUBDIR += p5-Hash-Union
     SUBDIR += p5-Hash-Util-FieldHash-Compat
@@ -3891,7 +3892,6 @@
     SUBDIR += pcg-cpp
     SUBDIR += pcl
     SUBDIR += pcre
-    SUBDIR += pcre++
     SUBDIR += pcre2
     SUBDIR += pcsc-cyberjack
     SUBDIR += pcsc-lite

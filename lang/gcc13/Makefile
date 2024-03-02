@@ -24,7 +24,7 @@ BUILD_DEPENDS+=	runtest:misc/dejagnu
 .endif
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
-USE_HARDENING=			pie:off
+USE_HARDENING=			pie:off retpoline:off
 
 USES=		compiler:c++11-lang cpe gmake iconv libtool makeinfo perl5 tar:xz
 USE_BINUTILS=	yes

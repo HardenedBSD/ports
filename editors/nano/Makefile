@@ -13,15 +13,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		charsetfix ncurses pkgconfig tar:xz
 GNU_CONFIGURE=	yes
-<<<<<<< HEAD
 
 USE_HARDENING=	safestack
 
-CONFIGURE_ARGS=	--docdir=${DOCSDIR} --enable-utf8
-=======
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} --enable-utf8 --mandir=${PREFIX}/share
->>>>>>> internal/freebsd/main
 MAKE_ARGS+=	install_htmlmanDATA=install-htmlmanDATA
 PORTSCOUT=	limitw:1,even
 INFO=		nano

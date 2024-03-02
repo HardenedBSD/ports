@@ -11,12 +11,9 @@ LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GITHUB=	yes
-<<<<<<< HEAD
 
 USE_HARDENING=	pie:off
 
-=======
->>>>>>> internal/freebsd/main
 GH_ACCOUNT=	outpaddling
 
 MAKE_ARGS=	MANDIR=${PREFIX}/share/man

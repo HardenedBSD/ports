@@ -22,13 +22,9 @@ GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 TEST_TARGET=	test
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-PLIST_FILES=	bin/msg bin/msort man/man1/msort.1.gz
-=======
 PLIST_FILES=	bin/msg bin/msort share/man/man1/msort.1.gz
->>>>>>> internal/freebsd/main
 
 post-patch:
 	@${MV} ${WRKSRC}/limits.h ${WRKSRC}/${PORTNAME}_limits.h

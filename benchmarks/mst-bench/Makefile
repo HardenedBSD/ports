@@ -1,5 +1,6 @@
 PORTNAME=	MST-Bench
 DISTVERSION=	0.2.2
+PORTREVISION=	1
 CATEGORIES=	benchmarks
 
 MAINTAINER=	jwb@FreeBSD.org
@@ -10,11 +11,16 @@ LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GITHUB=	yes
+<<<<<<< HEAD
 
 USE_HARDENING=	pie:off
 
+=======
+>>>>>>> internal/freebsd/main
 GH_ACCOUNT=	outpaddling
 
-PLIST_FILES=	bin/mst-bench man/man1/mst-bench.1.gz
+MAKE_ARGS=	MANDIR=${PREFIX}/share/man
+
+PLIST_FILES=	bin/mst-bench share/man/man1/mst-bench.1.gz
 
 .include <bsd.port.mk>

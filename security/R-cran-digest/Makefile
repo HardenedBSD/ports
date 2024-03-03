@@ -1,9 +1,9 @@
 PORTNAME=	digest
-DISTVERSION=	0.6.33
+DISTVERSION=	0.6.34
 CATEGORIES=	security
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
-MAINTAINER=	uzsolt@uzsolt.hu
+MAINTAINER=	uzsolt@FreeBSD.org
 COMMENT=	Create cryptographic hash digests of R objects
 WWW=		https://cran.r-project.org/web/packages/digest/
 

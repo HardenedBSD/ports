@@ -1,6 +1,6 @@
 PORTNAME=	gcc
 PORTVERSION=	13.2.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=	runtest:misc/dejagnu
 .endif
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
-USE_HARDENING=			pie:off
+USE_HARDENING=			pie:off retpoline:off
 
 USES=		compiler:c++11-lang cpe gmake iconv libtool makeinfo perl5 tar:xz
 USE_BINUTILS=	yes
@@ -41,9 +41,9 @@ CFLAGS:=	${CFLAGS:N-mretpoline}
 CXXFLAGS:=	${CXXFLAGS:N-mretpoline}
 
 OPTIONS_DEFINE=		GRAPHITE
-OPTIONS_DEFAULT_aarch64=LTO_BOOTSTRAP
-OPTIONS_DEFAULT_amd64=	LTO_BOOTSTRAP
-OPTIONS_DEFAULT_i386=	LTO_BOOTSTRAP
+OPTIONS_DEFAULT_aarch64=STANDARD_BOOTSTRAP
+OPTIONS_DEFAULT_amd64=	STANDARD_BOOTSTRAP
+OPTIONS_DEFAULT_i386=	STANDARD_BOOTSTRAP
 OPTIONS_DEFAULT_powerpc64=LTO_BOOTSTRAP
 OPTIONS_DEFAULT_powerpc64le=LTO_BOOTSTRAP
 OPTIONS_RADIO=	BOOTSTRAP
@@ -82,6 +82,7 @@ TARGLIB=	${PREFIX}/lib/gcc${SUFFIX}
 TARGLIB32=	${PREFIX}/lib32	# The version information is added later
 LIBEXEC=	${PREFIX}/libexec/gcc${SUFFIX}
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_OUTSOURCE=	yes
 .if empty(PORT_OPTIONS:M*BOOTSTRAP)
 CONFIGURE_ARGS+=--disable-bootstrap
@@ -154,7 +155,7 @@ full-regression-test: build
 .endif
 
 post-stage:
-	${RM} ${STAGEDIR}${PREFIX}/man/man7/*
+	${RM} ${STAGEDIR}${PREFIX}/share/man/man7/*
 	${RM} -r ${STAGEDIR}${TARGLIB}/gcc/*/${GCC_VERSION}/include-fixed/
 	# Install ISO_Fortran_binding.h in an easily findable directory
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/gcc${SUFFIX}

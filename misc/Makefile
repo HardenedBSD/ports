@@ -245,6 +245,7 @@
     SUBDIR += lifelines
     SUBDIR += lightgbm
     SUBDIR += lingoteach
+    SUBDIR += llama-cpp
     SUBDIR += locale-en_DK
     SUBDIR += localedata
     SUBDIR += logsurfer
@@ -426,6 +427,7 @@
     SUBDIR += py-hist
     SUBDIR += py-histoprint
     SUBDIR += py-huepy
+    SUBDIR += py-huggingface-hub
     SUBDIR += py-icoextract
     SUBDIR += py-instructor
     SUBDIR += py-ipyfastscape
@@ -434,6 +436,7 @@
     SUBDIR += py-lazrs
     SUBDIR += py-lightgbm
     SUBDIR += py-lightning-utilities
+    SUBDIR += py-litellm
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
     SUBDIR += py-mmcv
@@ -458,6 +461,7 @@
     SUBDIR += py-palettable
     SUBDIR += py-papermill
     SUBDIR += py-pexpect
+    SUBDIR += py-pkbar
     SUBDIR += py-placekey
     SUBDIR += py-polars
     SUBDIR += py-powerline-status
@@ -535,6 +539,7 @@
     SUBDIR += rubygem-dotenv-rails-rails5
     SUBDIR += rubygem-dotenv-rails-rails50
     SUBDIR += rubygem-dotenv-rails-rails61
+    SUBDIR += rubygem-dotenv2
     SUBDIR += rubygem-haversine_distance
     SUBDIR += rubygem-iesd
     SUBDIR += rubygem-mime-types
@@ -557,11 +562,9 @@
     SUBDIR += shuffle-db
     SUBDIR += silicon
     SUBDIR += since
-    SUBDIR += skyutils
     SUBDIR += slides
     SUBDIR += sloccount
     SUBDIR += sls
-    SUBDIR += smssend
     SUBDIR += snakemake
     SUBDIR += soapysdr
     SUBDIR += solarized
@@ -580,6 +583,7 @@
     SUBDIR += team
     SUBDIR += tellico
     SUBDIR += tempcontrol
+    SUBDIR += tenere
     SUBDIR += termatrix
     SUBDIR += terminfo-db
     SUBDIR += teseq

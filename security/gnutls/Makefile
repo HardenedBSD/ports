@@ -1,5 +1,6 @@
 PORTNAME=	gnutls
 PORTVERSION=	3.7.10
+PORTREVISION=	2
 CATEGORIES=	security net
 MASTER_SITES=	GNUPG/gnutls/v${PORTVERSION:R}
 
@@ -23,13 +24,16 @@ USE_LDCONFIG=	yes
 
 CPE_VENDOR=	gnu
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-guile \
 		--with-system-priority-file=${PREFIX}/etc/gnutls/config \
 		--with-default-trust-store-dir=/etc/ssl/certs \
 		--without-brotli \
 		--without-zstd \
 		--without-tpm \
-		--without-tpm2
+		--without-tpm2 \
+		--enable-ld-version-script
+LDFLAGS=	-Wl,--undefined-version
 MAKE_ENV=	MAKEINFOFLAGS=--no-split
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check

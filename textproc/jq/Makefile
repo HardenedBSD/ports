@@ -1,6 +1,6 @@
 PORTNAME=	jq
 DISTVERSION=	1.7.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/jqlang/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 
@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 USE_HARDENING=	cfi safestack
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-maintainer-mode \
 		--docdir="${DOCSDIR}"
 

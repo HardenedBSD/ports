@@ -53,7 +53,6 @@
     SUBDIR += bamp-lv2
     SUBDIR += bangr-lv2
     SUBDIR += baresip
-    SUBDIR += baudline
     SUBDIR += bcg729
     SUBDIR += bchoppr-lv2
     SUBDIR += beep
@@ -216,7 +215,6 @@
     SUBDIR += gnome-metronome
     SUBDIR += gnome-music
     SUBDIR += gnome-podcasts
-    SUBDIR += gnormalize
     SUBDIR += gnuitar
     SUBDIR += gnupod
     SUBDIR += gnuspeechsa
@@ -398,6 +396,7 @@
     SUBDIR += libsonic
     SUBDIR += libsoxr
     SUBDIR += libspecbleach
+    SUBDIR += libvgm
     SUBDIR += libvorbis
     SUBDIR += libxmp
     SUBDIR += lilv
@@ -477,13 +476,11 @@
     SUBDIR += mp3blaster
     SUBDIR += mp3burn
     SUBDIR += mp3check
-    SUBDIR += mp3ck
     SUBDIR += mp3gain
     SUBDIR += mp3guessenc
     SUBDIR += mp3lint
     SUBDIR += mp3mover
     SUBDIR += mp3plot
-    SUBDIR += mp3rename
     SUBDIR += mp3riot
     SUBDIR += mp3splt
     SUBDIR += mp3stat
@@ -505,6 +502,7 @@
     SUBDIR += muse-sequencer
     SUBDIR += musepack
     SUBDIR += musescore
+    SUBDIR += musescore3
     SUBDIR += musiccontrol
     SUBDIR += musicpc
     SUBDIR += musicpd
@@ -604,11 +602,9 @@
     SUBDIR += plasma6-ocean-sound-theme
     SUBDIR += plasma6-oxygen-sounds
     SUBDIR += plasma6-plasma-pa
-    SUBDIR += play
     SUBDIR += playgsf
     SUBDIR += playmidi
     SUBDIR += playumidi
-    SUBDIR += pm3umpdl
     SUBDIR += pms
     SUBDIR += pms-devel
     SUBDIR += pocketsphinx
@@ -763,9 +759,6 @@
     SUBDIR += speex
     SUBDIR += speexdsp
     SUBDIR += spek
-    SUBDIR += sphinx
-    SUBDIR += sphinx3
-    SUBDIR += sphinxbase
     SUBDIR += spiralloops
     SUBDIR += spiralsynth
     SUBDIR += spiralsynthmodular
@@ -779,7 +772,6 @@
     SUBDIR += ssr-lv2
     SUBDIR += stegosaurus-lv2
     SUBDIR += stk
-    SUBDIR += stmp
     SUBDIR += stone-phaser-lv2
     SUBDIR += strawberry
     SUBDIR += streamripper
@@ -790,13 +782,11 @@
     SUBDIR += supercollider
     SUBDIR += surge-synthesizer-lv2
     SUBDIR += surge-synthesizer-xt-lv2
-    SUBDIR += sweep
     SUBDIR += swh-lv2
     SUBDIR += swhplugins
     SUBDIR += synthpod-lv2
     SUBDIR += synthv1-lv2
     SUBDIR += taglib
-    SUBDIR += taglib-extras
     SUBDIR += taglookup
     SUBDIR += tagutil
     SUBDIR += tamgamp-lv2

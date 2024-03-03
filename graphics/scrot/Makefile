@@ -1,6 +1,6 @@
 PORTNAME=	scrot
 DISTVERSION=	1.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -22,9 +22,10 @@ USE_HARDENING=	cfi safestack
 CFLAGS+=	-fuse-ld=lld
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 USE_XORG=	x11 xext xfixes xcomposite xinerama
 
-PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
+PLIST_FILES=	bin/${PORTNAME} share/man/man1/${PORTNAME}.1.gz
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS

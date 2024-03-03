@@ -1,6 +1,5 @@
 PORTNAME=	vnstat
-PORTVERSION=	2.11
-PORTREVISION=	1
+PORTVERSION=	2.12
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/vergoh/vnstat/releases/download/v${PORTVERSION}/ \
 		https://humdi.net/vnstat/
@@ -11,6 +10,7 @@ WWW=		https://humdi.net/vnstat/ \
 		https://github.com/vergoh/vnstat
 
 LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		localbase sqlite
 
@@ -19,6 +19,8 @@ GNU_CONFIGURE=	yes
 
 USE_HARDENING=	cfi safestack
 
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
+INSTALL_TARGET=	install-exec install-man
 USE_RC_SUBR=	vnstat
 
 USERS=		vnstat

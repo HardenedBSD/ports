@@ -1,6 +1,6 @@
 PORTNAME=	bitchx
 PORTVERSION=	1.2.1
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES+=	irc
 MASTER_SITES=	SF/${PORTNAME}/ircii-pana/${PORTNAME}-${DISTVERSION}
@@ -12,11 +12,15 @@ WWW=		http://www.bitchx.org/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
+DEPRECATED=	Last stable release 2014, last upstream commit in 2019. There have been multiple concerns over security and it also lacks unicode support. Please consider using irc/irssi  
+EXPIRATION_DATE=2024-03-31
+
 USES=		cpe gmake ncurses
 
 USE_HARDENING=	safestack
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS+=--exec-prefix="${PREFIX}/share" \
 		--bindir="${PREFIX}/bin" \
 		--datadir="${PREFIX}/share" \

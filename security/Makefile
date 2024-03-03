@@ -55,6 +55,7 @@
     SUBDIR += bfbtester
     SUBDIR += binwalk
     SUBDIR += bitwarden-cli
+    SUBDIR += blst
     SUBDIR += boringssl
     SUBDIR += botan2
     SUBDIR += botan3
@@ -67,12 +68,14 @@
     SUBDIR += caesarcipher
     SUBDIR += caldera
     SUBDIR += caldera-ot
+    SUBDIR += caldera4
     SUBDIR += calife
     SUBDIR += cardpeek
     SUBDIR += cargo-audit
     SUBDIR += ccrypt
     SUBDIR += ccsrch
     SUBDIR += certmgr
+    SUBDIR += certspotter
     SUBDIR += cfs
     SUBDIR += cfssl
     SUBDIR += cfv
@@ -148,17 +151,13 @@
     SUBDIR += eschalot
     SUBDIR += evilginx2
     SUBDIR += expiretable
-    SUBDIR += f-prot
-    SUBDIR += fakebo
     SUBDIR += fakeident
     SUBDIR += fakeroot
     SUBDIR += farmhash
-    SUBDIR += fcheck
     SUBDIR += fcrackzip
     SUBDIR += ffuf
     SUBDIR += fiked
     SUBDIR += fizz
-    SUBDIR += fl0p
     SUBDIR += flawfinder
     SUBDIR += fprint_demo
     SUBDIR += fprintd
@@ -285,6 +284,7 @@
     SUBDIR += lego
     SUBDIR += libargon2
     SUBDIR += libassuan
+    SUBDIR += libcaes
     SUBDIR += libcryptui
     SUBDIR += libdecaf
     SUBDIR += libecc
@@ -330,7 +330,6 @@
     SUBDIR += libwhisker
     SUBDIR += libxcrypt
     SUBDIR += libyubikey
-    SUBDIR += libzrtpcppcore
     SUBDIR += lime
     SUBDIR += linux-bitwarden-cli
     SUBDIR += linux-c7-ca-certificates
@@ -757,7 +756,6 @@
     SUBDIR += passh
     SUBDIR += passivedns
     SUBDIR += paxtest
-    SUBDIR += pbc
     SUBDIR += pcsc-tools
     SUBDIR += pdfcrack
     SUBDIR += pear-Auth
@@ -838,7 +836,6 @@
     SUBDIR += plasma6-ksshaskpass
     SUBDIR += plasma6-kwallet-pam
     SUBDIR += please
-    SUBDIR += poly1305aes
     SUBDIR += portacl-rc
     SUBDIR += proftpd-mod_clamav
     SUBDIR += proxycheck
@@ -1006,7 +1003,6 @@
     SUBDIR += py-pysaml24
     SUBDIR += py-pysaml26
     SUBDIR += py-pyscard
-    SUBDIR += py-pysha3
     SUBDIR += py-pysodium
     SUBDIR += py-pyspnego
     SUBDIR += py-python-axolotl
@@ -1036,7 +1032,6 @@
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
     SUBDIR += py-service-identity
-    SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
     SUBDIR += py-spake2
@@ -1076,6 +1071,7 @@
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
+    SUBDIR += rage-encryption
     SUBDIR += ratproxy
     SUBDIR += rats
     SUBDIR += rcracki_mt
@@ -1293,7 +1289,7 @@
     SUBDIR += sslscan
     SUBDIR += sslsplit
     SUBDIR += sssd
-    SUBDIR += sssd-devel
+    SUBDIR += sssd2
     SUBDIR += ssss
     SUBDIR += sst
     SUBDIR += starttls
@@ -1354,6 +1350,7 @@
     SUBDIR += vouch-proxy
     SUBDIR += vpnc
     SUBDIR += vuls
+    SUBDIR += vulsrepo
     SUBDIR += vuxml
     SUBDIR += vxquery
     SUBDIR += wapiti
@@ -1378,6 +1375,7 @@
     SUBDIR += xmlsec1
     SUBDIR += xorsearch
     SUBDIR += xray-core
+    SUBDIR += xhash
     SUBDIR += yafic
     SUBDIR += yapet
     SUBDIR += yara

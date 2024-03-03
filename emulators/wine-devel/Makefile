@@ -1,8 +1,8 @@
 PORTNAME=	wine
-DISTVERSION=	9.0-rc5
+DISTVERSION=	9.3
 PORTEPOCH=	1
 CATEGORIES=	emulators
-MASTER_SITES=	https://dl.winehq.org/wine/source/9.0/
+MASTER_SITES=	https://dl.winehq.org/wine/source/9.x/
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	ports@FreeBSD.org
@@ -30,6 +30,7 @@ CPE_VENDOR=	winehq
 CONFLICTS_INSTALL=	wine
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS+=--verbose \
 		--disable-kerberos \
 		--disable-tests \

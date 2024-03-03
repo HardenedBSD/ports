@@ -2,6 +2,7 @@
 
 PORTNAME=	ocaml
 PORTVERSION=	4.08.1
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/${DISTNAME:R}/ GENTOO \
 		http://caml.inria.fr/pub/distrib/${DISTNAME:R}/:docs
@@ -30,6 +31,7 @@ USES=		cpe compiler:c11 gmake shebangfix tar:xz
 USE_LDCONFIG=	yes
 CPE_VENDOR=	inria
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 ALL_TARGET=	world.opt
 STRIP=
 PIE_UNSAFE=	yes
@@ -50,7 +52,6 @@ CONFIGURE_ARGS= --prefix="${PREFIX}"
 CONFIGURE_ENV=	LDFLAGS="${LDFLAGS}" \
 		ASPP="${CC} -c" \
 		PARTIALLD="${LD} -r"
-MAKE_ENV=	SYSTEM_ARCH="${ARCH:C/aarch64/arm64/:C/powerpc.*/power/}"
 
 OPTIONS_DEFINE=	X11 THREADS DOCS EXAMPLES
 OPTIONS_DEFAULT=X11 THREADS
@@ -92,7 +93,7 @@ CONFIGURE_ENV+=		AS="${AS} ${ASFLAGS}" \
 			CC="${CC}"
 .endif
 
-.if defined(NO_PROFILE) || ${ARCH:Mpowerpc} || ${ARCH:Mamd64}
+.if defined(NO_PROFILE)
 PLIST_SUB+=	PROF="@comment "
 .else
 PLIST_SUB+=	PROF=""
@@ -104,17 +105,12 @@ post-patch:
 		-e '\|RANLIB|s|ranlib|${RANLIB}|' \
 		-e '\|^ldflags=|s|""|"${LDFLAGS}"|' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's,$$(ARCH),$$(SYSTEM_ARCH),' \
-		${WRKSRC}/Makefile ${WRKSRC}/Makefile.tools \
-		${WRKSRC}/runtime/Makefile \
-		${WRKSRC}/ocamltest/Makefile \
-		${WRKSRC}/otherlibs/systhreads/Makefile
 
 check-test: do-install
 	@cd ${WRKSRC}/testsuite; ${RM} _log; for d in tests/* ; do \
-	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} one DIR=$${d} \
-	2>&1 | tee -a _log || ${TRUE} ; done ; \
-	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} report
+	${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} one \
+	DIR=$${d} 2>&1 | tee -a _log || ${TRUE} ; done ; \
+	${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} report
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}

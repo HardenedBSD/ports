@@ -1,6 +1,5 @@
 PORTNAME=	libidn2
-PORTVERSION=	2.3.4
-PORTREVISION=	1
+PORTVERSION=	2.3.7
 CATEGORIES=	dns
 MASTER_SITES=	GNU/libidn
 
@@ -19,10 +18,12 @@ USES=		charsetfix iconv libtool localbase makeinfo pathfix
 
 CONFIGURE_ARGS=	--disable-nls \
 		--with-libunistring-prefix=${LOCALBASE} \
+		--enable-ld-version-script \
 		ac_cv_prog_RONN=${TRUE}
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 INSTALL_TARGET=	install-strip
+LDFLAGS+=	-Wl,--undefined-version
 TEST_TARGET=	check
 USE_LDCONFIG=	yes
 

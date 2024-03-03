@@ -1,6 +1,6 @@
 PORTNAME=	anjuta
 PORTVERSION=	3.34.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -11,6 +11,9 @@ WWW=		http://anjuta.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Unmaintained, upstream WWW owned by gambling site, use devel/gnome-builders
+EXPIRATION_DATE=2024-03-11
 
 BUILD_DEPENDS=	autogen:devel/autogen \
 		itstool:textproc/itstool
@@ -44,6 +47,7 @@ gjs_CMD=	${LOCALBASE}/bin/gjs
 USE_LDCONFIG=	yes
 USE_GNOME=	cairo gtksourceview3 intlhack libgda5 libwnck3
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--with-symbol-db-shm=/tmp \
 		--disable-packagekit \
 		--disable-neon \

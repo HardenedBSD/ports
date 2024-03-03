@@ -1,7 +1,7 @@
 PORTNAME=	mtr
 PORTVERSION=	0.95
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -16,6 +16,7 @@ USE_HARDENING=	safestack
 USES=		autoreconf ncurses pkgconfig
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 LDFLAGS+=	-lncurses
 
 GH_ACCOUNT=	traviscross

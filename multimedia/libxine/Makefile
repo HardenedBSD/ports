@@ -1,6 +1,6 @@
 PORTNAME=	xine
 DISTVERSION=	1.2.13
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-lib/${DISTVERSION}
 PKGNAMEPREFIX=	lib
@@ -42,6 +42,7 @@ USES=		compiler cpe gl gmake gnome iconv libtool:keepla jpeg \
 CPE_PRODUCT=	xine-lib
 CPE_VENDOR=	xine
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_XORG=	x11 xcb xv xinerama xext sm ice
 USE_GL=		gl glu
 USE_PERL5=	build

@@ -1,9 +1,9 @@
---- content/common/features.h.orig	2023-12-23 12:33:28 UTC
+--- content/common/features.h.orig	2024-02-25 20:22:18 UTC
 +++ content/common/features.h
-@@ -37,7 +37,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDeviceMonitorMac)
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kDocumentPolicyNegotiation);
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnumerateDevicesHideDeviceIDs);
+@@ -37,7 +37,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDocumentPolicyNeg
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableBackForwardCacheForScreenReader);
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(
+     kEnableBackForwardCacheForOngoingSubframeNavigation);
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);

@@ -4,7 +4,8 @@
 # Support of GTK is checked at compile time and themes directories too.
 
 PORTNAME=	xfce4-notifyd
-PORTVERSION=	0.9.3
+PORTVERSION=	0.9.4
+PORTREVISION=	1
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -15,7 +16,6 @@ WWW=		https://gitlab.xfce.org/apps/xfce4-notifyd
 
 LICENSE=	GPLv3
 
-BUILD_DEPENDS=	xdt-csource:devel/xfce4-dev-tools
 LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz \
 		libnotify.so:devel/libnotify
 
@@ -26,6 +26,7 @@ USE_XFCE=	libmenu panel xfconf
 USE_XORG=	ice sm x11
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-systemd
 INSTALL_TARGET=	install-strip
 

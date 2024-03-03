@@ -1,5 +1,5 @@
 PORTNAME=	kodi
-DISTVERSION=	20.3
+DISTVERSION=	20.4
 CATEGORIES=	multimedia java
 # do not forget to fix devel/kodi-platform when updating kodi
 
@@ -95,6 +95,8 @@ OPTIONS_GROUP_PLATFORM=	GBM WAYLAND X11
 OPTIONS_EXCLUDE_aarch64=FEATURE
 OPTIONS_EXCLUDE_armv7=	FEATURE
 OPTIONS_EXCLUDE_armv6=	FEATURE
+OPTIONS_EXCLUDE_powerpc64=     FEATURE
+OPTIONS_EXCLUDE_powerpc64le=   FEATURE
 
 OPTIONS_DEFAULT+=	SMB
 
@@ -224,6 +226,7 @@ GBM_LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
 			libdrm.so:graphics/libdrm \
 			libxkbcommon.so:x11/libxkbcommon \
 			libinput.so:x11/libinput
+GBM_RUN_DEPENDS=	mesa-dri>0:graphics/mesa-dri
 
 WAYLAND_CATEGORIES=	wayland
 WAYLAND_USES=		gl

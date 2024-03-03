@@ -319,6 +319,7 @@ bin/@Install_MEICA_Demo
 bin/@Install_NIH_Marmoset
 bin/@Install_NMT
 bin/@Install_RSFMRI_Motion_Group_Demo
+bin/@Install_SAM_marmoset
 bin/@Install_SURFLAYERS_DEMO1
 bin/@Install_TSrestMovieDemo
 bin/@IsoMasks
@@ -495,6 +496,7 @@ bin/adjunct_apqc_tsnr_general
 bin/adjunct_aw_tableize_roi_info.py
 bin/adjunct_calc_mont_dims.py
 bin/adjunct_combine_str.py
+bin/adjunct_deob_around_origin
 bin/adjunct_is_label.py
 bin/adjunct_make_script_and_rst.py
 bin/adjunct_select_str.py
@@ -539,6 +541,7 @@ bin/cat_matvec
 bin/ccalc
 bin/cifti_tool
 bin/column_cat
+bin/compute_ROI_stats.tcsh
 bin/convert_cdiflist_to_grads.py
 bin/count
 bin/dcm2niix_afni
@@ -649,6 +652,7 @@ bin/serial_helper
 bin/sfim
 bin/slow_surf_clustsim.py
 bin/smooth.R
+bin/sswarper2
 bin/stimband
 bin/strblast
 bin/suma

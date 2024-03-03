@@ -1,6 +1,6 @@
 PORTNAME=	base64
 PORTVERSION=	1.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fourmilab.ch/webtools/base64/
 
@@ -14,8 +14,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_HARDENING=	safestack
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 ALL_TARGET=	prog
 PLIST_FILES=	bin/base64 \
-		man/man1/base64.1.gz
+		share/man/man1/base64.1.gz
 
 .include <bsd.port.mk>

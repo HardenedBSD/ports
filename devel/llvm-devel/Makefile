@@ -128,6 +128,7 @@ CLANG_USE=		PERL5=build
 COMPILER_RT_DESC=	Sanitizer libraries
 COMPILER_RT_IMPLIES=	CLANG
 COMPILER_RT_PLIST_FILES=${_COMPILER_RT_LIBS}
+COMPILER_RT_CONFLICTS_BUILD=${ARCH}-binutils
 DOCS_BUILD_DEPENDS= \
 	${PYTHON_PKGNAMEPREFIX}myst-parser>0:textproc/py-myst-parser@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}recommonmark>=0.0.20180530:textproc/py-recommonmark@${PY_FLAVOR} \
@@ -243,7 +244,7 @@ USES+=	gnome
 
 .if ${PORT_OPTIONS:MCOMPILER_RT}
 LLVM_ENABLE_PROJECTS+=	compiler-rt
-COMPILER_RT_PATTERN=	(sanitizer|include.xray|include\/(fuzzer|orc)|profile\/InstrProfData.inc)
+COMPILER_RT_PATTERN=	(sanitizer|include.xray|include\/(fuzzer|orc)|profile\/InstrProfData.inc|profile\/instr_prof_interface.h)
 .endif
 
 .if ${PORT_OPTIONS:MEXTRAS}

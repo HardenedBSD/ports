@@ -1,6 +1,6 @@
 PORTNAME=	cimg
 DISTVERSIONPREFIX=	v.
-DISTVERSION=	3.3.3
+DISTVERSION=	3.3.4
 PORTEPOCH=	3
 CATEGORIES=	graphics devel
 
@@ -21,7 +21,7 @@ USE_HARDENING=	pie:off
 LDFLAGS+=	-fuse-ld=lld
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	dtschump
+GH_ACCOUNT=	GreycLab
 GH_PROJECT=	CImg
 
 BUILD_WRKSRC=	${WRKSRC}/examples

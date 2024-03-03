@@ -168,6 +168,7 @@
     SUBDIR += bvm
     SUBDIR += byobu
     SUBDIR += calamares
+    SUBDIR += cardano-cli
     SUBDIR += catatonit
     SUBDIR += catfish
     SUBDIR += catsit
@@ -426,6 +427,8 @@
     SUBDIR += fortunelock
     SUBDIR += fpart
     SUBDIR += frand
+    SUBDIR += freebsd-bsdlabel
+    SUBDIR += freebsd-fdisk
     SUBDIR += freebsd-snapshot
     SUBDIR += freecolor
     SUBDIR += freedt
@@ -824,6 +827,7 @@
     SUBDIR += nfcutils
     SUBDIR += nitrogen
     SUBDIR += nix
+    SUBDIR += nmdaemon
     SUBDIR += nmrpflash
     SUBDIR += no-login
     SUBDIR += node_exporter
@@ -1048,8 +1052,7 @@
     SUBDIR += podman-suite
     SUBDIR += polkit
     SUBDIR += polkit-gnome
-    SUBDIR += polkit-qt
-    SUBDIR += polkit-qt-1-devel
+    SUBDIR += polkit-qt-1
     SUBDIR += pot
     SUBDIR += potnet
     SUBDIR += poweralertd
@@ -1092,6 +1095,7 @@
     SUBDIR += py-azure-cli-core
     SUBDIR += py-azure-cli-telemetry
     SUBDIR += py-bitrot
+    SUBDIR += py-blinkstick
     SUBDIR += py-borgmatic
     SUBDIR += py-concurrent-log-handler
     SUBDIR += py-cron-descriptor
@@ -1234,6 +1238,7 @@
     SUBDIR += rubygem-chef-bin
     SUBDIR += rubygem-chef-cleanroom
     SUBDIR += rubygem-chef-config
+    SUBDIR += rubygem-chef-licensing
     SUBDIR += rubygem-chef-telemetry
     SUBDIR += rubygem-chef-utils
     SUBDIR += rubygem-chef-vault
@@ -1667,6 +1672,7 @@
     SUBDIR += yadf
     SUBDIR += yadm
     SUBDIR += yank
+    SUBDIR += yazi
     SUBDIR += z
     SUBDIR += zap
     SUBDIR += zbackup

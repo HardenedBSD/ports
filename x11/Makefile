@@ -86,6 +86,7 @@
     SUBDIR += foot
     SUBDIR += fstobdf
     SUBDIR += fuzzel
+    SUBDIR += gbsddialog
     SUBDIR += gdm
     SUBDIR += glcapsviewer
     SUBDIR += gmrun
@@ -121,6 +122,8 @@
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
     SUBDIR += hybrid-bar
+    SUBDIR += hypridle
+    SUBDIR += hyprlock
     SUBDIR += hyprpaper
     SUBDIR += hyprpicker
     SUBDIR += i3bar-river
@@ -244,6 +247,7 @@
     SUBDIR += lxpanel
     SUBDIR += lxqt-about
     SUBDIR += lxqt-globalkeys
+    SUBDIR += lxqt-menu-data
     SUBDIR += lxqt-runner
     SUBDIR += lxrandr
     SUBDIR += ly
@@ -429,6 +433,7 @@
     SUBDIR += terminal.app
     SUBDIR += terminator
     SUBDIR += terminology
+    SUBDIR += tessen
     SUBDIR += thingylaunch
     SUBDIR += tilda
     SUBDIR += tilix
@@ -459,6 +464,7 @@
     SUBDIR += wev
     SUBDIR += wezterm
     SUBDIR += wf-shell
+    SUBDIR += windowtolayer
     SUBDIR += wl-clipboard
     SUBDIR += wl-mirror
     SUBDIR += wlogout
@@ -666,5 +672,6 @@
     SUBDIR += yeahconsole
     SUBDIR += yelp
     SUBDIR += zenity
+    SUBDIR += zutty
 
 .include <bsd.port.subdir.mk>

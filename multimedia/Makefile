@@ -3,7 +3,6 @@
     SUBDIR += Bento4
     SUBDIR += ab-av1
     SUBDIR += ab25
-    SUBDIR += aegisub
     SUBDIR += alass
     SUBDIR += aom
     SUBDIR += aravis
@@ -24,7 +23,6 @@
     SUBDIR += bitstream
     SUBDIR += blind
     SUBDIR += butt
-    SUBDIR += camserv
     SUBDIR += celluloid
     SUBDIR += cheese
     SUBDIR += chilitags
@@ -64,7 +62,6 @@
     SUBDIR += ffsubsync
     SUBDIR += filebot
     SUBDIR += flvmeta
-    SUBDIR += flvstreamer
     SUBDIR += flvtool++
     SUBDIR += fswebcam
     SUBDIR += gaupol
@@ -137,6 +134,7 @@
     SUBDIR += kdemultimedia
     SUBDIR += kdemultimedia-ffmpegthumbs
     SUBDIR += kdenlive
+    SUBDIR += kew
     SUBDIR += kf5-kmediaplayer
     SUBDIR += kmplayer
     SUBDIR += kodi
@@ -199,6 +197,7 @@
     SUBDIR += libvdpau-va-gl
     SUBDIR += libvlcpp
     SUBDIR += libvpx
+    SUBDIR += libwebm
     SUBDIR += libx264
     SUBDIR += libxine
     SUBDIR += libxspf
@@ -213,6 +212,7 @@
     SUBDIR += lsdvd
     SUBDIR += m2vrequantiser
     SUBDIR += makemkv
+    SUBDIR += mediaelch
     SUBDIR += mediainfo
     SUBDIR += mencoder
     SUBDIR += minisatip

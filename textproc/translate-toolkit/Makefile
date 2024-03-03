@@ -1,5 +1,5 @@
 PORTNAME=	translate-toolkit
-PORTVERSION=	3.12.1
+PORTVERSION=	3.12.2
 CATEGORIES=	textproc
 MASTER_SITES=	PYPI \
 		https://github.com/translate/translate/releases/download/${PORTVERSION}/
@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=42:devel/py-setuptools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}setuptools_scm>=6.2:devel/py-setuptools_scm@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools-scm>=6.2:devel/py-setuptools-scm@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR} \
 		${RUN_DEPENDS}
 RUN_DEPENDS=	bash:shells/bash \
@@ -58,7 +58,7 @@ ICAL_VARS=		MANPAGES+="ical2po po2ical"
 INI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}iniparse>=0.5:devel/py-iniparse@${PY_FLAVOR}
 INI_VARS=		MANPAGES+="ini2po po2ini"
 LEVENSHTEIN_RUN_DEPENDS=${PYTHON_PKGNAMEPREFIX}Levenshtein>=0.12:devel/py-Levenshtein@${PY_FLAVOR}
-MARKDOWN_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mistletoe>=1.2.1:textproc/py-mistletoe@${PY_FLAVOR}
+MARKDOWN_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mistletoe>=1.3.0:textproc/py-mistletoe@${PY_FLAVOR}
 MARKDOWN_VARS=		MANPAGES+="md2po po2md"
 PHP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}phply>=1.2.6:devel/py-phply@${PY_FLAVOR}
 PHP_VARS=		MANPAGES+="php2po po2php"

@@ -1,5 +1,6 @@
 PORTNAME=	yadifa
 DISTVERSION=	2.6.5
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-11201
 CATEGORIES=	dns
 MASTER_SITES=	https://www.yadifa.eu/sites/default/files/releases/ \
@@ -18,6 +19,7 @@ USE_RC_SUBR=	${PORTNAME}d
 USE_HARDENING=	pie:off relro:off
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--localstatedir=/var
 
 SUB_LIST+=	GROUPS="${GROUPS}" \

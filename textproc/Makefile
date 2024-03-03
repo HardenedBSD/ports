@@ -21,6 +21,7 @@
     SUBDIR += R-cran-readr
     SUBDIR += R-cran-readxl
     SUBDIR += R-cran-rematch
+    SUBDIR += R-cran-reprex
     SUBDIR += R-cran-rex
     SUBDIR += R-cran-rio
     SUBDIR += R-cran-rmarkdown
@@ -124,6 +125,7 @@
     SUBDIR += cs-mythes
     SUBDIR += csb-aspell
     SUBDIR += csvdiff
+    SUBDIR += csvlens
     SUBDIR += csvq
     SUBDIR += ctpl
     SUBDIR += ctpp2
@@ -1354,6 +1356,7 @@
     SUBDIR += py-empy
     SUBDIR += py-enchant
     SUBDIR += py-enrich
+    SUBDIR += py-epy-reader
     SUBDIR += py-et_xmlfile
     SUBDIR += py-evtx2splunk
     SUBDIR += py-extract-msg
@@ -1361,6 +1364,7 @@
     SUBDIR += py-faust-cchardet
     SUBDIR += py-feedparser
     SUBDIR += py-fingerprints
+    SUBDIR += py-flor
     SUBDIR += py-fluent.syntax
     SUBDIR += py-ftfy
     SUBDIR += py-furo
@@ -1399,8 +1403,10 @@
     SUBDIR += py-junit-xml
     SUBDIR += py-jupyter_sphinx
     SUBDIR += py-jupyterlab-pygments
+    SUBDIR += py-langcodes
     SUBDIR += py-langdetect
     SUBDIR += py-langid
+    SUBDIR += py-language-data
     SUBDIR += py-laserhammer
     SUBDIR += py-latexcodec
     SUBDIR += py-libxml2
@@ -1546,10 +1552,15 @@
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
     SUBDIR += py-scour
+    SUBDIR += py-sense2vec
     SUBDIR += py-sentencepiece
     SUBDIR += py-simplebayes
     SUBDIR += py-smartypants
     SUBDIR += py-snowballstemmer
+    SUBDIR += py-spacy
+    SUBDIR += py-spacy-legacy
+    SUBDIR += py-spacy-llm
+    SUBDIR += py-spacy-loggers
     SUBDIR += py-sparqlwrapper
     SUBDIR += py-sphinx
     SUBDIR += py-sphinx-argparse
@@ -1612,9 +1623,11 @@
     SUBDIR += py-textual
     SUBDIR += py-textwrap3
     SUBDIR += py-three-merge
+    SUBDIR += py-tika-client
     SUBDIR += py-tiktoken
     SUBDIR += py-tinycss
     SUBDIR += py-tinycss2
+    SUBDIR += py-tokenizers
     SUBDIR += py-toml
     SUBDIR += py-tomli
     SUBDIR += py-tomli-w
@@ -1632,6 +1645,7 @@
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-unicodeitplus
     SUBDIR += py-untangle
+    SUBDIR += py-wasabi
     SUBDIR += py-wavedrom
     SUBDIR += py-wcmatch
     SUBDIR += py-whatthepatch
@@ -1743,6 +1757,7 @@
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
     SUBDIR += rubygem-cucumber-gherkin26
+    SUBDIR += rubygem-cucumber-gherkin27
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-dartsass
     SUBDIR += rubygem-diff-lcs
@@ -1776,8 +1791,10 @@
     SUBDIR += rubygem-gepub
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-markup
+    SUBDIR += rubygem-gitlab-glfm-markdown
     SUBDIR += rubygem-gitlab-grit
     SUBDIR += rubygem-gitlab-markup
+    SUBDIR += rubygem-google-cloud-artifact_registry-v1
     SUBDIR += rubygem-google-cloud-profiler-v2
     SUBDIR += rubygem-google-cloud-translate
     SUBDIR += rubygem-google-cloud-translate-v2

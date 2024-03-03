@@ -1,5 +1,5 @@
 PORTNAME=	gitaly
-DISTVERSION=	16.7.3
+DISTVERSION=	16.9.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -11,7 +11,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 # define dependencies that are required for build and run under MY_DEPENDS
-MY_DEPENDS=	git>=2.42.0:devel/git
+MY_DEPENDS=	git>=2.43.0:devel/git
 BUILD_DEPENDS=	bash>0:shells/bash \
 		${LOCALBASE}/bin/cmake:devel/cmake-core \
 		pcre2>0:devel/pcre2 \
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	bash>0:shells/bash \
 		${MY_DEPENDS}
 RUN_DEPENDS=	${MY_DEPENDS}
 
-USES=		cpe gmake go:modules,no_targets iconv pkgconfig ssl
+USES=		cpe gmake go:modules,no_targets,1.21 iconv pkgconfig ssl
 
 CPE_VENDOR=	gitlab
 

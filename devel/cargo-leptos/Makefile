@@ -1,6 +1,7 @@
 PORTNAME=	cargo-leptos
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.6
+DISTVERSION=	0.2.7
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -378,6 +379,12 @@ OPENSSLINC=	/usr/include
 OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc
+LTO_UNSAFE=	yes
+.endif
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}

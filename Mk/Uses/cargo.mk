@@ -97,7 +97,7 @@ WRKSRC_crate_${_crate}=	${WRKDIR}/${_wrksrc}
 
 CARGO_BUILDDEP?=	yes
 .  if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.75.0:lang/${RUST_DEFAULT}
+BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.76.0:lang/${RUST_DEFAULT}
 .  elif ${CARGO_BUILDDEP:tl} == "any-version"
 BUILD_DEPENDS+=	${RUST_DEFAULT}>=0:lang/${RUST_DEFAULT}
 .  endif
@@ -139,10 +139,8 @@ CARGO_ENV+= \
 CARGO_ENV+=	RUST_BACKTRACE=1
 .  endif
 
-.  if !defined(LTO_UNSAFE) || (defined(LTO_DISABLE_CHECK) && ${ARCH} == riscv64)
 _CARGO_MSG=	"===>   Additional optimization to port applied"
 WITH_LTO=	yes
-.  endif
 
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
 .  if ${ARCH} == amd64 || ${ARCH} == i386
@@ -156,8 +154,9 @@ RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 .  endif
 
 # Helper to shorten cargo calls.
-_CARGO_RUN=		${SETENV} ${MAKE_ENV} ${CARGO_ENV} ${CARGO}
-CARGO_CARGO_RUN=	cd ${WRKSRC}; ${SETENV} CARGO_FREEBSD_PORTS_SKIP_GIT_UPDATE=1 ${_CARGO_RUN}
+_CARGO_RUN=		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${CARGO_ENV} ${CARGO}
+CARGO_CARGO_RUN=	cd ${WRKSRC}; ${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${CARGO_ENV} \
+			CARGO_FREEBSD_PORTS_SKIP_GIT_UPDATE=1 ${CARGO}
 
 # User arguments for cargo targets.
 CARGO_BUILD_ARGS?=

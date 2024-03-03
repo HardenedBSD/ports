@@ -1,5 +1,6 @@
 PORTNAME=	onefetch
 DISTVERSION=	2.19.0
+PORTREVISION=	1
 CATEGORIES=	sysutils devel
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -9,7 +10,8 @@ WWW=		https://github.com/o2sh/onefetch
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-LIB_DEPENDS=	libgit2.so:devel/libgit2
+LIB_DEPENDS=	libgit2.so:devel/libgit2 \
+		libzstd.so:archivers/zstd
 RUN_DEPENDS=	git:devel/git
 
 USES=		cargo

@@ -1,5 +1,6 @@
 PORTNAME=	bmf
 PORTVERSION=	0.9.4
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	mail
 MASTER_SITES=	SF
@@ -42,6 +43,6 @@ do-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 do-install-MANPAGES-on:
-	cd ${WRKSRC} && ${INSTALL_MAN} bmf.1 bmfconv.1 ${STAGEDIR}${PREFIX}/man/man1
+	cd ${WRKSRC} && ${INSTALL_MAN} bmf.1 bmfconv.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.mk>

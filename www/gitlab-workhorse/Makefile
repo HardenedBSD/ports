@@ -1,11 +1,11 @@
 PORTNAME=	gitlab-workhorse
-PORTVERSION=	16.7.3
+PORTVERSION=	16.9.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Smart reverse proxy for GitLab
-WWW=		https://gitlab.com/gitlab-org/gitlab-workhorse
+WWW=		https://gitlab.com/gitlab-org/gitlab/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../LICENSE

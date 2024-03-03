@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/www/copyright.html
 USE_HARDENING=	retpoline:off
 NO_UNUSED_ARGUMENTS_CHECK=  yes
 
-USES=		fortran
+USES=		fortran pkgconfig
 HPL_ARCH?=	FreeBSD_PIV_CBLAS
 MAKE_ARGS=	arch=${HPL_ARCH}
 ALL_TARGET=	build

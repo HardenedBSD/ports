@@ -1,6 +1,6 @@
 PORTNAME=	xar
 PORTVERSION=	1.6.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	https://github.com/downloads/mackyle/xar/ \
 		GENTOO
@@ -12,7 +12,8 @@ WWW=		https://mackyle.github.io/xar/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-DEPRECATED=	Upstream last release was in 2012 and seems dead
+DEPRECATED=	Last release was in 2012 and upstream is dead, consider archives/libarchive or archivers/7-zip
+EXPIRATION_DATE=2024-03-31
 
 USES=		cpe gmake gnome libtool ssl
 BROKEN_SSL=	openssl openssl31
@@ -22,6 +23,7 @@ USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ENV=	ac_cv_lib_crypto_OpenSSL_add_all_ciphers=yes
 
 post-install:

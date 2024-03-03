@@ -736,6 +736,8 @@ sonames() {
 		[ -z "${f}" ] && continue
 		# Ignore symlinks
 		[ -f "${f}" -a ! -L "${f}" ] || continue
+		# Ignore .debug files
+		[ "${f}" == "${f%.debug}" ] || continue
 		if ! readelf -d ${f} | grep SONAME > /dev/null; then
 			warn "${f} doesn't have a SONAME."
 			warn "pkg(8) will not register it as being provided by the port."
@@ -1032,10 +1034,21 @@ reinplace()
 	fi
 }
 
+prefixman() {
+	local manlist
+
+	manlist=$(find ${STAGEDIR}${PREFIX}/man -type f)
+	if [ -n "${manlist}" ]; then
+		warn "Installing man files in ${PREFIX}/man is no longer supported. Consider installing these files in ${PREFIX}/share/man instead."
+		ls -liTd ${manlist}
+	fi
+	return 0
+}
+
 checks="shebang symlinks paths stripped desktopfileutils sharedmimeinfo"
 checks="$checks suidfiles libtool libperl prefixvar baselibs terminfo"
 checks="$checks proxydeps sonames perlcore no_arch gemdeps gemfiledeps flavors"
-checks="$checks license depends_blacklist pkgmessage reinplace"
+checks="$checks license depends_blacklist pkgmessage reinplace prefixman"
 
 ret=0
 cd ${STAGEDIR} || exit 1

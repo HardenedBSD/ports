@@ -46,14 +46,10 @@ USE_GL=		gl glu
 USE_GNOME=	cairo gdkpixbuf2 gtk30
 USE_XORG=	x11 xcb xau xdmcp
 
-<<<<<<< HEAD
 USE_HARDENING=	retpoline:off
 
-USE_GITHUB=	yes
-=======
 CONFLICTS_INSTALL=	imhex-current-*
 
->>>>>>> internal/freebsd/main
 GH_ACCOUNT=	WerWolv
 GH_PROJECT=	ImHex
 GH_TUPLE=	btzy:nativefiledialog-extended:${GH_TAG_NATIVEFILEDIALOG}:nativefiledialog \

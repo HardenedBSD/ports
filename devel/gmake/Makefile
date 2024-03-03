@@ -14,12 +14,10 @@ WWW=		https://www.gnu.org/software/make/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
-USE_HARDENING=	safestack
-=======
 USES=		cpe tar:lz
 CPE_VENDOR=	gnu
->>>>>>> internal/freebsd/main
+
+USE_HARDENING=	safestack
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share

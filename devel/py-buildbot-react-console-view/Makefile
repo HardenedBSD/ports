@@ -1,15 +1,14 @@
-PORTNAME=	buildbot-grid-view
+PORTNAME=	buildbot-react-console-view
 DISTVERSION=	3.11.1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
-COMMENT=	Buildbot Grid View plugin
+COMMENT=	Buildbot Console View plugin (react)
 WWW=		https://buildbot.net
 
 LICENSE=	GPLv2
-#LICENSE_FILE=	Not packaged in sdist
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}buildbot-pkg>=${PORTVERSION}:devel/py-buildbot-pkg@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}buildbot-pkg>=${PORTVERSION}:devel/py-buildbot-pkg@${PY_FLAVOR}

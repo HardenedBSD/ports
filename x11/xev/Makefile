@@ -1,6 +1,5 @@
 PORTNAME=	xev
-PORTVERSION=	1.2.4
-PORTREVISION=	1
+PORTVERSION=	1.2.6
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -9,9 +8,13 @@ COMMENT=	Print contents of X events
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 USES=		xorg xorg-cat:app
+=======
+USES=		tar:xz xorg xorg-cat:app
+>>>>>>> internal/freebsd/main
 USE_XORG=	x11 xrandr
 
 PLIST_FILES=	bin/xev share/man/man1/xev.1.gz

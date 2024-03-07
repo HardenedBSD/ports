@@ -1,7 +1,5 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20240227
-PORTREVISION=	1
-
+PORTVERSION=	s20240301
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -15,21 +13,17 @@ MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
 WWW=		https://yuzu-emu.org/
 
-#LICENSE=	APACHE20 BSD3CLAUSE GPLv3+ ISCL MIT UNLICENSE
-#LICENSE_COMB=	multi
-#LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/externals/sirit/LICENSE.txt
-#LICENSE_FILE_GPLv3+ =	${WRKSRC}/LICENSE.txt
-#LICENSE_FILE_ISCL=	${WRKSRC}/externals/cubeb/LICENSE
-#LICENSE_FILE_MIT=	${WRKSRC}/externals/sirit/externals/SPIRV-Headers/LICENSE
-
-LICENSE=	yuzu
-LICENSE_NAME=	yuzu license
-LICENSE_TEXT=	No redistribution
-
-LICENSE_PERMS=	no-dist-mirror no-dist-sell no-pkg-mirror no-pkg-sell no-auto-accept
+LICENSE=	APACHE20 BSD3CLAUSE GPLv3+ ISCL MIT UNLICENSE
+LICENSE_COMB=	multi
+LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/externals/sirit/LICENSE.txt
+LICENSE_FILE_GPLv3+ =	${WRKSRC}/LICENSE.txt
+LICENSE_FILE_ISCL=	${WRKSRC}/externals/cubeb/LICENSE
+LICENSE_FILE_MIT=	${WRKSRC}/externals/sirit/externals/SPIRV-Headers/LICENSE
 
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	requires int128 and dynarmic backend
+
+DEPRECATED=	Project discontinued
 
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		nlohmann-json>0:devel/nlohmann-json \
@@ -54,13 +48,13 @@ qt6_OPTIONS_SLAVE=	QT6
 qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	dc94882c90
-GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
-		yuzu-emu:sirit:ab75463:sirit/externals/sirit \
+GH_ACCOUNT=	yuzu-mirror
+GH_TAGNAME=	15e6e48bef
+GH_TUPLE=	yuzu-mirror:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
+		yuzu-mirror:sirit:ab75463:sirit/externals/sirit \
 		GPUOpen-LibrariesAndSDKs:VulkanMemoryAllocator:v3.0.1-114-g2f382df:VulkanMemoryAllocator/externals/VulkanMemoryAllocator \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
-		merryhime:dynarmic:6.6.2-15-gba8192d8:dynarmic/externals/dynarmic \
+		yuzu-mirror:dynarmic:6.6.2-15-gba8192d8:dynarmic/externals/dynarmic \
 		merryhime:oaknut:2.0.1:oaknut/externals/oaknut \
 		arun11299:cpp-jwt:v1.4-18-g10ef573:cpp_jwt/externals/cpp-jwt \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \

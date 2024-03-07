@@ -1637,6 +1637,7 @@
     SUBDIR += wol
     SUBDIR += wpa_supplicant_gui
     SUBDIR += wping
+    SUBDIR += wstunnel
     SUBDIR += x11vnc
     SUBDIR += x2goclient
     SUBDIR += x2goclient-cli

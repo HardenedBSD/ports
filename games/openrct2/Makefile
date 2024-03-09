@@ -1,11 +1,11 @@
 PORTNAME=	openrct2
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.8
+DISTVERSION=	0.4.9
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/OpenRCT2/title-sequences/releases/download/v0.4.6/:sequence \
-		https://github.com/OpenRCT2/objects/releases/download/v1.3.13/:object \
+		https://github.com/OpenRCT2/objects/releases/download/v1.4.0/:object \
 		https://github.com/OpenRCT2/OpenMusic/releases/download/v1.5/:openmsx \
-		https://github.com/OpenRCT2/OpenSoundEffects/releases/download/v1.0.3/:opensfx
+		https://github.com/OpenRCT2/OpenSoundEffects/releases/download/v1.0.5/:opensfx
 DISTFILES=	title-sequences.zip:sequence \
 		objects.zip:object\
 		openmusic.zip:openmsx \
@@ -34,9 +34,12 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libbenchmark.so:devel/benchmark \
 		libogg.so:audio/libogg
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 #USES=		cmake compiler:c++17-lang desktop-file-utils gl iconv
+=======
+>>>>>>> internal/freebsd/main
 USES=		cmake compiler:c++17-lang desktop-file-utils gl \
 		localbase:ldflags pkgconfig sdl shared-mime-info ssl
 USE_GITHUB=	yes
@@ -47,6 +50,7 @@ USE_LDCONFIG=	yes
 USE_SDL=	sdl2
 
 CMAKE_ON=	BUILD_SHARED_LIBS
+CXXFLAGS+=	-Wno-error=deprecated-pragma
 
 OPTIONS_DEFINE=	DOCS
 

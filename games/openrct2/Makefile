@@ -34,12 +34,8 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libbenchmark.so:devel/benchmark \
 		libogg.so:audio/libogg
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-#USES=		cmake compiler:c++17-lang desktop-file-utils gl iconv
-=======
->>>>>>> internal/freebsd/main
 USES=		cmake compiler:c++17-lang desktop-file-utils gl \
 		localbase:ldflags pkgconfig sdl shared-mime-info ssl
 USE_GITHUB=	yes

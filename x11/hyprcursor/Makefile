@@ -1,6 +1,6 @@
 PORTNAME=	hyprcursor
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.0
+DISTVERSION=	0.1.2
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -17,5 +17,6 @@ USES=		compiler:c++11-lib cmake:testing gnome pathfix pkgconfig
 USE_GITHUB=	yes
 USE_GNOME=	cairo librsvg2
 GH_ACCOUNT=	hyprwm
+PLIST_SUB=	VERSION=${DISTVERSION:C/-.*//}
 
 .include <bsd.port.mk>

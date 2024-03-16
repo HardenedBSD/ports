@@ -25,18 +25,8 @@ PLIST_FILES=	bin/sslsplit share/man/man1/sslsplit.1.gz \
 		share/man/man5/sslsplit.conf.5.gz \
 		"@sample %%ETCDIR%%/sslsplit.conf.sample"
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-.include <bsd.port.options.mk>
-
-.if ( ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400092 && ${SSL_DEFAULT} == base ) || ${SSL_DEFAULT:Mopenssl} || ${SSL_DEFAULT:Mopenssl3*}
-IGNORE_SSL=	base openssl openssl31
-IGNORE_SSL_REASON=	error: undefined symbol: ERR_GET_FUNC which were deprecated in OpenSSL 3.0.0 and later
-.endif
-
-=======
->>>>>>> internal/freebsd/main
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/sslsplit
 

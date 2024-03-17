@@ -474,7 +474,6 @@
     SUBDIR += nginx-vts-exporter
     SUBDIR += nift
     SUBDIR += node
-    SUBDIR += node16
     SUBDIR += node18
     SUBDIR += node20
     SUBDIR += node21
@@ -484,7 +483,6 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
-    SUBDIR += npm-node16
     SUBDIR += npm-node18
     SUBDIR += npm-node20
     SUBDIR += npm-node21
@@ -2529,7 +2527,6 @@
     SUBDIR += xurls
     SUBDIR += yabb
     SUBDIR += yarn
-    SUBDIR += yarn-node16
     SUBDIR += yarn-node18
     SUBDIR += yarn-node20
     SUBDIR += yarn-node21

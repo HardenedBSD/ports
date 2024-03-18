@@ -1,6 +1,6 @@
 PORTNAME=	wifimgr
 PORTVERSION=	1.23
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-mgmt sysutils
 MASTER_SITES=	https://opal.com/src/wifimgr/
 
@@ -19,7 +19,11 @@ USES=		desktop-file-utils gnome pkgconfig tar:xz xorg
 USE_GNOME=	cairo gdkpixbuf2
 USE_XORG=	x11
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
+=======
+MAKE_ENV=	MANDIR="${STAGEDIR}${PREFIX}/share/man"
+>>>>>>> internal/freebsd/main
 
 OPTIONS_DEFINE=	GTK2 NLS
 OPTIONS_SUB=	yes

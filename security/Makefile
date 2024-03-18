@@ -984,6 +984,7 @@
     SUBDIR += py-pgpdump
     SUBDIR += py-pgpy
     SUBDIR += py-plaso
+    SUBDIR += py-pnu-vuxml
     SUBDIR += py-potr
     SUBDIR += py-pwntools
     SUBDIR += py-pyaes

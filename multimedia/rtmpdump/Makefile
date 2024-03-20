@@ -13,6 +13,9 @@ USE_HARDENING=	safestack
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+DEPRECATED=	Depends on deprecated library librtmp, consider migrating to multimedia/ffmpeg
+EXPIRATION_DATE=2023-04-30
+
 LIB_DEPENDS=	librtmp.so:multimedia/librtmp
 
 USES=		cpe pkgconfig ssl

@@ -18,13 +18,9 @@ GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 MAKE_ENV+=	LD=${LD}
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-PLIST_FILES=	bin/pv man/man1/pv.1.gz
-=======
 PLIST_FILES=	bin/pv share/man/man1/pv.1.gz
->>>>>>> internal/freebsd/main
 
 PORTDOCS=	README.md INSTALL NEWS.md TODO.md
 

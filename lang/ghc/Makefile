@@ -15,9 +15,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=		aarch64 amd64 i386
 
+<<<<<<< HEAD
 USE_HARDENING=		pie:off
 CONFIGURE_ARGS+=	--enable-dtrace=0
 MPROTECT_DISABLE=	lib/ghc-${GHC_VERSION}/bin/ghc
+=======
+BROKEN_FreeBSD_14_aarch64=	https://gitlab.haskell.org/ghc/ghc/-/issues/24580
+>>>>>>> internal/freebsd/main
 
 BUILD_DEPENDS=		${LOCALBASE}/lib/libgmp.so:math/gmp
 

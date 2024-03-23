@@ -1,5 +1,6 @@
 PORTNAME=	netrik
 PORTVERSION=	1.16.1
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTVERSION}%20%28beta%29
 
@@ -11,12 +12,13 @@ RUN_DEPENDS=	wget:ftp/wget
 
 USES=		cpe gmake ncurses
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 USE_HARDENING=	pie:off
 
 PLIST_FILES=	bin/netrik \
-		man/man1/netrik.1.gz \
-		man/man5/netrikrc.5.gz
+		share/man/man1/netrik.1.gz \
+		share/man/man5/netrikrc.5.gz
 
 PORTDOCS=	*
 

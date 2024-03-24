@@ -4591,6 +4591,7 @@
     SUBDIR += py-dal
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dask
+    SUBDIR += py-dask-expr
     SUBDIR += py-dask-histogram
     SUBDIR += py-dataclass-array
     SUBDIR += py-dataclasses-json
@@ -5770,6 +5771,7 @@
     SUBDIR += py-transitions
     SUBDIR += py-tree-format
     SUBDIR += py-tree-sitter
+    SUBDIR += py-tree-sitter-languages
     SUBDIR += py-treelib
     SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
@@ -6535,6 +6537,7 @@
     SUBDIR += rubygem-aws-sdk-swf
     SUBDIR += rubygem-aws-sdk-synthetics
     SUBDIR += rubygem-aws-sdk-textract
+    SUBDIR += rubygem-aws-sdk-timestreaminfluxdb
     SUBDIR += rubygem-aws-sdk-timestreamquery
     SUBDIR += rubygem-aws-sdk-timestreamwrite
     SUBDIR += rubygem-aws-sdk-tnb

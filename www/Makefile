@@ -241,7 +241,6 @@
     SUBDIR += gwsocket
     SUBDIR += h2c
     SUBDIR += h2o
-    SUBDIR += h2o-devel
     SUBDIR += habari
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor

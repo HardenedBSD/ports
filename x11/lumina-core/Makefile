@@ -1,7 +1,7 @@
 PORTNAME=	lumina-core
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.6.2
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	x11
 
 MAINTAINER=	jwb@FreeBSD.org
@@ -34,9 +34,13 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	lumina-desktop
 GH_PROJECT=	lumina
 
+<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/lumina-desktop
 PAGEEXEC_DISABLE=	bin/lumina-desktop
 
+=======
+QMAKE_ARGS=	L_MANDIR=${PREFIX}/share/man
+>>>>>>> internal/freebsd/main
 
 OPTIONS_DEFINE=		MULTIMEDIA TRUEOS NLS
 OPTIONS_DEFAULT=	MULTIMEDIA

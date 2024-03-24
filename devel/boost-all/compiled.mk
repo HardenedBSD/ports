@@ -43,8 +43,8 @@ MAKE_ARGS+=	pch=off
 
 .include <bsd.port.options.mk>
 
-# HBSD: We require at least llvm 16 to build devel/boost-libs
-USES+=	llvm:16,build
+# HBSD: We require at least llvm 17 to build devel/boost-libs
+USES+=	llvm:17,build
 CHOSEN_COMPILER_TYPE=	clang
 
 post-patch:

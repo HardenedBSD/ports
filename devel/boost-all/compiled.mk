@@ -43,16 +43,8 @@ MAKE_ARGS+=	pch=off
 
 .include <bsd.port.options.mk>
 
-<<<<<<< HEAD
 # HBSD: We require at least llvm 16 to build devel/boost-libs
 USES+=	llvm:16,build
-=======
-.if ${OPSYS} == FreeBSD && \
-	((${OSVERSION} >= 1500000 && ${OSVERSION} < 1500017) || \
-	(${OSVERSION} >= 1400000 && ${OSVERSION} < 1400509) || \
-	(${OSVERSION} >= 1300000 && ${OSVERSION} < 1303502))
-USES+=	llvm:build
->>>>>>> internal/freebsd/main
 CHOSEN_COMPILER_TYPE=	clang
 
 post-patch:

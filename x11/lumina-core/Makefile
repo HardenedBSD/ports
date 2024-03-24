@@ -34,13 +34,10 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	lumina-desktop
 GH_PROJECT=	lumina
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/lumina-desktop
 PAGEEXEC_DISABLE=	bin/lumina-desktop
 
-=======
 QMAKE_ARGS=	L_MANDIR=${PREFIX}/share/man
->>>>>>> internal/freebsd/main
 
 OPTIONS_DEFINE=		MULTIMEDIA TRUEOS NLS
 OPTIONS_DEFAULT=	MULTIMEDIA

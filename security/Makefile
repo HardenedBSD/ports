@@ -986,6 +986,7 @@
     SUBDIR += py-pgpdump
     SUBDIR += py-pgpy
     SUBDIR += py-plaso
+    SUBDIR += py-pnu-certwatch
     SUBDIR += py-pnu-vuxml
     SUBDIR += py-potr
     SUBDIR += py-pwntools

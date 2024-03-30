@@ -13,12 +13,9 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 USES=		cpe gmake ncurses
-<<<<<<< HEAD
 
 USE_HARDENING=	safestack
 
-=======
->>>>>>> internal/freebsd/main
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--exec-prefix="${PREFIX}/share" \

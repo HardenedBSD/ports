@@ -1007,7 +1007,6 @@
     SUBDIR += py-pyotp
     SUBDIR += py-pyotp2289
     SUBDIR += py-pysaml2
-    SUBDIR += py-pysaml24
     SUBDIR += py-pysaml26
     SUBDIR += py-pyscard
     SUBDIR += py-pysodium
@@ -1143,7 +1142,6 @@
     SUBDIR += rubygem-net-scp
     SUBDIR += rubygem-net-scp1
     SUBDIR += rubygem-net-sftp
-    SUBDIR += rubygem-net-sftp2
     SUBDIR += rubygem-net-ssh
     SUBDIR += rubygem-net-ssh-gateway
     SUBDIR += rubygem-net-ssh-krb

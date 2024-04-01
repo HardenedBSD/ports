@@ -3063,3 +3063,22 @@ net-p2p/tooth||2024-03-24|Has expired: Project has been renamed to Tuba. Conside
 www/tidy-devel|www/tidy-html5|2024-03-25|Has expired: no more dev at SF, replaced by www/tidy-html5
 www/tidy-lib|www/tidy-html5|2024-03-25|Has expired: no more dev at SF, replaced by www/tidy-html5
 lang/ruby30||2024-03-31|Has expired: Please migrate to newer versions. Ruby 3.0 will reach its EoL on March 30, 2024
+devel/py-pybind11210|devel/py-pybind11|2024-03-31|Remove obsoleted port. Use devel/py-pybind11 instead
+devel/py-y-py|devel/py-pycrdt|2024-03-31|Remove obsoleted port. Use devel/py-pycrdt instead
+devel/py-ypy-websocket|devel/py-pycrdt-websocket|2024-03-31|Remove obsoleted port. Use devel/py-pycrdt-websocket instead
+math/py-munkres10|math/py-munkres|2024-03-31|Remove obsoleted port. Use math/py-munkres instead
+security/py-pysaml24|security/py-pysaml2|2024-03-31|Remove obsoleted port. Use security/py-pysaml2 instead
+textproc/py-atoml|textproc/py-tomlkit|2024-03-31|Remove obsoleted port. This project has been merged back to tomlkit and is no longer maintained. Use textproc/py-tomlkit>=0.8.0 instead
+databases/rubygem-redis-namespace19|databases/rubygem-redis-namespace|2024-03-31|Remove obsoleted port. Use databases/rubygem-redis-namespace instead
+devel/rubygem-cucumber-core12|devel/rubygem-cucumber-core|2024-03-31|Remove obsoleted port. Use devel/rubygem-cucumber-core instead
+devel/rubygem-cucumber-tag-expressions5|devel/rubygem-cucumber-tag-expressions|2024-03-31|Remove obsoleted port. Use devel/rubygem-cucumber-tag-expressions instead
+devel/rubygem-grape-swagger16|devel/rubygem-grape-swagger|2024-03-31|Remove obsoleted port. Use devel/rubygem-grape-swagger instead
+devel/rubygem-grape17|devel/rubygem-grape|2024-03-31|Remove obsoleted port. Use devel/rubygem-grape instead
+devel/rubygem-sidekiq-cron18|devel/rubygem-sidekiq-cron|2024-03-31|Remove obsoleted port. Use devel/rubygem-sidekiq-cron instead
+devel/rubygem-sidekiq6|devel/rubygem-sidekiq|2024-03-31|Remove obsoleted port. Use devel/rubygem-sidekiq instead
+net/rubygem-google-cloud-storage144|net/rubygem-google-cloud-storage|2024-03-31|Remove obsoleted port. Use net/rubygem-google-cloud-storage instead
+security/rubygem-net-sftp2|security/rubygem-net-sftp|2024-03-31|Remove obsoleted port. Use security/rubygem-net-sftp instead
+textproc/rubygem-cucumber-gherkin26|textproc/rubygem-cucumber-gherkin|2024-03-31|Remove obsoleted port. Use textproc/rubygem-cucumber-gherkin instead
+textproc/rubygem-loofah221|textproc/rubygem-loofah|2024-03-31|Remove obsoleted port. Use textproc/rubygem-loofah instead
+www/rubygem-faraday14|www/rubygem-faraday|2024-03-31|Remove obsoleted port. Use www/rubygem-faraday instead
+devel/rubygem-request_store14|devel/rubygem-request_store|2024-03-31|Remove obsoleted port. Use devel/rubygem-request_store instead

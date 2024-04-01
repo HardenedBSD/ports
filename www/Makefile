@@ -2016,7 +2016,6 @@
     SUBDIR += rubygem-faraday-retry1
     SUBDIR += rubygem-faraday0
     SUBDIR += rubygem-faraday1
-    SUBDIR += rubygem-faraday14
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0
     SUBDIR += rubygem-faye
@@ -2335,6 +2334,7 @@
     SUBDIR += smarty
     SUBDIR += smarty2
     SUBDIR += smarty3
+    SUBDIR += smarty4
     SUBDIR += smb_auth
     SUBDIR += snarf
     SUBDIR += so

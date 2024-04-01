@@ -328,7 +328,6 @@
     SUBDIR += bullet
     SUBDIR += bunyan
     SUBDIR += busd
-    SUBDIR += busybee
     SUBDIR += byacc
     SUBDIR += byaccj
     SUBDIR += c2mdoc
@@ -382,7 +381,6 @@
     SUBDIR += chroma
     SUBDIR += chrpath
     SUBDIR += chruby
-    SUBDIR += cil
     SUBDIR += cirrus-cli
     SUBDIR += cityhash
     SUBDIR += cjose
@@ -432,7 +430,6 @@
     SUBDIR += codeblocks
     SUBDIR += codequery
     SUBDIR += codesearch-py
-    SUBDIR += codeworker
     SUBDIR += collada-dom
     SUBDIR += color
     SUBDIR += colorgcc
@@ -610,7 +607,6 @@
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += electron25
-    SUBDIR += electron26
     SUBDIR += electron27
     SUBDIR += electron28
     SUBDIR += elf
@@ -1272,7 +1268,6 @@
     SUBDIR += libgee
     SUBDIR += libgee06
     SUBDIR += libgetline
-    SUBDIR += libght
     SUBDIR += libgit2
     SUBDIR += libgit2-glib
     SUBDIR += libglade2
@@ -1308,7 +1303,6 @@
     SUBDIR += libkiwix
     SUBDIR += libklel
     SUBDIR += liblangtag
-    SUBDIR += liblas
     SUBDIR += liblnk
     SUBDIR += liblockfile
     SUBDIR += liblogging
@@ -1501,7 +1495,6 @@
     SUBDIR += linux-ltp
     SUBDIR += linux-sublime-merge
     SUBDIR += linux_libusb
-    SUBDIR += lion
     SUBDIR += listserialc
     SUBDIR += liteide
     SUBDIR += llbuild
@@ -1511,7 +1504,6 @@
     SUBDIR += llvm-cheriot
     SUBDIR += llvm-devel
     SUBDIR += llvm-morello
-    SUBDIR += llvm10
     SUBDIR += llvm11
     SUBDIR += llvm12
     SUBDIR += llvm13
@@ -4186,7 +4178,6 @@
     SUBDIR += poxml
     SUBDIR += ppl
     SUBDIR += pprof
-    SUBDIR += premake
     SUBDIR += premake4
     SUBDIR += premake5
     SUBDIR += projectcenter
@@ -5063,7 +5054,6 @@
     SUBDIR += py-more-itertools
     SUBDIR += py-moto
     SUBDIR += py-mox
-    SUBDIR += py-mox3
     SUBDIR += py-mrkd
     SUBDIR += py-msal
     SUBDIR += py-msal-extensions
@@ -7920,7 +7910,6 @@
     SUBDIR += unordered-dense
     SUBDIR += upnp
     SUBDIR += upp
-    SUBDIR += upslug
     SUBDIR += urjtag
     SUBDIR += ut
     SUBDIR += utf8cpp

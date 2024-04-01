@@ -205,7 +205,6 @@
     SUBDIR += geckodriver
     SUBDIR += geneweb
     SUBDIR += geolizer
-    SUBDIR += get_flash_videos
     SUBDIR += ghostunnel
     SUBDIR += gist
     SUBDIR += gitea
@@ -353,7 +352,6 @@
     SUBDIR += matomo
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
-    SUBDIR += mediawiki135
     SUBDIR += mediawiki139
     SUBDIR += mediawiki140
     SUBDIR += mediawiki141
@@ -2535,7 +2533,6 @@
     SUBDIR += yaws
     SUBDIR += you-get
     SUBDIR += yourls
-    SUBDIR += youtube_dl
     SUBDIR += yt-dlp
     SUBDIR += ytdl
     SUBDIR += yuicompressor

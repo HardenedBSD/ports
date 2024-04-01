@@ -23,7 +23,6 @@
     SUBDIR += afterglow
     SUBDIR += age
     SUBDIR += aide
-    SUBDIR += akmos
     SUBDIR += amavisd-milter
     SUBDIR += amavisd-new
     SUBDIR += apache-xml-security-c
@@ -301,6 +300,7 @@
     SUBDIR += libkleo
     SUBDIR += libkpass
     SUBDIR += libksba
+    SUBDIR += libmacaroons
     SUBDIR += libmcrypt
     SUBDIR += libnitrokey
     SUBDIR += libntlm
@@ -965,7 +965,6 @@
     SUBDIR += py-mnemonic
     SUBDIR += py-msoffcrypto-tool
     SUBDIR += py-muacrypt
-    SUBDIR += py-nassl
     SUBDIR += py-netbox-secrets
     SUBDIR += py-netmiko
     SUBDIR += py-noiseprotocol
@@ -1043,7 +1042,6 @@
     SUBDIR += py-spake2
     SUBDIR += py-ssh-audit
     SUBDIR += py-sshpubkeys
-    SUBDIR += py-sslyze
     SUBDIR += py-stem
     SUBDIR += py-stix
     SUBDIR += py-stix2

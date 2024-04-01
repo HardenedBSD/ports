@@ -89,8 +89,13 @@ LIBRSVG2_DEFAULT?=	legacy
 .  endif
 # Possible values: c7
 LINUX_DEFAULT?=		c7
+<<<<<<< HEAD
 # Possible values: 10, 11, 12, 13, 14, 15, 16, 17, -devel (to be used when non-base compiler is required)
 LLVM_DEFAULT?=		17
+=======
+# Possible values: 11, 12, 13, 14, 15, 16, 17, -devel (to be used when non-base compiler is required)
+LLVM_DEFAULT?=		15
+>>>>>>> internal/freebsd/main
 # Possible values: 5.1, 5.2, 5.3, 5.4
 LUA_DEFAULT?=		5.4
 # Possible values: luajit, luajit-devel, luajit-openresty

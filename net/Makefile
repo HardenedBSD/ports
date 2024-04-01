@@ -1439,7 +1439,6 @@
     SUBDIR += s5cmd
     SUBDIR += sacc
     SUBDIR += sakisafecli
-    SUBDIR += samba413
     SUBDIR += samba416
     SUBDIR += samba419
     SUBDIR += samplicator

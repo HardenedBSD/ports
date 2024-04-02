@@ -11,13 +11,9 @@ WWW=		https://www.nntb.no/~dreibh/system-tools/
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
-RUN_DEPENDS=	bash:shells/bash buffer:misc/mbuffer figlet:misc/figlet
-=======
 RUN_DEPENDS=	bash:shells/bash \
 		mbuffer:misc/mbuffer \
 		figlet:misc/figlet
->>>>>>> internal/freebsd/main
 
 USES=		cmake gettext tar:xz
 CMAKE_ARGS=	-DCMAKE_INSTALL_MANDIR=${PREFIX}/share/man

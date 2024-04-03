@@ -1072,8 +1072,8 @@
     SUBDIR += xapian-core
     SUBDIR += xls2txt
     SUBDIR += xrootd
-    SUBDIR += xtrabackup
     SUBDIR += xtrabackup80
+    SUBDIR += xtrabackup81
     SUBDIR += zodb
 
 .include <bsd.port.subdir.mk>

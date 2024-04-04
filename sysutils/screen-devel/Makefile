@@ -1,21 +1,19 @@
 PORTNAME=	screen
-PORTVERSION=	4.9.1
-PORTREVISION=	2
+DISTVERSION=	4.99.0.${SCREEN_COMMIT_DATE}
 CATEGORIES=	sysutils
-MASTER_SITES=	GNU \
-		ftp://ftp.gnu.org/gnu/screen/ \
-		ftp://gnu.mirror.iweb.com/screen/ \
-		http://gnu.mirror.iweb.com/screen/ \
-		http://mirror.sdunix.com/gnu/ \
-		ftp://mirrors.kernel.org/gnu/screen/ \
-		http://cschubert.com/distfiles/ \
-		LOCAL/cy
+PKGNAMESUFFIX=	-devel
+MASTER_SITES=	#
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Multi-screen window manager
 WWW=		https://www.gnu.org/software/screen/
 
-CONFLICTS=	screen-devel*
+CONFLICTS=	screen-[0-9]*
+
+GIT_TAGNAME=	c184c6e
+SCREEN_COMMIT_DATE=	20240327
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${GIT_TAGNAME}/src
 
 LICENSE=	GPLv3
 
@@ -47,8 +45,6 @@ OPTIONS_SUB=
 
 USES=		autoreconf:build gmake cpe
 MAKE_ARGS+=	WITH_MAN=1
-
-USE_HARDENING=	safestack
 
 CPE_VENDOR=	gnu
 
@@ -89,6 +85,13 @@ CONFIGURE_ARGS+=	--disable-socket-dir
 .if defined(SCREEN_SOCKET_DIR)
 CONFIGURE_ARGS+=	--with-socket-dir=${SCREEN_SOCKET_DIR}
 .endif
+
+do-fetch:
+	@cd ${DISTDIR} && \
+	if [ ! -f ${DISTNAME}${EXTRACT_SUFX} ]; then \
+		fetch -o ${DISTNAME}${EXTRACT_SUFX} \
+		    "https://git.savannah.gnu.org/gitweb/?p=screen.git;a=snapshot;h=${GIT_TAGNAME};sf=tgz"; \
+	fi    
 
 post-patch:
 	@${RM} ${WRKSRC}/doc/screen.info*

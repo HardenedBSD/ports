@@ -1487,6 +1487,7 @@
     SUBDIR += tuptime
     SUBDIR += turbostat
     SUBDIR += tw_cli
+    SUBDIR += twa-kmod
     SUBDIR += twmn
     SUBDIR += tzdialog
     SUBDIR += u-boot-a13-olinuxino

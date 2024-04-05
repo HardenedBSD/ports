@@ -1,3 +1,82 @@
+  <vuln vid="c2431c4e-622c-4d92-996d-d8b5258ae8c9">
+    <topic>electron{27,28} -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron27</name>
+	<range><lt>27.3.9</lt></range>
+      </package>
+      <package>
+	<name>electron28</name>
+	<range><lt>28.2.10</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v27.3.9">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2024-2885.</li>
+	    <li>Security: backported fix for CVE-2024-2883.</li>
+	    <li>Security: backported fix for CVE-2024-2887.</li>
+	    <li>Security: backported fix for CVE-2024-2886.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-2885</cvename>
+      <url>https://github.com/advisories/GHSA-qccw-wmvp-8pv9</url>
+      <cvename>CVE-2024-2883</cvename>
+      <url>https://github.com/advisories/GHSA-gg9c-7j6m-3qq2</url>
+      <cvename>CVE-2024-2887</cvename>
+      <url>https://github.com/advisories/GHSA-q75f-2pp5-9phj</url>
+      <cvename>CVE-2024-2886</cvename>
+      <url>https://github.com/advisories/GHSA-5pj4-f8gh-j3mr</url>
+    </references>
+    <dates>
+      <discovery>2024-04-03</discovery>
+      <entry>2024-04-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4a026b6c-f2b8-11ee-8e76-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>123.0.6312.105</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>123.0.6312.105</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop.html">
+	 <p>This update includes 3 security fixes:</p>
+	 <ul>
+	    <li>[329130358] High CVE-2024-3156: Inappropriate implementation in V8. Reported by Zhenghang Xiao (@Kipreyyy) on 2024-03-12</li>
+	    <li>[329965696] High CVE-2024-3158: Use after free in Bookmarks. Reported by undoingfish on 2024-03-17</li>
+	    <li>[330760873] High CVE-2024-3159: Out of bounds memory access in V8. Reported by Edouard Bochin (@le_douds) and Tao Yan (@Ga1ois) of Palo Alto Networks, via Pwn2Own 2024 on 2024-03-22</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-3156</cvename>
+      <cvename>CVE-2024-3158</cvename>
+      <cvename>CVE-2024-3159</cvename>
+      <url>https://chromereleases.googleblog.com/2024/04/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2024-04-02</discovery>
+      <entry>2024-04-04</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="57561cfc-f24b-11ee-9730-001fc69cd6dc">
     <topic>xorg server -- Multiple vulnerabilities</topic>
     <affects>

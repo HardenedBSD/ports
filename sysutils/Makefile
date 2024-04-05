@@ -1604,7 +1604,6 @@
     SUBDIR += vmtouch
     SUBDIR += vobcopy
     SUBDIR += volman
-    SUBDIR += vordog
     SUBDIR += vpnc-scripts
     SUBDIR += vttest
     SUBDIR += vzvol

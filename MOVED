@@ -3155,3 +3155,10 @@ science/py-qiskit-ibm-provider||2024-04-05|Removed
 science/py-qiskit-ibmq-provider||2024-04-05|Removed
 science/py-qiskit-nature||2024-04-05|Removed
 science/py-qiskit-optimization||2024-04-05|Removed
+games/spider||2024-04-06|Has expired: SUNSITE is no longer maintained
+graphics/liblug||2024-04-06|Has expired: SUNSITE is no longer maintained
+misc/xgas||2024-04-06|Has expired: SUNSITE is no longer maintained
+devel/dmucs||2024-04-06|Has expired: Unmaintained, upstream last release was in 2006
+multimedia/mjpg-streamer||2024-04-06|Has expired: Unmaintained for a long time and does not work
+irc/tircproxy||2024-04-06|Has expired: Unmaintained, dead upstream, vaporized from the net
+devel/ds2||2024-04-06|Has expired: Upstream deprecated and archived

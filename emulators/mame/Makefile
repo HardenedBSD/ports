@@ -31,15 +31,10 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libutf8proc.so:textproc/utf8proc \
 		libzstd.so:archivers/zstd
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		compiler:c++17-lang gl gmake jpeg llvm:min=16 localbase \
-		pkgconfig python:build sdl shebangfix sqlite:3 xorg
-=======
 USES=		compiler:c++17-lang gmake jpeg llvm:min=16 localbase pkgconfig \
 		python:build sdl shebangfix sqlite:3 xorg
->>>>>>> internal/freebsd/main
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mamedev

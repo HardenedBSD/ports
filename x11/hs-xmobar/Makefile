@@ -14,19 +14,9 @@ USES=		cabal gnome pkgconfig xorg
 
 USE_GNOME=	cairo pango
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=		XFT XPM MPD INOTIFY DATEZONE THREADED UVMETER
-OPTIONS_DEFAULT=	XFT
-
 USE_HARDENING=	pie:off
 
-XFT_DESC=		Use Xft to render text (UTF-8 support included)
-XFT_CABAL_FLAGS=	with_xft
-XFT_USE_CABAL=		X11-xft-0.3.4
-XFT_USE=		xorg=xft
-=======
 OPTIONS_DEFINE=		XPM MPD INOTIFY DATEZONE THREADED UVMETER
->>>>>>> internal/freebsd/main
 
 XPM_DESC=		Use Xpm to render icons
 XPM_CABAL_FLAGS=	with_xpm

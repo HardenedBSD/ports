@@ -131,8 +131,8 @@
     SUBDIR += R-cran-sessioninfo
     SUBDIR += R-cran-sfsmisc
     SUBDIR += R-cran-sourcetools
-    SUBDIR += R-cran-systemfonts
     SUBDIR += R-cran-sys
+    SUBDIR += R-cran-systemfonts
     SUBDIR += R-cran-testit
     SUBDIR += R-cran-testthat
     SUBDIR += R-cran-tibble
@@ -285,7 +285,6 @@
     SUBDIR += bats-core
     SUBDIR += bazel
     SUBDIR += bazel-buildtools
-    SUBDIR += bazel029
     SUBDIR += bazel5
     SUBDIR += bbparse
     SUBDIR += bcc
@@ -7601,6 +7600,7 @@
     SUBDIR += rubygem-trailblazer-option
     SUBDIR += rubygem-transaction-simple
     SUBDIR += rubygem-travis
+    SUBDIR += rubygem-travis-gh
     SUBDIR += rubygem-treetop
     SUBDIR += rubygem-trollop
     SUBDIR += rubygem-trollop1

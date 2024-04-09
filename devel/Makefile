@@ -4417,6 +4417,7 @@
     SUBDIR += py-backports.cached-property
     SUBDIR += py-backports.csv
     SUBDIR += py-backports.entry-points-selectable
+    SUBDIR += py-backports.tarfile
     SUBDIR += py-backports.zoneinfo
     SUBDIR += py-banal
     SUBDIR += py-bandit
@@ -4820,6 +4821,7 @@
     SUBDIR += py-gtfslib
     SUBDIR += py-guppy3
     SUBDIR += py-gyp
+    SUBDIR += py-hacking
     SUBDIR += py-hammett
     SUBDIR += py-hash_ring
     SUBDIR += py-hatch
@@ -5713,6 +5715,7 @@
     SUBDIR += py-stdlib-list
     SUBDIR += py-stdlibs
     SUBDIR += py-stdnum
+    SUBDIR += py-stestr
     SUBDIR += py-stevedore
     SUBDIR += py-stone
     SUBDIR += py-stopit

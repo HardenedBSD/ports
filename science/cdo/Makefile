@@ -1,7 +1,7 @@
 PORTNAME=	cdo
-PORTVERSION=	2.3.0
+PORTVERSION=	2.4.0
 CATEGORIES=	science
-MASTER_SITES=	https://code.mpimet.mpg.de/attachments/download/29019/ \
+MASTER_SITES=	https://code.mpimet.mpg.de/attachments/download/29313/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -22,11 +22,14 @@ UUID_DESC=	UUID support
 
 PORTSCOUT=	site:https://code.mpimet.mpg.de/projects/cdo/files
 
-USES=		compiler:c++17-lang gmake libtool localbase pathfix python:build
+USES=		compiler:c++20-lang gmake libtool localbase pathfix python:build
 
+<<<<<<< HEAD
 LDFLAGS+=	-fuse-ld=lld
 
 CFLAGS+=	-DPTHREAD_MUTEXATTR
+=======
+>>>>>>> internal/freebsd/main
 CONFIGURE_ARGS=	--disable-data \
 		--disable-extra \
 		--disable-fortran \
@@ -41,7 +44,7 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 MAKE_JOBS_UNSAFE=	yes
 TEST_TARGET=	check
-USE_CXXSTD=	c++17
+USE_CXXSTD=	c++20
 USE_LDCONFIG=	yes
 
 CGRIBEX_CONFIGURE_WITH=	cgribex

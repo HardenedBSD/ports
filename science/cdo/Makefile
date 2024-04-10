@@ -24,12 +24,8 @@ PORTSCOUT=	site:https://code.mpimet.mpg.de/projects/cdo/files
 
 USES=		compiler:c++20-lang gmake libtool localbase pathfix python:build
 
-<<<<<<< HEAD
 LDFLAGS+=	-fuse-ld=lld
 
-CFLAGS+=	-DPTHREAD_MUTEXATTR
-=======
->>>>>>> internal/freebsd/main
 CONFIGURE_ARGS=	--disable-data \
 		--disable-extra \
 		--disable-fortran \

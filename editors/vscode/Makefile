@@ -105,13 +105,9 @@ OPTIONS_DEFINE=	REH
 OPTIONS_DEFAULT=# none
 REH_DESC=	Build remote extension host
 
-<<<<<<< HEAD
 USE_HARDENING=	relro:off
 
-ELECTRON_DIR=	${.CURDIR}/../../devel/electron27
-=======
 ELECTRON_DIR=	${.CURDIR}/../../devel/electron28
->>>>>>> internal/freebsd/main
 .include	"${ELECTRON_DIR}/Makefile.version"
 
 ELECTRON_DOWNLOAD_URL=	https://github.com/electron/electron/releases/download/v${ELECTRON_VER}

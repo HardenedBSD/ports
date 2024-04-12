@@ -139,10 +139,8 @@ CARGO_ENV+= \
 CARGO_ENV+=	RUST_BACKTRACE=1
 .  endif
 
-.  if !defined(_WITHOUT_LTO) && (!defined(WITHOUT_LTO_PORTS) || ${WITHOUT_LTO_PORTS:N${PKGORIGIN}})
+.  if defined(WITH_LTO)
 _CARGO_MSG=	"===>   Additional optimization to port applied"
-_WITH_LTO=	yes
-.undef _WITHOUT_LTO
 .  endif
 
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
@@ -194,7 +192,7 @@ CARGO_INSTALL_ARGS+=	--features='${CARGO_FEATURES:N--no-default-features}'
 CARGO_TEST_ARGS+=	--features='${CARGO_FEATURES:N--no-default-features}'
 .  endif
 
-.  if !defined(_WITH_DEBUG)
+.  if !defined(WITH_DEBUG)
 CARGO_BUILD_ARGS+=	--release
 CARGO_TEST_ARGS+=	--release
 .  else

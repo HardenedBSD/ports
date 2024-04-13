@@ -31,10 +31,13 @@ BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 RUN_DEPENDS=	Xwayland:x11-servers/xwayland \
 		hwdata>0:misc/hwdata
 
+<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/kwin_x11
 
 CONFLICTS_INSTALL=	kwinft # bin/kwin_wayland
 
+=======
+>>>>>>> internal/freebsd/main
 USES=		cmake compiler:c++11-lib gettext gl gnome kde:5 pkgconfig qt:5 \
 		shebangfix tar:xz xorg \
 		python:run

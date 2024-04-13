@@ -16,13 +16,9 @@ USES=		localbase sqlite
 
 CONFIGURE_ARGS=	--disable-extra-paths
 GNU_CONFIGURE=	yes
-<<<<<<< HEAD
 
 USE_HARDENING=	cfi safestack
 
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-=======
->>>>>>> internal/freebsd/main
 INSTALL_TARGET=	install-exec install-man
 USE_RC_SUBR=	vnstat
 

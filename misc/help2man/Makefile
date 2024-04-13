@@ -16,7 +16,6 @@ USE_HARDENING=	safestack
 USES=		gmake localbase perl5 tar:xz
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 INFO=		help2man
 PLIST_FILES=	bin/help2man \

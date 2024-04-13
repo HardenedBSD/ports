@@ -16,8 +16,6 @@ WWW=		https://www.waffle-gl.org/
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USE_HARDENING=	pie:off
-
 USES=		cmake:indirect compiler:c11 gl localbase meson pkgconfig python:build
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.freedesktop.org

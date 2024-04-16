@@ -1,6 +1,7 @@
 PORTNAME=           portzap
 PORTVERSION=        0.8.1
 DISTVERSIONPREFIX=  v
+PORTREVISION=	1
 CATEGORIES=         hardenedbsd
 
 MAINTAINER=     0x1eef@protonmail.com
@@ -18,7 +19,6 @@ RUN_DEPENDS=	doas:security/doas \
 BATCH=          yes
 NO_ARCH=        yes
 NO_BUILD=       yes
-MAN=	man/man8/portzap.8
 PLIST_FILES= bin/portzap \
 	libexec/portzap/git-changed-files \
 	libexec/portzap/git-removed-files \
@@ -27,7 +27,7 @@ PLIST_FILES= bin/portzap \
 	libexec/portzap/portzap-install \
 	libexec/portzap/portzap-pull \
 	libexec/portzap/portzap-setup \
-	man/man8/portzap.8.gz \
+	man/man8/portzap.8 \
 	%%DATADIR%%/doas.conf
 
 do-install:

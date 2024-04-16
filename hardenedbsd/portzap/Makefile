@@ -1,5 +1,5 @@
 PORTNAME=           portzap
-PORTVERSION=        0.7.4
+PORTVERSION=        0.8.1
 DISTVERSIONPREFIX=  v
 CATEGORIES=         hardenedbsd
 
@@ -11,9 +11,10 @@ USE_GITLAB=     yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=     0x1eef
 GL_PROJECT=	portzap
-GL_COMMIT=	74e9bc4ef23e365d407c0435556d6a72392b2cfa
+GL_COMMIT=	d868030a1ccb9145b6b5a2d1036a11c5abb4f0f7
 
-RUN_DEPENDS=	doas:security/doas
+RUN_DEPENDS=	doas:security/doas \
+	git:devel/git
 BATCH=          yes
 NO_ARCH=        yes
 NO_BUILD=       yes

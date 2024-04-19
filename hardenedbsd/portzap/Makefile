@@ -1,7 +1,6 @@
 PORTNAME=           portzap
-PORTVERSION=        0.8.1
+PORTVERSION=        0.9.4
 DISTVERSIONPREFIX=  v
-PORTREVISION=	2
 CATEGORIES=         hardenedbsd
 
 MAINTAINER=     0x1eef@protonmail.com
@@ -16,7 +15,7 @@ USE_GITLAB=     yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=     0x1eef
 GL_PROJECT=	portzap
-GL_COMMIT=	d868030a1ccb9145b6b5a2d1036a11c5abb4f0f7
+GL_COMMIT=	b16722c219339b4b10e74e1ba1f193fc51c03f40
 
 BATCH=          yes
 NO_ARCH=        yes

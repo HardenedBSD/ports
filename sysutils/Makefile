@@ -300,6 +300,7 @@
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
+    SUBDIR += diffoci
     SUBDIR += digdag
     SUBDIR += dim
     SUBDIR += dirdiff

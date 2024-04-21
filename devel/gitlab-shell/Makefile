@@ -1,7 +1,6 @@
 PORTNAME=	gitlab-shell
-PORTVERSION=	14.34.0
+PORTVERSION=	14.35.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -50,6 +49,7 @@ VARLOGDIR=	/var/log/gitlab-shell
 PLIST_FILES+=	"@dir(git,,755) ${VARLOGDIR}"
 
 post-patch:
+	${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|" ${WRKSRC}/config.yml.example
 	${MV} ${WRKSRC}/config.yml.example ${WRKSRC}/config.yml.sample
 	${CP} ${WRKSRC}/config.yml.sample ${WRKSRC}/config.yml
 	${REINPLACE_CMD} -e 's|VERSION_STRING :=.*|VERSION_STRING := v${PORTVERSION}|g' ${WRKSRC}/Makefile

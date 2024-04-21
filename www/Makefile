@@ -208,7 +208,7 @@
     SUBDIR += ghostunnel
     SUBDIR += gist
     SUBDIR += gitea
-    SUBDIR += gitlab-ce
+    SUBDIR += gitlab
     SUBDIR += gitlab-pages
     SUBDIR += gitlab-workhorse
     SUBDIR += glassfish

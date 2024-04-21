@@ -218,11 +218,8 @@
     SUBDIR += clockspeed
     SUBDIR += clone
     SUBDIR += clonehdd
-<<<<<<< HEAD
     SUBDIR += clonos-ws
-=======
     SUBDIR += cloud-nuke
->>>>>>> internal/freebsd/main
     SUBDIR += cloudabi-utils
     SUBDIR += clsync
     SUBDIR += cluster-glue

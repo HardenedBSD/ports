@@ -1,12 +1,13 @@
 bin/portzap
+bin/setup-portzap
 libexec/portzap/git-changed-files
 libexec/portzap/git-removed-files
 libexec/portzap/git-rev
+libexec/portzap/isportzap-member
 libexec/portzap/portzap-clone
 libexec/portzap/portzap-erase
 libexec/portzap/portzap-install
 libexec/portzap/portzap-pull
-libexec/portzap/portzap-setup
 man/man8/portzap.8
 %%DATADIR%%/VERSION
 %%DATADIR%%/doas.conf

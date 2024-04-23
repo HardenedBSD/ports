@@ -148,8 +148,8 @@ RUBY?=			${LOCALBASE}/bin/ruby${RUBY_SUFFIX}
 #
 # Ruby 3.1
 #
-RUBY_DISTVERSION=	3.1.4
-RUBY_PORTREVISION=	1
+RUBY_DISTVERSION=	3.1.5
+RUBY_PORTREVISION=	0
 
 .      elif ${RUBY_VER} == 3.2
 #
@@ -162,7 +162,7 @@ RUBY_PORTREVISION=	0
 #
 # Ruby 3.3
 #
-RUBY_DISTVERSION=	3.3.0
+RUBY_DISTVERSION=	3.3.1
 RUBY_PORTREVISION=	0
 
 # When adding a version, please keep the comment in

@@ -42,17 +42,11 @@ CMAKE_ARGS=	-DPIONEER_DATA_DIR:PATH="${DATADIR}/data"
 CMAKE_ON=	USE_SYSTEM_LIBGLEW USE_SYSTEM_LIBLUA
 CMAKE_OFF=	FMT_INSTALL
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-PORTDATA=	data
-PORTDOCS=	AUTHORS.txt Changelog.txt Modelviewer.txt Quickstart.txt \
-		README.md
-=======
 PORTDATA=	*
 PORTDOCS=	AUTHORS.txt Changelog.txt Quickstart.txt \
 		README.md editor.txt
->>>>>>> internal/freebsd/main
 
 SUB_FILES=	pkg-message
 

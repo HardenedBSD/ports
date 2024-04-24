@@ -261,8 +261,7 @@ CONFIGURE_ARGS+=	--disable-freetype-bundling \
 			--with-jvm-variants=${JDK_BUILD_JVM} \
 			--with-milestone=fcs \
 			--with-package-path=${LOCALBASE} \
-			--with-zlib=system \
-			--with-extra-ldflags="-Wl,--undefined-version"
+			--with-zlib=system
 CONFIGURE_SCRIPT=	../../configure
 CONFIGURE_WRKSRC=	${WRKSRC}/common/autoconf
 
@@ -384,7 +383,7 @@ MAKE_ENV+=	COMPILER_WARNINGS_FATAL=false USE_CLANG=true
 CONFIGURE_ENV+=	LIBCXX="-lc++"
 CONFIGURE_ARGS+=	--with-extra-cflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
 CONFIGURE_ARGS+=	--with-extra-cxxflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
-CONFIGURE_ARGS+=	--with-extra-ldflags="-Wno-error=unused-command-line-argument"
+CONFIGURE_ARGS+=	--with-extra-ldflags="-Wno-error=unused-command-line-argument -Wl,--undefined-version"
 .if ${COMPILER_VERSION} >= 130 && ${ARCH} == aarch64
 # PR258954: see <https://bugs.openjdk.org/browse/JDK-8247766>. Even though the
 # upstream fix has been applied to this version of the JDK, users still report

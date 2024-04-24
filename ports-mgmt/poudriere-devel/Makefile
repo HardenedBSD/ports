@@ -1,5 +1,5 @@
 PORTNAME=	poudriere
-DISTVERSION=	3.4.99.20240419
+DISTVERSION=	3.4.99.20240424
 PORTREVISION=	0
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	LOCAL/bdrewery/${PORTNAME}/ \
@@ -17,7 +17,7 @@ CONFLICTS_INSTALL=	poudriere
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
-GH_TAGNAME=	3.3.0-1744-g3f33775b09
+GH_TAGNAME=	3.3.0-1748-gd75f4e1dc4
 
 GNU_CONFIGURE=	yes
 ETCDIR=		${PREFIX}/etc/poudriere.d
@@ -39,7 +39,9 @@ QEMU_RUN_DEPENDS=	qemu-user-static>0:emulators/qemu-user-static
 # gmake is not strictly needed but handles test jobs better
 TEST_DEPENDS=	gmake>0:devel/gmake
 TEST_ENV=	MAKE=gmake
+.if make(test)
 MAKE_CMD=	gmake
+.endif
 TEST_TARGET=	check
 TEST_ARGS=	-s
 TEST_ARGS+=	${_MAKE_JOBS}

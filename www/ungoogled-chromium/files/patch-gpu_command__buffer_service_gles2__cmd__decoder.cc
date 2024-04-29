@@ -1,6 +1,6 @@
---- gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2023-12-23 12:33:28 UTC
+--- gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2024-04-23 07:42:17 UTC
 +++ gpu/command_buffer/service/gles2_cmd_decoder.cc
-@@ -2999,7 +2999,7 @@ GLES2Decoder* GLES2Decoder::Create(
+@@ -2987,7 +2987,7 @@ GLES2Decoder* GLES2Decoder::Create(
    }
  
  // Allow linux to run fuzzers.

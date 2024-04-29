@@ -1,4 +1,4 @@
---- chrome/browser/net/system_network_context_manager.h.orig	2024-02-25 20:22:18 UTC
+--- chrome/browser/net/system_network_context_manager.h.orig	2024-04-23 07:42:17 UTC
 +++ chrome/browser/net/system_network_context_manager.h
 @@ -200,7 +200,7 @@ class SystemNetworkContextManager {
    class URLLoaderFactoryForSystem;
@@ -18,9 +18,9 @@
    // Applies the current value of the kEnforceLocalAnchorConstraintsEnabled
    // pref to the enforcement state.
    void UpdateEnforceLocalAnchorConstraintsEnabled();
-@@ -284,7 +284,7 @@ class SystemNetworkContextManager {
+@@ -286,7 +286,7 @@ class SystemNetworkContextManager {
  
-   static std::optional<bool> certificate_transparency_enabled_for_testing_;
+   std::unique_ptr<NetworkAnnotationMonitor> network_annotation_monitor_;
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

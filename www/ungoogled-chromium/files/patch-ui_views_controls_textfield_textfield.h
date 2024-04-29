@@ -1,7 +1,7 @@
---- ui/views/controls/textfield/textfield.h.orig	2024-02-03 15:42:55 UTC
+--- ui/views/controls/textfield/textfield.h.orig	2024-04-23 07:42:17 UTC
 +++ ui/views/controls/textfield/textfield.h
-@@ -46,7 +46,7 @@
- #include "ui/views/view.h"
+@@ -47,7 +47,7 @@
+ #include "ui/views/view_observer.h"
  #include "ui/views/word_lookup_client.h"
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -9,7 +9,7 @@
  #include <vector>
  #endif
  
-@@ -454,7 +454,7 @@ class VIEWS_EXPORT Textfield : public View,
+@@ -461,7 +461,7 @@ class VIEWS_EXPORT Textfield : public View,
    // Set whether the text should be used to improve typing suggestions.
    void SetShouldDoLearning(bool value) { should_do_learning_ = value; }
  

@@ -1,6 +1,6 @@
 PORTNAME=	poudriere
 DISTVERSION=	3.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	ports-mgmt
 PKGNAMESUFFIX=	-hbsd
 
@@ -27,12 +27,18 @@ GL_COMMIT=	9d44cd9f0c4e032fab2d58f5cbe3460f94aca8a8
 GNU_CONFIGURE=	yes
 ETCDIR=		${PREFIX}/etc/poudriere.d
 
-OPTIONS_DEFINE=	BASH DIALOG4PORTS EXAMPLES QEMU ZSH
-OPTIONS_DEFAULT=BASH DIALOG4PORTS ZSH
+
+MAKE_ARGS+=	mandir=${PREFIX}/share/man
+
+OPTIONS_DEFINE=	BASH MANIFESTS PORTCONFIG EXAMPLES QEMU ZSH
+OPTIONS_DEFAULT=BASH MANIFESTS PORTCONFIG ZSH
 OPTIONS_SUB=	yes
 
-DIALOG4PORTS_DESC=	Install dialog4ports for options command
-DIALOG4PORTS_RUN_DEPENDS=	dialog4ports>0:ports-mgmt/dialog4ports
+MANIFESTS_DESC=		Install manifests for jail creation
+MANIFESTS_RUN_DEPENDS+=	freebsd-release-manifests>0:misc/freebsd-release-manifests
+
+PORTCONFIG_DESC=	Install portconfig for options command
+PORTCONFIG_RUN_DEPENDS=	portconfig>0:ports-mgmt/portconfig
 
 QEMU_DESC=	Add qemu-user-static for non-x86 architectures
 QEMU_RUN_DEPENDS=	qemu-user-static>0:emulators/qemu-user-static

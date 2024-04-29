@@ -8,5 +8,6 @@ SUBDIR += secadm
 SUBDIR += secadm-kmod
 SUBDIR += testmprotect
 SUBDIR += testpie
+SUBDIR += portzap
 
 .include <bsd.port.subdir.mk>

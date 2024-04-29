@@ -391,6 +391,7 @@ share/locale/ro/LC_MESSAGES/kcm_nic.mo
 share/locale/ro/LC_MESSAGES/kcm_samba.mo
 share/locale/ro/LC_MESSAGES/kcmdevinfo.mo
 share/locale/ro/LC_MESSAGES/kcmusb.mo
+share/locale/ro/LC_MESSAGES/kinfocenter.mo
 share/locale/ru/LC_MESSAGES/kcm_about-distro.mo
 share/locale/ru/LC_MESSAGES/kcm_energyinfo.mo
 share/locale/ru/LC_MESSAGES/kcm_nic.mo
@@ -452,9 +453,11 @@ share/locale/sv/LC_MESSAGES/kcm_samba.mo
 share/locale/sv/LC_MESSAGES/kcmdevinfo.mo
 share/locale/sv/LC_MESSAGES/kcmusb.mo
 share/locale/ta/LC_MESSAGES/kcm_about-distro.mo
+share/locale/ta/LC_MESSAGES/kcm_energyinfo.mo
 share/locale/ta/LC_MESSAGES/kcm_samba.mo
 share/locale/ta/LC_MESSAGES/kcmdevinfo.mo
 share/locale/ta/LC_MESSAGES/kcmusb.mo
+share/locale/ta/LC_MESSAGES/kinfocenter.mo
 share/locale/te/LC_MESSAGES/kcm_samba.mo
 share/locale/te/LC_MESSAGES/kcmusb.mo
 share/locale/tg/LC_MESSAGES/kcm_energyinfo.mo
@@ -516,3 +519,4 @@ share/locale/zh_TW/LC_MESSAGES/kcmdevinfo.mo
 share/locale/zh_TW/LC_MESSAGES/kcmusb.mo
 share/locale/zh_TW/LC_MESSAGES/kinfocenter.mo
 share/metainfo/org.kde.kinfocenter.appdata.xml
+share/polkit-1/actions/org.kde.kinfocenter.dmidecode.policy

@@ -1,4 +1,4 @@
---- components/password_manager/core/browser/password_manager.cc.orig	2024-02-25 20:22:18 UTC
+--- components/password_manager/core/browser/password_manager.cc.orig	2024-04-23 07:42:17 UTC
 +++ components/password_manager/core/browser/password_manager.cc
 @@ -363,7 +363,7 @@ void PasswordManager::RegisterProfilePrefs(
    registry->RegisterListPref(prefs::kPasswordManagerPromoCardsList);

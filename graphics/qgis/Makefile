@@ -1,6 +1,5 @@
 PORTNAME=	qgis
-DISTVERSION=	3.36.0
-PORTREVISION=	1
+DISTVERSION=	3.36.2
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://qgis.org/downloads/
 
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/doc/LICENSE
 BUILD_DEPENDS=	gpsbabel>=1.7.0:astro/gpsbabel \
 		opencl>=0:devel/opencl \
 		${PYTHON_PKGNAMEPREFIX}cycler>=0.11.0:devel/py-cycler@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}dateutil>=2.8.2:devel/py-dateutil@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}python-dateutil>=2.8.2:devel/py-python-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}future>=0.18.2:devel/py-future@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}httplib2>=0.20.2:www/py-httplib2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jedi>=0.18.1:devel/py-jedi@${PY_FLAVOR} \
@@ -64,7 +63,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		opencl>=0:devel/opencl \
 		${PYTHON_PKGNAMEPREFIX}black>=22.10:devel/py-black@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cycler>=0.11.0:devel/py-cycler@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}dateutil>=2.8.2:devel/py-dateutil@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}python-dateutil>=2.8.2:devel/py-python-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Fiona>=1.8.21:graphics/py-fiona@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}future>=0.18.2:devel/py-future@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gdal>=3.5.2:graphics/py-gdal@${PY_FLAVOR} \
@@ -146,22 +145,17 @@ CMAKE_ARGS+=	-Wno-dev
 CMAKE_OFF+=	SUPPRESS_QT_WARNINGS
 .endif
 
-OPTIONS_DEFINE=		SERVER
-OPTIONS_DEFAULT=	SERVER GRASS8
-OPTIONS_RADIO=		GRASS
-OPTIONS_RADIO_GRASS=	GRASS7 GRASS8
+OPTIONS_DEFINE=		SERVER GRASS
+OPTIONS_DEFAULT=	SERVER GRASS
 NO_OPTIONS_SORT=	yes
 OPTIONS_SUB=		yes
 
 GRASS_DESC=		Add GRASS GIS to processing tools
 SERVER_DESC=		Enable QGIS server
 
-GRASS7_BUILD_DEPENDS=	grass7:databases/grass7
-GRASS7_RUN_DEPENDS=	${GRASS7_BUILD_DEPENDS}
-GRASS7_CMAKE_BOOL=	WITH_GRASS7
-GRASS8_BUILD_DEPENDS=	grass8:databases/grass8
-GRASS8_RUN_DEPENDS=	${GRASS8_BUILD_DEPENDS}
-GRASS8_CMAKE_BOOL=	WITH_GRASS8
+GRASS_BUILD_DEPENDS=	grass8:databases/grass8
+GRASS_RUN_DEPENDS=	${GRASS_BUILD_DEPENDS}
+GRASS_CMAKE_BOOL=	WITH_GRASS8
 SERVER_LIB_DEPENDS=	libfcgi.so:www/fcgi
 SERVER_CMAKE_BOOL=	WITH_SERVER WITH_SERVER_PLUGINS WITH_QSPATIALITE
 
@@ -184,12 +178,6 @@ post-patch:
 
 pre-configure:
 	${MKDIR} ${CONFIGURE_WRKSRC}/bin && ${LN} -s ${PYTHON_CMD} ${CONFIGURE_WRKSRC}/bin/python3
-.if ${PORT_OPTIONS:MGRASS7} || ${PORT_OPTIONS:MGRASS8}
-PLIST_SUB+=	GRASS="" NO_GRASS="@comment "
-.else
-PLIST_SUB+=	GRASS="@comment " NO_GRASS=""
-.endif
-
 
 post-install:
 	@${RM} ${STAGEDIR}${DATADIR}/python/pytz/tzfile.py.bak

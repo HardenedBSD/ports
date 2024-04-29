@@ -1,6 +1,6 @@
 PORTNAME=	nmap
 DISTVERSION=	7.94
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	https://nmap.org/dist/ \
 		LOCAL/ohauer
@@ -21,8 +21,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USE_HARDENING?=	cfi safestack
 
 .if !defined(MASTERDIR)
-
-LIB_DEPENDS=	libpcre.so:devel/pcre
 
 USES=		tar:bzip2 gmake cpe
 GNU_CONFIGURE=	yes
@@ -52,7 +50,7 @@ STRIP_FILES+=	nmap nping
 CONFIGURE_ARGS+=--without-localdirs \
 		--without-zenmap \
 		--without-ndiff \
-		--with-libpcre=${LOCALBASE} \
+		--with-libpcre=included \
 		--with-liblua=included \
 		--without-nmap-update
 

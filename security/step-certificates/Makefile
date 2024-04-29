@@ -1,6 +1,6 @@
 PORTNAME=	step-certificates
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.25.2
+DISTVERSION=	0.26.0
 PORTREVISION=	1
 CATEGORIES=	security
 
@@ -17,9 +17,9 @@ RUN_DEPENDS=	step:security/step-cli
 
 USES=		go:modules
 
-GO_MODULE=	github.com/smallstep/certificates
-
 USE_RC_SUBR=	step-ca
+
+GO_MODULE=	github.com/smallstep/certificates
 
 GO_TARGET=	./cmd/step-ca:${PREFIX}/sbin/step-ca
 

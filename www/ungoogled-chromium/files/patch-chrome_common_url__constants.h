@@ -1,6 +1,6 @@
---- chrome/common/url_constants.h.orig	2024-02-25 20:22:18 UTC
+--- chrome/common/url_constants.h.orig	2024-04-23 07:42:17 UTC
 +++ chrome/common/url_constants.h
-@@ -822,7 +822,7 @@ inline constexpr char kPhoneHubPermissionLearnMoreURL[
+@@ -848,7 +848,7 @@ inline constexpr char kPhoneHubPermissionLearnMoreURL[
      "https://support.9oo91e.qjz9zk/chromebook?p=multidevice";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

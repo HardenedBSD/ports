@@ -1,6 +1,6 @@
 PORTNAME=	opendkim
 PORTVERSION=	2.10.3
-PORTREVISION=	17
+PORTREVISION=	19
 CATEGORIES=	mail security
 MASTER_SITES=	SF/${PORTNAME} \
 		SF/${PORTNAME}/Previous%20Releases \
@@ -102,10 +102,6 @@ MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 .include "${.CURDIR}/Makefile.options"
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDEBUG}
-WITH_DEBUG=	yes
-.endif
 
 .if ${PORT_OPTIONS:MFILTER}
 SUB_FILES=		pkg-message

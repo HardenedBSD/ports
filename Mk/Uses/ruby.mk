@@ -144,32 +144,26 @@ RUBY?=			${LOCALBASE}/bin/ruby${RUBY_SUFFIX}
 .    if defined(RUBY_VER)
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
-.      if ${RUBY_VER} == 3.0
-#
-# Ruby 3.0
-#
-RUBY_DISTVERSION=	3.0.6
-RUBY_PORTREVISION=	1
-.      elif ${RUBY_VER} == 3.1
+.      if ${RUBY_VER} == 3.1
 #
 # Ruby 3.1
 #
-RUBY_DISTVERSION=	3.1.4
-RUBY_PORTREVISION=	1
+RUBY_DISTVERSION=	3.1.5
+RUBY_PORTREVISION=	0
 
 .      elif ${RUBY_VER} == 3.2
 #
 # Ruby 3.2
 #
-RUBY_DISTVERSION=	3.2.3
+RUBY_DISTVERSION=	3.2.4
 RUBY_PORTREVISION=	0
 
 .      elif ${RUBY_VER} == 3.3
 #
 # Ruby 3.3
 #
-RUBY_DISTVERSION=	3.3.0
-RUBY_PORTREVISION=	0
+RUBY_DISTVERSION=	3.3.1
+RUBY_PORTREVISION=	1
 
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
@@ -177,7 +171,7 @@ RUBY_PORTREVISION=	0
 #
 # Other versions
 #
-IGNORE=	Only ruby 3.0, 3.1, 3,2 and 3.3 are supported
+IGNORE=	Only ruby 3.1, 3,2 and 3.3 are supported
 _INVALID_RUBY_VER=	1
 .      endif
 RUBY_PORTEPOCH=		1
@@ -186,7 +180,6 @@ RUBY_VERSION=	${RUBY_DISTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/}
 
 .    if !defined(_INVALID_RUBY_VER)
 
-RUBY30?=		"@comment "
 RUBY31?=		"@comment "
 RUBY32?=		"@comment "
 RUBY33?=		"@comment "

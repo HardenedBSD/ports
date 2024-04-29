@@ -1,6 +1,6 @@
 PORTNAME=	duckdb
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.10.0
+DISTVERSION=	0.10.2
 CATEGORIES=	databases
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,11 +12,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake:testing compiler:c++11-lang ssl
 USE_GITHUB=	yes
-GH_TUPLE=	duckdb:sqlite_scanner:c134346:sqlite/extension/sqlite_scanner
+GH_TUPLE=	duckdb:sqlite_scanner:091197e:sqlite/extension/sqlite_scanner
 
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	BUILD_UNITTESTS
-CMAKE_TESTING_ON=	BUILD_UNITTESTS # 2 tests fail, see https://github.com/duckdb/duckdb/issues/10652
+CMAKE_ARGS=	-DOVERRIDE_GIT_DESCRIBE=v${DISTVERSION}-0-g0000000000
+CMAKE_TESTING_ON=	BUILD_UNITTESTS # 2 tests fail, see https://github.com/duckdb/duckdb/issues/11744
 CMAKE_TESTING_TARGET=	${ALL_TARGET} # hack: works as empty target
 
 BINARY_ALIAS=	git=false
@@ -38,7 +39,7 @@ DUCKDB_EXTENSIONS+=	;${opt:tl}
 ${opt}_PLIST_FILES=	lib/lib${opt:tl}_extension.a
 .endfor
 
-CMAKE_ARGS=	-DBUILD_EXTENSIONS="${DUCKDB_EXTENSIONS:tW:S/ //g:S/^;//}" \
+CMAKE_ARGS+=	-DBUILD_EXTENSIONS="${DUCKDB_EXTENSIONS:tW:S/ //g:S/^;//}" \
 		-DDUCKDB_MAJOR_VERSION=${PORTVERSION:R:R} \
 		-DDUCKDB_MINOR_VERSION=${PORTVERSION:R:E} \
 		-DDUCKDB_PATCH_VERSION=${PORTVERSION:E}

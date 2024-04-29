@@ -17,7 +17,6 @@ USE_HARDENING=	safestack
 USES=		charsetfix cpe iconv:${STATIC_ARGS} localbase tar:xz
 CPE_VENDOR=	gnu
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--program-prefix=g
 # unbuckle safety belt: FreeBSD/i386 still has 32-bit time_t
 CONFIGURE_ARGS+=--disable-year2038

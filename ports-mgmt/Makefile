@@ -73,6 +73,7 @@
     SUBDIR += poudriere-hbsd
     SUBDIR += psearch
     SUBDIR += py-FreeBSD-ports
+    SUBDIR += py-pnu-portstreelint
     SUBDIR += py-pytoport
     SUBDIR += py-skog
     SUBDIR += rc-subr-jail

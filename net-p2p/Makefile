@@ -7,13 +7,11 @@
     SUBDIR += bitcoin
     SUBDIR += bitcoin-daemon
     SUBDIR += bitcoin-utils
-    SUBDIR += bitflu
     SUBDIR += bitmark
     SUBDIR += bitmark-cli
     SUBDIR += bitmark-daemon
     SUBDIR += bitmark-recorder
     SUBDIR += btcheck
-    SUBDIR += btpd
     SUBDIR += c-lightning
     SUBDIR += cardano-db-sync
     SUBDIR += cardano-node
@@ -34,16 +32,11 @@
     SUBDIR += eiskaltdcpp-gtk
     SUBDIR += eiskaltdcpp-lib
     SUBDIR += ethash
-    SUBDIR += frost
     SUBDIR += go-ethereum
-    SUBDIR += go-prysm
     SUBDIR += gtk-gnutella
-    SUBDIR += gtorrentviewer
     SUBDIR += jackett
     SUBDIR += jigdo
     SUBDIR += ktorrent
-    SUBDIR += libbt
-    SUBDIR += liberator
     SUBDIR += libktorrent
     SUBDIR += libswift
     SUBDIR += libtorrent
@@ -83,7 +76,6 @@
     SUBDIR += py-nicotine-plus
     SUBDIR += py-transmission-rpc
     SUBDIR += py-tremc
-    SUBDIR += py-vertex
     SUBDIR += pyln-bolt7
     SUBDIR += pyln-client
     SUBDIR += pyln-proto
@@ -96,8 +88,6 @@
     SUBDIR += rtorrent
     SUBDIR += shx
     SUBDIR += sonarr
-    SUBDIR += sonarr-devel
-    SUBDIR += tooth
     SUBDIR += torrent-file-editor
     SUBDIR += torrentcheck
     SUBDIR += torrentsniff

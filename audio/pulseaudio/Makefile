@@ -4,7 +4,7 @@
 
 PORTNAME=	pulseaudio
 DISTVERSION=	16.1
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 

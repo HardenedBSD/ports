@@ -26,7 +26,6 @@ USE_HARDENING=		safestack
 USES=			bison cpe iconv localbase pathfix
 CPE_VENDOR=		gnu
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS+=	--without-bash-malloc \
 			--disable-rpath \
 			--enable-disabled-builtins \

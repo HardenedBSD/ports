@@ -1,6 +1,6 @@
---- chrome/browser/ui/chrome_pages.cc.orig	2024-02-23 21:04:38 UTC
+--- chrome/browser/ui/chrome_pages.cc.orig	2024-04-19 13:02:56 UTC
 +++ chrome/browser/ui/chrome_pages.cc
-@@ -80,7 +80,7 @@
+@@ -82,7 +82,7 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -9,7 +9,7 @@
  #include "chrome/browser/web_applications/web_app_utils.h"
  #endif
  
-@@ -700,7 +700,7 @@ void ShowShortcutCustomizationApp(Profile* profile,
+@@ -716,7 +716,7 @@ void ShowShortcutCustomizationApp(Profile* profile,
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -1,14 +1,14 @@
---- ui/base/x/x11_display_util.cc.orig	2024-02-23 21:04:38 UTC
+--- ui/base/x/x11_display_util.cc.orig	2024-04-19 13:02:56 UTC
 +++ ui/base/x/x11_display_util.cc
-@@ -12,7 +12,6 @@
- #include <unordered_set>
+@@ -14,7 +14,6 @@
  
  #include "base/bits.h"
+ #include "base/command_line.h"
 -#include "base/containers/flat_map.h"
  #include "base/logging.h"
  #include "base/numerics/clamped_math.h"
  #include "base/ranges/algorithm.h"
-@@ -26,7 +25,6 @@
+@@ -28,7 +27,6 @@
  #include "ui/gfx/geometry/rect.h"
  #include "ui/gfx/geometry/rect_conversions.h"
  #include "ui/gfx/geometry/rect_f.h"
@@ -16,13 +16,16 @@
  #include "ui/gfx/x/atom_cache.h"
  #include "ui/gfx/x/connection.h"
  #include "ui/gfx/x/randr.h"
-@@ -41,86 +39,42 @@ constexpr std::pair<uint32_t, uint32_t> kMinVersionXra
+@@ -43,89 +41,42 @@ constexpr std::pair<uint32_t, uint32_t> kMinVersionXra
  
  constexpr const char kRandrEdidProperty[] = "EDID";
  
 -std::map<x11::RandR::Output, size_t> GetMonitors(
 -    const x11::Response<x11::RandR::GetMonitorsReply>& reply) {
 -  std::map<x11::RandR::Output, size_t> output_to_monitor;
+-  if (!reply) {
+-    return output_to_monitor;
+-  }
 -  for (size_t monitor = 0; monitor < reply->monitors.size(); monitor++) {
 -    for (x11::RandR::Output output : reply->monitors[monitor].outputs) {
 -      output_to_monitor[output] = monitor;
@@ -124,7 +127,7 @@
    };
  
    // If the work area entirely contains exactly one display, assume it's meant
-@@ -202,9 +156,14 @@ int DefaultBitsPerComponent() {
+@@ -207,9 +158,14 @@ int DefaultBitsPerComponent() {
    return visual.bits_per_rgb_value;
  }
  
@@ -142,7 +145,7 @@
    std::vector<uint8_t> edid;
    if (response && response->format == 8 && response->type != x11::Atom::None) {
      edid = std::move(response->data);
-@@ -256,8 +215,7 @@ gfx::PointF DisplayOriginPxToDip(const display::Displa
+@@ -261,8 +217,7 @@ gfx::PointF DisplayOriginPxToDip(const display::Displa
  std::vector<display::Display> GetFallbackDisplayList(
      float scale,
      size_t* primary_display_index_out) {
@@ -152,11 +155,10 @@
    gfx::Size physical_size(screen.width_in_millimeters,
                            screen.height_in_millimeters);
  
-@@ -283,10 +241,7 @@ std::vector<display::Display> GetFallbackDisplayList(
- 
+@@ -289,9 +244,7 @@ std::vector<display::Display> GetFallbackDisplayList(
    std::vector<display::Display> displays{gfx_display};
    *primary_display_index_out = 0;
--
+ 
 -  ClipWorkArea(&displays, *primary_display_index_out,
 -               GetWorkAreaSync(GetWorkAreaFuture(connection)));
 -
@@ -164,11 +166,10 @@
    return displays;
  }
  
-@@ -301,17 +256,7 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
-   auto& randr = connection->randr();
+@@ -307,16 +260,7 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
    auto x_root_window = ui::GetX11RootWindow();
    std::vector<display::Display> displays;
--
+ 
 -  auto resources_future = randr.GetScreenResourcesCurrent({x_root_window});
 -  auto output_primary_future = randr.GetOutputPrimary({x_root_window});
 -  x11::Future<x11::RandR::GetMonitorsReply> monitors_future;
@@ -183,7 +184,7 @@
    if (!resources) {
      LOG(ERROR) << "XRandR returned no displays; falling back to root window";
      return GetFallbackDisplayList(primary_scale, primary_display_index_out);
-@@ -320,65 +265,21 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
+@@ -325,65 +269,21 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
    const int depth = connection->default_screen().root_depth;
    const int bits_per_component = DefaultBitsPerComponent();
  
@@ -254,7 +255,7 @@
      if (!output_info) {
        continue;
      }
-@@ -393,16 +294,15 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
+@@ -398,16 +298,15 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
        continue;
      }
  
@@ -276,7 +277,7 @@
      auto output_32 = static_cast<uint32_t>(output_id);
      int64_t display_id =
          output_32 > 0xff ? 0 : edid_parser.GetIndexBasedDisplayId(output_32);
-@@ -457,9 +357,8 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
+@@ -462,9 +361,8 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
      }
  
      if (!display::HasForceDisplayColorProfile()) {
@@ -288,7 +289,7 @@
        gfx::ColorSpace color_space = icc_profile.GetPrimariesOnlyColorSpace();
  
        // Most folks do not have an ICC profile set up, but we still want to
-@@ -504,24 +403,63 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
+@@ -509,24 +407,63 @@ std::vector<display::Display> BuildDisplaysFromXRandRI
      ConvertDisplayBoundsToDips(&displays, *primary_display_index_out);
    }
  
@@ -302,8 +303,8 @@
    constexpr base::TimeDelta kDefaultInterval = base::Seconds(1. / 60);
 -
 -  size_t primary_display_index = 0;
--  auto displays =
--      BuildDisplaysFromXRandRInfo(DisplayConfig(), &primary_display_index);
+-  auto displays = BuildDisplaysFromXRandRInfo(display::DisplayConfig(),
+-                                              &primary_display_index);
 -  CHECK_LT(primary_display_index, displays.size());
 -
 +  x11::RandR randr = x11::Connection::Get()->randr();

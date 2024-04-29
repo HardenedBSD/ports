@@ -1,6 +1,6 @@
 PORTNAME=	wifimgr
 PORTVERSION=	1.23
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-mgmt sysutils
 MASTER_SITES=	https://opal.com/src/wifimgr/
 
@@ -20,6 +20,8 @@ USE_GNOME=	cairo gdkpixbuf2
 USE_XORG=	x11
 
 USE_HARDENING=	pie:off
+
+MAKE_ENV=	MANDIR="${STAGEDIR}${PREFIX}/share/man"
 
 OPTIONS_DEFINE=	GTK2 NLS
 OPTIONS_SUB=	yes

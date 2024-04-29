@@ -1,6 +1,7 @@
 PORTNAME=	openssl
-DISTVERSIONPREFIX=	opernssl-
+DISTVERSIONPREFIX=	${PORTNAME}-
 DISTVERSION=	3.1.5
+PORTREVISION=	3
 DISTVERSIONSUFFIX=	-quic1
 CATEGORIES=	security devel
 PKGNAMESUFFIX=	31-quictls
@@ -12,7 +13,7 @@ WWW=		https://www.github.com/quictls/openssl
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl3[12]
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl3* openssl-quictls
 
 BROKEN_i386=	ld: error: undefined symbol: __atomic_is_lock_free
 
@@ -33,6 +34,8 @@ LDFLAGS_i386=	-Wl,-znotext
 
 MAKE_ARGS+=	WHOLE_ARCHIVE_FLAG=--whole-archive CNF_LDFLAGS="${LDFLAGS}"
 MAKE_ENV+=	LIBRPATH="${PREFIX}/lib" GREP_OPTIONS=
+
+EXTRA_PATCHES+=	${.CURDIR}/../openssl/files/patch-crypto_async_arch_async__posix.h
 
 OPTIONS_GROUP=		CIPHERS HASHES MODULES OPTIMIZE PROTOCOLS
 OPTIONS_GROUP_CIPHERS=	ARIA DES GOST IDEA SM4 RC2 RC4 RC5 WEAK-SSL-CIPHERS
@@ -137,6 +140,16 @@ ZLIB_CONFIGURE_ON=	zlib-dynamic
 SHLIBS=			lib/engines-${OPENSSL_SHLIBVER}/loader_attic.so
 
 PORTSCOUT=		limit=^3\.1\.
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64
+CONFIGURE_ARGS+=	BSD-ppc64
+.elif ${ARCH} == powerpc64le
+CONFIGURE_ARGS+=	BSD-ppc64le
+.elif ${ARCH} == riscv64
+CONFIGURE_ARGS+=	BSD-riscv64
+.endif
 
 .include <bsd.port.pre.mk>
 .if ${PREFIX} == /usr

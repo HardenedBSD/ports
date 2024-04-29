@@ -1,5 +1,5 @@
-TIMESTAMP = 1707894531
-SHA256 (duckdb-duckdb-v0.10.0_GH0.tar.gz) = 5a925b8607d00a97c1a3ffe6df05c0a62a4df063abd022ada82ac1e917792013
-SIZE (duckdb-duckdb-v0.10.0_GH0.tar.gz) = 79037968
-SHA256 (duckdb-sqlite_scanner-c134346_GH0.tar.gz) = 118ab8cb9fcc4e08eee661d2a146ed21c939e30b64123729fbdc90adbd2214f0
-SIZE (duckdb-sqlite_scanner-c134346_GH0.tar.gz) = 4646975
+TIMESTAMP = 1713472441
+SHA256 (duckdb-duckdb-v0.10.2_GH0.tar.gz) = 662a0ba5c35d678ab6870db8f65ffa1c72e6096ad525a35b41b275139684cea6
+SIZE (duckdb-duckdb-v0.10.2_GH0.tar.gz) = 80028898
+SHA256 (duckdb-sqlite_scanner-091197e_GH0.tar.gz) = 213604e86866dd835bea6471906e250a448d3d0d6f9b06e9d2c76f227a3fd688
+SIZE (duckdb-sqlite_scanner-091197e_GH0.tar.gz) = 4647658

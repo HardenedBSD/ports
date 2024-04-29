@@ -1,4 +1,4 @@
---- content/renderer/renderer_blink_platform_impl.h.orig	2024-02-25 20:22:18 UTC
+--- content/renderer/renderer_blink_platform_impl.h.orig	2024-04-23 07:42:17 UTC
 +++ content/renderer/renderer_blink_platform_impl.h
 @@ -246,7 +246,7 @@ class CONTENT_EXPORT RendererBlinkPlatformImpl : publi
    void Collect3DContextInformation(blink::Platform::GraphicsInfo* gl_info,

@@ -1,5 +1,5 @@
 PORTNAME=	wine
-DISTVERSION=	9.3
+DISTVERSION=	9.6
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/9.x/
@@ -127,7 +127,7 @@ CONFIGURE_ARGS+=	--without-gstreamer
 PLIST_SUB+=		GSTREAMER="@comment "
 .endif
 
-.if (${LLVM_DEFAULT} == 10 || ${LLVM_DEFAULT} == 11)
+.if ${LLVM_DEFAULT} == 11
 _LLVM_VERSION=	15
 .else
 _LLVM_VERSION=	${LLVM_DEFAULT}

@@ -40,7 +40,6 @@
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
     SUBDIR += cython
-    SUBDIR += cython-devel
     SUBDIR += cython3
     SUBDIR += dhall
     SUBDIR += dlang-tools
@@ -119,12 +118,12 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go-devel
-    SUBDIR += go119
     SUBDIR += go120
     SUBDIR += go121
     SUBDIR += go122
     SUBDIR += gomacro
     SUBDIR += gprolog
+    SUBDIR += gptscript
     SUBDIR += gravity
     SUBDIR += groovy
     SUBDIR += gscheme
@@ -227,7 +226,6 @@
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-camlidl
-    SUBDIR += ocaml-nox11
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opensycl
@@ -280,6 +278,7 @@
     SUBDIR += php83
     SUBDIR += php83-extensions
     SUBDIR += picoc
+    SUBDIR += picolisp
     SUBDIR += plexil
     SUBDIR += pocl
     SUBDIR += polyml
@@ -305,7 +304,6 @@
     SUBDIR += python38
     SUBDIR += python39
     SUBDIR += qmasm
-    SUBDIR += qscheme
     SUBDIR += quickjs
     SUBDIR += quilc
     SUBDIR += racket
@@ -319,7 +317,7 @@
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
     SUBDIR += rizin
-    SUBDIR += ruby30
+    SUBDIR += rizin-cutter
     SUBDIR += ruby31
     SUBDIR += ruby32
     SUBDIR += ruby33
@@ -359,13 +357,13 @@
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel
-    SUBDIR += swi-pl
+    SUBDIR += starlark-rust
+    SUBDIR += swipl
     SUBDIR += tauthon
     SUBDIR += tcbasic
     SUBDIR += tcc
     SUBDIR += tcl-manual
     SUBDIR += tcl-wrapper
-    SUBDIR += tcl85
     SUBDIR += tcl86
     SUBDIR += tcl87
     SUBDIR += tcl9

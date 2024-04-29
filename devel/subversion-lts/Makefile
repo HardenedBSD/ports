@@ -1,7 +1,7 @@
-PORTREVISION=	1
+PORTREVISION=	3
 PKGNAMESUFFIX=	-lts
 
-MAINTAINER=	lev@FreeBSD.org
+MAINTAINER=	michaelo@apache.org
 COMMENT=	Version control system, long-term-support version
 WWW=		https://subversion.apache.org/
 
@@ -45,6 +45,7 @@ SVNFSTYPE?=	fsfs
 SVNGROUP?=	svn
 SVNUSER?=	svn
 
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS+=	--without-swig-perl \
 			--without-swig-python \
 			--without-swig-ruby \

@@ -1,15 +1,15 @@
---- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-02-23 21:04:38 UTC
+--- chrome/browser/screen_ai/screen_ai_install_state.cc.orig	2024-04-19 13:02:56 UTC
 +++ chrome/browser/screen_ai/screen_ai_install_state.cc
 @@ -23,7 +23,7 @@
- #include "components/services/screen_ai/public/cpp/utilities.h"
- #include "content/public/browser/browser_thread.h"
+ #include "services/screen_ai/public/cpp/utilities.h"
+ #include "ui/accessibility/accessibility_features.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "base/cpu.h"
  #include "base/files/file_util.h"
  #endif
-@@ -39,7 +39,7 @@ const char kMinExpectedVersion[] = "121.1";
+@@ -35,7 +35,7 @@ const char kMinExpectedVersion[] = "123.1";
  bool IsDeviceCompatible() {
    // Check if the CPU has the required instruction set to run the Screen AI
    // library.
@@ -18,12 +18,3 @@
    if (!base::CPU().has_sse41()) {
      return false;
    }
-@@ -284,7 +284,7 @@ void ScreenAIInstallState::ResetForTesting() {
- 
- void ScreenAIInstallState::SetComponentFolderForTesting() {
-   CHECK_IS_TEST();
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // Set the path to the ScreenAI test files. For more details, see the
-   // `screen_ai_test_files` rule in the accessibility_common BUILD file.
-   base::FilePath screenai_library_path =

@@ -1,9 +1,5 @@
-TIMESTAMP = 1708730372
-SHA256 (xserver-xorg-server-21.0.99.1-706-gfe1e2b7b3.tar.bz2) = 0713a995aad59f7c488a7806d50dbc59452b0295e70564dcfeff09b8823f3cb8
-SIZE (xserver-xorg-server-21.0.99.1-706-gfe1e2b7b3.tar.bz2) = 3699703
-SHA256 (cd6c9c1246af.patch) = a50fd4511793a53cacefbca2c8436cf43d36ce21d245aadb5d17e16653580d75
-SIZE (cd6c9c1246af.patch) = 3730
-SHA256 (91b97b031290.patch) = 8e44f24c34d598cc152173d2d59cc6eb7d3ac3427819c732f0fc069de8aaf0c6
-SIZE (91b97b031290.patch) = 18382
-SHA256 (3b0d1a3a2296.patch) = 4e2c4165e9e287ed42cbb9a30eedf1a10f0fcbae0db6a222feb1783f9bb2ed29
-SIZE (3b0d1a3a2296.patch) = 2513
+TIMESTAMP = 1713863671
+SHA256 (xserver-xorg-server-21.0.99.1-1031-g49b8f131f.tar.bz2) = f90754d9905a7940b7d79ac63ef253cd994dc2c295a360e3ad1543c97cbc1c1c
+SIZE (xserver-xorg-server-21.0.99.1-1031-g49b8f131f.tar.bz2) = 3711925
+SHA256 (xorgproto-xorgproto-2024.1.tar.bz2) = 3959b2d17d86dd9d165dc24d26f372ca64f27127cd381739366ba8383a6cd51a
+SIZE (xorgproto-xorgproto-2024.1.tar.bz2) = 775116

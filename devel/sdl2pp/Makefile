@@ -16,13 +16,15 @@ GH_PROJECT=	libSDL2pp
 
 USE_HARDENING=	pie:off
 
-USES=		cmake compiler:c++17-lang sdl
-CMAKE_ARGS=	-DSDL2PP_ENABLE_LIVE_TESTS=OFF
+USES=		cmake:testing compiler:c++17-lang sdl
 USE_SDL=	sdl2 image2 mixer2 ttf2
+CMAKE_TESTING_ON=SDL2PP_WITH_TESTS
+CMAKE_OFF=	SDL2PP_ENABLE_LIVE_TESTS \
+		SDL2PP_WITH_TESTS
 
 PORTDOCS=	*
 
-OPTIONS_DEFINE=	DOCS DOXYGEN
+OPTIONS_DEFINE=		DOCS DOXYGEN
 DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen
 DOXYGEN_ALL_TARGET=	all doxygen
 DOXYGEN_IMPLIES=	DOCS
@@ -33,8 +35,5 @@ post-install-DOCS-on:
 
 post-install-DOXYGEN-on:
 	@cd ${CONFIGURE_WRKSRC} && ${COPYTREE_SHARE} doxygen ${STAGEDIR}${DOCSDIR}/
-
-do-test:
-	@cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${LOCALBASE}/bin/ctest -V
 
 .include <bsd.port.mk>

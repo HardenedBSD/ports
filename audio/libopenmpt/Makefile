@@ -1,7 +1,6 @@
 PORTNAME=	libopenmpt
-DISTVERSION=	0.7.3
+DISTVERSION=	0.7.6
 DISTVERSIONSUFFIX=	+release.autotools
-PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://lib.openmpt.org/files/libopenmpt/src/ \
 		LOCAL/ehaupt
@@ -21,7 +20,6 @@ CPE_VENDOR=	openmpt
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=     ${PREFIX}/share
 
 CONFIGURE_ARGS=	--disable-doxygen-doc \
 		--with-mpg123 \

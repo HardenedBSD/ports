@@ -1,6 +1,7 @@
 PORTNAME=	hyperswitch
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.106.1
+PORTREVISION=	1
 CATEGORIES=	finance
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +10,8 @@ WWW=		https://hyperswitch.io/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation fails: error[E0412]: cannot find type `AtomicU128` in module `core::sync::atomic`
 
 LIB_DEPENDS=	librdkafka.so:net/librdkafka \
 		libzstd.so:archivers/zstd
@@ -125,6 +128,7 @@ CARGO_CRATES=	actix-codec-0.5.1 \
 		cargo-platform-0.1.3 \
 		cargo_metadata-0.14.2 \
 		cargo_metadata-0.15.4 \
+		cargo_metadata-0.18.1 \
 		cast-0.3.0 \
 		cc-1.0.83 \
 		cfb-0.7.3 \

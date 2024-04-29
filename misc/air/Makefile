@@ -1,7 +1,7 @@
 PORTNAME=	air
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc
 PKGNAMESUFFIX=	-ai-chat-client
 
@@ -209,6 +209,8 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		windows_x86_64_msvc-0.48.5 \
 		windows_x86_64_msvc-0.52.0 \
 		winreg-0.50.0
+
+CFLAGS_powerpc64le=	-DNO_WARN_X86_INTRINSICS
 
 OPENSSLINC=	/usr/include
 OPENSSLLIB=	/usr/lib

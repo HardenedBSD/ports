@@ -39,6 +39,7 @@
     SUBDIR += and
     SUBDIR += android-file-transfer
     SUBDIR += android-file-transfer-qt5
+    SUBDIR += android-ota-payload-extractor
     SUBDIR += angrysearch
     SUBDIR += ansible
     SUBDIR += ansible-iocage
@@ -98,6 +99,10 @@
     SUBDIR += bacula13-client-static
     SUBDIR += bacula13-docs
     SUBDIR += bacula13-server
+    SUBDIR += bacula15-client
+    SUBDIR += bacula15-client-static
+    SUBDIR += bacula15-docs
+    SUBDIR += bacula15-server
     SUBDIR += bacula9-client
     SUBDIR += bacula9-client-static
     SUBDIR += bacula9-docs
@@ -193,11 +198,9 @@
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine-masterfiles-lts
-    SUBDIR += cfengine-masterfiles320
     SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine-masterfiles322
     SUBDIR += cfengine-masterfiles323
-    SUBDIR += cfengine320
     SUBDIR += cfengine321
     SUBDIR += cfengine322
     SUBDIR += cfengine323
@@ -217,6 +220,7 @@
     SUBDIR += clone
     SUBDIR += clonehdd
     SUBDIR += clonos-ws
+    SUBDIR += cloud-nuke
     SUBDIR += cloudabi-utils
     SUBDIR += clsync
     SUBDIR += cluster-glue
@@ -298,6 +302,7 @@
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
+    SUBDIR += diffoci
     SUBDIR += digdag
     SUBDIR += dim
     SUBDIR += dirdiff
@@ -802,7 +807,6 @@
     SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += mstflint
-    SUBDIR += msyslog
     SUBDIR += mtm
     SUBDIR += mtpfs
     SUBDIR += mtxorbd
@@ -1033,6 +1037,7 @@
     SUBDIR += plasma5-polkit-kde-agent-1
     SUBDIR += plasma5-powerdevil
     SUBDIR += plasma5-systemsettings
+    SUBDIR += plasma6-discover
     SUBDIR += plasma6-drkonqi
     SUBDIR += plasma6-kde-cli-tools
     SUBDIR += plasma6-kinfocenter
@@ -1100,6 +1105,7 @@
     SUBDIR += py-concurrent-log-handler
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
+    SUBDIR += py-croniter2
     SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
     SUBDIR += py-director
@@ -1303,7 +1309,6 @@
     SUBDIR += rubygem-tmuxinator
     SUBDIR += rubygem-vagrant-bhyve
     SUBDIR += rubygem-vagrant-mutate
-    SUBDIR += rubygem-vagrant-vbguest
     SUBDIR += rubygem-vagrant_cloud
     SUBDIR += rubygem-vmstat
     SUBDIR += rubygem-win32-file
@@ -1348,6 +1353,7 @@
     SUBDIR += schedutils
     SUBDIR += schilyutils
     SUBDIR += screen
+    SUBDIR += screen-devel
     SUBDIR += screenfetch
     SUBDIR += screenie
     SUBDIR += scterc
@@ -1484,6 +1490,7 @@
     SUBDIR += tuptime
     SUBDIR += turbostat
     SUBDIR += tw_cli
+    SUBDIR += twa-kmod
     SUBDIR += twmn
     SUBDIR += tzdialog
     SUBDIR += u-boot-a13-olinuxino
@@ -1555,7 +1562,6 @@
     SUBDIR += ucspi-tcp
     SUBDIR += ucspi-unix
     SUBDIR += udfclient
-    SUBDIR += uefi-edk2-bhyve-csm
     SUBDIR += ufetch
     SUBDIR += ufs_copy
     SUBDIR += uhidd
@@ -1601,7 +1607,6 @@
     SUBDIR += vmtouch
     SUBDIR += vobcopy
     SUBDIR += volman
-    SUBDIR += vordog
     SUBDIR += vpnc-scripts
     SUBDIR += vttest
     SUBDIR += vzvol
@@ -1678,6 +1683,7 @@
     SUBDIR += zbackup
     SUBDIR += zeitgeist
     SUBDIR += zellij
+    SUBDIR += zelta
     SUBDIR += zeroer
     SUBDIR += zetaback
     SUBDIR += zetaback-devel

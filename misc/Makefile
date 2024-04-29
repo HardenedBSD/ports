@@ -1,6 +1,7 @@
     COMMENT = Miscellaneous utilities
 
     SUBDIR += R-cran-mime
+    SUBDIR += R-cran-optimx
     SUBDIR += R-cran-xfun
     SUBDIR += aclgen
     SUBDIR += actiona
@@ -37,7 +38,6 @@
     SUBDIR += boxes
     SUBDIR += broot
     SUBDIR += bsod
-    SUBDIR += buffer
     SUBDIR += caffe
     SUBDIR += chatgpt-shell-cli
     SUBDIR += cheat
@@ -400,6 +400,7 @@
     SUBDIR += py-SQSnobFit
     SUBDIR += py-SimpleSoapy
     SUBDIR += py-SoapySDR
+    SUBDIR += py-accelerate
     SUBDIR += py-alive-progress
     SUBDIR += py-apache-beam
     SUBDIR += py-ascii-magic
@@ -407,6 +408,7 @@
     SUBDIR += py-boost-histogram
     SUBDIR += py-censys
     SUBDIR += py-cinder
+    SUBDIR += py-codecarbon
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
     SUBDIR += py-crudini
@@ -450,6 +452,7 @@
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
     SUBDIR += py-openai
+    SUBDIR += py-openai-whisper
     SUBDIR += py-openpaperwork-core
     SUBDIR += py-openpaperwork-gtk
     SUBDIR += py-openvdb
@@ -480,13 +483,13 @@
     SUBDIR += py-pytorch
     SUBDIR += py-pytorch-lightning
     SUBDIR += py-pyviz-comms
-    SUBDIR += py-qiskit-machine-learning
     SUBDIR += py-safetensors
     SUBDIR += py-scikit-fusion
     SUBDIR += py-scikit-quant
     SUBDIR += py-serverfiles
     SUBDIR += py-shap2
     SUBDIR += py-shell-gpt
+    SUBDIR += py-sigopt
     SUBDIR += py-soapy_power
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
@@ -498,6 +501,8 @@
     SUBDIR += py-tflite
     SUBDIR += py-tflite-support
     SUBDIR += py-thermocouples_reference
+    SUBDIR += py-timm
+    SUBDIR += py-timm-vis
     SUBDIR += py-toil
     SUBDIR += py-torch-geometric
     SUBDIR += py-torchmetrics
@@ -508,6 +513,7 @@
     SUBDIR += py-vaderSentiment
     SUBDIR += py-wandb
     SUBDIR += py-wurlitzer
+    SUBDIR += py-xformers
     SUBDIR += py-xgboost
     SUBDIR += pyobd
     SUBDIR += pytorch
@@ -535,6 +541,7 @@
     SUBDIR += rsclock
     SUBDIR += rtfm
     SUBDIR += rubygem-dotenv
+    SUBDIR += rubygem-dotenv-rails
     SUBDIR += rubygem-dotenv-rails-rails4
     SUBDIR += rubygem-dotenv-rails-rails5
     SUBDIR += rubygem-dotenv-rails-rails50
@@ -611,7 +618,6 @@
     SUBDIR += unclutter-xfixes
     SUBDIR += unicode-emoji
     SUBDIR += upclient
-    SUBDIR += urbit
     SUBDIR += urh
     SUBDIR += usbids
     SUBDIR += usbrh-libusb
@@ -647,7 +653,6 @@
     SUBDIR += xfce4-appfinder
     SUBDIR += xfce4-weather-plugin
     SUBDIR += xfce4-wm-themes
-    SUBDIR += xgas
     SUBDIR += xgboost
     SUBDIR += xiphos
     SUBDIR += xless

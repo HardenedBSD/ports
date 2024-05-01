@@ -1551,7 +1551,6 @@
     SUBDIR += py-django-csp
     SUBDIR += py-django-debreach
     SUBDIR += py-django-debug-toolbar
-    SUBDIR += py-django-dpaste
     SUBDIR += py-django-extensions
     SUBDIR += py-django-filer
     SUBDIR += py-django-filter

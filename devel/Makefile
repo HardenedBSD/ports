@@ -370,7 +370,6 @@
     SUBDIR += ccls
     SUBDIR += ccrtp
     SUBDIR += cctz
-    SUBDIR += cdash
     SUBDIR += cdecl
     SUBDIR += cdialog
     SUBDIR += cdk
@@ -450,7 +449,6 @@
     SUBDIR += concurrencpp
     SUBDIR += concurrencykit
     SUBDIR += concurrentqueue
-    SUBDIR += configkit
     SUBDIR += cons
     SUBDIR += cons-test
     SUBDIR += containers
@@ -1366,7 +1364,6 @@
     SUBDIR += libpeas
     SUBDIR += libpff
     SUBDIR += libphdi
-    SUBDIR += libphk
     SUBDIR += libphonenumber
     SUBDIR += libplist
     SUBDIR += libpo6
@@ -7453,7 +7450,6 @@
     SUBDIR += rubygem-ruby-statistics
     SUBDIR += rubygem-ruby2_keywords
     SUBDIR += rubygem-ruby2ruby
-    SUBDIR += rubygem-ruby_dep
     SUBDIR += rubygem-ruby_memcheck
     SUBDIR += rubygem-ruby_parser
     SUBDIR += rubygem-rubygems-mirror
@@ -7907,7 +7903,6 @@
     SUBDIR += tkcvs
     SUBDIR += tkp4
     SUBDIR += tl-expected
-    SUBDIR += tla
     SUBDIR += tllist
     SUBDIR += tlsh
     SUBDIR += tlx

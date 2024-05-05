@@ -15,13 +15,9 @@ USES=		gmake
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-PLIST_FILES=	bin/pv share/man/man1/pv.1.gz
-=======
 CONFLICTS=	waon
->>>>>>> internal/freebsd/main
 
 PORTDOCS=	README.md INSTALL NEWS.md TODO.md
 

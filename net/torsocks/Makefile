@@ -9,11 +9,8 @@ WWW=		https://gitlab.torproject.org/tpo/core/torsocks
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/gpl-2.0.txt
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		alias gmake libtool tar:xz
-=======
 USES=		autoreconf alias gmake libtool tar:xz
 USE_LDCONFIG=	${PREFIX}/lib/torsocks
 
@@ -22,7 +19,6 @@ GL_SITE=	https://gitlab.torproject.org/tpo
 GL_ACCOUNT=	core
 GL_TAGNAME=	afe9dea542a8b495dbbbbe5e4b98a33cde06729b
 
->>>>>>> internal/freebsd/main
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 

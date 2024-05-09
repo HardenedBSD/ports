@@ -1,5 +1,5 @@
 PORTNAME=	mprime
-PORTVERSION=	30.19b13
+PORTVERSION=	30.19b14
 CATEGORIES=	math benchmarks net
 MASTER_SITES=	https://www.mersenne.org/download/software/v${PORTVERSION:R}/${PORTVERSION:R}.19/
 DISTNAME=	p95v${PORTVERSION:R}${PORTVERSION:E}.source
@@ -13,6 +13,7 @@ LICENSE_NAME=	EULA
 LICENSE_FILE=	${FILESDIR}/LICENSE
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
+BROKEN_i386=    /gwnum/polymult.a missed in /linux/makebsd
 ONLY_FOR_ARCHS=	amd64 i386
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/circular_buffer.hpp:devel/boost-libs
@@ -21,6 +22,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl					\
 		libgmp.so:math/gmp
 
 USES=		localbase zip
+<<<<<<< HEAD
 PKGMESSAGE=	${WRKSRC}/pkg-message
 
 USE_HARDENING=	pie:off
@@ -28,12 +30,19 @@ USE_HARDENING=	pie:off
 NO_WRKSUBDIR=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PATCH_WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
+=======
+>>>>>>> internal/freebsd/main
 MAKEFILE=	makebsd
 ALL_TARGET=	mprime
 LLD_UNSAFE=	yes
 
 SUB_FILES=	pkg-message wrapper.sh
 
+NO_WRKSUBDIR=	yes
+PATCH_WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+PKGMESSAGE=	${WRKSRC}/pkg-message
 PLIST_FILES+=	bin/mprime bin/mprime-real
 
 .include <bsd.port.pre.mk>
@@ -48,6 +57,7 @@ post-patch:
 	@${REINPLACE_CMD} -e "s|%%LOCALBASE%%|${LOCALBASE}|g" \
 		-e "s|CC = .*||g" \
 		-e "s|CXX = .*||g" \
+		-e "s|-Wl,-M||g" \
 		-e "s|CFLAGS = |CFLAGS += |g" \
 		-e "s|CXXFLAGS = |CXXFLAGS += |g" \
 		${PATCH_WRKSRC}/gwnum/makebsd64 \

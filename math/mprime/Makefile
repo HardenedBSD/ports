@@ -22,16 +22,9 @@ LIB_DEPENDS=	libcurl.so:ftp/curl					\
 		libgmp.so:math/gmp
 
 USES=		localbase zip
-<<<<<<< HEAD
-PKGMESSAGE=	${WRKSRC}/pkg-message
 
 USE_HARDENING=	pie:off
 
-NO_WRKSUBDIR=	yes
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-PATCH_WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
-=======
->>>>>>> internal/freebsd/main
 MAKEFILE=	makebsd
 ALL_TARGET=	mprime
 LLD_UNSAFE=	yes

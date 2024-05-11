@@ -10,16 +10,11 @@ WWW=		https://www.openttd.org/
 
 LICENSE=	GPLv2
 
-<<<<<<< HEAD
 USE_HARDENING=  safestack
 
-LIB_DEPENDS=	libpng.so:graphics/png \
-		liblzo2.so:archivers/lzo2
-=======
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		liblzo2.so:archivers/lzo2 \
 		libpng.so:graphics/png
->>>>>>> internal/freebsd/main
 
 USES=		cmake compiler:c++17-lang cpe pkgconfig tar:xz
 CMAKE_ARGS=	-DCMAKE_INSTALL_BINDIR:PATH=bin \

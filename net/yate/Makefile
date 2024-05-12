@@ -30,17 +30,10 @@ SHEBANG_FILES=	share/scripts/banbrutes.php \
 		share/scripts/route.php share/scripts/tts.sh \
 		share/scripts/voicemail.php
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CONFIGURE_ARGS=	--without-fdsize \
-		--without-libqt4 \
-		--with-zlib=/usr
-PLIST_SUB=	VERSION="${PORTVERSION}"
-=======
 GNU_CONFIGURE=			yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
->>>>>>> internal/freebsd/main
 
 CONFIGURE_ARGS=	--with-zlib=/usr \
 		--without-fdsize \

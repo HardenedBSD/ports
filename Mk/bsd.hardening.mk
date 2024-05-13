@@ -68,7 +68,7 @@ HBSDVERSION!=		${AWK} '/^\#define[[:blank:]]__HardenedBSD_version/ {print $$3}' 
 HBSDVERSION=		0
 .endif
 
-HARDENING_ALL=		cfi pie relro retpoline safestack slh
+HARDENING_ALL=		cfi fortifysource pie relro retpoline safestack slh
 HARDENING_OFF?=		# all features are on by default
 
 USE_HARDENING?=		# implicit auto-defaults may apply
@@ -237,6 +237,43 @@ OPTIONS_GROUP_HARDENING+=SAFESTACK
 OPTIONS_DEFAULT+=	SAFESTACK
 .if ${_USE_HARDENING:Mlock} != ""
 OPTIONS_GROUP_HARDENING+=SAFESTACK
+.endif
+.endif
+
+.endif
+.endif
+
+#########################
+### _FORTIFY_SOURCE support ###
+#########################
+
+.if ${HARDENING_OFF:Mfortifysource} == ""
+.if ${OSVERSION} >= 1500018 && ${ARCH} == "amd64"
+
+fortifysource_ARGS?=	auto
+
+.if ${_USE_HARDENING:Mstatic}
+fortifysource_ARGS+=	off
+.endif
+.if ${_USE_HARDENING:Mkmod}
+fortifysource_ARGS+=	off
+.endif
+
+.if ${fortifysource_ARGS:Mauto}
+USE_HARDENING+=	fortifysource
+.endif
+
+FORTIFYSOURCE_DESC=		Build with _FORTIFY_SOURCE set
+FORTIFYSOURCE_USES=		fortifysource
+
+.if ${_USE_HARDENING:Mlock} == ""
+OPTIONS_GROUP_HARDENING+=FORTIFYSOURCE
+.endif
+
+.if ${USE_HARDENING:Mfortifysource} && ${fortifysource_ARGS:Moff} == ""
+OPTIONS_DEFAULT+=	FORTIFYSOURCE
+.if ${_USE_HARDENING:Mlock} != ""
+OPTIONS_GROUP_HARDENING+=FORTIFYSOURCE
 .endif
 .endif
 

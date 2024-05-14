@@ -18,17 +18,13 @@ USE_QT=		concurrent core declarative gui multimedia network printsupport \
 		buildtools:build qmake:build
 USE_XORG=	ice sm x11 xext xrender xscrnsaver
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CMAKE_ARGS=	-DMANDIR_PREFIX:STRING=share/man
-=======
 CMAKE_ARGS=	-DQT_VERSION_MAJOR=5
 CMAKE_ON=	WANT_CRYPT WANT_IPC WANT_IPV6 WANT_OPENSSL WANT_OSS WANT_STRIP \
 		WANT_TRANSPARENCY
 CMAKE_OFF=	WANT_COEXISTENCE WANT_DEBUG WANT_ENV_FLAGS WANT_ESD \
 		WANT_IGNORE_SIGALARM WANT_MEMORY_CHECKS WANT_MEMORY_PROFILE
->>>>>>> internal/freebsd/main
 
 PLIST_SUB=	FULL_VER="${DISTVERSION}" \
 		VER="${DISTVERSION:R}"

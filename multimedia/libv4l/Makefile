@@ -15,6 +15,8 @@ LICENSE_COMB=	dual
 
 USES=		compiler:c11 tar:bzip2
 
+USE_HARDENING=	fortifysource:off
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	hselasky
 GH_PROJECT=	v4l-utils

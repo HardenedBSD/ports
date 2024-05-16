@@ -476,6 +476,7 @@
     SUBDIR += node18
     SUBDIR += node20
     SUBDIR += node21
+    SUBDIR += node22
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -1966,6 +1967,15 @@
     SUBDIR += rubygem-bluecloth
     SUBDIR += rubygem-bootstrap-sass
     SUBDIR += rubygem-browser
+    SUBDIR += rubygem-bullet_train
+    SUBDIR += rubygem-bullet_train-fields
+    SUBDIR += rubygem-bullet_train-has_uuid
+    SUBDIR += rubygem-bullet_train-roles
+    SUBDIR += rubygem-bullet_train-routes
+    SUBDIR += rubygem-bullet_train-scope_validator
+    SUBDIR += rubygem-bullet_train-super_load_and_authorize_resource
+    SUBDIR += rubygem-bullet_train-themes
+    SUBDIR += rubygem-cable_ready
     SUBDIR += rubygem-cal-heatmap-rails
     SUBDIR += rubygem-carrierwave
     SUBDIR += rubygem-carrierwave1
@@ -1974,6 +1984,7 @@
     SUBDIR += rubygem-chosen-rails
     SUBDIR += rubygem-chromedriver-helper
     SUBDIR += rubygem-circuitbox
+    SUBDIR += rubygem-cloudinary
     SUBDIR += rubygem-cookiejar
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
@@ -2158,6 +2169,7 @@
     SUBDIR += rubygem-passenger
     SUBDIR += rubygem-patron
     SUBDIR += rubygem-platform-api
+    SUBDIR += rubygem-possessive
     SUBDIR += rubygem-propshaft
     SUBDIR += rubygem-propshaft-rails70
     SUBDIR += rubygem-protocol-hpack
@@ -2237,6 +2249,7 @@
     SUBDIR += rubygem-responders-rails60
     SUBDIR += rubygem-responders-rails61
     SUBDIR += rubygem-responders-rails70
+    SUBDIR += rubygem-responders-rails71
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2259,6 +2272,7 @@
     SUBDIR += rubygem-select2-rails
     SUBDIR += rubygem-selenium-webdriver
     SUBDIR += rubygem-semantic-ui-sass
+    SUBDIR += rubygem-showcase-rails
     SUBDIR += rubygem-simple-rss
     SUBDIR += rubygem-sinatra
     SUBDIR += rubygem-sinatra-contrib

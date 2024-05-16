@@ -18,6 +18,8 @@ GH_PROJECT=	epoll-shim
 PLIST_SUB=	SHIM_EVENTFD="${exists(/usr/include/sys/eventfd.h):?@comment :}" \
 	SHIM_TIMERFD="${exists(/usr/include/sys/timerfd.h):?@comment :}"
 
+USE_HARDENING=	fortifysource:off
+
 do-test:
 	# Exclude certain tests in resource restricted environments
 	@(if [ `ulimit -n` -lt 20100 ]; then \

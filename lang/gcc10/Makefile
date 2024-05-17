@@ -12,7 +12,7 @@ WWW=		https://gcc.gnu.org
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
-USE_HARDENING=  pie:off relro:off retpoline:off
+USE_HARDENING=  pie:off relro:off retpoline:off fortifysource:off
 
 BINARY_ALIAS= objdump=/usr/local/bin/objdump
 

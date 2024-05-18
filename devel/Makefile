@@ -328,6 +328,7 @@
     SUBDIR += bsdcflow
     SUBDIR += bsddialog
     SUBDIR += bsdowl
+    SUBDIR += buf
     SUBDIR += bugzilla44
     SUBDIR += bugzilla50
     SUBDIR += build
@@ -963,6 +964,7 @@
     SUBDIR += hs-threadscope
     SUBDIR += htable
     SUBDIR += hub
+    SUBDIR += hvm
     SUBDIR += hwloc
     SUBDIR += hwloc2
     SUBDIR += hyperscan
@@ -1526,6 +1528,7 @@
     SUBDIR += listserialc
     SUBDIR += liteide
     SUBDIR += llbuild
+    SUBDIR += lldb-mi
     SUBDIR += llnextgen
     SUBDIR += llvm
     SUBDIR += llvm-cheri

@@ -349,11 +349,14 @@
     SUBDIR += capslock
     SUBDIR += capstone
     SUBDIR += capstone4
+    SUBDIR += cargo-about
     SUBDIR += cargo-bloat
     SUBDIR += cargo-c
     SUBDIR += cargo-depgraph
     SUBDIR += cargo-generate
+    SUBDIR += cargo-hack
     SUBDIR += cargo-leptos
+    SUBDIR += cargo-llvm-cov
     SUBDIR += cargo-mutants
     SUBDIR += cask
     SUBDIR += catch
@@ -4314,6 +4317,7 @@
     SUBDIR += py-aspy.yaml
     SUBDIR += py-assertpy
     SUBDIR += py-ast-decompiler
+    SUBDIR += py-ast2json
     SUBDIR += py-asteval
     SUBDIR += py-astor
     SUBDIR += py-astroid

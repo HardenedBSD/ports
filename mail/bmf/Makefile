@@ -12,15 +12,9 @@ WWW=		https://sourceforge.net/projects/bmf/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-HAS_CONFIGURE=	yes
-BINARY_ALIAS=	gcc=${CC} g++=${CXX}
-CONFIGURE_ENV=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
-=======
 USES=		mysql
->>>>>>> internal/freebsd/main
 
 HAS_CONFIGURE=	yes
 

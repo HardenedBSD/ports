@@ -17,13 +17,9 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libpcre.so:devel/pcre \
 		libpuzzle.so:graphics/libpuzzle
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		autoreconf bdb libarchive pkgconfig tar:bzip2
-=======
 USES=		autoreconf libarchive pkgconfig tar:bzip2
->>>>>>> internal/freebsd/main
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--with-archive=${LOCALBASE}

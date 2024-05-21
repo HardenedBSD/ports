@@ -1585,6 +1585,7 @@
     SUBDIR += userneu-devel
     SUBDIR += usrinfo
     SUBDIR += utcount
+    SUBDIR += uutils-coreutils
     SUBDIR += vagrant
     SUBDIR += vbetool
     SUBDIR += vchanger

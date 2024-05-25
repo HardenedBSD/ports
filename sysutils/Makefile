@@ -1621,6 +1621,7 @@
     SUBDIR += whowatch
     SUBDIR += wiimms
     SUBDIR += wimlib
+    SUBDIR += wiper
     SUBDIR += wmapmload
     SUBDIR += wmbluecpu
     SUBDIR += wmbsdbatt

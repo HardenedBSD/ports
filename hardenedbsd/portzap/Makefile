@@ -1,5 +1,5 @@
 PORTNAME=           portzap
-PORTVERSION=        0.10.1
+PORTVERSION=        0.12.0
 DISTVERSIONPREFIX=  v
 CATEGORIES=         hardenedbsd
 
@@ -15,7 +15,7 @@ USE_GITLAB=     yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=     0x1eef
 GL_PROJECT=	portzap
-GL_COMMIT=	bcc78a8a8df344f9c76a7e289a762497f72d7ef0
+GL_COMMIT=	48d182813cc3342c9ecc265ea756c4126a793427
 
 BATCH=          yes
 NO_ARCH=        yes

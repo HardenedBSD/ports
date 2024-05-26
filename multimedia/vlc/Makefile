@@ -86,34 +86,9 @@ OPTIONS_EXCLUDE=	LIBPLACEBO # https://code.videolan.org/videolan/vlc/-/commit/8e
 OPTIONS_EXCLUDE+=	VAAPI # Not compatible until VLC 4
 OPTIONS_SUB=		yes
 
-<<<<<<< HEAD
 # HBSD: Add some nice defaults that makes life easier
 OPTIONS_DEFAULT+=	MTP SMB
 
-AOM_DESC=	AV1 video encoding/decoding via libaom
-ASS_DESC=	ASS/SSA subtitle rendering
-CHROMECAST_DESC=Streaming to Chromecast devices
-DAV1D_DESC=	AV1 video decoding via libdav1d
-DVDREAD_DESC=	DVD Playback support
-DVDNAV_DESC=	DVD menu navigation
-FLUID_DESC=	Fluidsynth MIDI support
-FREERDP_DESC=	RDP support
-GME_DESC=	Game Music Emu (libgme) support
-GOOM_DESC=	Goom visualisation plugin
-HARFBUZZ_DESC=	OpenType text shaping engine
-LIBPLACEBO_DESC=HDR tonemapping support through libplacebo
-LIBSSH2_DESC=	SCP/SFTP support via libssh2
-MFX_DESC=	Intel MediaSDK (aka Quick Sync Video)
-OGGSPOTS_DESC=	Experimental OggSpots codec
-REALRTSP_DESC=	Real RTSP access module
-RUNROOT_DESC=	Enable running as root
-SIDPLAY_DESC=	C64 sid demux support
-SKINS_DESC=	Build skins2 interface module (implies QT5)
-STREAM_DESC=	stream output
-TAGLIB_DESC=	ID3 tag and Ogg comment support
-VCD_DESC=	Audio/Video CD support
-ZVBI_DESC=	VBI decoding support
-=======
 AOM_DESC=		AV1 video encoding/decoding via libaom
 ARIBSUB_DESC=		ARIB text decoding via libaribb24
 ASS_DESC=		ASS/SSA subtitle rendering
@@ -139,7 +114,6 @@ STREAM_DESC=		stream output
 TAGLIB_DESC=		ID3 tag and Ogg comment support
 VCD_DESC=		Audio/Video CD support
 ZVBI_DESC=		VBI decoding support
->>>>>>> internal/freebsd/main
 
 A52_LIB_DEPENDS=	liba52.so:audio/liba52
 A52_CONFIGURE_ON=	--with-a52=${LOCALBASE}

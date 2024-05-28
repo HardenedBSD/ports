@@ -1743,9 +1743,9 @@
     SUBDIR += ocaml-pcre
     SUBDIR += ocaml-pcre2
     SUBDIR += ocaml-pomap
+    SUBDIR += ocaml-ppx-tools
     SUBDIR += ocaml-ppx_derivers
     SUBDIR += ocaml-ppx_sexp_conv
-    SUBDIR += ocaml-ppx-tools
     SUBDIR += ocaml-ppxlib
     SUBDIR += ocaml-re
     SUBDIR += ocaml-react
@@ -1755,8 +1755,8 @@
     SUBDIR += ocaml-sdl
     SUBDIR += ocaml-sem
     SUBDIR += ocaml-seq
-    SUBDIR += ocaml-sexplib0
     SUBDIR += ocaml-sexplib
+    SUBDIR += ocaml-sexplib0
     SUBDIR += ocaml-stdio
     SUBDIR += ocaml-topkg
     SUBDIR += ocaml-type_conv
@@ -5796,6 +5796,7 @@
     SUBDIR += py-tartiflette
     SUBDIR += py-tartiflette-aiohttp
     SUBDIR += py-taskflow
+    SUBDIR += py-taskgroup
     SUBDIR += py-tasklib
     SUBDIR += py-tblib
     SUBDIR += py-tdworkflow
@@ -6480,6 +6481,7 @@
     SUBDIR += rubygem-aws-sdk-lookoutmetrics
     SUBDIR += rubygem-aws-sdk-machinelearning
     SUBDIR += rubygem-aws-sdk-macie2
+    SUBDIR += rubygem-aws-sdk-mailmanager
     SUBDIR += rubygem-aws-sdk-mainframemodernization
     SUBDIR += rubygem-aws-sdk-managedblockchain
     SUBDIR += rubygem-aws-sdk-managedblockchainquery

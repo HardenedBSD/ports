@@ -52,12 +52,8 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION} \
 
 CONFLICTS_INSTALL=	grpc[0-9][0-9][0-9]
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-post-patch:
-=======
->>>>>>> origin/freebsd/main
 # Clean up bundled libraries
 .if !defined(MAINTAINER_MODE)
 EXTRACT_AFTER_ARGS=	--exclude ${DISTNAME}/third_party/abseil-cpp/ \

@@ -34,6 +34,12 @@
     SUBDIR += ethash
     SUBDIR += go-ethereum
     SUBDIR += gtk-gnutella
+    SUBDIR += heartwood
+    SUBDIR += heartwood-cli
+    SUBDIR += heartwood-httpd
+    SUBDIR += heartwood-node
+    SUBDIR += heartwood-remote-helper
+    SUBDIR += heartwood-tools
     SUBDIR += intermodal
     SUBDIR += jackett
     SUBDIR += jigdo

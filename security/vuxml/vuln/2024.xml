@@ -1,3 +1,70 @@
+  <vuln vid="320a19f7-1ddd-11ef-a2ae-8c164567ca3c">
+    <topic>nginx-devel -- Multiple Vulnerabilities in HTTP/3</topic>
+    <affects>
+      <package>
+	<name>nginx-devel</name>
+	<range><ge>1.25.0</ge><lt>1.27.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The nginx development team reports:</p>
+	<blockquote cite="http://nginx.org/en/security_advisories.html">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Stack overflow and use-after-free in HTTP/3</li>
+	    <li>Buffer overwrite in HTTP/3</li>
+	    <li>Memory disclosure in HTTP/3</li>
+	    <li>NULL pointer dereference in HTTP/3</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-31079</cvename>
+      <cvename>CVE-2024-32760</cvename>
+      <cvename>CVE-2024-34161</cvename>
+      <cvename>CVE-2024-35200</cvename>
+    </references>
+    <dates>
+      <discovery>2024-05-29</discovery>
+      <entry>2024-05-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6926d038-1db4-11ef-9f97-a8a1599412c6">
+    <topic>chromium -- security fix</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>125.0.6422.112</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>125.0.6422.112</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_23.html">
+	 <p>This update includes 1 security fix:</p>
+	 <ul>
+	    <li>[341663589] High CVE-2024-5274: Type Confusion in V8. Reported by Clément Lecigne of Google's Threat Analysis Group and Brendon Tiszka of Chrome Security on 2024-05-20</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-5274</cvename>
+      <url>https://chromereleases.googleblog.com/2024/05/stable-channel-update-for-desktop_23.html</url>
+    </references>
+    <dates>
+      <discovery>2024-05-23</discovery>
+      <entry>2024-05-29</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="73a697d7-1d0f-11ef-a490-84a93843eb75">
     <topic>OpenSSL -- Use after free vulnerability</topic>
     <affects>

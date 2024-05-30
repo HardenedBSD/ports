@@ -1,5 +1,6 @@
 PORTNAME=	keepassxc
 DISTVERSION=	2.7.6
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/keepassxreboot/keepassxc/releases/download/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src
@@ -25,6 +26,10 @@ USE_HARDENING=	safestack
 PAGEEXEC_DISABLE=	bin/keepassxc
 MPROTECT_DISABLE=	bin/keepassxc
 
+FLAVORS=	default lite
+FLAVOR?=	${FLAVORS:[1]}
+lite_PKGNAMESUFFIX=	-lite
+
 USES=		cmake compiler:c++17-lang desktop-file-utils pkgconfig qt:5 \
 		readline shared-mime-info tar:xz xorg
 USE_QT=		concurrent core dbus gui network svg widgets buildtools:build \
@@ -38,6 +43,10 @@ CONFLICTS_INSTALL=	keepassx-0.* keepassx2 keepassx
 
 OPTIONS_DEFINE=		AUTOTYPE BROWSER FDOSECRETS KEESHARE NETWORKING SSHAGENT YUBIKEY TEST
 OPTIONS_DEFAULT=	AUTOTYPE BROWSER FDOSECRETS KEESHARE NETWORKING SSHAGENT YUBIKEY
+.if ${FLAVOR:U} == lite
+OPTIONS_EXCLUDE:=	AUTOTYPE BROWSER FDOSECRETS KEESHARE NETWORKING SSHAGENT
+.else
+.endif
 OPTIONS_SUB=		yes
 
 AUTOTYPE_CMAKE_BOOL=	WITH_XC_AUTOTYPE

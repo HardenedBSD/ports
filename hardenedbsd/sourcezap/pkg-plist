@@ -1,0 +1,17 @@
+bin/setup-sourcezap
+bin/sourcezap
+libexec/sourcezap/commands/sourcezap-checkout
+libexec/sourcezap/commands/sourcezap-clone
+libexec/sourcezap/commands/sourcezap-install
+libexec/sourcezap/commands/sourcezap-pull
+libexec/sourcezap/commands/sourcezap-rm
+libexec/sourcezap/utils/git-changed-files
+libexec/sourcezap/utils/git-removed-files
+libexec/sourcezap/utils/git-rev
+libexec/sourcezap/utils/gitexec
+libexec/sourcezap/utils/issourcezap-member
+libexec/sourcezap/utils/printerr
+libexec/sourcezap/utils/printok
+man/man8/sourcezap.8
+%%DATADIR%%/VERSION
+%%DATADIR%%/doas.conf

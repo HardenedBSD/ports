@@ -25,14 +25,10 @@ GH_ACCOUNT=	pelzlpj
 USE_OCAML=	yes
 #XXX DUNE_DOCSDIR=	${DOCSDIR}
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-PLIST_FILES=	bin/orpie bin/orpie-curses-keys etc/orpierc \
-=======
 PORTDOCS=	LICENSE.md README.adoc manual.html manual.pdf
 PLIST_FILES=	bin/orpie bin/orpie-curses-keys  \
->>>>>>> internal/freebsd/main
 		share/man/man1/orpie.1.gz share/man/man1/orpie-curses-keys.1.gz \
 		share/man/man5/orpierc.5.gz
 # upstream changed to etc/orpie/orpierc, we stick to the old name (POLA)

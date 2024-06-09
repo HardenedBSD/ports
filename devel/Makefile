@@ -361,6 +361,7 @@
     SUBDIR += cargo-leptos
     SUBDIR += cargo-llvm-cov
     SUBDIR += cargo-mutants
+    SUBDIR += cargo-spellcheck
     SUBDIR += cargo-tarpaulin
     SUBDIR += cargo-udeps
     SUBDIR += cask
@@ -7055,7 +7056,6 @@
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
     SUBDIR += rubygem-gettext_i18n_rails
-    SUBDIR += rubygem-gettext_i18n_rails111
     SUBDIR += rubygem-gettext_i18n_rails_js
     SUBDIR += rubygem-gettext_i18n_rails_js-rails5
     SUBDIR += rubygem-gettext_i18n_rails_js-rails50

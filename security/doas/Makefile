@@ -20,11 +20,9 @@ GH_ACCOUNT=	slicer69
 
 MAKE_ENV+=	TARGETPATH=-DGLOBAL_PATH='\"${_GLOBAL_PATH}\"'
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
-=======
+
 CONFLICTS=	opendoas
->>>>>>> internal/freebsd/main
 
 BINMODE=	4755
 

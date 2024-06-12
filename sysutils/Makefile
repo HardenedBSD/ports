@@ -1327,6 +1327,7 @@
     SUBDIR += rust-coreutils
     SUBDIR += rust-findutils
     SUBDIR += rw
+    SUBDIR += rw-tui
     SUBDIR += s-tui
     SUBDIR += s6
     SUBDIR += s6-rc

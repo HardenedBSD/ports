@@ -982,6 +982,7 @@
     SUBDIR += hwloc2
     SUBDIR += hyperscan
     SUBDIR += hyprlang
+    SUBDIR += hyprutils
     SUBDIR += hyprwayland-scanner
     SUBDIR += ice
     SUBDIR += ice37
@@ -4280,7 +4281,6 @@
     SUBDIR += py-PyUtilib
     SUBDIR += py-QtPy
     SUBDIR += py-RPyC
-    SUBDIR += py-ZopeUndo
     SUBDIR += py-about-time
     SUBDIR += py-absl
     SUBDIR += py-absl-py

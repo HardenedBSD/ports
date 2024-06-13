@@ -682,6 +682,7 @@
     SUBDIR += libptytty
     SUBDIR += libsunacl
     SUBDIR += libsysstat
+    SUBDIR += libsysstat-qt6
     SUBDIR += libtpms
     SUBDIR += libtree
     SUBDIR += libudisks
@@ -729,6 +730,7 @@
     SUBDIR += lxqt-config
     SUBDIR += lxqt-policykit
     SUBDIR += lxqt-powermanagement
+    SUBDIR += lxqt-qt6plugin
     SUBDIR += lxqt-qtplugin
     SUBDIR += lxsplit
     SUBDIR += lxtask

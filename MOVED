@@ -3307,3 +3307,12 @@ devel/py-ZopeUndo||2024-06-13|No consumers in ports
 multimedia/audacious-qt6|multimedia/audacious|2024-06-13|qt6 flavor is now the default flavor, following upstream change
 multimedia/audacious-plugins-qt6|multimedia/audacious-plugins|2024-06-13|qt6 flavor is now the default flavor, following upstream change
 lang/zig-devel||2024-06-13|Older than lang/zig and no consumers in ports
+www/ctemplate||2024-06-15|Has expired: Abandonware and obsolete, last release in 2008 and never gained any traction
+graphics/electricsheep||2024-06-15|Has expired: Broken for more than 6 months and fails to compile bumping it to latest commit
+www/apt-cacher-ng||2024-06-15|Has expired: Outdated and unsupported version, current version was released in 2020 and upstream is still active
+audio/taglookup||2024-06-15|Has expired: Obsolete, depends on legacy service that is defunct once again
+www/vieb||2024-06-15|Has expired: Outdated and depends on expired (and blacklisted) devel/electron25
+textproc/obsidian||2024-06-15|Has expired: Outdated and depends on expired (and blacklisted) devel/electron25
+devel/electron25||2024-06-15|Has expired: EOLed upstream, switch to newer version
+devel/py-dj42-django-rq|devel/py-django-rq|2024-06-15|Has expired: Obsolete, please use devel/py-django-rq instead
+www/py-dj42-django-taggit|www/py-django-taggit|2024-06-15|Has expired: Obsolete, please use www/py-django-taggit instead

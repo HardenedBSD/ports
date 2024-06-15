@@ -56,7 +56,6 @@
     SUBDIR += anyremote2html
     SUBDIR += apache-mode.el
     SUBDIR += apache24
-    SUBDIR += apt-cacher-ng
     SUBDIR += aquatone
     SUBDIR += archiva
     SUBDIR += aria2
@@ -123,7 +122,6 @@
     SUBDIR += css-mode.el
     SUBDIR += csso
     SUBDIR += csstidy
-    SUBDIR += ctemplate
     SUBDIR += cutelyst
     SUBDIR += darkhttpd
     SUBDIR += dasherr
@@ -1504,7 +1502,6 @@
     SUBDIR += py-dj42-django-redis
     SUBDIR += py-dj42-django-rich
     SUBDIR += py-dj42-django-tables2
-    SUBDIR += py-dj42-django-taggit
     SUBDIR += py-dj42-django-timezone-field
     SUBDIR += py-dj42-django-treebeard
     SUBDIR += py-dj42-djangoql
@@ -2483,7 +2480,6 @@
     SUBDIR += vdradmin-am
     SUBDIR += vertx
     SUBDIR += vger
-    SUBDIR += vieb
     SUBDIR += vigil
     SUBDIR += vimb
     SUBDIR += visitors

@@ -623,7 +623,6 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron25
     SUBDIR += electron27
     SUBDIR += electron28
     SUBDIR += electron29
@@ -4691,7 +4690,6 @@
     SUBDIR += py-diskcache
     SUBDIR += py-distlib
     SUBDIR += py-distributed
-    SUBDIR += py-dj42-django-rq
     SUBDIR += py-django-rq
     SUBDIR += py-dm-tree
     SUBDIR += py-docformatter

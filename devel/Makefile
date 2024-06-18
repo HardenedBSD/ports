@@ -270,6 +270,7 @@
     SUBDIR += aws-c-sdkutils
     SUBDIR += aws-checksums
     SUBDIR += aws-crt-cpp
+    SUBDIR += aws-crt-ffi
     SUBDIR += aws-sdk-cpp
     SUBDIR += aws-sdk-php
     SUBDIR += axmldec
@@ -6280,11 +6281,13 @@
     SUBDIR += rubygem-aws-sdk-applicationcostprofiler
     SUBDIR += rubygem-aws-sdk-applicationdiscoveryservice
     SUBDIR += rubygem-aws-sdk-applicationinsights
+    SUBDIR += rubygem-aws-sdk-applicationsignals
     SUBDIR += rubygem-aws-sdk-appmesh
     SUBDIR += rubygem-aws-sdk-appregistry
     SUBDIR += rubygem-aws-sdk-apprunner
     SUBDIR += rubygem-aws-sdk-appstream
     SUBDIR += rubygem-aws-sdk-appsync
+    SUBDIR += rubygem-aws-sdk-apptest
     SUBDIR += rubygem-aws-sdk-arczonalshift
     SUBDIR += rubygem-aws-sdk-artifact
     SUBDIR += rubygem-aws-sdk-athena
@@ -6539,6 +6542,7 @@
     SUBDIR += rubygem-aws-sdk-paymentcryptography
     SUBDIR += rubygem-aws-sdk-paymentcryptographydata
     SUBDIR += rubygem-aws-sdk-pcaconnectorad
+    SUBDIR += rubygem-aws-sdk-pcaconnectorscep
     SUBDIR += rubygem-aws-sdk-personalize
     SUBDIR += rubygem-aws-sdk-personalizeevents
     SUBDIR += rubygem-aws-sdk-personalizeruntime
@@ -6898,6 +6902,7 @@
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-messages22
     SUBDIR += rubygem-cucumber-messages23
+    SUBDIR += rubygem-cucumber-messages24
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
     SUBDIR += rubygem-cucumber-wire
@@ -6907,12 +6912,12 @@
     SUBDIR += rubygem-daemons
     SUBDIR += rubygem-danger
     SUBDIR += rubygem-danger-gitlab
+    SUBDIR += rubygem-datadog
     SUBDIR += rubygem-datadog-ci
     SUBDIR += rubygem-date
     SUBDIR += rubygem-ddmemoize
     SUBDIR += rubygem-ddmetrics
     SUBDIR += rubygem-ddplugin
-    SUBDIR += rubygem-ddtrace
     SUBDIR += rubygem-deb_version
     SUBDIR += rubygem-debase-ruby_core_source
     SUBDIR += rubygem-debug

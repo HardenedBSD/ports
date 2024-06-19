@@ -2,6 +2,6 @@ etc/rc.d/secadm
 include/secadm.h
 lib/libsecadm.so
 lib/libsecadm.so.1
-man/man5/secadm.rules.5.gz
-man/man8/secadm.8.gz
+share/man/man5/secadm.rules.5.gz
+share/man/man8/secadm.8.gz
 sbin/secadm

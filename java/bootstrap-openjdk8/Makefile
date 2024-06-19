@@ -33,8 +33,8 @@ PLIST_SUB=	JDK_ARCH=${JDK_ARCH} JDK_ROOT=${JDK_ROOT}
 USES=		tar:xz
 WRKSRC=		${WRKDIR}/${JDK_ROOT}
 
-MPROTECT_DISABLE=	bootstrap-openjdk11/bin/java
-PAGEEXEC_DISABLE=	bootstrap-openjdk11/bin/java
+MPROTECT_DISABLE=	bootstrap-openjdk8/bin/java
+PAGEEXEC_DISABLE=	bootstrap-openjdk8/bin/java
 
 INSTALLDIR=	${STAGEDIR}${PREFIX}/${JDK_ROOT}
 

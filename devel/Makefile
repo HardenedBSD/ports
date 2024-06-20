@@ -5458,6 +5458,7 @@
     SUBDIR += py-pyparsing2
     SUBDIR += py-pyperclip
     SUBDIR += py-pyperf
+    SUBDIR += py-pyperscan
     SUBDIR += py-pyplusplus
     SUBDIR += py-pyproject-api
     SUBDIR += py-pyproject-flake8
@@ -7784,6 +7785,7 @@
     SUBDIR += rubygem-will_paginate
     SUBDIR += rubygem-windows_error
     SUBDIR += rubygem-wisper
+    SUBDIR += rubygem-wisper2
     SUBDIR += rubygem-with_advisory_lock61
     SUBDIR += rubygem-with_env
     SUBDIR += rubygem-wmi-lite

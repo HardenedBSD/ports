@@ -914,6 +914,7 @@
     SUBDIR += py-bottleneck
     SUBDIR += py-brial
     SUBDIR += py-chaospy
+    SUBDIR += py-clarabel
     SUBDIR += py-claripy
     SUBDIR += py-clingcon
     SUBDIR += py-clingo
@@ -929,6 +930,7 @@
     SUBDIR += py-cypari2
     SUBDIR += py-deap
     SUBDIR += py-dgl
+    SUBDIR += py-diffcp
     SUBDIR += py-dionysus
     SUBDIR += py-disjoint-set
     SUBDIR += py-docplex

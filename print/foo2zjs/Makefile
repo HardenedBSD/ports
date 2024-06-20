@@ -29,6 +29,8 @@ USE_HARDENING=	safestack
 
 MAKE_JOBS_UNSAFE=	yes
 
+CONFLICTS_INSTALL=	mscompress # bin/msexpand
+
 SUB_FILES=	${_DEVDCONF_FILE} pkg-message
 
 OPTIONS_DEFINE=	DOCS

@@ -1,20 +1,17 @@
 PORTNAME=	gcc
-PORTVERSION=	13.3.1.s20240614
+PORTVERSION=	14.1.0
 CATEGORIES=	lang
-MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
-PKGNAMESUFFIX=	${SUFFIX}-devel
-DISTNAME=	gcc-${DIST_VERSION}
+MASTER_SITES=	GCC
+PKGNAMESUFFIX=	${SUFFIX}
 
 MAINTAINER=	salvadore@FreeBSD.org
-COMMENT=	GNU Compiler Collection 13
+COMMENT=	GNU Compiler Collection 14
 WWW=		https://gcc.gnu.org
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
-USE_HARDENING=  pie:off relro:off retpoline:off
-
-ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le riscv64
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
@@ -29,19 +26,14 @@ USES=		compiler:c++11-lang cpe gmake iconv libtool makeinfo perl5 tar:xz
 USE_BINUTILS=	yes
 USE_PERL5=	build
 
-CONFLICTS=	gcc13
+CONFLICTS=	gcc14-devel
 
 CPE_VENDOR=	gnu
 CPE_VERSION=	${GCC_VERSION}
 
-# DIST_VERSION relates to downloads, GCC_VERSION and SUFFIX to names
-# of executables and directories once installed.  A PORTVERSION of
-# Y.2.1.s20140817 results in values of Y-20140817, Y.2.1, and Y
-# for these three.
-DIST_VERSION=	${PORTVERSION:C/([0-9]+).*\.s([0-9]+)/\1-\2/}
-GCC_VERSION=	${PORTVERSION:C/(.+)\.s[0-9]{8}/\1/}
+GCC_VERSION=	${PORTVERSION}
 SUFFIX=		${PORTVERSION:C/([0-9]+).*/\1/}
-CFLAGS:=	${CFLAGS:N-mretpoline}
+CFLAGS:=	${CFLAGS:N-mretpoline} -D__USE_ISOC11
 CXXFLAGS:=	${CXXFLAGS:N-mretpoline}
 
 OPTIONS_DEFINE=		GRAPHITE
@@ -81,7 +73,7 @@ CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 CONFIGURE_ARGS+=	--with-abi=elfv2
 .endif
 
-LANGUAGES:=	c,c++,objc,fortran,jit
+LANGUAGES:=	c,c++,objc,fortran
 TARGLIB=	${PREFIX}/lib/gcc${SUFFIX}
 TARGLIB32=	${PREFIX}/lib32	# The version information is added later
 LIBEXEC=	${PREFIX}/libexec/gcc${SUFFIX}
@@ -132,12 +124,9 @@ INFO=		gcc${SUFFIX}/cpp \
 		gcc${SUFFIX}/gfortran \
 		gcc${SUFFIX}/libgccjit \
 		gcc${SUFFIX}/libgomp
-.if ${ARCH} == amd64 || ${ARCH} == i386
-INFO+=		gcc${SUFFIX}/libquadmath
-.endif
-.if ${ARCH} == amd64 || ${ARCH} == i386 || ${ARCH} == aarch64
-INFO+=		gcc${SUFFIX}/libitm
-.endif
+# Release tarballs (as opposed to snapshots) always carry this.
+INFO+=		gcc${SUFFIX}/libquadmath \
+		gcc${SUFFIX}/libitm
 SUB_FILES=	pkg-message
 SUB_LIST+=	TARGLIB=${TARGLIB}
 

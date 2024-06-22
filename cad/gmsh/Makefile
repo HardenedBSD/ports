@@ -36,14 +36,10 @@ USE_GL=		gl glu
 USE_XORG=	ice sm x11 xcursor xext xinerama xfixes xft xrender
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 CFLAGS+=	-fPIC
 CXXFLAGS+=	-fPIC
 
-CMAKE_ARGS=	-DCMAKE_SKIP_RPATH:BOOL=YES
-=======
 CMAKE_ON=	ENABLE_BUILD_DYNAMIC ENABLE_BUILD_SHARED ENABLE_SYSTEM_CONTRIB
->>>>>>> internal/freebsd/main
 
 CXXFLAGS_powerpc64=	-mvsx
 LDFLAGS+=	-lexecinfo

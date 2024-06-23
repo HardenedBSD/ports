@@ -10,5 +10,6 @@ SUBDIR += testmprotect
 SUBDIR += testpie
 SUBDIR += portzap
 SUBDIR += sourcezap
+SUBDIR += rubygem-bsdcontrol-rb
 
 .include <bsd.port.subdir.mk>

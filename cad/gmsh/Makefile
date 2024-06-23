@@ -1,5 +1,6 @@
 PORTNAME=	gmsh
 DISTVERSION=	4.13.1
+PORTREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://gmsh.info/src/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
@@ -13,10 +14,12 @@ LICENSE=	AGPLv3+ APACHE20 GPLv3+ GPLv2+ LGPL21
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BUILD_DEPENDS=	getdp:science/getdp
+BUILD_DEPENDS=	getdp:science/getdp \
+		gmm++>0:math/gmm++
 LIB_DEPENDS=	libfltk.so:x11-toolkits/fltk \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libgmp.so:math/gmp \
+		libmmg.so:science/mmg \
 		libmetis.so:math/metis \
 		libhdf5.so:science/hdf5 \
 		libpng.so:graphics/png \
@@ -24,13 +27,19 @@ LIB_DEPENDS=	libfltk.so:x11-toolkits/fltk \
 		libmathex.so:math/mathex \
 		libalglib.so:math/alglib \
 		libvoro++.so:science/voro++ \
-		libmesquite.so:math/mesquite \
 		libfreetype.so:print/freetype2 \
-		libtinyxml2.so:textproc/tinyxml2
+		libtinyxml2.so:textproc/tinyxml2 \
+		${LIB_DEPENDS_${ARCH}}
 RUN_DEPENDS=	getdp:science/getdp
 
 USES=		bison compiler:c++14-lang cmake:testing eigen:3 fortran gl	\
 		jpeg localbase tar:tgz xorg
+
+# Only for 64 bits ARCHs
+LIB_DEPENDS_aarch64=	libmesquite.so:math/mesquite
+LIB_DEPENDS_amd64=	libmesquite.so:math/mesquite
+LIB_DEPENDS_powerpc64=	libmesquite.so:math/mesquite
+LIB_DEPENDS_powerpc64le=libmesquite.so:math/mesquite
 
 USE_GL=		gl glu
 USE_XORG=	ice sm x11 xcursor xext xinerama xfixes xft xrender

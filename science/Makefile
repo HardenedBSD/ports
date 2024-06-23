@@ -166,6 +166,7 @@
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
+    SUBDIR += linearelasticity
     SUBDIR += linux-zotero
     SUBDIR += luscus
     SUBDIR += m-aneos
@@ -186,6 +187,7 @@
     SUBDIR += metaphysicl
     SUBDIR += minc2
     SUBDIR += mmdb2
+    SUBDIR += mmg
     SUBDIR += mmtf-cpp
     SUBDIR += mol2ps
     SUBDIR += molgif

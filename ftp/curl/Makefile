@@ -147,6 +147,9 @@ WOLFSSL_LIB_DEPENDS=	libwolfssl.so:security/wolfssl
 ZSTD_CONFIGURE_WITH=	zstd
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 
+SPONSORSHIP_PLATFORMS=	GITHUB:upstream
+GITHUB_UPSTREAM_SPONSOR_HANDLE=	curl
+
 .include <bsd.port.pre.mk>
 
 .if ((!${PORT_OPTIONS:MGNUTLS} && !${PORT_OPTIONS:MOPENSSL}) || (${PORT_OPTIONS:MOPENSSL} && ${SSL_DEFAULT:Mlibressl*})) && ${PORT_OPTIONS:MTLS_SRP}

@@ -1,5 +1,5 @@
 PORTNAME=	heartwood-httpd
-DISTVERSION=	0.12.0
+DISTVERSION=	0.12.1
 PORTEPOCH=	1.0.0
 CATEGORIES=	net-p2p devel
 
@@ -13,14 +13,13 @@ CARGO_INSTALL_PATH=	.
 
 WRKSRC_SUBDIR=	radicle-httpd
 
-PLIST_FILES+=	bin/rad-web
 PLIST_FILES+=	bin/radicle-httpd
 
 USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=	shawn.webb
 GL_PROJECT=	radicle-explorer
-GL_TAGNAME=	5ed05651778bdbd972ef7f2eaed0ed10871db4bd
+GL_TAGNAME=	eb767f5e2fc5a47b6be7814dde3aa7b2a1af2f36
 
 CARGO_CRATES=	addr2line-0.21.0 \
 		adler-1.0.2 \
@@ -36,11 +35,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		amplify_syn-2.0.1 \
 		android-tzdata-0.1.1 \
 		android_system_properties-0.1.5 \
-		anstream-0.6.13 \
-		anstyle-1.0.6 \
-		anstyle-parse-0.2.3 \
 		anstyle-query-1.0.2 \
-		anstyle-wincon-3.0.2 \
 		anyhow-1.0.82 \
 		ascii-1.1.0 \
 		async-trait-0.1.80 \
@@ -71,8 +66,6 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		chacha20-0.9.1 \
 		chrono-0.4.38 \
 		cipher-0.4.4 \
-		colorchoice-1.0.0 \
-		colored-2.1.0 \
 		const-oid-0.9.6 \
 		core-foundation-sys-0.8.6 \
 		cpufeatures-0.2.12 \
@@ -100,7 +93,6 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		elliptic-curve-0.13.8 \
 		equivalent-1.0.1 \
 		errno-0.3.8 \
-		escargot-0.5.10 \
 		fastrand-2.0.2 \
 		ff-0.13.0 \
 		filetime-0.2.23 \
@@ -164,7 +156,6 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		newline-converter-0.3.0 \
 		nonempty-0.5.0 \
 		nonempty-0.9.0 \
-		normalize-line-endings-0.3.0 \
 		nu-ansi-term-0.46.0 \
 		num-bigint-dig-0.8.4 \
 		num-conv-0.1.0 \
@@ -201,9 +192,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		proc-macro2-1.0.81 \
 		qcheck-1.0.0 \
 		quote-1.0.36 \
-		radicle-0.11.0 \
-		radicle-cli-0.10.0 \
-		radicle-cli-test-0.10.0 \
+		radicle-0.11.1 \
 		radicle-cob-0.11.0 \
 		radicle-crypto-0.10.0 \
 		radicle-dag-0.9.0 \
@@ -241,12 +230,9 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		shlex-1.3.0 \
 		signature-1.6.4 \
 		signature-2.2.0 \
-		similar-2.5.0 \
 		siphasher-1.0.1 \
 		slab-0.4.9 \
 		smallvec-1.13.2 \
-		snapbox-0.4.17 \
-		snapbox-macros-0.3.8 \
 		socket2-0.5.7 \
 		socks5-client-0.4.1 \
 		spin-0.5.2 \
@@ -272,7 +258,6 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		time-0.3.36 \
 		time-core-0.1.2 \
 		time-macros-0.2.18 \
-		timeago-0.4.2 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
 		tokio-1.37.0 \
@@ -287,20 +272,6 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		tracing-core-0.1.32 \
 		tracing-logfmt-0.3.4 \
 		tracing-subscriber-0.3.18 \
-		tree-sitter-0.20.10 \
-		tree-sitter-bash-0.20.5 \
-		tree-sitter-c-0.20.8 \
-		tree-sitter-css-0.20.0 \
-		tree-sitter-go-0.20.0 \
-		tree-sitter-highlight-0.20.1 \
-		tree-sitter-html-0.20.0 \
-		tree-sitter-json-0.20.2 \
-		tree-sitter-md-0.1.7 \
-		tree-sitter-python-0.20.4 \
-		tree-sitter-ruby-0.20.1 \
-		tree-sitter-rust-0.20.4 \
-		tree-sitter-toml-0.20.0 \
-		tree-sitter-typescript-0.20.5 \
 		try-lock-0.2.5 \
 		typenum-1.17.0 \
 		unicode-bidi-0.3.15 \
@@ -312,7 +283,6 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		universal-hash-0.5.1 \
 		ureq-2.9.6 \
 		url-2.5.0 \
-		utf8parse-0.2.1 \
 		valuable-0.1.0 \
 		vcpkg-0.2.15 \
 		version_check-0.9.4 \

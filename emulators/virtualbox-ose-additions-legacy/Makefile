@@ -134,12 +134,10 @@ post-patch:
 	    ${WRKSRC}/src/VBox/Additions/x11/VBoxClient/Makefile.kmk
 	@${ECHO_CMD} 'VBOX_ICONV_DEFS = LIBICONV_PLUG' >> ${WRKSRC}/LocalConfig.kmk
 .endif
-<<<<<<< HEAD
 	@${REINPLACE_CMD} -e "s|1300135|1400001|g" \
 	    ${WRKSRC}/src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c
 	@${REINPLACE_CMD} -e "s|VM_MAP_PROTECT_SET_PROT|FALSE|g" \
 	    ${WRKSRC}/src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c
-=======
 .if ${PORT_OPTIONS:MPAE}
 	@${ECHO_CMD} 'VBOX_FREEBSD = -DPAE' >> ${WRKSRC}/LocalConfig.kmk
 .endif
@@ -147,7 +145,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|enum vtype|enum enum_vtype_uint8|g' \
 		${WRKSRC}/src/VBox/Additions/freebsd/vboxvfs/vboxvfs*.[ch]
 .endif
->>>>>>> internal/freebsd/main
 
 post-patch-X11-on:
 	@${ECHO_CMD} 'VBOX_USE_SYSTEM_XORG_HEADERS = 1' >> \

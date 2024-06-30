@@ -11,7 +11,12 @@ WWW=		http://namazu.org/~satoru/zphoto/
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
+=======
+DEPRECATED=	Depends on expired graphics/ming
+EXPIRATION_DATE=2024-07-31
+>>>>>>> internal/freebsd/main
 
 LIB_DEPENDS=	libImlib2.so:graphics/imlib2 \
 		libming.so:graphics/ming \

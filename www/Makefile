@@ -186,6 +186,7 @@
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
     SUBDIR += freenginx
+    SUBDIR += freenginx-devel
     SUBDIR += fswiki
     SUBDIR += fusionpbx
     SUBDIR += g-cows
@@ -345,6 +346,7 @@
     SUBDIR += mediawiki139
     SUBDIR += mediawiki140
     SUBDIR += mediawiki141
+    SUBDIR += mediawiki142
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd

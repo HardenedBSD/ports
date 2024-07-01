@@ -1,0 +1,11 @@
+--- src/share/poudriere/common.sh
++++ src/share/poudriere/common.sh
+@@ -949,7 +949,7 @@ buildlog_start() {
+ 		pkg_note_add "${pkgname}" built_by "${POUDRIERE_PKGNAME}"
+ 	fi
+	echo "Host OSVERSION: ${HOST_OSVERSION}"
+-	echo "Jail OSVERSION: ${JAIL_OSVERSION}"
++	echo "Jail OSVERSION: ${JAIL_OSVERSION} $(cat /var/db/hbsd-update/version 2>/dev/null)"
+ 	echo "Job Id: ${MY_JOBID}"
+ 	echo
+ 	if [ ${JAIL_OSVERSION} -gt ${HOST_OSVERSION} ]; then

@@ -14,13 +14,8 @@ LIB_DEPENDS=	libpoppler-glib.so:graphics/poppler-glib
 USES=		compiler:c++11-lang desktop-file-utils gnome iconv meson \
 		pkgconfig
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-OPTIONS_DEFINE=	CUPS NLS
-OPTIONS_DEFAULT=CUPS NLS
-OPTIONS_SUB=	yes
-=======
 USE_GITHUB=	yes
 GH_ACCOUNT=	Flow-It
 GH_PROJECT=	epdfview_old
@@ -31,7 +26,6 @@ USE_GNOME=	glib20 gtk30
 OPTIONS_DEFINE=		CUPS NLS
 OPTIONS_DEFAULT=	CUPS NLS
 OPTIONS_SUB=		yes
->>>>>>> internal/freebsd/main
 
 CUPS_LIB_DEPENDS=	libcups.so:print/cups
 CUPS_MESON_TRUE=	enable-printing

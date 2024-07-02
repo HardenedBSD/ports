@@ -1948,6 +1948,7 @@
     SUBDIR += rubygem-circuitbox
     SUBDIR += rubygem-cloudinary
     SUBDIR += rubygem-cookiejar
+    SUBDIR += rubygem-coverband
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
     SUBDIR += rubygem-cssbundling-rails-rails70

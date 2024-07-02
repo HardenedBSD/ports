@@ -381,14 +381,10 @@ LIB_DEPENDS+=	libffi.so:devel/libffi
 .if ${COMPILER_TYPE} == clang
 MAKE_ENV+=	COMPILER_WARNINGS_FATAL=false USE_CLANG=true
 CONFIGURE_ENV+=	LIBCXX="-lc++"
-<<<<<<< HEAD
 CONFIGURE_ARGS+=	--with-extra-cflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
 CONFIGURE_ARGS+=	--with-extra-cxxflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
 CONFIGURE_ARGS+=	--with-extra-ldflags="-Wno-error=unused-command-line-argument -Wl,--undefined-version"
-.if ${COMPILER_VERSION} >= 130 && ${ARCH} == aarch64
-=======
 .if ${ARCH} == aarch64
->>>>>>> internal/freebsd/main
 # PR258954: see <https://bugs.openjdk.org/browse/JDK-8247766>. Even though the
 # upstream fix has been applied to this version of the JDK, users still report
 # the assertion "guarantee(val < (1U << nbits)) failed: Field too big for insn"

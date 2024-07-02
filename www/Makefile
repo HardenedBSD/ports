@@ -472,6 +472,8 @@
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-node18
+    SUBDIR += npm-node20
+    SUBDIR += npm-node21
     SUBDIR += npm-node22
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -2504,6 +2506,7 @@
     SUBDIR += yarn
     SUBDIR += yarn-node18
     SUBDIR += yarn-node20
+    SUBDIR += yarn-node21
     SUBDIR += yarn-node22
     SUBDIR += yarr
     SUBDIR += yaws

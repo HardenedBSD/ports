@@ -4626,6 +4626,7 @@
     SUBDIR += py-crashtest
     SUBDIR += py-crc32c
     SUBDIR += py-crcmod
+    SUBDIR += py-crick
     SUBDIR += py-crontab
     SUBDIR += py-cson
     SUBDIR += py-csv23
@@ -4710,6 +4711,7 @@
     SUBDIR += py-dotty-dict
     SUBDIR += py-dpcontracts
     SUBDIR += py-dtfabric
+    SUBDIR += py-dukpy
     SUBDIR += py-dulwich
     SUBDIR += py-dunamai
     SUBDIR += py-durus
@@ -5140,6 +5142,7 @@
     SUBDIR += py-multitasking
     SUBDIR += py-munch
     SUBDIR += py-murmurhash
+    SUBDIR += py-mutf8
     SUBDIR += py-mutmut
     SUBDIR += py-mygpoclient
     SUBDIR += py-mypy
@@ -5375,6 +5378,7 @@
     SUBDIR += py-py
     SUBDIR += py-py-partiql-parser
     SUBDIR += py-py-serializable
+    SUBDIR += py-py-stackexchange
     SUBDIR += py-py-ubjson
     SUBDIR += py-py3nvml
     SUBDIR += py-pyTooling
@@ -5595,6 +5599,7 @@
     SUBDIR += py-python-socketio
     SUBDIR += py-python-statsd
     SUBDIR += py-python-subunit
+    SUBDIR += py-python-xcaplib
     SUBDIR += py-pythonbrew
     SUBDIR += py-pythondialog
     SUBDIR += py-pythonfinder
@@ -5774,7 +5779,6 @@
     SUBDIR += py-sre-yield
     SUBDIR += py-srsly
     SUBDIR += py-stack-data
-    SUBDIR += py-stackexchange
     SUBDIR += py-statgrab
     SUBDIR += py-statsd
     SUBDIR += py-stdlib-list
@@ -5985,7 +5989,6 @@
     SUBDIR += py-xarray-einstats
     SUBDIR += py-xarray-simlab
     SUBDIR += py-xattr
-    SUBDIR += py-xcaplib
     SUBDIR += py-xdg
     SUBDIR += py-xdis
     SUBDIR += py-xdoctest

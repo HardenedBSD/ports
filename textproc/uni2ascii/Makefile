@@ -14,8 +14,6 @@ LICENSE=	GPLv3
 USES=		tar:bzip2
 GNU_CONFIGURE=	yes
 
-USE_HARDENING=	pie:off relro:off
-
 MAKE_ARGS=	CC="${CC}" \
 		CFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}"

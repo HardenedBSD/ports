@@ -5135,6 +5135,7 @@
     SUBDIR += py-msgspec
     SUBDIR += py-mulpyplexer
     SUBDIR += py-multi_key_dict
+    SUBDIR += py-multimethod
     SUBDIR += py-multipart
     SUBDIR += py-multipledispatch
     SUBDIR += py-multiprocess
@@ -5916,6 +5917,7 @@
     SUBDIR += py-unearth
     SUBDIR += py-unicodecsv
     SUBDIR += py-unicodedata2
+    SUBDIR += py-unidep
     SUBDIR += py-unidiff
     SUBDIR += py-unipath
     SUBDIR += py-unittest2
@@ -5939,6 +5941,7 @@
     SUBDIR += py-vcrpy
     SUBDIR += py-vcver
     SUBDIR += py-vcversioner
+    SUBDIR += py-vendy
     SUBDIR += py-venusian
     SUBDIR += py-verboselogs
     SUBDIR += py-versioneer
@@ -6567,6 +6570,7 @@
     SUBDIR += rubygem-aws-sdk-privatenetworks
     SUBDIR += rubygem-aws-sdk-prometheusservice
     SUBDIR += rubygem-aws-sdk-proton
+    SUBDIR += rubygem-aws-sdk-qapps
     SUBDIR += rubygem-aws-sdk-qbusiness
     SUBDIR += rubygem-aws-sdk-qconnect
     SUBDIR += rubygem-aws-sdk-qldb

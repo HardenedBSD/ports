@@ -46,15 +46,10 @@ MOZ_EXPORT+=	MOZ_TELEMETRY_REPORTING="" \
 		MOZ_APP_DISPLAYNAME="${MOZILLA_CAP}" \
 		MOZ_APP_NAME="${MOZILLA}"
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	lib/librewolf/librewolf
 MPROTECT_DISABLE+=	lib/librewolf/plugin-container
 
-
-MOZ_OPTIONs=	--enable-application=browser \
-=======
 MOZ_OPTIONS=	--enable-application=browser \
->>>>>>> internal/freebsd/main
 		--allow-addon-sideload \
 		--disable-crashreporter \
 		--disable-debug \

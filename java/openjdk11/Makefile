@@ -222,16 +222,6 @@ CONFIGURE_ARGS+=	--with-extra-ldflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFA
 			--with-extra-cxxflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT}"
 .else
 MAKE_ENV+=	USE_CLANG=true
-<<<<<<< HEAD
-LLVM_VER=	15
-# HBSD: llvm15 enables a lot of sanity checks that prevent openjdk11 from
-# building
-CONFIGURE_ARGS+=	--disable-warnings-as-errors
-BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
-CC=		${LOCALBASE}/bin/clang${LLVM_VER}
-CXX=		${LOCALBASE}/bin/clang++${LLVM_VER}
-=======
->>>>>>> internal/freebsd/main
 .endif
 
 .if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH:Marmv*} || ${ARCH:Mpowerpc64*}

@@ -1,4 +1,4 @@
---- src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c.orig	2021-10-18 17:58:41 UTC
+--- src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c.orig	2024-01-11 12:25:56 UTC
 +++ src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c
 @@ -129,6 +129,7 @@ static vm_map_t rtR0MemObjFreeBSDGetMap(PRTR0MEMOBJINT
  
@@ -283,7 +283,7 @@
      /*
       * Check for unsupported stuff.
       */
-@@ -775,47 +824,53 @@ DECLHIDDEN(int) rtR0MemObjNativeMapUser(PPRTR0MEMOBJIN
+@@ -775,47 +824,55 @@ DECLHIDDEN(int) rtR0MemObjNativeMapUser(PPRTR0MEMOBJIN
                       0);                    /* copy-on-write and similar flags */
  
      if (rc == KERN_SUCCESS)
@@ -334,6 +334,8 @@
      vm_offset_t        AddrStart       = (uintptr_t)pMem->pv + offSub;
      vm_offset_t        AddrEnd         = AddrStart + cbSub;
      vm_map_t           pVmMap          = rtR0MemObjFreeBSDGetMap(pMem);
++    PRTR0MEMOBJFREEBSD pMemFreeBSD     = (PRTR0MEMOBJFREEBSD)pMem;
++    struct proc        *pProc          = (struct proc *)pMemFreeBSD->Core.u.Mapping.R0Process;
  
      if (!pVmMap)
 +    {
@@ -343,20 +345,23 @@
  
      if ((fProt & RTMEM_PROT_NONE) == RTMEM_PROT_NONE)
          ProtectionFlags = VM_PROT_NONE;
-@@ -826,7 +881,12 @@ DECLHIDDEN(int) rtR0MemObjNativeProtect(PRTR0MEMOBJINT
+@@ -826,7 +885,14 @@ DECLHIDDEN(int) rtR0MemObjNativeProtect(PRTR0MEMOBJINT
      if ((fProt & RTMEM_PROT_EXEC) == RTMEM_PROT_EXEC)
          ProtectionFlags |= VM_PROT_EXECUTE;
  
-+#if __FreeBSD_version >= 1300135
-+    int krc = vm_map_protect(pVmMap, AddrStart, AddrEnd, ProtectionFlags, 0, VM_MAP_PROTECT_SET_PROT);
+-    int krc = vm_map_protect(pVmMap, AddrStart, AddrEnd, ProtectionFlags, FALSE);
++#if __FreeBSD_version >= 1400001
++    int krc = vm_map_protect(pProc, pVmMap, AddrStart, AddrEnd, ProtectionFlags, 0, FALSE);
++#elif __FreeBSD_version >= 1300135
++    int krc = vm_map_protect(pProc, pVmMap, AddrStart, AddrEnd, ProtectionFlags, 0, VM_MAP_PROTECT_SET_PROT);
 +#else
-     int krc = vm_map_protect(pVmMap, AddrStart, AddrEnd, ProtectionFlags, FALSE);
++    int krc = vm_map_protect(pProc, pVmMap, AddrStart, AddrEnd, ProtectionFlags, FALSE);
 +#endif
 +    IPRT_FREEBSD_RESTORE_EFL_AC();
      if (krc == KERN_SUCCESS)
          return VINF_SUCCESS;
  
-@@ -851,11 +911,19 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
+@@ -851,11 +917,19 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
  
              vm_offset_t pb = (vm_offset_t)pMemFreeBSD->Core.pv + ptoa(iPage);
  
@@ -380,7 +385,7 @@
          }
  
          case RTR0MEMOBJTYPE_MAPPING:
-@@ -864,11 +932,16 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
+@@ -864,11 +938,16 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
  
              if (pMemFreeBSD->Core.u.Mapping.R0Process != NIL_RTR0PROCESS)
              {
@@ -398,7 +403,7 @@
              }
              return vtophys(pb);
          }
-@@ -879,9 +952,11 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
+@@ -879,9 +958,11 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
          {
              RTHCPHYS addr;
  

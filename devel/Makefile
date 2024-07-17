@@ -576,7 +576,6 @@
     SUBDIR += devtodo
     SUBDIR += dfuife-curses
     SUBDIR += dia2code
-    SUBDIR += dia2code+
     SUBDIR += dill
     SUBDIR += ding-libs
     SUBDIR += dispy
@@ -1322,7 +1321,6 @@
     SUBDIR += libindicator
     SUBDIR += libinjection
     SUBDIR += libinotify
-    SUBDIR += libiqxmlrpc
     SUBDIR += libisofs
     SUBDIR += libixp
     SUBDIR += libjitterentropy

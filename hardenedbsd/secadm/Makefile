@@ -16,9 +16,7 @@ USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=	hardenedbsd
 GL_PROJECT=	secadm
-GL_TAGNAME=	fea76e9d1d05c41fa475f261359d5acf406d50e7
-
-MAKE_ARGS+=	MANDIR=${PREFIX}/share/man
+GL_TAGNAME=	21ff28756202dc54c76ed3dbbf684e1c1b968a7b
 
 .if !defined(KMOD)
 LIBDIR?=	${PREFIX}/lib

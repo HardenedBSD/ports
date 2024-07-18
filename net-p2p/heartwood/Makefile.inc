@@ -1,5 +1,5 @@
 PORTNAME=	heartwood
-DISTVERSION=	1.0-rc12
+DISTVERSION=	1.0-rc13
 CATEGORIES=	net-p2p devel
 
 MAINTAINER=	shawn.webb@hardenedbsd.org
@@ -12,7 +12,7 @@ USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=	shawn.webb
 GL_PROJECT=	heartwood
-GL_TAGNAME=	92c9e21873be1c9107f906f826d4774a8a950d79
+GL_TAGNAME=	1848c2b85d1bb9a12531b3f31a59e8b2958917a2
 
 CARGO_CRATES=	adler-1.0.2 \
 		aead-0.5.2 \
@@ -48,7 +48,6 @@ CARGO_CRATES=	adler-1.0.2 \
 		bloomy-1.2.0 \
 		blowfish-0.9.1 \
 		bstr-1.9.1 \
-		btoi-0.4.3 \
 		bumpalo-3.16.0 \
 		byteorder-1.5.0 \
 		cbc-0.1.2 \
@@ -64,7 +63,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		core-foundation-sys-0.8.6 \
 		cpufeatures-0.2.12 \
 		crc32fast-1.4.0 \
-		crossbeam-channel-0.5.12 \
+		crossbeam-channel-0.5.13 \
 		crossbeam-utils-0.8.19 \
 		crypto-bigint-0.5.5 \
 		crypto-common-0.1.6 \
@@ -89,7 +88,6 @@ CARGO_CRATES=	adler-1.0.2 \
 		equivalent-1.0.1 \
 		errno-0.3.8 \
 		escargot-0.5.10 \
-		faster-hex-0.8.1 \
 		faster-hex-0.9.0 \
 		fastrand-2.0.2 \
 		ff-0.13.0 \
@@ -106,39 +104,30 @@ CARGO_CRATES=	adler-1.0.2 \
 		git2-0.18.3 \
 		gix-actor-0.31.1 \
 		gix-chunk-0.4.8 \
-		gix-command-0.2.10 \
 		gix-command-0.3.6 \
 		gix-commitgraph-0.24.2 \
 		gix-config-value-0.14.6 \
-		gix-credentials-0.21.0 \
 		gix-credentials-0.24.2 \
 		gix-date-0.8.5 \
 		gix-diff-0.43.0 \
-		gix-features-0.36.1 \
 		gix-features-0.38.1 \
 		gix-fs-0.10.2 \
-		gix-hash-0.13.3 \
 		gix-hash-0.14.2 \
 		gix-hashtable-0.5.2 \
 		gix-object-0.42.1 \
 		gix-odb-0.60.0 \
 		gix-pack-0.50.0 \
-		gix-packetline-0.16.7 \
 		gix-packetline-0.17.5 \
 		gix-path-0.10.7 \
-		gix-prompt-0.7.0 \
 		gix-prompt-0.8.4 \
-		gix-protocol-0.41.1 \
 		gix-protocol-0.45.0 \
 		gix-quote-0.4.12 \
 		gix-revwalk-0.13.0 \
 		gix-sec-0.10.6 \
 		gix-tempfile-13.1.1 \
 		gix-trace-0.1.9 \
-		gix-transport-0.38.0 \
 		gix-transport-0.42.0 \
 		gix-traverse-0.39.0 \
-		gix-url-0.25.2 \
 		gix-url-0.27.3 \
 		gix-utils-0.1.12 \
 		gix-validate-0.8.4 \
@@ -152,7 +141,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		indexmap-2.2.6 \
 		inout-0.1.3 \
 		inquire-0.7.5 \
-		io-reactor-0.5.1 \
+		io-reactor-0.5.2 \
 		itoa-1.0.11 \
 		jobserver-0.1.31 \
 		js-sys-0.3.69 \
@@ -209,7 +198,6 @@ CARGO_CRATES=	adler-1.0.2 \
 		proc-macro-error-1.0.4 \
 		proc-macro-error-attr-1.0.4 \
 		proc-macro2-1.0.81 \
-		prodash-26.2.2 \
 		prodash-28.0.0 \
 		qcheck-1.0.0 \
 		qcheck-macros-1.0.0 \
@@ -329,7 +317,6 @@ CARGO_CRATES=	adler-1.0.2 \
 		windows_x86_64_gnullvm-0.52.5 \
 		windows_x86_64_msvc-0.48.5 \
 		windows_x86_64_msvc-0.52.5 \
-		winnow-0.5.40 \
 		winnow-0.6.8 \
 		xattr-1.3.1 \
 		yansi-0.5.1 \

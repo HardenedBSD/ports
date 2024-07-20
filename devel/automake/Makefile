@@ -15,13 +15,8 @@ LICENSE_FILE_GFDL=	${WRKSRC}/doc/fdl.texi
 BUILD_DEPENDS=	autoconf>=2.72:devel/autoconf
 RUN_DEPENDS=	autoconf>=2.72:devel/autoconf
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-BUILD_VERSION=	1.16
-PLIST_SUB=	BUILD_VERSION=${BUILD_VERSION}
-=======
->>>>>>> internal/freebsd/main
 USES=		cpe perl5 tar:xz
 CPE_VENDOR=	gnu
 

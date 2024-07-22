@@ -12,12 +12,17 @@ WWW=		https://gcc.gnu.org
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
+<<<<<<< HEAD
 USE_HARDENING=  pie:off relro:off retpoline:off fortifysource:off
 
 BINARY_ALIAS= objdump=/usr/local/bin/objdump
 
 NO_UNUSED_ARGUMENTS_CHECK=	yes
 
+=======
+DEPRECATED=	Unsupported by upstream. Use GCC 12 or newer instead.
+EXPIRATION_DATE=2024-10-20
+>>>>>>> internal/freebsd/main
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libgmp.so:math/gmp \

@@ -23,11 +23,9 @@ INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	retpoline:off
-=======
+
 PORTSCOUT=	limit:^[0-9]\.[0-9]\.[1-9][0-9\]*$$
->>>>>>> internal/freebsd/main
 
 # Use fonts installed by x11-fonts/webfonts by default
 WINDOWS_FONT_DIR?=	${LOCALBASE}/share/fonts/webfonts

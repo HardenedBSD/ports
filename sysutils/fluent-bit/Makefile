@@ -19,18 +19,14 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	fluent
 USE_RC_SUBR=	${PORTNAME}
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-OPTIONS_DEFINE=		SSL PGSQL
-=======
 CMAKE_ARGS=	-DFLB_DEBUG=Off \
 		-DFLB_LUAJIT=Off \
 		-DFLB_TRACE=Off
 LDFLAGS+=	-lexecinfo
 
 OPTIONS_DEFINE=		PGSQL SSL
->>>>>>> internal/freebsd/main
 OPTIONS_DEFAULT=	SSL
 
 PGSQL_USES=		pgsql

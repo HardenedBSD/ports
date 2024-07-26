@@ -151,6 +151,7 @@
     SUBDIR += eschalot
     SUBDIR += evilginx2
     SUBDIR += expiretable
+    SUBDIR += exploit-pattern
     SUBDIR += fakeident
     SUBDIR += fakeroot
     SUBDIR += farmhash

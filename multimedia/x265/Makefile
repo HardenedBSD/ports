@@ -15,12 +15,9 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC:H}/COPYING
 
 USES=		cmake compiler:c++14-lang cpe pathfix dos2unix
-<<<<<<< HEAD
 
 USE_HARDENING=	pie:off
 
-=======
->>>>>>> internal/freebsd/main
 CPE_VENDOR=	multicorewareinc
 DOS2UNIX_FILES=	common/scaler.cpp
 USE_LDCONFIG=	yes

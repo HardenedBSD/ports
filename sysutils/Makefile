@@ -1022,6 +1022,8 @@
     SUBDIR += php82-posix
     SUBDIR += php83-fileinfo
     SUBDIR += php83-posix
+    SUBDIR += php84-fileinfo
+    SUBDIR += php84-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof

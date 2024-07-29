@@ -4515,6 +4515,7 @@
     SUBDIR += py-btest
     SUBDIR += py-build
     SUBDIR += py-buildbot
+    SUBDIR += py-buildbot-badges
     SUBDIR += py-buildbot-console-view
     SUBDIR += py-buildbot-grid-view
     SUBDIR += py-buildbot-pkg
@@ -5425,6 +5426,7 @@
     SUBDIR += py-pydantic
     SUBDIR += py-pydantic-core
     SUBDIR += py-pydantic-extra-types
+    SUBDIR += py-pydantic-settings
     SUBDIR += py-pydantic-vault
     SUBDIR += py-pydantic-yaml
     SUBDIR += py-pydantic2
@@ -5530,6 +5532,7 @@
     SUBDIR += py-pytest-drop-dup-tests
     SUBDIR += py-pytest-enabler
     SUBDIR += py-pytest-env
+    SUBDIR += py-pytest-examples
     SUBDIR += py-pytest-factoryboy
     SUBDIR += py-pytest-fixture-config
     SUBDIR += py-pytest-flake8
@@ -5559,6 +5562,7 @@
     SUBDIR += py-pytest-parallel
     SUBDIR += py-pytest-pep8
     SUBDIR += py-pytest-plus
+    SUBDIR += py-pytest-pretty
     SUBDIR += py-pytest-profiling
     SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-qt

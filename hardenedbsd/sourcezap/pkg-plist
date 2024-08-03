@@ -6,6 +6,8 @@ libexec/sourcezap/commands/sourcezap-install
 libexec/sourcezap/commands/sourcezap-pull
 libexec/sourcezap/commands/sourcezap-rm
 libexec/sourcezap/functions/print.sh
+libexec/sourcezap/setup/setup-doas
+libexec/sourcezap/setup/setup-user
 libexec/sourcezap/utils/git/get-changed-files
 libexec/sourcezap/utils/git/get-removed-files
 libexec/sourcezap/utils/git/run

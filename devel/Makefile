@@ -562,6 +562,7 @@
     SUBDIR += dconf
     SUBDIR += dconf-editor
     SUBDIR += debugedit
+    SUBDIR += decompyle3
     SUBDIR += dee
     SUBDIR += deforaos-libsystem
     SUBDIR += deheader
@@ -1176,6 +1177,7 @@
     SUBDIR += libPropList
     SUBDIR += libabigail
     SUBDIR += libac
+    SUBDIR += libada
     SUBDIR += libafterbase
     SUBDIR += libantlr3c
     SUBDIR += libantlr4
@@ -5024,7 +5026,6 @@
     SUBDIR += py-jsonschema-spec
     SUBDIR += py-jsonschema-specifications
     SUBDIR += py-jsonschema3
-    SUBDIR += py-jsonschema417
     SUBDIR += py-jsonsir
     SUBDIR += py-junitparser
     SUBDIR += py-jupyter-client
@@ -5390,6 +5391,7 @@
     SUBDIR += py-proto-plus
     SUBDIR += py-protobuf
     SUBDIR += py-protobuf-compiler
+    SUBDIR += py-protobuf4
     SUBDIR += py-proxmoxer
     SUBDIR += py-ptable
     SUBDIR += py-ptpython
@@ -5796,6 +5798,7 @@
     SUBDIR += py-sniffio
     SUBDIR += py-sortedcontainers
     SUBDIR += py-sourcemap
+    SUBDIR += py-spark-parser
     SUBDIR += py-sparse
     SUBDIR += py-speaklater
     SUBDIR += py-speg
@@ -5848,6 +5851,7 @@
     SUBDIR += py-telepath
     SUBDIR += py-tempora
     SUBDIR += py-tenacity
+    SUBDIR += py-tenacity8
     SUBDIR += py-tendo
     SUBDIR += py-termcolor
     SUBDIR += py-termcolor-whl
@@ -6018,6 +6022,7 @@
     SUBDIR += py-xarray
     SUBDIR += py-xarray-einstats
     SUBDIR += py-xarray-simlab
+    SUBDIR += py-xasm
     SUBDIR += py-xattr
     SUBDIR += py-xdg
     SUBDIR += py-xdis
@@ -6854,6 +6859,7 @@
     SUBDIR += rubygem-batch-loader
     SUBDIR += rubygem-bcp47_spec
     SUBDIR += rubygem-benelux
+    SUBDIR += rubygem-better_html
     SUBDIR += rubygem-better_html-rails61
     SUBDIR += rubygem-bin_utils
     SUBDIR += rubygem-bindata
@@ -6926,6 +6932,7 @@
     SUBDIR += rubygem-configstruct
     SUBDIR += rubygem-configuration
     SUBDIR += rubygem-console
+    SUBDIR += rubygem-constant_resolver
     SUBDIR += rubygem-contracts
     SUBDIR += rubygem-contracts016
     SUBDIR += rubygem-cookbook-omnifetch
@@ -7108,6 +7115,7 @@
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
     SUBDIR += rubygem-gettext_i18n_rails
+    SUBDIR += rubygem-gettext_i18n_rails112
     SUBDIR += rubygem-gettext_i18n_rails_js
     SUBDIR += rubygem-gettext_i18n_rails_js-rails5
     SUBDIR += rubygem-gettext_i18n_rails_js-rails50
@@ -7430,6 +7438,8 @@
     SUBDIR += rubygem-os
     SUBDIR += rubygem-ostruct
     SUBDIR += rubygem-p4ruby
+    SUBDIR += rubygem-packwerk
+    SUBDIR += rubygem-packwerk-extensions
     SUBDIR += rubygem-pagy
     SUBDIR += rubygem-paint
     SUBDIR += rubygem-pairing_heap
@@ -7846,6 +7856,7 @@
     SUBDIR += rubygem-xpath
     SUBDIR += rubygem-xxhash
     SUBDIR += rubygem-yajl-ruby
+    SUBDIR += rubygem-yard-sorbet
     SUBDIR += rubygem-yui-compressor
     SUBDIR += rubygem-zeitwerk
     SUBDIR += rubygem-zentest

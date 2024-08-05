@@ -443,6 +443,7 @@
     SUBDIR += netstiff
     SUBDIR += netsurf
     SUBDIR += newsboat
+    SUBDIR += newsraft
     SUBDIR += nextcloud
     SUBDIR += nextcloud-appointments
     SUBDIR += nextcloud-calendar

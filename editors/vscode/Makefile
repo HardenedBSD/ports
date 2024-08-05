@@ -1,6 +1,5 @@
 PORTNAME=	vscode
-DISTVERSION=	1.91.1
-PORTREVISION=	2
+DISTVERSION=	1.92.0
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:yarn_cache
 DISTFILES=	yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache \
@@ -71,7 +70,7 @@ MPROTECT_DISABLE=	share/code-oss/code-oss
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	f1e16e1e6214d7c44d078b1f0607b2388f29d729
+SOURCE_COMMIT_HASH=	b1c0a14de1414fcdaa400695b4db1c0799bc3124
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -106,7 +105,7 @@ USE_HARDENING=	relro:off
 
 NODEJS_DIR=	${.CURDIR:H:H}/www/node20
 .include "${NODEJS_DIR}/Makefile.version"
-ELECTRON_DIR=	${.CURDIR:H:H}/devel/electron29
+ELECTRON_DIR=	${.CURDIR:H:H}/devel/electron30
 .include "${ELECTRON_DIR}/Makefile.version"
 
 ELECTRON_DOWNLOAD_URL=	https://github.com/electron/electron/releases/download/v${ELECTRON_VER}

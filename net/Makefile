@@ -1502,6 +1502,7 @@
     SUBDIR += speedtest
     SUBDIR += speedtest-go
     SUBDIR += spiritvnc
+    SUBDIR += spoofdpi
     SUBDIR += spoofer
     SUBDIR += spread
     SUBDIR += spread-j

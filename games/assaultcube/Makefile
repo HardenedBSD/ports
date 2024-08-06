@@ -34,16 +34,11 @@ OPTIONS_DEFAULT=	CLIENT DEDICATED
 OPTIONS_MULTI=		BUILD
 OPTIONS_MULTI_BUILD=	CLIENT DEDICATED #MASTER is currently broken
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/assaultcube_client
 PAGEEXEC_DISABLE=	bin/assaultcube_client
 
-CLIENT_DESC=	Build client
-DEDICATED_DESC=	Build dedicated server
-=======
 CLIENT_DESC=		Build client
 DEDICATED_DESC=		Build dedicated server
->>>>>>> internal/freebsd/main
 
 CLIENT_LIB_DEPENDS=	libvorbisfile.so:audio/libvorbis \
 			libcurl.so:ftp/curl

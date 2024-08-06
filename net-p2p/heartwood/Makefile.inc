@@ -1,5 +1,5 @@
 PORTNAME=	heartwood
-DISTVERSION=	1.0-rc13
+DISTVERSION=	1.0-rc14
 CATEGORIES=	net-p2p devel
 
 MAINTAINER=	shawn.webb@hardenedbsd.org
@@ -12,7 +12,7 @@ USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=	shawn.webb
 GL_PROJECT=	heartwood
-GL_TAGNAME=	1848c2b85d1bb9a12531b3f31a59e8b2958917a2
+GL_TAGNAME=	a496190198bd5dc0eb741c57a87fe4112ba32647
 
 CARGO_CRATES=	adler-1.0.2 \
 		aead-0.5.2 \

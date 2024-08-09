@@ -8,6 +8,7 @@
     SUBDIR += adios2
     SUBDIR += aichat
     SUBDIR += air
+    SUBDIR += alpaca
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
@@ -475,6 +476,7 @@
     SUBDIR += py-orange3-educational
     SUBDIR += py-orange3-network
     SUBDIR += py-orange3-timeseries
+    SUBDIR += py-oterm
     SUBDIR += py-palettable
     SUBDIR += py-papermill
     SUBDIR += py-pexpect

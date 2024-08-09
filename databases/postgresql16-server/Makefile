@@ -107,11 +107,7 @@ LLVM_DESC=		Build with support for JIT-compiling expressions
 LLVM_CONFIGURE_WITH=	llvm
 LLVM_CONFIGURE_ENV=	LLVM_CONFIG=${LLVM_CONFIG} \
 			CLANG=${LOCALBASE}/bin/clang${LLVM_VERSION}
-<<<<<<< HEAD
-LLVM_USES=		llvm:16,lib
-=======
 LLVM_USES=		llvm:min=11,lib
->>>>>>> internal/freebsd/main
 
 CONFIGURE_ARGS+=	--with-icu
 LIB_DEPENDS+=		libicudata.so:devel/icu

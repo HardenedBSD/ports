@@ -1,3 +1,95 @@
+  <vuln vid="7d631146-5769-11ef-b618-1c697a616631">
+    <topic>AMD CPUs -- Guest Memory Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cpu-microcode-amd</name>
+	<range><lt>20240810</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>AMD reports:</p>
+	<blockquote cite="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7014.html">
+	  <p>
+	   Researchers from IOActive have reported that it may be possible for
+	   an attacker with ring 0 access to modify the configuration of System
+	   Management Mode (SMM) even when SMM Lock is enabled.  Improper
+	   validation in a model specific register (MSR) could allow a malicious
+	   program with ring0 access to modify SMM configuration while SMI lock
+	   is enabled, potentially leading to arbitrary code execution.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-31315</cvename>
+      <url>https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7014.html</url>
+    </references>
+    <dates>
+      <discovery>2024-08-09</discovery>
+      <entry>2024-08-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5776cc4f-5717-11ef-b611-84a93843eb75">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube</name>
+	<range><lt>1.6.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://roundcube.net/news/2024/08/04/security-updates-1.6.8-and-1.5.8">
+	  <p>XSS vulnerability in post-processing of sanitized HTML content [CVE-2024-42009]</p>
+	  <p>XSS vulnerability in serving of attachments other than HTML or SVG [CVE-2024-42008]</p>
+	  <p>information leak (access to remote content) via insufficient CSS filtering [CVE-2024-42010]</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-42009</cvename>
+      <cvename>CVE-2024-42008</cvename>
+      <cvename>CVE-2024-42010</cvename>
+      <url>https://roundcube.net/news/2024/08/04/security-updates-1.6.8-and-1.5.8</url>
+    </references>
+    <dates>
+      <discovery>2024-08-04</discovery>
+      <entry>2024-08-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="aa1c7af9-570e-11ef-a43e-b42e991fc52e">
+    <topic>mozilla firefox -- protocol information guessing</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>127.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security@mozilla.org reports:</p>
+	<blockquote cite="https://bugzilla.mozilla.org/show_bug.cgi?id=1883693">
+	  <p>By monitoring the time certain operations take, an attacker could
+	have guessed which external protocol handlers were functional on a
+	user&apos;s system.  This vulnerability affects Firefox &lt; 127,
+	Firefox ESR &lt; 115.12, and Thunderbird &lt; 115.12.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-5690</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-5690</url>
+    </references>
+    <dates>
+      <discovery>2024-06-11</discovery>
+      <entry>2024-08-10</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="8c342a6c-563f-11ef-a77e-901b0e9408dc">
     <topic>soft-serve -- Remote code execution vulnerability</topic>
     <affects>

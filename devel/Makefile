@@ -987,6 +987,7 @@
     SUBDIR += hyprlang
     SUBDIR += hyprutils
     SUBDIR += hyprwayland-scanner
+    SUBDIR += iaito
     SUBDIR += ice
     SUBDIR += ice37
     SUBDIR += icestorm
@@ -5208,7 +5209,6 @@
     SUBDIR += py-offtrac
     SUBDIR += py-olefile
     SUBDIR += py-oletools
-    SUBDIR += py-ollama
     SUBDIR += py-omnijson
     SUBDIR += py-omniorb
     SUBDIR += py-onigurumacffi
@@ -6093,6 +6093,7 @@
     SUBDIR += pybind11-json
     SUBDIR += pybugz
     SUBDIR += pycanberra
+    SUBDIR += pycdc
     SUBDIR += pycharm-ce
     SUBDIR += pycharm-pro
     SUBDIR += pycomposefile

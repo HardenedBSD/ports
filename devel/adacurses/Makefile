@@ -1,6 +1,6 @@
 PORTNAME=	adacurses
 DISTVERSION=	20211021
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.invisible-island.net/AdaCurses/
 DISTNAME=	AdaCurses-${DISTVERSION}
@@ -12,10 +12,16 @@ WWW=		https://invisible-island.net/ncurses/ncurses-Ada95.html
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/README
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off retpoline:off
 
 #BUILD_DEPENDS=	gsed:textproc/gsed
 #BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
+=======
+BUILD_DEPENDS=	gprbuild>0:devel/gprbuild \
+		gsed:textproc/gsed
+BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
+>>>>>>> internal/freebsd/main
 
 USES=		ada autoreconf gmake ncurses pkgconfig tar:tgz
 

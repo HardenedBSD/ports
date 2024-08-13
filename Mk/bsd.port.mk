@@ -1928,15 +1928,7 @@ CFLAGS+=	-Qunused-arguments
 .    if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
 LDFLAGS+=	-fuse-ld=bfd
 BINARY_ALIAS+=	ld=${LD}
-.      if !defined(USE_BINUTILS)
-.        if exists(/usr/bin/ld.bfd)
-LD=	/usr/bin/ld.bfd
-CONFIGURE_ENV+=	LD=${LD}
-MAKE_ENV+=	LD=${LD}
-.        else
 USE_BINUTILS=	yes
-.        endif
-.      endif
 .    endif
 
 _TEST_AR=/usr/bin/ar

@@ -17,12 +17,9 @@ CONFIGURE_ARGS=	--enable-threads --disable-tdomalloc
 EXTRACT_AFTER_ARGS=	--exclude 'expat*/*.c' --exclude 'expat*/[a-mo-z]*.h' \
 			--exclude 'domalloc*' --exclude win
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-=======
 MAKE_ARGS+=	RANLIB_STUB=:
->>>>>>> internal/freebsd/main
 TEST_TARGET=	test
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}

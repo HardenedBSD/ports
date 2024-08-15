@@ -23,9 +23,8 @@ INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 USE_HARDENING=	retpoline:off
-=======
+
 FLAVORS=	x11 nox11
 FLAVOR?=	${FLAVORS:[1]}
 nox11_PKGNAMESUFFIX=	-nox11
@@ -36,7 +35,6 @@ USES+=		xorg
 .else
 CONFIGURE_ARGS+=--without-x ac_cv_lib_ICE_IceConnectionNumber=no
 .endif
->>>>>>> internal/freebsd/main
 
 PORTSCOUT=	limit:^[0-9]\.[0-9]\.[1-9][0-9\]*$$
 

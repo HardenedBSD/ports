@@ -885,6 +885,7 @@
     SUBDIR += redis-devel
     SUBDIR += redis62
     SUBDIR += redis70
+    SUBDIR += redis72
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson

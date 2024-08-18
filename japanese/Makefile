@@ -63,6 +63,7 @@
     SUBDIR += font-aozoramincho
     SUBDIR += font-ayu18
     SUBDIR += font-ayu20
+    SUBDIR += font-bizin-gothic
     SUBDIR += font-bizud-gothic
     SUBDIR += font-bizud-mincho
     SUBDIR += font-cica
@@ -173,6 +174,7 @@
     SUBDIR += mecab-ipadic-eucjp
     SUBDIR += mecab-ipadic-sjis
     SUBDIR += mecab-ipadic-utf8
+    SUBDIR += mecab-jawiki
     SUBDIR += mh
     SUBDIR += migemo
     SUBDIR += migemo.el
@@ -180,6 +182,7 @@
     SUBDIR += mozc-el
     SUBDIR += mozc-server
     SUBDIR += mozc-tool
+    SUBDIR += multiskkserv
     SUBDIR += mypaedia-fpw-package
     SUBDIR += namazu
     SUBDIR += namazu2
@@ -256,6 +259,7 @@
     SUBDIR += sj3-lib
     SUBDIR += sj3-server
     SUBDIR += skk
+    SUBDIR += skk-jawiki
     SUBDIR += skk-jisyo
     SUBDIR += skk-jisyo-cdb
     SUBDIR += skk-tools

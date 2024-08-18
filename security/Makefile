@@ -984,6 +984,7 @@
     SUBDIR += py-msoffcrypto-tool
     SUBDIR += py-muacrypt
     SUBDIR += py-netbox-secrets
+    SUBDIR += py-nethsm
     SUBDIR += py-netmiko
     SUBDIR += py-noiseprotocol
     SUBDIR += py-notus-scanner

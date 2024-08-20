@@ -1,5 +1,5 @@
 PORTNAME=	heartwood
-DISTVERSION=	1.0-rc14
+DISTVERSION=	1.0-rc15
 CATEGORIES=	net-p2p devel
 
 MAINTAINER=	shawn.webb@hardenedbsd.org
@@ -12,7 +12,7 @@ USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=	shawn.webb
 GL_PROJECT=	heartwood
-GL_TAGNAME=	a496190198bd5dc0eb741c57a87fe4112ba32647
+GL_TAGNAME=	c0aecbac3a0f5daf90f8110983c81b1ee1972090
 
 CARGO_CRATES=	adler-1.0.2 \
 		aead-0.5.2 \
@@ -89,7 +89,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		errno-0.3.8 \
 		escargot-0.5.10 \
 		faster-hex-0.9.0 \
-		fastrand-2.0.2 \
+		fastrand-2.1.0 \
 		ff-0.13.0 \
 		filetime-0.2.23 \
 		flate2-1.0.28 \
@@ -101,36 +101,36 @@ CARGO_CRATES=	adler-1.0.2 \
 		git-ref-format-0.3.0 \
 		git-ref-format-core-0.3.0 \
 		git-ref-format-macro-0.3.0 \
-		git2-0.18.3 \
-		gix-actor-0.31.1 \
+		git2-0.19.0 \
+		gix-actor-0.31.5 \
 		gix-chunk-0.4.8 \
 		gix-command-0.3.6 \
-		gix-commitgraph-0.24.2 \
+		gix-commitgraph-0.24.3 \
 		gix-config-value-0.14.6 \
 		gix-credentials-0.24.2 \
-		gix-date-0.8.5 \
-		gix-diff-0.43.0 \
-		gix-features-0.38.1 \
-		gix-fs-0.10.2 \
+		gix-date-0.8.7 \
+		gix-diff-0.44.1 \
+		gix-features-0.38.2 \
+		gix-fs-0.11.2 \
 		gix-hash-0.14.2 \
 		gix-hashtable-0.5.2 \
-		gix-object-0.42.1 \
-		gix-odb-0.60.0 \
-		gix-pack-0.50.0 \
+		gix-object-0.42.3 \
+		gix-odb-0.61.1 \
+		gix-pack-0.51.1 \
 		gix-packetline-0.17.5 \
-		gix-path-0.10.7 \
+		gix-path-0.10.9 \
 		gix-prompt-0.8.4 \
 		gix-protocol-0.45.0 \
 		gix-quote-0.4.12 \
-		gix-revwalk-0.13.0 \
+		gix-revwalk-0.13.2 \
 		gix-sec-0.10.6 \
-		gix-tempfile-13.1.1 \
+		gix-tempfile-14.0.1 \
 		gix-trace-0.1.9 \
 		gix-transport-0.42.0 \
-		gix-traverse-0.39.0 \
+		gix-traverse-0.39.2 \
 		gix-url-0.27.3 \
 		gix-utils-0.1.12 \
-		gix-validate-0.8.4 \
+		gix-validate-0.8.5 \
 		group-0.13.0 \
 		hashbrown-0.14.3 \
 		hmac-0.12.1 \
@@ -149,7 +149,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		lazy_static-1.4.0 \
 		lexopt-0.3.0 \
 		libc-0.2.155 \
-		libgit2-sys-0.16.2+1.7.2 \
+		libgit2-sys-0.17.0+1.8.1 \
 		libm-0.2.8 \
 		libredox-0.0.2 \
 		libz-sys-1.1.16 \
@@ -202,9 +202,9 @@ CARGO_CRATES=	adler-1.0.2 \
 		qcheck-1.0.0 \
 		qcheck-macros-1.0.0 \
 		quote-1.0.36 \
-		radicle-git-ext-0.7.0 \
+		radicle-git-ext-0.8.0 \
 		radicle-std-ext-0.1.0 \
-		radicle-surf-0.21.0 \
+		radicle-surf-0.22.0 \
 		rand-0.8.5 \
 		rand_chacha-0.3.1 \
 		rand_core-0.6.4 \

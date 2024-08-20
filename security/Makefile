@@ -1091,6 +1091,7 @@
     SUBDIR += py-zope.password
     SUBDIR += py-zxcvbn
     SUBDIR += pygost
+    SUBDIR += qt-sudo
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2

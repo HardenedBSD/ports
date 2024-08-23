@@ -14,15 +14,9 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cpe localbase:ldflags tar:xz
-<<<<<<< HEAD
-GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-USE_RC_SUBR=	ngircd
 
 USE_HARDENING=	safestack
 
-=======
->>>>>>> internal/freebsd/main
 CPE_VENDOR=	barton
 CPE_VERSION=	${DISTVERSION:C/^([0-9]+)$/\1.0/}
 USE_RC_SUBR=	${PORTNAME}

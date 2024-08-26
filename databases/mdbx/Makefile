@@ -13,13 +13,9 @@ LICENSE_NAME=	OpenLDAP Public License
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		gmake
-=======
 USES=		cmake tar:xz
->>>>>>> internal/freebsd/main
 USE_LDCONFIG=	yes
 
 NO_WRKSUBDIR=	yes

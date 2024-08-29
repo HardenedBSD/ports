@@ -604,6 +604,7 @@
     SUBDIR += xmessage
     SUBDIR += xmh
     SUBDIR += xmodmap
+    SUBDIR += xmoji
     SUBDIR += xmore
     SUBDIR += xmotd
     SUBDIR += xmsg

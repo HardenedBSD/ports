@@ -1,20 +1,9 @@
-PORTNAME=	screen
-PORTVERSION=	4.9.1
-PORTREVISION=	5
-CATEGORIES=	sysutils
-MASTER_SITES=	GNU \
-		ftp://ftp.gnu.org/gnu/screen/ \
-		ftp://gnu.mirror.iweb.com/screen/ \
-		http://gnu.mirror.iweb.com/screen/ \
-		http://mirror.sdunix.com/gnu/ \
-		ftp://mirrors.kernel.org/gnu/screen/ \
-		http://cschubert.com/distfiles/ \
-		LOCAL/cy
+VERSIONS=		49
+SCREEN_VERSION?=	49
 
-MAINTAINER=	cy@FreeBSD.org
-COMMENT=	Multi-screen window manager
-WWW=		https://www.gnu.org/software/screen/
+MASTERDIR=		${.CURDIR}/../screen${SCREEN_VERSION}
 
+<<<<<<< HEAD
 CONFLICTS=	screen-devel*
 
 LICENSE=	GPLv3
@@ -119,3 +108,6 @@ post-install:
 .endif
 
 .include <bsd.port.mk>
+=======
+.include "${MASTERDIR}/Makefile"
+>>>>>>> internal/freebsd/main

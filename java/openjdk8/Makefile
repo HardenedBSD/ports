@@ -382,22 +382,9 @@ LIB_DEPENDS+=	libffi.so:devel/libffi
 .if ${COMPILER_TYPE} == clang
 MAKE_ENV+=	COMPILER_WARNINGS_FATAL=false USE_CLANG=true
 CONFIGURE_ENV+=	LIBCXX="-lc++"
-<<<<<<< HEAD
 CONFIGURE_ARGS+=	--with-extra-cflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
 CONFIGURE_ARGS+=	--with-extra-cxxflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
 CONFIGURE_ARGS+=	--with-extra-ldflags="-Wno-error=unused-command-line-argument -Wl,--undefined-version"
-.if ${ARCH} == aarch64
-# PR258954: see <https://bugs.openjdk.org/browse/JDK-8247766>. Even though the
-# upstream fix has been applied to this version of the JDK, users still report
-# the assertion "guarantee(val < (1U << nbits)) failed: Field too big for insn"
-# occurring, when it is built with recent versions of clang.
-LLVM_VER=	12
-BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
-CC=		${LOCALBASE}/bin/clang${LLVM_VER}
-CXX=		${LOCALBASE}/bin/clang++${LLVM_VER}
-.endif
-=======
->>>>>>> internal/freebsd/main
 # clang 16 defaults to C++17, which no longer allows the 'register' keyword.
 # There is an upstream commit that removes all the individual 'register'
 # keywords, but it has not yet been backported to OpenJDK 8.

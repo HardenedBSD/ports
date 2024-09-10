@@ -30,17 +30,8 @@ CONFIGURE_ARGS+=	--with-external-libzstd \
 			--with-external-tremor \
 			--with-external-trio
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-GNU_CONFIGURE=	yes
-USE_SDL=	sdl2 net2
-USE_GL=		gl glu
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-WRKSRC=	${WRKDIR}/${PORTNAME}
-=======
->>>>>>> internal/freebsd/main
 SUB_FILES=	pkg-message
 
 WRKSRC=		${WRKDIR}/${PORTNAME}

@@ -1,5 +1,6 @@
 PORTNAME=	rust-findutils
 DISTVERSION=	0.7.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkubaj@FreeBSD.org
@@ -149,10 +150,5 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 PLIST_FILES=	bin/find \
 		bin/testing-commandline \
 		bin/xargs
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/find
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/testing-commandline
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/xargs
 
 .include <bsd.port.mk>

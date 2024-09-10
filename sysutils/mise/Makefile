@@ -1,6 +1,7 @@
 PORTNAME=	mise
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2024.9.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -517,8 +518,5 @@ post-patch:
 	-e '/get_cpu/s|unsigned long|uint64_t|' \
 	-e '/get_proc_total/s|unsigned long|uint64_t|' \
 	${WRKSRC}/cargo-crates/sys-info-0.9.1/c/*.[ch]
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>

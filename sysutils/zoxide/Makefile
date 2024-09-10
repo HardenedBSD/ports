@@ -1,7 +1,7 @@
 PORTNAME=	zoxide
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.0
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	sysutils
 
 MAINTAINER=	andoriyu@gmail.com
@@ -120,8 +120,5 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		windows_x86_64_msvc-0.42.0
 
 PLIST_FILES=	bin/zoxide
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/zoxide
 
 .include <bsd.port.mk>

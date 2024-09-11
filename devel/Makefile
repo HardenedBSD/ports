@@ -7318,7 +7318,6 @@
     SUBDIR += rubygem-json-canonicalization
     SUBDIR += rubygem-json-schema
     SUBDIR += rubygem-json1
-    SUBDIR += rubygem-json26
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
     SUBDIR += rubygem-json_schema
@@ -7684,7 +7683,6 @@
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-semver2
     SUBDIR += rubygem-semver_dialects
-    SUBDIR += rubygem-semver_dialects2
     SUBDIR += rubygem-semverse
     SUBDIR += rubygem-sentry-rails
     SUBDIR += rubygem-sentry-raven

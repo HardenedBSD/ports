@@ -2099,7 +2099,6 @@
     SUBDIR += rubygem-jsbundling-rails-rails70
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-json-jwt
-    SUBDIR += rubygem-json-jwt115
     SUBDIR += rubygem-jsonb_accessor
     SUBDIR += rubygem-jwt
     SUBDIR += rubygem-kaminari
@@ -2157,7 +2156,6 @@
     SUBDIR += rubygem-net-http-persistent
     SUBDIR += rubygem-net-http-persistent2
     SUBDIR += rubygem-net-http-pipeline
-    SUBDIR += rubygem-net-http011
     SUBDIR += rubygem-nicovideo
     SUBDIR += rubygem-ntlm-http
     SUBDIR += rubygem-octopress

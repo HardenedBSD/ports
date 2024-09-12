@@ -24,6 +24,8 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--enable-introspection
 
+USE_HARDENING=	fortifysource:off
+
 INFO=		libgtop2
 
 PKGMESSAGE=	${FILESDIR}/pkg-message

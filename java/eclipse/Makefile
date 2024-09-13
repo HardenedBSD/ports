@@ -22,13 +22,10 @@ LIB_DEPENDS=	libsecret-1.so:security/libsecret \
 
 USES=		compiler:c++17-lang gmake pkgconfig gnome
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-=======
 # The github repositories.  The repository under NorbertXYZ is for a predefined maven
 # download, so the build does not need to download while do-build is running
->>>>>>> internal/freebsd/main
 USE_GITHUB=	yes
 GH_TUPLE=	eclipse-platform:eclipse.platform.releng.aggregator:${ECLIPSE_TAG} \
 		eclipse-jdt:eclipse.jdt:${ECLIPSE_TAG}:a/eclipse.jdt \

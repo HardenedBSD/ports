@@ -380,7 +380,7 @@ LIB_DEPENDS+=	libffi.so:devel/libffi
 .endif
 
 .if ${COMPILER_TYPE} == clang
-MAKE_ENV+=	COMPILER_WARNINGS_FATAL=false USE_CLANG=true
+MAKE_ENV+=	USE_CLANG=true
 CONFIGURE_ENV+=	LIBCXX="-lc++"
 CONFIGURE_ARGS+=	--with-extra-cflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"
 CONFIGURE_ARGS+=	--with-extra-cxxflags="-Wno-unused-but-set-parameter -Wno-bitwise-instead-of-logical"

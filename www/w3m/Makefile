@@ -21,15 +21,8 @@ USES=		cpe iconv pkgconfig perl5 ssl
 
 CPE_VENDOR=	w3m_project
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-GH_ACCOUNT=	tats
-GH_PROJECT=	w3m
-GH_TAGNAME=	ee66aab
-
-=======
->>>>>>> internal/freebsd/main
 MAKE_JOBS_UNSAFE=	yes
 SNAPDATE=	20240916
 COMMIT_HASH=	3601d308b98006da4240f1fd39282a9245e70264

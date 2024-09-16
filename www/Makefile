@@ -309,7 +309,6 @@
     SUBDIR += libmicrohttpd
     SUBDIR += libnghttp2
     SUBDIR += libnghttp3
-    SUBDIR += libresonic-standalone
     SUBDIR += librespeed
     SUBDIR += librewolf
     SUBDIR += libwpe

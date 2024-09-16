@@ -283,6 +283,7 @@
     SUBDIR += lasso
     SUBDIR += lastpass-cli
     SUBDIR += lego
+    SUBDIR += libaegis
     SUBDIR += libargon2
     SUBDIR += libassuan
     SUBDIR += libcaes
@@ -296,6 +297,7 @@
     SUBDIR += libgpg-error
     SUBDIR += libgsasl
     SUBDIR += libhijack
+    SUBDIR += libhydrogen
     SUBDIR += libident
     SUBDIR += libkleo
     SUBDIR += libkpass

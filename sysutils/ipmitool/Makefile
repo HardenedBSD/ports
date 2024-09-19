@@ -14,13 +14,9 @@ WWW=		https://codeberg.org/IPMITool/ipmitool
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		cpe tar:bzip2 gmake readline ssl
-=======
 USES=		autoreconf libtool cpe gmake readline ssl
->>>>>>> internal/freebsd/main
 CPE_VENDOR=	sun
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share

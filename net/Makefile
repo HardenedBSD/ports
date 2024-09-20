@@ -1314,6 +1314,7 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
+    SUBDIR += rubygem-gitlab-kas-grpc
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable
@@ -1354,7 +1355,6 @@
     SUBDIR += rubygem-ipaddr
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
-    SUBDIR += rubygem-kas-grpc
     SUBDIR += rubygem-lita-gems
     SUBDIR += rubygem-macaddr
     SUBDIR += rubygem-maxmind-db

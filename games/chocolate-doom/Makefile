@@ -8,26 +8,11 @@ WWW=		https://www.chocolate-doom.org/
 
 LICENSE=	GPLv2
 
-<<<<<<< HEAD
-LIB_DEPENDS=	libpng.so:graphics/png
-
-USES=		gmake pkgconfig python:build sdl
-USE_SDL=	mixer2 net2 sdl2
-GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-BINARY_ALIAS=	python=${PYTHON_CMD}
-
 USE_HARDENING=	safestack
 
-PORTDOCS=	CMDLINE.doom ChangeLog INSTALL.doom NEWS.md NOT-BUGS.md PHILOSOPHY.md \
-		README.md README.Music.md
-
-OPTIONS_DEFINE=	DOCS
-=======
 USES=		autoreconf gmake pkgconfig python:build sdl
 USE_GITHUB=	yes
 GH_TAGNAME=	${PORTNAME}-${DISTVERSION}
->>>>>>> internal/freebsd/main
 USE_RC_SUBR=	chocolate-server
 USE_SDL=	mixer2 net2 sdl2
 

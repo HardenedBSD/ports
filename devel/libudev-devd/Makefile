@@ -1,11 +1,6 @@
 PORTNAME=	libudev-devd
 DISTVERSIONPREFIX=	v
-<<<<<<< HEAD
-DISTVERSION=	0.5.2
-PORTREVISION=	1
-=======
 DISTVERSION=	0.6.0
->>>>>>> internal/freebsd/main
 CATEGORIES=	devel
 
 MAINTAINER=	x11@FreeBSD.org

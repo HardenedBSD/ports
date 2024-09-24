@@ -14,13 +14,9 @@ WWW=		https://htop.dev/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		desktop-file-utils ncurses tar:xz
-=======
 USES=		ncurses tar:xz
->>>>>>> internal/freebsd/main
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-unicode

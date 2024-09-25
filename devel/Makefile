@@ -546,6 +546,7 @@
     SUBDIR += cxxopts
     SUBDIR += cxxtest
     SUBDIR += cxxtools
+    SUBDIR += cython-lint
     SUBDIR += d-feet
     SUBDIR += d-scanner
     SUBDIR += d-spy
@@ -6092,9 +6093,9 @@
     SUBDIR += py-xstatic-angular-schema-form
     SUBDIR += py-xstatic-autosize
     SUBDIR += py-xstatic-bootstrap
-    SUBDIR += py-xstatic-bootstrap3
     SUBDIR += py-xstatic-bootstrap-datepicker
     SUBDIR += py-xstatic-bootstrap-scss
+    SUBDIR += py-xstatic-bootstrap3
     SUBDIR += py-xstatic-bootswatch
     SUBDIR += py-xstatic-d3
     SUBDIR += py-xstatic-font-awesome

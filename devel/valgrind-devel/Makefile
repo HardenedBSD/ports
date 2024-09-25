@@ -14,17 +14,13 @@ WWW=		https://www.valgrind.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 MPROTECT_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
 PAGEEXEC_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
 SEGVGUARD_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
 
-ONLY_FOR_ARCHS=	amd64 i386
-=======
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
->>>>>>> internal/freebsd/main
 
 USES=		autoreconf cpe gmake pathfix perl5 pkgconfig shebangfix \
 		python:3.9+,run tar:bz2

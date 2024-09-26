@@ -5019,10 +5019,12 @@
     SUBDIR += py-jaraco.collections
     SUBDIR += py-jaraco.context
     SUBDIR += py-jaraco.env
+    SUBDIR += py-jaraco.envs
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
     SUBDIR += py-jaraco.logging
     SUBDIR += py-jaraco.packaging
+    SUBDIR += py-jaraco.path
     SUBDIR += py-jaraco.stream
     SUBDIR += py-jaraco.text
     SUBDIR += py-jaraco.util
@@ -6492,6 +6494,7 @@
     SUBDIR += rubygem-aws-sdk-devopsguru
     SUBDIR += rubygem-aws-sdk-directconnect
     SUBDIR += rubygem-aws-sdk-directoryservice
+    SUBDIR += rubygem-aws-sdk-directoryservicedata
     SUBDIR += rubygem-aws-sdk-dlm
     SUBDIR += rubygem-aws-sdk-docdb
     SUBDIR += rubygem-aws-sdk-docdbelastic

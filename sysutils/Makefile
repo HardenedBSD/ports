@@ -1555,6 +1555,8 @@
     SUBDIR += u-boot-qemu-arm
     SUBDIR += u-boot-qemu-arm64
     SUBDIR += u-boot-qemu-riscv64
+    SUBDIR += u-boot-quartz64-a
+    SUBDIR += u-boot-quartz64-b
     SUBDIR += u-boot-riotboard
     SUBDIR += u-boot-rock-pi-4
     SUBDIR += u-boot-rock64

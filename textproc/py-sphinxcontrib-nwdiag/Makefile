@@ -3,11 +3,10 @@ PORTVERSION=	2.0.0
 CATEGORIES=	textproc
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	sphinxcontrib-nwdiag-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Sphinx extension for embedding network-related diagrams
-WWW=		https://github.com/blockdiag/sphinxcontrib-nwdiag
+WWW=		https://github.com/blockdiag/${PORTNAME}
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

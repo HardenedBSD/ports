@@ -6,6 +6,9 @@
     SUBDIR += R-cran-Defaults
     SUBDIR += R-cran-Hmisc
     SUBDIR += R-cran-ModelMetrics
+    SUBDIR += R-cran-R.methodsS3
+    SUBDIR += R-cran-R.oo
+    SUBDIR += R-cran-R.utils
     SUBDIR += R-cran-R6
     SUBDIR += R-cran-RUnit
     SUBDIR += R-cran-Rcpp

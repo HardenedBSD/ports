@@ -5914,6 +5914,7 @@
     SUBDIR += py-tendo
     SUBDIR += py-termcolor
     SUBDIR += py-termcolor-whl
+    SUBDIR += py-terminaltexteffects
     SUBDIR += py-termstyle
     SUBDIR += py-test-utils
     SUBDIR += py-testfixtures
@@ -5924,6 +5925,7 @@
     SUBDIR += py-testresources
     SUBDIR += py-testscenarios
     SUBDIR += py-testtools
+    SUBDIR += py-textualeffects
     SUBDIR += py-thefuzz
     SUBDIR += py-thinc
     SUBDIR += py-thinc8

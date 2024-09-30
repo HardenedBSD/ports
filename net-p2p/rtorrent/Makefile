@@ -20,11 +20,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-debug
 LDFLAGS+=	-lexecinfo -pthread
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
-=======
+
 SUB_FILES=	pkg-message
->>>>>>> internal/freebsd/main
 
 PLIST_FILES=	bin/rtorrent
 PORTDOCS=	README

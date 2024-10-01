@@ -372,7 +372,6 @@
     SUBDIR += mitmproxy
     SUBDIR += mknmz-wwwoffle
     SUBDIR += mnogosearch
-    SUBDIR += mod_amazon_proxy
     SUBDIR += mod_asn
     SUBDIR += mod_auth_cas
     SUBDIR += mod_auth_cookie_mysql2
@@ -2333,11 +2332,9 @@
     SUBDIR += rustypaste-cli
     SUBDIR += s
     SUBDIR += sabredav
-    SUBDIR += sahi
     SUBDIR += samdruckerserver
     SUBDIR += sarg
     SUBDIR += scloader
-    SUBDIR += screego
     SUBDIR += script4rss
     SUBDIR += seahub
     SUBDIR += searx
@@ -2379,7 +2376,6 @@
     SUBDIR += srt
     SUBDIR += stagit
     SUBDIR += stork
-    SUBDIR += subsonic-standalone
     SUBDIR += suitecrm
     SUBDIR += suphp
     SUBDIR += surf
@@ -2390,7 +2386,6 @@
     SUBDIR += tclwebtest
     SUBDIR += tdiary
     SUBDIR += tdom
-    SUBDIR += template_
     SUBDIR += templatelite
     SUBDIR += tgpt
     SUBDIR += thirtybees
@@ -2398,7 +2393,6 @@
     SUBDIR += threema-web
     SUBDIR += thttpd
     SUBDIR += thumbnail_index
-    SUBDIR += thundercache
     SUBDIR += tidy
     SUBDIR += tidy-html5
     SUBDIR += tikiwiki

@@ -364,19 +364,11 @@ BINARY_ALIAS=	sed=gsed
 
 .include <bsd.port.pre.mk>
 
-<<<<<<< HEAD
-.if ${OPSYS} == FreeBSD && ( \
-    (${OSVERSION} >= 1400051 && ${OSVERSION} < 1400057))
-BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
-.endif
-
 .if ${OSVERSION} < 1400000
 # HBSD: OpenJDK is broken in 14-CURRENT.
 OPTIONS_DEFAULT+=	JAVA
 .endif
 
-=======
->>>>>>> internal/freebsd/main
 .if ${ARCH} == powerpc || ${ARCH} == powerpcspe || ${ARCH} == powerpc64
 CONFIGURE_ARGS+=	--disable-skia
 .endif

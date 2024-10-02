@@ -256,6 +256,7 @@
     SUBDIR += cramfs
     SUBDIR += crashme
     SUBDIR += crate
+    SUBDIR += createrepo_c
     SUBDIR += cronic
     SUBDIR += cronolog
     SUBDIR += cronolog-devel

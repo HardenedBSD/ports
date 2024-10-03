@@ -48,6 +48,8 @@ MAKE_ARGS+=	pch=off
 	${PORT_OPTIONS:MLLVM_FROM_PORTS})
 USES+=	llvm:build
 CHOSEN_COMPILER_TYPE=	clang
+.else
+USES+=	compiler:c++17-lang
 .endif
 
 post-patch:

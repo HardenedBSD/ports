@@ -894,6 +894,7 @@
     SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
+    SUBDIR += rocksdb-jni
     SUBDIR += rqlite
     SUBDIR += rrdman
     SUBDIR += rrdmerge

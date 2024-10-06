@@ -99,15 +99,8 @@ MAKE_ENV+=	PLAYWRIGHT_BROWSERS_PATH=${WRKDIR}/pw-browsers \
 # This is a workaround to avoid filesystem violations during poudriere build
 MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
 
-<<<<<<< HEAD
-OPTIONS_DEFINE=	REH
-OPTIONS_DEFAULT=# none
-REH_DESC=	Build remote extension host
-
 USE_HARDENING=	relro:off
 
-=======
->>>>>>> internal/freebsd/main
 NODEJS_DIR=	${.CURDIR:H:H}/www/node20
 .include "${NODEJS_DIR}/Makefile.version"
 ELECTRON_DIR=	${.CURDIR:H:H}/devel/electron30

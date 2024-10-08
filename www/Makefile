@@ -1468,6 +1468,7 @@
     SUBDIR += py-bjoern
     SUBDIR += py-bleach
     SUBDIR += py-bokeh
+    SUBDIR += py-bootstrap-flask
     SUBDIR += py-boto3
     SUBDIR += py-botocore-stubs
     SUBDIR += py-bottle

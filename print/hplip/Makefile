@@ -17,13 +17,9 @@ RUN_DEPENDS=	cups-filters>=0:print/cups-filters \
 		${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}distro>=1.0.1:sysutils/py-distro@${PY_FLAVOR}
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		dos2unix jpeg libtool localbase pkgconfig python \
-=======
 USES=		dos2unix gnome jpeg libtool localbase pkgconfig python \
->>>>>>> internal/freebsd/main
 		shebangfix
 USE_GNOME=	pygobject3:run
 USE_LDCONFIG=	yes

@@ -1662,6 +1662,7 @@ PKG_NOTE_flavor=	${FLAVOR}
 .    endif
 
 WRK_ENV+=		HOME=${WRKDIR} \
+				MACHINE_ARCH=${MACHINE_ARCH} \
 				PWD="$${PWD}" \
 				__MAKE_CONF=${NONEXISTENT}
 .    for e in OSVERSION PATH TERM TMPDIR \

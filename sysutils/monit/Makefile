@@ -1,5 +1,5 @@
 PORTNAME=	monit
-DISTVERSION=	5.34.1
+DISTVERSION=	5.34.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://mmonit.com/monit/dist/
 
@@ -17,7 +17,6 @@ USE_RC_SUBR=	${PORTNAME}
 USE_HARDENING=	safestack
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 SUB_FILES=	pkg-message
 

@@ -1683,6 +1683,7 @@
     SUBDIR += yconalyzer
     SUBDIR += yggdrasil
     SUBDIR += yptransitd
+    SUBDIR += zapret
     SUBDIR += zebra-server
     SUBDIR += zerotier
     SUBDIR += zillion

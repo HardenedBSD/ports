@@ -59,13 +59,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/nspr \
 LDFLAGS+=	-L${LOCALBASE}/lib -L${LOCALBASE}/lib/nss -L${BDB_LIB_DIR} \
 		-L${LUA_LIBDIR}
 
-<<<<<<< HEAD
 CFLAGS+=	-Wno-implicit-function-declaration
 
-CONFLICTS_INSTALL=	rpm2cpio # bin/rpm2cpio
-=======
 CONFLICTS_INSTALL=	rpm2cpio rpm4 rpm4-noopenmp
->>>>>>> internal/freebsd/main
 
 BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
 

@@ -371,7 +371,6 @@
     SUBDIR += mirrorselect
     SUBDIR += mitmproxy
     SUBDIR += mknmz-wwwoffle
-    SUBDIR += mnogosearch
     SUBDIR += mod_asn
     SUBDIR += mod_auth_cas
     SUBDIR += mod_auth_cookie_mysql2
@@ -1728,6 +1727,7 @@
     SUBDIR += py-html3
     SUBDIR += py-html5-parser
     SUBDIR += py-html5lib
+    SUBDIR += py-html5lib-modern
     SUBDIR += py-htmldate
     SUBDIR += py-httmock
     SUBDIR += py-http-parser

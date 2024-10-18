@@ -33,13 +33,6 @@ LLVM_SUFFIX=	${LLVM_RELEASE:C/\.[0-9]\.[0-9]$//}
 DISTINFO_FILE=	${PORTSDIR}/${LLVM_PORT}/distinfo
 NO_ARCH=	yes
 
-<<<<<<< HEAD
-SSP_UNSAFE=	yes
-
-CC=		${LOCALBASE}/bin/clang${LLVM_VERSION}
-CXX=		${LOCALBASE}/bin/clang++${LLVM_VERSION}
-=======
->>>>>>> internal/freebsd/main
 WASI_SYSROOT=	${LOCALBASE}/share/wasi-sysroot
 TRIPLE=		wasm32-wasi
 WITHOUT_CPU_CFLAGS=	yes

@@ -23,13 +23,9 @@ BUILD_DEPENDS+=	${BUILD_DEPENDS_${ARCH}}
 
 LIB_DEPENDS=	libfftw3.so:math/fftw3
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		uidfix zip
-=======
 USES=		localbase:ldflags uidfix zip
->>>>>>> internal/freebsd/main
 USE_GCC=	yes
 USE_LDCONFIG=	yes
 

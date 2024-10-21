@@ -70,7 +70,11 @@
     SUBDIR += portupgrade-devel
     SUBDIR += poudriere
     SUBDIR += poudriere-devel
+<<<<<<< HEAD
     SUBDIR += poudriere-hbsd
+=======
+    SUBDIR += poudriere-dsh2dsh
+>>>>>>> internal/freebsd/main
     SUBDIR += psearch
     SUBDIR += py-FreeBSD-ports
     SUBDIR += py-pnu-portstreelint

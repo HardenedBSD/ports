@@ -15,15 +15,10 @@ LICENSE_FILE=	${WRKSRC}/cgx_${DISTVERSION}/COPYING
 
 RUN_DEPENDS=	ccx:cad/calculix-ccx
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		gl gmake tar:bzip2 compiler:c++11-lib xorg
-USE_GL=		gl glu # uses its own glut
-=======
 USES=		compiler:c++11-lib gl gmake tar:bzip2 xorg
 USE_GL=		gl glu glut
->>>>>>> internal/freebsd/main
 USE_XORG=	ice sm x11 xext xi xmu xt
 
 CXXFLAGS+=	-std=c++98

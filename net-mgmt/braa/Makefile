@@ -11,18 +11,12 @@ WWW=		https://github.com/mteg/braa
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-<<<<<<< HEAD
-LIB_DEPENDS=	libnetsnmp.so:net-mgmt/net-snmp
-
 USE_HARDENING=	pie:off
 
 USES=		gmake
 
-LDFLAGS+=	-lcompat
-=======
 USE_GITHUB=	yes
 GH_ACCOUNT=	mteg
->>>>>>> internal/freebsd/main
 
 PORTDOCS=	README
 PLIST_FILES=	bin/braa

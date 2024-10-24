@@ -15,7 +15,7 @@ WWW=		https://github.com/grehan-freebsd/grub2-bhyve
 
 LICENSE=	GPLv3
 
-USE_HARDENING=	pie:off
+USE_HARDENING=	pie:off fortifysource:off
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex \
 		help2man:misc/help2man

@@ -25,6 +25,8 @@ GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 LDFLAGS+=	-B${LOCALBASE}/bin
 
+USE_HARDENING=	fortifysource:off
+
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 

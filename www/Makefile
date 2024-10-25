@@ -2073,7 +2073,6 @@
     SUBDIR += rubygem-hamlit-rails
     SUBDIR += rubygem-hamlit-rails-rails5
     SUBDIR += rubygem-hamlit-rails-rails50
-    SUBDIR += rubygem-hamlit-rails-rails61
     SUBDIR += rubygem-hashicorp-checkpoint
     SUBDIR += rubygem-heroics
     SUBDIR += rubygem-heroku-api
@@ -2220,7 +2219,6 @@
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5
     SUBDIR += rubygem-rails-settings-cached-rails50
-    SUBDIR += rubygem-rails-settings-cached-rails61
     SUBDIR += rubygem-rails4
     SUBDIR += rubygem-rails5
     SUBDIR += rubygem-rails50

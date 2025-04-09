@@ -1,5 +1,6 @@
 PORTNAME=	heartwood
 DISTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	net-p2p devel
 
 MAINTAINER=	shawn.webb@hardenedbsd.org
@@ -12,7 +13,7 @@ USE_GITLAB=	yes
 GL_SITE=	https://git.hardenedbsd.org
 GL_ACCOUNT=	shawn.webb
 GL_PROJECT=	heartwood
-GL_TAGNAME=	v1.1.0
+GL_TAGNAME=	7f3cd9084e4ae659aaf8b86130a536eb1fcc7586
 
 CARGO_CRATES=	adler-1.0.2 \
 		aead-0.5.2 \
@@ -51,7 +52,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		bumpalo-3.16.0 \
 		byteorder-1.5.0 \
 		cbc-0.1.2 \
-		cc-1.0.95 \
+		cc-1.2.2 \
 		cfg-if-1.0.0 \
 		chacha20-0.9.1 \
 		chacha20poly1305-0.10.1 \
@@ -146,7 +147,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		jobserver-0.1.31 \
 		js-sys-0.3.69 \
 		keccak-0.1.5 \
-		lazy_static-1.4.0 \
+		lazy_static-1.5.0 \
 		lexopt-0.3.0 \
 		libc-0.2.155 \
 		libgit2-sys-0.17.0+1.8.1 \
@@ -197,7 +198,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		primeorder-0.13.6 \
 		proc-macro-error-1.0.4 \
 		proc-macro-error-attr-1.0.4 \
-		proc-macro2-1.0.81 \
+		proc-macro2-1.0.92 \
 		prodash-28.0.0 \
 		qcheck-1.0.0 \
 		qcheck-macros-1.0.0 \
@@ -210,9 +211,9 @@ CARGO_CRATES=	adler-1.0.2 \
 		rand_core-0.6.4 \
 		redox_syscall-0.4.1 \
 		redox_termios-0.1.3 \
-		regex-1.10.4 \
-		regex-automata-0.4.6 \
-		regex-syntax-0.8.3 \
+		regex-1.11.1 \
+		regex-automata-0.4.9 \
+		regex-syntax-0.8.5 \
 		rfc6979-0.4.0 \
 		rsa-0.9.6 \
 		rustix-0.38.34 \
@@ -240,7 +241,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		snapbox-macros-0.3.8 \
 		socket2-0.5.7 \
 		socks5-client-0.4.1 \
-		spin-0.5.2 \
+		spin-0.9.8 \
 		spki-0.7.3 \
 		sqlite-0.32.0 \
 		sqlite3-src-0.5.1 \
@@ -248,35 +249,37 @@ CARGO_CRATES=	adler-1.0.2 \
 		ssh-cipher-0.2.0 \
 		ssh-encoding-0.2.0 \
 		ssh-key-0.6.6 \
+		streaming-iterator-0.1.9 \
 		subtle-2.5.0 \
 		syn-1.0.109 \
-		syn-2.0.60 \
+		syn-2.0.89 \
 		tar-0.4.40 \
 		tempfile-3.10.1 \
 		termion-2.0.3 \
 		termion-3.0.0 \
-		thiserror-1.0.59 \
-		thiserror-impl-1.0.59 \
+		thiserror-1.0.69 \
+		thiserror-impl-1.0.69 \
 		time-0.3.36 \
 		time-core-0.1.2 \
 		time-macros-0.2.18 \
 		timeago-0.4.2 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
-		tree-sitter-0.20.10 \
-		tree-sitter-bash-0.20.5 \
-		tree-sitter-c-0.20.8 \
-		tree-sitter-css-0.20.0 \
-		tree-sitter-go-0.20.0 \
-		tree-sitter-highlight-0.20.1 \
-		tree-sitter-html-0.20.0 \
-		tree-sitter-json-0.20.2 \
-		tree-sitter-md-0.1.7 \
-		tree-sitter-python-0.20.4 \
-		tree-sitter-ruby-0.20.1 \
-		tree-sitter-rust-0.20.4 \
-		tree-sitter-toml-0.20.0 \
-		tree-sitter-typescript-0.20.5 \
+		tree-sitter-0.24.4 \
+		tree-sitter-bash-0.23.3 \
+		tree-sitter-c-0.23.2 \
+		tree-sitter-css-0.23.1 \
+		tree-sitter-go-0.23.4 \
+		tree-sitter-highlight-0.24.4 \
+		tree-sitter-html-0.23.2 \
+		tree-sitter-json-0.24.8 \
+		tree-sitter-language-0.1.2 \
+		tree-sitter-md-0.3.2 \
+		tree-sitter-python-0.23.4 \
+		tree-sitter-ruby-0.23.1 \
+		tree-sitter-rust-0.23.2 \
+		tree-sitter-toml-ng-0.6.0 \
+		tree-sitter-typescript-0.23.2 \
 		typenum-1.17.0 \
 		unicode-bidi-0.3.15 \
 		unicode-display-width-0.3.0 \

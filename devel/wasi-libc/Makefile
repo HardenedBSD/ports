@@ -19,11 +19,7 @@ LICENSE_PERMS_LLVM2=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 BUILD_DEPENDS=	bash:shells/bash \
 		wasi-compiler-rt${LLVM_VERSION}>0:devel/wasi-compiler-rt${LLVM_VERSION}
 
-<<<<<<< HEAD
-FLAVORS=	21 19 20 22 18 17
-=======
-FLAVORS=	19 20 21 22 23 18 17
->>>>>>> rad/freebsd/main
+FLAVORS=	21 19 20 22 23 18 17
 FLAVOR?=	${FLAVORS:[1]}
 
 USES=		cmake llvm:${FLAVOR}

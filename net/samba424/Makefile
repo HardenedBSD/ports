@@ -1,6 +1,6 @@
 PORTNAME=	samba424
 DISTVERSION=	4.24.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES?=	net
 MASTER_SITES=	SAMBA/samba/stable \
 		SAMBA/samba/rc
@@ -98,6 +98,7 @@ CONFIGURE_ARGS+=	${_BUNDLED_LIBS:D--bundled-libraries="${_BUNDLED_LIBS:Q:C|(\\\\
 CONFIGURE_ENV=	PTHREAD_LDFLAGS="-lpthread" \
 		PYTHONHASHSEED=1
 
+FORTIFY_UNSAFE=	1
 MAKE_ARGS=	${WITH_DEBUG:D --verbose}
 MAKE_ENV=	PYTHONHASHSEED=1 \
 		RPCGEN_CPP="${CPP}"
@@ -242,12 +243,12 @@ FAM_CONFIGURE_WITH=	fam
 FRUIT_PREVENTS=		ZEROCONF_NONE
 FRUIT_PREVENTS_MSG=	MacOSX support requires Zeroconf(AVAHI or \
 			MDNSRESPONDER)
-FRUIT_PLIST_FILES=	${MANPAGES}share/man/man8/vfs_fruit.8.gz
+FRUIT_PLIST_FILES=	%%MANPAGES%%share/man/man8/vfs_fruit.8.gz
 FRUIT_VARS=		_SHARED_MODULES+=vfs_fruit
 
 GLUSTERFS_LIB_DEPENDS=		libglusterfs.so:net/glusterfs
 GLUSTERFS_CONFIGURE_ENABLE=	glusterfs
-GLUSTERFS_PLIST_FILES=		${MANPAGES}share/man/man8/vfs_glusterfs.8.gz
+GLUSTERFS_PLIST_FILES=		%%MANPAGES%%share/man/man8/vfs_glusterfs.8.gz
 GLUSTERFS_VARS=			_SHARED_MODULES+=vfs_glusterfs
 
 GPGME_LIB_DEPENDS=	libgpgme.so:security/gpgme
@@ -396,9 +397,9 @@ post-patch:
 		${PATCH_WRKSRC}/dynconfig/wscript
 
 post-install:
-	${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/samba/third_party
-	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -type d -name __pycache__ \
-		-exec ${RM} -r {} +
+	@[ ! -d ${STAGEDIR}${PYTHON_SITELIBDIR} ] || \
+		(${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/samba/third_party && \
+		${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -type d -name __pycache__ -exec ${RM} -r {} +)
 	${FIND} ${STAGEDIR} -type f -empty -delete
 
 .for dir in ${_LOGDIR} ${_RUNDIR} ${_LOCKDIR} ${SAMBA_MODULESDIR}

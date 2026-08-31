@@ -3,6 +3,8 @@ MASTER_SITES=	\
 		SF/avidemux/avidemux/${PORTVERSION}
 DISTNAME=	avidemux_${PORTVERSION}
 
+MAINTAINER?=	vvd@FreeBSD.org
+
 BUILD_DEPENDS+=	${BUILD_DEPENDS_${ARCH}}
 BUILD_DEPENDS_amd64=	yasm:devel/yasm
 BUILD_DEPENDS_i386=	yasm:devel/yasm
@@ -12,11 +14,14 @@ LIB_DEPENDS+=	libmad.so:audio/libmad \
 
 LICENSE=	GPLv2
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
 DEPRECATED=	Obsolete version with various bugs and issues
 EXPIRATION_DATE=2026-08-31
 
+=======
+>>>>>>> rad/freebsd/main
 USE_GNOME=	libxml2
 
 OPTIONS_FILE=	${PORT_DBDIR}/${OPTIONS_NAME:C/-.*//}/options

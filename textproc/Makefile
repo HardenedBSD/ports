@@ -319,7 +319,6 @@
     SUBDIR += ie-hunspell
     SUBDIR += igor
     SUBDIR += iksemel
-    SUBDIR += info2html
     SUBDIR += info2man
     SUBDIR += info_to_html
     SUBDIR += intltool
@@ -463,7 +462,6 @@
     SUBDIR += linuxdoc-tools
     SUBDIR += livediff
     SUBDIR += localize
-    SUBDIR += logseq
     SUBDIR += lookatme
     SUBDIR += loook
     SUBDIR += lowdown
@@ -1893,8 +1891,6 @@
     SUBDIR += ruby-escape
     SUBDIR += ruby-format
     SUBDIR += ruby-htree
-    SUBDIR += ruby-rd-mode.el
-    SUBDIR += ruby-rdtool
     SUBDIR += ruby-rttool
     SUBDIR += rubygem-abbrev
     SUBDIR += rubygem-action_text-trix

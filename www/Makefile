@@ -69,7 +69,6 @@
     SUBDIR += apache-mode.el
     SUBDIR += apache24
     SUBDIR += aquatone
-    SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += asql
     SUBDIR += authelia
@@ -325,7 +324,6 @@
     SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
-    SUBDIR += joomla4
     SUBDIR += joomla5
     SUBDIR += joomla6
     SUBDIR += jwt-cli
@@ -531,6 +529,8 @@
     SUBDIR += nginx-lite
     SUBDIR += nginx-module-lua
     SUBDIR += nginx-module-lua-stream
+    SUBDIR += nginx-module-ndk
+    SUBDIR += nginx-module-njs
     SUBDIR += nginx-naxsi
     SUBDIR += nginx-prometheus-exporter
     SUBDIR += nginx-ultimate-bad-bot-blocker
@@ -1575,13 +1575,6 @@
     SUBDIR += py-dash-bootstrap-components
     SUBDIR += py-ddgs
     SUBDIR += py-dj-database-url
-    SUBDIR += py-dj42-django-picklefield
-    SUBDIR += py-dj42-django-ranged-response
-    SUBDIR += py-dj42-django-simple-captcha
-    SUBDIR += py-dj42-django-webpack-loader
-    SUBDIR += py-dj42-django_statici18n
-    SUBDIR += py-dj42-djangorestframework
-    SUBDIR += py-dj42-djangosaml2
     SUBDIR += py-dj60-channels
     SUBDIR += py-dj60-django-auth-ldap
     SUBDIR += py-dj60-django-choices-field
@@ -1711,7 +1704,6 @@
     SUBDIR += py-django-voting
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
-    SUBDIR += py-django42
     SUBDIR += py-django52
     SUBDIR += py-django60
     SUBDIR += py-django61
@@ -1972,8 +1964,6 @@
     SUBDIR += py-scalar-fastapi
     SUBDIR += py-scgi
     SUBDIR += py-scrapy
-    SUBDIR += py-seafdav
-    SUBDIR += py-seafobj
     SUBDIR += py-searxng-devel
     SUBDIR += py-secure-cookie
     SUBDIR += py-selector
@@ -2400,6 +2390,7 @@
     SUBDIR += rubygem-rack-protection3
     SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-proxy-gitlab
+    SUBDIR += rubygem-rack-proxy0
     SUBDIR += rubygem-rack-session
     SUBDIR += rubygem-rack-session-gitlab
     SUBDIR += rubygem-rack-session10
@@ -2568,7 +2559,6 @@
     SUBDIR += sarg
     SUBDIR += scloader
     SUBDIR += script4rss
-    SUBDIR += seahub
     SUBDIR += selenium
     SUBDIR += serendipity
     SUBDIR += serf

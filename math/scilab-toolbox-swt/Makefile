@@ -15,13 +15,9 @@ EXPIRATION_DATE=	2027-01-09
 BUILD_DEPENDS=	${SCILAB_CMD}:math/scilab
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off relro:off
 
-USES=		dos2unix zip
-=======
 USES=		dos2unix fortran zip
->>>>>>> rad/freebsd/main
 
 SCILAB_CMD=	${LOCALBASE}/bin/scilab-adv-cli
 SCILAB_ARGS=	-noatomsautoload -nb -nouserstartup

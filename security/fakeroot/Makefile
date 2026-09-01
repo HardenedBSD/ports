@@ -12,18 +12,11 @@ LICENSE=	GPLv3
 
 BUILD_DEPENDS=	po4a:textproc/po4a
 
-<<<<<<< HEAD
 USE_HARDENING=	fortifysource:off
 
-GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-CONFIGURE_ARGS=		--with-ipc=tcp
-INSTALL_TARGET=	install-strip
-=======
 USES=	libtool meson tar:xz
 
 MESON_ARGS=		-Dipc=tcp
->>>>>>> rad/freebsd/main
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}

@@ -1,3 +1,233 @@
+  <vuln vid="f55676d9-a65f-11f1-a49c-00a0980083d7">
+    <topic>giflib -- Buffer Overflow vulnerability</topic>
+    <affects>
+    <package>
+	<name>giflib</name>
+	<range><le>6.1.3</le></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://github.com/zakkanijia/POC/blob/main/giflib/giftool/giflib_giftool_gce_len_heap_oobwrite_disclosure.md reports:</p>
+	<blockquote cite="https://github.com/zakkanijia/POC/blob/main/giflib/giftool/giflib_giftool_gce_len_heap_oobwrite_disclosure.md">
+	  <p>Buffer Overflow vulnerability in giflib allows a remote
+	attacker to cause a denial of service via the EGifGCBToExtension
+	overwriting an existing Graphic Control Extension block without
+	validating its allocated size.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-26740</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-26740</url>
+    </references>
+    <dates>
+      <discovery>2026-03-18</discovery>
+      <entry>2026-09-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="11ab3b16-a65d-11f1-a49c-00a0980083d7">
+    <topic>expat2 -- Out-of-bounds Read</topic>
+    <affects>
+    <package>
+	<name>expat2</name>
+	<range><lt>2.8.4</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://github.com/libexpat/libexpat/pull/1331 reports:</p>
+	<blockquote cite="https://github.com/libexpat/libexpat/pull/1331">
+	  <p>Expat through 2.8.3 contains an out-of-bounds read vulnerability
+	that allows attackers to trigger memory corruption by processing
+	XML with external entity parsers created via
+	XML_ExternalEntityParserCreate.  A struct size mismatch between
+	ELEMENT_TYPE members causes storeAtts to read the attIndex member
+	past allocated memory boundaries, resulting in failure to normalize
+	whitespace in non-CDATA attributes or a wild pointer dereference
+	causing a segfault.  This vulnerability was introduced by the fix
+	for CVE-2026-66046.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-76641</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-76641</url>
+    </references>
+    <dates>
+      <discovery>2026-08-20</discovery>
+      <entry>2026-09-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="88917664-a65c-11f1-a49c-00a0980083d7">
+    <topic>expat2 -- Inefficient Algorithmic Complexity</topic>
+    <affects>
+    <package>
+	<name>expat2</name>
+	<range><lt>2.8.4</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>https://github.com/libexpat/libexpat/pull/1321 reports:</p>
+	<blockquote cite="https://github.com/libexpat/libexpat/pull/1321">
+	  <p>Expat through 2.8.3 contains a denial of service vulnerability
+	caused by quadratic algorithmic complexity in the storeAtts()
+	function in xmlparse.c, where processing N specified attributes
+	with non-normalized values triggers an O(N^2) linear scan of
+	elementType->defaultAtts to determine CDATA status.  A remote
+	unauthenticated attacker can supply a single well-formed XML document
+	of a few megabytes to an application parsing untrusted XML to cause
+	excessive CPU consumption, resulting in denial of service without
+	requiring authentication, external entity resolution, or non-default
+	parser options.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-66046</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-66046</url>
+    </references>
+    <dates>
+      <discovery>2026-08-18</discovery>
+      <entry>2026-09-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e9dfc357-a63f-11f1-9195-4c526214c986">
+    <topic>Erlang/OTP -- multiple vulnerabilities in inets, stdlib, snmp and eldap</topic>
+    <affects>
+      <package>
+	<name>erlang</name>
+	<range><lt>28.5.0.6,4</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime27</name>
+	<range><lt>27.3.4.17</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime28</name>
+	<range><lt>28.5.0.6</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime29</name>
+	<range><lt>29.0.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Erlang/OTP project reports:</p>
+	<blockquote cite="https://github.com/erlang/otp/security/advisories">
+	  <p>OTP 29.0.6, 28.5.0.6 and 27.3.4.17 fix the following
+	  issues, most of them in the inets httpd and httpc
+	  implementations:</p>
+	  <ul>
+	    <li>CVE-2026-55951: httpc Memory Exhaustion via Unbounded Header Accumulation.</li>
+	    <li>CVE-2026-59696: stdlib: Denial-of-Service enabled by Unbounded Integer Conversion.</li>
+	    <li>CVE-2026-66357: HTTP Request Smuggling via obs-fold Header Continuation in httpd.</li>
+	    <li>CVE-2026-66835: Possible directory protection bypass in Erlang-OTP inets httpd.</li>
+	    <li>CVE-2026-69664: Denial of Service via Malformed Chunk Size in httpd.</li>
+	    <li>CVE-2026-70399: Denial of Service via Unenforced Default max_clients Limit in httpd.</li>
+	    <li>CVE-2026-70405: snmp: Denial-of-Service enabled by Unbounded Integer Conversion.</li>
+	    <li>CVE-2026-70409: eldap: Denial-of-Service enabled by Unbounded Integer Conversion.</li>
+	    <li>CVE-2026-71380: Denial of Service via Body-Read Timeout Gap in httpd (Slowloris Variant).</li>
+	    <li>CVE-2026-71562: inets: Denial-of-Service enabled by Unbounded Integer Conversion.</li>
+	    <li>CVE-2026-73270: Authentication Bypass via Case-Insensitive Filesystem Path Matching in httpd mod_auth.</li>
+	    <li>CVE-2026-73276: HTTP Request Smuggling via Whitespace-Before-Colon Header Dropping in httpd.</li>
+	    <li>CVE-2026-73812: HTTP Request Smuggling via Transfer-Encoding and Content-Length in httpd.</li>
+	    <li>CVE-2026-74835: Memory Exhaustion via Unenforced max_body_size During Chunked Body Reception in httpd.</li>
+	    <li>CVE-2026-74994: Authentication Bypass via Directory Namespace Collapse in httpd mod_auth (dets/mnesia backends).</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-55951</cvename>
+      <cvename>CVE-2026-59696</cvename>
+      <cvename>CVE-2026-66357</cvename>
+      <cvename>CVE-2026-66835</cvename>
+      <cvename>CVE-2026-69664</cvename>
+      <cvename>CVE-2026-70399</cvename>
+      <cvename>CVE-2026-70405</cvename>
+      <cvename>CVE-2026-70409</cvename>
+      <cvename>CVE-2026-71380</cvename>
+      <cvename>CVE-2026-71562</cvename>
+      <cvename>CVE-2026-73270</cvename>
+      <cvename>CVE-2026-73276</cvename>
+      <cvename>CVE-2026-73812</cvename>
+      <cvename>CVE-2026-74835</cvename>
+      <cvename>CVE-2026-74994</cvename>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-f9fw-mg7q-4g3x</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-8qw4-2chm-mvj2</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-qh2f-33hj-37qf</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-r4vv-vc2c-2fw6</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-mr35-8h7w-w3gq</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-pwvh-c689-f8q5</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-q7cq-pfgf-5hr7</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-9vgh-c8cm-m9p4</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-5vp4-58hc-h8cc</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-cqx9-9hq6-m8wf</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-mh78-93cr-jx8f</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-6v7q-jwgh-cx8p</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-7j6m-4ffg-hg46</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-8qrh-x566-5xv5</url>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-c3cq-q8x6-547g</url>
+    </references>
+    <dates>
+      <discovery>2026-09-01</discovery>
+      <entry>2026-09-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="62b56853-a609-11f1-9195-4c526214c986">
+    <topic>Erlang/OTP -- remote crash via gen_tcp with {packet,4}</topic>
+    <affects>
+      <package>
+	<name>erlang</name>
+	<range><lt>28.5.0.6,4</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime27</name>
+	<range><lt>27.3.4.17</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime28</name>
+	<range><lt>28.5.0.6</lt></range>
+      </package>
+      <package>
+	<name>erlang-runtime29</name>
+	<range><lt>29.0.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OTP 29.0.6 release notes report:</p>
+	<blockquote cite="https://github.com/erlang/otp/releases/tag/OTP-29.0.6">
+	  <p>A gen_tcp socket using the inet driver and {packet,4} had
+	  a bug if receiving a packet with size just below INT_MAX.</p>
+	  <p>That packet size wrapped in size calculations and made the
+	  received data overwrite its allocation and trash allocator
+	  metadata and subsequent block(s), causing the VM to crash.</p>
+	  <p>This made it possible for anyone to remotely crash an
+	  Erlang node that used {packet,4} on a reachable socket.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-75538</cvename>
+      <url>https://github.com/erlang/otp/security/advisories/GHSA-8m6r-2pj2-25pm</url>
+      <url>https://github.com/erlang/otp/releases/tag/OTP-29.0.6</url>
+      <url>https://github.com/erlang/otp/releases/tag/OTP-28.5.0.6</url>
+      <url>https://github.com/erlang/otp/releases/tag/OTP-27.3.4.17</url>
+    </references>
+    <dates>
+      <discovery>2026-09-01</discovery>
+      <entry>2026-09-01</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="16cb13dc-a55d-11f1-bf98-a8a1599412c6">
     <topic>chromium -- security fixes</topic>
     <affects>

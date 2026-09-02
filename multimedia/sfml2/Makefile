@@ -1,9 +1,9 @@
 PORTNAME=	SFML
 DISTVERSION=	2.6.2
-CATEGORIES=	devel
+CATEGORIES=	multimedia devel
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Simple and Fast Multimedia Library
+MAINTAINER=	agh@riseup.net
+COMMENT=	Simple and Fast Multimedia Library 2.x legacy
 WWW=		https://www.sfml-dev.org/ \
 		https://github.com/SFML/SFML
 
@@ -15,7 +15,7 @@ USE_GITHUB=	yes
 CMAKE_ON=	SFML_USE_SYSTEM_DEPS
 USE_LDCONFIG=	yes
 
-CONFLICTS=	sfml251
+CONFLICTS=	sfml3
 
 PORTDATA=	*
 PORTDOCS=	*

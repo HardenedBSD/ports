@@ -18,20 +18,9 @@ LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 USES=		autoreconf compiler:c++11-lang cpe gmake libtool \
 		localbase:ldflags pathfix pkgconfig
 CPE_VENDOR=	ntop
-<<<<<<< HEAD
-USE_LDCONFIG=	yes
 
 USE_HARDENING=	pie:off
 
-CONFIGURE_ARGS=	--with-pic --with-local-libgcrypt
-CPPFLAGS=	-I${LOCALBASE}/include/json-c
-LIBS=		-ljson-c
-MAKE_ENV=	EXAMPLESDIR="${EXAMPLESDIR_REL}"
-GNU_CONFIGURE=	yes
-INSTALL_TARGET=	install-strip
-
-=======
->>>>>>> rad/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	ntop
 GH_PROJECT=	nDPI

@@ -1,3 +1,85 @@
+  <vuln vid="0bfb082c-a7b6-11f1-a655-3497f65b111b">
+    <topic>njs -- heap buffer overflow in XML exclusive canonicalization</topic>
+    <affects>
+      <package>
+	<name>njs</name>
+	<name>libnjs</name>
+	<name>nginx-module-njs</name>
+	<range><lt>1.0.1</lt></range>
+      </package>
+      <package>
+	<name>nginx-full</name>
+	<range><lt>1.30.4_7,3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>F5 reports:</p>
+	<blockquote cite="https://my.f5.com/manage/s/article/K000162602">
+	  <p>A flaw in the NGINX JavaScript XML module allows an
+	    out-of-bounds write when xml.exclusiveC14n() processes a
+	    crafted XML namespace prefix list.  This may lead to worker
+	    process crashes, heap corruption or memory disclosure.  The
+	    NGINX SAML reference implementation is affected because it
+	    processes SAML data before signature verification.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-78689</cvename>
+      <url>https://my.f5.com/manage/s/article/K000162602</url>
+      <url>https://nginx.org/en/docs/njs/changes.html</url>
+    </references>
+    <dates>
+      <discovery>2026-09-02</discovery>
+      <entry>2026-09-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="271556c1-ddbf-4d44-95e6-a731841539b2">
+    <topic>electron42 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron42</name>
+	<range><lt>42.11.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v42.11.1">
+	  <p>This update fixes the following vulnerabilities: CVE-2026-15764, CVE-2026-15765,
+	    CVE-2026-15766, CVE-2026-15767, CVE-2026-15768, CVE-2026-15769, CVE-2026-15770,
+	    CVE-2026-15771, CVE-2026-15772, CVE-2026-15773, CVE-2026-15774, CVE-2026-15775,
+	    CVE-2026-15776, CVE-2026-15777, and CVE-2026-15778.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-15764</cvename>
+      <cvename>CVE-2026-15765</cvename>
+      <cvename>CVE-2026-15766</cvename>
+      <cvename>CVE-2026-15767</cvename>
+      <cvename>CVE-2026-15768</cvename>
+      <cvename>CVE-2026-15769</cvename>
+      <cvename>CVE-2026-15770</cvename>
+      <cvename>CVE-2026-15771</cvename>
+      <cvename>CVE-2026-15772</cvename>
+      <cvename>CVE-2026-15773</cvename>
+      <cvename>CVE-2026-15774</cvename>
+      <cvename>CVE-2026-15775</cvename>
+      <cvename>CVE-2026-15776</cvename>
+      <cvename>CVE-2026-15777</cvename>
+      <cvename>CVE-2026-15778</cvename>
+      <url>https://github.com/electron/electron/pull/53344</url>
+    </references>
+    <dates>
+      <discovery>2026-09-01</discovery>
+      <entry>2026-09-03</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="102bc631-a6da-11f1-ba21-00e0edd85c6a">
     <topic>jenkins -- multiple vulnerabilities</topic>
     <affects>
@@ -198,35 +280,6 @@
     <dates>
       <discovery>2026-09-01</discovery>
       <entry>2026-09-02</entry>
-    </dates>
-  </vuln>
-
-  <vuln vid="f55676d9-a65f-11f1-a49c-00a0980083d7">
-    <topic>giflib -- Buffer Overflow vulnerability</topic>
-    <affects>
-    <package>
-	<name>giflib</name>
-	<range><le>6.1.3</le></range>
-    </package>
-    </affects>
-    <description>
-	<body xmlns="http://www.w3.org/1999/xhtml">
-	<p>https://github.com/zakkanijia/POC/blob/main/giflib/giftool/giflib_giftool_gce_len_heap_oobwrite_disclosure.md reports:</p>
-	<blockquote cite="https://github.com/zakkanijia/POC/blob/main/giflib/giftool/giflib_giftool_gce_len_heap_oobwrite_disclosure.md">
-	  <p>Buffer Overflow vulnerability in giflib allows a remote
-	attacker to cause a denial of service via the EGifGCBToExtension
-	overwriting an existing Graphic Control Extension block without
-	validating its allocated size.</p>
-	</blockquote>
-	</body>
-    </description>
-    <references>
-      <cvename>CVE-2026-26740</cvename>
-      <url>https://cveawg.mitre.org/api/cve/CVE-2026-26740</url>
-    </references>
-    <dates>
-      <discovery>2026-03-18</discovery>
-      <entry>2026-09-01</entry>
     </dates>
   </vuln>
 

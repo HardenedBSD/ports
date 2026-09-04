@@ -1,6 +1,5 @@
 PORTNAME=	ndpi
-PORTVERSION=	5.0.d20260502
-PORTREVISION=	1
+PORTVERSION=	6.0.d20260828
 PORTEPOCH=	1
 CATEGORIES=	net
 
@@ -11,14 +10,15 @@ WWW=		https://www.ntop.org/products/deep-packet-inspection/ndpi/
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	librrd.so:databases/rrdtool \
+LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
+		libgpg-error.so:security/libgpg-error \
 		libjson-c.so:devel/json-c \
-		libgcrypt.so:security/libgcrypt \
-		libgpg-error.so:security/libgpg-error
+		librrd.so:databases/rrdtool
 
-USES=		autoreconf compiler:c++11-lang cpe libtool localbase:ldflags pathfix \
-		pkgconfig
+USES=		autoreconf compiler:c++11-lang cpe gmake libtool \
+		localbase:ldflags pathfix pkgconfig
 CPE_VENDOR=	ntop
+<<<<<<< HEAD
 USE_LDCONFIG=	yes
 
 USE_HARDENING=	pie:off
@@ -30,12 +30,26 @@ MAKE_ENV=	EXAMPLESDIR="${EXAMPLESDIR_REL}"
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
+=======
+>>>>>>> rad/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	ntop
 GH_PROJECT=	nDPI
-GH_TAGNAME=	70ca5b8
+GH_TAGNAME=	a9f34d0
+USE_LDCONFIG=	yes
 
-PLIST_SUB=	MAJOR_VER=${PORTVERSION:R:R} VER=${PORTVERSION:R}
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-dependency-tracking \
+		--with-local-libgcrypt \
+		--with-pic
+MAKE_ENV=	EXAMPLESDIR="${EXAMPLESDIR_REL}"
+INSTALL_TARGET=	install-strip
+
+CPPFLAGS+=	-I${LOCALBASE}/include/json-c
+LIBS+=		-ljson-c
+
+PLIST_SUB=	MAJOR_VER=${PORTVERSION:R:R} \
+		VER=${PORTVERSION:R}
 
 post-configure:
 	@${REINPLACE_CMD} -e 's/#define PACKAGE/#define NDPI_PACKAGE/g' \

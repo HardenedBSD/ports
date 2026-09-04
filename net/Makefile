@@ -521,6 +521,7 @@
     SUBDIR += nats-streaming-server
     SUBDIR += nats-surveyor
     SUBDIR += nats-top
+    SUBDIR += nats-tui
     SUBDIR += natscli
     SUBDIR += nbd-server
     SUBDIR += nbdkit

@@ -224,6 +224,7 @@
     SUBDIR += cmockery2
     SUBDIR += cmogstored
     SUBDIR += cmospwd
+    SUBDIR += cni-dnsname
     SUBDIR += colorize
     SUBDIR += conan
     SUBDIR += confctl

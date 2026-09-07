@@ -1,6 +1,6 @@
 PORTNAME=	freeipa-server
 DISTVERSION=	4.13.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	https://codeberg.org/freeipa/freeipa/releases/download/release-${DISTVERSION:S/./-/g}/
 DISTNAME=	freeipa-${DISTVERSION}
@@ -120,7 +120,8 @@ post-patch:
 		${WRKSRC}/ipaplatform/freebsd/services.py \
 		${WRKSRC}/ipapython/ipautil.py \
 		${WRKSRC}/ipaserver/install/cainstance.py \
-		${WRKSRC}/ipaserver/install/server/upgrade.py
+		${WRKSRC}/ipaserver/install/server/upgrade.py \
+		${WRKSRC}/util/ipa_ldap.h
 
 post-build:
 	${MAKE_CMD} -C ${WRKSRC}/client \

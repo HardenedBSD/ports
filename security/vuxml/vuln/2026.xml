@@ -1,3 +1,45 @@
+  <vuln vid="e7726f5e-a9d0-11f1-93c7-8447094a420f">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube-php82</name>
+	<name>roundcube-php83</name>
+	<name>roundcube-php84</name>
+	<name>roundcube-php85</name>
+	<name>roundcube-php85</name>
+	<range><lt>1.7.3,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://roundcube.net/news/2026/09/06/security-updates-1.6.19-and-1.7.4">
+	  <ul>
+	    <li>CSS declaration smuggling via un-encoded ampersand emission</li>
+	    <li>CSS property injection via body background attribute</li>
+	    <li>email header injection via bare CR in the subject field</li>
+	    <li>email header injection via C-escape \r in the recipient display name</li>
+	    <li>email header injection via identity’s organization field</li>
+	    <li>zero-click stored XSS via TNEF MIME tag injection in the attachment URL</li>
+	    <li>XSS in the HTML editor using text/enriched part content</li>
+	    <li>cross-user access in contact group membership (add/remove) in the SQL address book</li>
+	    <li>is_local_url() bypass via trailing-dot FQDN in stylesheet URL</li>
+	    <li>remote content blocking bypass via CSS escapes in FuncIRI attributes</li>
+	    <li>remote-content blocker bypass via SVG SMIL src animation</li>
+	    <li>SSRF bypass in Roundcube CSS proxy via hexadecimal IPv6-mapped IPv4 addresses</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://roundcube.net/news/2026/09/06/security-updates-1.6.19-and-1.7.4</url>
+    </references>
+    <dates>
+      <discovery>2026-09-06</discovery>
+      <entry>2026-09-06</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="25012057-a886-11f1-a836-b42e991fc52e">
     <topic>OpenVPN: denial of service</topic>
     <affects>

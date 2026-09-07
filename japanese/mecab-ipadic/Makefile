@@ -1,6 +1,6 @@
 PORTNAME=	mecab-ipadic
 DISTVERSION=	2.7.0-20070801
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	japanese textproc
 MASTER_SITES=	https://sourceforge.net/projects/mecab/files/${PORTNAME}/${DISTVERSION}/ \
 		https://distfiles.sigtrap.nl/
@@ -11,12 +11,12 @@ WWW=		https://taku910.github.io/mecab/
 
 .if empty(PKGNAMESUFFIX)
 USES=		metaport
-OPTIONS_RADIO=	CHARSET
-OPTIONS_RADIO_CHARSET=	EUCJP SHIFTJIS UTF8
+OPTIONS_SINGLE=	CHARSET
+OPTIONS_SINGLE_CHARSET=	EUCJP SHIFTJIS UTF8
 OPTIONS_DEFAULT=UTF8
-EUCJP_DESC=	Use EUC-JP as dictionary charset.
-SHIFTJIS_DESC=	Use SHIFT-JIS as dictionary charset.
-UTF8_DESC=	Use UTF-8 as dictionary charset.
+EUCJP_DESC=	Use EUC-JP as dictionary charset
+SHIFTJIS_DESC=	Use SHIFT-JIS as dictionary charset
+UTF8_DESC=	Use UTF-8 as dictionary charset
 
 EUCJP_RUN_DEPENDS=	ja-mecab-ipadic-eucjp>0:japanese/mecab-ipadic-eucjp
 SHIFTJIS_RUN_DEPENDS=	ja-mecab-ipadic-sjis>0:japanese/mecab-ipadic-sjis
@@ -61,7 +61,7 @@ PLIST_FILES=	lib/mecab/dic/ipadic/char.bin \
 		lib/mecab/dic/ipadic/sys.dic \
 		lib/mecab/dic/ipadic/unk.dic
 
-CONFLICTS_INSTALL=	ja-mecab-ipadic*
+CONFLICTS_INSTALL=	ja-mecab-ipadic-[^0-9]*
 
 .endif # !empty(PKGNAMESUFFIX)
 

@@ -1,6 +1,7 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER}
+PORTREVISION=	1
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 CATEGORIES=	devel
@@ -481,6 +482,8 @@ do-install:
 	${COPYTREE_SHARE} node_headers ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
 	${COPYTREE_SHARE} gen/electron/buildflags ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC}/out/${BUILDTYPE} && \
+	${COPYTREE_SHARE} gen/electron/tsc ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
 	${COPYTREE_SHARE} gen/v8/embedded.S ${STAGEDIR}${DATADIR}
 	${RLN} ${STAGEDIR}${DATADIR}/electron \

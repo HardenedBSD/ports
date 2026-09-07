@@ -143,6 +143,7 @@
     SUBDIR += R-cran-sfsmisc
     SUBDIR += R-cran-sourcetools
     SUBDIR += R-cran-sparsevctrs
+    SUBDIR += R-cran-styler
     SUBDIR += R-cran-sys
     SUBDIR += R-cran-systemfonts
     SUBDIR += R-cran-testit
@@ -4546,6 +4547,7 @@
     SUBDIR += py-array-api-compat
     SUBDIR += py-array-api-strict
     SUBDIR += py-arro3-core
+    SUBDIR += py-arro3-io
     SUBDIR += py-arrow
     SUBDIR += py-asciimatics
     SUBDIR += py-asgi-lifespan

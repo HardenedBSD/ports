@@ -1019,6 +1019,7 @@
     SUBDIR += py-netbox-secrets
     SUBDIR += py-nethsm
     SUBDIR += py-netmiko
+    SUBDIR += py-nettacker
     SUBDIR += py-nitrokey
     SUBDIR += py-noiseprotocol
     SUBDIR += py-notus-scanner

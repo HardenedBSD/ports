@@ -10,6 +10,8 @@ WWW=		https://tomcat.apache.org/native-${PORTVERSION:R}-doc/
 
 LICENSE=	APACHE20
 
+PORTSCOUT=	limit:^1\.
+
 LIB_DEPENDS=	libapr-1.so:devel/apr1
 
 USES=		java libtool ssl

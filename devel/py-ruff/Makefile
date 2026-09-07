@@ -1,5 +1,5 @@
 PORTNAME=	ruff
-DISTVERSION=	0.16.2
+DISTVERSION=	0.16.6
 CATEGORIES=	devel python
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,7 +25,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	astral-sh
 
 CARGO_CRATES=	adler2-2.0.1 \
-		aho-corasick-1.1.4 \
+		aho-corasick-1.1.5 \
 		alloca-0.4.0 \
 		allocator-api2-0.2.21 \
 		android_system_properties-0.1.5 \
@@ -42,6 +42,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		anstyle-wincon-3.0.10 \
 		anyhow-1.0.104 \
 		approx-0.5.1 \
+		ar_archive_writer-0.5.3 \
 		arc-swap-1.9.2 \
 		argfile-1.0.0 \
 		arrayvec-0.7.8 \
@@ -76,8 +77,8 @@ CARGO_CRATES=	adler2-2.0.1 \
 		ciborium-0.2.2 \
 		ciborium-io-0.2.2 \
 		ciborium-ll-0.2.2 \
-		clap-4.6.4 \
-		clap_builder-4.6.2 \
+		clap-4.6.5 \
+		clap_builder-4.6.5 \
 		clap_complete-4.5.58 \
 		clap_complete_command-0.6.1 \
 		clap_complete_nushell-4.5.8 \
@@ -166,7 +167,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		getrandom-0.3.4 \
 		getrandom-0.4.2 \
 		glob-0.3.4 \
-		globset-0.4.19 \
+		globset-0.4.20 \
 		globwalk-0.9.1 \
 		half-2.6.0 \
 		hashbrown-0.14.5 \
@@ -188,7 +189,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		id-arena-2.3.0 \
 		idna-1.1.0 \
 		idna_adapter-1.2.1 \
-		ignore-0.4.31 \
+		ignore-0.4.33 \
 		imara-diff-0.2.0 \
 		imperative-1.0.7 \
 		indexmap-2.14.0 \
@@ -259,6 +260,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		num-traits-0.2.19 \
 		objc2-0.6.3 \
 		objc2-encode-4.1.0 \
+		object-0.39.1 \
 		once_cell-1.21.4 \
 		once_cell_polyfill-1.70.1 \
 		oorandom-11.1.5 \
@@ -306,6 +308,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		proc-macro-error2-2.0.1 \
 		proc-macro-utils-0.10.0 \
 		proc-macro2-1.0.107 \
+		psm-0.1.32 \
 		ptr_meta-0.3.1 \
 		ptr_meta_derive-0.3.1 \
 		pyproject-toml-0.13.7 \
@@ -332,7 +335,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		ref-cast-1.0.25 \
 		ref-cast-impl-1.0.25 \
 		regex-1.13.1 \
-		regex-automata-0.4.16 \
+		regex-automata-0.4.18 \
 		regex-lite-0.1.7 \
 		regex-syntax-0.8.11 \
 		rend-0.5.3 \
@@ -368,13 +371,14 @@ CARGO_CRATES=	adler2-2.0.1 \
 		shlex-2.0.1 \
 		simdutf8-0.1.5 \
 		similar-2.7.0 \
-		similar-3.1.1 \
+		similar-3.1.2 \
 		siphasher-1.0.1 \
 		slab-0.4.12 \
 		smallvec-1.15.2 \
 		snapbox-1.0.0 \
 		snapbox-macros-1.0.0 \
 		stable_deref_trait-1.2.0 \
+		stacker-0.1.25 \
 		static_assertions-1.1.0 \
 		statrs-0.18.0 \
 		strip-ansi-escapes-0.2.1 \

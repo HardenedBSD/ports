@@ -286,6 +286,7 @@
     SUBDIR += ddrescueview
     SUBDIR += debhelper
     SUBDIR += debootstrap
+    SUBDIR += dekit
     SUBDIR += deltarpm
     SUBDIR += deltup
     SUBDIR += deskflow
@@ -778,7 +779,6 @@
     SUBDIR += mountsmb2
     SUBDIR += mpifileutils
     SUBDIR += mping
-    SUBDIR += mprocs
     SUBDIR += mptd
     SUBDIR += msiklm
     SUBDIR += msktutil

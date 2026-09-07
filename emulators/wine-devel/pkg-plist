@@ -3509,6 +3509,7 @@ lib/wine/%%WINEARCH%%-windows/loadperf.dll
 lib/wine/%%WINEARCH%%-windows/localspl.dll
 lib/wine/%%WINEARCH%%-windows/localui.dll
 lib/wine/%%WINEARCH%%-windows/lodctr.exe
+lib/wine/%%WINEARCH%%-windows/lsass.exe
 lib/wine/%%WINEARCH%%-windows/lz32.dll
 lib/wine/%%WINEARCH%%-windows/magnification.dll
 lib/wine/%%WINEARCH%%-windows/makecab.exe

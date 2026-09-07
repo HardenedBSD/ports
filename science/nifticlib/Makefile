@@ -10,13 +10,11 @@ WWW=		https://nifti.nimh.nih.gov/
 LICENSE=	PD
 
 USES=		gmake
-<<<<<<< HEAD
 LLD_UNSAFE= yes
-=======
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	NIFTI-Imaging
 GH_PROJECT=	nifti_clib
->>>>>>> rad/freebsd/main
 
 CONFLICTS=	dbh	# dbh.h
 

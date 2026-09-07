@@ -1,7 +1,7 @@
 PORTNAME=	freenginx
 PORTVERSION=	${NGINX_VERSION}
 .include "version.mk"
-PORTREVISION?=	11
+PORTREVISION?=	12
 CATEGORIES=	www
 MASTER_SITES=	https://freenginx.org/download/ \
 		LOCAL/joneum
@@ -337,6 +337,11 @@ pre-configure-ARRAYVAR-on:
 	@${RM} -rf ${WRKSRC_arrayvar}
 	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-array-var ${WRKSRC_arrayvar}
 	@${CHMOD} -R u+w ${WRKSRC_arrayvar}
+
+pre-configure-CACHE_PURGE-on:
+	@${RM} -rf ${WRKSRC_cache_purge}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-cache-purge ${WRKSRC_cache_purge}
+	@${CHMOD} -R u+w ${WRKSRC_cache_purge}
 
 pre-configure-DEVEL_KIT-on:
 	@${RM} -rf ${WRKSRC_devel_kit}

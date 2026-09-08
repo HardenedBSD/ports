@@ -1,12 +1,16 @@
 [Desktop Entry]
-Type=Application
 Name=Signal
+<<<<<<< HEAD
 Comment=Signal - Private Messenger
 Icon=signal-desktop
 Exec=signal-desktop --js-flags=--jitless  -- %u
+=======
+Exec=signal-desktop %U
+>>>>>>> rad/freebsd/main
 Terminal=false
-Categories=Network;InstantMessaging;
-StartupWMClass=Signal
-MimeType=x-scheme-handler/sgnl;
-Keywords=sgnl;chat;im;messaging;messenger;sms;security;privat;
-X-GNOME-UsesNotifications=true
+Type=Application
+Icon=signal-desktop
+StartupWMClass=signal
+Comment=Private messaging from your desktop
+MimeType=x-scheme-handler/sgnl;x-scheme-handler/signalcaptcha;
+Categories=Network;InstantMessaging;Chat;

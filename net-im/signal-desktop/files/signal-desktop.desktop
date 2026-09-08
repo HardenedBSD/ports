@@ -1,12 +1,6 @@
 [Desktop Entry]
 Name=Signal
-<<<<<<< HEAD
-Comment=Signal - Private Messenger
-Icon=signal-desktop
-Exec=signal-desktop --js-flags=--jitless  -- %u
-=======
-Exec=signal-desktop %U
->>>>>>> rad/freebsd/main
+Exec=signal-desktop --js-flags=--jitless  -- %U
 Terminal=false
 Type=Application
 Icon=signal-desktop

@@ -9,9 +9,13 @@ WWW=		https://gitlab.freedesktop.org/xorg/app/xclock
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 USES=		iconv tar:xz xorg xorg-cat:app
+=======
+USES=		iconv xorg xorg-cat:app
+>>>>>>> rad/freebsd/main
 USE_XORG=	x11 xaw xft xkbfile xmu xorgproto xrender xt
 
 PLIST_FILES=	bin/xclock \

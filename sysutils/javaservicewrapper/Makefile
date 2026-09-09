@@ -1,5 +1,6 @@
 PORTNAME=	javaservicewrapper
 PORTVERSION=	3.7.3
+PORTREVISION=	2
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://wrapper.tanukisoftware.com/download/${PORTVERSION}/
 DISTNAME=	wrapper_${PORTVERSION}_src
@@ -11,8 +12,6 @@ WWW=		https://wrapper.tanukisoftware.org/
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
-
 USES=		gmake java:ant,build
 
 .include <bsd.port.pre.mk>
@@ -23,11 +22,13 @@ MAKE_ARGS+=	-Dbits=64
 MAKE_ARGS+=	-Dbits=32
 .endif
 
-.if ${JAVA_PORT_VERSION} >= 25
-JAVA_TARGET_VERSION=	11
-.else
+# In a future version support for target 8 will be removed and we need to
+# check/bump.
+#.if ${JAVA_PORT_VERSION} >= X
+#JAVA_TARGET_VERSION=	11
+#.else
 JAVA_TARGET_VERSION=	8
-.endif
+#.endif
 
 PLIST_SUB+=	JAVAJARDIR=${JAVAJARDIR}
 

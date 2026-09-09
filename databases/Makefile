@@ -147,6 +147,7 @@
     SUBDIR += libmemcached
     SUBDIR += libmongocrypt
     SUBDIR += libmswstr
+    SUBDIR += libnusqlite3
     SUBDIR += libnvpair
     SUBDIR += libodbc++
     SUBDIR += libpbl

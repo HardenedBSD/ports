@@ -9,9 +9,13 @@ WWW=		https://gitlab.freedesktop.org/xorg/app/xrdb
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 USES=		tar:xz xorg xorg-cat:app
+=======
+USES=		xorg xorg-cat:app
+>>>>>>> rad/freebsd/main
 USE_XORG=	x11 xmuu xorgproto
 
 PLIST_FILES=	bin/xrdb share/man/man1/xrdb.1.gz

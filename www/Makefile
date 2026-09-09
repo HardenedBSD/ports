@@ -1662,6 +1662,7 @@
     SUBDIR += py-django-mptt
     SUBDIR += py-django-multiselectfield
     SUBDIR += py-django-netfields
+    SUBDIR += py-django-ninja
     SUBDIR += py-django-object-actions
     SUBDIR += py-django-otp
     SUBDIR += py-django-otp-yubikey

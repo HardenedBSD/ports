@@ -11,7 +11,6 @@ USE_HARDENING=	safestack
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-EXTRACT_SUFX=	.tar.xz
 USES=		xorg xorg-cat:app
 USE_XORG=	x11 xorgproto xxf86vm
 

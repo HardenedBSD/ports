@@ -41,17 +41,12 @@ LIB_DEPENDS=	libcares.so:dns/c-ares \
 		libprotobuf-c.so:devel/protobuf-c \
 		libyang.so.2:net/libyang2
 
-<<<<<<< HEAD
-
 # FRR uses shared libraries as plugins, but
 # does not fail with safestack as no port depends
 # on these internal library plugins:
 USE_HARDENING=	safestack
 
-USES=		autoreconf bison compiler:c++11-lang gmake libtool makeinfo \
-=======
 USES=		autoreconf bison compiler:c++11-lang cpe gmake libtool makeinfo \
->>>>>>> rad/freebsd/main
 		pkgconfig python:build readline shebangfix
 
 CPE_PRODUCT=	frrouting

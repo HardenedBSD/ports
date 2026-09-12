@@ -11,7 +11,7 @@ WWW=		https://jugit.fz-juelich.de/mlz/libformfactor
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	libheinz>0:devel/libheinz
+BUILD_DEPENDS=	heinz>0:devel/heinz
 
 USES=		compiler:c++20-lang cmake:testing
 USE_LDCONFIG=	yes

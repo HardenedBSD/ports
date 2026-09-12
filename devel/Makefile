@@ -1014,6 +1014,7 @@
     SUBDIR += hcs12mem
     SUBDIR += heaptrack
     SUBDIR += heimdall
+    SUBDIR += heinz
     SUBDIR += heirloom-devtools
     SUBDIR += hexcompare
     SUBDIR += hexd
@@ -1393,7 +1394,6 @@
     SUBDIR += libgudev
     SUBDIR += libgusb
     SUBDIR += libgutenfetch
-    SUBDIR += libheinz
     SUBDIR += libhoard
     SUBDIR += libhtp
     SUBDIR += libibuddy
@@ -4319,7 +4319,6 @@
     SUBDIR += pecl-inotify
     SUBDIR += pecl-json_post
     SUBDIR += pecl-msgpack
-    SUBDIR += pecl-mustache
     SUBDIR += pecl-opentelemetry
     SUBDIR += pecl-protobuf
     SUBDIR += pecl-psr
@@ -4350,6 +4349,7 @@
     SUBDIR += php-ice37
     SUBDIR += php-libawl
     SUBDIR += php-maxminddb
+    SUBDIR += php-mustache
     SUBDIR += php-pcov
     SUBDIR += php-pie
     SUBDIR += php-raphf
@@ -5596,6 +5596,9 @@
     SUBDIR += py-opentelemetry-instrumentation-django
     SUBDIR += py-opentelemetry-instrumentation-fastapi
     SUBDIR += py-opentelemetry-instrumentation-flask
+    SUBDIR += py-opentelemetry-instrumentation-grpc
+    SUBDIR += py-opentelemetry-instrumentation-httpx
+    SUBDIR += py-opentelemetry-instrumentation-logging
     SUBDIR += py-opentelemetry-instrumentation-psycopg2
     SUBDIR += py-opentelemetry-instrumentation-requests
     SUBDIR += py-opentelemetry-instrumentation-urllib
@@ -5977,7 +5980,6 @@
     SUBDIR += py-pytest-helpers-namespace
     SUBDIR += py-pytest-html
     SUBDIR += py-pytest-httpbin
-    SUBDIR += py-pytest-httpserver
     SUBDIR += py-pytest-httpx
     SUBDIR += py-pytest-instafail
     SUBDIR += py-pytest-isort
@@ -6032,6 +6034,7 @@
     SUBDIR += py-pytest-watcher
     SUBDIR += py-pytest-xdist
     SUBDIR += py-pytest-xprocess
+    SUBDIR += py-pytest_httpserver
     SUBDIR += py-python-application
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-dateutil

@@ -15,5 +15,5 @@ include/mustache/utils.hpp
 lib/libmustache.a
 lib/libmustache.so
 lib/libmustache.so.6
-lib/libmustache.so.6.0.1
+lib/libmustache.so.6.0.2
 libdata/pkgconfig/mustache.pc

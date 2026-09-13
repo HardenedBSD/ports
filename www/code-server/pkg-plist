@@ -20539,3 +20539,13 @@ bin/code-server
 %%DATADIR%%/lib/vscode/out/vs/workbench/contrib/chat/browser/widget/media/chatPet/accessories/straw-hat.png
 %%DATADIR%%/lib/vscode/out/vs/workbench/contrib/chat/browser/widget/media/chatPet/accessories/white-chef-hat.png
 %%DATADIR%%/lib/vscode/out/vs/workbench/contrib/chat/browser/widget/media/chatPet/accessories/wizard-hat.png
+%%DATADIR%%/lib/vscode/node_modules/@github/copilot-sdk/dist/cjs/runtimeArtifacts.js
+%%DATADIR%%/lib/vscode/node_modules/@github/copilot-sdk/dist/runtimeArtifacts.js
+%%DATADIR%%/lib/vscode/node_modules/@vscode/proxy-agent/out/systemCertificatesWorker.js
+%%DATADIR%%/node_modules/@humanfs/types/CHANGELOG.md
+%%DATADIR%%/node_modules/@humanfs/types/package.json
+%%DATADIR%%/node_modules/@humanfs/types/README.md
+%%DATADIR%%/node_modules/@humanfs/types/src/hfs-types.ts
+%%DATADIR%%/node_modules/@humanfs/types/tsconfig.json
+%%DATADIR%%/node_modules/@types/semver/functions/truncate.d.ts
+%%DATADIR%%/node_modules/semver/functions/truncate.js

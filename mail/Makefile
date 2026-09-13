@@ -107,6 +107,8 @@
     SUBDIR += dovecot-pigeonhole
     SUBDIR += dovecot-xaps
     SUBDIR += dovecot24
+    SUBDIR += dovecot24-pigeonhole
+    SUBDIR += dovecot24-wormhole
     SUBDIR += dspam
     SUBDIR += ecartis
     SUBDIR += elm

@@ -10,4 +10,4 @@ lib/cmake/formfactor/formfactorConfigVersion.cmake
 lib/cmake/formfactor/formfactorTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/formfactor/formfactorTargets.cmake
 lib/libformfactor.so
-lib/libformfactor.so.0.4.0
+lib/libformfactor.so.0.5.1

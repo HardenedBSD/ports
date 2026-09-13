@@ -355,6 +355,7 @@
     SUBDIR += flintqs
     SUBDIR += flopc++
     SUBDIR += form
+    SUBDIR += formfactor
     SUBDIR += fparser
     SUBDIR += fplll
     SUBDIR += freefem++
@@ -466,7 +467,6 @@
     SUBDIR += libdivsufsort
     SUBDIR += libfixmath
     SUBDIR += libflame
-    SUBDIR += libformfactor
     SUBDIR += libhomfly
     SUBDIR += libmesh
     SUBDIR += libnormaliz

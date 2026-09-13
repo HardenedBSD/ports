@@ -8625,6 +8625,7 @@
     SUBDIR += rust-analyzer
     SUBDIR += rust-bindgen-cli
     SUBDIR += rust-cbindgen
+    SUBDIR += rust-cxxbridge
     SUBDIR += rust-mode
     SUBDIR += rust-script
     SUBDIR += rustc-demangle

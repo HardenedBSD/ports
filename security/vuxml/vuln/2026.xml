@@ -1,3 +1,66 @@
+  <vuln vid="7fd351d1-af26-11f1-a883-2cf05da270f3">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+<package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>19.3.0</ge><lt>19.3.2</lt></range>
+	<range><ge>19.2.0</ge><lt>19.2.6</lt></range>
+	<range><ge>10.1.0</ge><lt>19.1.8</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/?nav=19.3.2">
+	  <p>Path Traversal issue in repository commits API impacts GitLab CE/EE</p>
+	  <p>Insecure Deserialization issue in GraphQL subscription serializer impacts GitLab EE</p>
+	  <p>Buffer Overflow issue in Unicode conversion wrapper impacts GitLab EE</p>
+	  <p>Scheduled Pipeline Execution Policy test allows Developers to access protected CI/CD variables</p>
+	  <p>Cross-site Scripting issue in Markdown JSON table renderer impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in CI/CD environment variable scope matcher impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in GraphQL complexity limiter impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in GraphQL complexity limiter impacts GitLab CE/EE</p>
+	  <p>Race Condition issue in Merge Request Pipelines impacts GitLab CE/EE</p>
+	  <p>Improper Authentication issue in SAML SSO sign-in restriction enforcement impacts GitLab CE/EE</p>
+	  <p>Insufficiently Protected Credentials issue in Workhorse senddata emitters impacts GitLab CE/EE</p>
+	  <p>Cross-site Scripting issue in Content Editor impacts GitLab CE/EE</p>
+	  <p>Access Control Implementation issue in protected environment approval rules impacts GitLab EE</p>
+	  <p>Authorization Bypass issue in protected environment approval rules impacts GitLab EE</p>
+	  <p>Missing Authorization issue in Generic Package Registry impacts GitLab CE/EE</p>
+	  <p>Improper Input Validation issue in Namespace Transfer impacts GitLab CE/EE</p>
+	  <p>Missing Authorization issue in Compliance Framework management impacts GitLab EE</p>
+	  <p>Improper Input Validation issue in Terraform State API impacts GitLab CE/EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-85706</cvename>
+      <cvename>CVE-2026-87719</cvename>
+      <cvename>CVE-2026-88765</cvename>
+      <cvename>CVE-2026-79708</cvename>
+      <cvename>CVE-2026-78252</cvename>
+      <cvename>CVE-2026-13210</cvename>
+      <cvename>CVE-2025-14871</cvename>
+      <cvename>CVE-2026-1168</cvename>
+      <cvename>CVE-2024-11222</cvename>
+      <cvename>CVE-2026-12910</cvename>
+      <cvename>CVE-2026-82837</cvename>
+      <cvename>CVE-2026-19619</cvename>
+      <cvename>CVE-2026-86341</cvename>
+      <cvename>CVE-2026-86340</cvename>
+      <cvename>CVE-2026-7514</cvename>
+      <cvename>CVE-2026-8030</cvename>
+      <cvename>CVE-2026-16794</cvename>
+      <cvename>CVE-2026-3855</cvename>
+      <url>https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/?nav=19.3.2</url>
+    </references>
+    <dates>
+      <discovery>2026-09-10</discovery>
+      <entry>2026-09-13</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="cd5bfb7d-ac34-11f1-9b94-901b0e13f1a0">
     <topic>yt-dlp: Improper Neutralization of Special Elements</topic>
     <affects>

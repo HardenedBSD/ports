@@ -5198,6 +5198,7 @@
     SUBDIR += py-guppy3
     SUBDIR += py-gyp
     SUBDIR += py-gyp-next
+    SUBDIR += py-hachoir
     SUBDIR += py-hacking
     SUBDIR += py-hammett
     SUBDIR += py-hash_ring
@@ -6413,6 +6414,7 @@
     SUBDIR += py-types-pyyaml
     SUBDIR += py-types-requests
     SUBDIR += py-types-retry
+    SUBDIR += py-types-s3transfer
     SUBDIR += py-types-setuptools
     SUBDIR += py-types-toml
     SUBDIR += py-typeshed-client
@@ -8993,6 +8995,7 @@
     SUBDIR += zeal
     SUBDIR += zfp
     SUBDIR += zix
+    SUBDIR += zizmor
     SUBDIR += zls
     SUBDIR += zookeeper
     SUBDIR += zthread

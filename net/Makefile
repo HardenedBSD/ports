@@ -1740,6 +1740,7 @@
     SUBDIR += wmwave
     SUBDIR += wmwifi
     SUBDIR += wol
+    SUBDIR += wormhole-william
     SUBDIR += wpa_supplicant_gui
     SUBDIR += wping
     SUBDIR += wstunnel

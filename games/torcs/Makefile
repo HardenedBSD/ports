@@ -37,13 +37,8 @@ INSTALL_TARGET=	install datainstall
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-ALL_TARGET=	default
-INSTALL_TARGET=	install datainstall
-=======
->>>>>>> rad/freebsd/main
 INSTDIR=	${PREFIX}/share/games/${PORTNAME}
 
 BASH2FIX=	src/linux/torcs.in Make-default.mk

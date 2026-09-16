@@ -5140,7 +5140,6 @@
     SUBDIR += py-fuzzywuzzy
     SUBDIR += py-fypp
     SUBDIR += py-game
-    SUBDIR += py-game_sdl2
     SUBDIR += py-gapic-generator
     SUBDIR += py-gast
     SUBDIR += py-gelidum
@@ -6044,7 +6043,6 @@
     SUBDIR += py-python-decouple
     SUBDIR += py-python-discovery
     SUBDIR += py-python-distutils-extra
-    SUBDIR += py-python-dtrace
     SUBDIR += py-python-easyconfig
     SUBDIR += py-python-editor
     SUBDIR += py-python-engineio
@@ -6380,7 +6378,6 @@
     SUBDIR += py-tree-sitter-yaml
     SUBDIR += py-tree-sitter023
     SUBDIR += py-treelib
-    SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
     SUBDIR += py-ttictoc
     SUBDIR += py-ttkbootstrap

@@ -1079,6 +1079,7 @@
     SUBDIR += py-bitrot
     SUBDIR += py-blinkstick
     SUBDIR += py-borgmatic
+    SUBDIR += py-cdist
     SUBDIR += py-clustershell
     SUBDIR += py-concurrent-log-handler
     SUBDIR += py-container-inspector

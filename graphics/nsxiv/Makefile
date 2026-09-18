@@ -18,18 +18,13 @@ USES=		desktop-file-utils gmake localbase:ldflags pkgconfig xorg
 USE_GITHUB=	yes
 USE_XORG=	x11 xft
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-MAKE_ARGS=	MANPREFIX=${PREFIX}/share/man
-MAKE_ENV=	EGPREFIX=${EXAMPLESDIR} LDLIBS=-linotify
-=======
 MAKE_ARGS=	CFLAGS="${CFLAGS}" \
 		MANPREFIX=${PREFIX}/share/man \
 		VERSION="${PKGVERSION}"
 MAKE_ENV=	EGPREFIX=${EXAMPLESDIR} \
 		LDLIBS=-linotify
->>>>>>> rad/freebsd/main
 
 INSTALL_TARGET=	install-all
 

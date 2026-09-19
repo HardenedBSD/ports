@@ -946,6 +946,7 @@
     SUBDIR += p5-User
     SUBDIR += p5-arclog
     SUBDIR += p5-reslog
+    SUBDIR += pack
     SUBDIR += packer
     SUBDIR += packmule
     SUBDIR += pacman

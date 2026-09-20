@@ -1476,6 +1476,7 @@
     SUBDIR += wpa_supplicant-devel
     SUBDIR += wpa_supplicant210
     SUBDIR += wpa_supplicant29
+    SUBDIR += x11appjail
     SUBDIR += xca
     SUBDIR += xhash
     SUBDIR += xinetd

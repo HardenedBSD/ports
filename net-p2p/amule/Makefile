@@ -14,15 +14,10 @@ LICENSE_FILE=	${WRKSRC}/docs/COPYING
 LIB_DEPENDS=	libcryptopp.so:security/cryptopp-modern \
 		libcurl.so:ftp/curl
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		cmake:testing gettext-runtime gnome localbase:ldflags pkgconfig \
-		readline
-=======
 USES=		cmake:testing desktop-file-utils gettext-runtime gnome \
 		localbase:ldflags pkgconfig readline shared-mime-info
->>>>>>> rad/freebsd/main
 USE_GNOME=	glib20
 USE_RC_SUBR=	amuled
 USE_WX=		3.2

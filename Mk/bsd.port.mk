@@ -4128,6 +4128,11 @@ package-noinstall: package
 # Dependency checking
 ################################################################
 
+.    for sp in ${_PKGS}
+BUILD_DEPENDS${_SP.${sp}}+=		${BUILD_RUN_DEPENDS${_SP.${sp}}}
+RUN_DEPENDS${_SP.${sp}}+=		${BUILD_RUN_DEPENDS${_SP.${sp}}}
+.    endfor
+
 .    if !target(depends)
 depends: pkg-depends extract-depends patch-depends lib-depends fetch-depends build-depends run-depends
 

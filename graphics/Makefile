@@ -275,7 +275,6 @@
     SUBDIR += gimp-resynthesizer
     SUBDIR += gimp3-app
     SUBDIR += gkrellkam2
-    SUBDIR += glad
     SUBDIR += glaxnimate
     SUBDIR += glbinding
     SUBDIR += gle
@@ -564,6 +563,7 @@
     SUBDIR += linux-rl9-graphene
     SUBDIR += linux-rl9-graphite2
     SUBDIR += linux-rl9-imageformats-libs
+    SUBDIR += linux-rl9-lcms2
     SUBDIR += linux-rl9-libdrm
     SUBDIR += linux-rl9-libepoxy
     SUBDIR += linux-rl9-libglvnd
@@ -952,6 +952,7 @@
     SUBDIR += py-geosnap
     SUBDIR += py-giddy
     SUBDIR += py-gizeh
+    SUBDIR += py-glad2
     SUBDIR += py-glcontext
     SUBDIR += py-glfw
     SUBDIR += py-glooey

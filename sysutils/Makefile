@@ -229,6 +229,7 @@
     SUBDIR += cni-dnsname
     SUBDIR += colorize
     SUBDIR += conan
+    SUBDIR += condy
     SUBDIR += confctl
     SUBDIR += conky
     SUBDIR += conky-awesome
@@ -376,6 +377,7 @@
     SUBDIR += env4801
     SUBDIR += envconsul
     SUBDIR += epazote
+    SUBDIR += eppctl
     SUBDIR += erdtree
     SUBDIR += erldash
     SUBDIR += etcmerge
@@ -514,6 +516,7 @@
     SUBDIR += gstat-rs
     SUBDIR += gstopd
     SUBDIR += gstreamer1-plugins-cdio
+    SUBDIR += gtime
     SUBDIR += handlr
     SUBDIR += hardlink
     SUBDIR += hare

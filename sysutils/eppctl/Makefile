@@ -1,25 +1,27 @@
 PORTNAME=	eppctl
-DISTVERSION=	0.0.20260926
+DISTVERSION=	0.0.20260928
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	osa@FreeBSD.org
-COMMENT=	Intel HWP Energy/Performance utility
+COMMENT=	HWP Energy/Performance utility
 WWW=		https://github.com/osokin/eppctl/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-CPE_VENDOR=	google
+CPE_VENDOR=	osokin
+CPE_PRODUCT=	${PORTNAME}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	osokin
-GH_TAGNAME=	7d074df
+GH_TAGNAME=	1250458
 
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	does not support
 
-PLIST=		bin/eppctl
-MANS=		eppctl.8
+PLIST_FILES=	sbin/eppctl \
+		share/man/man8/eppctl.8.gz
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/eppctl ${STAGEDIR}${PREFIX}/sbin/

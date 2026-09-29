@@ -47,11 +47,8 @@ STATIC_CMAKE_BOOL=	BUILD_STATIC_LIBS
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH:Mriscv64*} == ""
-CMAKE_ON+=	PCRE2_SUPPORT_JIT
-.else
+# HBSD: JITs are less than desirable (GHSA-r9hj-j2rw-4q3m)
 CMAKE_OFF+=	PCRE2_SUPPORT_JIT
-.endif
 
 # Optional knobs that accept positive integer parameters (see pcrebuild(3)):
 

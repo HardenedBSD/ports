@@ -1237,6 +1237,7 @@
     SUBDIR += radsecproxy
     SUBDIR += radvd
     SUBDIR += rathole
+    SUBDIR += rayfish
     SUBDIR += rclone
     SUBDIR += rclone-browser
     SUBDIR += rdapper

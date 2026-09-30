@@ -979,7 +979,6 @@
     SUBDIR += py-kornia
     SUBDIR += py-kornia-rs
     SUBDIR += py-leather
-    SUBDIR += py-lerc
     SUBDIR += py-liffile
     SUBDIR += py-mapclassify
     SUBDIR += py-mayavi
@@ -1037,6 +1036,7 @@
     SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
+    SUBDIR += py-pylerc
     SUBDIR += py-pymaging
     SUBDIR += py-pymaging-png
     SUBDIR += py-pyocr

@@ -193,6 +193,7 @@
     SUBDIR += antlr
     SUBDIR += antlr3
     SUBDIR += antlr4
+    SUBDIR += antlr4-cpp-runtime
     SUBDIR += apache-ant
     SUBDIR += apache-commons-daemon
     SUBDIR += apache-commons-io
@@ -4783,13 +4784,11 @@
     SUBDIR += py-castellan
     SUBDIR += py-catalogue
     SUBDIR += py-cattrs
-    SUBDIR += py-cattrs23
     SUBDIR += py-cbor
     SUBDIR += py-cbor2
     SUBDIR += py-cclib
     SUBDIR += py-cdg
     SUBDIR += py-cel-python
-    SUBDIR += py-cel-python02
     SUBDIR += py-celery
     SUBDIR += py-celery-progress
     SUBDIR += py-celery-singleton
@@ -4854,6 +4853,7 @@
     SUBDIR += py-cobble
     SUBDIR += py-codegen
     SUBDIR += py-cogapp
+    SUBDIR += py-coherent.deps
     SUBDIR += py-coherent.licensed
     SUBDIR += py-collections-extended
     SUBDIR += py-colorama
@@ -4985,6 +4985,7 @@
     SUBDIR += py-diagnostic
     SUBDIR += py-diff-cover
     SUBDIR += py-dill
+    SUBDIR += py-directsearch
     SUBDIR += py-dirspec
     SUBDIR += py-dirty-equals
     SUBDIR += py-diskcache
@@ -5297,16 +5298,20 @@
     SUBDIR += py-janus
     SUBDIR += py-jaraco.classes
     SUBDIR += py-jaraco.collections
+    SUBDIR += py-jaraco.compat
     SUBDIR += py-jaraco.context
     SUBDIR += py-jaraco.env
     SUBDIR += py-jaraco.envs
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
     SUBDIR += py-jaraco.logging
+    SUBDIR += py-jaraco.mongodb
     SUBDIR += py-jaraco.packaging
     SUBDIR += py-jaraco.path
+    SUBDIR += py-jaraco.services
     SUBDIR += py-jaraco.stream
     SUBDIR += py-jaraco.text
+    SUBDIR += py-jaraco.ui
     SUBDIR += py-jaraco.util
     SUBDIR += py-javaproperties
     SUBDIR += py-jaxtyping
@@ -5529,6 +5534,7 @@
     SUBDIR += py-mypy_extensions
     SUBDIR += py-mystic
     SUBDIR += py-naiveBayesClassifier
+    SUBDIR += py-named
     SUBDIR += py-namex
     SUBDIR += py-nanobind
     SUBDIR += py-nanotime
@@ -5700,7 +5706,6 @@
     SUBDIR += py-pep440
     SUBDIR += py-pep517
     SUBDIR += py-pep562
-    SUBDIR += py-pep621
     SUBDIR += py-pep8-naming
     SUBDIR += py-perceval
     SUBDIR += py-perceval-mozilla
@@ -6125,6 +6130,7 @@
     SUBDIR += py-rchitect
     SUBDIR += py-rdata
     SUBDIR += py-re-assert
+    SUBDIR += py-reactivex
     SUBDIR += py-readerwriterlock
     SUBDIR += py-readme-renderer
     SUBDIR += py-rebulk
@@ -6186,7 +6192,6 @@
     SUBDIR += py-ruff
     SUBDIR += py-runs
     SUBDIR += py-rush
-    SUBDIR += py-rx
     SUBDIR += py-rx1
     SUBDIR += py-saneyaml
     SUBDIR += py-sarge
@@ -6274,6 +6279,7 @@
     SUBDIR += py-sre-yield
     SUBDIR += py-srsly
     SUBDIR += py-stack-data
+    SUBDIR += py-standard-chunk
     SUBDIR += py-standard-imghdr
     SUBDIR += py-statgrab
     SUBDIR += py-statsd
@@ -7740,6 +7746,7 @@
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
     SUBDIR += rubygem-gettext_i18n_rails
+    SUBDIR += rubygem-gettext_i18n_rails-gitlab
     SUBDIR += rubygem-gettext_i18n_rails_js
     SUBDIR += rubygem-gettext_i18n_rails_js-rails5
     SUBDIR += rubygem-gettext_i18n_rails_js-rails50
@@ -7768,7 +7775,6 @@
     SUBDIR += rubygem-gitlab_query_language
     SUBDIR += rubygem-glib2
     SUBDIR += rubygem-gobject-introspection
-    SUBDIR += rubygem-google-api-client
     SUBDIR += rubygem-google-apis-admin_directory_v1
     SUBDIR += rubygem-google-apis-androidpublisher_v3
     SUBDIR += rubygem-google-apis-androidpublisher_v3-gitlab
@@ -7916,6 +7922,7 @@
     SUBDIR += rubygem-json-schema
     SUBDIR += rubygem-json-schema-gitlab
     SUBDIR += rubygem-json1
+    SUBDIR += rubygem-json2
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
     SUBDIR += rubygem-json_schema
@@ -8297,7 +8304,6 @@
     SUBDIR += rubygem-redis-store
     SUBDIR += rubygem-redis-store-gitlab
     SUBDIR += rubygem-redlock
-    SUBDIR += rubygem-redlock1
     SUBDIR += rubygem-redmine_plugin_support
     SUBDIR += rubygem-reentrant_flock
     SUBDIR += rubygem-ref
@@ -8312,6 +8318,7 @@
     SUBDIR += rubygem-retriable
     SUBDIR += rubygem-retriable-gitlab
     SUBDIR += rubygem-retriable3
+    SUBDIR += rubygem-retriable4
     SUBDIR += rubygem-retryable
     SUBDIR += rubygem-rgen
     SUBDIR += rubygem-rgl
@@ -8626,6 +8633,7 @@
     SUBDIR += rubygem-yard-sorbet
     SUBDIR += rubygem-yui-compressor
     SUBDIR += rubygem-zeitwerk
+    SUBDIR += rubygem-zeitwerk-gitlab
     SUBDIR += rubygem-zentest
     SUBDIR += rubygem-zhexdump
     SUBDIR += rubygem-zlib

@@ -1087,7 +1087,6 @@
     SUBDIR += py-ansible-runner
     SUBDIR += py-appjail-gui
     SUBDIR += py-azure-cli
-    SUBDIR += py-azure-cli-acr
     SUBDIR += py-azure-cli-core
     SUBDIR += py-azure-cli-telemetry
     SUBDIR += py-bitrot

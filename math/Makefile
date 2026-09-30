@@ -101,6 +101,7 @@
     SUBDIR += R-cran-mclust
     SUBDIR += R-cran-mcmc
     SUBDIR += R-cran-memisc
+    SUBDIR += R-cran-metadat
     SUBDIR += R-cran-minqa
     SUBDIR += R-cran-misc3d
     SUBDIR += R-cran-miscTools
@@ -1148,6 +1149,8 @@
     SUBDIR += py-resample
     SUBDIR += py-roman
     SUBDIR += py-rpy2
+    SUBDIR += py-rpy2-rinterface
+    SUBDIR += py-rpy2-robjects
     SUBDIR += py-rustworkx
     SUBDIR += py-rvlib
     SUBDIR += py-scikit-datasets

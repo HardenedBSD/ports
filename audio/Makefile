@@ -631,6 +631,7 @@
     SUBDIR += py-al
     SUBDIR += py-apetag
     SUBDIR += py-aubio
+    SUBDIR += py-audioop-lts
     SUBDIR += py-audioread
     SUBDIR += py-auditok
     SUBDIR += py-discid
@@ -672,6 +673,7 @@
     SUBDIR += py-soxr
     SUBDIR += py-speechrecognition
     SUBDIR += py-spotipy
+    SUBDIR += py-standard-aifc
     SUBDIR += py-supysonic
     SUBDIR += py-tinytag
     SUBDIR += py-torchaudio

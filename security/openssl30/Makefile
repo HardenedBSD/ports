@@ -26,15 +26,8 @@ CONFIGURE_ENV=	PERL="${PERL}"
 CONFIGURE_ARGS=	--openssldir=${OPENSSLDIR} \
 		--prefix=${PREFIX}
 
-<<<<<<< HEAD:security/openssl35/Makefile
-USES=		cpe perl5
-USE_PERL5=	build
-TEST_TARGET=	test
-
 USE_HARDENING=	zeroreg
 
-=======
->>>>>>> rad/freebsd/main:security/openssl30/Makefile
 LDFLAGS_i386=	-Wl,-znotext
 
 MAKE_ARGS+=	WHOLE_ARCHIVE_FLAG=--whole-archive CNF_LDFLAGS="${LDFLAGS}"

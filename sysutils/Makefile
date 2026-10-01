@@ -191,14 +191,8 @@
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine-masterfiles-lts
-    SUBDIR += cfengine-masterfiles324
-    SUBDIR += cfengine-masterfiles325
-    SUBDIR += cfengine-masterfiles326
     SUBDIR += cfengine-masterfiles327
     SUBDIR += cfengine-masterfiles328
-    SUBDIR += cfengine324
-    SUBDIR += cfengine325
-    SUBDIR += cfengine326
     SUBDIR += cfengine327
     SUBDIR += cfengine328
     SUBDIR += chaoskube
@@ -457,7 +451,6 @@
     SUBDIR += fx
     SUBDIR += g15daemon
     SUBDIR += gaffitter
-    SUBDIR += ganglia-monitor-core
     SUBDIR += gapcmon
     SUBDIR += garcon
     SUBDIR += gather
@@ -1023,7 +1016,6 @@
     SUBDIR += pipeform
     SUBDIR += pipemeter
     SUBDIR += plasma-pass
-    SUBDIR += plasma5-libksysguard
     SUBDIR += plasma6-discover
     SUBDIR += plasma6-kde-cli-tools
     SUBDIR += plasma6-kinfocenter
@@ -1079,8 +1071,6 @@
     SUBDIR += py-GPUtil
     SUBDIR += py-ansible-compat
     SUBDIR += py-ansible-core
-    SUBDIR += py-ansible-core218
-    SUBDIR += py-ansible-core219
     SUBDIR += py-ansible-core220
     SUBDIR += py-ansible-core221
     SUBDIR += py-ansible-lint
@@ -1260,7 +1250,6 @@
     SUBDIR += rubygem-chef-winrm-elevated
     SUBDIR += rubygem-chef-zero
     SUBDIR += rubygem-choria-mcorpc-support
-    SUBDIR += rubygem-facter
     SUBDIR += rubygem-fluent-mixin-plaintextformatter
     SUBDIR += rubygem-fluent-plugin-config-expander
     SUBDIR += rubygem-fluent-plugin-file-alternative

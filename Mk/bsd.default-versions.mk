@@ -67,7 +67,7 @@ GCC_DEFAULT?=		14
 GHOSTSCRIPT_DEFAULT?=	10
 # Possible values: mesa-libs, mesa-devel
 GL_DEFAULT?=		mesa-libs
-# Possible values: 1.25, 1.26, 1.27
+# Possible values: 1.26, 1.27
 GO_DEFAULT?=		1.26
 # Possible values: 1.8, 2.2, 3.0
 GUILE_DEFAULT?=		2.2
@@ -156,7 +156,7 @@ PYCRYPTOGRAPHY_DEFAULT?=	rust
 .  else
 PYCRYPTOGRAPHY_DEFAULT?=	legacy
 .  endif
-# Possible values: 3.10, 3.11, 3.12, 3.13, 3.13t, 3.14, 3.14t, 3.15
+# Possible values: 3.11, 3.12, 3.13, 3.13t, 3.14, 3.14t, 3.15
 PYTHON_DEFAULT?=	3.12
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
@@ -168,7 +168,7 @@ RUST_DEFAULT?=		rust
 SAMBA_DEFAULT?=		4.16
 # When updating this, please also update the same list in ssl.mk and the checks
 # for USES=ssl in qa.sh!
-# Possible values: base, openssl, openssl34, openssl35,
+# Possible values: base, openssl, openssl35,
 # openssl36, libressl, libressl-devel
 .  if !defined(SSL_DEFAULT)
 #	If no preference was set, check for an installed base version

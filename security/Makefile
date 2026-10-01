@@ -44,8 +44,6 @@
     SUBDIR += aws-lc
     SUBDIR += aws-vault
     SUBDIR += axc
-    SUBDIR += barnyard2
-    SUBDIR += barnyard2-sguil
     SUBDIR += bastillion
     SUBDIR += bcwipe
     SUBDIR += bdes
@@ -464,7 +462,6 @@
     SUBDIR += openssl-pkcs11provider
     SUBDIR += openssl-unsafe
     SUBDIR += openssl30
-    SUBDIR += openssl34
     SUBDIR += openssl36
     SUBDIR += openssl40
     SUBDIR += openssl41
@@ -1048,7 +1045,6 @@
     SUBDIR += py-privleap
     SUBDIR += py-pwntools
     SUBDIR += py-pyaes
-    SUBDIR += py-pyaff4
     SUBDIR += py-pyaxo
     SUBDIR += py-pyclamd
     SUBDIR += py-pycryptodome
@@ -1461,7 +1457,6 @@
     SUBDIR += vulsrepo
     SUBDIR += vuxml
     SUBDIR += vxquery
-    SUBDIR += wapiti
     SUBDIR += wazuh-agent
     SUBDIR += wazuh-dashboard
     SUBDIR += wazuh-indexer
@@ -1475,8 +1470,6 @@
     SUBDIR += wolfssl
     SUBDIR += wpa_supplicant
     SUBDIR += wpa_supplicant-devel
-    SUBDIR += wpa_supplicant210
-    SUBDIR += wpa_supplicant29
     SUBDIR += x11appjail
     SUBDIR += xca
     SUBDIR += xhash

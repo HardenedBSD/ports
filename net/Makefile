@@ -259,8 +259,6 @@
     SUBDIR += honeyd
     SUBDIR += hostapd
     SUBDIR += hostapd-devel
-    SUBDIR += hostapd210
-    SUBDIR += hostapd29
     SUBDIR += hping3
     SUBDIR += hsflowd
     SUBDIR += htpdate
@@ -1216,7 +1214,6 @@
     SUBDIR += py-zope.proxy
     SUBDIR += pyrad
     SUBDIR += qadsl
-    SUBDIR += qoauth-qt5
     SUBDIR += qrcp
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth

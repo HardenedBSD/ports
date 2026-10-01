@@ -1,7 +1,7 @@
 PORTNAME=	symengine
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.14.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math python
 #MASTER_SITES=	PYPI # latest release isn't compatible with math/symengine
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -29,6 +29,8 @@ USE_PYTHON=	cython flavors pytest
 
 USE_GITHUB=	yes
 GH_PROJECT=	symengine.py
+
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility, see https://github.com/symengine/symengine.py/issues/533
 
 BINARY_ALIAS=	python=${PYTHON_CMD} # cmake scripts expect python executable
 

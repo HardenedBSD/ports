@@ -674,7 +674,6 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron40
     SUBDIR += electron41
     SUBDIR += electron42
     SUBDIR += electron43
@@ -695,13 +694,10 @@
     SUBDIR += envsubst
     SUBDIR += epl.el
     SUBDIR += epm
-    SUBDIR += eql5
-    SUBDIR += eric6
     SUBDIR += erlang-cl
     SUBDIR += erlang-native-compiler
     SUBDIR += erlang-rebar3_hex
     SUBDIR += erlang-recon
-    SUBDIR += es-eric6
     SUBDIR += esbuild
     SUBDIR += estd
     SUBDIR += etcd
@@ -1169,7 +1165,6 @@
     SUBDIR += jwt-cpp
     SUBDIR += kBuild
     SUBDIR += kapptemplate
-    SUBDIR += kassert
     SUBDIR += kcachegrind
     SUBDIR += kconfig-frontends
     SUBDIR += kcov
@@ -1662,7 +1657,6 @@
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
-    SUBDIR += lnphost
     SUBDIR += loccount
     SUBDIR += lockfree-malloc
     SUBDIR += log4c
@@ -3453,7 +3447,6 @@
     SUBDIR += p5-Pipeline
     SUBDIR += p5-Pithub
     SUBDIR += p5-PkgConfig
-    SUBDIR += p5-PkgConfig-LibPkgConf
     SUBDIR += p5-Pod-Coverage
     SUBDIR += p5-Pod-Coverage-Moose
     SUBDIR += p5-Pod-Coverage-TrustPod
@@ -4349,7 +4342,6 @@
     SUBDIR += phorgeit-phorge
     SUBDIR += php-Psr_Log
     SUBDIR += php-composer
-    SUBDIR += php-geshi
     SUBDIR += php-grpc
     SUBDIR += php-ice37
     SUBDIR += php-libawl
@@ -5223,7 +5215,6 @@
     SUBDIR += py-helpdev
     SUBDIR += py-hg-evolve
     SUBDIR += py-hglib
-    SUBDIR += py-hgtools
     SUBDIR += py-hidraw
     SUBDIR += py-hishel
     SUBDIR += py-holidays
@@ -5484,7 +5475,6 @@
     SUBDIR += py-microsoft-security-utilities-secret-masker
     SUBDIR += py-microversion-parse
     SUBDIR += py-milc
-    SUBDIR += py-mime
     SUBDIR += py-miniKanren
     SUBDIR += py-minidump
     SUBDIR += py-minimal-snowplow-tracker
@@ -6635,8 +6625,6 @@
     SUBDIR += pymsteams
     SUBDIR += pyobfuscate
     SUBDIR += pyotherside-qt5
-    SUBDIR += pyside2
-    SUBDIR += pyside2-tools
     SUBDIR += pyside6
     SUBDIR += pyside6-tools
     SUBDIR += pystring
@@ -8193,7 +8181,6 @@
     SUBDIR += rubygem-pathname
     SUBDIR += rubygem-pathspec
     SUBDIR += rubygem-pathutil
-    SUBDIR += rubygem-pdk
     SUBDIR += rubygem-pedump
     SUBDIR += rubygem-peek
     SUBDIR += rubygem-peek-gc-rails52
@@ -8734,7 +8721,6 @@
     SUBDIR += sonarqube-ant-task
     SUBDIR += sonarqube-community
     SUBDIR += sope
-    SUBDIR += sope2
     SUBDIR += sord
     SUBDIR += spago
     SUBDIR += span
@@ -8790,7 +8776,6 @@
     SUBDIR += svntrac
     SUBDIR += swank-clojure
     SUBDIR += swig
-    SUBDIR += swig40
     SUBDIR += sysconftool
     SUBDIR += sysfsutils
     SUBDIR += systemc

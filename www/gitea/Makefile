@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	git:devel/git
 
-USES=		cpe gmake go:1.26+,no_targets
+USES=		cpe gmake go:no_targets
 USE_RC_SUBR=	gitea
 
 USE_HARDENING=	pie:golang relro:off retpoline:off

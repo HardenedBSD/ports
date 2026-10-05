@@ -129,6 +129,7 @@
     SUBDIR += R-cran-randomForest
     SUBDIR += R-cran-rappdirs
     SUBDIR += R-cran-rcmdcheck
+    SUBDIR += R-cran-rdtools
     SUBDIR += R-cran-registry
     SUBDIR += R-cran-rematch2
     SUBDIR += R-cran-remotes
@@ -517,7 +518,6 @@
     SUBDIR += covtool
     SUBDIR += cpan-upload
     SUBDIR += cpan-upload-http
-    SUBDIR += cpp-netlib
     SUBDIR += cpp-utilities
     SUBDIR += cpp2py
     SUBDIR += cppcheck
@@ -668,7 +668,6 @@
     SUBDIR += easyloggingpp
     SUBDIR += ebnf2yacc
     SUBDIR += ecgi
-    SUBDIR += eclipse-titan
     SUBDIR += edi
     SUBDIR += editline
     SUBDIR += efivar
@@ -2805,6 +2804,7 @@
     SUBDIR += p5-Future
     SUBDIR += p5-Future-AsyncAwait
     SUBDIR += p5-Future-IO
+    SUBDIR += p5-Future-XS
     SUBDIR += p5-Gearman
     SUBDIR += p5-Gearman-Client-Async
     SUBDIR += p5-Gearman-Server
@@ -8960,7 +8960,6 @@
     SUBDIR += xdgpaths
     SUBDIR += xelfviewer
     SUBDIR += xeus
-    SUBDIR += xeus-cling
     SUBDIR += xeus-zmq
     SUBDIR += xfce4-dev-tools
     SUBDIR += xmake

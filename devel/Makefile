@@ -528,7 +528,6 @@
     SUBDIR += cpprestsdk
     SUBDIR += cpptest
     SUBDIR += cppunit
-    SUBDIR += cppurses
     SUBDIR += cpputest
     SUBDIR += cproto
     SUBDIR += cpu_features
@@ -4891,6 +4890,7 @@
     SUBDIR += py-coveralls
     SUBDIR += py-cppheaderparser
     SUBDIR += py-cppy
+    SUBDIR += py-cpsat-logutils
     SUBDIR += py-crank
     SUBDIR += py-crashtest
     SUBDIR += py-crc32c
@@ -5202,6 +5202,7 @@
     SUBDIR += py-hash_ring
     SUBDIR += py-hatch
     SUBDIR += py-hatch-autorun
+    SUBDIR += py-hatch-cython
     SUBDIR += py-hatch-docstring-description
     SUBDIR += py-hatch-fancy-pypi-readme
     SUBDIR += py-hatch-jupyter-builder
@@ -5434,6 +5435,7 @@
     SUBDIR += py-loguru
     SUBDIR += py-logutils
     SUBDIR += py-logzero
+    SUBDIR += py-loky
     SUBDIR += py-looseversion
     SUBDIR += py-loro
     SUBDIR += py-louie
@@ -5626,6 +5628,7 @@
     SUBDIR += py-orderedmultidict
     SUBDIR += py-orderly-set
     SUBDIR += py-orjson
+    SUBDIR += py-orloge
     SUBDIR += py-ormsgpack
     SUBDIR += py-os-brick
     SUBDIR += py-os-client-config
@@ -5676,6 +5679,7 @@
     SUBDIR += py-path
     SUBDIR += py-path.py
     SUBDIR += py-pathable
+    SUBDIR += py-pathlib-abc
     SUBDIR += py-pathlib2
     SUBDIR += py-pathos
     SUBDIR += py-pathspec
@@ -8818,6 +8822,7 @@
     SUBDIR += termbox2
     SUBDIR += termcolor
     SUBDIR += terminality
+    SUBDIR += termox
     SUBDIR += terraform-ls
     SUBDIR += test-drive
     SUBDIR += testsweeper

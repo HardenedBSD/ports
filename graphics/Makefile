@@ -1014,6 +1014,7 @@
     SUBDIR += py-plotly
     SUBDIR += py-png
     SUBDIR += py-pointpats
+    SUBDIR += py-polyxios
     SUBDIR += py-projpicker
     SUBDIR += py-proplot
     SUBDIR += py-py_svg_hush
@@ -1051,6 +1052,7 @@
     SUBDIR += py-python-poppler-qt5
     SUBDIR += py-pyvips
     SUBDIR += py-pyvista
+    SUBDIR += py-pyvista-validation
     SUBDIR += py-pyx
     SUBDIR += py-pyzbar
     SUBDIR += py-qpageview

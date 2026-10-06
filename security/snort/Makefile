@@ -1,6 +1,6 @@
 PORTNAME=	snort
 PORTVERSION=	2.9.20
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	https://snort.org/downloads/snort/ \
 		https://snort.org/downloads/archive/snort/
@@ -19,7 +19,7 @@ USE_HARDENING=	safestack
 BUILD_DEPENDS=	daq>=2.2.2_3:net/daq
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libdnet.so:net/libdnet \
-		libpcap.so:net/libpcap
+		libpcap.so.1:net/libpcap
 RUN_DEPENDS=	daq>=2.2.2_3:net/daq
 
 USES=			bison cpe libtool pathfix shebangfix ssl

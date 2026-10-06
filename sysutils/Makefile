@@ -1592,6 +1592,7 @@
     SUBDIR += ucspi-unix
     SUBDIR += udfclient
     SUBDIR += ufetch
+    SUBDIR += ufs-utils
     SUBDIR += uhidd
     SUBDIR += uhubctl
     SUBDIR += uif2iso

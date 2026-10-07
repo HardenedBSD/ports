@@ -18,7 +18,9 @@ IGNORE_i386=	It builds, but cannot be used to build other ports
 
 BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx@${PY_FLAVOR}
 
+USE_HARDENING=	retpoline:off
 USES=		ada:run python:build
+USE_GCC=	yes
 USE_BINUTILS=	yes
 
 USE_GITHUB=	yes

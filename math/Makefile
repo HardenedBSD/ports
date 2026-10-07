@@ -537,7 +537,7 @@
     SUBDIR += mtrxmath
     SUBDIR += multichoose
     SUBDIR += mumps
-    SUBDIR += mumps4
+    SUBDIR += mumps-edf
     SUBDIR += munkres-cpp
     SUBDIR += muparser
     SUBDIR += muparserx

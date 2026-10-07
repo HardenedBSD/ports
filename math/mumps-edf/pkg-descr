@@ -11,6 +11,6 @@ available).
 - Various matrix input formats: assembled format; distributed assembled
 format; elemental format.
 - Partial factorization and Schur complement matrix.
-- Several orderings interfaced : AMD, AMF, PORD
+- Several orderings interfaced : AMD, AMF, PORD, METIS
 
-Note: This is the last version released under Public Domain.
+When MPI is disabled, libseq is installed.

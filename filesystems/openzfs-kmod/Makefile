@@ -18,6 +18,12 @@ KMODTARGET?=	openzfs.ko
 
 PLIST_FILES=	${KMODDIR}/${KMODTARGET}
 
+BROKEN_FreeBSD_14=	fails to build
+BROKEN_aarch64=		fails to build
+BROKEN_aarch64=		fails to build
+BROKEN_armv7=		fails to build
+BROKEN_armv7=		fails to build
+
 OPTIONS_DEFINE=	DEBUG INVARIANTS GCOV
 OPTIONS_DEFAULT=	DEBUG INVARIANTS
 OPTIONS_SUB=	yes

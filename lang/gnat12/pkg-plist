@@ -18,7 +18,6 @@
 %%GNAT%%/bin/gnatmake
 %%GNAT%%/bin/gnatname
 %%GNAT%%/bin/gnatprep
-%%GNAT%%/bin/lto-dump
 %%GNAT%%/bin/%%CONFTRGT%%-c++
 %%GNAT%%/bin/%%CONFTRGT%%-g++
 %%GNAT%%/bin/%%CONFTRGT%%-gcc
@@ -6382,9 +6381,7 @@
 %%GNAT%%/libexec/gcc/%%CONFTRGT%%/%%VER%%/install-tools/fixincl
 %%GNAT%%/libexec/gcc/%%CONFTRGT%%/%%VER%%/install-tools/mkheaders
 %%GNAT%%/libexec/gcc/%%CONFTRGT%%/%%VER%%/install-tools/mkinstalldirs
-%%GNAT%%/libexec/gcc/%%CONFTRGT%%/%%VER%%/liblto_plugin.so
 %%GNAT%%/libexec/gcc/%%CONFTRGT%%/%%VER%%/lto-wrapper
-%%GNAT%%/libexec/gcc/%%CONFTRGT%%/%%VER%%/lto1
 %%GNAT%%/libexec/gcc/%%CONFTRGT%%/%%VER%%/plugin/gengtype
 %%GNAT%%/share/gcc-%%VER%%/python/libstdcxx/__init__.py
 %%GNAT%%/share/gcc-%%VER%%/python/libstdcxx/v6/__init__.py
@@ -6438,7 +6435,6 @@
 %%GNAT%%/share/man/man1/gcov-dump.1.gz
 %%GNAT%%/share/man/man1/gcov-tool.1.gz
 %%GNAT%%/share/man/man1/gcov.1.gz
-%%GNAT%%/share/man/man1/lto-dump.1.gz
 %%GNAT%%/share/man/man7/fsf-funding.7.gz
 %%GNAT%%/share/man/man7/gfdl.7.gz
 %%GNAT%%/share/man/man7/gpl.7.gz

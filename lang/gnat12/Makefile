@@ -27,7 +27,9 @@ LIB_DEPENDS=	libgmp.so:math/gmp \
 RUN_DEPENDS=	${LOCALBASE}/bin/as:devel/binutils \
 		gcc${_GCC_VER}>0:lang/gcc${_GCC_VER}
 
+USE_HARDENING=  pie:off hardcflags:off
 USES=		bison gettext-runtime gmake iconv libtool localbase tar:xz
+USE_GCC=	12
 USE_BINUTILS=	yes
 USE_LDCONFIG=	${_TARGLIB}
 
@@ -38,6 +40,7 @@ CONFIGURE_ARGS=		--disable-bootstrap \
 			--disable-libmudflap \
 			--disable-libquadmath \
 			--disable-libssp \
+			--disable-lto \
 			--enable-gnu-indirect-function \
 			--enable-host-shared \
 			--enable-languages="ada,c,c++" \

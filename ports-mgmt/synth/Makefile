@@ -15,13 +15,13 @@ BUILD_DEPENDS=	gprbuild>0:devel/gprbuild \
 		${GPR}/adacurses.gpr:devel/adacurses
 
 USES=		ada elfctl ncurses
+USE_GCC=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	jrmarino
 
 ELF_FEATURES=	+wxneeded:build/${PORTNAME}
 
 GPR=		${LOCALBASE}/lib/gnat
-MAKE_ENV=	NCURSES_LINK=static
 
 OPTIONS_DEFINE=	WATCHDOG
 OPTIONS_DEFAULT=WATCHDOG

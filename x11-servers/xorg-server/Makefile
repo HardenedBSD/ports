@@ -75,21 +75,11 @@ MESON_ARGS+=	-Dudev=false \
 		-Dudev_kms=false
 .endif
 
-<<<<<<< HEAD
-.if ${FLAVOR} == xorg || ${FLAVOR} == xephyr
-MESON_ARGS+=	-Ddrm=true
-LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
-		libepoxy.so:graphics/libepoxy
-.endif
-
 # HardenedBSD note:
 # Due to how xorg handles loadable modules, it cannot be compiled
 # with RELRO + BIND_NOW.
 USE_HARDENING=	relro:off zeroreg
 
-.include <bsd.port.options.mk>
-=======
->>>>>>> rad/freebsd/main
 .if ${FLAVOR} == xephyr
 LIB_DEPENDS+=	libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb-image.so:x11/xcb-util-image \

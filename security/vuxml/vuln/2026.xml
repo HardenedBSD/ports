@@ -1,3 +1,213 @@
+  <vuln vid="2719a8da-c3f8-11f1-8da1-3497f65b111b">
+    <topic>clamav -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>clamav</name>
+	<range><lt>1.5.4,1</lt></range>
+      </package>
+      <package>
+	<name>clamav-lts</name>
+	<range><lt>1.4.6,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The ClamAV project reports:</p>
+	<blockquote cite="https://github.com/Cisco-Talos/clamav/releases/tag/clamav-1.4.6">
+	  <ul>
+	    <li>CVE-2026-20345: indexing error while converting GPT partition
+	      names could read or write beyond a stack-allocated partition
+	      entry.</li>
+	    <li>CVE-2026-20339: integer overflow in the PESpin unpacker could
+	      allocate an undersized buffer and write beyond it.</li>
+	    <li>CVE-2026-20346: integer underflow in the PDF parser could
+	      cause a crash while reading a malformed hex string.</li>
+	    <li>CVE-2026-20347: undefined behavior and integer overflow in
+	      the Mach-O parser could cause a crash on a malformed
+	      file.</li>
+	    <li>CVE-2026-20348: XAR parser size handling could request an
+	      excessive allocation or exceed scan limits.</li>
+	    <li>CVE-2025-8088: path separators in NTFS alternate data stream
+	      names in the bundled UnRAR library could lead to extraction
+	      outside the temporary scan directory.</li>
+	    <li>CVE-2026-20217: PESpin unpacker cleanup path could free
+	      pointers into the scanned file buffer and crash the
+	      scanner.</li>
+	    <li>CVE-2026-20213: integer overflow in PE rebuild size
+	      calculations could lead to a heap buffer overflow write.</li>
+	    <li>CVE-2026-20216: InstallShield archive extraction limit bypass
+	      could exhaust temporary storage.</li>
+	    <li>CVE-2026-20214: FSG unpacker loop underflow could write past
+	      the section array.</li>
+	    <li>CVE-2026-20243: ALZ parser size handling bugs could abort the
+	      scanner.</li>
+	    <li>CVE-2026-20215: 7z parser substream count overflow could
+	      write past under-allocated metadata arrays.</li>
+	    <li>CVE-2026-20244: 32-bit DMG parser size checks could crash
+	      32-bit scanner builds.</li>
+	    <li>Thread-safety issues in the clamd STATS command could
+	      disclose process memory or crash the daemon.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-20345</cvename>
+      <cvename>CVE-2026-20339</cvename>
+      <cvename>CVE-2026-20346</cvename>
+      <cvename>CVE-2026-20347</cvename>
+      <cvename>CVE-2026-20348</cvename>
+      <cvename>CVE-2025-8088</cvename>
+      <cvename>CVE-2026-20217</cvename>
+      <cvename>CVE-2026-20213</cvename>
+      <cvename>CVE-2026-20216</cvename>
+      <cvename>CVE-2026-20214</cvename>
+      <cvename>CVE-2026-20243</cvename>
+      <cvename>CVE-2026-20215</cvename>
+      <cvename>CVE-2026-20244</cvename>
+      <url>https://github.com/Cisco-Talos/clamav/releases/tag/clamav-1.4.5</url>
+      <url>https://github.com/Cisco-Talos/clamav/releases/tag/clamav-1.4.6</url>
+    </references>
+    <dates>
+      <discovery>2026-08-07</discovery>
+      <entry>2026-10-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="26fd839c-c338-11f1-a6ea-8447094a420f">
+    <topic>OpenSSH -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openssh-portable</name>
+	<range><lt>10.6.p1,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSH project reports:</p>
+	<blockquote cite="https://www.openssh.org/txt/release-10.6">
+	  <ul>
+	    <li>sftp(1): more strictly validate paths returned from the server to
+	      avoid some cases where a server could return paths that could
+	      manipulate a recursive copy operation into writing outside its
+	      target directory.</li>
+	    <li>sshd(8): when GSSAPIAuthentication is in use, only store GSSAPI
+	      credentials when authentication has succeeded. Avoids a situation
+	      where credentials from a failed GSSAPIAuthentication attempt may
+	      persist and be made inappropriately available if another
+	      authentication subsequently succeeds.</li>
+	    <li>sshd(8): reset GSSAPIAuthentication before authentication, avoiding
+	      state from one authentication attempt being confused with that of
+	      a later attempt.</li>
+	    <li>sshd(8), ssh(1): disable LZ77 dictionary coder to mitigate the
+	      side-channel leaks described in "Crossing the Streams: SSH
+	      Plaintext Recovery via a Common Compression Context in
+	      Multiplexed Channels"</li>
+	    <li>ssh(1): disallow '$' and '\' characters in usernames entered on
+	      the command-line to avoid usernames from untrusted sources
+	      yielding injection in shell context via ProxyCommand, Match exec,
+	      etc. Usernames specified via the configuration files are not
+	      subject this this control.</li>
+	    <li>ssh-keygen(1): correct handling of Daylight Saving Time when
+	      converting dates. Previous handling could cause errors of
+	      up to +/- 1 hour (unless you are in the Antarctica/Troll
+	      timezone, where the error could be +/- 2 hours). These errors
+	      could result in creation of certificates with incorrect expiry
+	      times.</li>
+	    <li>sshd(8), ssh(1): ensure that compressed payloads don't inflate
+	      past the maximum supported packet length.</li>
+	    <li>sshd(8): fully honor the authorized_keys "restrict" keyword,
+	      which was not being properly applied to tunnel forwarding
+	      (PermitTunnel, disabled by default).</li>
+	    <li>sshd(8): correctly handle some options that accept "none". Some
+	      options, including AuthorizedPrincipalsFile, were documented as
+	      accepting "none" as a way to disable them; however, when
+	      overridden by an sshd_config(5) Match keyword, this argument was
+	      being incorrectly interpreted as a literal file.</li>
+	    <li>sshd(8): on platforms that do not support file descriptor passing
+	      and that require root for PTY allocation, the post-authentication
+	      sshd-session process retains root privilege, whereas on other
+	      platforms this process runs with the privilege of the logged-in
+	      user. When sshd-session was run with elevated privilege, it could
+	      perform certain actions as root and circumvent controls that
+	      would normally have applied to the user, such as making unix
+	      domain socket connections or binding (via -R forwarding) to low-
+	      numbered TCP ports.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://www.openssh.org/txt/release-10.6</url>
+    </references>
+    <dates>
+      <discovery>2026-10-06</discovery>
+      <entry>2026-10-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="06bf834f-c31f-11f1-9b94-901b0e13f1a0">
+    <topic>xorg -- Multiple vulnerabilities</topic>
+    <affects>
+    <package>
+	<name>xorg-server</name>
+	<name>xephyr</name>
+	<name>xorg-vfbserver</name>
+	<range><lt>21.1.25,1</lt></range>
+    </package>
+    <package>
+	<name>xorg-nestserver</name>
+	<range><lt>21.1.25,2</lt></range>
+    </package>
+    <package>
+	<name>xwayland</name>
+	<range><lt>24.1.14,1</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>X.Org reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2026-October/003747.html">
+	  <p>Multiple issues have been found in the X server and Xwayland implementations
+	    published by X.Org for which we are releasing security fixes for in
+	    xorg-server-21.1.25 and xwayland-24.1.14.
+	    CVE-2026-88812: XKB SetGeometry TextDoodad Double Free
+	    CVE-2026-93515: Present Extension Cross-Window Notify Use-After-Free
+	    CVE-2026-93516: XInput Passive Grab modifierDevice Use-After-Free
+	    CVE-2026-93517: GLX RenderLarge Heap Buffer Overflow
+	    CVE-2026-93518: XKB ResizeKeyType Numeric Truncation
+	    CVE-2026-93519: XFixes Pointer Barrier Event List Buffer Overflow
+	    CVE-2026-93520: XKB ChangeKeycodeRange Heap Out-of-Bounds Write
+	    CVE-2026-93521: RandR ChangeProviderProperty Heap Buffer Overflow
+	    CVE-2026-93522: Glamor CopyArea CPU-FBO Heap Buffer Overflow
+	    CVE-2026-93523: XInput2 PassiveUngrabDevice Modifier Out-of-Bounds Write
+	    CVE-2026-93524: XKB SetMap Key Width/Action Count Desync Out-Of-Bounds Read
+	    CVE-2026-93536: GestureBuildSprite Use-After-Free
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-88812</cvename>
+      <cvename>CVE-2026-93515</cvename>
+      <cvename>CVE-2026-93516</cvename>
+      <cvename>CVE-2026-93517</cvename>
+      <cvename>CVE-2026-93518</cvename>
+      <cvename>CVE-2026-93519</cvename>
+      <cvename>CVE-2026-93520</cvename>
+      <cvename>CVE-2026-93521</cvename>
+      <cvename>CVE-2026-93522</cvename>
+      <cvename>CVE-2026-93523</cvename>
+      <cvename>CVE-2026-93524</cvename>
+      <cvename>CVE-2026-93536</cvename>
+      <url>https://lists.x.org/archives/xorg-announce/2026-October/003747.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-07</discovery>
+      <entry>2026-10-08</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="03302734-c15d-11f1-8561-107c611e671e">
     <topic>rabbitmq-c -- remote client-side memory exhaustion</topic>
     <affects>
@@ -12475,8 +12685,7 @@
     <affects>
       <package>
 	<name>postgresql-jdbc</name>
-	<range><lt>47.7.12</lt></range>
-	<range><ge>47.7.4</ge></range>
+	<range><ge>47.7.4</ge><lt>47.7.12</lt></range>
       </package>
     </affects>
     <description>

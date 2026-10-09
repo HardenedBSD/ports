@@ -489,6 +489,7 @@
     SUBDIR += markdownfmt
     SUBDIR += markdownpart
     SUBDIR += markless
+    SUBDIR += markterm
     SUBDIR += mathml-xsd
     SUBDIR += md2roff
     SUBDIR += md4c
@@ -1243,6 +1244,7 @@
     SUBDIR += pa-aspell
     SUBDIR += pageedit
     SUBDIR += par
+    SUBDIR += patdiff
     SUBDIR += pdf-form-filler-mcp
     SUBDIR += pdf-reader-mcp
     SUBDIR += pdfgrep

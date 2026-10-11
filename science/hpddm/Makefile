@@ -1,6 +1,6 @@
 PORTNAME=	HPDDM
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.4.0
+DISTVERSION=	2.4.1
 CATEGORIES=	science
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -26,7 +26,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	${PORTNAME:tl}
 GH_PROJECT=	${GH_ACCOUNT}
 
-CXXFLAGS+=	-std=c++11 -fPIC
+# HPDDM.hpp assumes ESSL-style Fortran symbols (no underscore) on PowerPC
+CXXFLAGS+=	-std=c++11 -fPIC -DAdd_
 CFLAGS+=	-std=c99
 USE_LDCONFIG=	yes
 

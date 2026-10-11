@@ -539,11 +539,15 @@
     SUBDIR += nginx-module-array-var
     SUBDIR += nginx-module-cache-purge
     SUBDIR += nginx-module-form-input
+    SUBDIR += nginx-module-let
     SUBDIR += nginx-module-lua
     SUBDIR += nginx-module-lua-stream
     SUBDIR += nginx-module-ndk
     SUBDIR += nginx-module-njs
+    SUBDIR += nginx-module-slowfs-cache
     SUBDIR += nginx-module-vod
+    SUBDIR += nginx-module-websockify
+    SUBDIR += nginx-module-zstd
     SUBDIR += nginx-naxsi
     SUBDIR += nginx-prometheus-exporter
     SUBDIR += nginx-ultimate-bad-bot-blocker
@@ -1545,6 +1549,7 @@
     SUBDIR += py-asgi-csrf
     SUBDIR += py-asgiref
     SUBDIR += py-autobahn
+    SUBDIR += py-autobahn25
     SUBDIR += py-azure-common
     SUBDIR += py-baize
     SUBDIR += py-beaker

@@ -111,6 +111,8 @@
     SUBDIR += foot
     SUBDIR += framework-autorotate
     SUBDIR += framework-autorotate-hotkey
+    SUBDIR += framework-keyboard
+    SUBDIR += framework-laptop12
     SUBDIR += fstobdf
     SUBDIR += fuzzel
     SUBDIR += gbsddialog

@@ -540,11 +540,15 @@
     SUBDIR += nginx-module-array-var
     SUBDIR += nginx-module-cache-purge
     SUBDIR += nginx-module-form-input
+    SUBDIR += nginx-module-gridfs
     SUBDIR += nginx-module-let
     SUBDIR += nginx-module-lua
     SUBDIR += nginx-module-lua-stream
     SUBDIR += nginx-module-ndk
     SUBDIR += nginx-module-njs
+    SUBDIR += nginx-module-postgres
+    SUBDIR += nginx-module-redis2
+    SUBDIR += nginx-module-sflow
     SUBDIR += nginx-module-slowfs-cache
     SUBDIR += nginx-module-vod
     SUBDIR += nginx-module-websockify
@@ -554,7 +558,6 @@
     SUBDIR += nginx-ultimate-bad-bot-blocker
     SUBDIR += nift
     SUBDIR += node
-    SUBDIR += node20
     SUBDIR += node22
     SUBDIR += node24
     SUBDIR += node26
@@ -562,7 +565,6 @@
     SUBDIR += novnc
     SUBDIR += npc
     SUBDIR += npm
-    SUBDIR += npm-node20
     SUBDIR += npm-node22
     SUBDIR += npm-node24
     SUBDIR += npm-node26
@@ -2792,7 +2794,6 @@
     SUBDIR += xurls
     SUBDIR += yabb
     SUBDIR += yarn
-    SUBDIR += yarn-node20
     SUBDIR += yarn-node22
     SUBDIR += yarn-node24
     SUBDIR += yarn-node26

@@ -1,3 +1,120 @@
+  <vuln vid="fdb34ad1-c7ac-11f1-97dc-40b034429ecf">
+    <topic>p5-Plack -- Multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>p5-Plack</name>
+<range><lt>1.0055</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Plack project reports:</p>
+	<blockquote cite="https://metacpan.org/dist/Plack/changes">
+	  <p>[SECURITY]</p>
+	  <ul>
+	    <li>Fix memory leak of every request env in Plack::Middleware::Recursive (CVE-2026-110333)</li>
+	    <li>Plack::Request::Upload->basename never returns '', '.' or '..' (CVE-2026-110332)</li>
+	    <li>Plack::App::URLMap matches SERVER_PORT literally when stripping it from Host (CVE-2026-110335)</li>
+	  </ul>
+	  <p>[BUG FIXES]</p>
+	  <ul>
+	    <li>Plack::Middleware::ErrorDocument restores the env after a subrequest, so outer
+            middleware such as AccessLog sees the original request (CVE-2026-110334)</li>
+	  </ul>
+	  <p>[BUG FIXES]</p>
+	  <ul>
+	    <li>Document that Plack::Handler::FCGI and Apache2 keep dot segments in PATH_INFO and
+          warn against relying on front-server path-based access control (CVE-2026-110336)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-110333</cvename>
+      <cvename>CVE-2026-110332</cvename>
+      <cvename>CVE-2026-110335</cvename>
+      <cvename>CVE-2026-110334</cvename>
+      <cvename>CVE-2026-110336</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-110333</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-110332</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-110335</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-110334</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-110336</url>
+    </references>
+    <dates>
+      <discovery>2026-10-13</discovery>
+      <entry>2026-10-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="14dab969-c797-11f1-a6ea-8447094a420f">
+    <topic>Curl -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>curl</name>
+	<range><lt>8.23.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Curl project reports:</p>
+	<blockquote cite="">
+	  <ul>
+	    <li>local interface connection reuse mixup (CVE-2026-107929)</li>
+	    <li>info leak uploading over WebSockets with GnuTLS (CVE-2026-107928)</li>
+	    <li>password leak in CURLINFO_EFFECTIVE_URL (CVE-2026-94266)</li>
+	    <li>Authorization: Negotiate sent to foreign origin (CVE-2026-94265)</li>
+	    <li>server-set cookie aborts cookie jar load (CVE-2026-92386)</li>
+	    <li>never-ending loop via server response omission (CVE-2026-92387)</li>
+	    <li>FTP wildcard write callback mixup (CVE-2026-92388)</li>
+	    <li>TFTP direction confusion (CVE-2026-92389)</li>
+	    <li>-J no-clobber guarantee bypassed with 103 early hints (CVE-2026-92390)</li>
+	    <li>curl_mime_free stack overflow by recursion (CVE-2026-92391)</li>
+	    <li>HTTP/2 upload Use-After-Free (CVE-2026-92392)</li>
+	    <li>redirect to SFTP or SCP bypasses host verification (CVE-2026-86410)</li>
+	    <li>server-set cookie erases cookie jar (CVE-2026-86412)</li>
+	    <li>Negotiate credentials sent to redirected origin (CVE-2026-86413)</li>
+	    <li>leaking host credentials to HTTP proxy (CVE-2026-86414)</li>
+	    <li>auto client cert connection reuse mixup (CVE-2026-86415)</li>
+	    <li>cross-origin reuse of a Negotiate connection (CVE-2026-87861)</li>
+	    <li>HSTS cache import drops longer-lived child (CVE-2026-87862)</li>
+	    <li>HSTS response erases persisted entries (CVE-2026-87863)</li>
+	    <li>knownhost callback mismatches key as missing (CVE-2026-87865)</li>
+	    <li>wolfSSL public-key pinning bypass (CVE-2026-87866)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-107929</cvename>
+      <cvename>CVE-2026-107928</cvename>
+      <cvename>CVE-2026-94266</cvename>
+      <cvename>CVE-2026-94265</cvename>
+      <cvename>CVE-2026-92386</cvename>
+      <cvename>CVE-2026-92387</cvename>
+      <cvename>CVE-2026-92388</cvename>
+      <cvename>CVE-2026-92389</cvename>
+      <cvename>CVE-2026-92390</cvename>
+      <cvename>CVE-2026-92391</cvename>
+      <cvename>CVE-2026-92392</cvename>
+      <cvename>CVE-2026-86410</cvename>
+      <cvename>CVE-2026-86412</cvename>
+      <cvename>CVE-2026-86413</cvename>
+      <cvename>CVE-2026-86414</cvename>
+      <cvename>CVE-2026-86415</cvename>
+      <cvename>CVE-2026-87861</cvename>
+      <cvename>CVE-2026-87862</cvename>
+      <cvename>CVE-2026-87863</cvename>
+      <cvename>CVE-2026-87865</cvename>
+      <cvename>CVE-2026-87866</cvename>
+      <url>https://curl.se/docs/security.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-14</discovery>
+      <entry>2026-10-14</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="371fc9b2-c543-11f1-b115-74563cf85f9d">
     <topic>libwasmtime -- Multiple vulnerabilities</topic>
     <affects>
@@ -54,45 +171,44 @@
     <topic>Timing leaks of the nonce in ECDSA, EdDSA and DSA signatures</topic>
     <affects>
       <package>
-        <name>py312-pycryptodome</name>
-        <name>py312-pycryptodomex</name>
-        <name>py313-pycryptodome</name>
-        <name>py313-pycryptodomex</name>
-        <name>py313t-pycryptodome</name>
-        <name>py313t-pycryptodomex</name>
-        <name>py314-pycryptodome</name>
-        <name>py314-pycryptodomex</name>
-        <name>py314t-pycryptodome</name>
-        <name>py314t-pycryptodomex</name>
-        <name>py311-pycryptodome</name>
-        <name>py311-pycryptodomex</name>
-        <name>py315-pycryptodome</name>
-        <name>py315-pycryptodomex</name>
-        <name>py27-pycryptodome</name>
-        <name>py27-pycryptodomex</name>
-        <range>
-          <lt>3.24.1</lt>
-        </range>
+	<name>py312-pycryptodome</name>
+	<name>py312-pycryptodomex</name>
+	<name>py313-pycryptodome</name>
+	<name>py313-pycryptodomex</name>
+	<name>py313t-pycryptodome</name>
+	<name>py313t-pycryptodomex</name>
+	<name>py314-pycryptodome</name>
+	<name>py314-pycryptodomex</name>
+	<name>py314t-pycryptodome</name>
+	<name>py314t-pycryptodomex</name>
+	<name>py311-pycryptodome</name>
+	<name>py311-pycryptodomex</name>
+	<name>py315-pycryptodome</name>
+	<name>py315-pycryptodomex</name>
+	<name>py27-pycryptodome</name>
+	<name>py27-pycryptodomex</name>
+	<range><lt>3.24.1</lt></range>
       </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
-        <p>Helder Eijs reports</p>
-        <blockquote cite="://github.com/Legrandin/pycryptodome/commit/59351474682db6648825f17b11112d6821d66cb9">
-          <p>Fix timing leaks of the nonce in ECDSA, EdDSA and DSA signatures
-            The signing time depended on the secret nonce, enough to recover the
-            private key with a lattice attack.
+	<p>Helder Eijs reports</p>
+	<blockquote cite="https://github.com/Legrandin/pycryptodome/commit/59351474682db6648825f17b11112d6821d66cb9">
+	  <p>Fix timing leaks of the nonce in ECDSA, EdDSA and DSA signatures
+	     The signing time depended on the secret nonce, enough to recover the
+	     private key with a lattice attack.
 
-            - EC: scalars are encoded and processed on the full length of the
-              order, and ec_mix_add() is constant time for the point at infinity
-              (a zero digit).
-            - DSA: g^k uses k + q or k + 2q (fixed length) and mpz_powm_sec, or the
-              library's Montgomery exponentiation without GMP. About 40% slower.</p>
-        </blockquote>
+	     - EC: scalars are encoded and processed on the full length of the
+	       order, and ec_mix_add() is constant time for the point at infinity
+	       (a zero digit).
+	     - DSA: g^k uses k + q or k + 2q (fixed length) and mpz_powm_sec, or the
+	       library's Montgomery exponentiation without GMP. About 40% slower.</p>
+	</blockquote>
       </body>
     </description>
     <references>
-      </references>
+      <url>https://github.com/Legrandin/pycryptodome/commit/59351474682db6648825f17b11112d6821d66cb9</url>
+    </references>
     <dates>
       <discovery>2026-10-11</discovery>
       <entry>2026-10-12</entry>

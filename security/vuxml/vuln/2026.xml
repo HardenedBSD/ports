@@ -1,3 +1,65 @@
+  <vuln vid="1be69a2e-c883-11f1-b5c5-3c7c3fba4204">
+    <topic>Newsboat -- vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>newsboat</name>
+	  <range><ge>2.10</ge><lt>2.45</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Newsboat Team reports:</p>
+	<blockquote cite="https://github.com/newsboat/newsboat/blob/r2.45/CHANGELOG.md#security">
+	<ul>
+	  <li>(CVE ID Pending) Remote code execution via manual OPML import (--import-from-opml)</li>
+	  <li><a href="https://github.com/newsboat/newsboat/security/advisories/GHSA-4m8m-vj3m-hfxx">GHSA-4m8m-vj3m-hfxx</a>: Remote code execution via OPML import (both manual --import-from-opml and opml-url config setting)</li>
+	  <li><a href="https://github.com/newsboat/newsboat/security/advisories/GHSA-pvg7-gjxf-23c9">GHSA-pvg7-gjxf-23c9</a>: Podboat could write at arbitrary paths</li>
+	</ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/newsboat/newsboat/security/advisories/GHSA-4m8m-vj3m-hfxx</url>
+      <url>https://github.com/newsboat/newsboat/security/advisories/GHSA-pvg7-gjxf-23c9</url>
+    </references>
+    <dates>
+      <discovery>2026-10-04</discovery>
+      <entry>2026-10-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f0604004-c87b-11f1-9006-3497f65b111b">
+    <topic>nginx-module-cache-purge -- symlink traversal when walking cache trees</topic>
+    <affects>
+      <package>
+       <name>nginx-module-cache-purge</name>
+       <range><lt>3.0.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>The ngx_cache_purge developers report:</p>
+       <blockquote cite="https://github.com/nginx-modules/ngx_cache_purge/releases/tag/3.0.4">
+       <p>
+       Fixed a symlink traversal vulnerability during cache tree traversal.
+       An attacker with the ability to create symbolic links inside the
+       cache directory could potentially cause cache purge operations to
+       delete arbitrary files accessible to the NGINX worker process
+       (CVE-2026-108981).
+       </p>
+      </blockquote>
+     </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-108981</cvename>
+      <url>https://github.com/nginx-modules/ngx_cache_purge/releases/tag/3.0.4</url>
+    </references>
+    <dates>
+      <discovery>2026-10-11</discovery>
+      <entry>2026-10-15</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="3f9e602e-c849-11f1-ada3-bc241121aa0a">
     <topic>FreeBSD -- Multiple vulnerabilities in bhyve device models</topic>
     <affects>
@@ -108,6 +170,69 @@
     <references>
       <cvename>CVE-2026-101307</cvename>
       <freebsdsa>SA-26:70.tcp</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-10-14</discovery>
+      <entry>2026-10-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="95970257-c867-11f1-9006-3497f65b111b">
+    <topic>nginx -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>nginx</name>
+       <name>nginx-full</name>
+       <name>nginx-lite</name>
+       <range><lt>1.30.6,3</lt></range>
+      </package>
+      <package>
+       <name>nginx-devel</name>
+       <range><lt>1.31.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>The nginx developers report:</p>
+       <blockquote cite="https://nginx.org/en/security_advisories.html">
+       <p>
+       A buffer overflow might occur in a worker process when using the
+       "alias" directive if the request URI was changed by the "rewrite"
+       directive and was then mapped to a file path (CVE-2026-15176).
+       </p>
+       <p>
+       A buffer overflow might occur in a worker process while evaluating
+       string expressions with variables, which affected the document root
+       calculation and request logging in the http and stream modules
+       (CVE-2026-93479).
+       </p>
+       <p>
+       When using HTTP/3 a part of an unknown frame might be treated as the
+       request body, which might result in bypassing the
+       "client_max_body_size" limit or injecting data in the proxied
+       request (CVE-2026-95101).
+       </p>
+       <p>
+       When using TLS session ticket key rotation, one of the keys was left
+       uninitialized, which might allow to forge a session (CVE-2026-97629).
+       </p>
+       <p>
+       When using asynchronous file I/O (AIO), use-after-free might occur in
+       certain configurations if the SSI page has "include virtual" commands
+       (CVE-2026-97205).
+       </p>
+      </blockquote>
+     </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-15176</cvename>
+      <cvename>CVE-2026-93479</cvename>
+      <cvename>CVE-2026-95101</cvename>
+      <cvename>CVE-2026-97629</cvename>
+      <cvename>CVE-2026-97205</cvename>
+      <url>https://nginx.org/en/security_advisories.html</url>
+      <url>https://nginx.org/en/CHANGES-1.30</url>
+      <url>https://nginx.org/en/CHANGES</url>
     </references>
     <dates>
       <discovery>2026-10-14</discovery>

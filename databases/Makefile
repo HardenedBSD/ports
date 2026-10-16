@@ -597,6 +597,7 @@
     SUBDIR += pgbot
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
+    SUBDIR += pgdog
     SUBDIR += pgjwt
     SUBDIR += pgloader3
     SUBDIR += pglogical

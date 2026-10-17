@@ -199,6 +199,7 @@
     SUBDIR += checkrestart
     SUBDIR += chezmoi
     SUBDIR += chgrep
+    SUBDIR += chkcrontab
     SUBDIR += choria
     SUBDIR += chyves
     SUBDIR += cilium

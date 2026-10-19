@@ -9,6 +9,7 @@
     SUBDIR += R-cran-BsMD
     SUBDIR += R-cran-CVST
     SUBDIR += R-cran-ChangeAnomalyDetection
+    SUBDIR += R-cran-CompQuadForm
     SUBDIR += R-cran-DEoptimR
     SUBDIR += R-cran-DRR
     SUBDIR += R-cran-Deriv
@@ -101,6 +102,8 @@
     SUBDIR += R-cran-mclust
     SUBDIR += R-cran-mcmc
     SUBDIR += R-cran-memisc
+    SUBDIR += R-cran-meta
+    SUBDIR += R-cran-metabook
     SUBDIR += R-cran-metadat
     SUBDIR += R-cran-metafor
     SUBDIR += R-cran-minqa

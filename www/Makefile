@@ -545,6 +545,8 @@
     SUBDIR += nginx-module-fips-check
     SUBDIR += nginx-module-form-input
     SUBDIR += nginx-module-gridfs
+    SUBDIR += nginx-module-iconv
+    SUBDIR += nginx-module-json-status
     SUBDIR += nginx-module-let
     SUBDIR += nginx-module-lua
     SUBDIR += nginx-module-lua-stream

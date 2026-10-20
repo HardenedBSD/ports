@@ -1,5 +1,5 @@
 PORTNAME=	bosd
-DISTVERSION=	10.5.1
+DISTVERSION=	10.5.2
 CATEGORIES=	x11
 
 MAINTAINER=	dteske@FreeBSD.org
@@ -41,8 +41,6 @@ TESTS_MAKE_ARGS_OFF=	INSTALL_TESTS=no
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/bosd \
 		${STAGEDIR}${PREFIX}/lib/libbosd.so.4
-	${INSTALL_DATA} ${WRKSRC}/CHANGELOG.md ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/*.png ${STAGEDIR}${DATADIR}
 
 # Upstream install always copies the example scripts.
 post-install-EXAMPLES-off:

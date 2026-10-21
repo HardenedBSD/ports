@@ -542,6 +542,7 @@
     SUBDIR += py-ipyfastscape
     SUBDIR += py-jiwer
     SUBDIR += py-kartograph
+    SUBDIR += py-kenlm
     SUBDIR += py-kokoro
     SUBDIR += py-langchain
     SUBDIR += py-langchain-anthropic
@@ -824,6 +825,7 @@
     SUBDIR += toilet
     SUBDIR += translate
     SUBDIR += trurl
+    SUBDIR += ttfx
     SUBDIR += ttyrec
     SUBDIR += tudu
     SUBDIR += tvbrowser

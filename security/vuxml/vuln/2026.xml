@@ -1,3 +1,171 @@
+  <vuln vid="1701e8a6-cd43-11f1-8135-8447094a420f">
+    <topic>PowerDNS -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>powerdns-recursor</name>
+	<range><lt>5.4.8</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS reports:</p>
+	<blockquote cite="https://doc.powerdns.com/recursor/security-advisories/powerdns-advisory-2026-12.html">
+	  <ul>
+	    <li>CVE-2026-73206: A crafted DNS packet can cause a denial of service decompressing the DNS names in the packet</li>
+	    <li>CVE-2026-73205: A malicious client can cause too many TCP connections in TIME_WAIT state</li>
+	    <li>CVE-2026-85555: DNSSEC validation bypass and cache poisoning in PowerDNS Recursor via out-of-band NS resolution</li>
+	    <li>CVE-2026-85556: Missing OPT RR owner-name validation bypasses ECS hardening</li>
+	    <li>CVE-2026-85557: Single web client not doing TLS handshake monopolizes web access</li>
+	    <li>CVE-2026-85558: Recursor retains closed TCP client addresses until process exit</li>
+	    <li>CVE-2026-85559: Out-of-bounds read in Recursor findScopeZero</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-73206</cvename>
+      <cvename>CVE-2026-73205</cvename>
+      <cvename>CVE-2026-85555</cvename>
+      <cvename>CVE-2026-85556</cvename>
+      <cvename>CVE-2026-85557</cvename>
+      <cvename>CVE-2026-85558</cvename>
+      <cvename>CVE-2026-85559</cvename>
+      <url>https://doc.powerdns.com/recursor/security-advisories/powerdns-advisory-2026-12.html</url>
+    </references>
+    <dates>
+      <discovery>2026-10-21</discovery>
+      <entry>2026-10-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d8e16d08-cd2f-11f1-8135-8447094a420f">
+    <topic>PHP -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>php82</name>
+	<range><lt>8.2.35</lt></range>
+      </package>
+      <package>
+	<name>php83</name>
+	<range><lt>8.3.36</lt></range>
+      </package>
+      <package>
+	<name>php84</name>
+	<range><lt>8.4.27</lt></range>
+      </package>
+      <package>
+	<name>php85</name>
+	<range><lt>8.5.13</lt></range>
+      </package>
+      <package>
+	<name>php86</name>
+	<range><lt>8.6.0.r4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PHP project reports:</p>
+	<blockquote cite="https://www.php.net/archive/2026.php#2026-10-20-1">
+	  <p>Upcoming Critical PHP Security Release</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-109618</cvename>
+      <cvename>CVE-2026-109619</cvename>
+      <url>https://www.php.net/archive/2026.php#2026-10-20-1</url>
+    </references>
+    <dates>
+      <discovery>2026-10-20</discovery>
+      <entry>2026-10-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0be28489-cd2f-11f1-8135-8447094a420f">
+    <topic>Unbound -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>unbound</name>
+	<range><lt>1.26.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NLNetLabs reports:</p>
+	<blockquote cite="https://community.nlnetlabs.nl/t/unbound-1-26-2-released/3495">
+	  <p>This release consolidates security fixes for issues reported over
+a period of time.</p>
+	  <ul>
+	    <li>CVE-2026-97206, DoQ path-migration can lead to use-after-free on
+multi-threaded deployments.</li>
+	    <li>CVE-2026-50106, Possible insecure NXDOMAIN for non-existing
+records under a configured island trust anchor underneath an
+insecure parent.</li>
+	    <li>CVE-2026-96405, Aggregate DNS name chained pointer decompression
+work leads to degradation of service.</li>
+	    <li>CVE-2026-109125, Possible cache poisoning vulnerability via
+a cache side-channel exposed by ‘unwanted-reply-threshold’.</li>
+	    <li>CVE-2026-35501, Bypass of a configured island trust anchor
+underneath an insecure parent from an attacker-controlled NSEC
+record.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-97206</cvename>
+      <cvename>CVE-2026-50106</cvename>
+      <cvename>CVE-2026-96405</cvename>
+      <cvename>CVE-2026-109125</cvename>
+      <cvename>CVE-2026-35501</cvename>
+      <url>https://community.nlnetlabs.nl/t/unbound-1-26-2-released/3495</url>
+    </references>
+    <dates>
+      <discovery>2026-10-21</discovery>
+      <entry>2026-10-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="070a35ef-cd22-11f1-ada3-bc241121aa0a">
+    <topic>FreeBSD -- TLS certificate store update due to eMudhra compromise</topic>
+    <affects>
+      <package>
+	<name>FreeBSD</name>
+	<range><ge>15.1</ge><lt>15.1_6</lt></range>
+	<range><ge>14.5</ge><lt>14.5_3</lt></range>
+	<range><ge>14.4</ge><lt>14.4_12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>eMudhra generated several of its TLS intermediate CA certificates
+	  using a flawed procedure that used trivially small private keys.
+	  The keys have been recovered by several parties and publicly
+	  disclosed.  The intermediates are signed by the "emSign ECC Root
+	  CA - G3" root certificate, which was included in the trusted
+	  certificate bundle.</p>
+	  <p>The intermediates have been revoked, but OpenSSL does not check
+	  certificate revocation by default.</p>
+	  <p>The corrected bundle marks "emSign ECC Root CA - G3" as untrusted.
+	  It also incorporates the other root certificate additions and
+	  removals in NSS 3.131.1.</p>
+	<h1>Impact:</h1>
+	  <p>An attacker able to intercept network traffic can use the
+	  compromised keys to issue a certificate that impersonates any TLS
+	  server, allowing the traffic to be read or modified without
+	  detection.</p>
+      </body>
+    </description>
+    <references>
+      <freebsdsa>SA-26:73.caroot</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-10-21</discovery>
+      <entry>2026-10-21</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="436ad1a7-ccc8-11f1-af18-c4ff99d93a55">
     <topic>Emacs -- Local command injection via crafted file names in TRAMP</topic>
     <affects>

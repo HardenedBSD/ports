@@ -1675,6 +1675,7 @@
     SUBDIR += ucx
     SUBDIR += udp-over-tcp
     SUBDIR += udpbroadcastrelay
+    SUBDIR += udpspeeder
     SUBDIR += udptunnel
     SUBDIR += udpxy
     SUBDIR += udt

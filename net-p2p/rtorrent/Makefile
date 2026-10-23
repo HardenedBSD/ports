@@ -25,6 +25,8 @@ USE_HARDENING=	safestack
 TEST_ARGS=	CPPUNIT_LIBS="-L${LOCALBASE}/lib -lcppunit"
 TEST_TARGET=	check
 
+CONFLICTS_INSTALL=	rtorrent-devel
+
 SUB_FILES=	pkg-message
 
 USERS=		rtorrent

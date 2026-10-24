@@ -1669,6 +1669,7 @@
     SUBDIR += ttl
     SUBDIR += tun2socks
     SUBDIR += tunneller
+    SUBDIR += turnd
     SUBDIR += turnserver
     SUBDIR += u6rd
     SUBDIR += ucarp

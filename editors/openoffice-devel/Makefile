@@ -49,13 +49,9 @@ LICENSE_PERMS_ICU=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_TWAIN=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_W3C=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-ONLY_FOR_ARCHS=	amd64 i386 powerpc64
-=======
 ONLY_FOR_ARCHS=	amd64 i386 powerpc64 powerpc64le
->>>>>>> rad/freebsd/main
 
 BUILD_DEPENDS=								\
 		p5-Archive-Zip>=0:archivers/p5-Archive-Zip		\

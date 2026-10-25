@@ -34,18 +34,12 @@ MAKE_JOBS_UNSAFE=	yes
 ALL_TARGET=	default
 INSTALL_TARGET=	install datainstall
 
-<<<<<<< HEAD
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 USE_HARDENING=	safestack
 
-INSTDIR=	${PREFIX}/share/games/${PORTNAME}
-
-BASH2FIX=	src/linux/torcs.in Make-default.mk
-=======
 DATADIR=	${PREFIX}/share/games/${PORTNAME}
->>>>>>> rad/freebsd/main
 
 STRIPFILES=	drivers/berniw/berniw.so \
 		drivers/berniw2/berniw2.so \

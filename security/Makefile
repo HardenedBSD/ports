@@ -398,6 +398,7 @@
     SUBDIR += mhash
     SUBDIR += mindterm-binary
     SUBDIR += minisign
+    SUBDIR += mkcacerts
     SUBDIR += mkcert
     SUBDIR += mkp224o
     SUBDIR += modsecurity3

@@ -2510,7 +2510,6 @@
     SUBDIR += p5-DateTime-Format-Excel
     SUBDIR += p5-DateTime-Format-Flexible
     SUBDIR += p5-DateTime-Format-HTTP
-    SUBDIR += p5-DateTime-Format-IBeat
     SUBDIR += p5-DateTime-Format-ICal
     SUBDIR += p5-DateTime-Format-ISO8601
     SUBDIR += p5-DateTime-Format-Mail
@@ -3889,7 +3888,6 @@
     SUBDIR += p5-Test-XML
     SUBDIR += p5-Test-XML-Valid
     SUBDIR += p5-Test-YAML
-    SUBDIR += p5-Test-YAML-Meta
     SUBDIR += p5-Test-YAML-Valid
     SUBDIR += p5-Test-utf8
     SUBDIR += p5-Test2-Harness

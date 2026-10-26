@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 USE_HARDENING=	safestack
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--disable-werror
 CONFIGURE_ARGS+=	--without-libunwind # fix build: configure is looking for and finds libunwind.h, but the C code later doesn't find libunwind-ptrace.h and breaks
 ONLY_FOR_ARCHS=	amd64
@@ -22,6 +21,13 @@ ONLY_FOR_ARCHS=	amd64
 OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	BUGS COPYING ChangeLog README TODO
+
+post-patch:
+	@${MV} ${WRKSRC}/sysdeps/FreeBSD/amd64 ${WRKSRC}/sysdeps/FreeBSD/x86_64
+	@${REINPLACE_CMD} s/amd64/x86_64/ \
+		${WRKSRC}/configure \
+		${WRKSRC}/sysdeps/FreeBSD/Makefile.in \
+		${WRKSRC}/sysdeps/FreeBSD/x86_64/Makefile.in
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}

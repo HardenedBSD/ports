@@ -453,6 +453,7 @@
     SUBDIR += openfhe
     SUBDIR += openfortivpn
     SUBDIR += openiked
+    SUBDIR += openpgp-card-tools
     SUBDIR += opensaml
     SUBDIR += opensc
     SUBDIR += openssh-askpass

@@ -5433,6 +5433,8 @@
     SUBDIR += py-lockfile
     SUBDIR += py-logan
     SUBDIR += py-logbook
+    SUBDIR += py-logfire
+    SUBDIR += py-logfire-sdk
     SUBDIR += py-logfury
     SUBDIR += py-logilab-common
     SUBDIR += py-logistro
@@ -5864,6 +5866,7 @@
     SUBDIR += py-pydantic-compat
     SUBDIR += py-pydantic-core
     SUBDIR += py-pydantic-extra-types
+    SUBDIR += py-pydantic-handlebars
     SUBDIR += py-pydantic-resolve
     SUBDIR += py-pydantic-settings
     SUBDIR += py-pydantic-vault
@@ -6042,6 +6045,7 @@
     SUBDIR += py-pytest-translations
     SUBDIR += py-pytest-trio
     SUBDIR += py-pytest-twisted
+    SUBDIR += py-pytest-vcr
     SUBDIR += py-pytest-verbose-parametrize
     SUBDIR += py-pytest-virtualenv
     SUBDIR += py-pytest-watcher

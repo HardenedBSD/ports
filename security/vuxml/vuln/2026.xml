@@ -1,3 +1,129 @@
+  <vuln vid="bbad76d0-3b09-485d-bb13-28cbab009cbc">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+    <package>
+	<name>jenkins</name>
+	<range><lt>2.588</lt></range>
+    </package>
+    <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.580.2</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory 2026-10-28:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2026-10-28/">
+	  <ul>
+	    <li>(High) SECURITY-4125 / CVE-2026-117612: RCE vulnerability in
+	    XStream deserialization due to improper resolves-to attribute
+	    handling</li>
+	    <li>(High) SECURITY-4225 / CVE-2026-117613: Collection element
+	    type check bypass vulnerability</li>
+	    <li>(High) SECURITY-4123 / CVE-2026-117614: Agent launch command
+	    approval bypass vulnerability</li>
+	    <li>(High) SECURITY-4187 / CVE-2026-117615: Link following
+	    vulnerability allows arbitrary file read</li>
+	    <li>(High) SECURITY-4188 / CVE-2026-117616: Path traversal
+	    vulnerability in agent names</li>
+	    <li>(High) SECURITY-4248 / CVE-2026-117617: Race condition in
+	    artifact extraction allows arbitrary file creation</li>
+	    <li>(High) SECURITY-4232 / CVE-2026-117621: XSS vulnerability in
+	    workspace browser</li>
+	    <li>(High) SECURITY-4249 / CVE-2026-117622: XSS vulnerability in
+	    handling of agent errors</li>
+	    <li>(High) SECURITY-4229 / CVE-2026-117623: Stored XSS
+	    vulnerability in breadcrumb bar overflow menu</li>
+	    <li>(High) SECURITY-4122 / CVE-2026-117618: Race condition in
+	    setup wizard allows creating an administrator account</li>
+	    <li>(High) SECURITY-4189 / CVE-2026-117619: Insufficient session
+	    expiration vulnerability</li>
+	    <li>(High) SECURITY-4226 / CVE-2026-117620: Old Data Monitor
+	    injection lets users take over administrator accounts</li>
+	    <li>(High) SECURITY-4243 / CVE-2026-117624: Root element
+	    restriction bypass in XStream deserialization</li>
+	    <li>(Medium) SECURITY-4206 / CVE-2026-117625: Missing permission
+	    check allows obtaining HTTP proxy configuration</li>
+	    <li>(Medium) SECURITY-4237 / CVE-2026-117626: Path traversal
+	    vulnerability in file browser</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-117612</cvename>
+      <cvename>CVE-2026-117613</cvename>
+      <cvename>CVE-2026-117614</cvename>
+      <cvename>CVE-2026-117615</cvename>
+      <cvename>CVE-2026-117616</cvename>
+      <cvename>CVE-2026-117617</cvename>
+      <cvename>CVE-2026-117618</cvename>
+      <cvename>CVE-2026-117619</cvename>
+      <cvename>CVE-2026-117620</cvename>
+      <cvename>CVE-2026-117621</cvename>
+      <cvename>CVE-2026-117622</cvename>
+      <cvename>CVE-2026-117623</cvename>
+      <cvename>CVE-2026-117624</cvename>
+      <cvename>CVE-2026-117625</cvename>
+      <cvename>CVE-2026-117626</cvename>
+      <url>https://www.jenkins.io/security/advisory/2026-10-28/</url>
+    </references>
+    <dates>
+      <discovery>2026-10-28</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cacb4538-d2d0-11f1-8062-64bc58adb10f">
+    <topic>git-lfs -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>git-lfs</name>
+	<range><lt>3.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Git LFS project reports:</p>
+	<blockquote cite="https://github.com/git-lfs/git-lfs/releases/tag/v3.8.1">
+	  <p>This release introduces security fixes for four vulnerabilities that
+	    have been assigned the identifiers CVE-2026-69260, CVE-2026-69261,
+	    CVE-2026-105802, and CVE-2026-105803.  These vulnerabilities apply to
+	    all of the operating systems supported by Git LFS.</p>
+	  <p>CVE-2026-69260: When Git LFS sends a remote command via SSH, it does
+	    not properly format the argument it derives from the remote SSH URL.
+	    Servers which pass remote commands to a shell without sanitizing
+	    their arguments may be induced to execute malicious programs.</p>
+	  <p>CVE-2026-69261: After receiving an HTTP redirection, Git LFS may
+	    forward Cookie headers to a host other than the one for which they
+	    were intended.  If credentials or other secrets are stored in HTTP
+	    cookies, they may be leaked to a potentially malicious host.</p>
+	  <p>CVE-2026-105802: When operating in a malicious repository which
+	    contains a submodule, Git LFS may execute an arbitrary program after
+	    incorrectly parsing line feed (LF) characters in the submodule's URL.</p>
+	  <p>CVE-2026-105803: When operating in a malicious repository, Git LFS
+	    may execute an arbitrary program as a custom transfer adapter after
+	    incorrectly filtering the options defined in an .lfsconfig file.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-69260</cvename>
+      <cvename>CVE-2026-69261</cvename>
+      <cvename>CVE-2026-105802</cvename>
+      <cvename>CVE-2026-105803</cvename>
+      <url>https://github.com/git-lfs/git-lfs/releases/tag/v3.8.1</url>
+      <url>https://github.com/git-lfs/git-lfs/security/advisories/GHSA-w3f2-pr6x-wwjc</url>
+      <url>https://github.com/git-lfs/git-lfs/security/advisories/GHSA-x7xj-4j4f-88xr</url>
+      <url>https://github.com/git-lfs/git-lfs/security/advisories/GHSA-xrgv-7vx6-5vx6</url>
+      <url>https://github.com/git-lfs/git-lfs/security/advisories/GHSA-x72p-hmqp-46hw</url>
+    </references>
+    <dates>
+      <discovery>2026-10-22</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="b9a3fd21-d2af-11f1-bae2-3497f65b111b">
     <topic>Pillow -- multiple vulnerabilities</topic>
     <affects>
@@ -149,6 +275,232 @@
     </references>
     <dates>
       <discovery>2026-04-02</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d8b29eb8-d2d8-11f1-97dc-40b034429ecf">
+    <topic>p5-Starman -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>p5-Starman</name>
+<range><lt>0.4019</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Starman project reports:</p>
+	<blockquote cite="https://metacpan.org/dist/Starman/changes">
+	  <p>[SECURITY]</p>
+      <ul>
+        <li>Stream chunked request bodies to the temporary buffer instead of
+          holding whole chunks in memory (CVE-2026-115824)</li>
+        <li>Parse chunk-size lines in linear time with a 4 KiB length limit and
+          strict syntax; malformed lines get 400 (CVE-2026-115822)</li>
+        <li>Do not send a response body for HEAD requests or 1xx, 204 and 304
+          responses, on both the array and streaming paths (CVE-2026-115823)</li>
+        <li>Limit how long a request body may take to arrive: --read-timeout
+          (default 5 seconds) now also applies to each wait for more of the
+          body, and the new --body-timeout option limits the total time
+          (default 300 seconds; raise it or set it to 0 for slower uploads).
+          Expiry gets 408 (CVE-2026-115817)</li>
+        <li>Reject Transfer-Encoding other than "chunked" (400/501) and close
+          the connection after a request with both Transfer-Encoding and
+          Content-Length. Completes the fix for CVE-2026-40560</li>
+      </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-115824</cvename>
+      <cvename>CVE-2026-115822</cvename>
+      <cvename>CVE-2026-115823</cvename>
+      <cvename>CVE-2026-115817</cvename>
+      <cvename>CVE-2026-40560</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115824</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115822</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115823</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115817</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-40560</url>
+    </references>
+    <dates>
+      <discovery>2026-10-25</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3bd1edbf-d2d4-11f1-97dc-40b034429ecf">
+    <topic>p5-Plack -- memory allocation vulnerability</topic>
+    <affects>
+<package>
+<name>p5-Plack</name>
+<range><lt>1.0057</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Plack project reports:</p>
+	<blockquote cite="https://metacpan.org/dist/Plack/changes">
+	  <p>Fix HTTP::Server::PSGI allocating a buffer as large as the declared Content-Length,
+          which let a single request crash the server with "Out of memory!" (CVE-2026-115825).</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-115825</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-115825</url>
+    </references>
+    <dates>
+      <discovery>2026-10-25</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="005c73c2-d2d1-11f1-97dc-40b034429ecf">
+    <topic>p5-HTTP-Body -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>p5-HTTP-Body</name>
+<range><lt>1.24</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>HTTP-Body oroject  reports:</p>
+	<blockquote cite="https://metacpan.org/dist/HTTP-Body/changes">
+	  <p>Multiple security issues:</p>
+      <ul>
+        <li>SECURITY, CVE-2026-116131: urlencoded bodies are limited to
+          $HTTP::Body::UrlEncoded::max_params fields and multipart bodies to
+          $HTTP::Body::MultiPart::max_parts parts (1000 each); reported and
+          patched by CPANSec</li>
+        <li>SECURITY, CVE-2026-116132: the temporary file of an upload that is
+          still incomplete at DESTROY-time is now always deleted; reported and
+          patched by CPANSec (also fixes RT#84004)</li>
+        <li>SECURITY, CVE-2026-116133: a multipart body without a boundary or with
+          a malformed delimiter line no longer takes quadratic time; a malformed
+          delimiter line now croaks, and padding or an epilogue after the close
+          delimiter is accepted; reported and patched by CPANSec</li>
+        <li>SECURITY, CVE-2026-116134: a multipart part's header block is limited
+          to $HTTP::Body::MultiPart::max_header_size bytes (32768) and
+          $HTTP::Body::MultiPart::max_header_lines lines (100); reported and
+          patched by CPANSec</li>
+        <li>SECURITY, CVE-2026-116135: mixed-case percent escapes (e.g. %aB) in
+          urlencoded bodies are decoded instead of being dropped; reported and
+          patched by CPANSec</li>
+        <li>SECURITY, CVE-2026-116285: the chunk size line of a chunked body is
+          matched in linear instead of quadratic time</li>
+        <li>SECURITY, CVE-2026-116531: a chunked body is now framed independently
+          of where the reads feeding add() fall; a read that split a chunk could
+          leave the parser never reaching 'done', hanging a server that reads
+          until done</li>
+      </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-116131</cvename>
+      <cvename>CVE-2026-116132</cvename>
+      <cvename>CVE-2026-116133</cvename>
+      <cvename>CVE-2026-116134</cvename>
+      <cvename>CVE-2026-116135</cvename>
+      <cvename>CVE-2026-116285</cvename>
+      <cvename>CVE-2026-116531</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116131</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116132</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116133</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116134</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116135</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116285</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116531</url>
+    </references>
+    <dates>
+      <discovery>2026-10-26</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2b2d5d3e-d2c8-11f1-97dc-40b034429ecf">
+    <topic>p5-MIME-Tools -- multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>p5-MIME-Tools</name>
+<range><lt>5.522</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MIME-tools project reports:</p>
+	<blockquote cite="https://metacpan.org/dist/MIME-tools/changes">
+	  <p>Many security issues were addressed (see the following ten CVEs)
+          Issues were brought to my attention, and patches supplied, by the
+          CPANSec security group.</p>
+      <ul>
+        <li>CVE-2026-116264 invalid parameter hides boundary/filename</li>
+        <li>CVE-2026-116265 RFC 2231 boundary skips ambiguity checks</li>
+        <li>CVE-2026-116266 boundary changed by decoding not flagged</li>
+        <li>CVE-2026-116267 indent stored per message per level</li>
+        <li>CVE-2026-116268 unclosed "(" comments backtrack CPU exhaustion</li>
+        <li>CVE-2026-116269 RFC 2231 language tag empties filename</li>
+        <li>CVE-2026-116270 each bad "=?" copies the input into $@</li>
+        <li>CVE-2026-116271 FileUnder reuses a pre-created directory</li>
+        <li>CVE-2026-116272  comment hides a duplicate boundary</li>
+        <li>CVE-2026-116273 max_parts and max_depth unlimited</li>
+      </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-116264</cvename>
+      <cvename>CVE-2026-116265</cvename>
+      <cvename>CVE-2026-116266</cvename>
+      <cvename>CVE-2026-116267</cvename>
+      <cvename>CVE-2026-116268</cvename>
+      <cvename>CVE-2026-116269</cvename>
+      <cvename>CVE-2026-116270</cvename>
+      <cvename>CVE-2026-116271</cvename>
+      <cvename>CVE-2026-116272</cvename>
+      <cvename>CVE-2026-116273</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116264</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116265</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116266</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116267</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116268</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116269</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116270</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116271</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116272</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-116273</url>
+    </references>
+    <dates>
+      <discovery>2026-10-27</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2b47c440-d2c0-11f1-97dc-40b034429ecf">
+    <topic>p5-GD -- OS command injection</topic>
+    <affects>
+<package>
+<name>p5-GD</name>
+<range><lt>2.86</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GD project reports:</p>
+	<blockquote cite="https://metacpan.org/release/RURBAN/GD-2.86/changes">
+	  <p>Fix CVE-2026-11526, command injection via 2-arg open() in _make_filehandle.
+         CWE-78, CWE-73 (Reported and fixed by Paul Johnson)</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-11526</cvename> 2026-06-14T12:16:22.403
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-11526</url>
+    </references>
+    <dates>
+      <discovery>2026-09-17</discovery>
       <entry>2026-10-28</entry>
     </dates>
   </vuln>

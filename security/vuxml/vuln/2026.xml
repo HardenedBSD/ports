@@ -1,3 +1,158 @@
+  <vuln vid="b9a3fd21-d2af-11f1-bae2-3497f65b111b">
+    <topic>Pillow -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py311-pillow</name>
+	<name>py312-pillow</name>
+	<name>py313-pillow</name>
+	<name>py313t-pillow</name>
+	<name>py314-pillow</name>
+	<name>py314t-pillow</name>
+	<name>py315-pillow</name>
+	<range><lt>13.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Pillow project published security advisories for issues fixed
+	  in release 13.0.0.  They include an argument injection in the
+	  Ghostscript call used for EPS images, heap buffer overflows in
+	  several image decoders that can lead to code execution, and
+	  infinite loops and unbounded memory use when opening crafted
+	  image files.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-96636</cvename>
+      <cvename>CVE-2026-96637</cvename>
+      <cvename>CVE-2026-96638</cvename>
+      <cvename>CVE-2026-96639</cvename>
+      <cvename>CVE-2026-96640</cvename>
+      <cvename>CVE-2026-96641</cvename>
+      <cvename>CVE-2026-96642</cvename>
+      <cvename>CVE-2026-96643</cvename>
+      <cvename>CVE-2026-96644</cvename>
+      <cvename>CVE-2026-96778</cvename>
+      <cvename>CVE-2026-112390</cvename>
+      <cvename>CVE-2026-112391</cvename>
+      <cvename>CVE-2026-112392</cvename>
+      <cvename>CVE-2026-112393</cvename>
+      <cvename>CVE-2026-112394</cvename>
+      <cvename>CVE-2026-112395</cvename>
+      <cvename>CVE-2026-112396</cvename>
+      <cvename>CVE-2026-112397</cvename>
+      <cvename>CVE-2026-112398</cvename>
+      <cvename>CVE-2026-112399</cvename>
+      <cvename>CVE-2026-112400</cvename>
+      <cvename>CVE-2026-112401</cvename>
+      <cvename>CVE-2026-112402</cvename>
+      <cvename>CVE-2026-112403</cvename>
+      <cvename>CVE-2026-112404</cvename>
+      <cvename>CVE-2026-112405</cvename>
+      <cvename>CVE-2026-112406</cvename>
+      <cvename>CVE-2026-112891</cvename>
+      <cvename>CVE-2026-112892</cvename>
+      <cvename>CVE-2026-112893</cvename>
+      <cvename>CVE-2026-112894</cvename>
+      <cvename>CVE-2026-112895</cvename>
+      <cvename>CVE-2026-112896</cvename>
+      <cvename>CVE-2026-112897</cvename>
+      <cvename>CVE-2026-112898</cvename>
+      <cvename>CVE-2026-112899</cvename>
+      <cvename>CVE-2026-112900</cvename>
+      <cvename>CVE-2026-112901</cvename>
+      <cvename>CVE-2026-112902</cvename>
+      <cvename>CVE-2026-114501</cvename>
+      <url>https://github.com/python-pillow/Pillow/security/advisories</url>
+    </references>
+    <dates>
+      <discovery>2026-10-17</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3caa3b4b-d2ab-11f1-bae2-3497f65b111b">
+    <topic>trafficserver -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>trafficserver</name>
+	<range><lt>10.1.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache Traffic Server project published security advisories
+	  for issues fixed in releases 10.1.1 through 10.1.5.  They include
+	  request smuggling and cache poisoning through malformed requests and
+	  responses, memory corruption, and unauthenticated access in the
+	  experimental plugins, which the port builds (tsmemcache, wasm, and
+	  magick with the IMAGEMAGICK option).</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-31699</cvename>
+      <cvename>CVE-2025-55702</cvename>
+      <cvename>CVE-2025-58136</cvename>
+      <cvename>CVE-2025-65114</cvename>
+      <cvename>CVE-2026-22068</cvename>
+      <cvename>CVE-2026-24033</cvename>
+      <cvename>CVE-2026-33267</cvename>
+      <cvename>CVE-2026-33930</cvename>
+      <cvename>CVE-2026-41920</cvename>
+      <cvename>CVE-2026-57834</cvename>
+      <cvename>CVE-2026-58150</cvename>
+      <cvename>CVE-2026-58151</cvename>
+      <cvename>CVE-2026-58152</cvename>
+      <cvename>CVE-2026-58153</cvename>
+      <cvename>CVE-2026-58154</cvename>
+      <cvename>CVE-2026-58155</cvename>
+      <cvename>CVE-2026-58156</cvename>
+      <cvename>CVE-2026-58157</cvename>
+      <cvename>CVE-2026-58158</cvename>
+      <cvename>CVE-2026-58159</cvename>
+      <cvename>CVE-2026-58160</cvename>
+      <cvename>CVE-2026-58161</cvename>
+      <cvename>CVE-2026-58162</cvename>
+      <cvename>CVE-2026-58163</cvename>
+      <cvename>CVE-2026-58164</cvename>
+      <cvename>CVE-2026-58175</cvename>
+      <cvename>CVE-2026-58177</cvename>
+      <cvename>CVE-2026-58178</cvename>
+      <cvename>CVE-2026-58179</cvename>
+      <cvename>CVE-2026-58180</cvename>
+      <cvename>CVE-2026-58181</cvename>
+      <cvename>CVE-2026-58182</cvename>
+      <cvename>CVE-2026-58183</cvename>
+      <cvename>CVE-2026-58184</cvename>
+      <cvename>CVE-2026-58185</cvename>
+      <cvename>CVE-2026-58186</cvename>
+      <cvename>CVE-2026-58187</cvename>
+      <cvename>CVE-2026-58188</cvename>
+      <cvename>CVE-2026-58189</cvename>
+      <cvename>CVE-2026-59173</cvename>
+      <cvename>CVE-2026-65100</cvename>
+      <cvename>CVE-2026-65324</cvename>
+      <cvename>CVE-2026-65325</cvename>
+      <cvename>CVE-2026-102795</cvename>
+      <cvename>CVE-2026-111804</cvename>
+      <cvename>CVE-2026-111805</cvename>
+      <cvename>CVE-2026-111808</cvename>
+      <cvename>CVE-2026-111809</cvename>
+      <cvename>CVE-2026-111811</cvename>
+      <cvename>CVE-2026-111812</cvename>
+      <cvename>CVE-2026-111813</cvename>
+      <cvename>CVE-2026-111814</cvename>
+      <cvename>CVE-2026-111815</cvename>
+      <cvename>CVE-2026-111816</cvename>
+      <cvename>CVE-2026-111817</cvename>
+      <url>https://lists.apache.org/list.html?announce@trafficserver.apache.org</url>
+    </references>
+    <dates>
+      <discovery>2026-04-02</discovery>
+      <entry>2026-10-28</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="4538886a-d1d9-11f1-8135-8447094a420f">
     <topic>rustls-ffi -- Read after free</topic>
     <affects>

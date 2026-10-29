@@ -292,22 +292,22 @@
 	<p>Starman project reports:</p>
 	<blockquote cite="https://metacpan.org/dist/Starman/changes">
 	  <p>[SECURITY]</p>
-      <ul>
-        <li>Stream chunked request bodies to the temporary buffer instead of
-          holding whole chunks in memory (CVE-2026-115824)</li>
-        <li>Parse chunk-size lines in linear time with a 4 KiB length limit and
-          strict syntax; malformed lines get 400 (CVE-2026-115822)</li>
-        <li>Do not send a response body for HEAD requests or 1xx, 204 and 304
-          responses, on both the array and streaming paths (CVE-2026-115823)</li>
-        <li>Limit how long a request body may take to arrive: --read-timeout
-          (default 5 seconds) now also applies to each wait for more of the
-          body, and the new --body-timeout option limits the total time
-          (default 300 seconds; raise it or set it to 0 for slower uploads).
-          Expiry gets 408 (CVE-2026-115817)</li>
-        <li>Reject Transfer-Encoding other than "chunked" (400/501) and close
-          the connection after a request with both Transfer-Encoding and
-          Content-Length. Completes the fix for CVE-2026-40560</li>
-      </ul>
+	  <ul>
+	  <li>Stream chunked request bodies to the temporary buffer instead of
+	  holding whole chunks in memory (CVE-2026-115824)</li>
+	  <li>Parse chunk-size lines in linear time with a 4 KiB length limit and
+	  strict syntax; malformed lines get 400 (CVE-2026-115822)</li>
+	  <li>Do not send a response body for HEAD requests or 1xx, 204 and 304
+	  responses, on both the array and streaming paths (CVE-2026-115823)</li>
+	  <li>Limit how long a request body may take to arrive: --read-timeout
+	  (default 5 seconds) now also applies to each wait for more of the
+	  body, and the new --body-timeout option limits the total time
+	  (default 300 seconds; raise it or set it to 0 for slower uploads).
+	  Expiry gets 408 (CVE-2026-115817)</li>
+	  <li>Reject Transfer-Encoding other than "chunked" (400/501) and close
+	  the connection after a request with both Transfer-Encoding and
+	  Content-Length. Completes the fix for CVE-2026-40560</li>
+	  </ul>
 	</blockquote>
 	</body>
     </description>
@@ -342,7 +342,7 @@
 	<p>Plack project reports:</p>
 	<blockquote cite="https://metacpan.org/dist/Plack/changes">
 	  <p>Fix HTTP::Server::PSGI allocating a buffer as large as the declared Content-Length,
-          which let a single request crash the server with "Out of memory!" (CVE-2026-115825).</p>
+	  which let a single request crash the server with "Out of memory!" (CVE-2026-115825).</p>
 	</blockquote>
 	</body>
     </description>
@@ -369,32 +369,32 @@
 	<p>HTTP-Body oroject  reports:</p>
 	<blockquote cite="https://metacpan.org/dist/HTTP-Body/changes">
 	  <p>Multiple security issues:</p>
-      <ul>
-        <li>SECURITY, CVE-2026-116131: urlencoded bodies are limited to
-          $HTTP::Body::UrlEncoded::max_params fields and multipart bodies to
-          $HTTP::Body::MultiPart::max_parts parts (1000 each); reported and
-          patched by CPANSec</li>
-        <li>SECURITY, CVE-2026-116132: the temporary file of an upload that is
-          still incomplete at DESTROY-time is now always deleted; reported and
-          patched by CPANSec (also fixes RT#84004)</li>
-        <li>SECURITY, CVE-2026-116133: a multipart body without a boundary or with
-          a malformed delimiter line no longer takes quadratic time; a malformed
-          delimiter line now croaks, and padding or an epilogue after the close
-          delimiter is accepted; reported and patched by CPANSec</li>
-        <li>SECURITY, CVE-2026-116134: a multipart part's header block is limited
-          to $HTTP::Body::MultiPart::max_header_size bytes (32768) and
-          $HTTP::Body::MultiPart::max_header_lines lines (100); reported and
-          patched by CPANSec</li>
-        <li>SECURITY, CVE-2026-116135: mixed-case percent escapes (e.g. %aB) in
-          urlencoded bodies are decoded instead of being dropped; reported and
-          patched by CPANSec</li>
-        <li>SECURITY, CVE-2026-116285: the chunk size line of a chunked body is
-          matched in linear instead of quadratic time</li>
-        <li>SECURITY, CVE-2026-116531: a chunked body is now framed independently
-          of where the reads feeding add() fall; a read that split a chunk could
-          leave the parser never reaching 'done', hanging a server that reads
-          until done</li>
-      </ul>
+	  <ul>
+	  <li>SECURITY, CVE-2026-116131: urlencoded bodies are limited to
+	  $HTTP::Body::UrlEncoded::max_params fields and multipart bodies to
+	  $HTTP::Body::MultiPart::max_parts parts (1000 each); reported and
+	  patched by CPANSec</li>
+	  <li>SECURITY, CVE-2026-116132: the temporary file of an upload that is
+	  still incomplete at DESTROY-time is now always deleted; reported and
+	  patched by CPANSec (also fixes RT#84004)</li>
+	  <li>SECURITY, CVE-2026-116133: a multipart body without a boundary or with
+	  a malformed delimiter line no longer takes quadratic time; a malformed
+	  delimiter line now croaks, and padding or an epilogue after the close
+	  delimiter is accepted; reported and patched by CPANSec</li>
+	  <li>SECURITY, CVE-2026-116134: a multipart part's header block is limited
+	  to $HTTP::Body::MultiPart::max_header_size bytes (32768) and
+	  $HTTP::Body::MultiPart::max_header_lines lines (100); reported and
+	  patched by CPANSec</li>
+	  <li>SECURITY, CVE-2026-116135: mixed-case percent escapes (e.g. %aB) in
+	  urlencoded bodies are decoded instead of being dropped; reported and
+	  patched by CPANSec</li>
+	  <li>SECURITY, CVE-2026-116285: the chunk size line of a chunked body is
+	  matched in linear instead of quadratic time</li>
+	  <li>SECURITY, CVE-2026-116531: a chunked body is now framed independently
+	  of where the reads feeding add() fall; a read that split a chunk could
+	  leave the parser never reaching 'done', hanging a server that reads
+	  until done</li>
+	  </ul>
 	</blockquote>
 	</body>
     </description>
@@ -433,20 +433,20 @@
 	<p>MIME-tools project reports:</p>
 	<blockquote cite="https://metacpan.org/dist/MIME-tools/changes">
 	  <p>Many security issues were addressed (see the following ten CVEs)
-          Issues were brought to my attention, and patches supplied, by the
-          CPANSec security group.</p>
-      <ul>
-        <li>CVE-2026-116264 invalid parameter hides boundary/filename</li>
-        <li>CVE-2026-116265 RFC 2231 boundary skips ambiguity checks</li>
-        <li>CVE-2026-116266 boundary changed by decoding not flagged</li>
-        <li>CVE-2026-116267 indent stored per message per level</li>
-        <li>CVE-2026-116268 unclosed "(" comments backtrack CPU exhaustion</li>
-        <li>CVE-2026-116269 RFC 2231 language tag empties filename</li>
-        <li>CVE-2026-116270 each bad "=?" copies the input into $@</li>
-        <li>CVE-2026-116271 FileUnder reuses a pre-created directory</li>
-        <li>CVE-2026-116272  comment hides a duplicate boundary</li>
-        <li>CVE-2026-116273 max_parts and max_depth unlimited</li>
-      </ul>
+	  Issues were brought to my attention, and patches supplied, by the
+	  CPANSec security group.</p>
+	  <ul>
+	  <li>CVE-2026-116264 invalid parameter hides boundary/filename</li>
+	  <li>CVE-2026-116265 RFC 2231 boundary skips ambiguity checks</li>
+	  <li>CVE-2026-116266 boundary changed by decoding not flagged</li>
+	  <li>CVE-2026-116267 indent stored per message per level</li>
+	  <li>CVE-2026-116268 unclosed "(" comments backtrack CPU exhaustion</li>
+	  <li>CVE-2026-116269 RFC 2231 language tag empties filename</li>
+	  <li>CVE-2026-116270 each bad "=?" copies the input into $@</li>
+	  <li>CVE-2026-116271 FileUnder reuses a pre-created directory</li>
+	  <li>CVE-2026-116272  comment hides a duplicate boundary</li>
+	  <li>CVE-2026-116273 max_parts and max_depth unlimited</li>
+	  </ul>
 	</blockquote>
 	</body>
     </description>
@@ -491,12 +491,12 @@
 	<p>GD project reports:</p>
 	<blockquote cite="https://metacpan.org/release/RURBAN/GD-2.86/changes">
 	  <p>Fix CVE-2026-11526, command injection via 2-arg open() in _make_filehandle.
-         CWE-78, CWE-73 (Reported and fixed by Paul Johnson)</p>
+	  CWE-78, CWE-73 (Reported and fixed by Paul Johnson)</p>
 	</blockquote>
 	</body>
     </description>
     <references>
-      <cvename>CVE-2026-11526</cvename> 2026-06-14T12:16:22.403
+      <cvename>CVE-2026-11526</cvename>
       <url>https://nvd.nist.gov/vuln/detail/cve-2026-11526</url>
     </references>
     <dates>

@@ -240,13 +240,11 @@ MASTER_SITE_GENTOO+= \
 	http://gentoo-mirror.flux.utah.edu/%SUBDIR%/
 .endif
 
-<<<<<<< HEAD
 .if !defined(MASTER_SITE_RADICLE)
 MASTER_SITE_RADICLE+= \
 	https://rad.hardenedbsd.org
 .endif
 
-=======
 # Keep this before USE_FORGEJO to avoid a bogus warning with make makesum
 .if !(make(fetch) && !empty(NO_CHECKSUM) && !empty(DISABLE_SIZE))
 .  if !empty(MASTER_SITES:M*/codeberg.org/*/archive/*)
@@ -436,7 +434,6 @@ WWW?=	${FJ_SITE}/${FJ_ACCOUNT}/${FJ_PROJECT}/
 .  endif # defined(USE_FORGEJO)
 .endif # !defined(IGNORE_MASTER_SITE_FORGEJO)
 
->>>>>>> rad/freebsd/main
 # Keep this before USE_GITHUB
 .if !empty(MASTER_SITES:M*/github.com/*/archive/*)
 DEV_WARNING+=	"MASTER_SITES contains ${MASTER_SITES:M*/github.com/*/archive/*}, please use USE_GITHUB instead."

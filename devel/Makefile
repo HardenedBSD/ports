@@ -1478,7 +1478,6 @@
     SUBDIR += librashader
     SUBDIR += librcc
     SUBDIR += librcd
-    SUBDIR += libreadline-java
     SUBDIR += libregf
     SUBDIR += librelp
     SUBDIR += librest
@@ -1704,7 +1703,6 @@
     SUBDIR += lua-sysctl
     SUBDIR += luabind
     SUBDIR += luafilesystem
-    SUBDIR += luajava
     SUBDIR += lutok
     SUBDIR += luv
     SUBDIR += lwgrp
@@ -8906,7 +8904,6 @@
     SUBDIR += uid_wrapper
     SUBDIR += ultragetopt
     SUBDIR += umbrello
-    SUBDIR += umlgraph
     SUBDIR += umpire
     SUBDIR += undead
     SUBDIR += unibilium

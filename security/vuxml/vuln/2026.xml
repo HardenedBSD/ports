@@ -1,3 +1,623 @@
+  <vuln vid="d6aba3d5-d549-11f1-95a4-3c7c3fba4204">
+    <topic>uriparser -- Integer overflow vulnerability</topic>
+    <affects>
+	<package>
+	  <name>uriparser</name>
+	  <range><lt>1.0.3</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The URIparser project reports:</p>
+	<blockquote cite="https://github.com/uriparser/uriparser/pull/313">
+	  <ul><li>CVE-2026-48841: Protect 'ComposeQueryEngine' from integer overflow.</li></ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-48841</cvename>
+      <url>https://github.com/uriparser/uriparser/pull/313</url>
+      <url>https://github.com/uriparser/uriparser/blob/uriparser-1.0.3/ChangeLog</url>
+    </references>
+    <dates>
+      <discovery>2026-05-20</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c0892724-d4a0-11f1-8df4-74563cf85f9d">
+    <topic>libwasmtime -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libwasmtime</name>
+	<name>wasmtime</name>
+	<range><lt>36.0.20</lt></range>
+	<range><ge>37.0.0</ge><lt>48.0.8</lt></range>
+	<range><ge>49.0.0</ge><lt>49.0.5</lt></range>
+	<range><ge>50.0.0</ge><lt>50.0.1</lt></range>
+      </package>
+      <package>
+	<name>codemark</name>
+	<range><le>0.7.30_2</le></range>
+      </package>
+      <package>
+	<name>gram-text-editor</name>
+	<range><le>3.3.0_1</le></range>
+      </package>
+      <package>
+	<name>lapce</name>
+	<range><le>0.4.6_8</le></range>
+      </package>
+      <package>
+	<name>mongodb90</name>
+	<name>mongodb90-armv80a</name>
+	<range><le>9.0.4</le></range>
+      </package>
+      <package>
+	<name>moon</name>
+	<range><le>2.6.3</le></range>
+      </package>
+      <package>
+	<name>surfer</name>
+	<range><le>0.7.0_4</le></range>
+      </package>
+      <package>
+	<name>surrealdb</name>
+	<range><le>3.3.5</le></range>
+      </package>
+      <package>
+	<name>tree-sitter-cli</name>
+	<range><le>0.26.13_2</le></range>
+      </package>
+      <package>
+	<name>veloren-weekly</name>
+	<range><le>s20261027</le></range>
+      </package>
+      <package>
+	<name>veryl</name>
+	<range><le>0.22.0_1</le></range>
+      </package>
+      <package>
+	<name>vscode</name>
+	<range><le>1.143.1_1</le></range>
+      </package>
+      <package>
+	<name>waveterm</name>
+	<range><le>0.14.5_32</le></range>
+      </package>
+      <package>
+	<name>wizer</name>
+	<range><le>11.0.3_5</le></range>
+      </package>
+      <package>
+	<name>zed-editor</name>
+	<range><le>1.25.3</le></range>
+      </package>
+      <package>
+	<name>zeroclaw</name>
+	<range><le>0.8.0.b.2_3</le></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Wasmtime development team reports:</p>
+	<blockquote cite="https://github.com/bytecodealliance/wasmtime/releases/tag/v50.0.1">
+	  <ul>
+	    <li>wasi-sockets: UDP connect only required the address to be
+	    permitted for sending or receiving, allowing guests to send
+	    datagrams to addresses denied for UdpSend.</li>
+	    <li>Cross-engine type confusion with host-created
+	    struct-types-with-supertypes has been fixed.</li>
+	    <li>Panic with typed functions with i31 or nullref arguments has
+	    been fixed.</li>
+	    <li>Unchecked memory usage in transferring borrowed resources
+	    between components has been fixed.</li>
+	    <li>Fixed a possibility of content-length being invalid or not
+	    matching body length in wasi-http p2.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hmmr-87qq-258j</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-qw58-7h65-crq2</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-3982-jqvv-277m</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-6fr9-xmw9-5352</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-h4wp-g4x3-7398</url>
+    </references>
+    <dates>
+      <discovery>2026-10-29</discovery>
+      <entry>2026-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="57e6e702-cd69-11f1-b0e3-74563cf85f9d">
+    <topic>libwasmtime -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libwasmtime</name>
+	<name>wasmtime</name>
+	<range><lt>36.0.19</lt></range>
+	<range><ge>37.0.0</ge><lt>48.0.7</lt></range>
+	<range><ge>49.0.0</ge><lt>49.0.4</lt></range>
+      </package>
+      <package>
+	<name>codemark</name>
+	<range><le>0.7.30_2</le></range>
+      </package>
+      <package>
+	<name>gram-text-editor</name>
+	<range><le>3.3.0_1</le></range>
+      </package>
+      <package>
+	<name>lapce</name>
+	<range><le>0.4.6_8</le></range>
+      </package>
+      <package>
+	<name>mongodb90</name>
+	<name>mongodb90-armv80a</name>
+	<range><le>9.0.4</le></range>
+      </package>
+      <package>
+	<name>moon</name>
+	<range><le>2.6.3</le></range>
+      </package>
+      <package>
+	<name>surfer</name>
+	<range><le>0.7.0_4</le></range>
+      </package>
+      <package>
+	<name>surrealdb</name>
+	<range><le>3.2.6</le></range>
+      </package>
+      <package>
+	<name>tree-sitter-cli</name>
+	<range><le>0.26.13_2</le></range>
+      </package>
+      <package>
+	<name>veloren-weekly</name>
+	<range><lt>s20261027</lt></range>
+      </package>
+      <package>
+	<name>veryl</name>
+	<range><le>0.22.0_1</le></range>
+      </package>
+      <package>
+	<name>vscode</name>
+	<range><le>1.143.1</le></range>
+      </package>
+      <package>
+	<name>waveterm</name>
+	<range><le>0.14.5_32</le></range>
+      </package>
+      <package>
+	<name>wizer</name>
+	<range><le>11.0.3_5</le></range>
+      </package>
+      <package>
+	<name>zed-editor</name>
+	<range><lt>1.25.3</lt></range>
+      </package>
+      <package>
+	<name>zeroclaw</name>
+	<range><le>0.8.0.b.2_3</le></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Wasmtime development team reports:</p>
+	<blockquote cite="https://github.com/bytecodealliance/wasmtime/releases/tag/v49.0.3">
+	  <ul>
+	    <li>Out-of-bounds zero-length stream writes can panic.</li>
+	    <li>Host panic when component call_async is cancelled under some
+	    conditions.</li>
+	    <li>Panic on erroneous call-to-host from guest realloc call.</li>
+	    <li>Yielding in a component start function can lead to a host panic.</li>
+	    <li>Panic when invoking an async-lifted function via call.</li>
+	    <li>Panic when pending calls are run after a trap.</li>
+	    <li>Stack overflow dropping a long chain of recursive types.</li>
+	    <li>Wasmtime may not properly enforce async-entrypoint requirement.</li>
+	    <li>Panic viewing component model stream or future as the wrong
+	    type.</li>
+	    <li>Component-model handle tables are capped only per instance and
+	    charged to no limit.</li>
+	    <li>Exception tags can cause host data structures to be unaligned.</li>
+	    <li>Filesystem sandbox escape when renaming symlinks with trailing
+	    slashes.</li>
+	    <li>Overlapping string transcode in a fused adapter can panic.</li>
+	    <li>Guests can send absolute-form HTTP requests to different hosts.</li>
+	    <li>wasi-http: Request with long url before query parameter crashes
+	    host.</li>
+	  </ul>
+	</blockquote>
+	<blockquote cite="https://github.com/bytecodealliance/wasmtime/releases/tag/v49.0.4">
+	  <ul>
+	    <li>wasi-http: Guests can add conflicting content lengths to
+	    messages</li>
+	    <li>wasi-http p3: forwarded trailers aren't checked against
+	    is_forbidden_header hook</li>
+	    <li>wasi-http p3: Guests can set incorrect content-length for
+	    spliced response bodies</li>
+	    <li>Cranelift backend on aarch64 can jump to incorrect target on
+	    large Wasm br_table instruction</li>
+	    <li>Panic lowering a host-created component model stream into a
+	    guest that expects a different payload type.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-93g3-36p8-x2gc</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-3r89-v5mq-j5xf</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-7v24-42x9-pxf7</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-5hhx-4wrr-3j9g</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m6w2-jwq2-cv2c</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hmwq-g22x-qjw5</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-wjc8-633q-pwxr</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-vcg5-q8m5-8379</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-63h4-6cx9-pjfj</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-q554-3cjc-rx7p</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-p79w-pv2r-29qp</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m9f7-9w4p-gv38</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-54p9-vhhq-8f7q</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-5qpp-g3j2-8frx</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-w36r-2hch-9xp9</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-r8xh-cgf7-392j</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jxcf-8qw5-5c33</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm</url>
+      <url>https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5</url>
+    </references>
+    <dates>
+      <discovery>2026-10-14</discovery>
+      <entry>2026-10-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="aafad06c-d519-11f1-8135-8447094a420f">
+    <topic>LibreSSL -- Multiple OCSP client vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>libressl</name>
+	<name>libressl-devel</name>
+	<range><le>4.4.0_1</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>VulnCheck reports:</p>
+	<blockquote cite="https://www.vulncheck.com/advisories/libressl-through-4.4.0-crlf-injection-via-ocsp-sendreq-new-request-line">
+	<p>CVE-2026-118371: LibreSSL through 4.4.0 contains a CRLF injection
+	  vulnerability in the libcrypto OCSP_sendreq_new() and OCSP_parse_url()
+	  functions, which write unvalidated request paths into the OCSP POST
+	  request line. Attackers can embed carriage return and line feed
+	  characters in a certificate's Authority Information Access OCSP URI to
+	  inject HTTP headers or split requests sent to responders and proxies.</p>
+	<p>CVE-2026-118372: LibreSSL ocspcheck through 4.4.0 contains a CRLF
+	  injection vulnerability that allows attackers to inject HTTP headers
+	  by embedding CR/LF sequences in a certificate's AIA OCSP URI path.
+	  Because url2host() copies the path without rejecting control
+	  characters and http_open() places it in the POST request line,
+	  attackers can inject headers or split OCSP requests sent to the
+	  responder host.</p>
+	<p>CVE-2026-118373: LibreSSL ocspcheck through 4.4.0 contains a cleartext
+	  transmission vulnerability because url2host() discards the OCSP URL
+	  scheme and http_alloc() only selects TLS for port 443. On-path network
+	  attackers can read OCSP requests sent to https responder URLs on
+	  non-443 ports, exposing certificate serial numbers, issuer hashes, and
+	  nonces.</p>
+	<p>CVE-2026-118374: LibreSSL ocspcheck through 4.4.0 contains a memory
+	  exhaustion vulnerability that allows malicious OCSP responders to
+	  exhaust memory by sending unbounded HTTP responses. Attackers
+	  controlling the responder or intercepting plain HTTP AIA OCSP traffic
+	  can stream endless headers or body data to http_head_read() and
+	  http_body_read(), denying certificate status checks.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-118371</cvename>
+      <cvename>CVE-2026-118372</cvename>
+      <cvename>CVE-2026-118373</cvename>
+      <cvename>CVE-2026-118374</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-118371</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-118372</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-118373</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-118374</url>
+      <url>https://www.vulncheck.com/advisories/libressl-through-4.4.0-crlf-injection-via-ocsp-sendreq-new-request-line</url>
+    </references>
+    <dates>
+      <discovery>2026-10-28</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ac97113e-d514-11f1-b2f0-002b67dfc673">
+    <topic>amule -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>amule</name>
+	<range><lt>3.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>aMule developers report:</p>
+	<blockquote cite="https://github.com/amule-org/amule/releases/tag/3.2.0">
+	  <p>A security release first: it fixes 15 vulnerabilities reported
+	    through GitHub Security Advisories, and 11 of them are also
+	    present in aMule 2.3.3. If you still run 2.3.x or any 3.x
+	    release, please upgrade.</p>
+	  <ul>
+	    <li>GHSA-cp82-q55r-936c (High): heap off-by-one write and
+	      use-after-free in the UPnP control point, reachable from the
+	      local network when UPnP is enabled.</li>
+	    <li>GHSA-2crf-cv3v-53w5 (High): unbounded EC tag nesting crashes
+	      amuled before authentication.</li>
+	    <li>GHSA-52mv-r67q-c985 (High): a single Kad search request can
+	      block the main thread for tens of seconds.</li>
+	    <li>GHSA-q2jr-xf54-v364 (High): a remote-control user can move
+	      files anywhere on the host.</li>
+	    <li>GHSA-3j74-m5qw-75xg (High): EC-settable ffprobe path leads to
+	      execution of arbitrary binaries.</li>
+	    <li>GHSA-cvxg-rcqx-rp9p (Medium): heap memory disclosure to eD2k
+	      peers.</li>
+	    <li>GHSA-g22c-pmwf-qmwm (Medium): peer-supplied OS info used as a
+	      format string in the statistics tree.</li>
+	    <li>GHSA-6qxf-6fj4-q8fv (Medium): unchecked EC tag types leak heap
+	      bytes into the log before authentication.</li>
+	    <li>GHSA-hv8p-rp6f-rmf7 (Medium): memory exhaustion triggered by
+	      an upload source.</li>
+	    <li>GHSA-vh6g-8m3v-wfmf (Medium): amuleweb guests can add
+	      downloads and make the core fetch arbitrary URLs.</li>
+	    <li>GHSA-42j9-4vh7-jvw6 (Medium): malicious update files can fill
+	      the disk or crash aMule.</li>
+	    <li>GHSA-7rxg-6w2f-3w57 (Medium): multi-part downloads can complete
+	      without MD4 verification.</li>
+	    <li>GHSA-frfq-582f-4jww (Medium): server list URLs fetched without
+	      protocol restriction allow SSRF via gopher://.</li>
+	    <li>GHSA-gc7p-357m-xj2j (Low): synchronous EC clients accept
+	      cleartext replies on an encrypted session.</li>
+	    <li>GHSA-vj9g-4mg6-q9hw (Low): cross-port request forgery against
+	      amuleapi.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/amule-org/amule/releases/tag/3.2.0</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-cp82-q55r-936c</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-2crf-cv3v-53w5</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-52mv-r67q-c985</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-q2jr-xf54-v364</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-3j74-m5qw-75xg</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-cvxg-rcqx-rp9p</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-g22c-pmwf-qmwm</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-6qxf-6fj4-q8fv</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-hv8p-rp6f-rmf7</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-vh6g-8m3v-wfmf</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-42j9-4vh7-jvw6</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-7rxg-6w2f-3w57</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-frfq-582f-4jww</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-gc7p-357m-xj2j</url>
+      <url>https://github.com/amule-org/amule/security/advisories/GHSA-vj9g-4mg6-q9hw</url>
+    </references>
+    <dates>
+      <discovery>2026-10-28</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="38d8dd83-285c-11f1-9f7b-001b217e4ee5">
+    <topic>ISC KEA -- Stack overflow in Kea daemons</topic>
+    <affects>
+      <package>
+	<name>kea</name>
+	<range><ge>2.6.0</ge><lt>2.6.5</lt></range>
+	<range><ge>3.0.0</ge><lt>3.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Internet Systems Consortium, Inc. reports:</p>
+	<blockquote cite="https://kb.isc.org/docs/cve-2026-3608">
+	    <p>Sending a maliciously crafted message to the kea-ctrl-agent, kea-dhcp-ddns, kea-dhcp4, or kea-dhcp6 daemons
+	    over any configured API socket or HA listener can cause the receiving daemon to exit with a stack overflow error.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-3608</cvename>
+      <url>https://kb.isc.org/docs/cve-2026-3608</url>
+    </references>
+    <dates>
+      <discovery>2026-03-18</discovery>
+      <entry>2026-03-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1a0c64ff-5f9f-11f1-8ea1-fb4f92e650aa">
+    <topic>py-django -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py311-django52</name>
+	<name>py312-django52</name>
+	<name>py313-django52</name>
+	<name>py313t-django52</name>
+	<name>py314-django52</name>
+	<name>py314t-django52</name>
+	<name>py315-django52</name>
+	<range><lt>5.2.15</lt></range>
+      </package>
+      <package>
+	<name>py311-django60</name>
+	<name>py312-django60</name>
+	<name>py313-django60</name>
+	<name>py313t-django60</name>
+	<name>py314-django60</name>
+	<name>py314t-django60</name>
+	<name>py315-django60</name>
+	<range><lt>6.0.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>django reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2026/jun/03/security-releases/">
+	  <p>In accordance with our security release policy, the Django team is issuing releases for Django 6.0.6 and Django 5.2.15. These releases address the security issues detailed below. We encourage all users of Django to upgrade as soon as possible.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-6873</cvename>
+      <cvename>CVE-2026-7666</cvename>
+      <cvename>CVE-2026-8404</cvename>
+      <cvename>CVE-2026-35193</cvename>
+      <cvename>CVE-2026-48587</cvename>
+      <url>http://www.djangoproject.com/weblog/2026/jun/03/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2026-06-03</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cc1f80fa-d50e-11f1-8135-8447094a420f">
+    <topic>libreswan -- Multiple vulnerabilities.</topic>
+    <affects>
+      <package>
+	<name>libreswan</name>
+	<range><lt>5.4.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The libreswan project reports:</p>
+	<blockquote cite="https://github.com/libreswan/libreswan/releases#release-v5.4.1">
+	  <ul>
+	    <li>CVE-2026-50721: Libreswan, via the function
+	      RSA_authenticate_hash_signature_raw_rsa(), did not correctly verify
+	      the length of the authentication hash when the SIG payload of an IKEv1
+	      packet was encoded using PKCS #1 RSA Encryption as per RFC 2313.</li>
+	    <li>CVE-2026-50722: Libreswan, via the function
+	      RSA_authenticate_hash_signature_pkcs1_1_5_rsa(), did not correctly
+	      verify the DER encoding of the ASN.1 digest when the IKEv2 AUTH
+	      payload was encoded using RSASSA-PKCS1-v1_5 (RFC 8017).</li>
+	   <li>CVE-2026-77206: Libreswan's IKEv2 state machine has a null pointer
+	      dereference bug in the EAP handling code for authentication. As a
+	      result of inconsistency within the IKEv2 state machine code, this bug
+	      can be triggered by any IKEv2 connection, even if EAP is not
+	      configured at all.</li>
+	    <li>CVE-2026-77207: Libreswan has a null pointer dereference bug in the
+	      PKCS#7 handling code for IKE certificate authentication.</li>
+	    <li>CVE-2026-94453: Libreswan's pluto daemon has a use-after-free
+	      vulnerability when a client connecting using IKE over TCP closes the
+	      connection and another packet (retransmit or malicious) is received
+	      for the same tuple.</li>
+	    <li>CVE-2026-12413: An invalidly formatted IKEv2 fragment causes the
+	      Libreswan pluto daemon to crash and restart. Continued exploitation
+	      would cause a denial of service.</li>
+	    <li>CVE-2024-3652: The Libreswan Project was notified of an issue causing
+	      libreswan to restart when using IKEv1 without specifying an esp= line.</li>
+	    <li>CVE-2026-77205: Denial of Service via sending bogus X.509 certificates</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-50721</cvename>
+      <cvename>CVE-2026-77205</cvename>
+      <cvename>CVE-2026-77206</cvename>
+      <cvename>CVE-2026-77207</cvename>
+      <cvename>CVE-2026-50722</cvename>
+      <cvename>CVE-2026-94453</cvename>
+      <cvename>CVE-2026-12413</cvename>
+      <url>https://github.com/libreswan/libreswan/releases#release-v5.4.1</url>
+    </references>
+    <dates>
+      <discovery>2026-10-05</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="65abbad5-da78-11f0-b6d5-843a4b343614">
+    <topic>uriparser -- Denial of Service through Unbound Recursion</topic>
+    <affects>
+      <package>
+	<name>uriparser</name>
+	<range><lt>1.0.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The URIparser project reports:</p>
+	<blockquote cite="https://github.com/uriparser/uriparser/issues/282">
+	<p>uriparser through 0.9.9 allows unbounded recursion and stack
+	  consumption, as demonstrated by ParseMustBeSegmentNzNc with large
+	  input containing many commas.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-67899</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2025-67899</url>
+    </references>
+    <dates>
+      <discovery>2025-12-14</discovery>
+      <entry>2026-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="91ea9062-d50a-11f1-8135-8447094a420f">
+    <topic>Weechat -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>weechat</name>
+	<range><lt>4.10.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Weechat project reports:</p>
+	<blockquote cite="https://github.com/weechat/weechat/releases/tag/v4.10.2">
+	  <ul>
+	    <li>core: integer overflow in dynamic strings when their size
+	      exceeds 4 GiB (GHSA-h394-85x4-68c7)</li>
+	    <li>core: heap buffer overflow in charset conversion when the
+	      converted string is more than 4 times longer than the input and
+	      contains invalid chars (GHSA-q32h-5qvq-3936)</li>
+	    <li>irc: limit number of prefix modes in PREFIX of message 005 to
+	      prevent memory exhaustion</li>
+	    <li>irc: escape ${ in values of variables $nick, $channel and
+	      $server in commands /allchan, /allpv and /allserv, to prevent
+	      evaluation of untrusted values</li>
+	    <li>irc: escape ${ in server options addresses, nicks, password and
+	      autojoin set from an IRC URL (irc://...), to prevent evaluation of
+	      untrusted values</li>
+	    <li>irc: escape ${ in channel names saved in server option
+	      autojoin, to prevent evaluation of channel names received from the
+	      server (for example on channel forward)</li>
+	    <li>irc: heap buffer overflow in nick prefixes when the server
+	      sends an empty PREFIX in message 005 and the connection is lost
+	      before message 001 (GHSA-xj8h-x2w9-m8m6)</li>
+	    <li>relay: limit size of HTTP headers received from a client to
+	      prevent memory exhaustion (GHSA-h394-85x4-68c7)</li>
+	    <li>relay: fix heap buffer overflow in path of hdata sent to
+	      clients with "weechat" protocol (GHSA-8wr2-x42m-7fxv)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/weechat/weechat/releases/tag/v4.10.2</url>
+    </references>
+    <dates>
+      <discovery>2026-10-31</discovery>
+      <entry>2026-10-31</entry>
+      <modified>2026-10-31</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="6dc20034-d4a7-11f1-9893-3c7c3fba4204">
     <topic>Routinator -- multiple vulnerabilities</topic>
     <affects>
@@ -1165,7 +1785,7 @@
     <affects>
 <package>
 <name>p5-MIME-Tools</name>
-<range><lt>5.522</lt></range>
+<range><lt>5.522,2</lt></range>
 </package>
     </affects>
     <description>
@@ -3365,7 +3985,7 @@ record.</li>
     <affects>
 <package>
 <name>libXi</name>
-<range><lt>1.8.4</lt></range>
+<range><lt>1.8.4,1</lt></range>
 </package>
     </affects>
     <description>
@@ -3412,7 +4032,7 @@ record.</li>
     <affects>
 <package>
 <name>libX11</name>
-<range><lt>1.8.14</lt></range>
+<range><lt>1.8.14,1</lt></range>
 </package>
     </affects>
     <description>
@@ -3889,7 +4509,7 @@ record.</li>
     <description>
 	<body xmlns="http://www.w3.org/1999/xhtml">
 	<p>The Curl project reports:</p>
-	<blockquote cite="">
+	<blockquote cite="https://curl.se/docs/security.html">
 	  <ul>
 	    <li>local interface connection reuse mixup (CVE-2026-107929)</li>
 	    <li>info leak uploading over WebSockets with GnuTLS (CVE-2026-107928)</li>
@@ -20946,7 +21566,7 @@ vulnerability is fixed in crate versions: 36.0.7, 42.0.2, and 43.0.1.</p>
     <affects>
       <package>
        <name>nginx</name>
-       <range><ge>0.1.17,3</ge><lt>1.30.2_2,3</lt></range>
+       <range><ge>0.1.17,3</ge><lt>1.30.2,3</lt></range>
        <range><ge>1.31.0,3</ge><lt>1.31.1,3</lt></range>
       </package>
     </affects>

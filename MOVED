@@ -5771,3 +5771,17 @@ devel/luajava||2026-10-29|Has expired: No new version since 2008, upstream websi
 devel/libreadline-java||2026-10-29|Has expired: 20 years old, does not build with jdk11+, not actively maintained, no users in the tree, forked(?) to https://github.com/aclemons/java-readline
 java/java-subversion|devel/java-subversion|2026-10-30|Use consistent category: all other Subversion language bindings (py-/ruby-/p5-subversion) live under devel/
 www/mod_dav_svn|www/mod_subversion|2026-10-30|Renamed: the port has always built and installed three Apache modules (mod_dav_svn, mod_authz_svn, mod_dontdothat), not just DAV support
+www/gnome-user-share||2026-10-31|Has expired: Depends on expired www/mod_dnssd
+www/mod_dnssd||2026-10-31|Has expired: Abandoned upstream, last release 0.6 in 2008
+www/moodle50||2026-10-31|Has expired: Upstream EOL
+java/apache-commons-httpclient|www/httpclient|2026-10-31|Has expired: The Commons HttpClient project is end of life. Replaced by the Apache HttpComponents project in port www/httpclient
+x11-themes/qgnomeplatform||2026-10-31|Has expired: Depends on deprecated Qt5, abandoned upstream
+x11-toolkits/kirigami-addons-qt5||2026-10-31|Has expired: Depends on deprecated Qt5, has no consumers
+japanese/skkinput3||2026-10-31|Has expired: Abandoned, cannot be executed on amd64 due to an error
+misc/kde-thumbnailer-chm||2026-10-31|Has expired: Depends on deprecated Qt5, superseded by KDE Frameworks 6
+misc/kde-thumbnailer-epub||2026-10-31|Has expired: Depends on deprecated Qt5, superseded by KDE Frameworks 6
+misc/kde-thumbnailer-fb2||2026-10-31|Has expired: Depends on deprecated Qt5, superseded by KDE Frameworks 6
+textproc/xom||2026-10-31|Has expired: Unmaintained, unused in the ports tree, only copies a jar, 8 years behind on upstream
+net/java-beepcore||2026-10-31|Has expired: Unmaintained, unused, upstream is dormant for 10+ years. The repo is still in CVS format
+devel/grantlee5||2026-10-31|Has expired: Depends on deprecated Qt5, has no consumers
+devel/qconf||2026-10-31|Has expired: Not ported to Qt6, has no consumers

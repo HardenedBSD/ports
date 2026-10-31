@@ -250,7 +250,6 @@
     SUBDIR += glance
     SUBDIR += glassfish
     SUBDIR += glpi
-    SUBDIR += gnome-user-share
     SUBDIR += go-anubis
     SUBDIR += go-away
     SUBDIR += go-www
@@ -452,7 +451,6 @@
     SUBDIR += mod_authz_unixgroup24
     SUBDIR += mod_cfg_ldap
     SUBDIR += mod_defensible
-    SUBDIR += mod_dnssd
     SUBDIR += mod_evasive
     SUBDIR += mod_fastcgi
     SUBDIR += mod_fcgid
@@ -498,7 +496,6 @@
     SUBDIR += mongoose
     SUBDIR += monolith
     SUBDIR += moodle45
-    SUBDIR += moodle50
     SUBDIR += moodle51
     SUBDIR += moodle52
     SUBDIR += moodle53

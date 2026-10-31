@@ -1,5 +1,6 @@
 PORTNAME=	blender
 DISTVERSION=	5.2.2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://download.blender.org/source/ \
@@ -17,6 +18,8 @@ ONLY_FOR_ARCHS=		aarch64 amd64 powerpc64le riscv64
 ONLY_FOR_ARCHS_REASON=	static_assert(sizeof(unsigned long long) == sizeof(struct hipArray*))
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>2.3:math/py-numpy@${PY_FLAVOR}
+BUILD_DEPENDS_aarch64=	${LOCALBASE}/include/sse2neon.h:devel/sse2neon
+BUILD_DEPENDS+=	${BUILD_DEPENDS_${ARCH}}
 LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
 		libexpat.so:textproc/expat2 \
 		libfreetype.so:print/freetype2 \

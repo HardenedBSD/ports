@@ -206,6 +206,8 @@
     SUBDIR += mysql-connector-j
     SUBDIR += mysql-connector-odbc
     SUBDIR += mysql-shell
+    SUBDIR += mysql2610-client
+    SUBDIR += mysql2610-server
     SUBDIR += mysql2pgsql
     SUBDIR += mysql267-client
     SUBDIR += mysql267-server

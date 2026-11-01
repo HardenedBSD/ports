@@ -10,8 +10,8 @@ WWW=		https://subversion.apache.org/
 
 USES=		apache
 
-PORTREVISION_LATEST=	2
-PORTREVISION_LTS=		2
+PORTREVISION_LATEST=	3
+PORTREVISION_LTS=		3
 
 .include "${.CURDIR}/../../devel/subversion/Makefile.addons"
 
@@ -20,8 +20,6 @@ CONFIGURE_ARGS+=	--with-apxs=${APXS} \
 			--without-gnome-keyring \
 			--without-kwallet
 SUB_FILES+=	220_subversion.conf.sample
-
-PLIST_SUB+=	SED=${SED}
 
 ALL_TARGET=	apache-mod
 INSTALL_TARGET=	install-mods-shared

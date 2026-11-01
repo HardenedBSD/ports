@@ -6,8 +6,8 @@ WWW=		https://subversion.apache.org/
 
 USES=		java:build
 
-PORTREVISION_LATEST=	6
-PORTREVISION_LTS=		6
+PORTREVISION_LATEST=	7
+PORTREVISION_LTS=		7
 
 SVN_BUILD_BINDINGS=	yes
 
@@ -25,6 +25,10 @@ CONFIGURE_ARGS+=	--enable-javahl \
 			--without-kwallet \
 			--with-apxs=no
 
+# real race: build.conf's Java-target add-deps only threads into the
+# phony aggregate target, not the javac -h compile rule itself, so -j
+# can run javahl-types-java before javahl-java's NativeResources.class
+# exists ("cannot find symbol: variable NativeResources")
 MAKE_JOBS_UNSAFE=	yes
 
 ALL_TARGET=	javahl

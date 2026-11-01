@@ -538,11 +538,13 @@
     SUBDIR += nginx-module-accept-language
     SUBDIR += nginx-module-ajp
     SUBDIR += nginx-module-array-var
+    SUBDIR += nginx-module-auth-digest
     SUBDIR += nginx-module-auth-ldap
     SUBDIR += nginx-module-auth-pam
     SUBDIR += nginx-module-aws-auth
     SUBDIR += nginx-module-cache-purge
     SUBDIR += nginx-module-cert-expiry
+    SUBDIR += nginx-module-dav-ext
     SUBDIR += nginx-module-encrypted-session
     SUBDIR += nginx-module-fancyindex
     SUBDIR += nginx-module-fips-check
@@ -554,6 +556,7 @@
     SUBDIR += nginx-module-ip-anon
     SUBDIR += nginx-module-json-status
     SUBDIR += nginx-module-let
+    SUBDIR += nginx-module-link
     SUBDIR += nginx-module-lua
     SUBDIR += nginx-module-lua-stream
     SUBDIR += nginx-module-memc
@@ -567,7 +570,9 @@
     SUBDIR += nginx-module-slowfs-cache
     SUBDIR += nginx-module-stream-limit-req
     SUBDIR += nginx-module-sts
+    SUBDIR += nginx-module-subs-filter
     SUBDIR += nginx-module-syslog5424
+    SUBDIR += nginx-module-upload
     SUBDIR += nginx-module-vod
     SUBDIR += nginx-module-websockify
     SUBDIR += nginx-module-zstd

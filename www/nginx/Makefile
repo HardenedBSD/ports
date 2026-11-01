@@ -24,7 +24,7 @@ USES=		cpe
 USE_HARDENING=	zeroreg
 
 CPE_VENDOR=	f5
-CPE_PRODUCT=	nginx
+CPE_PRODUCT=	nginx_open_source
 USE_GITHUB=	nodefault
 
 NGINX_VARDIR?=	/var

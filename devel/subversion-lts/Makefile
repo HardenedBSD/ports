@@ -1,4 +1,4 @@
-PORTREVISION=	3
+PORTREVISION=	4
 PKGNAMESUFFIX=	-lts
 
 MAINTAINER=	michaelo@apache.org
@@ -19,7 +19,6 @@ OPTIONS_DEFINE=	\
 		SASL		\
 		SERF		\
 		SVNSERVE_WRAPPER\
-		TEST		\
 		TOOLS
 
 OPTIONS_DEFAULT=GPG_AGENT SERF TOOLS
@@ -27,12 +26,9 @@ OPTIONS_DEFAULT=GPG_AGENT SERF TOOLS
 GPG_AGENT_DESC=		Enable GPG agent credential cache
 SERF_DESC=		WebDAV/Delta-V (HTTP/HTTPS) repo access module
 SVNSERVE_WRAPPER_DESC=	Enable svnserve wrapper (umask setter)
-TEST_DESC=		Run subversion test suite
 TOOLS_DESC=		Install several tools
 
-SVNSERVE_WRAPPER_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-svnserve-wrapper
-
-USES+=			shebangfix python:env
+USES+=			shebangfix python:patch,test
 python_OLD_CMD+=	"/bin/env python"
 SHEBANG_REGEX=		./tools/.*
 
@@ -61,9 +57,8 @@ PLIST_SUB+=	NO_SVNSERVE_WRAPPER=""
 SVNSERVE_EXT=
 .endif
 
-.if ${PORT_OPTIONS:MTEST}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
-.endif
+TEST_TARGET=	check
 
 .if make(repository)
 WITH_REPOSITORY_CREATION=	yes
@@ -118,18 +113,20 @@ pre-configure:
 	fi
 .endif
 
+post-patch-SVNSERVE_WRAPPER-on:
+# the real svnserve binary installs as svnserve.bin so bin/svnserve can be
+# the umask-setting wrapper script instead; build.conf has no per-target
+# install-name override, so rename it here, after Makefile.common's
+# post-patch has (re)generated build-outputs.mk from the patched build.conf
+	@${REINPLACE_CMD} -e 's#(bindir)/svnserve$$(EXEEXT)#(bindir)/svnserve.bin$$(EXEEXT)#' \
+		${WRKSRC}/build-outputs.mk
+
 post-configure:
 # Enable GNOME Keyring / KWallet support in main code, as it is harmless
 	@${REINPLACE_CMD} -E 's%.*#undef SVN_HAVE_(GNOME_KEYRING|KWALLET).*%#define SVN_HAVE_\1 1%' ${WRKSRC}/subversion/svn_private_config.h
 # ugly hack: save tools directory so we don't have to cleanup before installing
 	@${CP} -R ${WRKSRC}/tools ${WRKSRC}/tools.examples
 	@${CHMOD} -R a-st,o+rX ${WRKSRC}/tools.examples
-
-# takes a long time, and will fail but gives maintainer a good oversight
-.if ${PORT_OPTIONS:MTEST}
-test: build
-	-@make check -C ${WRKSRC}
-.endif
 
 post-build-TOOLS-on:
 	@${MAKE} -C ${WRKSRC} tools ${MAKE_ARGS}
@@ -203,9 +200,5 @@ _mkrepos:	.USE
 	done
 .endif
 .endif
-
-svn-build-outputs-hack:
-	(cd ${WRKSRC} && python gen-make.py --release --installed-libs libsvn_client,libsvn_delta,libsvn_diff,libsvn_fs,libsvn_fs_x,libsvn_ra,libsvn_repos,libsvn_subr,libsvn_wc)
-	${MV} ${WRKSRC}/build-outputs.mk ${FILESDIR}/build-outputs.mk.addons
 
 .include <bsd.port.post.mk>

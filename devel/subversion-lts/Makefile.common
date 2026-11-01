@@ -65,11 +65,6 @@ OPTIONS_FILE_SET?=""
 
 .include <bsd.port.pre.mk>
 
-pre-patch:
-.if defined(SVN_BUILD_ADDONS)
-	@${CP} ${FILESDIR}/build-outputs.mk.addons ${WRKSRC}/build-outputs.mk
-.endif
-
 post-patch:
 .if ${PREFIX} != "/usr"
 	@${REINPLACE_CMD} "s#/etc/subversion#${ETCDIR}#g" ${WRKSRC}/subversion/libsvn_subr/config_file.c
@@ -86,4 +81,13 @@ post-patch:
 		-e '1s|#\!/usr/bin/p|#\!/usr/local/bin/p|'
 # remove all .bak files to clean the stage
 	@${FIND} ${WRKSRC} -name '*.bak' -delete
+# regenerate build-outputs.mk from build.conf instead of carrying a frozen,
+# hand-maintained snapshot that drifts from upstream's actual build.conf
+	@(cd ${WRKSRC} && ${PYTHON_CMD} gen-make.py --release)
+# gen-make.py always names tools/diff's output after its .c source; rename to
+# svndiff{,3,4} here since build.conf has no per-target install-name override
+	@${REINPLACE_CMD} -e 's#toolsdir)/diff$$(EXEEXT)#toolsdir)/svndiff$$(EXEEXT)#' \
+		-e 's#toolsdir)/diff3$$(EXEEXT)#toolsdir)/svndiff3$$(EXEEXT)#' \
+		-e 's#toolsdir)/diff4$$(EXEEXT)#toolsdir)/svndiff4$$(EXEEXT)#' \
+		${WRKSRC}/build-outputs.mk
 

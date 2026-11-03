@@ -31,13 +31,9 @@ LIB_DEPENDS=	libicuuc.so:devel/icu \
 		libzstd.so:archivers/zstd
 TEST_DEPENDS=	googletest>0:devel/googletest
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		cmake:testing compiler:c++17-lang desktop-file-utils gl \
-=======
 USES=		cmake:testing compiler:c++17-lang desktop-file-utils \
->>>>>>> rad/freebsd/main
 		localbase:ldflags pkgconfig sdl shared-mime-info ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenRCT2

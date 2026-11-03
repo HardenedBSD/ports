@@ -350,7 +350,7 @@ evcc:*:400:400::0:0:evcc Daemon:/nonexistent:/usr/sbin/nologin
 spectrumknx:*:401:401::0:0:SpectrumKNX Daemon:/var/db/spectrumknx:/usr/sbin/nologin
 # free: 402
 # free: 403
-# free: 404
+svn:*:404:404::0:0:Subversion daemon:/var/db/svn:/usr/sbin/nologin
 # free: 405
 # free: 406
 # free: 407
@@ -431,7 +431,7 @@ promxy:*:481:481::0:0:Promxy Daemon:/nonexistent:/usr/sbin/nologin
 openbao:*:482:482:daemon:0:0:OpenBao Daemon:/nonexistent:/usr/sbin/nologin
 garage:*:483:483::0:0:Garage Daemon:/var/db/garage:/usr/sbin/nologin
 stalwart:*:484:484::0:0:stalwart Mail Server Daemon:/nonexistent:/usr/sbin/nologin
-# free: 485
+stalwart-proxy:*:485:485::0:0:Stalwart Proxy Daemon:/nonexistent:/usr/sbin/nologin
 # free: 486
 # free: 487
 # free: 488

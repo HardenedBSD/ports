@@ -1506,6 +1506,9 @@
     SUBDIR += phalcon
     SUBDIR += php-google-api-php-client
     SUBDIR += php-http
+    SUBDIR += php-laminas-escaper
+    SUBDIR += php-laminas-feed
+    SUBDIR += php-url-highlight
     SUBDIR += php-solr
     SUBDIR += php82-opcache
     SUBDIR += php82-session

@@ -1,6 +1,6 @@
 PORTNAME=	apache-openoffice
 PORTVERSION=	${AOOVERSION1}.${AOOVERSION2}.${TIMESTAMP}
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	4
 CATEGORIES=	editors java
 MASTER_SITES=	https://dist.apache.org/repos/dist/dev/openoffice/${AOOVERSION}-${AOORC}-${TIMESTAMP}/source/ \
@@ -49,11 +49,14 @@ LICENSE_PERMS_ICU=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_TWAIN=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_W3C=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
 DEPRECATED=	Depends on expired java/apache-commons-lang and textproc/lucene
 EXPIRATION_DATE=2026-12-31
 
+=======
+>>>>>>> rad/freebsd/main
 ONLY_FOR_ARCHS=	amd64 i386 powerpc64 powerpc64le
 
 BUILD_DEPENDS=								\
@@ -72,7 +75,6 @@ BUILD_DEPENDS=								\
 		${JAVALIBDIR}/junit.jar:java/junit			\
 		${JAVALIBDIR}/bsh.jar:lang/bsh				\
 		bash:shells/bash					\
-		${JAVALIBDIR}/lucene-core-3.6.2.jar:textproc/lucene	\
 		p5-XML-Parser>=0:textproc/p5-XML-Parser			\
 		p5-libwww>=0:www/p5-libwww				\
 		p5-LWP-Protocol-https>0:www/p5-LWP-Protocol-https
@@ -119,7 +121,7 @@ USES=		autoreconf bison compiler:c++11-lib cpe desktop-file-utils \
 USE_GL=		gl glu
 USE_GNOME=	gdkpixbuf gdkpixbuf2xlib gtk20 libxslt glib20
 JAVA_VENDOR=	openjdk
-JAVA_VERSION=	8
+JAVA_VERSION=	21
 USE_PERL5=	build
 USE_XORG=	ice sm x11 xau xaw xcomposite xcursor xdamage xext xfixes xi \
 		xinerama xrandr xrender xt
@@ -133,8 +135,8 @@ AOOVERSION2=	1
 AOOVERSION3=	0
 # From solenv/inc/minor.mk SOURCEREVISION LAST_MINOR BUILD
 AOOTAG=		AOO510m1\(Build:99000\)
-GITREVISION=	430d1577c6
-TIMESTAMP=	1791053065
+GITREVISION=	0bdb2dee20
+TIMESTAMP=	1793513194
 #AOORC=rc3
 #EXTSRC=		ApacheOpenOffice.ext_sources.${AOOVERSION1}.x.x.20150707.tar.gz
 EXTSRC=		ApacheOpenOffice.ext_sources.4.x.x.20150707.tar.gz
@@ -166,7 +168,7 @@ CPE_VENDOR=	apache
 
 OPTIONS_DEFINE=		CRASHDUMP CUPS DBGUTIL DEBUG GNOME MMEDIA \
 			MYSQL PDFIMPORT REPORT_BUILDER SDK WIKI_PUBLISHER
-OPTIONS_DEFAULT=	CUPS GNOME MMEDIA
+OPTIONS_DEFAULT=	CUPS GNOME MMEDIA WIKI_PUBLISHER
 CRASHDUMP_DESC=		Enable crashdumps, you also need to set WITH_DEBUG_PORTS+=${PKGORIGIN}
 DBGUTIL_DESC=		Enable assertions, object counting. (non-production)
 DEBUG_DESC=		Compile with -O0, you also need to set WITH_DEBUG_PORTS+=${PKGORIGIN}
@@ -212,17 +214,7 @@ REPORT_BUILDER_JAR_DEPENDS=
 REPORT_BUILDER_BUILD_DEPENDS=	${REPORT_BUILDER_JAR_DEPENDS}
 REPORT_BUILDER_RUN_DEPENDS=	${REPORT_BUILDER_JAR_DEPENDS}
 
-# commons-httpclient replacement by Apache HttpComponents requires new java
-WIKI_PUBLISHER_BROKEN=		CVE-2012-6153 MITM
 WIKI_PUBLISHER_CONFIGURE_ENABLE=	wiki-publisher
-WIKI_PUBLISHER_CONFIGURE_WITH=						\
-	commons-codec-jar=${JAVALIBDIR}/commons-codec.jar		\
-	commons-httpclient-jar=${JAVALIBDIR}/commons-httpclient.jar
-WIKI_PUBLISHER_JAR_DEPENDS=						\
-	${JAVALIBDIR}/commons-codec.jar:java/apache-commons-codec	\
-	${JAVALIBDIR}/commons-httpclient.jar:java/apache-commons-httpclient
-WIKI_PUBLISHER_BUILD_DEPENDS=	${WIKI_PUBLISHER_JAR_DEPENDS}
-WIKI_PUBLISHER_RUN_DEPENDS=	${WIKI_PUBLISHER_JAR_DEPENDS}
 
 # Don't run gnome-post-icons until after post-install generates the plist
 TARGET_ORDER_OVERRIDE=	710:gnome-post-icons
@@ -257,8 +249,10 @@ CONFIGURE_ARGS+=	--without-commons-logging
 .include <${FILESDIR}/Makefile.localized>
 
 EXTRA_DISTFILES=	9dcd632441e4da04a461082ebbafd337-boost_1_84_0.tar.bz2 \
+			8344c82677a7ba961b74ea193a178e1b-SampleICC-1.6.11.zip \
 			e3738abd0d3ce1870dc1fd1f22bba5b1-icu4c-4_2_1-src.tgz \
 			128cfc86ed5953e57fe0f5ae98b62c2e-libtextcat-2.2.tar.gz \
+			17960f35b2239654ba608cf1f3e256b3-lucene-2.9.4-src.tar.gz \
 			d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz
 
 .if ${CHOSEN_COMPILER_TYPE} == clang
@@ -325,9 +319,6 @@ CONFIGURE_ARGS+=							\
 			--disable-kde4					\
 			--with-system-libxml				\
 			--with-system-libxslt				\
-			--with-system-lucene				\
-			--with-lucene-core-jar=${JAVALIBDIR}/lucene-core-3.6.2.jar \
-			--with-lucene-analyzers-jar=${JAVALIBDIR}/lucene-analyzers-3.6.2.jar \
 			--with-system-mythes				\
 			--with-external-thes-dir=${LOCALBASE}/share/mythes \
 			--with-system-nss				\
@@ -418,14 +409,6 @@ post-patch:
 	${REINPLACE_CMD} -e "s|%%JAVA_HOME%%|${JAVA_HOME}|" \
 		${WRKSRC}/desktop/scripts/soffice.sh
 	${REINPLACE_CMD} -e '/^mkdir -p/,$$d' ${CREATE_TREE}
-
-# Verify that lucene was built with the CONTRIB option instead of
-# failing mysteriously during the build
-pre-configure:
-	@if [ ! -f ${JAVALIBDIR}/lucene-analyzers-3.6.2.jar ]; then \
-		${ECHO} "error: textproc/lucene must be built with the CONTRIB option enabled"; \
-		exit 1; \
-	fi
 
 do-build:
 	${PRINTF} "[repositories]\nmain=active\nextras=active\n" > ${WRKSUBDIR}/source_config

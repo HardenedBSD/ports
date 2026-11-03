@@ -535,6 +535,7 @@
     SUBDIR += py-mailnag
     SUBDIR += py-mailsuite
     SUBDIR += py-managesieve3
+    SUBDIR += py-minismtpd
     SUBDIR += py-notmuch
     SUBDIR += py-notmuch2
     SUBDIR += py-offlineimap
@@ -751,6 +752,8 @@
     SUBDIR += ssmtp
     SUBDIR += stalwart
     SUBDIR += stalwart-cli
+    SUBDIR += stalwart-migrate
+    SUBDIR += stalwart-proxy
     SUBDIR += surblhost
     SUBDIR += swaks
     SUBDIR += sylpheed

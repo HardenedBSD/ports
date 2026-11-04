@@ -2798,6 +2798,8 @@
     SUBDIR += wiki-tui
     SUBDIR += wikicalc
     SUBDIR += wordpress
+    SUBDIR += worldmonitor
+    SUBDIR += worldmonitor-cli
     SUBDIR += wp-cli
     SUBDIR += wpebackend-fdo
     SUBDIR += writeas-cli

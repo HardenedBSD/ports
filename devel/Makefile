@@ -5252,6 +5252,7 @@
     SUBDIR += py-importlab
     SUBDIR += py-importlib-metadata
     SUBDIR += py-importlib-metadata8
+    SUBDIR += py-importlib-metadata9
     SUBDIR += py-importlib-resources
     SUBDIR += py-in-n-out
     SUBDIR += py-incremental
@@ -6550,6 +6551,7 @@
     SUBDIR += py-wirerope
     SUBDIR += py-wlc
     SUBDIR += py-woops
+    SUBDIR += py-worldmonitor-sdk
     SUBDIR += py-wrapt
     SUBDIR += py-wrapt1
     SUBDIR += py-wsgi-intercept
@@ -8644,6 +8646,7 @@
     SUBDIR += rubygem-with_advisory_lock81
     SUBDIR += rubygem-with_env
     SUBDIR += rubygem-wmi-lite
+    SUBDIR += rubygem-worldmonitor
     SUBDIR += rubygem-xdg
     SUBDIR += rubygem-xdg9
     SUBDIR += rubygem-xorcist

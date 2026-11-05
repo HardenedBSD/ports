@@ -558,6 +558,7 @@
     SUBDIR += nmsg
     SUBDIR += nncp
     SUBDIR += nng
+    SUBDIR += nng1
     SUBDIR += norm
     SUBDIR += nqptp
     SUBDIR += nsc-tui

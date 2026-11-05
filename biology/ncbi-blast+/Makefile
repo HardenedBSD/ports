@@ -31,14 +31,10 @@ LIB_DEPENDS=	libdw.so:devel/elfutils \
 RUN_DEPENDS=	p5-List-MoreUtils>=0:lang/p5-List-MoreUtils \
 		p5-JSON>=0:converters/p5-JSON
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-USES=		compiler:c++14-lang gmake localbase:ldflags perl5 python shebangfix
-=======
 USES=		compiler:c++14-lang gmake localbase:ldflags perl5 python \
 		shebangfix sqlite
->>>>>>> rad/freebsd/main
 USE_LDCONFIG=	${PREFIX}/lib/ncbi-tools++
 
 SHEBANG_FILES=	src/app/blast/cleanup-blastdb-volumes.py \

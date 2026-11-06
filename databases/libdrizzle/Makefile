@@ -1,11 +1,11 @@
 PORTNAME=	libdrizzle
 PORTVERSION=	0.8
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	databases
 MASTER_SITES=	http://launchpadlibrarian.net/41155299/ \
 		LOCAL/bdrewery/${PORTNAME}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Client and protocol library for the Drizzle database
 WWW=		https://launchpad.net/libdrizzle
 

@@ -494,6 +494,7 @@
     SUBDIR += sxmo-wayout
     SUBDIR += sxpc
     SUBDIR += tabbed
+    SUBDIR += tabby
     SUBDIR += tecla
     SUBDIR += temperature.app
     SUBDIR += terminal.app

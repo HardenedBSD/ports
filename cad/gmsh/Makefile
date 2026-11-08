@@ -50,16 +50,12 @@ USE_GL=		gl glu
 USE_XORG=	ice sm x11 xcursor xext xinerama xfixes xft xrender
 USE_LDCONFIG=	yes
 
-<<<<<<< HEAD
 CFLAGS+=	-fPIC
 CXXFLAGS+=	-fPIC
 
-CMAKE_ON=	ENABLE_BUILD_DYNAMIC ENABLE_BUILD_SHARED ENABLE_SYSTEM_CONTRIB
-=======
 CMAKE_ON=	ENABLE_BUILD_DYNAMIC	\
 		ENABLE_BUILD_SHARED	\
 		ENABLE_SYSTEM_CONTRIB
->>>>>>> rad/freebsd/main
 
 LDFLAGS+=	-lexecinfo
 

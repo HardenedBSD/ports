@@ -42,13 +42,9 @@ SUB_LIST+=	XYMONUSER="${XYMONUSER}"
 PLIST_SUB+=	XYMONUSER="${XYMONUSER}" \
 		WWWGRP="${WWWGRP}"
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
 
-CONFIG_FILES=	cgioptions.cfg client-local.cfg \
-=======
 CONFIG_FILES=	critical.cfg cgioptions.cfg client-local.cfg \
->>>>>>> rad/freebsd/main
 		columndoc.csv graphs.cfg protocols.cfg \
 		tasks.cfg xymonserver.cfg xymon-apache.conf
 FIXME1=		alerts.cfg hosts.cfg xymon-apache-open xymon-apache-secure

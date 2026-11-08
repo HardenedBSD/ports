@@ -87,6 +87,7 @@
     SUBDIR += bluefish
     SUBDIR += bombadillo
     SUBDIR += bozohttpd
+    SUBDIR += brave
     SUBDIR += browsh
     SUBDIR += bugzilla2atom
     SUBDIR += buku
@@ -197,7 +198,6 @@
     SUBDIR += feroxbuster
     SUBDIR += ffproxy
     SUBDIR += fgallery
-    SUBDIR += filebrowser
     SUBDIR += filebrowser-quantum
     SUBDIR += filepizza
     SUBDIR += fileserv
@@ -315,9 +315,14 @@
     SUBDIR += imaginary
     SUBDIR += immich
     SUBDIR += immich-cli
+    SUBDIR += immich-deduper
+    SUBDIR += immich-folder-album-creator
     SUBDIR += immich-go
+    SUBDIR += immich-kiosk
     SUBDIR += immich-ml
+    SUBDIR += immich-power-tools
     SUBDIR += immich-public-proxy
+    SUBDIR += immichframe
     SUBDIR += iocaine
     SUBDIR += iridium
     SUBDIR += janus
@@ -1517,8 +1522,8 @@
     SUBDIR += php-http
     SUBDIR += php-laminas-escaper
     SUBDIR += php-laminas-feed
-    SUBDIR += php-url-highlight
     SUBDIR += php-solr
+    SUBDIR += php-url-highlight
     SUBDIR += php82-opcache
     SUBDIR += php82-session
     SUBDIR += php82-tidy
@@ -1919,6 +1924,7 @@
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperkitty
     SUBDIR += py-hyperlink
+    SUBDIR += py-immichpy
     SUBDIR += py-inlinestyler
     SUBDIR += py-internetarchive
     SUBDIR += py-jh2

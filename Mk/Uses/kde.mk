@@ -96,6 +96,7 @@ _PLASMA_VER?=		${KDE_PLASMA_DEFAULT}
 .  if ${CATEGORIES:Mkde-plasma6lts}
 _PLASMA_VER=		6lts
 CONFLICTS_INSTALL+=	plasma6-${PORTNAME}-6.*
+PORTSCOUT=		limit:^6\.6\.
 .  elif ${CATEGORIES:Mkde-plasma}
 _PLASMA_VER=		6
 CONFLICTS_INSTALL+=	plasma6lts-${PORTNAME}-6.*
@@ -140,8 +141,8 @@ KDE_FRAMEWORKS6_BRANCH?=	stable
 # - check and update if needed _${PORTNAME}_PROJECT_VERSION for the following ports:
 #   audio/audiocd-kio, devel/kdevelop, games/libkdegames, games/libkmahjongg, graphics/kgraphviewer
 # - bump SHLIB_VER for editors/calligra.
-KDE_APPLICATIONS6_VERSION?=	26.08.2
-KDE_PIM6_SHLIB_VER?=		6.8.2
+KDE_APPLICATIONS6_VERSION?=	26.08.3
+KDE_PIM6_SHLIB_VER?=		6.8.3
 KDE_APPLICATIONS6_BRANCH?=	stable
 
 # Some projects despite being a part of Gear distribution continue to use

@@ -753,6 +753,7 @@
     SUBDIR += stalwart-cli
     SUBDIR += stalwart-migrate
     SUBDIR += stalwart-proxy
+    SUBDIR += stalwart016
     SUBDIR += surblhost
     SUBDIR += swaks
     SUBDIR += sylpheed
@@ -770,6 +771,7 @@
     SUBDIR += up-imapproxy
     SUBDIR += usendmail
     SUBDIR += vacation
+    SUBDIR += vandelay
     SUBDIR += vbsfilter
     SUBDIR += vexim
     SUBDIR += vpopmail

@@ -1,3 +1,92 @@
+  <vuln vid="f96ffef6-db4c-11f1-985e-901b0edee044">
+    <topic>py-svglib -- 2.3.3 remediates a incomplete fix in 2.3.1</topic>
+    <affects>
+    <package>
+      <name>py311-svglib</name>
+      <name>py312-svglib</name>
+      <name>py313-svglib</name>
+      <name>py313t-svglib</name>
+      <name>py314-svglib</name>
+      <name>py314t-svglib</name>
+      <name>py315-svglib</name>
+      <range><lt>2.3.3</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dinu Gherman reports:</p>
+	<blockquote cite="https://github.com/deeplook/svglib/security/advisories/GHSA-xpfm-fw4h-qxwv">
+	<p>The 2.3.1 fix for GHSA-555j-qj3j-c8jv stops "renderUse()" after
+	"MAX_USE_EXPANSIONS" (10,000) expansions. But each expansion deep-copies and
+	renders the whole referenced subtree, so the total work is 10,000 × (subtree
+	size), and the subtree size is unbounded. Nested &lt;use&gt; groups whose leaf
+	group holds N rects make about 9,000 of the allowed expansions clone that leaf.
+	In svglib 2.3.2, a 2,254-byte SVG takes 68 s, and a 6,454-byte one (200 rects)
+	takes 247 s and 2.6 GB RSS. The cost grows linearly with N. Only the SVG needs
+	to be attacker-controlled, as in GHSA-555j. main (6e79811) behaves the same (50
+	rects: 62 s / 727 MB).</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/deeplook/svglib/security/advisories/GHSA-xpfm-fw4h-qxwv</url>
+    </references>
+    <dates>
+      <discovery>2026-11-04</discovery>
+      <entry>2026-11-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="de74d92b-4f87-4334-973b-5d24a7c4528a">
+    <topic>gstreamer1 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gstreamer1-plugins-bad</name>
+	<name>gstreamer1-plugins-good</name>
+	<range><lt>1.28.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The GStreamer project reports:</p>
+	<blockquote cite="https://gstreamer.freedesktop.org/security/">
+	  <p>Multiple security issues were identified and fixed in the GStreamer framework.</p>
+	  <ul>
+	    <li>GStreamer-SA-2026-0093: Out-of-bounds read in MXF demuxer</li>
+	    <li>GStreamer-SA-2026-0094: Use of uninitialized memory in H.265 bitstream parser</li>
+	    <li>GStreamer-SA-2026-0095: Out-of-bounds read in H.264 RTP depayloader</li>
+	    <li>GStreamer-SA-2026-0096: Multiple out-of-bounds reads, null pointer write and denial of service in the VMnc video decoder</li>
+	    <li>GStreamer-SA-2026-0097: Local file disclosure via manifest references in adaptive streaming (HLS/DASH) demuxers</li>
+	    <li>GStreamer-SA-2026-0098: Out-of-bounds write and infinite loop when reading responses from a Festival speech synthesis server</li>
+	    <li>GStreamer-SA-2026-0099: Out-of-bounds read when parsing DVB short event descriptors</li>
+	    <li>GStreamer-SA-2026-0100: Out-of-bounds write in the RTP raw video depayloader with crafted stream dimensions</li>
+	    <li>GStreamer-SA-2026-0101: Out-of-bounds write in the ASF muxer when writing metadata with certain Unicode characters</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-116611</cvename>
+      <cvename>CVE-2026-119610</cvename>
+      <cvename>CVE-2026-121601</cvename>
+      <cvename>CVE-2026-121611</cvename>
+      <cvename>CVE-2026-121629</cvename>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0093.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0094.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0095.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0096.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0097.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0098.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0099.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0100.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0101.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-06</discovery>
+      <entry>2026-11-07</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="06eeb817-d93d-11f1-908f-3c7c3fba4204">
     <topic>Keycloak -- multiple vulnerabilities</topic>
     <affects>
@@ -25083,8 +25172,11 @@ vulnerability is fixed in crate versions: 36.0.7, 42.0.2, and 43.0.1.</p>
 <package>
 <name>expat</name>
 <name>linux-c7-expat</name>
-<name>linux-rl9-expat</name>
 <range><lt>2.8.1</lt></range>
+</package>
+<package>
+<name>linux-rl9-expat</name>
+<range><lt>2.5.0_9</lt></range>
 </package>
     </affects>
     <description>
@@ -25103,6 +25195,7 @@ vulnerability is fixed in crate versions: 36.0.7, 42.0.2, and 43.0.1.</p>
     <dates>
       <discovery>2025-10-01</discovery>
       <entry>2026-05-11</entry>
+      <modified>2026-11-05</modified>
     </dates>
   </vuln>
 

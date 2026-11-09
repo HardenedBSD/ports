@@ -1,5 +1,5 @@
 PORTNAME=	backports.zstd
-PORTVERSION=	1.7.0
+PORTVERSION=	1.8.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61:devel/py-setuptools@${PY_FLAVOR}
 LIB_DEPENDS=	libzstd.so:archivers/zstd
 
-USES=		localbase:ldflags python:3.11-3.13
+USES=		localbase:ldflags python:-3.13
 USE_PYTHON=	autoplist concurrent pep517
 
 LDFLAGS+=	-lzstd

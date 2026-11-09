@@ -1233,10 +1233,12 @@
     SUBDIR += rubygem-metasploit_payloads-mettle
     SUBDIR += rubygem-nessus_rest
     SUBDIR += rubygem-net-scp
+    SUBDIR += rubygem-net-scp-gitlab
     SUBDIR += rubygem-net-scp1
     SUBDIR += rubygem-net-sftp
     SUBDIR += rubygem-net-ssh
     SUBDIR += rubygem-net-ssh-gateway
+    SUBDIR += rubygem-net-ssh-gitlab
     SUBDIR += rubygem-net-ssh-krb
     SUBDIR += rubygem-net-ssh-multi
     SUBDIR += rubygem-net-ssh5

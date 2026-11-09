@@ -193,8 +193,10 @@
     SUBDIR += cfengine-masterfiles-lts
     SUBDIR += cfengine-masterfiles327
     SUBDIR += cfengine-masterfiles328
+    SUBDIR += cfengine-masterfiles329
     SUBDIR += cfengine327
     SUBDIR += cfengine328
+    SUBDIR += cfengine329
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -1307,6 +1309,7 @@
     SUBDIR += rubygem-mothra
     SUBDIR += rubygem-murder
     SUBDIR += rubygem-ohai
+    SUBDIR += rubygem-ohai-gitlab
     SUBDIR += rubygem-ohai18
     SUBDIR += rubygem-openbolt
     SUBDIR += rubygem-openfact

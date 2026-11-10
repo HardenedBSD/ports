@@ -547,6 +547,7 @@
     SUBDIR += nginx-module-auth-ldap
     SUBDIR += nginx-module-auth-pam
     SUBDIR += nginx-module-aws-auth
+    SUBDIR += nginx-module-brotli
     SUBDIR += nginx-module-cache-purge
     SUBDIR += nginx-module-cert-expiry
     SUBDIR += nginx-module-dav-ext

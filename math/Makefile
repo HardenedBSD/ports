@@ -52,6 +52,7 @@
     SUBDIR += R-cran-combinat
     SUBDIR += R-cran-conf.design
     SUBDIR += R-cran-conquer
+    SUBDIR += R-cran-corpcor
     SUBDIR += R-cran-cvar
     SUBDIR += R-cran-date
     SUBDIR += R-cran-ddalpha
@@ -140,6 +141,7 @@
     SUBDIR += R-cran-quadprog
     SUBDIR += R-cran-qualityTools
     SUBDIR += R-cran-quantreg
+    SUBDIR += R-cran-ranger
     SUBDIR += R-cran-raster
     SUBDIR += R-cran-recipes
     SUBDIR += R-cran-reformulas

@@ -6569,6 +6569,7 @@
     SUBDIR += py-widgetsnbextension
     SUBDIR += py-wimpy
     SUBDIR += py-wirerope
+    SUBDIR += py-wkb-wkt-converter
     SUBDIR += py-wlc
     SUBDIR += py-woops
     SUBDIR += py-worldmonitor-sdk
@@ -6903,6 +6904,7 @@
     SUBDIR += rubygem-aws-sdk-accessanalyzer
     SUBDIR += rubygem-aws-sdk-account
     SUBDIR += rubygem-aws-sdk-accountaccess
+    SUBDIR += rubygem-aws-sdk-accountaccessruntime
     SUBDIR += rubygem-aws-sdk-acm
     SUBDIR += rubygem-aws-sdk-acmpca
     SUBDIR += rubygem-aws-sdk-agentregistry

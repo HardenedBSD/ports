@@ -679,6 +679,7 @@
     SUBDIR += libg15
     SUBDIR += libg15render
     SUBDIR += libieee1284
+    SUBDIR += libmbus
     SUBDIR += libptytty
     SUBDIR += libsunacl
     SUBDIR += libsysstat

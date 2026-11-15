@@ -1660,6 +1660,7 @@
     SUBDIR += py-pystemmer
     SUBDIR += py-python-augeas
     SUBDIR += py-python-bidi
+    SUBDIR += py-python-calamine
     SUBDIR += py-python-docs-theme
     SUBDIR += py-python-docx
     SUBDIR += py-python-frontmatter
@@ -1956,6 +1957,7 @@
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
     SUBDIR += rubygem-cucumber-gherkin39
+    SUBDIR += rubygem-cucumber-gherkin42
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-cucumber-html-formatter22
     SUBDIR += rubygem-cucumber-html-formatter23

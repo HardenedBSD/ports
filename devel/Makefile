@@ -5869,6 +5869,7 @@
     SUBDIR += py-pyairtable2
     SUBDIR += py-pyaml-env
     SUBDIR += py-pyasn1
+    SUBDIR += py-pyasn1-alt-modules
     SUBDIR += py-pyasn1-modules
     SUBDIR += py-pybase64
     SUBDIR += py-pybind11
@@ -7614,6 +7615,7 @@
     SUBDIR += rubygem-cucumber-cucumber-expressions19
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-messages32
+    SUBDIR += rubygem-cucumber-messages34
     SUBDIR += rubygem-cucumber-query
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
@@ -7905,6 +7907,7 @@
     SUBDIR += rubygem-hashie
     SUBDIR += rubygem-hashie-forbidden_attributes
     SUBDIR += rubygem-hashie-gitlab
+    SUBDIR += rubygem-hashie5
     SUBDIR += rubygem-health_check
     SUBDIR += rubygem-health_check-rails-gitlab
     SUBDIR += rubygem-health_check-rails70

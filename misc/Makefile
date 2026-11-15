@@ -461,6 +461,7 @@
     SUBDIR += py-analysis-framework-base
     SUBDIR += py-anthropic
     SUBDIR += py-apache-beam
+    SUBDIR += py-apache-tvm-ffi
     SUBDIR += py-ascii-magic
     SUBDIR += py-ast-comments
     SUBDIR += py-autogen
@@ -473,6 +474,7 @@
     SUBDIR += py-cmap
     SUBDIR += py-codecarbon
     SUBDIR += py-cohere
+    SUBDIR += py-cohere-melody
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
     SUBDIR += py-colorzero

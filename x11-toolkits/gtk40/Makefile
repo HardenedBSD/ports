@@ -5,6 +5,9 @@ MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	4
 DIST_SUBDIR=	gnome
 
+PATCH_SITES=	https://gitlab.gnome.org/GNOME/gtk/-/commit/
+PATCHFILES=	047c8e64d4156897776ec2bc3d0613a81cfe7ad1.patch:-p1
+
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
 WWW=		https://www.gtk.org/
@@ -62,7 +65,7 @@ VULKAN_DESC=		GDK Vulkan renderer backend
 WAYLAND_DESC=		GDK Wayland backend
 X11_DESC=		GDK X11 backend
 
-ACCESSKIT_LIB_DEPENDS=	libaccesskit-c-0.17.so:accessibility/accesskit-c
+ACCESSKIT_LIB_DEPENDS=	libaccesskit-c-0.18.so:accessibility/accesskit-c
 ACCESSKIT_MESON_ENABLED=	accesskit
 
 BASH_BUILD_DEPENDS=	${LOCALBASE}/bin/bash:shells/bash \

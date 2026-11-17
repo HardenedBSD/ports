@@ -1,3 +1,92 @@
+  <vuln vid="297e3635-e276-11f1-8135-8447094a420f">
+    <topic>OpenSSL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>3.5.10,1</lt></range>
+      </package>
+      <package>
+	<name>openssl30</name>
+	<range><lt>3.0.24</lt></range>
+      </package>
+      <package>
+	<name>openssl34</name>
+	<range><lt>3.4.8_2</lt></range>
+      </package>
+      <package>
+	<name>openssl36</name>
+	<range><lt>3.6.6</lt></range>
+      </package>
+      <package>
+	<name>openssl40</name>
+	<range><lt>4.0.4</lt></range>
+      </package>
+      <package>
+	<name>openssl41</name>
+	<range><lt>4.1.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://openssl-library.org/news/secadv/20261117.txt">
+	  <ul><li>Out-of-Bounds Read in TLS 1.3 Key-Share Processing with Suite B Certificate Flag (CVE-2026-35190) (Low)</li>
+	  <li>Use-After-Free in PEM_X509_INFO_read_bio_ex() When Appending to a Caller-Supplied Stack Fails (CVE-2026-107493) (Low)</li>
+	  <li>Unbounded Memory Retention in QUIC Server for Rejected Streams (CVE-2026-124709) (Low)</li></ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-35190</cvename>
+      <cvename>CVE-2026-107493</cvename>
+      <cvename>CVE-2026-124709</cvename>
+      <url>https://openssl-library.org/news/secadv/20261117.txt</url>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="142f0839-e259-11f1-ab7d-10ffe07f9334">
+    <topic>mailpit -- Unauthenticated SMTP message crashes Mailpit</topic>
+    <affects>
+      <package>
+	<name>mailpit</name>
+	<range>
+	  <ge>1.33.1</ge>
+	  <lt>1.34.0</lt>
+	</range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mailpit author  reports:</p>
+	<blockquote cite="https://github.com/axllent/mailpit/security/advisories/GHSA-v887-64wg-qqc9">
+	  <p>internal/mimeparser/mimeparser.go:40 writes decoded
+	  RFC 2231 parameters into the map returned by enmime's
+	  tolerant mediatype.Parse. That parser can legally return
+	  a nil map with a nil error, and ParseMediaType only checks
+	  the error, not params == nil. A message part whose
+	  Content-Type media type is a single non-ASCII whitespace
+	  character (U+00A0) and that carries an extended parameter
+	  such as a*=iso-8859-1''%E9 reaches the loop, the assignment
+	  panics, and the panic runs inside the per-connection SMTP
+	  goroutine, which has no recover.  One anonymous SMTP
+	  message kills the whole process: SMTP, web UI and REST
+	  API together.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/axllent/mailpit/security/advisories/GHSA-v887-64wg-qqc9</url>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-17</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="05eaad8b-e202-11f1-85bb-1c697a616631">
     <topic>Emacs -- Arbitrary code execution via .dir-locals.el</topic>
     <affects>

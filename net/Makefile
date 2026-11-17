@@ -1754,6 +1754,7 @@
     SUBDIR += wping
     SUBDIR += wstunnel
     SUBDIR += wutil
+    SUBDIR += x-cli
     SUBDIR += x11vnc
     SUBDIR += x2goclient
     SUBDIR += x2goclient-cli

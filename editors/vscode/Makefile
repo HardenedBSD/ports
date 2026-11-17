@@ -101,10 +101,8 @@ MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
 TEST_ENV=	${MAKE_ENV:C/TMPDIR=.*//} \
 		VSCODE_SKIP_PRELAUNCH=1
 
-<<<<<<< HEAD
 USE_HARDENING=	relro:off
 
-=======
 CFLAGS+=	-Wno-error=implicit-function-declaration
 
 DATADIR=	${PREFIX}/share/code-oss
@@ -118,7 +116,6 @@ NPM_FETCH_CMD=		${NPM_CMDNAME} install
 NPM_FETCH_FLAGS+=	--os freebsd \
 			--os linux
 MAKE_ENV+=		pnpm_config_store_dir=${WRKDIR}/node-modules-cache/${NPM_MODULE_CACHE}
->>>>>>> rad/freebsd/main
 UPSTREAM_ELECTRON_VER=	${ELECTRON_VER}
 
 .include "Makefile.version"

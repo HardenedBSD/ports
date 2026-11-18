@@ -625,6 +625,7 @@
     SUBDIR += onionshare-cli
     SUBDIR += onlyoffice-documentserver
     SUBDIR += opencart
+    SUBDIR += opencloud
     SUBDIR += openemr
     SUBDIR += opengist
     SUBDIR += openresty

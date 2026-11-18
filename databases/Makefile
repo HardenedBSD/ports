@@ -846,6 +846,7 @@
     SUBDIR += py-marshmallow-sqlalchemy
     SUBDIR += py-minidb
     SUBDIR += py-mongoengine
+    SUBDIR += py-mongomock
     SUBDIR += py-motor
     SUBDIR += py-mycli
     SUBDIR += py-mysql-connector-python

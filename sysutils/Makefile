@@ -65,6 +65,7 @@
     SUBDIR += async
     SUBDIR += atf-fvp
     SUBDIR += atf-master
+    SUBDIR += atf-mt7986
     SUBDIR += atf-rk3328
     SUBDIR += atf-rk3399
     SUBDIR += atf-sun50i_a64
@@ -416,6 +417,7 @@
     SUBDIR += filetype
     SUBDIR += filewatcherd
     SUBDIR += finfo
+    SUBDIR += fiptool
     SUBDIR += firstboot-cloudsetup
     SUBDIR += firstboot-freebsd-update
     SUBDIR += firstboot-pkg-upgrade
@@ -1147,6 +1149,7 @@
     SUBDIR += py-leviathan
     SUBDIR += py-liquidctl
     SUBDIR += py-magika
+    SUBDIR += py-midcli
     SUBDIR += py-mitogen
     SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
@@ -1188,6 +1191,7 @@
     SUBDIR += py-tarsnapper
     SUBDIR += py-tldr
     SUBDIR += py-tmuxp
+    SUBDIR += py-truenas-api-client
     SUBDIR += py-uptime
     SUBDIR += py-zfsstat
     SUBDIR += qchroot
@@ -1544,6 +1548,8 @@
     SUBDIR += u-boot-a64-olinuxino
     SUBDIR += u-boot-bananapi
     SUBDIR += u-boot-bananapi-r2-pro
+    SUBDIR += u-boot-bananapi-r3
+    SUBDIR += u-boot-bananapi-r3-emmc
     SUBDIR += u-boot-bananapim2
     SUBDIR += u-boot-beaglebone
     SUBDIR += u-boot-bhyve-arm64

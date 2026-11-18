@@ -4941,6 +4941,7 @@
     SUBDIR += py-cymbal
     SUBDIR += py-cymem
     SUBDIR += py-cysignals
+    SUBDIR += py-cython-cmake
     SUBDIR += py-cython-test-exception-raiser
     SUBDIR += py-cytoolz
     SUBDIR += py-d2to1
@@ -5005,6 +5006,7 @@
     SUBDIR += py-dirspec
     SUBDIR += py-dirty-equals
     SUBDIR += py-diskcache
+    SUBDIR += py-diskcache-community
     SUBDIR += py-distlib
     SUBDIR += py-distributed
     SUBDIR += py-dj60-django-rq
@@ -5657,6 +5659,7 @@
     SUBDIR += py-opentelemetry-sdk
     SUBDIR += py-opentelemetry-semantic-conventions
     SUBDIR += py-opentelemetry-semantic-conventions-ai
+    SUBDIR += py-opentelemetry-test-utils
     SUBDIR += py-opentelemetry-util-http
     SUBDIR += py-opentracing
     SUBDIR += py-openupgradelib
@@ -9031,6 +9034,9 @@
     SUBDIR += wizardkit
     SUBDIR += wizer
     SUBDIR += woff2
+    SUBDIR += woodpecker
+    SUBDIR += woodpecker-agent
+    SUBDIR += woodpecker-plugin-git
     SUBDIR += wxformbuilder
     SUBDIR += xa65
     SUBDIR += xbyak

@@ -569,6 +569,7 @@
     SUBDIR += py-langgraph
     SUBDIR += py-langgraph-checkpoint
     SUBDIR += py-langgraph-checkpoint-conformance
+    SUBDIR += py-langgraph-checkpoint-postgres
     SUBDIR += py-langgraph-checkpoint-sqlite
     SUBDIR += py-langgraph-prebuilt
     SUBDIR += py-langgraph-sdk
@@ -609,6 +610,7 @@
     SUBDIR += py-modelscope
     SUBDIR += py-modelscope-hub
     SUBDIR += py-molequeue
+    SUBDIR += py-mslk
     SUBDIR += py-napari
     SUBDIR += py-napari-resources
     SUBDIR += py-napari-svg

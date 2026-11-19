@@ -1,5 +1,5 @@
 PORTNAME=	monit
-DISTVERSION=	6.0.0
+DISTVERSION=	6.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://mmonit.com/monit/dist/
 
@@ -22,6 +22,7 @@ SUB_FILES=	pkg-message
 
 PLIST_FILES=	bin/monit \
 		etc/monitrc.sample \
+		share/bash-completion/completions/monit.bash \
 		share/man/man1/monit.1.gz
 
 PORTDOCS=	CHANGES COPYING

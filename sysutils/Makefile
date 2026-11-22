@@ -1318,6 +1318,7 @@
     SUBDIR += rubygem-ohai-gitlab
     SUBDIR += rubygem-ohai18
     SUBDIR += rubygem-openbolt
+    SUBDIR += rubygem-openbolt9
     SUBDIR += rubygem-openfact
     SUBDIR += rubygem-openvoxserver-ca
     SUBDIR += rubygem-parallel

@@ -1,5 +1,6 @@
 PORTNAME=	joomla
 DISTVERSION=	6-1-2
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://downloads.joomla.org/cms/joomla6/${DISTVERSION}/
 PKGNAMESUFFIX=	6
@@ -13,7 +14,7 @@ LICENSE=	GPLv2
 
 USES=		cpe php:web shebangfix zip
 CPE_VENDOR=	${PORTNAME}
-CPE_PRODUCT=	${PORTNAME}\!
+CPE_PRODUCT=	${PORTNAME}!
 
 CONFLICTS_INSTALL=	joomla4 joomla5
 

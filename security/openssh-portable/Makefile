@@ -1,6 +1,6 @@
 PORTNAME=	openssh
 DISTVERSION=	10.6p2
-PORTREVISION=	0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	security
 MASTER_SITES=	OPENBSD/OpenSSH/portable
@@ -31,6 +31,8 @@ USE_HARDENING=		zeroreg
 ETCOLD=			${PREFIX}/etc
 
 CPE_VENDOR=		openbsd
+CPE_VERSION=		${DISTVERSION:C/p[0-9]+$//}
+CPE_UPDATE=		${DISTVERSION:C/^[0-9.]+//}
 
 FLAVORS=			default hpn gssapi
 default_CONFLICTS_INSTALL=	openssh-portable-hpn openssh-portable-gssapi \

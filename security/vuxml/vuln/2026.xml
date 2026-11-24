@@ -1,3 +1,155 @@
+  <vuln vid="8c970d0a-e7ef-11f1-b097-3c7c3fba4204">
+    <topic>py-py7zr -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>py311-py7zr</name>
+	  <name>py312-py7zr</name>
+	  <name>py313-py7zr</name>
+	  <name>py313t-py7zr</name>
+	  <name>py314-py7zr</name>
+	  <name>py314t-py7zr</name>
+	  <name>py315-py7zr</name>
+	  <range><lt>1.1.4</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Py7zr Project reports:</p>
+	<blockquote cite="https://py7zr.readthedocs.io/en/v1.1.4/Changelog.html">
+	  <ul>
+	    <li>CVE-2026-23879: Arbitrary File Write Vulnerability in py7zr (high severity).</li>
+	    <li>CVE-2026-55206: O(n^2) algorithmic complexity DoS in PackInfo._read() in py7zr.</li>
+	    <li>CVE-2026-55195: Decompression bomb (zip bomb) denial of service via unchecked extraction size.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-23879</cvename>
+      <cvename>CVE-2026-55206</cvename>
+      <cvename>CVE-2026-55195</cvename>
+      <url>https://py7zr.readthedocs.io/en/v1.1.4/Changelog.html</url>
+      <url>https://www.cve.org/CVERecord?id=CVE-2026-23879</url>
+      <url>https://www.cve.org/CVERecord?id=CVE-2026-55206</url>
+      <url>https://www.cve.org/CVERecord?id=CVE-2026-55195</url>
+    </references>
+    <dates>
+      <discovery>2026-10-13</discovery>
+      <entry>2026-11-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="17f4929d-e7e8-11f1-b58b-8447094a420f">
+    <topic>mod_perl -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>ap24-mod_perl</name>
+	<range><lt>2.0.14,3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache mod_perl project reports:</p>
+	<blockquote cite="https://lists.apache.org/thread.html/rlkm5t9fd8z81w9o4c4srn6mx3tsg3w9">
+	  <ul><li>CVE-2026-116799: Apache Perl: OOB read</li>
+	  <li>CVE-2026-116772: Apache Perl: OOB read</li>
+	  <li>CVE-2026-116043: Apache Perl: NULL-pointer dereference</li>
+	  <li>CVE-2026-116032: Apache Perl: Stack buffer overflow</li>
+	  <li>CVE-2026-116005: Apache Perl: Fixed-size stack buffer overflow</li></ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-116799</cvename>
+      <cvename>CVE-2026-116772</cvename>
+      <cvename>CVE-2026-116043</cvename>
+      <cvename>CVE-2026-116032</cvename>
+      <cvename>CVE-2026-116005</cvename>
+      <url>https://lists.apache.org/thread.html/rlkm5t9fd8z81w9o4c4srn6mx3tsg3w9</url>
+      <url>https://lists.apache.org/thread.html/3dwhhrhb2dgf0cv04kohkxbwrzdv7xf5</url>
+      <url>https://lists.apache.org/thread.html/vxwygm9hzt1hodz7pt73lvbmrwxl16z7</url>
+      <url>https://lists.apache.org/thread.html/zkbvtt0y3tz04qhrbdhdvn4jttptxsvj</url>
+      <url>https://lists.apache.org/thread.html/r4z6cylvypbv2tc4ty4h964poyfj14g8</url>
+    </references>
+    <dates>
+      <discovery>2026-11-23</discovery>
+      <entry>2026-11-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cee7773d-e7dd-11f1-9b74-3497f65b111b">
+    <topic>nginx -- excessive CPU usage with TLS 1.3 early data</topic>
+    <affects>
+      <package>
+       <name>nginx</name>
+       <name>nginx-full</name>
+       <name>nginx-lite</name>
+       <name>nginx-naxsi</name>
+       <range><lt>1.30.8,3</lt></range>
+      </package>
+      <package>
+       <name>nginx-devel</name>
+       <range><lt>1.31.10</lt></range>
+      </package>
+      <package>
+       <name>freenginx</name>
+       <range><lt>1.30.2_14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>The nginx developers report:</p>
+       <blockquote cite="https://nginx.org/en/security_advisories.html">
+       <p>
+       When using the "ssl_early_data" directive, a client might cause
+       excessive CPU usage (CVE-2026-132779).
+       </p>
+       </blockquote>
+       <p>
+       freenginx shares the affected code; the port carries the fix.
+       </p>
+     </body>
+    </description>
+    <references>
+      <url>https://nginx.org/en/security_advisories.html</url>
+      <cvename>CVE-2026-132779</cvename>
+    </references>
+    <dates>
+      <discovery>2026-11-23</discovery>
+      <entry>2026-11-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b0aa74b4-e7d8-11f1-b097-3c7c3fba4204">
+    <topic>OpenEXR -- 3.4.19 fixes two vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>openexr</name>
+	  <range><lt>3.4.19</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cary Phillips reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.19">
+	  <ul>
+	    <li>CVE Pending (GHSA-HJW7-CQX6-RWQ5): Integer overflow in CompositeDeepScanLine pixel index causes heap out-of-bounds access.</li>
+	    <li>CVE Pending (GHSA-HRP4-XJP5-CQ7J): Misaligned pointer store in ht_undo_impl() (HTJ2K decode, internal_ht.cpp).</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.19</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-HJW7-CQX6-RWQ5</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-HRP4-XJP5-CQ7J</url>
+    </references>
+    <dates>
+      <discovery>2026-11-22</discovery>
+      <entry>2026-11-24</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="cb0b8278-b308-4b8d-82b3-4e8235a7aaa2">
     <topic>ruby -- heap-based buffer overflow</topic>
     <affects>

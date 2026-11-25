@@ -1,10 +1,9 @@
 PORTNAME=	harica
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.12.2
-PORTREVISION=	3
+DISTVERSION=	1.13.0
 CATEGORIES=	net-mgmt
 
-MAINTAINER=	zarychtam@plan-b.pwste.edu.pl
+MAINTAINER=	mzar@freebsd.org
 COMMENT=	Go client for the HARICA API
 WWW=		https://github.com/hm-edu/harica
 

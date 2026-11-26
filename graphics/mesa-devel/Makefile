@@ -1,7 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	26.3-branchpoint-2662
-DISTVERSIONSUFFIX=	-g48776e71f59
-PORTREVISION=	1
+DISTVERSION=	26.3-branchpoint-2980
+DISTVERSIONSUFFIX=	-g66e82ef1f61
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -35,6 +34,7 @@ BINARY_ALIAS=	python=${PYTHON_CMD}
 SHEBANG_FILES=	src/vulkan/*/*control.py
 MESON_DISABLED=	android-libbacktrace gallium-mediafoundation \
 		libunwind lmsensors microsoft-clc valgrind
+MESON_FALSE=	panfrost-rust # no Valhall in kernel
 MESON_TRUE=	unversion-libgallium
 MESON_ARGS=	-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} -Dvideo-codecs=all
 LDFLAGS+=	-Wl,--undefined-version # https://gitlab.freedesktop.org/mesa/mesa/-/issues/8003

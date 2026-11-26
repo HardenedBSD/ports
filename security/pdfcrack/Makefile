@@ -10,7 +10,13 @@ WWW=		https://sourceforge.net/projects/pdfcrack/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
+=======
+USES=		cpe
+
+CPE_VENDOR=	pdfcrack_project
+>>>>>>> rad/freebsd/main
 
 ALL_TARGET=	pdfcrack pdfreader
 PLIST_FILES=	bin/pdfcrack bin/pdfreader share/man/man1/pdfcrack.1.gz

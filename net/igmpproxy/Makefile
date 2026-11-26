@@ -11,13 +11,19 @@ WWW=		https://github.com/pali/igmpproxy
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 USES=		autoreconf
+=======
+USES=		autoreconf cpe
+>>>>>>> rad/freebsd/main
 USE_GITHUB=	yes
 GH_ACCOUNT=	pali
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=	igmpproxy
+
+CPE_VENDOR=	pali
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/igmpproxy.conf \

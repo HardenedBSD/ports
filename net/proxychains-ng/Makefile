@@ -11,11 +11,17 @@ WWW=		https://github.com/rofl0r/proxychains-ng
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 USES=		gmake tar:xz
+=======
+USES=		cpe gmake tar:xz
+>>>>>>> rad/freebsd/main
 USE_LDCONFIG=	yes
 HAS_CONFIGURE=	yes
+
+CPE_VENDOR=	proxychains-ng_project
 
 CONFLICTS=	proxychains
 

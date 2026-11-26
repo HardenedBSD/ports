@@ -8,13 +8,9 @@ WWW=		https://www.chocolate-doom.org/
 
 LICENSE=	GPLv2
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
-USES=		autoreconf gmake pkgconfig python:build sdl
-=======
 USES=		autoreconf cpe gmake pkgconfig python:build sdl
->>>>>>> rad/freebsd/main
 USE_GITHUB=	yes
 GH_TAGNAME=	${PORTNAME}-${DISTVERSION}
 USE_RC_SUBR=	chocolate-server

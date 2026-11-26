@@ -17,13 +17,9 @@ IGNORE_i386=	It builds, but cannot be used to build other ports
 
 BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx@${PY_FLAVOR}
 
-<<<<<<< HEAD
 USE_HARDENING=	retpoline:off
-USES=		ada:run python:build
-USE_GCC=	yes
-=======
+
 USES=		ada:run cpe python:build
->>>>>>> rad/freebsd/main
 USE_BINUTILS=	yes
 CPE_VENDOR=	adacore
 CPE_PRODUCT=	gpr_build

@@ -21,12 +21,10 @@ BUILD_DEPENDS=	as:devel/binutils
 USES=		cpe gmake compiler:c++14-lang
 USE_RC_SUBR=	zerotier
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
-=======
+
 CPE_VENDOR=	${PORTNAME:tl}
 CPE_PRODUCT=	zerotierone
->>>>>>> rad/freebsd/main
 
 USE_GITHUB=	yes
 GH_PROJECT=	ZeroTierOne

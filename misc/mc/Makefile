@@ -23,12 +23,10 @@ USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ZIP=${LOCALBASE}/bin/zip UNZIP=${UNZIP_NATIVE_CMD}
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
-=======
+
 CPE_VENDOR=	midnight-commander
 CPE_PRODUCT=	midnight_commander
->>>>>>> rad/freebsd/main
 
 CONFLICTS_INSTALL=	${PORTNAME}6
 

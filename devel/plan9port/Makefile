@@ -19,11 +19,9 @@ USES=		compiler:c11 cpe localbase:ldflags perl5 shebangfix xorg
 USE_PERL5=	build
 USE_XORG=	x11 xext xt
 
-<<<<<<< HEAD
 USE_HARDENING=	pie:off
-=======
+
 CPE_VENDOR=	9fans
->>>>>>> rad/freebsd/main
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	9fans

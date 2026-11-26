@@ -22,7 +22,6 @@ LIB_DEPENDS=	libargon2.so:security/libargon2 \
 		libbotan-3.so:security/botan3 \
 		libqrencode.so:graphics/libqrencode
 
-<<<<<<< HEAD
 USE_HARDENING=	safestack
 
 PAGEEXEC_DISABLE=	bin/keepassxc
@@ -32,10 +31,7 @@ FLAVORS=	default lite
 FLAVOR?=	${FLAVORS:[1]}
 lite_PKGNAMESUFFIX=	-lite
 
-USES=		cmake compiler:c++17-lang desktop-file-utils minizip \
-=======
 USES=		cmake compiler:c++17-lang cpe desktop-file-utils minizip \
->>>>>>> rad/freebsd/main
 		pkgconfig qt:5 readline shared-mime-info tar:xz xorg
 
 USE_QT=		concurrent core dbus gui network svg wayland widgets x11extras \

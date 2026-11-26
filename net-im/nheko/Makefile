@@ -38,11 +38,9 @@ GH_TUPLE=	hoytech:lmdbxx:029fb681213af3020f5e3a86045445552bd024c5:lmdb/deps/lmdb
 USE_QT=		base declarative multimedia svg \
 		tools:build translations:build
 
-<<<<<<< HEAD
 MPROTECT_DISABLE=	bin/nheko
-=======
+
 CPE_VENDOR=	nheko-reborn
->>>>>>> rad/freebsd/main
 
 # There is one external dependency: lmdb++
 #  - lmdb++ is a single header file, it just needs to be included

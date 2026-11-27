@@ -1218,6 +1218,7 @@
     SUBDIR += rubygem-googleauth
     SUBDIR += rubygem-googleauth-gitlab
     SUBDIR += rubygem-gpgme
+    SUBDIR += rubygem-gpgme-gitlab
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
     SUBDIR += rubygem-haiti-hash

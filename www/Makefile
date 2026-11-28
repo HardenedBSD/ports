@@ -544,6 +544,7 @@
     SUBDIR += nginx-module-ajp
     SUBDIR += nginx-module-array-var
     SUBDIR += nginx-module-auth-digest
+    SUBDIR += nginx-module-auth-jwt
     SUBDIR += nginx-module-auth-krb5
     SUBDIR += nginx-module-auth-ldap
     SUBDIR += nginx-module-auth-pam
@@ -575,6 +576,8 @@
     SUBDIR += nginx-module-memc
     SUBDIR += nginx-module-modsecurity3
     SUBDIR += nginx-module-mogilefs
+    SUBDIR += nginx-module-naxsi
+    SUBDIR += nginx-module-nchan
     SUBDIR += nginx-module-ndk
     SUBDIR += nginx-module-njs
     SUBDIR += nginx-module-otel

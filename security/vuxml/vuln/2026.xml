@@ -1,3 +1,217 @@
+  <vuln vid="2591b0d4-e9f1-11f1-a071-a0369ff35ee6">
+    <topic>PowerDNS Authoritative Server -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>powerdns</name>
+	<range><lt>4.9.19</lt></range>
+	<range><ge>5.0.0</ge><lt>5.0.9</lt></range>
+	<range><ge>5.1.0</ge><lt>5.1.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS reports (Security Advisory 2026-14):</p>
+	<blockquote cite="https://doc.powerdns.com/authoritative/security-advisories/powerdns-advisory-2026-14.html">
+	  <p>Fixed in PowerDNS Authoritative Server 4.9.19, 5.0.9 and 5.1.6
+	    (5.1.6 was not released publicly; 5.1.7 is identical).</p>
+	  <ul>
+	    <li>CVE-2026-123756: Insufficient input validation of internal
+	      webserver (Low). Affects up to and including 4.9.18, 5.0.8
+	      and 5.1.5.</li>
+	    <li>CVE-2026-123757: Incomplete domain name sanitization during
+	      Bind autosecondary zone transfer (Low). Affects up to and
+	      including 4.9.18, 5.0.8 and 5.1.5.</li>
+	    <li>CVE-2026-123758: Race condition in forward notification
+	      handling (High). Affects up to and including 4.9.18, 5.0.8
+	      and 5.1.5.</li>
+	    <li>CVE-2026-123759: Catalog zones incorrectly accept the root
+	      zone as a member (High). Affects 4.7.0 up to and including
+	      4.9.18, 5.0.8 and 5.1.5.</li>
+	    <li>CVE-2026-123760: Logic flaw in LMDB backend can lead to an
+	      unresponsive server (High). Affects 5.1.0 to 5.1.5.</li>
+	    <li>CVE-2026-123761: Multiple defects in Views processing
+	      (High). Affects 5.x up to and including 5.0.8 and 5.1.5.</li>
+	    <li>CVE-2026-123762: Catalog zone update operation may misbehave
+	      in multi-backend configurations (High). Affects 4.7.0 up to
+	      and including 4.9.18, 5.0.8 and 5.1.5.</li>
+	    <li>CVE-2026-123764: Injection vulnerabilities in Bind backend
+	      (High). Affects up to and including 4.9.18, 5.0.8 and
+	      5.1.5.</li>
+	    <li>CVE-2026-124727: AXFR of obsolete record types can corrupt
+	      zones in the Bind backend (Medium). Affects up to and including
+	      4.9.18, 5.0.8 and 5.1.5.</li>
+	    <li>CVE-2026-124728: TSIG operation logic flaws (High). Affects
+	      up to and including 4.9.18, 5.0.8 and 5.1.5.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-123756</cvename>
+      <cvename>CVE-2026-123757</cvename>
+      <cvename>CVE-2026-123758</cvename>
+      <cvename>CVE-2026-123759</cvename>
+      <cvename>CVE-2026-123760</cvename>
+      <cvename>CVE-2026-123761</cvename>
+      <cvename>CVE-2026-123762</cvename>
+      <cvename>CVE-2026-123764</cvename>
+      <cvename>CVE-2026-124727</cvename>
+      <cvename>CVE-2026-124728</cvename>
+      <url>https://doc.powerdns.com/authoritative/security-advisories/powerdns-advisory-2026-14.html</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123756</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123757</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123758</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123759</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123760</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123761</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123762</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123764</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-124727</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-124728</url>
+    </references>
+    <dates>
+      <discovery>2026-04-11</discovery>
+      <entry>2026-11-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="dff8fa28-e9eb-11f1-a071-a0369ff35ee6">
+    <topic>DNSdist -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>dnsdist</name>
+	<range><lt>2.1.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS Security Advisory 2026-15 reports for DNSdist:</p>
+	<blockquote cite="https://dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2026-15.html">
+	  <p>Affects: PowerDNS DNSdist up to and including 2.1.3 and 2.0.11.<br/>
+	     Not affected: PowerDNS DNSdist 2.1.4, 2.0.12.</p>
+	  <ul>
+	    <li>CVE-2026-85561: Wrong remote DoH client IP passed to proxy-protocol-enabled backend (Low)</li>
+	    <li>CVE-2026-85562: Duplicate X-Forwarded-For DNS over HTTPS headers are not properly handled (Medium)</li>
+	    <li>CVE-2026-85563: HTTP body should not be processed on DNS over HTTPS GET queries (Low)</li>
+	    <li>CVE-2026-85564: Finished QUIC streams should not linger around (Low)</li>
+	    <li>CVE-2026-85565: Denial of service via oversized DoH query (Low)</li>
+	    <li>CVE-2026-85566: EDNS option or DNS record smuggling (Medium)</li>
+	    <li>CVE-2026-85567: Empty API key should disable the API (Low)</li>
+	    <li>CVE-2026-123755: Crafted zone transfer can freeze an outgoing TCP connection (Low)</li>
+	    <li>CVE-2026-123756: Insufficient input validation of internal webserver (Low)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-85561</cvename>
+      <cvename>CVE-2026-85562</cvename>
+      <cvename>CVE-2026-85563</cvename>
+      <cvename>CVE-2026-85564</cvename>
+      <cvename>CVE-2026-85565</cvename>
+      <cvename>CVE-2026-85566</cvename>
+      <cvename>CVE-2026-85567</cvename>
+      <cvename>CVE-2026-123755</cvename>
+      <cvename>CVE-2026-123756</cvename>
+      <url>https://dnsdist.org/security-advisories/powerdns-advisory-for-dnsdist-2026-15.html</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-85561</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-85562</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-85563</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-85564</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-85565</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-85566</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-85567</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123755</url>
+      <url>https://nvd.nist.gov/vuln/detail/cve-2026-123756</url>
+    </references>
+    <dates>
+      <discovery>2026-09-04</discovery>
+      <entry>2026-11-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2090e695-eb15-11f1-9e78-04421a04139e">
+    <topic>librelp -- GnuTLS "certvalid" authentication mode accepts any certificate</topic>
+      <affects>
+	<package>
+	  <name>librelp</name>
+	  <range><ge>1.2.18</ge><lt>1.14.0</lt></range>
+	</package>
+      </affects>
+      <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	  <p>The librelp project reports:</p>
+	  <blockquote cite="https://github.com/rsyslog/librelp/security/advisories/GHSA-28c2-q5pf-2qm3">
+	    <p>When librelp is built with GnuTLS and a RELP connection
+	    uses TLS with the authentication mode <code>certvalid</code>,
+	    the peer certificate is not validated at all.  Any
+	    certificate is accepted, including self-signed certificates
+	    and certificates from an unrelated CA.  On a RELP server
+	    (e.g. rsyslog <code>imrelp</code>) any host that can reach
+	    the listener can inject log messages that appear to come
+	    from a trusted sender.  On a RELP client (e.g. rsyslog
+	    <code>omrelp</code>) an attacker who can intercept the
+	    connection can pose as the log server and receive the
+	    forwarded logs.</p>
+	    <p>Configurations using the <code>fingerprint</code> or
+	    <code>name</code> authentication modes, no TLS, or the
+	    OpenSSL driver are not affected.</p>
+	  </blockquote>
+	</body>
+      </description>
+      <references>
+	<cvename>CVE-2026-132888</cvename>
+	<url>https://github.com/rsyslog/librelp/security/advisories/GHSA-28c2-q5pf-2qm3</url>
+	<url>https://github.com/rsyslog/librelp/releases/tag/v1.14.0</url>
+      </references>
+      <dates>
+	<discovery>2026-11-26</discovery>
+	<entry>2026-11-28</entry>
+      </dates>
+  </vuln>
+
+  <vuln vid="495b04ca-e96e-11f1-9ff2-6ab7a97fec4b">
+    <topic>Stalwart -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>stalwart</name>
+	<range><lt>1.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Stalwart Labs reports:</p>
+	<blockquote cite="https://github.com/stalwartlabs/stalwart/blob/v1.2.1/CHANGELOG.md">
+	  <ul>
+	    <li>Mailbox names and other strings containing CR or LF
+	    are sent as literals, so a shared mailbox name can no
+	    longer inject response lines into another user's
+	    session.</li>
+	    <li><code>x:AppPassword/set</code> and
+	    <code>x:ApiKey/set</code> only update or delete
+	    credentials of their own type, so an app password or API
+	    key can no longer change the account password or remove
+	    its TOTP.</li>
+	    <li>S/MIME key harvesting limits the nesting of the signed
+	    content, so a crafted signed message can no longer crash
+	    the server with a stack overflow.</li>
+	    <li><code>Mailbox/set</code> requires the share right for
+	    pointer patches into <code>shareWith</code>, so a sharee
+	    without <code>mayShare</code> can no longer change a
+	    mailbox's permissions.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/stalwartlabs/stalwart/blob/v1.2.1/CHANGELOG.md</url>
+    </references>
+    <dates>
+      <discovery>2026-11-25</discovery>
+      <entry>2026-11-26</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="f031c396-ea45-11f1-b58b-8447094a420f">
     <topic>WeeChat -- Multiple vulnerabilities</topic>
     <affects>
@@ -9552,7 +9766,8 @@ privileges.</p>
     <affects>
       <package>
 	<name>powerdns-recursor</name>
-	<range><lt>5.4.8</lt></range>
+	<range><lt>5.3.12</lt></range>
+	<range><ge>5.4.0</ge><lt>5.4.8</lt></range>
       </package>
     </affects>
     <description>
@@ -9582,8 +9797,9 @@ privileges.</p>
       <url>https://doc.powerdns.com/recursor/security-advisories/powerdns-advisory-2026-12.html</url>
     </references>
     <dates>
-      <discovery>2026-10-21</discovery>
+      <discovery>2026-07-10</discovery>
       <entry>2026-10-21</entry>
+      <modified>2026-11-28</modified>
     </dates>
   </vuln>
 

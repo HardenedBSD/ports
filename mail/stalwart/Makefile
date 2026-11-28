@@ -1,17 +1,23 @@
 PORTNAME=	stalwart
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.0
+DISTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	mail
 
 MAINTAINER=	jsi@jules.de
 COMMENT=	Stalwart Mail Server
 WWW=		https://stalw.art/
 
+# The source distfile always contains code under the Stalwart Enterprise
+# License, which does not permit redistribution, so it must not be mirrored.
+# Without ENTERPRISE that code is stripped before the build (see
+# post-patch-ENTERPRISE-off), so the package may be.
 LICENSE=		AGPLv3 SELv2
 LICENSE_COMB=		multi
 LICENSE_NAME_SELv2=	Stalwart Enterprise License 2.0
 LICENSE_FILE_AGPLv3=	${WRKSRC}/LICENSES/AGPL-3.0-only.txt
 LICENSE_FILE_SELv2=	${WRKSRC}/LICENSES/LicenseRef-SEL.txt
+LICENSE_DISTFILES_SELv2=	${DISTNAME}${EXTRACT_SUFX}
 LICENSE_PERMS_SELv2=	pkg-mirror auto-accept
 
 BROKEN_i386=	rustc-LLVM ERROR: out of memory
@@ -25,6 +31,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	stalwartlabs
 USE_RC_SUBR=	stalwart
 
+SUB_FILES=	pkg-message
 SUB_LIST=	USERS=${USERS} \
 		GROUPS=${GROUPS}
 
@@ -42,6 +49,7 @@ OPTIONS_EXCLUDE_powerpc=	ROCKSDB
 OPTIONS_EXCLUDE_armv6=	ROCKSDB
 OPTIONS_EXCLUDE_armv7=	ROCKSDB
 OPTIONS_EXCLUDE_i386=	ROCKSDB
+OPTIONS_SUB=		yes
 
 BACKENDS_DESC=		Database and storage backends
 AZURE_DESC=		Enable Azure storage backend
@@ -56,7 +64,9 @@ S3_DESC=		Enable S3 storage backend
 SQLITE_DESC=		Enable SQLite backend
 
 AZURE_VARS=		CARGO_FEATURES+=azure
-ENTERPRISE_VARS=	CARGO_FEATURES+=enterprise
+ENTERPRISE_USES_OFF=	python:patch,env
+ENTERPRISE_VARS=	CARGO_FEATURES+=enterprise \
+			LICENSE_PERMS_SELv2=none
 EXCHANGE_VARS=		CARGO_FEATURES+=exchange
 KEEP_VARS=		CARGO_FEATURES+=keep
 MYSQL_VARS=		CARGO_FEATURES+=mysql
@@ -78,6 +88,12 @@ GROUPS=	stalwart
 post-patch:
 	@${MKDIR} ${WRKSRC_crate_librocksdb-sys}/librocksdb-sys/rocksdb
 	@${TOUCH} ${WRKSRC_crate_librocksdb-sys}/librocksdb-sys/rocksdb/AUTHORS
+
+# Strip the code under the Stalwart Enterprise License (whole files and
+# SPDX-tagged snippets) with upstream's own script, so that the resulting
+# binary is AGPLv3 only.
+post-patch-ENTERPRISE-off:
+	@${PYTHON_CMD} ${WRKSRC}/resources/scripts/ossify.py ${WRKSRC}/crates
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${ETCDIR}
